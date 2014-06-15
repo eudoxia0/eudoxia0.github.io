@@ -1,13 +1,18 @@
 LISPCORE = sbcl.core # For faster loading
-LISP = sbcl --core $(LISPCORE) --script
+LISP = sbcl --core $(LISPCORE) --noinform
 
 BUILD = build
 
 default: all
 
 $(LISPCORE):
-	sbcl --eval '(sb-ext:save-lisp-and-die "sbcl.core")' --quit
+	@echo "Building core"
+	sbcl --noinform --eval '(sb-ext:save-lisp-and-die "sbcl.core")' \
+	     --quit
 
 all: $(LISPCORE)
 	mkdir -p $(BUILD)
-	$(LISP) build.lisp
+	$(LISP) --load lib/markup.lisp --load build.lisp --quit
+
+clean: $(LISPCORE)
+	rm $(LISPCORE)
