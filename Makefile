@@ -16,3 +16,4 @@ all: $(LISPCORE)
 
 clean: $(LISPCORE)
 	rm $(LISPCORE)
+	rm -rf build/
