@@ -2,4 +2,4 @@
 
 (format t "Building...~&")
 
-(page #p"content/about.lisp")
+(page #p"about.lisp")

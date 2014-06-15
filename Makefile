@@ -12,7 +12,7 @@ $(LISPCORE):
 
 all: $(LISPCORE)
 	mkdir -p $(BUILD)
-	$(LISP) --load lib/markup.lisp --load build.lisp --quit
+	$(LISP) --load lib/markup.lisp --load site.lisp --quit
 
 clean: $(LISPCORE)
 	rm $(LISPCORE)
