@@ -1,3 +1,4 @@
-(markup
-  (:h1 [My page])
+(base-page
+  [Test]
+  (:h1 [Test])
   (:a :href "about.html" [About]))

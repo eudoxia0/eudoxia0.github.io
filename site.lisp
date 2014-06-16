@@ -1,4 +1,5 @@
 (in-package :eudoxia.www)
+(scribble:enable-scribble-syntax)
 
 (format t "Building...~&")
 
