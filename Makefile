@@ -1,6 +1,8 @@
 LISPCORE = sbcl.core # For faster loading
 LISP = sbcl --core $(LISPCORE) --noinform
 
+GEM_REQS = sass bourbon neat
+
 BUILD = build
 
 default: all
@@ -13,9 +15,15 @@ $(LISPCORE):
 $(BUILD):
 	mkdir -p $(BUILD)
 
-all: $(LISPCORE) $(STATIC) $(BUILD)
+reqs:
+	$(foreach GEM, $(GEM_REQS), gem install $(GEM);)
+	cd static; bourbon install; neat install
+
+all: $(LISPCORE) $(BUILD)
 	$(LISP) --load lib/markup.lisp --load site.lisp --quit
 
 clean: $(LISPCORE)
 	rm $(LISPCORE)
 	rm -rf build/
+
+.PHONY: reqs clean
