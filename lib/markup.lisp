@@ -1,11 +1,15 @@
-(ql:quickload (list :cl-markup :scribble))
+(ql:quickload (list :cl-markup :scribble :cl-ppcre))
 (defpackage eudoxia.www
   (:use :cl :cl-markup))
 (in-package :eudoxia.www)
 (scribble:enable-scribble-syntax)
 
 (defun scribble:pp (text)
-  text)
+  (let ((out (ppcre:regex-replace-all "--" text "–")))
+    (setf out (ppcre:regex-replace-all "---" out "—"))
+    (setf out (ppcre:regex-replace-all "\\.\\.\\." out "…"))
+    (format t "Input: ~A~%Output: ~A~%" text out)
+    out))
 
 (defmacro layout (title &rest content)
   `(html5
