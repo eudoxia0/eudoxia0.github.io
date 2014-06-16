@@ -1,2 +1,7 @@
 *.core
+*.css
 build/
+.sass-cache/
+static/bourbon/
+static/neat/
+static/typeplate-starter-kit/
