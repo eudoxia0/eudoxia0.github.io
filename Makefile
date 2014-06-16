@@ -10,8 +10,10 @@ $(LISPCORE):
 	sbcl --noinform --eval '(sb-ext:save-lisp-and-die "sbcl.core")' \
 	     --quit
 
-all: $(LISPCORE)
+$(BUILD):
 	mkdir -p $(BUILD)
+
+all: $(LISPCORE) $(STATIC) $(BUILD)
 	$(LISP) --load lib/markup.lisp --load site.lisp --quit
 
 clean: $(LISPCORE)
