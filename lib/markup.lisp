@@ -1,26 +1,27 @@
-(ql:quickload :cl-markup)
+(ql:quickload (list :cl-markup :scribble))
 (defpackage eudoxia.www
   (:use :cl :cl-markup))
 (in-package :eudoxia.www)
+(scribble:enable-scribble-syntax)
 
-(defun read-bracket-string (stream char)
-  (declare (ignore char))
-  (coerce (loop for ch = (read-char stream nil #\Space) until (char= ch #\])
-                collect ch)
-          'string))
-
-(set-macro-character #\[ #'read-bracket-string)
+(defun scribble:pp (text)
+  text)
 
 (defmacro layout (title &rest content)
   `(html5
     (:head
+     (:meta :charset "utf-8")
+     (:link :href "/static/css/style.css" :rel "stylesheet")
      (:title ,title))
     (:body
      (:section :id "content"
        ,@content))))
 
-(defmacro post (title &rest text)
-  `(layout ,title ,@text))
+(defmacro base-page (title &rest content)
+  `(layout ,title ,@content))
+
+(defmacro post (title &rest content)
+  `(layout ,title ,@content))
 
 (defparameter +build-path+
   (merge-pathnames #p"build/"))
