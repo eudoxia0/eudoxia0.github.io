@@ -1,0 +1,6 @@
+{
+    "name": "eudoxia.www",
+    "dependencies": {
+        "typeplate-starter-kit": "1.1.4"
+    }
+}
