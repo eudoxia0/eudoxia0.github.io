@@ -1,0 +1,10 @@
+(layout (About)
+  (section (About Me) ...)
+  (section (Colophon)
+    (p (This site is a collection of static files, compiled using Make and
+        Common Lisp. cl-markup is used for the templates. Wax is used for the
+        markup.))
+    (section (Why not use Github Pages?)
+      (p (Because they require -- horror of horrors! -- that I pollute my git
+          repo with HTML and CSS. Repositories are for source code and source
+          code only, not build output.)))))
