@@ -30,9 +30,9 @@ $(TARGET_CSS): $(STYLE)
 	$(SASS) $? $@
 
 all: $(LISPCORE) $(BUILD) $(TARGET_CSS)
-	$(LISP) --load lib/markup.lisp \
+	$(LISP) --load lib/package.lisp \
 	        --load lib/files.lisp \
-		--load lib/markup.lisp \
+		--load lib/templates.lisp \
 		--load site.lisp --quit
 
 clean: $(BUILD)

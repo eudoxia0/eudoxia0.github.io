@@ -12,5 +12,18 @@
      (:section :id "content"
        ,@content))))
 
+(defmacro post (title tags &rest content)
+  `(layout
+    ,title
+    (:article
+     (:div :class "tags" ,tags)
+     ,@content)))
+
 ;;; Wax template tags
 
+(with-backend :html
+  (defrule layout () ((&rest title) &rest content)
+    (layout title content))
+
+  (defrule post () ((&rest title) (tags) &rest content)
+    (post title tags content)))

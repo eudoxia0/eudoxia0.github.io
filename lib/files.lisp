@@ -20,17 +20,6 @@
                             :if-exists :supersede)
       (write-string content stream))))
 
-(defun read-file (path)
-  (declare (pathname path))
-  (with-open-file (stream path)
-    (flet ((read-stream ()
-             (read stream nil :my-eof)))
-      (let ((forms (list))
-            (node (read-stream)))
-        (loop while (not (eq node :my-eof)) do
-          (push node forms)
-          (setf node (read-stream)))
-        forms))))
-
-(defmacro page (pathname)
-  `(move-file ,pathname "html" ,@(read-file pathname)))
+(defun page (pathname)
+  (declare (pathname pathname))
+  (move-file pathname "html" (process pathname)))
