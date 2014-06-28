@@ -1,21 +1,5 @@
 (in-package :eudoxia.www)
 
-(defmacro layout (title &rest content)
-  `(html5
-    (:head
-     (:meta :charset "utf-8")
-     (:link :href "/static/css/style.css" :rel "stylesheet")
-     (:title ,title))
-    (:body
-     (:section :id "content"
-       ,@content))))
-
-(defmacro base-page (title &rest content)
-  `(layout ,title ,@content))
-
-(defmacro post (title &rest content)
-  `(layout ,title ,@content))
-
 (defparameter +build-path+
   (merge-pathnames #p"build/"))
 
