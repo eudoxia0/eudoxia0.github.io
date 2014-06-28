@@ -1,4 +1,4 @@
-(ql:quickload (list :cl-emb :wax))
+(ql:quickload (list :wax :cl-markup))
 (defpackage eudoxia.www
-  (:use :cl))
+  (:use :cl :cl-markup))
 (in-package :eudoxia.www)

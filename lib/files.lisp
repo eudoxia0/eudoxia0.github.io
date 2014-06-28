@@ -4,6 +4,9 @@
   (merge-pathnames #p"build/"))
 
 (defun move-file (pathname output-type content)
+  (declare (pathname pathname)
+           (string output-type)
+           (string content))
   (let* ((content-dir (make-pathname
                        :directory (pathname-directory pathname)))
          (build-dir (merge-pathnames content-dir +build-path+))
