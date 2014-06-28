@@ -2,7 +2,7 @@
 
 ;;; Templates
 
-(defmacro layout (title &rest content)
+(defmacro layout (title content)
   `(html5
     (:head
      (:meta :charset "utf-8")
@@ -10,20 +10,20 @@
      (:title ,title))
     (:body
      (:section :id "content"
-       ,@content))))
+       ,content))))
 
-(defmacro post (title tags &rest content)
+(defmacro post (title tags content)
   `(layout
     ,title
     (:article
      (:div :class "tags" ,tags)
-     ,@content)))
+     ,content)))
 
 ;;; Wax template tags
 
 (with-backend :html
   (defrule layout () ((&rest title) &rest content)
-    (layout title content))
+    (layout (print-tree title) (print-tree content)))
 
   (defrule post () ((&rest title) (tags) &rest content)
-    (post title tags content)))
+    (post (print-tree title) tags (print-tree content))))
