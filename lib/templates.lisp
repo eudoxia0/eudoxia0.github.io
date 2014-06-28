@@ -1,5 +1,7 @@
 (in-package :eudoxia.www)
 
+(setf *auto-escape* nil)
+
 ;;; Templates
 
 (defmacro layout (title content)
@@ -21,9 +23,11 @@
 
 ;;; Wax template tags
 
+(defun e (text) (wax.emitter:emit text :html))
+
 (with-backend :html
   (defrule layout () ((&rest title) &rest content)
-    (layout (print-tree title) (print-tree content)))
+    (layout (e title) (e content)))
 
   (defrule post () ((&rest title) (tags) &rest content)
-    (post (print-tree title) tags (print-tree content))))
+    (post (e title) tags (e content))))
