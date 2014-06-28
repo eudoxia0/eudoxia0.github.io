@@ -1,5 +1,6 @@
 (layout (About)
-  (section (About Me) ...)
+  (section (About Me)
+    This is where I should showcase my hobbies, if I had any.)
   (section (Colophon)
     (p (This site is a collection of static files, compiled using Make and
         Common Lisp. cl-markup is used for the templates. Wax is used for the
