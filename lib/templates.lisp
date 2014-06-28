@@ -1,25 +1,17 @@
 (in-package :eudoxia.www)
 
-(setf *auto-escape* nil)
-
 ;;; Templates
 
-(defmacro layout (title content)
-  `(html5
-    (:head
-     (:meta :charset "utf-8")
-     (:link :href "/static/css/style.css" :rel "stylesheet")
-     (:title ,title))
-    (:body
-     (:section :id "content"
-       ,content))))
+(register-emb "layout" #p"templates/layout.tmpl")
+(register-emb "post" #p"templates/post.tmpl")
 
-(defmacro post (title tags content)
-  `(layout
-    ,title
-    (:article
-     (:div :class "tags" ,tags)
-     ,content)))
+(defun render-layout (title content)
+  (execute-emb "layout" :env (list :title title
+                                   :content content)))
+
+(defun render-post (title tags content)
+  (render-layout title
+    (execute-emb "post" :env (list :title title))))
 
 ;;; Wax template tags
 
@@ -27,7 +19,7 @@
 
 (with-backend :html
   (defrule layout () ((&rest title) &rest content)
-    (layout (e title) (e content)))
+    (render-layout (e title) (e content)))
 
   (defrule post () ((&rest title) (tags) &rest content)
-    (post (e title) tags (e content))))
+    (render-post (e title) tags (e content))))
