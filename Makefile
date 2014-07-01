@@ -30,12 +30,11 @@ $(TARGET_CSS): $(STYLE)
 	$(SASS) $? $@
 
 all: $(LISPCORE) $(BUILD) $(TARGET_CSS)
-	$(LISP) --load lib/package.lisp \
-	        --load lib/files.lisp \
-		--load lib/templates.lisp \
-		--load site.lisp --quit
+	$(LISP) --eval '(asdf:load-system :eudoxia.www :force t)' \
+	    --quit
 
-clean: $(BUILD)
+clean: $(BUILD) $(LISPCORE)
+	rm $(LISPCORE)
 	rm -rf build/
 
 serve: all

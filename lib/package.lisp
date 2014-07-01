@@ -1,4 +1,3 @@
-(ql:quickload (list :wax :cl-emb))
 (defpackage eudoxia.www
-  (:use :cl :cl-emb :wax))
+  (:use :cl :cl-emb :wax :plump))
 (in-package :eudoxia.www)
