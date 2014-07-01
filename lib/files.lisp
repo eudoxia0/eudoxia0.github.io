@@ -1,10 +1,13 @@
 (in-package :eudoxia.www)
 
+(defparameter +base-path+
+  (asdf:component-pathname (asdf:find-system :eudoxia.www)))
+
 (defun path (path)
-  (asdf:system-relative-pathname :eudoxia.www path))
+  (merge-pathnames path +base-path+))
 
 (defparameter +build-path+
-  (path #p"build/"))
+  #p"build/")
 
 (defun move-file (pathname output-type content)
   (declare (pathname pathname)
@@ -18,13 +21,13 @@
                        :name (pathname-name pathname)
                        :type output-type)))
     (ensure-directories-exist build-dir)
-    (with-open-file (stream output-path
+    (with-open-file (stream (merge-pathnames output-path +base-path+)
                             :direction :output
                             :if-exists :supersede)
       (write-string content stream))))
 
 (defun page (pathname)
   (declare (pathname pathname))
-  (move-file (path pathname)
+  (move-file pathname
              "html"
-             (process (path pathname))))
+             (process (merge-pathnames pathname +base-path+))))
