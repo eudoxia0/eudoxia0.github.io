@@ -1,7 +1,10 @@
 (in-package :eudoxia.www)
 
+(defun path (path)
+  (asdf:system-relative-pathname :eudoxia.www path))
+
 (defparameter +build-path+
-  (merge-pathnames #p"build/"))
+  (path #p"build/"))
 
 (defun move-file (pathname output-type content)
   (declare (pathname pathname)
@@ -22,4 +25,6 @@
 
 (defun page (pathname)
   (declare (pathname pathname))
-  (move-file pathname "html" (process pathname)))
+  (move-file (path pathname)
+             "html"
+             (process (path pathname))))
