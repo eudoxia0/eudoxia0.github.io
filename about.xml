@@ -1,0 +1,21 @@
+<page title="About">
+  <section title="Me">
+    I was born in Montevideo in 1994.
+
+    For a more traditional overview, see my <link
+    uri="/resume.pdf">resume</link>.
+  </section>
+
+  <section title="Colophon">
+    This site is a collection of static files, compiled using Make and Common
+    Lisp. cl-emb is used for the templates. Wax is used for the markup.
+
+    <section title="Why not use Github Pages?">
+      Because they require -- horror of horrors! -- that I pollute my git
+      repository with HTML and CSS. Repositories are for source code and source
+      code only, not build output. While Github supports Jekyll, it is too
+      limited for my special-snowflake needs, as you can see looking at this
+      site's <link uri="https://github.com/eudoxia0/eudoxia.www">repo</link>
+    </section>
+  </section>
+</page>
