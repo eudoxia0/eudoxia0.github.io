@@ -10,7 +10,7 @@
   This site is a collection of static files, compiled using Make and Common
   Lisp. cl-emb is used for the templates. Wax is used for the markup.
 
-  <h2>"Why not use Github Pages?</h2>
+  <h2>Why not use Github Pages?</h2>
 
   Because they require -- horror of horrors!  -- that I pollute my git
   repository with HTML and CSS. Repositories are for source code and source code
