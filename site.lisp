@@ -2,5 +2,5 @@
 
 (format t "Building...~&")
 
-(page #p"index.wax")
-(page #p"about.wax")
+(page #p"index.xml")
+(page #p"about.xml")
