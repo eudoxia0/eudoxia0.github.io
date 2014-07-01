@@ -1,6 +1,4 @@
-<essay>
-  <title>Relativistic Propulsion</title>
-
+<essay title="Relativistic Propulsion">
   <h1>Project Valkyrie</h1>
   <h2>Design Problems</h2>
 
@@ -25,9 +23,9 @@
 
   <h2>Monopole-Catalyzed Total Conversion</h2>
 
-  <link id="mag">Magnetic monopoles</link> are a particles that act, as their
-  name implies, as magnets with a single pole. What makes them interesting, from
-  a practical perspective, is that under some <abbr alt="Grand Unified
+  <link id="mag">Magnetic monopoles</link> are particles that act, as their name
+  implies, as magnets with a single pole. What makes them interesting, from a
+  practical perspective, is that under some <abbr alt="Grand Unified
   Theories">GUTs</abbr>, monopoles trigger <ref id="pdecay">proton decay</ref>
   on contact. The process is essentially the same as pair annihilation, only
   <b>the monopole remains</b>. Which means it can be reused: Throw a stream of
@@ -35,11 +33,11 @@
   guaranteed fusion reactor.
 
   I would like to provide here an estimation of the luminosity and diameter of
-  an accelerator capable of producing stable magnetic monopoles, but that's too
-  far from my grasp. "Circumstellar" seems like a good estimate of size. As for
-  the power requirements, I don't think a <link
-  id="kardashev">civilization</link> that can produce monopoles has any need for
-  them in energy production. However, they remain useful for two obvious
+  an accelerator capable of producing stable magnetic monopoles, but that's
+  too far from my grasp. "Circumstellar" seems like a good estimate of size.
+  As for the power requirements, I don't think a <link
+  id="kardashev">civilization</link> that can produce monopoles has any need
+  for them in energy production. However, they remain useful for two obvious
   purposes: Power generation and space propulsion.
 
   Fission and fusion both require particular ingredients, but protons are all
@@ -50,9 +48,15 @@
     <desc>Mr. Fusion.</desc>
   </figure>
 
+  As an aside: We don't know the exact mass of magnetic monopoles. Estimates
+  vary from <itex>600~\mathrm{GeV}</itex> to <itex>10^{16}~\mathrm{GeV}</itex>,
+  the latter being <ref id="monmass">"comparable to the mass of a bacterium, or
+  the kinetic energy of a charging rhinoceros"</ref>.
+
   <h3>Difficulties</h3>
 
-  (Aside from, you know, <i>building a circumstellar supercollider</i>)
+  <sidenote>(Aside from, you know, <i>building a circumstellar
+  supercollider</i>)</sidenote>
 
   <h4>Stability</h4>
 
@@ -108,15 +112,20 @@
     <ref id="eleitl">
       <link>http://gnusha.org/logs/2013-01-22.log</link>
       <desc>
-        <quote><!
-        07:28 < eleitl> Solid state travels very lightly, especially if you
-        leave the drive at home.
+        <quote>
+          07:28 < eleitl> Solid state travels very lightly, especially if you
+          leave the drive at home.
 
-        07:28 < eleitl> Up to 0.9 c in mere weeks.
+          07:28 < eleitl> Up to 0.9 c in mere weeks.
 
-        07:28 < eleitl> Up, up and away.
+          07:28 < eleitl> Up, up and away.
         </quote>
       </desc>
+    </ref>
+    <ref id="monmass">
+      <link>http://www.theory.caltech.edu/~preskill/pubs/preskill-1984-monopoles.pdf</link>
+      <title>Magnetic Monopoles</title>
+      <author>John Preskill</author>
     </ref>
   </references>
   <links>
