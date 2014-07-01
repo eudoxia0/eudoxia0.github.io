@@ -11,15 +11,10 @@
 
 (defun render-post (title tags content)
   (render-layout title
-    (execute-emb "post" :env (list :title title))))
+    (execute-emb "post" :env (list :title title :content content))))
 
 ;;; Wax template tags
 
-(defun e (text) (wax.emitter:emit text :html))
-
 (with-backend :html
-  (defrule layout () ((&rest title) &rest content)
-    (render-layout (e title) (e content)))
-
-  (defrule post () ((&rest title) (tags) &rest content)
-    (render-post (e title) tags (e content))))
+  (defrule page () (a tree)
+    (render-layout (gethash "title" a) (emit tree))))
