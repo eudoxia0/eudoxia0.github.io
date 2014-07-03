@@ -1,5 +1,13 @@
 (in-package :eudoxia.www)
 
+;;; Files
+
+(defparameter +base-path+
+  (asdf:component-pathname (asdf:find-system :eudoxia.www)))
+
+(defun path (path)
+  (merge-pathnames path +base-path+))
+
 ;;; Templates
 
 (register-emb "layout" (path #p"templates/layout.tmpl"))
@@ -23,5 +31,4 @@
           (links (pop-by-name tree "links")))
       ;; Emit the links before the rest
       (emit links)
-      (print wax.html::*links*)
       (render-post title nil (emit tree)))))
