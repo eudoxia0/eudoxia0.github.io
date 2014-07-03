@@ -1,7 +1,6 @@
 (in-package :eudoxia.www)
 
-(format t "Building...~&")
-
-(page #p"index.xml")
-(page #p"about.xml")
-(page #p"essays/relativistic-propulsion.xml")
+(wax-compile :html :eudoxia.www #p"build/"
+  #p"index.xml"
+  #p"about.xml"
+  #p"posts/relativistic-propulsion.xml")

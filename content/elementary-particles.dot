@@ -1,0 +1,14 @@
+digraph particles {
+  subgraph cluster_leptons {
+    label = "Leptons";
+
+    subgraph cluster_electrons {
+      electron [label=<Electron e<SUP>-</SUP>>];
+      positron [label=<Antielectron (Positron) e<SUP>+</SUP>>];
+    }
+    subgraph cluster_muons {
+      muon [label=<Muon e<SUP>-</SUP>>];
+      antimuon [label=<Antimuon e<SUP>+</SUP>>];
+    }
+  }
+}
