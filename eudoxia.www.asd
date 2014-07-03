@@ -6,6 +6,5 @@
                 :serial t
                 :components
                 ((:file "package")
-                 (:file "files")
                  (:file "templates")))
                (:file "site")))
