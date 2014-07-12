@@ -1,6 +1,3 @@
-LISPCORE = sbcl.core # For faster loading
-LISP = sbcl --core $(LISPCORE) --noinform
-
 GEM_REQS = sass bourbon neat
 
 STYLE = static/css/style.scss
@@ -11,11 +8,6 @@ TARGET_CSS = build/static/css/style.css
 BUILD = build
 
 default: all
-
-$(LISPCORE):
-	@echo "Building core"
-	sbcl --noinform --eval '(sb-ext:save-lisp-and-die "sbcl.core")' \
-	     --quit
 
 $(BUILD):
 	mkdir -p $(BUILD)/static/css
@@ -29,12 +21,9 @@ reqs:
 $(TARGET_CSS): $(STYLE)
 	$(SASS) $? $@
 
-all: $(LISPCORE) $(BUILD) $(TARGET_CSS)
-	$(LISP) --eval '(asdf:load-system :eudoxia.www :force t)' \
-	    --quit
+all: $(TARGET_CSS)
 
-clean: $(BUILD) $(LISPCORE)
-	rm $(LISPCORE)
+clean: $(BUILD)
 	rm -rf build/
 
 serve: all
