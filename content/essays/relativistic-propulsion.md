@@ -12,6 +12,34 @@ interstellar flight"*[^relrob].
 
 ## Design Problems
 
+Possibly the most obvious problem is the violation of the Golden Rule: The ship
+has two engines, one at the front and one at the back, because turning broadside
+while coasting at relativistic speeds opens the ship up to a disastrous impact.
+
+I doubt the risk would be significant, but even if it were -- Even if
+interstellar space does turn out to be a constant shower of ice crystals --
+there's simply no way to justify doubling the mass of an engine that is already
+bound to be massive.
+
+The solution is fairly obvious: Engine, tether, crew and cargo, in that order
+from zenith to nadir. The process of turning the engine safely would be:
+
+1. While coasting, and when the engine is off, roll up the tether until the
+   cargo is next to the engine.
+2. Eject the shielding and its power source, and vernier it a few hundreds of
+   meters forward.
+3. Rotate the engine/cargo. Most of it would remain within the shadow of the
+   shield, but some areas would probably be exposed to impacts (Although this
+   depends on the specifics of the shielding).
+4. Attach the shielding to the cargo section.
+5. Extend the tether.
+6. Relight the engine at will.
+
+Note that while the ship was accelerating, the forces were those of the engine
+and those of drag from the shielding. As the ship decelerates, drag from the
+shielding will push the cargo section closer to the engine. The engine, then,
+has to run perpetually and counteract this drag so the tether remains taut.
+
 # Humans are Fragile
 
 ## Acceleration
