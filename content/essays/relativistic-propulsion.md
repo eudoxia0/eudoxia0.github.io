@@ -10,6 +10,19 @@ description, similar to that in the book's afterword, was presented by
 Pellegrino in the essay *"Relativistic robots and the feasibility of
 interstellar flight"*[^relrob].
 
+In it, Pellegrino makes this claim:
+
+>The Valkyrie, as our rocket is called, will have a maximum cruising speed of 92
+>percent lightspeed
+
+I have yet to see a detailed explanation of how this number was reached. The
+design of the Valkyrie, at least in the abstract, is certainly very promising,
+but I wouldn't make any specific numerical claims.
+
+I've bought *Flying to Valhalla*. It's one of the few books I've actually
+bought, and while I wouldn't say it's very good in its specifics, the general
+ideas make it a worthwhile read.
+
 ## Design Problems
 
 Possibly the most obvious problem is the violation of the Golden Rule: The ship
