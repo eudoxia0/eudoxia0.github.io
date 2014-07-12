@@ -1,4 +1,6 @@
-% Relativistic Propulsion
+---
+title: Relativistic Propulsion
+---
 
 # Project Valkyrie
 
