@@ -6,3 +6,8 @@ body {
     font-family: 'Cardo', serif;
     color: #444;
 }
+
+.footnotes hr {
+    /* I don't like the ugly <hr> separating the references from the rest */
+    display: none;
+}
