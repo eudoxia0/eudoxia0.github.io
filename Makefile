@@ -1,11 +1,10 @@
-GEM_REQS = sass bourbon neat pandoc-ruby nanoc adsf
+GEM_REQS = sass bourbon neat pandoc-ruby nanoc nanoc-pandoc
 
 default: all
 
 reqs:
 	$(foreach GEM, $(GEM_REQS), gem install $(GEM);)
 	bower install
-	cd static; bourbon install; neat install
 
 all:
 	nanoc
