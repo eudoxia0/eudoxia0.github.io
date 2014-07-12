@@ -4,9 +4,7 @@ compile '*' do
     # don’t filter stylesheets
   elsif item[:extension] == 'md'
     # Convert the Markdown file to HTML through pandoc
-    filter :pandoc,
-           :params => { :mathjax => true,
-                      }
+    filter :pandoc
     filter :erb
     layout 'default'
   elsif item.binary?
