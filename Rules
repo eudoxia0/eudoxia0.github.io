@@ -2,6 +2,8 @@
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets
+  elsif item[:extension] == 'scss'
+    filter :sass, syntax: :scss
   elsif item[:extension] == 'md'
     # Convert the Markdown file to HTML through pandoc
     filter :pandoc
