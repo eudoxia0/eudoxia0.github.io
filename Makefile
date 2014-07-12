@@ -1,12 +1,12 @@
-GEM_REQS = sass bourbon neat pandoc-ruby nanoc nanoc-pandoc
-
 default: all
 
-reqs:
-	$(foreach GEM, $(GEM_REQS), gem install $(GEM);)
-	bower install
+STYLE = style.scss
+SASS_OPTS = --style compressed
+SASS = sass $(SASS_OPTS)
+TARGET_CSS = content/style.css
 
 all:
+	$(SASS) $(STYLE) $(TARGET_CSS)
 	nanoc
 
 serve: all

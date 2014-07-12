@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Brand New nanoc Site - <%= @item[:title] %></title>
+    <link rel="stylesheet" href="<%= @items['/style/'].path %>">
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </body>
+</html>
