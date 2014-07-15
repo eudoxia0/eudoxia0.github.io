@@ -86,26 +86,44 @@ monopole remains**. Which means it can be reused: Throw a stream of plasma at a
 group of magnetically-suspended monopoles, and you have a guaranteed fusion
 reactor.
 
+Magnetic monopoles are guaranteed to exist. Every school of modern physics
+agrees that they exist. They explain the quantization of electric charge and
+certain subtleties about the post-inflation early Universe I'm too simple to
+understand.
+
 I would like to provide here an estimation of the luminosity and diameter of an
 accelerator capable of producing stable magnetic monopoles, but that's too far
 from my grasp. "Circumstellar" seems like a good estimate of size.  As for the
 power requirements, I don't think a [civilization][kardashev] that can produce
 monopoles has any need for them in energy production. However, they remain
-useful for two obvious purposes: Power generation and space propulsion.
+useful for two obvious purposes: Power generation in deep-space operations, and
+space propulsion.
 
 Fission and fusion both require particular ingredients, but protons are all the
 same, and monopoles don't discriminate.
 
 As an aside: We don't know the exact mass of magnetic monopoles. Estimates vary
-from $600~\mathrm{GeV}$ to $10^{16}~\mathrm{GeV}$, the latter being *"comparable
-to the mass of a bacterium, or the kinetic energy of a charging
-rhinoceros"*[^monmass].
+from $4 \times 10^4~\mathrm{GeV}$ to $10^{17}~\mathrm{GeV}$[^monmass], the
+latter being *"comparable to the mass of a bacterium, or the kinetic energy of a
+charging rhinoceros"*[^preskill].
 
 ### Difficulties
 
 <sidenote>
   (Aside from, you know, *building a circumstellar supercollider*)
 </sidenote>
+
+#### Producing Magnetic Monopoles
+
+"Build a very big accelerator" is incredibly vague. What exactly would it have
+to *do* to produce magnetic monopoles? Lindell[^monmass] references a
+paper[^production] that proposes using high energy $pp$ (That's proton-proton)
+collissions to produce a monopole-antimonopole pair through photon fusion, but
+the paper is behind a paywall so I can't comment on that.
+
+Instead I tried to get my hands on two papers that cite it, *Monopolium
+production from photon fusion at the Large Hadron Collider*[^monopolium] and
+*Looking for magnetic monopoles at LHC with diphoton events*[^lhc].
   
 #### Stability
 
@@ -141,7 +159,7 @@ left here.
 # References
 
 [^relrob]:
-    [*Relativistic robots and the feasibility of interstellar flight*][relrob]. Charles
+    *[Relativistic robots and the feasibility of interstellar flight][relrob]*. Charles
     R. Pellegrino.
 
     The essay has since been taken down and redirects to the related essay
@@ -167,7 +185,24 @@ left here.
     07:28 < eleitl> Up, up and away.
     ```
 
+[^preskill]:
+    *[Magnetic Monopoles][monmass]*. John Preskill.
+
+[^monmass]:
+    *[Magnetic Monopole Searches with AMANDA and other detectors][monmass]*.
+    Matilda Åberg Lindell.
+
+    The author remarks that "[Monopoles] could never be produced in any man-made
+    accelerator, existing or conceivable".
+
+[^production]:
+    *[On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions][production].
+    Yu. Kurochkin.
+
 [mag]: http://en.wikipedia.org/wiki/Magnetic_monopole
 [kardashev]: http://en.wikipedia.org/wiki/Kardashev_scale
 [relrob]: https://web.archive.org/web/20111116172452/http://www.charlespellegrino.com/propulsion.htm
 [pdecay]: http://www.ias.ac.in/jarch/jaa/5/251-271.pdf
+[preskill]: http://www.theory.caltech.edu/~preskill/pubs/preskill-1984-monopoles.pdf
+[monmass]: http://www.diva-portal.org/smash/get/diva2:320548/FULLTEXT02
+[production]: http://www.worldscientific.com/doi/abs/10.1142/S0217732306022237
