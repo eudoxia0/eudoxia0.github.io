@@ -1,13 +1,81 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+@import "static/typeplate-starter-kit/scss/typeplate";
 
+/* General CSS */
 body {
-    margin: 0;
+    margin: 0 auto;
+    padding: 45px;
     font-family: 'Cardo', serif;
-    color: #444;
+    color: $body-copy-color;
+}
+
+a, a:visited {
+    color: #5DB5DE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+}
+
+h1 {
+    @extend .gamma;
+    @extend %hN;
+}
+
+h2 {
+    @extend .delta;
+    @extend %hN;
+}
+
+h3 {
+    @extend .epsilon;
+    @extend %hN;
+}
+
+h4 {
+    @extend .zeta;
+    @extend %hN;
+}
+
+h5 {
+    @extend .zeta;
+    @extend %hN;
+}
+
+h6 {
+    @extend .zeta;
+    @extend %hN;
+}
+
+/* Front page */
+nav ul {
+    font-style: italic;
+
+    li {
+        display: inline;
+    }
+
+    li+li:before {
+        content: "—";
+    }
+}
+
+/* Essays etc. */
+article {
+    
 }
 
 .footnotes hr {
     /* I don't like the ugly <hr> separating the references from the rest */
     display: none;
+}
+
+.footnotes li {
+    // Individual reference style
+
+    a[href^="#fnref"] {
+        // Backlink style
+        display: none;
+    }
 }
