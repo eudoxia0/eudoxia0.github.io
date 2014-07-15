@@ -1,5 +1,5 @@
 ---
-title: Relativistic Propulsion
+title: "Relativistic Propulsion"
 ---
 
 # Project Valkyrie
@@ -109,17 +109,17 @@ charging rhinoceros"*[^preskill].
 
 ### Difficulties
 
-<sidenote>
+<div class="sidenote">
   (Aside from, you know, *building a circumstellar supercollider*)
-</sidenote>
+</div>
 
 #### Producing Magnetic Monopoles
 
 "Build a very big accelerator" is incredibly vague. What exactly would it have
-to *do* to produce magnetic monopoles? Lindell[^monmass] references a
-paper[^production] that proposes using high energy $pp$ (That's proton-proton)
-collissions to produce a monopole-antimonopole pair through photon fusion, but
-the paper is behind a paywall so I can't comment on that.
+to *do* to produce magnetic monopoles? Lindell references a paper[^production]
+that proposes using high energy $pp$ (That's proton-proton) collissions to
+produce a monopole-antimonopole pair through photon fusion, but the paper is
+behind a paywall so I can't comment on that.
 
 Instead I tried to get my hands on two papers that cite it, *Monopolium
 production from photon fusion at the Large Hadron Collider*[^monopolium] and
@@ -195,8 +195,12 @@ left here.
     The author remarks that "[Monopoles] could never be produced in any man-made
     accelerator, existing or conceivable".
 
+    Here, "conceivable" could mean "reasonable for a sane, non-transhumanist"
+    (ie a particle accelerator smaller than a continent) or "physically
+    possible" (A particle accelerator the size of the galaxy doesn't count).
+
 [^production]:
-    *[On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions][production].
+    *[On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions][production]*.
     Yu. Kurochkin.
 
 [mag]: http://en.wikipedia.org/wiki/Magnetic_monopole
