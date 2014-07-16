@@ -1,11 +1,11 @@
 default: all
 
-STYLE = style.scss
+STATIC = static
+
+STYLE = $(STATIC)/style.scss
 SASS_OPTS = --style compressed
 SASS = sass $(SASS_OPTS)
 TARGET_CSS = content/style.css
-
-STATIC = static
 
 GI = gem install --no-ri --no-rdoc
 
