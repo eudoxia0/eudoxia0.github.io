@@ -1,4 +1,4 @@
-output/
+build/
 *.css
 .sass-cache
 tmp

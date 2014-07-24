@@ -1,0 +1,23 @@
+<page title="Fernando Borretti">
+  <h1>Fernando Borretti</h1>
+
+  <nav>
+    <ul>
+      <li><a href='/about'>About</a></li>
+      <li><a href='/cv.pdf'>Resume</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <ul>
+      Contents:
+      <li>
+        <l id="propulsion">Relativistic Propulsion</l>
+      </li>
+    </ul>
+  </div>
+
+  <links>
+    <l id="propulsion" uri="/essays/relativistic-propulsion"/>
+  </links>
+</page>
