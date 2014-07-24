@@ -33,6 +33,14 @@
     <blockquote><xsl:apply-templates/></blockquote>
   </xsl:template>
 
+  <xsl:template match="b">
+    <strong><xsl:apply-templates/></strong>
+  </xsl:template>
+
+  <xsl:template match="i">
+    <em><xsl:apply-templates/></em>
+  </xsl:template>
+
   <xsl:template match="fig">
     <!-- Links -->
     <xsl:variable name="uri" select="@uri"/>
@@ -106,7 +114,7 @@
   </xsl:template>
 
   <!-- Basic HTML tags I don't want to see disappear -->
-  <xsl:template match="strong|em|strike|nav|header|div|ul|ol|li|h1|h2|h3|h4|p">
+  <xsl:template match="strike|nav|header|div|ul|ol|li|h1|h2|h3|h4|p">
     <xsl:copy>
       <xsl:apply-templates/>
     </xsl:copy>
