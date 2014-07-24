@@ -109,9 +109,9 @@ charging rhinoceros"*[^preskill].
 
 ### Difficulties
 
-<div class="sidenote">
+<sidenote>
   (Aside from, you know, *building a circumstellar supercollider*)
-</div>
+</sidenote>
 
 #### Producing Magnetic Monopoles
 
@@ -134,6 +134,17 @@ smaller degree: Antimatter is annihilated, monopoles remain.
 
 #### Separating Monopoles from Fusion Products
 
+We want the plasma and gamma rays from fusion to leave the exhaust, but the
+monopoles to remain, which is bound to be hard since the monopoles will be
+pushed around by the highly-energetic fusion reactions that themselves trigger.
+
+A possible solution takes advantage of the vast mass difference between a proton
+and a Grand Unification monopole: If you make both travel in an arc, guided by a
+magnetic field, the monopole will stick to its original trajectory more than the
+proton, because it has a much greater inertia. The specifics of this would
+probably be fairly complicated, and require actually knowing the mass of
+monopoles.
+
 ### Monopolar Ramjets
 
 This section is somewhat of an afterthought. In 1985, Robert Zubrin and Dana
@@ -155,6 +166,26 @@ left here.
 ## Radiation
 
 ## Tether
+
+The tether is an important part of the spacecraft and is in a very vulnerable
+position: Sandwiched between the exhaust plumes of two engines with massive
+power outputs. Radiation from the conversion reactions and plasma from the plume
+could erode the tether over time, and heat radiatied by the plume and adsorbed
+by the tether could cause it to overheat and maybe require its own cooling
+system.
+
+To address this last problem, the tether should be a ribbon: Wide, flat, and
+coplanar with both engines. A ribbon exposes a smaller cross-section to the
+exhaust plumes and would adsorb less heat, as you can see in the very scientific
+image below:
+
+![Heat adsorbtion in a tether and ribbon.](tether.png)
+
+Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each engine,
+while a tether with the same cross-sectional area as the ribbon ($r^2\pi$) and
+with a width of $10r\pi$ would only expose $r/10$. Not having the tether
+overheat removes one requirement: A vast, multi-kilometer long cooling system
+that just adds mass.
 
 # References
 
