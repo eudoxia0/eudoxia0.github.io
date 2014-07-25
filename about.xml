@@ -3,5 +3,7 @@
 
   <h1>Colophon</h1>
 
-  <p>This site is built with Make, Sass and XSLT.</p>
+  <p>This site is built with Make, Sass and XSLT. Previously is used nanoc,
+  Pandoc and Markdown. Before it used some other custom XML thing. Before that,
+  Scribble.</p>
 </page>
