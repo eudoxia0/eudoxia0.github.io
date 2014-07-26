@@ -117,6 +117,21 @@
     <xsl:value-of select="."/>
   </xsl:template>
 
+  <!-- Smart typography -->
+  <xsl:template match="text">
+    <xsl:variable name="dashed" select="replace(.//text(), '---', '—')"/>
+    <xsl:variable name="mdashed" select="replace($dashed, '--', '—')"/>
+    <xsl:variable name="ellipsed" select="replace($mdashed, '\.\.\.', '…')"/>
+    <xsl:analyze-string select="$ellipsed" regex="&quot;([^&quot;]*)&quot;">
+      <xsl:matching-substring>
+        <xsl:value-of select="concat('&#8220;', regex-group(1), '&#8221;')"/>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring>
+        <xsl:value-of select="."/>
+      </xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
   <!-- Basic HTML tags I don't want to see disappear -->
   <xsl:template match="strike|nav|header|div|ul|ol|li|h1|h2|h3|h4|p">
     <xsl:copy>
