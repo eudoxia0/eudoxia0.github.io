@@ -25,7 +25,7 @@ CV = cv/cv.pdf
 OUTPUT_EXTS = html pdf css
 EXTENSIONS = $(foreach EXT, $(OUTPUT_EXTS), --include "*.$(EXT)")
 RSYNC_OPTS = -a --include '*/' $(EXTENSIONS) --exclude '*' --exclude $(BUILD) \
-	--prune-empty-dirs
+	--prune-empty-dirs --remove-source-files
 
 GI = gem install --no-ri --no-rdoc
 
@@ -56,7 +56,6 @@ $(TARGET_CSS): $(STYLE)
 all: $(STATIC) $(TARGET_CSS) $(HTML_FILES) $(CV)
 	mkdir -p $(BUILD)
 	rsync $(RSYNC_OPTS) ./ $(BUILD)
-	$(foreach EXT, $(OUTPUT_EXTS), find . -name "*.$(EXT)" -delete;)
 
 serve: all
 	cd $(BUILD); python2 -m SimpleHTTPServer 5000

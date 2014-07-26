@@ -113,6 +113,10 @@
     </pre>
   </xsl:template>
 
+  <xsl:template match="code">
+    <xsl:value-of select="."/>
+  </xsl:template>
+
   <!-- Basic HTML tags I don't want to see disappear -->
   <xsl:template match="strike|nav|header|div|ul|ol|li|h1|h2|h3|h4|p">
     <xsl:copy>
