@@ -56,10 +56,10 @@ $(TARGET_CSS): $(STYLE)
 all: $(STATIC) $(TARGET_CSS) $(HTML_FILES) $(CV)
 	mkdir -p $(BUILD)
 	rsync $(RSYNC_OPTS) ./ $(BUILD)
+	$(foreach EXT, $(OUTPUT_EXTS), find . -name "*.$(EXT)" -delete;)
 
 serve: all
 	cd $(BUILD); python2 -m SimpleHTTPServer 5000
 
 clean:
 	rm -rf $(BUILD)
-	find . $(foreach EXT, $(OUTPUT_EXTS), -name "*.$(EXT)") -delete
