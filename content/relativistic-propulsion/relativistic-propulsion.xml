@@ -184,9 +184,9 @@
 
   <p>Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each
   engine, while a tether with the same cross-sectional area as the ribbon
-  ($r^2\pi$) and with a width of $10r\pi$ would only expose $r/10$. Not having
-  the tether overheat removes one requirement: A vast, multi-kilometer long
-  cooling system that just adds mass.</p>
+  ($r^2\pi$) and with a width of $10r\pi$ would only expose $r/10$ (wow, such
+  math). Not having the tether overheat removes one requirement: A vast,
+  multi-kilometer long cooling system that just adds mass.</p>
 
   <references>
     <ref id="relrob">
@@ -206,9 +206,9 @@
         <quote>Rubakov (1981) and independently Callan (1982a, b) have shown
         that the grand unification monopole, when it passes through matter, can
         induce proton decay through reactions of the type $M + p \rightarrow
-        Me^+\pi^0, M\mu^+K^0, Me^+\mu^+\mu^-$ etc. The monopole would come out
-        unscathed in the reaction, but would cause the break up of the proton in
-        a manner identical to what happens in proton decay.</quote>
+        Me^+\pi^0$, $M\mu^+K^0$, $Me^+\mu^+\mu^-$ etc. The monopole would come
+        out unscathed in the reaction, but would cause the break up of the
+        proton in a manner identical to what happens in proton decay.</quote>
       </desc>
     </ref>
     <ref id="eleitl">
