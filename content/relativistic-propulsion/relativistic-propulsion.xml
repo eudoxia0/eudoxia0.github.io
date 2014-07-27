@@ -226,24 +226,28 @@
       </desc>
     </ref>
     <ref id="preskill">
-      <title></title>
-      <author></author>
-      <link></link>
-      <desc>
-
-      </desc>
+      <title>Magnetic Monopoles</title>
+      <author>John Preskill</author>
+      <link>http://www.theory.caltech.edu/~preskill/pubs/preskill-1984-monopoles.pdf</link>
     </ref>
     <ref id="monmass">
-      <title></title>
-      <author></author>
-      <link></link>
+      <title>Magnetic Monopole Searches with AMANDA and other detectors</title>
+      <author>Matilda Åberg Lindell</author>
+      <link>http://www.diva-portal.org/smash/get/diva2:320548/FULLTEXT02</link>
       <desc>
+        The author remarks that "[Monopoles] could never be produced in any
+        man-made accelerator, existing or conceivable".
 
+        Here, "conceivable" could mean "reasonable for a sane,
+        non-transhumanist" (ie a particle accelerator smaller than a continent)
+        or "physically possible" (A particle accelerator the size of the galaxy
+        doesn't count).
       </desc>
     </ref>
     <ref id="production">
       <title>On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions</title>
       <author>Yu. Kurochkin</author>
+      <link>http://www.worldscientific.com/doi/abs/10.1142/S0217732306022237</link>
     </ref>
   </references>
   <links>
