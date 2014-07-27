@@ -3,8 +3,8 @@
 
   <nav>
     <ul>
-      <li><a href='/about'>About</a></li>
-      <li><a href='/cv.pdf'>Resume</a></li>
+      <li><l uri='/about.html'>About</l></li>
+      <li><l uri='/cv/cv.pdf'>Resume</l></li>
     </ul>
   </nav>
 
