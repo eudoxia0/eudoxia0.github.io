@@ -95,17 +95,27 @@
 
   <xsl:template match="references">
     <!-- Text of the references -->
+    <xsl:variable name="link" select="link//@uri"/>
+    <h1>References</h1>
     <section id="references">
       <xsl:for-each select="./ref">
         <div class="text">
-          <span class="author"><xsl:value-of select="author"/></span>.
-          <em><xsl:value-of select="title"/></em>
+          <xsl:if test="author">
+            <span class="author"><xsl:apply-templates select="author"/></span>.
+          </xsl:if>
+          <xsl:choose>
+            <xsl:when test="author">
+              <a href="$link"><em><xsl:apply-templates select="title"/></em></a>.
+            </xsl:when>
+            <xsl:otherwise>
+              <a href="$link">Link</a>.
+            </xsl:otherwise>
+          </xsl:choose>
           <xsl:if test="desc">
             <p class="desc">
-              <xsl:value-of select="desc"/>
+              <xsl:apply-templates select="desc"/>
             </p>
           </xsl:if>
-          <xsl:value-of select="link"/>
         </div>
       </xsl:for-each>
     </section>
