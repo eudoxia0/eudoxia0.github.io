@@ -65,3 +65,4 @@ serve:
 
 clean:
 	rm -rf $(BUILD)
+	find . -type f -name '*.html' -delete

@@ -132,9 +132,9 @@
   </xsl:template>
 
   <!-- Basic HTML tags I don't want to see disappear -->
-  <xsl:template match="strike|nav|header|div|ul|ol|li|h1|h2|h3|h4|p|post|page">
+  <xsl:template match="@* | node()">
     <xsl:copy>
-      <xsl:apply-templates/>
+      <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>
