@@ -86,6 +86,10 @@
     </section>
   </xsl:template>
 
+  <xsl:template match="author|title|desc">
+    <xsl:apply-templates/>
+  </xsl:template>
+
   <xsl:template match="cite">
     <!-- Citations -->
     <xsl:variable name="id" select="@id"/>

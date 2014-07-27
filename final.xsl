@@ -5,21 +5,38 @@
   <xsl:preserve-space elements="code"/>
   <xsl:strip-space elements="*"/>
 
+  <xsl:template name="template-head">
+    <xsl:param name="title"/>
+    <head>
+      <meta charset="utf-8"/>
+      <title><xsl:value-of select="$title"/></title>
+      <link rel="stylesheet" href="/static/style.css"/>
+    </head>
+  </xsl:template>
+
+  <xsl:template name="after-body">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+  </xsl:template>
+
   <!-- Page templates -->
   <xsl:template match="page">
     <!-- Generic page -->
     <xsl:variable name="title" select="@title"/>
     <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
     <html lang="en">
-      <head>
-        <meta charset="utf-8"/>
-        <title><xsl:value-of select="$title"/></title>
-        <link rel="stylesheet" href="/static/style.css"/>
-      </head>
+      <xsl:call-template name="template-head">
+        <xsl:with-param name="title" select="$title"/>
+      </xsl:call-template>
       <body>
         <div id="main">
           <xsl:apply-templates/>
         </div>
+        <xsl:call-template name="after-body"/>
       </body>
     </html>
   </xsl:template>
@@ -29,15 +46,15 @@
     <xsl:variable name="title" select="@title"/>
     <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
     <html lang="en">
-      <head>
-        <meta charset="utf-8"/>
-        <title><xsl:value-of select="$title"/></title>
-        <link rel="stylesheet" href="/static/style.css"/>
-      </head>
+      <xsl:call-template name="template-head">
+        <xsl:with-param name="title" select="$title"/>
+      </xsl:call-template>
       <body>
+        <h1><xsl:value-of select="$title"/></h1>
         <article>
           <xsl:apply-templates/>
         </article>
+        <xsl:call-template name="after-body"/>
       </body>
     </html>
   </xsl:template>
