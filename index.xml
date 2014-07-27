@@ -17,7 +17,7 @@
   </div>
 
   <links>
-    <link id="propulsion" uri="/content/relativistic-propulsion/relativistic-propulsion.html"/>
-    <link id="on-markup" uri="/content/on-markup/on-markup.html"/>
+    <l id="propulsion" uri="/content/relativistic-propulsion/relativistic-propulsion.html"/>
+    <l id="on-markup" uri="/content/on-markup/on-markup.html"/>
   </links>
 </page>

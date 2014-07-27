@@ -80,7 +80,7 @@
         <a href="{$uri}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:otherwise>
-        <a href="{//links/link[@id=$id]/@uri}">
+        <a href="{//links/l[@id=$id]/@uri}">
           <xsl:apply-templates/>
         </a>
       </xsl:otherwise>
