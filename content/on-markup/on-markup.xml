@@ -3,12 +3,12 @@
   abstract representation, where it can be manipulated through code (Usually
   simple pattern-template macros).</p>
 
-  <p>Lightweight markup languages like Markdown work for simple documents, like
-  this README, because they have syntactic sugar for 80% of what one requires
-  for documentation. But fall apart when you want to add new features: What can
-  I do if I want tables? Or references? Or just a simple macro to reduce
-  repetition? Pandoc provides all of those, through non-standard extensions. But
-  what if you want to combine those?</p>
+  <p>Lightweight markup languages like Markdown work for simple documents,
+  because they have syntactic sugar for 80% of what one requires for
+  documentation. But fall apart when you want to add new features: What can I do
+  if I want tables? Or references? Or just a simple macro to reduce repetition?
+  Pandoc provides all of those, through non-standard extensions. But what if you
+  want to combine those?</p>
 
   <p>Consider the following hypothetical example in Pandoc Markdown:</p>
 
