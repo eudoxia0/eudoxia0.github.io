@@ -22,7 +22,7 @@
 
   <h2>Design Problems</h2>
 
-  Possibly the most obvious problem is the violation of the Golden Rule: The
+  <p>Possibly the most obvious problem is the violation of the Golden Rule: The
   ship has two engines, one at the front and one at the back, because turning
   broadside while coasting at relativistic speeds opens the ship up to a
   disastrous impact.
@@ -33,7 +33,7 @@
   already bound to be massive.
 
   The solution is fairly obvious: Engine, tether, crew and cargo, in that order
-  from zenith to nadir. The process of turning the engine safely would be:
+  from zenith to nadir. The process of turning the engine safely would be:</p>
 
   <ol>
     <li>While coasting, and when the engine is off, roll up the tether until the
