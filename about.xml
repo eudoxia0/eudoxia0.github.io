@@ -3,7 +3,15 @@
 
   <h1>Colophon</h1>
 
-  <p>This site is built with Make, Sass and XSLT. Previously is used nanoc,
-  Pandoc and Markdown. Before it used some other custom XML thing. Before that,
-  Scribble.</p>
+  <p>This site is built with Make, <l id="sass">Sass</l> and XSLT. Previously is
+  used <l id="nanoc">nanoc</l>, <l id="pandoc">Pandoc</l> and Markdown. Before
+  it used some other custom XML thing. Before that, <l
+  id="scribble">Scribble</l>.</p>
+
+  <links>
+    <l id="sass" uri="http://sass-lang.com/"/>
+    <l id="nanoc" uri="http://nanoc.ws/"/>
+    <l id="pandoc" uri="http://johnmacfarlane.net/pandoc/"/>
+    <l id="scribble" uri="http://www.cliki.net/scribble"/>
+  </links>
 </page>
