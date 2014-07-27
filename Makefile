@@ -25,7 +25,7 @@ CV = cv/cv.pdf
 OUTPUT_EXTS = html pdf css
 EXTENSIONS = $(foreach EXT, $(OUTPUT_EXTS), --include "*.$(EXT)")
 RSYNC_OPTS = -a --exclude "$(BUILD)" --include '*/' $(EXTENSIONS) --exclude '*' \
-	--prune-empty-dirs --remove-source-files
+	--prune-empty-dirs
 
 GI = gem install --no-ri --no-rdoc
 
