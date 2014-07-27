@@ -24,7 +24,7 @@ CV = cv/cv.pdf
 # Moving files
 OUTPUT_EXTS = html pdf css
 EXTENSIONS = $(foreach EXT, $(OUTPUT_EXTS), --include "*.$(EXT)")
-RSYNC_OPTS = -a --include '*/' $(EXTENSIONS) --exclude '*' --exclude $(BUILD) \
+RSYNC_OPTS = -a --exclude "$(BUILD)" --include '*/' $(EXTENSIONS) --exclude '*' \
 	--prune-empty-dirs --remove-source-files
 
 GI = gem install --no-ri --no-rdoc
@@ -57,7 +57,7 @@ all: $(STATIC) $(TARGET_CSS) $(HTML_FILES) $(CV)
 	mkdir -p $(BUILD)
 	rsync $(RSYNC_OPTS) ./ $(BUILD)
 
-serve: all
+serve:
 	cd $(BUILD); python2 -m SimpleHTTPServer 5000
 
 clean:
