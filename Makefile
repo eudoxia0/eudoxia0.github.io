@@ -18,6 +18,9 @@ XSLT = saxon-xslt
 XML_FILES = $(shell find . -type f -name '*.xml')
 HTML_FILES = $(XML_FILES:.xml=.html)
 
+DOT_FILES = $(shell find . -type f -name '*.dot')
+SVG_FILES = $(DOT_FILES:.dot=.svg)
+
 # CV
 CV_TEX = cv/cv.tex
 CV = cv/cv.pdf
@@ -43,6 +46,9 @@ reqs:
 	$(XSLT) tmp.xml $(PARAGRAPH_STYLESHEET) > $@
 	rm tmp.xml
 
+%.svg: %.dot
+	dot -Tsvg $? -o $@
+
 $(CV): $(CV_TEX)
 	pdflatex $?
 	rm cv.log
@@ -53,7 +59,7 @@ $(CV): $(CV_TEX)
 $(TARGET_CSS): $(STYLE)
 	$(SASS) $(STYLE) $(TARGET_CSS)
 
-all: $(STATIC) $(TARGET_CSS) $(HTML_FILES) $(CV)
+all: $(STATIC) $(TARGET_CSS) $(HTML_FILES) $(SVG_FILES) $(CV)
 	mkdir -p $(BUILD)
 	rsync $(RSYNC_OPTS) ./ $(BUILD)
 
