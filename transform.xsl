@@ -2,8 +2,6 @@
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" indent="no"/>
-  <xsl:preserve-space elements="code"/>
-  <xsl:strip-space elements="*"/>
 
   <!-- Content tags -->
   <xsl:template match="sidenote">
@@ -77,9 +75,9 @@
             </xsl:otherwise>
           </xsl:choose>
           <xsl:if test="desc">
-            <p class="desc">
-              <xsl:apply-templates select="desc"/>
-            </p>
+            <div class="desc">
+              <p><xsl:apply-templates select="desc"/></p>
+            </div>
           </xsl:if>
         </div>
       </xsl:for-each>
