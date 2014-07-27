@@ -10,7 +10,8 @@ SASS = sass $(SASS_OPTS)
 TARGET_CSS = $(STATIC)/style.css
 
 # Command to process an XML file
-STYLESHEET = transform.xsl
+MAIN_STYLESHEET = transform.xsl
+PARAGRAPH_STYLESHEET = final.xsl
 XSLT = saxon-xslt
 
 # Targets
@@ -41,7 +42,9 @@ $(STATIC):
 	cd $(STATIC); neat install
 
 %.html: %.xml
-	$(XSLT) $? $(STYLESHEET) > $@
+	$(XSLT) $? $(MAIN_STYLESHEET) > tmp.xml
+	$(XSLT) tmp.xml $(PARAGRAPH_STYLESHEET) > $@
+	rm tmp.xml
 
 $(CV): $(CV_TEX)
 	pdflatex $?
