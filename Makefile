@@ -23,7 +23,7 @@ CV_TEX = cv/cv.tex
 CV = cv/cv.pdf
 
 # Moving files
-OUTPUT_EXTS = html pdf css
+OUTPUT_EXTS = html pdf css js svg png jpg woff
 EXTENSIONS = $(foreach EXT, $(OUTPUT_EXTS), --include "*.$(EXT)")
 RSYNC_OPTS = -a --exclude "$(BUILD)" --include '*/' $(EXTENSIONS) --exclude '*' \
 	--prune-empty-dirs
@@ -34,9 +34,6 @@ reqs:
 	$(GI) sass
 	$(GI) bourbon
 	$(GI) neat
-
-$(STATIC):
-	mkdir -p $(STATIC)
 	bower install
 	cd $(STATIC); bourbon install
 	cd $(STATIC); neat install
