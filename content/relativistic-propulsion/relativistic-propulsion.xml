@@ -189,10 +189,66 @@
   cooling system that just adds mass.</p>
 
   <references>
+    <ref id="relrob">
+      <title>Relativistic robots and the feasibility of interstellar flight</title>
+      <author>Charles R. Pellegrino</author>
+      <link>https://web.archive.org/web/20111116172452/http://www.charlespellegrino.com/propulsion.htm</link>
+      <desc>
+        The essay has since been taken down and redirects to the related essay
+        <i>These New Oceans</i>, so a link to the Internet archive is provided.
+      </desc>
+    </ref>
+    <ref id="pdecay">
+      <title>Searches for Proton Decay and Superheavy Magnetic Monopoles</title>
+      <author>B. V. Sreekantan</author>
+      <link>http://www.ias.ac.in/jarch/jaa/5/251-271.pdf</link>
+      <desc>
+        <quote>Rubakov (1981) and independently Callan (1982a, b) have shown
+        that the grand unification monopole, when it passes through matter, can
+        induce proton decay through reactions of the type $M + p \rightarrow
+        Me^+\pi^0, M\mu^+K^0, Me^+\mu^+\mu^-$ etc. The monopole would come out
+        unscathed in the reaction, but would cause the break up of the proton in
+        a manner identical to what happens in proton decay.</quote>
+      </desc>
+    </ref>
+    <ref id="eleitl">
+      <link>http://gnusha.org/logs/2013-01-22.log</link>
+      <desc>
+        <code><![CDATA[
+          07:28 < eleitl> Solid state travels very lightly, especially if you
+          leave the drive at home.
 
+          07:28 < eleitl> Up to 0.9 c in mere weeks.
+
+          07:28 < eleitl> Up, up and away.
+          ]]>
+        </code>
+      </desc>
+    </ref>
+    <ref id="preskill">
+      <title></title>
+      <author></author>
+      <link></link>
+      <desc>
+
+      </desc>
+    </ref>
+    <ref id="monmass">
+      <title></title>
+      <author></author>
+      <link></link>
+      <desc>
+
+      </desc>
+    </ref>
+    <ref id="production">
+      <title>On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions</title>
+      <author>Yu. Kurochkin</author>
+    </ref>
   </references>
   <links>
     <l id="mag" uri="http://en.wikipedia.org/wiki/Magnetic_monopole"/>
     <l id="kardashev" uri="http://en.wikipedia.org/wiki/Kardashev_scale"/>
     <l id="magsail" uri="http://en.wikipedia.org/wiki/Magnetic_sail"/>
+  </links>
 </post>
