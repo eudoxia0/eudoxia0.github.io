@@ -11,13 +11,13 @@
   <div id="content">
     <ul>
       Contents:
-      <li>
-        <l id="propulsion">Relativistic Propulsion</l>
-      </li>
+      <li><l id="propulsion">Relativistic Propulsion</l></li>
+      <li><l id="on-markup">On Markup</l></li>
     </ul>
   </div>
 
   <links>
-    <l id="propulsion" uri="/essays/relativistic-propulsion"/>
+    <link id="propulsion" uri="/content/relativistic-propulsion/relativistic-propulsion.html"/>
+    <link id="on-markup" uri="/content/on-markup/on-markup.html"/>
   </links>
 </page>
