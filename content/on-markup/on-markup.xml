@@ -1,4 +1,4 @@
-<post title="On Markup">
+<post title="On Markup" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <p>The essence and purpose of markup is to bring annotated text into an
   abstract representation, where it can be manipulated through code (Usually
   simple pattern-template macros).</p>
