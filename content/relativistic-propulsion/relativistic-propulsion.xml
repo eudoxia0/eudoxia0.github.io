@@ -53,4 +53,146 @@
   from the shielding will push the cargo section closer to the engine. The
   engine, then, has to run perpetually and counteract this drag so the tether
   remains taut.</p>
+
+  <h1>Humans are Fragile</h1>
+
+  <h2>Acceleration</h2>
+
+  <h2>Radiation</h2>
+
+  <h2>Life Support</h2>
+
+  <h2>Are humans worth it?</h2>
+
+  <p>Seen from a rather extraterrestrial perspective, the idea of sending humans
+  -- canned primates -- across interstellar distances is a completely hubristic
+  fantasy. At the very least there's a very sharp contrast, between animals that
+  evolved to live a few decades within a couple kilometers of the tribe, and
+  incredible machines that can cross the distance between stars.
+
+  Solid state is easier. Hook it up to the tether, and it's up, up and
+  away<ref id="eleitl"/>.</p>
+
+  <h1>Propulsion</h1>
+
+  <h2>Antimatter</h2>
+
+  <h2>Monopole-Catalyzed Total Conversion</h2>
+
+  <p><l id="mag">Magnetic monopoles</l> are particles that act, as their name
+  implies, as magnets with a single pole. What makes them interesting, from a
+  practical perspective, is that under some GUTs, monopoles trigger proton
+  decay<ref id="pdecay"/> on contact. The process is essentially the same as
+  pair annihilation, only <b>the monopole remains</b>. Which means it can be
+  reused: Throw a stream of plasma at a group of magnetically-suspended
+  monopoles, and you have a guaranteed fusion reactor.
+
+  Magnetic monopoles are guaranteed to exist. Every school of modern physics
+  agrees that they exist. They explain the quantization of electric charge and
+  certain subtleties about the post-inflation early Universe I'm too simple to
+  understand.
+
+  I would like to provide here an estimation of the luminosity and diameter of
+  an accelerator capable of producing stable magnetic monopoles, but that's too
+  far from my grasp. "Circumstellar" seems like a good estimate of size.  As for
+  the power requirements, I don't think a <l id="kardashev">civilization</l>
+  that can produce monopoles has any need for them in energy
+  production. However, they remain useful for two obvious purposes: Power
+  generation in deep-space operations, and space propulsion.
+
+  Fission and fusion both require particular ingredients, but protons are all
+  the same, and monopoles don't discriminate.
+
+  As an aside: We don't know the exact mass of magnetic monopoles. Estimates
+  vary from $4 \times 10^4~\mathrm{GeV}$ to $10^{17}~\mathrm{GeV}$<ref
+  id="monmass"/>, the latter being <cite id="preskill">comparable to the mass of
+  a bacterium, or the kinetic energy of a charging rhinoceros</cite>.</p>
+
+  <h3>Difficulties</h3>
+
+  <sidenote>
+    (Aside from, you know, <i>building a circumstellar supercollider</i>)
+  </sidenote>
+
+  <h4>Producing Magnetic Monopoles</h4>
+
+  <p>"Build a very big accelerator" is incredibly vague. What exactly would it
+  have to <i>do</i> to produce magnetic monopoles? Lindell references a
+  paper<ref id="production"/> that proposes using high energy $pp$ (That's
+  proton-proton) collisions to produce a monopole-antimonopole pair through
+  photon fusion, but the paper is behind a paywall so I can't comment on that.
+
+  Instead I tried to get two papers that cite it, <cite
+  id="monopolium">Monopolium production from photon fusion at the Large Hadron
+  Collider</cite> and <cite id="lhc">Looking for magnetic monopoles at LHC with
+  diphoton events</cite>.</p>
+
+  <h4>Stability</h4>
+
+  <p>Monopoles, because of their nature, don't have the safety guarantees of
+  nuclear fusion: A monopole-catalyzed fusion reactor may go supercritical, much
+  like a fission reactor. Antimatter-catalyzed fusion has this same problem but
+  to a much smaller degree: Antimatter is annihilated, monopoles remain.</p>
+
+  <h4>Separating Monopoles from Fusion Products</h4>
+
+  <p>We want the plasma and gamma rays from fusion to leave the exhaust, but the
+  monopoles to remain, which is bound to be hard since the monopoles will be
+  pushed around by the highly-energetic fusion reactions that themselves
+  trigger.
+
+  A possible solution takes advantage of the vast mass difference between a
+  proton and a Grand Unification monopole: If you make both travel in an arc,
+  guided by a magnetic field, the monopole will stick to its original trajectory
+  more than the proton, because it has a much greater inertia. The specifics of
+  this would probably be fairly complicated, and require actually knowing the
+  mass of monopoles.</p>
+
+  <h4>Monopolar Ramjets</h4>
+
+  <p>This section is somewhat of an afterthought. In 1985, Robert Zubrin and Dana
+  Andrews analyzed the Bussard fusion ramjet, and concluded that the drag
+  created by protons brushing against the magnetic field is greater than the
+  thrust of the engine -- by nine orders of magnitude. So much drag, in fact,
+  that it inspired the idea of the <l id="magsail">magnetic sail</l>.
+
+  It is unlikely that a fusion ramjet upgraded to use antimatter or
+  monopole-catalyzed fusion will be able to overcome this gap, but the thought
+  is left here.</p>
+
+  <h1>Design</h1>
+
+  <h2>Shielding</h2>
+
+  <h2>Dust</h2>
+
+  <h2>Radiation</h2>
+
+  <h2>Tether</h2>
+
+  <p>The tether is an important part of the spacecraft and is in a very
+  vulnerable position: Sandwiched between the exhaust plumes of two engines with
+  massive power outputs. Radiation from the conversion reactions and plasma from
+  the plume could erode the tether over time, and heat radiatied by the plume
+  and adsorbed by the tether could cause it to overheat and maybe require its
+  own cooling system.
+
+  To address this last problem, the tether should be a ribbon: Wide, flat, and
+  coplanar with both engines. A ribbon exposes a smaller cross-section to the
+  exhaust plumes and would adsorb less heat, as you can see in the very
+  scientific image below:</p>
+
+  <p>Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each
+  engine, while a tether with the same cross-sectional area as the ribbon
+  ($r^2\pi$) and with a width of $10r\pi$ would only expose $r/10$. Not having
+  the tether overheat removes one requirement: A vast, multi-kilometer long
+  cooling system that just adds mass.</p>
+
+  <references>
+
+  </references>
+  <links>
+    <l id="mag" uri="http://en.wikipedia.org/wiki/Magnetic_monopole"/>
+    <l id="kardashev" uri="http://en.wikipedia.org/wiki/Kardashev_scale"/>
+    <l id="magsail" uri="http://en.wikipedia.org/wiki/Magnetic_sail"/>
 </post>
