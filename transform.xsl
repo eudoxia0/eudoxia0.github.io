@@ -2,6 +2,8 @@
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" indent="yes"/>
+  <xsl:preserve-space elements="code"/>
+  <xsl:strip-space elements="*"/>
 
   <!-- Page templates -->
   <xsl:template match="page">
@@ -105,10 +107,10 @@
           </xsl:if>
           <xsl:choose>
             <xsl:when test="author">
-              <a href="$link"><em><xsl:apply-templates select="title"/></em></a>.
+              <a href="{$link}"><em><xsl:apply-templates select="title"/></em></a>.
             </xsl:when>
             <xsl:otherwise>
-              <a href="$link">Link</a>.
+              <a href="{$link}">Link</a>.
             </xsl:otherwise>
           </xsl:choose>
           <xsl:if test="desc">
