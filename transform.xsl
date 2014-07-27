@@ -22,6 +22,24 @@
     </html>
   </xsl:template>
 
+  <xsl:template match="post">
+    <!-- Generic page -->
+    <xsl:variable name="title" select="@title"/>
+    <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <title><xsl:value-of select="$title"/></title>
+        <link rel="stylesheet" href="/static/style.css"/>
+      </head>
+      <body>
+        <article>
+          <xsl:apply-templates/>
+        </article>
+      </body>
+    </html>
+  </xsl:template>
+
   <!-- Content tags -->
   <xsl:template match="sidenote">
     <div class="sidenote">
@@ -62,14 +80,12 @@
         <a href="{$uri}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:otherwise>
-        <a href="{//links/link[@id=$id]/@ref}">
+        <a href="{//links/link[@id=$id]/@uri}">
           <xsl:apply-templates/>
-      </a>
+        </a>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
-  <xsl:template match="links"><!-- Delete the contents --></xsl:template>
 
   <xsl:template match="r">
     <!-- References -->
@@ -114,9 +130,15 @@
   </xsl:template>
 
   <xsl:template match="code">
-    <code>
-      <xsl:value-of select=".//text()"/>
-    </code>
+    <pre>
+      <code>
+        <xsl:value-of select="string(.)"/>
+      </code>
+    </pre>
+  </xsl:template>
+
+  <xsl:template match="ic">
+    <code><xsl:value-of select="string(.)"/></code>
   </xsl:template>
 
   <!-- Smart typography -->
