@@ -114,7 +114,9 @@
   </xsl:template>
 
   <xsl:template match="code">
-    <xsl:value-of select="."/>
+    <code>
+      <xsl:value-of select=".//text()"/>
+    </code>
   </xsl:template>
 
   <!-- Smart typography -->
