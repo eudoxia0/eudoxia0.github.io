@@ -1,7 +1,16 @@
 <page title="About">
   <h1>About Me</h1>
 
+  <p>I was born in the 28th of November of 1994. The same day, in 1894, Henry
+  Hazlitt was born; in 1520, Magellan became the first European to cross into
+  the Pacific from the Atlantic; and in 1954, Enrico Fermi died.
+
+  I usually go as <b>eudoxia</b> on the Internet.</p>
+
   <h1>Contact</h1>
+
+  I can often be found in the <l id="hplus"><ic>##hplusroadmap</ic></l> channel
+  on Freenode (<l id="hplus-web">Webchat</l>) as <b>eudoxia</b>.
 
   <dl>
     <dt>GitHub</dt>
@@ -10,21 +19,26 @@
     <dd><l uri="https://twitter.com/eudxa">@eudxa</l></dd>
     <dt>Bitcoin</dt>
     <dd><l id="btc">1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9</l> (<l id="blockchain">blockchain.info</l></dd>
+    <dd>Hacker News</dd>
+    <dd><l id="hn-subs">Submissions</l> and <l id="hn-comments">Comments</l></dd>
   </dl>
 
   <h1>Colophon</h1>
 
-  <p>This site is built with Make, <l id="sass">Sass</l> and XSLT. Previously is
-  used <l id="nanoc">nanoc</l>, <l id="pandoc">Pandoc</l> and Markdown. Before
-  it used some other custom XML thing. Before that, <l
-  id="scribble">Scribble</l>.</p>
+  <p>This site is built with Make, <l id="sass">Sass</l> and XSLT. Math is
+  rendered through <l id="mathjax">MathJax</l>.</p>
 
   <links>
+    <l id="hplus" uri="irc://irc.freenode.net/##hplusroadmap"/>
+    <l id="hplus-web" uri="http://webchat.freenode.net/?channels=##hplusroadmap"/>
     <l id="btc" uri="bitcoin:1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9"/>
     <l id="blockchain" uri="https://blockchain.info/address/1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9"/>
+    <l id="hn-subs" uri="https://news.ycombinator.com/submitted?id=eudox"/>
+    <l id="hn-comments" uri="https://news.ycombinator.com/threads?id=eudox"/>
     <l id="sass" uri="http://sass-lang.com/"/>
     <l id="nanoc" uri="http://nanoc.ws/"/>
     <l id="pandoc" uri="http://johnmacfarlane.net/pandoc/"/>
     <l id="scribble" uri="http://www.cliki.net/scribble"/>
+    <l id="mathjax" uri="http://www.mathjax.org/"/>
   </links>
 </page>
