@@ -1,12 +1,12 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
 @import "typeplate-starter-kit/scss/typeplate";
 
 /* General CSS */
 body {
     margin: 0 auto;
     padding: 45px;
-    font-family: 'Cardo', serif;
+    font-family: 'Crimson Text', serif;
     color: $body-copy-color;
 }
 
@@ -19,35 +19,12 @@ h1, h2, h3, h4, h5, h6 {
     color: $heading-color;
 }
 
-h1 {
-    @extend .gamma;
-    @extend %hN;
-}
-
-h2 {
-    @extend .delta;
-    @extend %hN;
-}
-
-h3 {
-    @extend .epsilon;
-    @extend %hN;
-}
-
-h4 {
-    @extend .zeta;
-    @extend %hN;
-}
-
-h5 {
-    @extend .zeta;
-    @extend %hN;
-}
-
-h6 {
-    @extend .zeta;
-    @extend %hN;
-}
+h1 { @extend .gamma; @extend %hN; }
+h2 { @extend .delta; @extend %hN; }
+h3 { @extend .epsilon; @extend %hN; }
+h4 { @extend .zeta; @extend %hN; }
+h5 { @extend .zeta; @extend %hN; }
+h6 { @extend .zeta; @extend %hN; }
 
 /* Front page */
 nav ul {
