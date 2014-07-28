@@ -174,12 +174,12 @@
   vulnerable position: Sandwiched between the exhaust plumes of two engines with
   massive power outputs. Radiation from the conversion reactions and plasma from
   the plume could erode the tether over time, and heat radiatied by the plume
-  and adsorbed by the tether could cause it to overheat and maybe require its
+  and absorbed by the tether could cause it to overheat and maybe require its
   own cooling system.
 
   To address this last problem, the tether should be a ribbon: Wide, flat, and
   coplanar with both engines. A ribbon exposes a smaller cross-section to the
-  exhaust plumes and would adsorb less heat, as you can see in the very
+  exhaust plumes and would absorb less heat, as you can see in the very
   scientific image below:</p>
 
   <p>Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each
