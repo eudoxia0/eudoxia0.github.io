@@ -19,7 +19,7 @@
     <dd><l uri="https://twitter.com/eudxa">@eudxa</l></dd>
     <dt>Bitcoin</dt>
     <dd><l id="btc">1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9</l> (<l id="blockchain">blockchain.info</l></dd>
-    <dd>Hacker News</dd>
+    <dt>Hacker News</dt>
     <dd><l id="hn-subs">Submissions</l> and <l id="hn-comments">Comments</l></dd>
   </dl>
 
