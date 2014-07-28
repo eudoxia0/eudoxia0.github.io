@@ -43,17 +43,3 @@ nav ul {
 article {
     
 }
-
-.footnotes hr {
-    /* I don't like the ugly <hr> separating the references from the rest */
-    display: none;
-}
-
-.footnotes li {
-    // Individual reference style
-
-    a[href^="#fnref"] {
-        // Backlink style
-        display: none;
-    }
-}

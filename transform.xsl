@@ -5,9 +5,9 @@
 
   <!-- Content tags -->
   <xsl:template match="sidenote">
-    <div class="sidenote">
+    <aside>
       <xsl:apply-templates/>
-    </div>
+    </aside>
   </xsl:template>
 
   <xsl:template match="quote">
