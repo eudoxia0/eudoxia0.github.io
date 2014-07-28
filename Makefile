@@ -69,3 +69,5 @@ serve:
 clean:
 	rm -rf $(BUILD)
 	find . -type f -name '*.html' -delete
+	find . -type f -name '*.css' -delete
+	find . -type f -name '*.pdf' -delete
