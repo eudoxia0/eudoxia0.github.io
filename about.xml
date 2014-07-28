@@ -1,6 +1,17 @@
 <page title="About">
   <h1>About Me</h1>
 
+  <h1>Contact</h1>
+
+  <dl>
+    <dt>GitHub</dt>
+    <dd><l uri="https://github.com/eudoxia0">@eudoxia0</l></dd>
+    <dt>Twitter</dt>
+    <dd><l uri="https://twitter.com/eudxa">@eudxa</l></dd>
+    <dt>Bitcoin</dt>
+    <dd><l id="btc">1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9</l> (<l id="blockchain">blockchain.info</l></dd>
+  </dl>
+
   <h1>Colophon</h1>
 
   <p>This site is built with Make, <l id="sass">Sass</l> and XSLT. Previously is
@@ -9,6 +20,8 @@
   id="scribble">Scribble</l>.</p>
 
   <links>
+    <l id="btc" uri="bitcoin:1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9"/>
+    <l id="blockchain" uri="https://blockchain.info/address/1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9"/>
     <l id="sass" uri="http://sass-lang.com/"/>
     <l id="nanoc" uri="http://nanoc.ws/"/>
     <l id="pandoc" uri="http://johnmacfarlane.net/pandoc/"/>
