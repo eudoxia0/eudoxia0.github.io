@@ -137,6 +137,16 @@
     </xsl:analyze-string>
   </xsl:template>
 
+  <xsl:template match="p">
+    <!-- There's a bug in the paragraph splitting code. If the last paragraph
+         contains no tags it will be ignored. This template introduces a tag
+         that will then be removed. -->
+    <xsl:copy>
+      <xsl:apply-templates/>
+      <p-pad-tag></p-pad-tag>
+    </xsl:copy>
+  </xsl:template>
+
   <!-- Basic HTML tags I don't want to see disappear -->
   <xsl:template match="@* | node()">
     <xsl:copy>
