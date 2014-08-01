@@ -215,10 +215,13 @@
       <link uri="http://gnusha.org/logs/2013-01-22.log"/>
       <desc>
         <quote>
-          <![CDATA[07:28 < eleitl> Solid state travels very lightly, especially if you
-          leave the drive at home.
-          07:28 < eleitl> Up to 0.9 c in mere weeks.
-          07:28 < eleitl> Up, up and away.]]>
+          <code>
+            <![CDATA[
+            07:28 < eleitl> Solid state travels very lightly, especially if you
+            leave the drive at home.
+            07:28 < eleitl> Up to 0.9 c in mere weeks.
+            07:28 < eleitl> Up, up and away.]]>
+          </code>
         </quote>
       </desc>
     </ref>
