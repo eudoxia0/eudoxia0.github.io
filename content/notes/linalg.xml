@@ -70,4 +70,9 @@
   <p>After performing Gaussian Elimination, if two matrices have the same row
   echelon form are said to be <b>row equivalent</b> (More formally, there exists
   a sequence of operations that transforms one to the other.</p>
+
+  <h2>Testing Consistency</h2>
+
+  <p>If, after Gaussian Elimination, a system has an equality like $c = k,
+  \forall c, k \in R: c \neq k$, then the system is inconsistent.</p>
 </post>
