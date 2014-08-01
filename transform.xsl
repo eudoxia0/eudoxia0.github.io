@@ -119,7 +119,7 @@
   </xsl:template>
 
   <xsl:template match="math">
-    \(<xsl:apply-templates/>\)
+    <div class="math-block">\(<xsl:apply-templates/>\)</div>
   </xsl:template>
 
   <!-- Smart typography -->
