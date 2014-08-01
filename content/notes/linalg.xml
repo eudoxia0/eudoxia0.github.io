@@ -1,0 +1,40 @@
+<post title="Linear Algebra Notes">
+  <h1>Linear System</h1>
+
+  <p>A system of equations looks like this:</p>
+
+  <math>
+    \begin{cases}
+      2x + 3y + 6z = 3\\
+      x – y + 3z = 0\\
+      x + -4y + 5z = 1
+    \end{cases}
+  </math>
+
+  <p>And it can be represented as a matrix, like this:</p>
+
+  <math><![CDATA[
+    \begin{bmatrix}
+      2 & 3 & 6 & 3\\
+      1 & -1 & 3 & 0\\
+      1 & -4 & 5 & 1\\
+    \end{bmatrix}
+    ]]>
+  </math>
+
+  <p>A linear system is <b>inconsistent</b> if it has no solution, and
+  <b>consistent</b> if it has either one solution or infinite solutions.</p>
+
+  <h1>Gaussian Elimination</h1>
+
+  <p>An <b>elementary matrix</b> is the result of applying an elementary row
+  operation to the identity matrix.</p>
+
+  <ul>
+    <b>Elementary Row Operations</b>
+    <li>Interchange: Replacing one row with the other.</li>
+    <li>Multiplication: Each element in a row is multiplied by a non-zero $k$.</li>
+    <li>Addition: Replacing one row with the sum of itself and a multiplication
+    of another.</li>
+  </ul>
+</post>
