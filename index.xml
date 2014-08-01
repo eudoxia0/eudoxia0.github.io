@@ -13,11 +13,21 @@
       Contents:
       <li><l id="propulsion">Relativistic Propulsion</l></li>
       <li><l id="on-markup">On Markup</l></li>
+      <li><l id="vagrant">Running SLIME on a Vagrant virtual machine</l></li>
+    </ul>
+  </div>
+
+  <div id="notes">
+    <ul>
+      Study notes:
+      <li><l id="linalg">Linear Algebra</l></li>
     </ul>
   </div>
 
   <links>
     <l id="propulsion" uri="/content/relativistic-propulsion/relativistic-propulsion.html"/>
     <l id="on-markup" uri="/content/on-markup/on-markup.html"/>
+    <l id="vagrant" uri="/content/vagrant-slime.html"/>
+    <l id="linalg" uri="/content/notes/linalg.html"/>
   </links>
 </page>
