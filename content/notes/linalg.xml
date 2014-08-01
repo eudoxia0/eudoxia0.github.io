@@ -11,7 +11,9 @@
     \end{cases}
   </math>
 
-  <p>And it can be represented as a matrix, like this:</p>
+  <p>And it can be represented as a matrix, like this (This is the <b>augmented
+  matrix</b>. Removing the rightmost column would make it the <b>coefficients
+  table</b>):</p>
 
   <math><![CDATA[
     \begin{bmatrix}
@@ -37,4 +39,31 @@
     <li>Addition: Replacing one row with the sum of itself and a multiplication
     of another.</li>
   </ul>
+
+  <p>Gaussian elimination consists of applying these operations to the matrices
+  (Formally, applying here means multiplying the matrix by the elementary matrix
+  associated to that transformation) to turn the matrix into <b>row echelon
+  form</b>, where we can tell whether it's consistent or not, and if it is, find
+  its solution set.
+
+  A matrix is in row echelon form when:</p>
+
+  <ul>
+    <li>Every all-zero row is at the bottom of the matrix.</li>
+    <li>The leading coefficient of a non-zero row must be to the left of the one below it.</li>
+    <li>All entries below a leading coefficient are zero.</li>
+  </ul>
+
+  <p>(The <b>leading coefficient</b> of a matrix is the first non-zero entry in a row).
+
+  Basically, it looks like this:</p>
+
+  <math><![CDATA[
+    \begin{bmatrix}
+      1 & 7 & 2 & 3\\
+      0 & 4 & 1 & 2\\
+      0 & 0 & 6 & 9 \\
+    \end{bmatrix}
+    ]]>
+  </math>
 </post>
