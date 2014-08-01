@@ -118,6 +118,10 @@
     <code><xsl:value-of select="string(.)"/></code>
   </xsl:template>
 
+  <xsl:template match="math">
+    \(<xsl:apply-templates/>\)
+  </xsl:template>
+
   <!-- Smart typography -->
   <xsl:template match="text">
     <xsl:variable name="dashed" select="replace(.//text(), '---', '—')"/>
