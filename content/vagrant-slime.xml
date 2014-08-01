@@ -7,6 +7,7 @@
   works:</p>
 
   <code>
+    <![CDATA[
     echo "Starting remote Swank..."
     sshpass -p vagrant ssh vagrant@$IP_ADDRESS -o StrictHostKeyChecking=no \
      'nohup sbcl --noinform --eval "(ql:quickload :swank)" \
@@ -16,6 +17,7 @@
     sleep 3
     sshpass -p vagrant ssh -L 4099:127.0.0.1:4005 vagrant@$IP_ADDRESS \
       -o StrictHostKeyChecking=no
+    ]]>
   </code>
 
   <p>Now all you have to do to connect is <ic>M-x slime-connect RET
