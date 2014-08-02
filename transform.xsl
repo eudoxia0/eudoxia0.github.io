@@ -76,7 +76,7 @@
           </xsl:choose>
           <xsl:if test="desc">
             <div class="desc">
-              <p><xsl:apply-templates select="desc"/></p>
+              <xsl:apply-templates select="desc"/>
             </div>
           </xsl:if>
         </div>
