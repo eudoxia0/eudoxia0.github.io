@@ -74,5 +74,18 @@
   <h2>Testing Consistency</h2>
 
   <p>If, after Gaussian Elimination, a system has an equality like $c = k,
-  \forall c, k \in R: c \neq k$, then the system is inconsistent.</p>
+  \forall c, k \in R: c \neq k$, then the system is inconsistent.
+
+  If all the variables have a fixed value, the solution is unique. Otherwise, if
+  there is at least one free variable, there are infinite solutions.</p>
+
+  <h1>Vectors</h1>
+
+  <p>A vector, for the purposes of this course, is a matrix with a single
+  column.</p>
+
+  <h1>Linear Combinations</h1>
+
+  <p>The vector $y = c_1v_1 + ... + c_nv_n$ is a <b>linear combination</b> of
+  the vectors $v_1, ..., v_n$ and weights $c_1, ..., c_n$.</p>
 </post>
