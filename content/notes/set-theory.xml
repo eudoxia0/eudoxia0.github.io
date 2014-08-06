@@ -1,13 +1,19 @@
 <page title="Set Theory">
+  \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
+  \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
+  \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
+  \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
+  \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
+
   <h1>Operations</h1>
 
   <dl>
     <dt>Union</dt>
-    <dd>$A \cup B = \left\{ x | x \in A \lor x \in B \right\}$</dd>
+    <dd>$A \cup B = \set{x | x \in A \lor x \in B}$</dd>
     <dt>Intersection</dt>
-    <dd>$A \cap B = \left\{ x | x \in A \land x \in B \right\}$</dd>
+    <dd>$A \cap B = \set{x | x \in A \land x \in B}$</dd>
     <dt>Difference</dt>
-    <dd>$A \setminus B = \left\{ x | x \in A \land x \not \in B \right\}$</dd>    
+    <dd>$A \setminus B = \set{x | x \in A \land x \not \in B}$</dd>    
   </dl>
 
   <h1>Properties</h1>
@@ -15,5 +21,18 @@
   <dl>
     <dt>Disjoint</dt>
     <dd>$A \cap B = \emptyset$</dd>
+    <dt>Powerset</dt>
+    <dd>Set of all subsets, $\powerset{A}$.</dd>
+    <dt>Cardinality of the powerset</dt>
+    <dd>$\card{\powerset{A}} = 2^\card{A}$</dd>
+  </dl>
+
+  <h1>Tuples</h1>
+
+  <dl>
+    <dt>Projection</dt>
+    <dd>The nth of a tuple $s$ is $\proj{s}{n}$.</dd>
+    <dt>Cartesian product</dt>
+    <dd>$A \times B = \set{\tup{x,y} | a \in A \land b \in B}$</dd>
   </dl>
 </page>
