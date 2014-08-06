@@ -1,0 +1,19 @@
+<page title="Set Theory">
+  <h1>Operations</h1>
+
+  <dl>
+    <dt>Union</dt>
+    <dd>$A \cup B = \left\{ x | x \in A \lor x \in B \right\}$</dd>
+    <dt>Intersection</dt>
+    <dd>$A \cap B = \left\{ x | x \in A \land x \in B \right\}$</dd>
+    <dt>Difference</dt>
+    <dd>$A \setminus B = \left\{ x | x \in A \land x \not \in B \right\}$</dd>    
+  </dl>
+
+  <h1>Properties</h1>
+
+  <dl>
+    <dt>Disjoint</dt>
+    <dd>$A \cap B = \emptyset$</dd>
+  </dl>
+</page>
