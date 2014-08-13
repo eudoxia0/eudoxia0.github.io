@@ -1,4 +1,4 @@
-<page title="Set Theory">
+<post title="Set Theory">
   \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
   \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
   \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
@@ -54,4 +54,4 @@
     <dt>Transitive</dt>
     <dd>$\rel{a_1}{a_2}, \rel{a_2}{a_3} \rightarrow \rel{a_1}{a_3}, \forall a_1, a_2, a_3 \in A$</dd>
   </dl>
-</page>
+</post>
