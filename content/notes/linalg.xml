@@ -114,4 +114,12 @@
   $x = 0$, which this type of system always has, is the <b>trivial
   solution</b>. The system has a <b>non-trivial solution</b> if it has at least
   one free variable.</p>
+
+  <h2>Linear Independence</h2>
+
+  <p>A set of vectors $\vflist{v}$ are <b>linearly independent</b> if the vector
+  equation $x_1v_1, x_2v_2, ..., x_nv_n = 0$ has only the trivial solution.
+
+  If the equation $Ax = 0$ has only the trivial solution, then the columns of
+  $A$ are linearly independent.</p>
 </post>
