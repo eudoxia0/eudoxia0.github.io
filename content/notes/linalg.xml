@@ -107,4 +107,11 @@
   matrix equation $Ax = y$, where $A$ is the matrix of vectors $[\vflist{v}]$
   and $x$ is the vector of weights. Asking whether $y \in \Span{\vflist{v}}$ is
   equivalent to asking whether $Ax = y$ is consistent.</p>
+
+  <h2>Solutions</h2>
+
+  <p>A system that can be written as $Ax = 0$ is <b>homogenous</b>. The solution
+  $x = 0$, which this type of system always has, is the <b>trivial
+  solution</b>. The system has a <b>non-trivial solution</b> if it has at least
+  one free variable.</p>
 </post>
