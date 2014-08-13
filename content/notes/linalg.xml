@@ -93,18 +93,18 @@
   <h1>Linear Combinations</h1>
 
   <p>The vector $y = c_1v_1 + ... + c_nv_n$ is a <b>linear combination</b> of
-  the vectors $\vlist{v}{1}{n}$ and weights $\vlist{c}{1}{n}$. The <b>vector
-  equation</b> $x_1v_1, x_2v_2, ..., x_nv_n = y$ has the same solution as the
-  system whose matrix is $[\vlist{v}{1}{n}]$.
+  the vectors $\vflist{v}$ and weights $\vflist{c}$. The <b>vector equation</b>
+  $x_1v_1, x_2v_2, ..., x_nv_n = y$ has the same solution as the system whose
+  matrix is $[\vflist{v}]$.
 
   The set of linear combinations that can be generated from the vectors
-  $\vlist{v}{1}{n}$ is denoted $\Span{\vlist{v}{1}{n}}$.
+  $\vflist{v}$ is denoted $\Span{\vflist{v}}$.
 
   The spanned set includes the zero vector, and every multiple of every vector
-  $\vlist{v}{1}{n}$.
+  $\vflist{v}$.
 
   The vector equation $x_1v_1, x_2v_2, ..., x_nv_n = y$ is equivalent to the
-  matrix equation $Ax = y$, where $A$ is the matrix of vectors
-  $[\vlist{v}{1}{n}]$ and $x$ is the vector of weights. Asking whether $y \in
-  \Span{\vflist{v}}$ is equivalent to asking whether $Ax = y$ is consistent.</p>
+  matrix equation $Ax = y$, where $A$ is the matrix of vectors $[\vflist{v}]$
+  and $x$ is the vector of weights. Asking whether $y \in \Span{\vflist{v}}$ is
+  equivalent to asking whether $Ax = y$ is consistent.</p>
 </post>
