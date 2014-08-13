@@ -21,6 +21,7 @@
     <ul>
       Study notes:
       <li><l id="linalg">Linear Algebra</l></li>
+      <li><l id="set">Set theory</l></li>
     </ul>
   </div>
 
@@ -29,5 +30,6 @@
     <l id="on-markup" uri="/content/on-markup/on-markup.html"/>
     <l id="vagrant" uri="/content/vagrant-slime.html"/>
     <l id="linalg" uri="/content/notes/linalg.html"/>
+    <l id="set" uri="/content/notes/set-theory.html"/>
   </links>
 </page>
