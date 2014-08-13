@@ -1,6 +1,8 @@
 <post title="Linear Algebra Notes">
   <!-- Variable list: v_1, ..., v_n for example -->
   \( \newcommand{\vlist}[3]{#1_{#2}, ..., #1_#3} \)
+  \( \newcommand{\vflist}[1]{#1_1, ..., #1_n} \)
+  \( \newcommand{\Span}[1]{Span\{#1\}} \)
 
   <h1>Linear System</h1>
 
@@ -96,5 +98,13 @@
   system whose matrix is $[\vlist{v}{1}{n}]$.
 
   The set of linear combinations that can be generated from the vectors
-  $\vlist{v}{1}{n}$ is denoted $Span\{\vlist{v}{1}{n}\}$.</p>
+  $\vlist{v}{1}{n}$ is denoted $\Span{\vlist{v}{1}{n}}$.
+
+  The spanned set includes the zero vector, and every multiple of every vector
+  $\vlist{v}{1}{n}$.
+
+  The vector equation $x_1v_1, x_2v_2, ..., x_nv_n = y$ is equivalent to the
+  matrix equation $Ax = y$, where $A$ is the matrix of vectors
+  $[\vlist{v}{1}{n}]$ and $x$ is the vector of weights. Asking whether $y \in
+  \Span{\vflist{v}}$ is equivalent to asking whether $Ax = y$ is consistent.</p>
 </post>
