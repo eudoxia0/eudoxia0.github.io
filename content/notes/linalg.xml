@@ -1,4 +1,7 @@
 <post title="Linear Algebra Notes">
+  <!-- Variable list: v_1, ..., v_n for example -->
+  \( \newcommand{\vlist}[3]{#1_{#2}, ..., #1_#3} \)
+
   <h1>Linear System</h1>
 
   <p>A system of equations looks like this:</p>
@@ -50,7 +53,8 @@
 
   <ul>
     <li>Every all-zero row is at the bottom of the matrix.</li>
-    <li>The leading coefficient of a non-zero row must be to the left of the one below it.</li>
+    <li>The leading coefficient of a non-zero row must be to the left of the one
+    below it.</li>
     <li>All entries below a leading coefficient are zero.</li>
   </ul>
 
@@ -87,5 +91,10 @@
   <h1>Linear Combinations</h1>
 
   <p>The vector $y = c_1v_1 + ... + c_nv_n$ is a <b>linear combination</b> of
-  the vectors $v_1, ..., v_n$ and weights $c_1, ..., c_n$.</p>
+  the vectors $\vlist{v}{1}{n}$ and weights $\vlist{c}{1}{n}$. The <b>vector
+  equation</b> $x_1v_1, x_2v_2, ..., x_nv_n = y$ has the same solution as the
+  system whose matrix is $[\vlist{v}{1}{n}]$.
+
+  The set of linear combinations that can be generated from the vectors
+  $\vlist{v}{1}{n}$ is denoted $Span\{\vlist{v}{1}{n}\}$.</p>
 </post>
