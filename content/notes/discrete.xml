@@ -1,0 +1,36 @@
+<post title="Discrete Math">
+  <h1>Counting</h1>
+
+  <dl>
+    <dd>Sum Rule</dd>
+    <dt>If two tasks can be performed in $m$ and $n$ ways, respectively, then
+    there are $m+n$ ways of doing <b>either</b>.</dt>
+    <dt>Product Rule</dt>
+    <dd>If two sequential tasks can be performed in $m$ and $n$ ways,
+    respectively, there are $m \times n$ ways of performing the sequence.</dd>
+  </dl>
+
+  <h2>Permutations</h2>
+
+  <p>Given $n$ objects, any <b>linear arrangement</b> of these is a
+  permutation. With permutations <b>order matters</b> and <b>repetitions are not
+  allowed</b>.
+
+  The number of permutations of size $r$ a set of $n$ objects is $P(n,r) =
+  \frac{n!}{(n-r)!}$.</p>
+
+  <h3>Permutations with Repetition</h3>
+
+  <p>Given $n$ objects, with $n_1$ objects of type 1, $n_2$ objects of type 2,
+  etc. where $n_1 + ... + n_r = n$, the number of permutations with repetitions
+  is $PR(n) = \frac{n!}{n_1!n_2!...n_r!}$.</p>
+
+  <h2>Combinations</h2>
+
+  <p>Given $n$ objects, the number of subsets (Combinations) of size $r$ is
+  $C(n,r) = \frac{P(n,r)}{r!}$. Combinations <b>don't preserve order</b>.</p>
+
+  <h2>Binomial Theorem</h2>
+
+  <p>Given a positive integer $n$: $(x+y)^n = \sum_{k=0}^n C(n,k)x^ky^{n-k}$.</p>
+</post>
