@@ -51,5 +51,11 @@
     x_i \gt 0$.</li>
     <li>The number of ways to distribute $r$ identical objects in $n$
     <b>distinct</b> containers.</li>
-  </ul>
+  </ul></p>
+
+  <h2>Catalan Numbers</h2>
+
+  <p>Not exactly sure why these are useful. $b_n = \frac{1}{n+1}C(2n,n)$.</p>
+
+  <h1>Set Theory</h1>
 </post>
