@@ -5,6 +5,10 @@
   \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
   \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
   \( \newcommand{\rel}[2]{#1 R #2} \)
+  <!-- Set operations -->
+  \( \newcommand{\setu}[2]{#1 \cup #2} \)
+  \( \newcommand{\seti}[2]{#1 \cap #2} \)
+  \( \newcommand{\setd}[2]{#1 \setminus #2} \)
 
   <h1>Counting</h1>
 
@@ -51,14 +55,14 @@
   <p>$CR(n,r) = C(n+r-1, r)$.
 
   The number of combinations with repetitions of $n$ objects in sets of size $r$
-  is the same as:
+  is the same as:</p>
 
   <ul>
     <li>The number of integer solutions to the equation $x_1 + ... + x_n = r,
     x_i \gt 0$.</li>
     <li>The number of ways to distribute $r$ identical objects in $n$
     <b>distinct</b> containers.</li>
-  </ul></p>
+  </ul>
 
   <h2>Catalan Numbers</h2>
 
@@ -66,15 +70,18 @@
 
   <h1>Set Theory</h1>
 
+  <p>The number of subsets of $A$ is $2^\card{A}$. The number of subsets of size
+  $k$ is $C(n,k)$.</p>
+
   <h2>Operations</h2>
 
   <dl>
     <dt>Union</dt>
-    <dd>$A \cup B = \set{x | x \in A \lor x \in B}$</dd>
+    <dd>$\setu{A}{B} = \set{x | x \in A \lor x \in B}$</dd>
     <dt>Intersection</dt>
-    <dd>$A \cap B = \set{x | x \in A \land x \in B}$</dd>
+    <dd>$\seti{A}{B} = \set{x | x \in A \land x \in B}$</dd>
     <dt>Difference</dt>
-    <dd>$A \setminus B = \set{x | x \in A \land x \not \in B}$</dd>    
+    <dd>$\setd{A}{B} = \set{x | x \in A \land x \not \in B}$</dd>    
   </dl>
 
   <h2>Properties</h2>
