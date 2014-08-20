@@ -6,9 +6,10 @@
   \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
   \( \newcommand{\rel}[2]{#1 R #2} \)
   <!-- Set operations -->
-  \( \newcommand{\setu}[2]{#1 \cup #2} \)
-  \( \newcommand{\seti}[2]{#1 \cap #2} \)
-  \( \newcommand{\setd}[2]{#1 \setminus #2} \)
+  \( \newcommand{\setu}[2]{#1 \cup #2} \)      <!-- Union -->
+  \( \newcommand{\seti}[2]{#1 \cap #2} \)      <!-- Intersection -->
+  \( \newcommand{\setd}[2]{#1 \setminus #2} \) <!-- Difference -->
+  \( \newcommand{\setc}[2]{#1 \times #2} \)    <!-- Cartesian product -->
 
   <h1>Counting</h1>
 
@@ -88,7 +89,7 @@
 
   <dl>
     <dt>Disjoint</dt>
-    <dd>$A \cap B = \emptyset$</dd>
+    <dd>$\seti{A}{B} = \emptyset$</dd>
     <dt>Powerset</dt>
     <dd>Set of all subsets, $\powerset{A}$.</dd>
     <dt>Cardinality of the powerset</dt>
@@ -101,9 +102,9 @@
     <dt>Projection</dt>
     <dd>The nth of a tuple $s$ is $\proj{s}{n}$.</dd>
     <dt>Cartesian product</dt>
-    <dd>$A \times B = \set{\tup{x,y} | a \in A \land b \in B}$</dd>
+    <dd>$\setc{A}{B} = \set{\tup{x,y} | a \in A \land b \in B}$</dd>
     <dt>Cardinality of the Cartesian product</dt>
-    <dd>$\card{A \times B} = \card{A} \times \card{B}$</dd>
+    <dd>$\card{\setc{A}{B}} = \card{A}\card{B}$</dd>
   </dl>
 
   <h2>Relations</h2>
