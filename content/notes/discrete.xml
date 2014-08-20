@@ -110,9 +110,17 @@
     <dd>$\card{\setc{A}{B}} = \card{A}\card{B}$</dd>
   </dl>
 
-  <h2>Relations</h2>
+  <h1>Induction</h1>
 
-  <p>A relation of $A$ is a subset of $A \times A$.</p>
+  <p>The <b>well-ordering principle</b> states: Every non-empty subset of $Z^+$
+  has a smallest element, and is said to be <i>well-ordered</i>.</p>
+
+  <h1>Relations</h1>
+
+  <p>A relation of $A$ is a subset of $A \times A$.
+
+  Given two sets $A$ and $B$, the number of relations from $A$ to $B$ is
+  $2^{\card{A}\card{B}}$.</p>
 
   <dl>
     Properties
@@ -125,4 +133,6 @@
     <dt>Transitive</dt>
     <dd>$\rel{a_1}{a_2}, \rel{a_2}{a_3} \rightarrow \rel{a_1}{a_3}, \forall a_1, a_2, a_3 \in A$</dd>
   </dl>
+
+  <h2>Functions</h2>
 </post>
