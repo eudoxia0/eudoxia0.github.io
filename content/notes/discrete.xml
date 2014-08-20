@@ -1,4 +1,11 @@
 <post title="Discrete Math">
+  \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
+  \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
+  \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
+  \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
+  \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
+  \( \newcommand{\rel}[2]{#1 R #2} \)
+
   <h1>Counting</h1>
 
   <dl>
@@ -58,4 +65,53 @@
   <p>Not exactly sure why these are useful. $b_n = \frac{1}{n+1}C(2n,n)$.</p>
 
   <h1>Set Theory</h1>
+
+  <h2>Operations</h2>
+
+  <dl>
+    <dt>Union</dt>
+    <dd>$A \cup B = \set{x | x \in A \lor x \in B}$</dd>
+    <dt>Intersection</dt>
+    <dd>$A \cap B = \set{x | x \in A \land x \in B}$</dd>
+    <dt>Difference</dt>
+    <dd>$A \setminus B = \set{x | x \in A \land x \not \in B}$</dd>    
+  </dl>
+
+  <h2>Properties</h2>
+
+  <dl>
+    <dt>Disjoint</dt>
+    <dd>$A \cap B = \emptyset$</dd>
+    <dt>Powerset</dt>
+    <dd>Set of all subsets, $\powerset{A}$.</dd>
+    <dt>Cardinality of the powerset</dt>
+    <dd>$\card{\powerset{A}} = 2^\card{A}$</dd>
+  </dl>
+
+  <h2>Tuples</h2>
+
+  <dl>
+    <dt>Projection</dt>
+    <dd>The nth of a tuple $s$ is $\proj{s}{n}$.</dd>
+    <dt>Cartesian product</dt>
+    <dd>$A \times B = \set{\tup{x,y} | a \in A \land b \in B}$</dd>
+    <dt>Cardinality of the Cartesian product</dt>
+    <dd>$\card{A \times B} = \card{A} \times \card{B}$</dd>
+  </dl>
+
+  <h2>Relations</h2>
+
+  <p>A relation of $A$ is a subset of $A \times A$.</p>
+
+  <dl>
+    Properties
+    <dt>Reflexive</dt>
+    <dd>$\rel{a}{a}, \forall a \in A$</dd>
+    <dt>Symmetric</dt>
+    <dd>$\rel{a_1}{a_2} \rightarrow \rel{a_2}{a_1}, \forall a_1, a_2 \in A$</dd>
+    <dt>Antisymmetric</dt>
+    <dd>$\rel{a_1}{a_2}, \rel{a_2}{a_1} \rightarrow a_1 = a_2, \forall a_1, a_2 \in A$</dd>
+    <dt>Transitive</dt>
+    <dd>$\rel{a_1}{a_2}, \rel{a_2}{a_3} \rightarrow \rel{a_1}{a_3}, \forall a_1, a_2, a_3 \in A$</dd>
+  </dl>
 </post>
