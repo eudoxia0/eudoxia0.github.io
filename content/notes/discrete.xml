@@ -33,4 +33,23 @@
   <h2>Binomial Theorem</h2>
 
   <p>Given a positive integer $n$: $(x+y)^n = \sum_{k=0}^n C(n,k)x^ky^{n-k}$.</p>
+
+  <h3>Multinomial Theorem</h3>
+
+  <p>The coefficient of $x_1^{n_1}...x_t^{n_t}$ in $(x_1 + ... + x_t)^n$ is
+  $\frac{n!}{n_1!n_2!...n_t!}$.</p>
+
+  <h2>Combinations with Repetition</h2>
+
+  <p>$CR(n,r) = C(n+r-1, r)$.
+
+  The number of combinations with repetitions of $n$ objects in sets of size $r$
+  is the same as:
+
+  <ul>
+    <li>The number of integer solutions to the equation $x_1 + ... + x_n = r,
+    x_i \gt 0$.</li>
+    <li>The number of ways to distribute $r$ identical objects in $n$
+    <b>distinct</b> containers.</li>
+  </ul>
 </post>
