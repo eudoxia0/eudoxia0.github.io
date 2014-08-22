@@ -1,10 +1,12 @@
 <post title="Discrete Math">
+  <!-- Notation -->
   \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
   \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
   \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
   \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
   \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
   \( \newcommand{\rel}[2]{#1 R #2} \)
+  \( \newcommand{\fn}[3]{#1: #2 \mapsto #3} \)
   <!-- Set operations -->
   \( \newcommand{\setu}[2]{#1 \cup #2} \)       <!-- Union -->
   \( \newcommand{\seti}[2]{#1 \cap #2} \)       <!-- Intersection -->
@@ -135,4 +137,39 @@
   </dl>
 
   <h2>Functions</h2>
+
+  <p>A <b>function</b> $\fn{f}{A}{B}$ is a relation from $A$ to $B$ where every
+  element of $A$ appears <b>once</b> as the first element of every pair. $A$ is
+  the <b>domain</b>, $B$ the <b>codomain</b>, and the set of second elements of
+  each pair is the <b>range</b>.
+
+  There are $\card{B}^\card{A}$ functions from $A$ to $B$.</p>
+
+  Types of Function
+  <dl>
+    <dt>Injective</dt>
+    <dd>Every element of the codomain appears exactly <b>once</b>. There are
+    $P(\card{B}, \card{A})$ such functions.</dd>
+    <dt>Surjective</dt>
+    <dd>For all $b \in B$, there is <b>at least</b> one $a \in A : f(a) =
+    b$. With $\card{A} = m$, $\card{B} = n$, there are $\sum_{k=0}^n (-1)^kC(k,
+    n-k)(n-k)^m$ surjective functions from $A$ to $B$.</dd>
+  </dl>
+
+  <h3>Stirling Numbers</h3>
+
+  <p>The number of ways of distributing $m$ <b>distinct</b> objects into $n$
+  <b>identical</b> containers, without leaving any empty, is
+  $\frac{1}{n!}$\sum_{k=0}^n (-1)^kC(k, n-k)(n-k)^m$. This is denoted $S(m, n)$,
+  and called the <b>Stirling number of the second kind</b>.
+
+  A potentially useful identity: $S(m+1,n) = S(m, n-1) + nS(m, n)$.</p>
+
+  <h3>Pigeonhole Principle</h3>
+
+  <p>Absolutely obvious but not obvious to apply sometimes. If $m$ pigeons
+  occupy $n$ pigeonholes, and $m > n$, then at least one pigeonhole must have
+  more than one pigeon in it. It usually helps to 'invert' the way one thinks
+  about a certain problem: What looks like pigeons to be distributed might
+  actually be pigeon holes.</p>
 </post>
