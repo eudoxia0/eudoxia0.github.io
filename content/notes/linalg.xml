@@ -143,5 +143,31 @@
 
   <p>Every linear transformation is of the form $T(x) = Ax$, and $A = [T(I_1)
   T(I_2) ... T(I_n)]$, where $I_i$ is the $i$-th column of the identity
-  matrix.</p>
+  matrix.
+
+  T is surjective if the columns of its matrix span the codomain.
+
+  T is injective if the columns of its matrix are linearly independent.</p>
+
+  <h1>Matrix Algebra</h1>
+
+  <p>A diagonal matrix has all zeros outside the diagonal.
+
+  The sum of two matrices is just the matrix of sums of corresponding
+  entries.
+
+  The <b>transposition</b> of a matrix, $A^T$, is the result of flipping
+  everything along the diagonal. Properties: $(A+B)^T = A^T + B^T$, $(AB)^T =
+  B^TA^T$.</p>
+
+  <h3>Inverse</h3>
+
+  <p>A matrix $A$ is <b>invertible</b> if $\exists C : AC = I$.
+
+  To find an inverse, perform Gaussian elimination on $[A I]$ until it becomes
+  $[I A^-1]$. If that's not possible, it's not invertible.
+
+  If A is invertible, A is linearly independent, and $A^T$ is invertible.
+
+  The inverse of a linear transformation $T(x) = Ax$ is $S(x) = A^-1x$.</p>
 </post>
