@@ -14,7 +14,31 @@
     </head>
   </xsl:template>
 
+  <xsl:template name="mathjax-macros">
+    <!-- Notation -->
+    \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
+    \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
+    \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
+    \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
+    \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
+    \( \newcommand{\rel}[2]{#1 R #2} \)
+    \( \newcommand{\fn}[3]{#1: #2 \mapsto #3} \)
+    <!-- Set operations -->
+    \( \newcommand{\setu}[2]{#1 \cup #2} \)       <!-- Union -->
+    \( \newcommand{\seti}[2]{#1 \cap #2} \)       <!-- Intersection -->
+    \( \newcommand{\setd}[2]{#1 \setminus #2} \)  <!-- Difference -->
+    \( \newcommand{\setc}[2]{#1 \times #2} \)     <!-- Cartesian product -->
+    \( \newcommand{\setcomp}[1]{\overline{#1}} \) <!-- Complement -->
+    <!-- Variable list: v_1, ..., v_n for example -->
+    \( \newcommand{\vlist}[3]{#1_{#2}, ..., #1_#3} \)
+    \( \newcommand{\vflist}[1]{#1_1, ..., #1_n} \)
+    \( \newcommand{\Span}[1]{Span\{#1\}} \)
+  </xsl:template>
+
   <xsl:template name="after-body">
+    <!-- MathJax macros -->
+    <xsl:call-template name="mathjax-macros"/>
+    <!-- MathJax -->
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
