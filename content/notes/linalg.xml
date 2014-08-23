@@ -1,9 +1,4 @@
 <post title="Linear Algebra Notes">
-  <!-- Variable list: v_1, ..., v_n for example -->
-  \( \newcommand{\vlist}[3]{#1_{#2}, ..., #1_#3} \)
-  \( \newcommand{\vflist}[1]{#1_1, ..., #1_n} \)
-  \( \newcommand{\Span}[1]{Span\{#1\}} \)
-
   <h1>Linear System</h1>
 
   <p>A system of equations looks like this:</p>
@@ -121,5 +116,32 @@
   equation $x_1v_1, x_2v_2, ..., x_nv_n = 0$ has only the trivial solution.
 
   If the equation $Ax = 0$ has only the trivial solution, then the columns of
-  $A$ are linearly independent.</p>
+  $A$ are linearly independent.
+
+  A set of vectors is linearly dependent when <b>at least one</b> of the vectors
+  is a multiple of any of the others.
+
+  If a set has more vectors than the number of entries in each vector, then it's
+  linearly dependent.
+
+  If a set contains the zero vector, it's linearly dependent.</p>
+
+  <h2>Linear Transformations</h2>
+
+  <p>A transformation is a function $\fn{T}{R^n}{R^m}$.
+
+  A transformation is <b>linear</b> if:</p>
+
+  <ul>
+    <li>$T(u+v) = T(u) + T(v)$</li>
+    <li>$T(cu) = cT(u)$</li>
+  </ul>
+
+  <p>Every matrix transformation $T(x) = Ax$ is linear.</p>
+
+  <h3>Matrix of a Linear Transformation</h3>
+
+  <p>Every linear transformation is of the form $T(x) = Ax$, and $A = [T(I_1)
+  T(I_2) ... T(I_n)]$, where $I_i$ is the $i$-th column of the identity
+  matrix.</p>
 </post>
