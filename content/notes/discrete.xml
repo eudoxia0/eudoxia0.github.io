@@ -1,19 +1,4 @@
 <post title="Discrete Math">
-  <!-- Notation -->
-  \( \newcommand{\set}[1]{\left\{ #1 \right\}} \)
-  \( \newcommand{\tup}[1]{\langle #1 \rangle} \)
-  \( \newcommand{\powerset}[1]{\mathcal P \left({#1}\right)} \)
-  \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
-  \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
-  \( \newcommand{\rel}[2]{#1 R #2} \)
-  \( \newcommand{\fn}[3]{#1: #2 \mapsto #3} \)
-  <!-- Set operations -->
-  \( \newcommand{\setu}[2]{#1 \cup #2} \)       <!-- Union -->
-  \( \newcommand{\seti}[2]{#1 \cap #2} \)       <!-- Intersection -->
-  \( \newcommand{\setd}[2]{#1 \setminus #2} \)  <!-- Difference -->
-  \( \newcommand{\setc}[2]{#1 \times #2} \)     <!-- Cartesian product -->
-  \( \newcommand{\setcomp}[1]{\overline{#1}} \) <!-- Complement -->
-
   <h1>Counting</h1>
 
   <dl>
@@ -74,8 +59,9 @@
 
   <h1>Set Theory</h1>
 
-  <p>The number of subsets of $A$ is $2^\card{A}$. The number of subsets of size
-  $k$ is $C(n,k)$.</p>
+  <p>The number of subsets of $A$ is $2^\card{A}$ (The number of non-empty
+  subsets is that, minus one). The number of subsets of size $k$ is
+  $C(n,k)$.</p>
 
   <h2>Operations</h2>
 
@@ -147,10 +133,10 @@
 
   Types of Function
   <dl>
-    <dt>Injective</dt>
+    <dt>Injective (One to one)</dt>
     <dd>Every element of the codomain appears exactly <b>once</b>. There are
     $P(\card{B}, \card{A})$ such functions.</dd>
-    <dt>Surjective</dt>
+    <dt>Surjective (Onto)</dt>
     <dd>For all $b \in B$, there is <b>at least</b> one $a \in A : f(a) =
     b$. With $\card{A} = m$, $\card{B} = n$, there are $\sum_{k=0}^n (-1)^kC(k,
     n-k)(n-k)^m$ surjective functions from $A$ to $B$.</dd>
@@ -172,4 +158,6 @@
   more than one pigeon in it. It usually helps to 'invert' the way one thinks
   about a certain problem: What looks like pigeons to be distributed might
   actually be pigeon holes.</p>
+
+  <h3>Function Composition</h3>
 </post>
