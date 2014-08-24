@@ -206,6 +206,12 @@
   <p>With this, an equation like $Ax = b$ becomes $LUx = b$. Let $Ux = y$, and
   we have two simpler equations to solve.</p>
 
+  <h4>Factorization Algorithm</h4>
+
+  <p>Reduce $A$ to its echelon form $U$. Then take an appropriately-sized
+  identity matrix, apply the steps of Gaussian elimination backwards, and you
+  end up with $L$.</p>
+
   <h1>Subspaces</h1>
 
   <h1>Dimension and Rank</h1>
