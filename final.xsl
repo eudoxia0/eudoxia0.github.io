@@ -22,6 +22,7 @@
     \( \newcommand{\card}[1]{\left\vert{#1}\right\vert} \)
     \( \newcommand{\proj}[2]{#1 \downarrow #2} \)
     \( \newcommand{\rel}[2]{#1 R #2} \)
+    \( \newcommand{\notrel}[2]{#1 \cancel{R} #2} \)
     \( \newcommand{\fn}[3]{#1: #2 \mapsto #3} \)
     <!-- Set operations -->
     \( \newcommand{\setu}[2]{#1 \cup #2} \)       <!-- Union -->
@@ -43,6 +44,11 @@
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         "tex2jax": {"inlineMath": [['$','$'], ['\\(','\\)']]}
+      });
+      MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+        MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+          cancel: ["Extension","cancel"],
+        });
       });
     </script>
   </xsl:template>
