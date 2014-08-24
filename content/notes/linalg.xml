@@ -227,6 +227,10 @@
 
   <h2>Column Space</h2>
 
+  <p>The <b>column space</b> of a matrix $A_{m \times n}$ is the set $Col(A)$ of
+  all linear combinations of the columns of $A$. $Col(A)$ is the same as
+  $Span{A_1, ..., A_n}$ and if a subspace of $R^m$.</p>
+
   <h1>Dimension and Rank</h1>
 
   <h1>Determinant</h1>
