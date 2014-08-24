@@ -198,4 +198,16 @@
   An element of a poset is called the <b>greatest</b> if everything maps to it,
   and the <b>least</b> if it maps to everything. As their names imply, these are
   unique (This should be obvious).</p>
+
+  <h3>Partitions</h3>
+
+  <h1>Inclusion/Exclusion Principle</h1>
+
+  <h2>Derangements</h2>
+
+  <h1>Generating Functions</h1>
+
+  <h1>Recurrence Relations</h1>
+
+  <h1>Graphs</h1>
 </post>
