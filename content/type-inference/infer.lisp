@@ -14,6 +14,19 @@
   (if (assoc var env) t))
 
 (defun env-value (var env) ; returns the value associated to 'var' in 'env'
+  (cdr (assoc var env)))(defun env-empty () ; returns an empty environment
+  '())
+
+(defun env-update (var val env) ; returns a copy of 'env' but with 'var'
+  (cons (cons var val) env))     ; associated to 'val'
+
+(defun env-join (env1 env2) ; return a new environment containing the bindings
+  (append env1 env2))        ; in env1 and env2 (env1 has precedence)
+
+(defun env-bound-p (var env) ; returns true if the variable is bound in 'env'
+  (if (assoc var env) t))
+
+(defun env-value (var env) ; returns the value associated to 'var' in 'env'
   (cdr (assoc var env)))
 
 ;------------------------------------------------------------------------------
@@ -36,7 +49,7 @@
 ;;; Unification
 
 (defun get-val (var env)
-  "get the value of a variable"
+  "Get the value of a variable"
   (if (variablep var)
       (env-value var env)
       var))

@@ -165,7 +165,7 @@
 
   <h3>Order</h3>
 
-  <p>A relation is called a <b>partial order<b> if it is:</b>
+  <p>A relation is called a <b>partial order</b> if it is:
 
   <ul>
     <li>Reflexive</li>
@@ -173,11 +173,29 @@
     <li>Transitive</li>
   </ul>
 
-  <p>A relation is an <b>equivalence relation</b> of it is:</p>
+  A relation is an <b>equivalence relation</b> of it is:
 
   <ul>
     <li>Reflexive</li>
     <li>Symmetric</li>
     <li>Transitive</li>
   </ul>
+
+  A set $A$ is <b>totally ordered</b> on a relation $R$ if either $\rel{a}{b}$
+  or $\rel{b}{a}$ for all $a,b \in A$.
+
+  If $(A, R)$ is a poset, $x$ is <b>maximal element</b> if $\forall a \in A: a
+  \not \eq x \rightarrow \notrel{x}{a}$. Similarly, $x$ is a <b>minimal
+  element</b> of $A$ if $\forall b \in A: b \not \eq x \rightarrow
+  \notrel{b}{x}.
+
+  That is, maximal elements don't map to anything, and minimal elements are not
+  mapped to by anything.
+
+  A poset doesn't necessarily have maximal or minimal elements. However, if a
+  poset is finite, it must have both a maximal and a minimal element.
+
+  An element of a poset is called the <b>greatest</b> if everything maps to it,
+  and the <b>least</b> if it maps to everything. As their names imply, these are
+  unique (This should be obvious).</p>
 </post>
