@@ -37,8 +37,6 @@
   </xsl:template>
 
   <xsl:template name="after-body">
-    <!-- MathJax macros -->
-    <xsl:call-template name="mathjax-macros"/>
     <!-- MathJax -->
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
@@ -82,6 +80,8 @@
       <body>
         <h1><xsl:value-of select="$title"/></h1>
         <article>
+          <!-- MathJax macros -->
+          <xsl:call-template name="mathjax-macros"/>
           <xsl:apply-templates/>
         </article>
         <xsl:call-template name="after-body"/>
