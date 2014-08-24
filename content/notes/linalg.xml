@@ -214,6 +214,19 @@
 
   <h1>Subspaces</h1>
 
+  <p>A set of vectors $H$ is a subspace of $R_n$ if:
+
+  <ul>
+    <li>The zero vector is in $H$.</li>
+    <li>$\forall u, v \in H \rightarrow u + v \in H$.</li>
+    <li>$\forall u \in H, c \in R \rightarrow cu \in H$.</li>
+  </ul>
+
+  That is, a subspace is a set that goes through the origin where addition and
+  scalar multiplication are closed.</p>
+
+  <h2>Column Space</h2>
+
   <h1>Dimension and Rank</h1>
 
   <h1>Determinant</h1>
