@@ -1,4 +1,10 @@
 <post title="Linear Algebra Notes">
+  <h1>Matrices</h1>
+
+  <p>A matrix $A_{m \ times n}$ has $m$ rows and $n$ columns. Similarly,
+  $A_{ij}$ represents the element on the $i$-th row and $j$-the column. Rows
+  first, columns second.</p>
+
   <h1>Linear System</h1>
 
   <p>A system of equations looks like this:</p>
@@ -172,6 +178,33 @@
   The inverse of a linear transformation $T(x) = Ax$ is $S(x) = A^-1x$.</p>
 
   <h2>Matrix Factorization</h2>
+
+  <p>Factorization is a way of representing a matrix as the product of others.</p>
+
+  <h3>LU Factorization</h3>
+
+  <p>Given $A_{m \times n}$, an <b>LU factorization</b> of $A$ is $A = LU$,
+  where $L_{m \times m}$ is a lower triangular matrix with 1's on the diagonal
+  and $U_{m \times n}$ is an echelon form of $A$. For example:</p>
+
+  <math><![CDATA[
+    A = \begin{bmatrix}
+      1 & 0 & 0 & 0\\
+      * & 1 & 0 & 0\\
+      * & * & 1 & 0\\
+      * & * & * & 1\\
+    \end{bmatrix}
+   \begin{bmatrix}
+      ? & * & * & * & *\\
+      0 & ? & * & * & *\\
+      0 & 0 & 0 & ? & *\\
+      0 & 0 & 0 & 0 & 0\\
+    \end{bmatrix}
+    ]]>
+  </math>
+
+  <p>With this, an equation like $Ax = b$ becomes $LUx = b$. Let $Ux = y$, and
+  we have two simpler equations to solve.</p>
 
   <h1>Subspaces</h1>
 
