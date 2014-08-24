@@ -160,4 +160,24 @@
   actually be pigeon holes.</p>
 
   <h3>Function Composition</h3>
+
+  <p>$(fog)(x) = f(g(x))$.</p>
+
+  <h3>Order</h3>
+
+  <p>A relation is called a <b>partial order<b> if it is:</b>
+
+  <ul>
+    <li>Reflexive</li>
+    <li>Antisymmetric</li>
+    <li>Transitive</li>
+  </ul>
+
+  <p>A relation is an <b>equivalence relation</b> of it is:</p>
+
+  <ul>
+    <li>Reflexive</li>
+    <li>Symmetric</li>
+    <li>Transitive</li>
+  </ul>
 </post>

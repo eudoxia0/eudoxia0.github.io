@@ -160,7 +160,7 @@
   everything along the diagonal. Properties: $(A+B)^T = A^T + B^T$, $(AB)^T =
   B^TA^T$.</p>
 
-  <h3>Inverse</h3>
+  <h2>Inverse</h2>
 
   <p>A matrix $A$ is <b>invertible</b> if $\exists C : AC = I$.
 
@@ -170,4 +170,6 @@
   If A is invertible, A is linearly independent, and $A^T$ is invertible.
 
   The inverse of a linear transformation $T(x) = Ax$ is $S(x) = A^-1x$.</p>
+
+  <h2>Matrix Factorization</h2>
 </post>
