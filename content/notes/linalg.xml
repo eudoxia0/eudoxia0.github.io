@@ -237,7 +237,28 @@
   <i>homogenous</i> solutions to the equation $Ax = 0$. $Nul(A)$ is a subspace
   of $R_n$.</p>
 
-  <h1>Dimension and Rank</h1>
+  <h2>Basis</h2>
+
+  <p>A <b>basis</b> of a subspace $H$ is a linearly independent subset of $H$
+  that spans $H$. The <b>stasndard basis</b> of $R^n$ is the set of columns of
+  $I_{n \times n}$.</p>
+
+  <h2>Dimension and Rank</h2>
+
+  <p>If $B = \vflist{b}$ is a basis of the subspace $H$, then for all $x \in H$,
+  the <b>coordinates of x relative to the basis B</b> are the weights
+  $\vflist{c}$ such that $x = c_1b_1 + ... + c_nb_n$. Then, the vector $[x]_B =
+  \begin{pmatrix}c_1\\...\\c_n\end{pmatrix}$ is the <b>coordinate vector of x
+  relative to $B$</b>.
+
+  The <b>dimension</b> of a subspace $H$, $dim(H)$, is the number of vectors
+  in <b>any</b> basis of $H$. The dimension of the subspace ${0}$ is 0. $R^n$
+  has dimension $n$.
+
+  The <b>rank</b> of a matrix $A$, $rank(A)$, is the dimension of its column
+  space.
+
+  If a matrix has $n$ columns, then $rank(A) + dim(Nul(A)) = n$.</p>
 
   <h1>Determinant</h1>
 
