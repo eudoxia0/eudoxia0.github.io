@@ -231,6 +231,12 @@
   all linear combinations of the columns of $A$. $Col(A)$ is the same as
   $Span{A_1, ..., A_n}$ and if a subspace of $R^m$.</p>
 
+  <h2>Null Space</h2>
+
+  <p>The <b>null space</b> of a matrix $A_{m \times n}$, $Nul(A)$, is the set of
+  <i>homogenous</i> solutions to the equation $Ax = 0$. $Nul(A)$ is a subspace
+  of $R_n$.</p>
+
   <h1>Dimension and Rank</h1>
 
   <h1>Determinant</h1>
