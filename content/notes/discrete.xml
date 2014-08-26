@@ -204,7 +204,7 @@
   <p>$A_1, ..., A_n$ are partitions of $A$ if $A = U A_i \forall 1 \lte i \lte
   n$ and $\seti{A_i}{A_j} = \emptyset$. If $R$ is an equivalence relation on
   $A$, then for all $x \in A$, the <b>equivalence class</b> is defined as $[x] =
-  \set{y \in A | \rel{y}{x}}$. Partitions and equivalence classes are equivalent.
+  \set{y \in A | \rel{y}{x}}$. Partitions and equivalence classes are equivalent.z
 
   Any $x$ is part of its own equivalence class (Because equivalence relations
   are reflexive), and if $\rel{x}{y}$, then $x$ is also part of $[y]$, so
@@ -213,6 +213,10 @@
   <h1>Inclusion/Exclusion Principle</h1>
 
   <h2>Derangements</h2>
+
+  <p>The number of arrangements of $A = [c_1, c_2, ..., c_n]$ such that none are
+  in their original position is $d_n = n!\sum_{i=0}^n \frac{(-1)^i}{i!}$. For $n
+  \gt 7$, the value of $d_n$ is approximately $n!e^-1$.</p>
 
   <h1>Generating Functions</h1>
 
