@@ -201,6 +201,11 @@
 
   <h3>Partitions</h3>
 
+  <p>$A_1, ..., A_n$ are partitions of $A$ if $A = U A_i \forall 1 \lte i \lte
+  n$ and $\seti{A_i}{A_j} = \emptyset$. If $R$ is an equivalence relation on
+  $A$, then for all $x \in A$, the <b>equivalence class</b> is defined as $[x] =
+  \set{y \in A | \rel{y}{x}}$.</p>
+
   <h1>Inclusion/Exclusion Principle</h1>
 
   <h2>Derangements</h2>
