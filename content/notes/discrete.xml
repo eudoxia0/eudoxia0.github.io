@@ -212,6 +212,10 @@
 
   <h1>Inclusion/Exclusion Principle</h1>
 
+  <p>$\bar{N} = N(\bar{c_1}\bar{c_2}...\bar{c_t}) = N - \sum_{1 \lte i \lte t}
+  N(c_i) + \sum_{1 \lte i \lt j \lte t} N(c_ic_j) - \sum_{1 \lte i \lt j \lt k
+  \lte t} N(c_ic_jc_k) + ... + (-1)^tN(c_1c_2...c_t)$.</p>
+
   <h2>Derangements</h2>
 
   <p>The number of arrangements of $A = [c_1, c_2, ..., c_n]$ such that none are
