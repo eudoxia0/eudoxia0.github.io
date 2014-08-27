@@ -2,13 +2,29 @@
   <h1>Counting</h1>
 
   <dl>
-    <dd>Sum Rule</dd>
-    <dt>If two tasks can be performed in $m$ and $n$ ways, respectively, then
-    there are $m+n$ ways of doing <b>either</b>.</dt>
+    <dt>Sum Rule</dt>
+    <dd>If two tasks can be performed in $m$ and $n$ ways, respectively, then
+    there are $m+n$ ways of doing <b>either</b>.</dd>
     <dt>Product Rule</dt>
     <dd>If two sequential tasks can be performed in $m$ and $n$ ways,
     respectively, there are $m \times n$ ways of performing the sequence.</dd>
   </dl>
+
+  Examples:
+
+  <p>How many three-digit even numbers are there?
+
+  Since 000 obviously doesn't count, we're concerned with numbers from 100 to
+  999. Since they are even, the last digit has to be in the set $\set{0, 2, 4,
+  6, 8}$. Therefore, we have $9 \times 10 \times = 450$. This can easily be
+  verified by the following program:</p>
+
+  <code>
+    (let ((count 0))
+      (loop for n from 100 to 999 do
+        (if (evenp n) (incf count)))
+      count)
+  </code>
 
   <h2>Permutations</h2>
 
