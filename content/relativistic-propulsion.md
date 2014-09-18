@@ -10,13 +10,27 @@ references:
       The essay has since been taken down and redirects to the related essay
       *These New Oceans*, so a link to the Internet archive is provided.
   - id: pdecay
-    title:
-    author:
-    link:
+    title: Searches for Proton Decay and Superheavy Magnetic Monopoles
+    author: B. V. Sreekantan
+    link: http://www.ias.ac.in/jarch/jaa/5/251-271.pdf
+    desc: >
+      >Rubakov (1981) and independently Callan (1982a, b) have shown that the
+      grand unification monopole, when it passes through matter, can induce
+      proton decay through reactions of the type $M + p \rightarrow Me^+\pi^0$,
+      $M\mu^+K^0$, $Me^+\mu^+\mu^-$ etc. The monopole would come out unscathed
+      in the reaction, but would cause the break up of the proton in a manner
+      identical to what happens in proton decay.
   - id: eleitl
     title:
     author:
-    link:
+    link: http://gnusha.org/logs/2013-01-22.log
+    desc: >
+      ~~~
+      07:28 < eleitl> Solid state travels very lightly, especially if you
+      leave the drive at home.
+      07:28 < eleitl> Up to 0.9 c in mere weeks.
+      07:28 < eleitl> Up, up and away.
+      ~~~
   - id: preskill
     title: Magnetic Monopoles
     author: John Preskill
@@ -75,13 +89,13 @@ bound to be massive.
 The solution is fairly obvious: Engine, tether, crew and cargo, in that order
 from zenith to nadir. The process of turning the engine safely would be:
 
-- While coasting, and when the engine is off, roll up the tether until the
-  cargo is next to the engine.
-- Eject the shielding and its power source, and vernier it a few hundreds
-  of meters forward.
-- Rotate the engine/cargo. Most of it would remain within the shadow of
-  the shield, but some areas would probably be exposed to impacts (Although
-  this depends on the specifics of the shielding).
+- While coasting, and when the engine is off, roll up the tether until the cargo
+  is next to the engine.
+- Eject the shielding and its power source, and vernier it a few hundreds of
+  meters forward.
+- Rotate the engine/cargo. Most of it would remain within the shadow of the
+  shield, but some areas would probably be exposed to impacts (Although this
+  depends on the specifics of the shielding).
 - Attach the shielding to the cargo section.
 - Extend the tether.
 - Relight the engine at will.
@@ -101,8 +115,8 @@ has to run perpetually and counteract this drag so the tether remains taut.
 
 ## Are humans worth it?
 
-Seen from a rather extraterrestrial perspective, the idea of sending humans
--- canned primates -- across interstellar distances is a completely hubristic
+Seen from a rather extraterrestrial perspective, the idea of sending humans --
+canned primates -- across interstellar distances is a completely hubristic
 fantasy. At the very least there's a very sharp contrast, between animals that
 evolved to live a few decades within a couple kilometers of the tribe, and
 incredible machines that can cross the distance between stars.
@@ -140,10 +154,10 @@ space propulsion.
 Fission and fusion both require particular ingredients, but protons are all the
 same, and monopoles don't discriminate.
 
-As an aside: We don't know the exact mass of magnetic monopoles. Estimates
-vary from $4 \times 10^4~\mathrm{GeV}$ to $10^{17}~\mathrm{GeV}$<ref
-id="monmass"/>, the latter being *"comparable to the mass of
-a bacterium, or the kinetic energy of a charging rhinoceros"*[^preskill].
+As an aside: We don't know the exact mass of magnetic monopoles. Estimates vary
+from $4 \times 10^4~\mathrm{GeV}$ to $10^{17}~\mathrm{GeV}$[^lindell], the
+latter being *"comparable to the mass of a bacterium, or the kinetic energy of a
+charging rhinoceros"*[^preskill].
 
 ### Difficulties
 
@@ -153,16 +167,15 @@ a bacterium, or the kinetic energy of a charging rhinoceros"*[^preskill].
 
 #### Producing Magnetic Monopoles
 
-"Build a very big accelerator" is incredibly vague. What exactly would it
-have to *do* to produce magnetic monopoles? Lindell references a
-paper<ref id="production"/> that proposes using high energy $pp$ (That's
-proton-proton) collisions to produce a monopole-antimonopole pair through
-photon fusion, but the paper is behind a paywall so I can't comment on that.
+"Build a very big accelerator" is incredibly vague. What exactly would it have
+to *do* to produce magnetic monopoles? Lindell references a paper[^production]
+that proposes using high energy $pp$ (That's proton-proton) collisions to
+produce a monopole-antimonopole pair through photon fusion, but the paper is
+behind a paywall so I can't comment on that.
 
-Instead I tried to get two papers that cite it, <cite
-id="monopolium">Monopolium production from photon fusion at the Large Hadron
-Collider</cite> and <cite id="lhc">Looking for magnetic monopoles at LHC with
-diphoton events</cite>.
+Instead I tried to get two papers that cite it, *Monopolium production from
+photon fusion at the Large Hadron Collider*[^monopolium] and *Looking for
+magnetic monopoles at LHC with diphoton events*[^lhc].
 
 #### Stability
 
@@ -224,71 +237,7 @@ with a width of $10r\pi$ would only expose $r/10$ (wow, such math). Not having
 the tether overheat removes one requirement: A vast, multi-kilometer long
 cooling system that just adds mass.
 
-<references>
-  <ref id="relrob">
-    <title>Relativistic robots and the feasibility of interstellar flight</title>
-    <author>Charles R. Pellegrino</author>
-    <link uri="https://web.archive.org/web/20111116172452/http://www.charlespellegrino.com/propulsion.htm"/>
-    <desc>
-      The essay has since been taken down and redirects to the related
-      essay *These New Oceans*, so a link to the Internet archive is
-      provided.
-    </desc>
-  </ref>
-  <ref id="pdecay">
-    <title>Searches for Proton Decay and Superheavy Magnetic Monopoles</title>
-    <author>B. V. Sreekantan</author>
-    <link uri="http://www.ias.ac.in/jarch/jaa/5/251-271.pdf"/>
-    <desc>
-      <quote>Rubakov (1981) and independently Callan (1982a, b) have shown
-      that the grand unification monopole, when it passes through matter, can
-      induce proton decay through reactions of the type $M + p \rightarrow
-      Me^+\pi^0$, $M\mu^+K^0$, $Me^+\mu^+\mu^-$ etc. The monopole would come
-      out unscathed in the reaction, but would cause the break up of the
-      proton in a manner identical to what happens in proton decay.</quote>
-    </desc>
-  </ref>
-  <ref id="eleitl">
-    <link uri="http://gnusha.org/logs/2013-01-22.log"/>
-    <desc>
-      <quote>
-        <code>
-          <![CDATA[
-          07:28 < eleitl> Solid state travels very lightly, especially if you
-          leave the drive at home.
-          07:28 < eleitl> Up to 0.9 c in mere weeks.
-          07:28 < eleitl> Up, up and away.]]>
-        </code>
-      </quote>
-    </desc>
-  </ref>
-  <ref id="preskill">
-    <title>Magnetic Monopoles</title>
-    <author>John Preskill</author>
-    <link uri="http://www.theory.caltech.edu/~preskill/pubs/preskill-1984-monopoles.pdf"/>
-  </ref>
-  <ref id="monmass">
-    <title>Magnetic Monopole Searches with AMANDA and other detectors</title>
-    <author>Matilda Åberg Lindell</author>
-    <link uri="http://www.diva-portal.org/smash/get/diva2:320548/FULLTEXT02"/>
-    <desc>
-      
-        The author remarks that "[Monopoles] could never be produced in any
-        man-made accelerator, existing or conceivable".
-
-        Here, "conceivable" could be interpreted as "reasonable for a sane
-        non-transhumanist" (ie a particle accelerator smaller than a
-        continent) or "physically possible" (A particle accelerator the size
-        of the galaxy doesn't count).
-      
-    </desc>
-  </ref>
-  <ref id="production">
-    <title>On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High Energy $pp$ Collisions</title>
-    <author>Yu. Kurochkin</author>
-    <link uri="http://www.worldscientific.com/doi/abs/10.1142/S0217732306022237"/>
-  </ref>
-</references>
+{% include refs.html refs=page.references %}
 
 [mag]: http://en.wikipedia.org/wiki/Magnetic_monopole
 [kardashev]: http://en.wikipedia.org/wiki/Kardashev_scale
