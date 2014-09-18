@@ -1,0 +1,10 @@
+{% capture template_content %}
+# References
+
+{% for ref in include.refs %}
+[{{ ref.id }}]:
+  {{ ref.author }}. *{{ ref.title }}*.
+{% endfor %}
+
+{% endcapture %}
+{{ template_content | markdownify }}
