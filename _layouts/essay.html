@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <h1>{{ page.title }}</h1>
+    <article>
+      {{ content }}
+    </article>
+    <!-- MathJax -->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       "tex2jax": {"inlineMath": [['$','$'], ['\\(','\\)']]}
+     });
+     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+       MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+         cancel: ["Extension","cancel"],
+       });
+     });
+    </script>
+    {% include footer.html %}
+  </body>
+</html>
