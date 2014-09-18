@@ -1,6 +1,5 @@
 build/
 *.css
-*.html
 *.pdf
 .sass-cache
 tmp
