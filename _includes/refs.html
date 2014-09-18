@@ -2,9 +2,8 @@
 # References
 
 {% for ref in include.refs %}
-[{{ ref.id }}]:
-  {{ ref.author }}. *{{ ref.title }}*.
+[^{{ ref.id }}]: {{ ref.author }}. *{{ ref.title }}*.
 {% endfor %}
 
 {% endcapture %}
-{{ template_content | markdownify }}
+{{ template_content }}
