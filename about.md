@@ -16,10 +16,13 @@ I can often be found in the [`##hplusroadmap`][hplus] channel on Freenode
 
 Github
 : [@eudoxia0](https://github.com/eudoxia0)
+
 Twitter
 : [@eudxa](https://twitter.com/eudxa)
+
 Bitcoin
 : [1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9][btc] ([blockchain.info][btc-web])
+
 Hacker News
 : [Submissions][hn-subs] and [Comments][hn-comments]
 
