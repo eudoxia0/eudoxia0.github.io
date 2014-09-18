@@ -1,3 +1,4 @@
 *.css
 *.pdf
 .sass-cache
+_site
