@@ -142,8 +142,8 @@ same, and monopoles don't discriminate.
 
 As an aside: We don't know the exact mass of magnetic monopoles. Estimates
 vary from $4 \times 10^4~\mathrm{GeV}$ to $10^{17}~\mathrm{GeV}$<ref
-id="monmass"/>, the latter being <cite id="preskill">comparable to the mass of
-a bacterium, or the kinetic energy of a charging rhinoceros</cite>.
+id="monmass"/>, the latter being *"comparable to the mass of
+a bacterium, or the kinetic energy of a charging rhinoceros"*[^preskill].
 
 ### Difficulties
 
@@ -166,36 +166,35 @@ diphoton events</cite>.
 
 #### Stability
 
-Monopoles, because of their nature, don't have the safety guarantees of
-nuclear fusion: A monopole-catalyzed fusion reactor may go supercritical, much
-like a fission reactor. Antimatter-catalyzed fusion has this same problem but
-to a much smaller degree: Antimatter is annihilated, monopoles remain.
+Monopoles, because of their nature, don't have the safety guarantees of nuclear
+fusion: A monopole-catalyzed fusion reactor may go supercritical, much like a
+fission reactor. Antimatter-catalyzed fusion has this same problem but to a much
+smaller degree: Antimatter is annihilated, monopoles remain.
 
 #### Separating Monopoles from Fusion Products
 
 We want the plasma and gamma rays from fusion to leave the exhaust, but the
 monopoles to remain, which is bound to be hard since the monopoles will be
-pushed around by the highly-energetic fusion reactions that themselves
-trigger.
+pushed around by the highly-energetic fusion reactions that themselves trigger.
 
-A possible solution takes advantage of the vast mass difference between a
-proton and a Grand Unification monopole: If you make both travel in an arc,
-guided by a magnetic field, the monopole will stick to its original trajectory
-more than the proton, because it has a much greater inertia. The specifics of
-this would probably be fairly complicated, and require actually knowing the
-mass of monopoles.
+A possible solution takes advantage of the vast mass difference between a proton
+and a Grand Unification monopole: If you make both travel in an arc, guided by a
+magnetic field, the monopole will stick to its original trajectory more than the
+proton, because it has a much greater inertia. The specifics of this would
+probably be fairly complicated, and require actually knowing the mass of
+monopoles.
 
 #### Monopolar Ramjets
 
 This section is somewhat of an afterthought. In 1985, Robert Zubrin and Dana
-Andrews analyzed the Bussard fusion ramjet, and concluded that the drag
-created by protons brushing against the magnetic field is greater than the
-thrust of the engine -- by nine orders of magnitude. So much drag, in fact,
-that it inspired the idea of the <l id="magsail">magnetic sail</l>.
+Andrews analyzed the Bussard fusion ramjet, and concluded that the drag created
+by protons brushing against the magnetic field is greater than the thrust of the
+engine -- by nine orders of magnitude. So much drag, in fact, that it inspired
+the idea of the [magnetic sail][magsail].
 
 It is unlikely that a fusion ramjet upgraded to use antimatter or
-monopole-catalyzed fusion will be able to overcome this gap, but the thought
-is left here.
+monopole-catalyzed fusion will be able to overcome this gap, but the thought is
+left here.
 
 # Design
 
@@ -207,23 +206,23 @@ is left here.
 
 ## Tether
 
-The tether is an important part of the spacecraft and is in a very
-vulnerable position: Sandwiched between the exhaust plumes of two engines with
-massive power outputs. Radiation from the conversion reactions and plasma from
-the plume could erode the tether over time, and heat radiatied by the plume
-and absorbed by the tether could cause it to overheat and maybe require its
-own cooling system.
+The tether is an important part of the spacecraft and is in a very vulnerable
+position: Sandwiched between the exhaust plumes of two engines with massive
+power outputs. Radiation from the conversion reactions and plasma from the plume
+could erode the tether over time, and heat radiatied by the plume and absorbed
+by the tether could cause it to overheat and maybe require its own cooling
+system.
 
 To address this last problem, the tether should be a ribbon: Wide, flat, and
 coplanar with both engines. A ribbon exposes a smaller cross-section to the
-exhaust plumes and would absorb less heat, as you can see in the very
-scientific image below:
+exhaust plumes and would absorb less heat, as you can see in the very scientific
+image below:
 
-Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each
-engine, while a tether with the same cross-sectional area as the ribbon
-($r^2\pi$) and with a width of $10r\pi$ would only expose $r/10$ (wow, such
-math). Not having the tether overheat removes one requirement: A vast,
-multi-kilometer long cooling system that just adds mass.
+Specifically, a tether with radius $r$ exposes $r\pi$ of surface to each engine,
+while a tether with the same cross-sectional area as the ribbon ($r^2\pi$) and
+with a width of $10r\pi$ would only expose $r/10$ (wow, such math). Not having
+the tether overheat removes one requirement: A vast, multi-kilometer long
+cooling system that just adds mass.
 
 <references>
   <ref id="relrob">
