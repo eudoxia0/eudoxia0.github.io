@@ -6,14 +6,14 @@ references:
     title: Relativistic robots and the feasibility of interstellar flight
     author: Charles R. Pellegrino
     link: https://web.archive.org/web/20111116172452/http://www.charlespellegrino.com/propulsion.htm
-    desc: >
+    desc: |
       The essay has since been taken down and redirects to the related essay
       *These New Oceans*, so a link to the Internet archive is provided.
   - id: pdecay
     title: Searches for Proton Decay and Superheavy Magnetic Monopoles
     author: B. V. Sreekantan
     link: http://www.ias.ac.in/jarch/jaa/5/251-271.pdf
-    desc: >
+    desc: |
       >Rubakov (1981) and independently Callan (1982a, b) have shown that the
       grand unification monopole, when it passes through matter, can induce
       proton decay through reactions of the type $M + p \rightarrow Me^+\pi^0$,
@@ -24,7 +24,7 @@ references:
     title:
     author:
     link: http://gnusha.org/logs/2013-01-22.log
-    desc: >
+    desc: |
       ~~~
       07:28 < eleitl> Solid state travels very lightly, especially if you
       leave the drive at home.
@@ -39,14 +39,12 @@ references:
     title: Magnetic Monopole Searches with AMANDA and other detectors
     author: Matilda Åberg Lindell
     link: http://www.diva-portal.org/smash/get/diva2:320548/FULLTEXT02
-    desc: >
+    desc: |
       The author remarks that "[Monopoles] could never be produced in any
-      man-made accelerator, existing or conceivable".
-
-      Here, "conceivable" could be interpreted as "reasonable for a sane
-      non-transhumanist" (ie a particle accelerator smaller than a continent) or
-      "physically possible" (A particle accelerator the size of the galaxy
-      doesn't count).
+      man-made accelerator, existing or conceivable". Here, "conceivable" could
+      be interpreted as "reasonable for a sane non-transhumanist" (ie a particle
+      accelerator smaller than a continent) or "physically possible" (A particle
+      accelerator the size of the galaxy doesn't count).
   - id: production
     title: On Production of Magnetic Monopoles Via $\gamma\gamma$ Fusion at High
            Energy $pp$ Collisions

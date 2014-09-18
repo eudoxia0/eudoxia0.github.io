@@ -2,7 +2,11 @@
 # References
 
 {% for ref in include.refs %}
-[^{{ ref.id }}]: {{ ref.author }}. [*{{ ref.title }}*]({{ ref.link }}).
+[^{{ ref.id }}]:
+    {% if ref.author %}{{ ref.author }}. {% endif %}
+    [{% if ref.title %}*{{ ref.title }}*{% else %}Link{% endif %}]({{ ref.link }})
+
+    {{ ref.desc }}
 {% endfor %}
 
 {% endcapture %}
