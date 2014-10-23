@@ -2,8 +2,14 @@
 ---
 
 @charset "utf-8";
+
+/* External imports */
 @import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css);
 @import "typeplate/typeplate";
+
+/* Internal imports */
 @import "typeplate/vars-typeplate";
 
 /* General CSS */
@@ -45,6 +51,19 @@ nav ul {
 }
 
 /* Essays etc. */
-article {
-    
+article { }
+
+/* Code style */
+
+code {
+  font-family: Inconsolata, monospace;
+}
+
+pre {
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+
+  code {
+    font-size: 14px;
+  }
 }

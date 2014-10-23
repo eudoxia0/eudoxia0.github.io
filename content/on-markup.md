@@ -16,7 +16,7 @@ those?
 
 Consider the following hypothetical example in Pandoc Markdown:
 
-~~~
+~~~markdown
 ... Most of the information is presented in *Magnetic Monopoles*[preskill]
 and *Magnetic Monopole Searches with AMANDA and other detectors*[lindell]...
 
@@ -33,11 +33,11 @@ and *Magnetic Monopole Searches with AMANDA and other detectors*[lindell]...
 The pattern is pretty clear: Italicized text followed by a reference. I wish I
 could do this:
 
-~~~
-defmacro cite(id, text): *$text*[$id]
+~~~markdown
+@defmacro cite(id, text): *$text*[$id]
 
-... Most of the information is presented in cite(preskill, Magnetic
-Monopoles) and cite(lindell, Magnetic Monopole Searches with AMANDA and
+... Most of the information is presented in @cite(preskill, Magnetic
+Monopoles) and @cite(lindell, Magnetic Monopole Searches with AMANDA and
 other detectors)...
 ~~~
 
@@ -47,7 +47,7 @@ exactly easy.
 
 On the other hand, consider the following XML:
 
-~~~
+~~~markdown
 ... Most of the information is presented in <cite id="preskill">Magnetic
 Monopoles</cite> and <cite id="lindell">Magnetic Monopole Searches with
 AMANDA and other detectors</cite>...
@@ -165,9 +165,8 @@ XSLT. Like this:
 ~~~
 
 After doing all this, what *exactly* is left for Markdown? Replacing
-<strike>hashes</strike> <strike>octothorpes</strike> <strike>pounds</strike>
-number signs with header tags isn't really problematic. I've come up with just
-two items.
+hashes/octothorpes/pounds/number signs with header tags isn't really
+problematic. I've come up with just two items.
 
 * Smart typography: Replacing double dashes with en dashes, smart quotes, et
   cetera.
@@ -199,11 +198,91 @@ Let's start with the simple stuff:
 ~~~
 
 Paragraphs are harder. I never figured it out, but thanks to the Internet, I
-[didn't have to][stackoverflow-p]. Are you ready?
+[didn't have to][stackoverflow-p]. However, it requires two transforms, piped
+one to the other. The first transform prevents a bug:
 
 ~~~xml
+<xsl:template match="p">
+  <!-- There's a bug in the paragraph splitting code. If the last paragraph
+       contains no tags it will be ignored. This template introduces a tag
+       that will then be removed. -->
+  <xsl:copy>
+    <xsl:apply-templates/>
+    <p-pad-tag></p-pad-tag>
+  </xsl:copy>
+</xsl:template>
+~~~
 
+Now, the actual paragraph splitting code. Are you ready?
 
+~~~xml
+<!-- Double newlines are our delimiter -->
+<xsl:variable name="delim" select="'&#10;&#10;'"/>
+
+<xsl:template match="//p">
+  <div class="p-block">
+    <xsl:apply-templates select="node()[1]"/>
+  </div>
+</xsl:template>
+
+<xsl:template match="node()" mode="open" name="open">
+  <xsl:copy-of select="."/>
+  <xsl:apply-templates select="following-sibling::node()[1]"
+                       mode="open"/>
+</xsl:template>
+
+<xsl:template match="//p/node()">
+  <xsl:param name="pTail" select="''"/>
+  <p>
+    <xsl:value-of select="$pTail"/>
+    <xsl:call-template name="open"/>
+  </p>
+  <xsl:variable name="vNext"
+                select="following-sibling::text()[contains(., $delim)][1]"/>
+  <xsl:apply-templates select="$vNext">
+    <xsl:with-param name="pString"
+                    select="substring-after($vNext, $delim)"/>
+  </xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="text()[contains(., $delim)]"
+              mode="open" priority="1">
+  <xsl:value-of select="substring-before(., $delim)"/>
+</xsl:template>
+
+<xsl:template match="//p/text()[contains(., $delim)]"
+              priority="1" name="text">
+  <xsl:param name="pString" select="."/>
+  <xsl:choose>
+    <xsl:when test="contains($pString, $delim)">
+      <xsl:variable name="vOutput"
+                    select="normalize-space(substring-before($pString, $delim))"/>
+      <xsl:if test="$vOutput">
+        <p>
+          <xsl:value-of select="$vOutput"/>
+        </p>
+      </xsl:if>
+      <xsl:call-template name="text">
+        <xsl:with-param name="pString"
+                        select="substring-after($pString, $delim)"/>
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:apply-templates select="following-sibling::node()[1]">
+        <xsl:with-param name="pTail" select="$pString" />
+      </xsl:apply-templates>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<!-- Remove the 'p-pad-tag' thing -->
+<xsl:template match="p-pad-tag"></xsl:template>
+
+<xsl:template match="@* | node()">
+  <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+  </xsl:copy>
+</xsl:template>
 ~~~
 
 Is that clear?
