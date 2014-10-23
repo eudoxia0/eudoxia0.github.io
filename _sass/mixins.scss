@@ -15,3 +15,13 @@
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+
+/* Simple columns */
+
+@mixin row() {
+}
+
+@mixin column($width) {
+  float: left;
+  width: percentage($width / 100);
+}

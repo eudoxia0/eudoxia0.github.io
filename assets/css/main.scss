@@ -3,13 +3,17 @@
 
 @charset "utf-8";
 
-/* External imports */
+/* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/* Libraries */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css);
-@import "typeplate/typeplate";
 
 /* Internal imports */
+@import "typeplate/typeplate";
 @import "typeplate/vars-typeplate";
 @import "mixins";
 @import "titlebar";
@@ -19,7 +23,11 @@
 $code-background-color: #f6f6f6;
 $code-border-color: #ddd;
 $code-block-font-size: 14px;
+
+$text-color: $body-copy-color;
 $link-color: #AD3108;
+
+$icon-size: 37px;
 
 /* General CSS */
 
@@ -27,7 +35,7 @@ body {
     margin: 0 auto;
     padding: 45px;
     font-family: 'Crimson Text', serif;
-    color: $body-copy-color;
+    color: $text-color;
 }
 
 a, a:visited {
@@ -97,3 +105,43 @@ nav ul {
 
 /* Portfolio */
 
+#portfolio {
+  .intro {
+
+  }
+
+  .content {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    .item {
+      @include row;
+
+      .title {
+        font-size: 46px;
+      }
+
+      .desc {
+        @include column(60);
+
+        .links {
+          list-style-type: none;
+          padding-left: 30px;
+
+          li {
+            display: inline-block;
+            padding-left: 16px;
+
+            a {
+              color: $text-color;
+              font-size: $icon-size;
+            }
+          }
+        }
+      }
+
+      .sample {
+        @include column(30);
+      }
+    }
+  }
+}

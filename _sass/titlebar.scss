@@ -1,13 +1,12 @@
 .window {
-  $bar-height: 20px;
   $width: 420px;
+  $bar-height: 30px;
   $circle-diam: 10px;
   $titlebar-color: #eee;
   $background-color: #fff;
 
   font-size: 13px;
   width: $width;
-  margin: 40px auto 0;
 
   .titlebar {
     height: $bar-height;
@@ -21,7 +20,7 @@
       width: $circle-diam;
       height: $circle-diam;
       position: absolute;
-      top: 5px;
+      top: $bar-height / 3;
 
       &:nth-child(1) {
         // Close
