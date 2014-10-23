@@ -1,0 +1,58 @@
+.window {
+  $bar-height: 20px;
+  $width: 420px;
+  $circle-diam: 10px;
+  $titlebar-color: #eee;
+  $background-color: #fff;
+
+  font-size: 13px;
+  width: $width;
+  margin: 40px auto 0;
+
+  .titlebar {
+    height: $bar-height;
+    background: $titlebar-color;
+    position: relative;
+
+    @include border-top-radius(7px);
+
+    .circle {
+      @include border-radius(50%);
+      width: $circle-diam;
+      height: $circle-diam;
+      position: absolute;
+      top: 5px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .close {
+      background: #FF504D;
+      left: 10px;
+    }
+
+    .minimize {
+      background: #E8C460;
+      left: 25px;
+    }
+
+    .maximize {
+      background: #70FF6E;
+      left: 40px;
+    }
+  }
+
+  .body {
+    border: 1px solid $titlebar-color;
+    background-color: $background-color;
+
+    pre {
+      margin: 5px;
+      padding: 5px;
+      border: 0px;
+      background-color: $background-color;
+    }
+  }
+}
