@@ -16,31 +16,30 @@
 
     @include border-top-radius(7px);
 
-    .circle {
+    div {
       @include border-radius(50%);
       width: $circle-diam;
       height: $circle-diam;
       position: absolute;
       top: 5px;
-    }
 
-    li {
-      list-style: none;
-    }
+      &:nth-child(1) {
+        // Close
+        background: #FF504D;
+        left: 10px;
+      }
 
-    .close {
-      background: #FF504D;
-      left: 10px;
-    }
+      &:nth-child(2)  {
+        // Minimize
+        background: #E8C460;
+        left: 25px;
+      }
 
-    .minimize {
-      background: #E8C460;
-      left: 25px;
-    }
-
-    .maximize {
-      background: #70FF6E;
-      left: 40px;
+      &:nth-child(3)  {
+        // Maximize
+          background: #70FF6E;
+          left: 40px;
+      }
     }
   }
 
