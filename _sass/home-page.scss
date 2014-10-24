@@ -1,0 +1,11 @@
+nav ul {
+    font-style: italic;
+
+    li {
+        display: inline;
+    }
+
+    li+li:before {
+        content: "—";
+    }
+}

@@ -16,12 +16,14 @@
   border-radius: $radius;
 }
 
-/* Simple columns */
-
-@mixin row() {
+@mixin on-desktop() {
+  @media (min-width: $mobile-size) {
+    @content;
+  }
 }
 
-@mixin column($width) {
-  float: left;
-  width: percentage($width / 100);
+@mixin on-mobile() {
+  @media (max-width: $mobile-size) {
+    @content;
+  }
 }

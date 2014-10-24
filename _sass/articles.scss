@@ -1,0 +1,17 @@
+article {
+  font-size: 16px;
+  padding-left: 45px;
+
+  p {
+    text-align: justify;
+    width: 40%;
+    margin: 0;
+  }
+
+  .footnotes {
+
+    .reversefootnote {
+      display: none;
+    }
+  }
+}

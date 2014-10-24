@@ -1,0 +1,39 @@
+/* General CSS */
+
+body {
+    margin: 0 auto;
+    padding: 45px;
+    font-family: 'Crimson Text', serif;
+    color: $text-color;
+}
+
+a, a:visited {
+    color: $link-color;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+}
+
+h1 { @extend .gamma; @extend %hN; }
+h2 { @extend .delta; @extend %hN; }
+h3 { @extend .epsilon; @extend %hN; }
+h4 { @extend .zeta; @extend %hN; }
+h5 { @extend .zeta; @extend %hN; }
+h6 { @extend .zeta; @extend %hN; }
+
+/* Code style */
+
+code {
+  font-family: Inconsolata, monospace;
+}
+
+pre {
+  border: 1px solid $code-border-color;
+  background-color: $code-background-color;
+
+  code {
+    font-size: $code-block-font-size;
+  }
+}

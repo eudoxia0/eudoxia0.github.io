@@ -3,145 +3,39 @@
 
 @charset "utf-8";
 
-/* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
-/* Libraries */
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css);
-
-/* Internal imports */
-@import "typeplate/typeplate";
-@import "typeplate/vars-typeplate";
-@import "mixins";
-@import "titlebar";
-
 /* Variables */
 
 $code-background-color: #f6f6f6;
 $code-border-color: #ddd;
 $code-block-font-size: 14px;
 
-$text-color: $body-copy-color;
+$text-color: #222;
 $link-color: #AD3108;
 
 $icon-size: 37px;
 
-/* General CSS */
+$mobile-size: 768px;
+$desktop-size: $mobile-size + 1;
 
-body {
-    margin: 0 auto;
-    padding: 45px;
-    font-family: 'Crimson Text', serif;
-    color: $text-color;
-}
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
-a, a:visited {
-    color: $link-color;
-    text-decoration: none;
-}
+/* CSS */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css);
 
-h1, h2, h3, h4, h5, h6 {
-    color: $heading-color;
-}
+/* Libraries */
+@import "typeplate/typeplate";
+@import "typeplate/vars-typeplate";
+@import "bourbon/bourbon";
+@import "neat/neat";
 
-h1 { @extend .gamma; @extend %hN; }
-h2 { @extend .delta; @extend %hN; }
-h3 { @extend .epsilon; @extend %hN; }
-h4 { @extend .zeta; @extend %hN; }
-h5 { @extend .zeta; @extend %hN; }
-h6 { @extend .zeta; @extend %hN; }
-
-/* Essays etc. */
-
-article {
-  font-size: 16px;
-  width: 40%;
-  float: left;
-  padding-left: 45px;
-
-  p {
-    text-align: justify;
-  }
-
-  .footnotes {
-
-    .reversefootnote {
-      display: none;
-    }
-  }
-}
-
-/* Code style */
-
-code {
-  font-family: Inconsolata, monospace;
-}
-
-pre {
-  border: 1px solid $code-border-color;
-  background-color: $code-background-color;
-
-  code {
-    font-size: $code-block-font-size;
-  }
-}
-
-/* Front page */
-
-nav ul {
-    font-style: italic;
-
-    li {
-        display: inline;
-    }
-
-    li+li:before {
-        content: "—";
-    }
-}
-
-/* Portfolio */
-
-#portfolio {
-  .intro {
-
-  }
-
-  .content {
-    font-family: 'Source Sans Pro', sans-serif;
-
-    .item {
-      @include row;
-
-      .title {
-        font-size: 46px;
-      }
-
-      .desc {
-        @include column(60);
-
-        .links {
-          list-style-type: none;
-          padding-left: 30px;
-
-          li {
-            display: inline-block;
-            padding-left: 16px;
-
-            a {
-              color: $text-color;
-              font-size: $icon-size;
-            }
-          }
-        }
-      }
-
-      .sample {
-        @include column(30);
-      }
-    }
-  }
-}
+/* Internal imports */
+@import "mixins";
+@import "titlebar";
+@import "portfolio";
+@import "articles";
+@import "global";
+@import "home-page";
