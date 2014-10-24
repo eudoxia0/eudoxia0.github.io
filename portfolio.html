@@ -11,27 +11,32 @@ layout: page
     <div class="item">
       <div class="desc">
         <div class="title">Crane</div>
-        <p>Crane is an ORM for Common Lisp.</p>
+        <p>
+          Crane is an ORM for Common Lisp. It uses CLOS's amazing MetaObject
+          Protocol to map Common Lisp objects to SQL records and back, and
+          provides a <a href="https://www.djangoproject.com/">Django</a>-inspired
+          simple interface and automatic migrations.
+        </p>
+        <p>
+          Internally, Crane is very similar in structure to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>,
+          only most of the components SQLAlchemy implements internally are
+          external libraries that Crane depends on. Crane is built mostly on top
+          of <a href="https://github.com/fukamachi">fukamachiware</a>: <a href="https://github.com/fukamachi/cl-dbi">cl-dbi</a> is
+          used to provide a backend-agnostic database abstraction, and <a href="https://github.com/fukamachi/sxql">SxQL</a> is
+          used as the DSL for generating SQL.
+        </p>
         <ul class="links">
           <li>
-            <a href="http://eudoxia0.github.io/crane/">
-              <span class="fa fa-globe"></span>
-            </a>
+            <a class="fa fa-globe" href="http://eudoxia0.github.io/crane/"></a>
           </li>
           <li>
-            <a href="https://github.com/eudoxia0/crane">
-              <span class="fa fa-github"></span>
-            </a>
+            <a class="fa fa-github" href="https://github.com/eudoxia0/crane"></a>
           </li>
           <li>
-            <a href="http://www.reddit.com/r/lisp/comments/27gpmx/crane_an_orm_for_common_lisp/">
-              <span class="fa fa-reddit"></span>
-            </a>
+            <a class="fa fa-reddit" href="http://www.reddit.com/r/lisp/comments/27gpmx/crane_an_orm_for_common_lisp/"></a>
           </li>
           <li>
-            <a href="https://news.ycombinator.com/item?id=7857418">
-              <span class="fa fa-hacker-news"></span>
-            </a>
+            <a class="fa fa-hacker-news" href="https://news.ycombinator.com/item?id=7857418"></a>
           </li>
         </ul>
       </div>
@@ -47,6 +52,95 @@ layout: page
           </div>
         </div>
       </div>
+    </div>
+    <div class="item">
+      <div class="desc">
+        <div class="title">Corona</div>
+        <p>
+          Corona is basically a Vagrant clone. You define virtual machines
+          (Their name, a base system to build from, amount of RAM, IP address,
+          etc.) and Corona sets it up. It uses VirtualBox to run the machines
+          and Vagrant Cloud as a source of base images to build machines from.
+        </p>
+        <p>
+          The advantage it has over Vagrant is simply that it's pure Lisp, so it
+          can be used as a dependency in a Common Lisp system, without the user
+          having to set up the Ruby ecosystem to install Vagrant. It's also
+          pretty nice to use.
+        </p>
+        <ul class="links">
+          <li>
+            <a class="fa fa-globe" href="http://eudoxia0.github.io/corona/"></a>
+          </li>
+          <li>
+            <a class="fa fa-github" href="https://github.com/eudoxia0/corona"></a>
+          </li>
+          <li>
+            <a class="fa fa-reddit" href="http://www.reddit.com/r/lisp/comments/2k11io/corona_build_and_manage_virtual_machines_from/"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sample">
+        <div class="window">
+          <div class="titlebar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="body">
+            Hi
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="other">
+    <h1>Other Libraries</h1>
+    <p>
+      These are smaller projects, usually dependencies of other larger libraries
+      (Like <code>cl-virtualbox</code>) or parts of bigger libraries I factored
+      out so they'd be accessible to others (Like <code>cl-pass</code>, which
+      grew out of <code>hermetic</code>).
+    </p>
+    <div class="lists-container">
+      <dl>
+        <dt><a href="https://github.com/eudoxia0/cl-virtualbox">cl-virtualbox</a></dt>
+        <dd>A few functions that map to <code>vboxmanage</code> commands.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/trivial-ssh">trivial-ssh</a></dt>
+        <dd>A simple abstraction layer over <code>cl-libssh2</code>, a binding
+        to the <a href="http://www.libssh2.org/">libssh2</a> library.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/trivial-extract">trivial-extract</a></dt>
+        <dd>For extracting <code>.tar</code>, <code>.tar.gz</code> and <code>.zip</code> files
+        simply.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/trivial-download">trivial-download</a></dt>
+        <dd>It downloads files.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/cl-base58">cl-base58</a></dt>
+        <dd>An implementation of Bitcoin's base58 encoding and decoding.</dd>
+      </dl>
+      <dl>
+        <dt><a href="https://github.com/eudoxia0/eco">eco</a></dt>
+        <dd>A fast and designer-friendly template engine, inspired by the syntax
+        of eRuby.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/cl-pass">cl-pass</a></dt>
+        <dd>Password hashing and verification with reasonable, secure defaults.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/hermetic">hermetic</a></dt>
+        <dd>An authentication library for <a href="http://clacklisp.org/">Clack</a> web
+        applications.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/clack-errors">clack-errors</a></dt>
+        <dd>A collection of extensions to ASDF, the de-facto build system for
+        Common Lisp.</dd>
+
+        <dt><a href="https://github.com/eudoxia0/asdf-linguist">asdf-linguist</a></dt>
+        <dd>A collection of extensions to ASDF, the de-facto build system for
+        Common Lisp.</dd>
+      </dl>
     </div>
   </div>
 </div>
