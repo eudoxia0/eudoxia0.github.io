@@ -6,6 +6,7 @@ layout: page
 # Fernando Borretti
 
 - [About](/about.html)
+- [Portfolio](/portfolio.html)
 
 Content
 
