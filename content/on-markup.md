@@ -170,7 +170,7 @@ problematic. I've come up with just two items.
 
 * Smart typography: Replacing double dashes with en dashes, smart quotes, et
   cetera.
-* I don't want to put `p`s around every paragraph.
+* I don't want to put `p` tags around every paragraph.
 
 The former is actually two things: Replacing dashes and ellipses with their
 proper characters is easy. Smart quotes, less so (But still doable in XSLT

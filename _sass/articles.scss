@@ -4,8 +4,11 @@ article {
 
   p {
     text-align: justify;
-    width: 40%;
-    margin: 0;
+
+    @include on-desktop() {
+      width: 50%;
+      margin: 0;
+    }
   }
 
   .footnotes {

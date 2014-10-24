@@ -1,19 +1,19 @@
 /* General CSS */
 
 body {
-    margin: 0 auto;
-    padding: 45px;
-    font-family: 'Crimson Text', serif;
-    color: $text-color;
+  margin: 0 auto;
+  padding: 45px;
+  font-family: 'Crimson Text', serif;
+  color: $text-color;
 }
 
 a, a:visited {
-    color: $link-color;
-    text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $heading-color;
+  color: $heading-color;
 }
 
 h1 { @extend .gamma; @extend %hN; }
@@ -30,10 +30,21 @@ code {
 }
 
 pre {
-  border: 1px solid $code-border-color;
+  border-left: 1px solid $code-border-color;
   background-color: $code-background-color;
 
   code {
     font-size: $code-block-font-size;
   }
+}
+
+:not(pre) > code {
+  background-color: $code-background-color;
+  padding: 2px;
+  border: 1px solid $code-border-color;
+  border-radius: 3px;
+}
+
+blockquote {
+  font-style: italic;
 }

@@ -1,11 +1,23 @@
-nav ul {
+#home {
+  margin: 0 auto;
+  width: 60%;
+
+  h1 {
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 120px;
     font-style: italic;
 
     li {
-        display: inline;
+      display: inline;
     }
 
     li+li:before {
-        content: "—";
+      content: "—";
     }
+  }
 }
