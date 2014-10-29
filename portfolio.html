@@ -5,9 +5,24 @@ layout: page
 <div id="portfolio">
   <div class="intro">
     <h1>Portfolio</h1>
+    <p>
+      I write small libraries. If a project implements something that may
+      potentially be useful somewhere else, I'll factor it out.
+    </p>
+    <p>
+      My long term goal is to make Common Lisp a viable language for web
+      development, and most of the code you'll see here reflects this. I've
+      already done the ORM, a web framework, and a constellation of small
+      libraries.
+    </p>
+    <p>
+      Thankfully, I'm not alone in this, and other people have done a lot of
+      good work in this area: Eitaro Fukamachi, Nicholas Hafner, and Andrew
+      Lyon. This portfolio wouldn't be possible without them.
+    </p>
   </div>
 
-  <div class="content">
+  <section class="content">
     <div class="item">
       <div class="desc">
         <div class="title">Crane</div>
@@ -55,6 +70,88 @@ layout: page
     </div>
     <div class="item">
       <div class="desc">
+        <div class="title">cmacro</div>
+        <p>
+          cmacro is like sweet.js for C. It implements a simple,
+          pattern-matching based macro language that can be used to extend C.
+        </p>
+        <p>
+          cmacro is written in Common Lisp, and is compiled to a native binary,
+          so you can drop it right into your Makefile between a file and clang
+          without changing anything.
+        </p>
+        <p>
+          One of the project's goals is to show how much can be added to a
+          language with nothing more than a few simple macros, and in this I've
+          <a href="https://github.com/eudoxia0/magma">succeeded</a>.
+        </p>
+        <ul class="links">
+          <li>
+            <a class="fa fa-github" href="https://github.com/eudoxia0/cmacro"></a>
+          </li>
+          <li>
+            <a class="fa fa-reddit" href="http://www.reddit.com/r/programming/comments/23oaop/lisp_macros_for_c/"></a>
+          </li>
+          <li>
+            <a class="fa fa-hacker-news" href="https://news.ycombinator.com/item?id=7627135"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sample">
+        <div class="window">
+          <div class="titlebar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="body">
+            Hi
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="desc">
+        <div class="title">magma</div>
+        <p>
+          cmacro just provides the macro system &ndash; Magma is a library of
+          macros that use it, extending C to provide:
+        </p>
+        <ul>
+          <li>Anonymous functions</li>
+          <li>Lazy evaluation</li>
+          <li>Algebraic data types</li>
+          <li>Anaphoric macros</li>
+          <li>Resource-managing macros (Automatically closing file pointers, etc.)</li>
+        </ul>
+        <p>
+          And various other little things.
+        </p>
+        <ul class="links">
+          <li>
+            <a class="fa fa-github" href="https://github.com/eudoxia0/magma"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sample">
+        <div class="window">
+          <div class="titlebar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="body">
+            <pre>
+              <code class="cpp">
+{% include code/portfolio/magma.c %}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="desc">
         <div class="title">Corona</div>
         <p>
           Corona is basically a Vagrant clone. You define virtual machines
@@ -93,8 +190,41 @@ layout: page
         </div>
       </div>
     </div>
-  </div>
-  <div class="other">
+    <div class="item">
+      <div class="desc">
+        <div class="title">Rock</div>
+        <p>
+          Rock is an asset manager for Common Lisp, basically a combination of
+          Bower plus an asset pipeline. It automatically downloads web
+          development libraries (JavaScript libraries like jQuery, JS/CSS
+          libraries like Bootstrap, etc.), manages their versions, and allows
+          you to merge their files together so you only serve a single CSS file
+          and a single JS one.
+        </p>
+        <ul class="links">
+          <li>
+            <a class="fa fa-globe" href="http://eudoxia0.github.io/rock/"></a>
+          </li>
+          <li>
+            <a class="fa fa-github" href="https://github.com/eudoxia0/rock"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sample">
+        <div class="window">
+          <div class="titlebar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="body">
+            Hi
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="other">
     <h1>Other Libraries</h1>
     <p>
       These are smaller projects, usually dependencies of other larger libraries
@@ -142,5 +272,5 @@ layout: page
         Common Lisp.</dd>
       </dl>
     </div>
-  </div>
+  </section>
 </div>
