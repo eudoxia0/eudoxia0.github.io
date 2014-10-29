@@ -17,7 +17,6 @@
     overflow: hidden;
 
     .item {
-      @include outer-container;
       margin-top: 150px;
 
       .title {
@@ -25,7 +24,6 @@
       }
 
       .desc {
-        @include span-columns(5);
 
         .links {
           list-style-type: none;
@@ -42,9 +40,34 @@
           }
         }
       }
+    }
 
-      .sample {
-        @include span-columns(7);
+    /* Layout */
+    @include on-desktop() {
+      .item {
+        @include outer-container;
+
+        .desc {
+          @include span-columns(5);
+        }
+
+        .sample {
+          @include span-columns(7);
+        }
+      }
+    }
+
+    @include on-mobile() {
+      .item {
+        @include outer-container;
+
+        .desc {
+          @include span-columns(12);
+        }
+
+        .sample {
+          @include span-columns(12);
+        }
       }
     }
   }
