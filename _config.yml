@@ -35,7 +35,7 @@ portfolio:
 
         [django]: https://www.djangoproject.com/
         [sqlalchemy]: http://www.sqlalchemy.org/
-        [fukamachiware]: https://github.com/fukamachi
+        [fukamachi]: https://github.com/fukamachi
         [dbi]: https://github.com/fukamachi/cl-dbi
         [sxql]: https://github.com/fukamachi/sxql
 
@@ -48,8 +48,8 @@ portfolio:
       sample: code/portfolio/cmacro.c
       desc: |
 
-        cmacro is like sweet.js for C. It implements a simple, pattern-matching
-        based macro language that can be used to extend C.
+        cmacro is like [sweet.js][sjs] for C. It implements a simple,
+        pattern-matching based macro language that can be used to extend C.
 
         cmacro is written in Common Lisp, and is compiled to a native binary, so
         you can drop it right into your Makefile between a file and clang
@@ -59,6 +59,8 @@ portfolio:
         language with nothing more than a few simple macros, and in this I've
         [succeeded](https://github.com/eudoxia0/magma).
 
+        [sjs]: http://sweetjs.org/
+
       github: https://github.com/eudoxia0/cmacro
       reddit: http://www.reddit.com/r/programming/comments/23oaop/lisp_macros_for_c/
       hn: https://news.ycombinator.com/item?id=7627135
@@ -67,14 +69,20 @@ portfolio:
       sample: code/portfolio/magma.c
       desc: |
 
-        cmacro just provides the macro system &ndash; Magma is a library of
-        macros that use it, extending C to provide:
+        cmacro just provides the macro system -- Magma is a library of
+        macros built on cmacro, extending C to provide:
 
-        - Anonymous functions
-        - Lazy evaluation
-        - Algebraic data types
-        - Anaphoric macros
-        - Resource-managing macros (Automatically closing file pointers, etc.)
+        - [Anonymous functions][anon]
+        - [Lazy evaluation][lazy]
+        - [Algebraic data types][adt]
+        - [Anaphoric macros][anaphora]
+        - [Resource-managing macros][res] (Automatically closing file pointers, etc.)
+
+        [anon]: https://github.com/eudoxia0/magma#anonymous-functions
+        [lazy]: https://github.com/eudoxia0/magma#lazy-evaluation
+        [adt]: https://github.com/eudoxia0/magma#algebraic-data-types
+        [anaphora]: https://github.com/eudoxia0/magma#anaphoric-macros
+        [res]: https://github.com/eudoxia0/magma#with_allocation
 
       github: https://github.com/eudoxia0/magma
 
