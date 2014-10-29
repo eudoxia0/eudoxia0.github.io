@@ -16,7 +16,7 @@
       }
 
       .desc {
-        @include span-columns(6);
+        @include span-columns(5);
 
         .links {
           list-style-type: none;
@@ -35,7 +35,7 @@
       }
 
       .sample {
-        @include span-columns(6);
+        @include span-columns(7);
       }
     }
   }
