@@ -77,12 +77,28 @@
     margin-top: 150px;
 
     .lists-container {
-      @include outer-container;
       width: 90%;
       margin: 0 auto;
+    }
 
-      dl {
-        @include span-columns(6);
+    /* Layout */
+    @include on-desktop() {
+      .lists-container {
+      @include outer-container;
+
+        dl {
+          @include span-columns(6);
+        }
+      }
+    }
+
+    @include on-mobile() {
+      .lists-container {
+      @include outer-container;
+
+        dl {
+          @include span-columns(12);
+        }
       }
     }
   }
