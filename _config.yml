@@ -6,7 +6,147 @@ markdown: kramdown
 sass:
     style: :compressed
 
+# Custom variables
+
 js:
   - "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
   - "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"
   - "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+
+# Portfolio variables
+
+portfolio:
+  open_source:
+    - name: Crane
+      sample: code/portfolio/crane.lisp
+      desc: |
+
+        Crane is an ORM for Common Lisp. It uses CLOS's amazing MetaObject
+        Protocol to map Common Lisp objects to SQL records and back, and
+        provides a [Django][django]-inspired simple interface and automatic
+        migrations.
+
+        Internally, Crane is very similar in structure to
+        [SQLAlchemy][sqlalchemy], only most of the components SQLAlchemy
+        implements internally are external libraries that Crane depends
+        on. Crane is built mostly on top of [fukamachiware][fukamachi]:
+        [cl-dbi][dbi] is used to provide a backend-agnostic database
+        abstraction, and [SxQL][sxql] is used as the DSL for generating SQL.
+
+        [django]: https://www.djangoproject.com/
+        [sqlalchemy]: http://www.sqlalchemy.org/
+        [fukamachiware]: https://github.com/fukamachi
+        [dbi]: https://github.com/fukamachi/cl-dbi
+        [sxql]: https://github.com/fukamachi/sxql
+
+      website: http://eudoxia0.github.io/crane/
+      github: https://github.com/eudoxia0/crane
+      reddit: http://www.reddit.com/r/lisp/comments/27gpmx/crane_an_orm_for_common_lisp/
+      hn: https://news.ycombinator.com/item?id=7857418
+
+    - name: cmacro
+      sample: code/portfolio/cmacro.c
+      desc: |
+
+        cmacro is like sweet.js for C. It implements a simple, pattern-matching
+        based macro language that can be used to extend C.
+
+        cmacro is written in Common Lisp, and is compiled to a native binary, so
+        you can drop it right into your Makefile between a file and clang
+        without changing anything.
+
+        One of the project's goals is to show how much can be added to a
+        language with nothing more than a few simple macros, and in this I've
+        [succeeded](https://github.com/eudoxia0/magma).
+
+      github: https://github.com/eudoxia0/cmacro
+      reddit: http://www.reddit.com/r/programming/comments/23oaop/lisp_macros_for_c/
+      hn: https://news.ycombinator.com/item?id=7627135
+
+    - name: Magma
+      sample: code/portfolio/magma.c
+      desc: |
+
+        cmacro just provides the macro system &ndash; Magma is a library of
+        macros that use it, extending C to provide:
+
+        - Anonymous functions
+        - Lazy evaluation
+        - Algebraic data types
+        - Anaphoric macros
+        - Resource-managing macros (Automatically closing file pointers, etc.)
+
+      github: https://github.com/eudoxia0/magma
+
+    - name: Corona
+      sample: code/portfolio/corona.lisp
+      desc: |
+
+        Corona is basically a Vagrant clone. You define virtual machines (Their
+        name, a base system to build from, amount of RAM, IP address, etc.) and
+        Corona sets it up. It uses VirtualBox to run the machines and Vagrant
+        Cloud as a source of base images to build machines from.
+
+        The advantage it has over Vagrant is simply that it's pure Lisp, so it
+        can be used as a dependency in a Common Lisp system, without the user
+        having to set up the Ruby ecosystem to install Vagrant. It's also pretty
+        nice to use.
+
+      website: http://eudoxia0.github.io/corona/
+      github: https://github.com/eudoxia0/corona
+      reddit: http://www.reddit.com/r/lisp/comments/2k11io/corona_build_and_manage_virtual_machines_from/
+
+    - name: Rock
+      sample: code/portfolio/rock.lisp
+      desc: |
+
+        Rock is an asset manager for Common Lisp, basically a combination of
+        Bower plus an asset pipeline. It automatically downloads web development
+        libraries (JavaScript libraries like jQuery, JS/CSS libraries like
+        Bootstrap, etc.), manages their versions, and allows you to merge their
+        files together so you only serve a single CSS file and a single JS one.
+
+      website: http://eudoxia0.github.io/rock/
+      github: https://github.com/eudoxia0/rock
+
+  others:
+    - - name: cl-virtualbox
+        desc: A few functions that map to `vboxmanage` commands.
+
+      - name: trivial-ssh
+        desc: >
+          A simple abstraction layer over `cl-libssh2`, a binding to the
+          [libssh2](http://www.libssh2.org/) library.
+
+      - name: trivial-extract
+        desc: For extracting `.tar`, `.tar.gz` and `.zip` files simply.
+
+      - name: trivial-download
+        desc: It downloads files.
+
+      - name: cl-base58
+        desc: An implementation of Bitcoin's base58 encoding and decoding.
+
+    - - name: eco
+        desc: >
+          A fast and designer-friendly template engine, inspired by the syntax
+          of eRuby.
+
+      - name: cl-pass
+        desc: Password hashing and verification with reasonable, secure defaults.
+
+      - name: hermetic
+        desc: >
+          An authentication library for [Clack](http://clacklisp.org/) web
+          applications.
+
+      - name: clack-errors
+        desc: >
+          A clone of
+          [better_errors](https://github.com/charliesome/better_errors) for
+          Clack.
+
+      - name: asdf-linguist
+        desc: >
+          A collection of extensions to ASDF, the de-facto build system for
+          Common Lisp.
