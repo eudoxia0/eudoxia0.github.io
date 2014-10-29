@@ -1,15 +1,24 @@
 #portfolio {
-  .intro {
+  font-size: 1.1em;
 
+  .intro {
+    width: 55%;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 55px;
+    }
   }
 
-  .content {
+  .open-source {
     font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
     overflow: hidden;
 
     .item {
       @include outer-container;
+      margin-top: 150px;
 
       .title {
         font-size: 46px;
@@ -42,6 +51,7 @@
 
   .other {
     width: 100%;
+    margin-top: 150px;
 
     .lists-container {
       @include outer-container;
