@@ -23,6 +23,5 @@
              :destination #p"css/style.css")))
 
 ;; Download the assets and compile the bundles for this
-;; environment. Dependencies are only downloaded when
-;; they're needed.
+;; environment. Dependencies are only downloaded when we need them
 (build :rock)

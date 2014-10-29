@@ -10,7 +10,7 @@ sass:
 
 js:
   - "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
-  - "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"
+  - "https://highlightjs.org/static/highlight.pack.js"
   - "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 # Portfolio variables
@@ -19,6 +19,7 @@ portfolio:
   open_source:
     - name: Crane
       sample: code/portfolio/crane.lisp
+      code: lisp
       desc: |
 
         Crane is an ORM for Common Lisp. It uses CLOS's amazing MetaObject
@@ -46,6 +47,7 @@ portfolio:
 
     - name: cmacro
       sample: code/portfolio/cmacro.c
+      code: cpp
       desc: |
 
         cmacro is like [sweet.js][sjs] for C. It implements a simple,
@@ -67,6 +69,7 @@ portfolio:
 
     - name: Magma
       sample: code/portfolio/magma.c
+      code: cpp
       desc: |
 
         cmacro just provides the macro system -- Magma is a library of
@@ -88,6 +91,7 @@ portfolio:
 
     - name: Corona
       sample: code/portfolio/corona.lisp
+      code: lisp
       desc: |
 
         Corona is basically a Vagrant clone. You define virtual machines (Their
@@ -106,6 +110,7 @@ portfolio:
 
     - name: Rock
       sample: code/portfolio/rock.lisp
+      code: lisp
       desc: |
 
         Rock is an asset manager for Common Lisp, basically a combination of

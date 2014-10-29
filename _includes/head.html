@@ -8,6 +8,6 @@
   {% for js in site.js %}
   <script src="{{ js }}"></script>
   {% endfor %}
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="{{ "/assets/js/scripts.js" | prepend: site.baseurl }}"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
