@@ -20,18 +20,20 @@
       text-align: center;
     }
 
-    ul {
-      list-style-type: none;
-      margin: 0 auto;
-      padding: 0;
-      width: 150px;
+    nav {
+      ul {
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 150px;
 
-      li {
-        display: inline-block;
-      }
+        li {
+          display: inline-block;
+        }
 
-      li+li:before {
-        content: "\A0—\A0";
+        li+li:before {
+          content: "\A0—\A0";
+        }
       }
     }
   }

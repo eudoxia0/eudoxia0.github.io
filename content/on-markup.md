@@ -17,6 +17,8 @@ those?
 Consider the following hypothetical example in Pandoc Markdown:
 
 ~~~markdown
+# Monopole Detection
+
 ... Most of the information is presented in *Magnetic Monopoles*[preskill]
 and *Magnetic Monopole Searches with AMANDA and other detectors*[lindell]...
 
@@ -31,7 +33,7 @@ and *Magnetic Monopole Searches with AMANDA and other detectors*[lindell]...
 ~~~
 
 The pattern is pretty clear: Italicized text followed by a reference. I wish I
-could do this:
+could do something along these lines:
 
 ~~~markdown
 @defmacro cite(id, text): *$text*[$id]
@@ -298,7 +300,9 @@ And so I rolled my own: [Wax][wax] is a markup language with TeX syntax that let
 define macros. A hypothetical example:
 
 ~~~tex
-
+\tag[key='val']{
+    content
+}
 ~~~
 
 [stackoverflow-p]: http://stackoverflow.com/questions/3733411/xslt-convert-carriage-returns-to-paragraphs-in-mixed-node-while-preserving-html
