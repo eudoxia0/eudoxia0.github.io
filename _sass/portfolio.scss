@@ -1,5 +1,6 @@
 #portfolio {
   font-size: 1.1em;
+  padding: $body-padding;
 
   .intro {
     width: 55%;
@@ -12,7 +13,6 @@
   }
 
   .open-source {
-    font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
     overflow: hidden;
 
@@ -40,6 +40,10 @@
           }
         }
       }
+
+      .sample {
+        padding-top: 25px;
+      }
     }
 
     /* Layout */
@@ -52,7 +56,8 @@
         }
 
         .sample {
-          @include span-columns(7);
+          @include span-columns(6);
+          float: right;
         }
       }
     }

@@ -1,12 +1,16 @@
 /* General CSS */
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  padding: 0;
   margin: 0 auto;
-  padding: 45px;
-  //font-family: 'Crimson Text', serif;
-  font-family: 'Lusitana', serif;
+  font-family: $body-font-family;
   color: $text-color;
-  background-color: #f7f7f7;
+  background-color: $body-background;
 }
 
 a, a:visited {
@@ -48,7 +52,7 @@ pre {
 
 :not(pre) > code {
   background-color: $code-background-color;
-  padding: 2px;
+  padding: 2px 5px;
   border: 1px solid $code-border-color;
   border-radius: 3px;
 }
