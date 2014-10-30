@@ -47,6 +47,10 @@ pre {
   code {
     font-size: $code-block-font-size;
     line-height: $code-block-line-height;
+
+    .hljs {
+      display: inline;
+    }
   }
 }
 

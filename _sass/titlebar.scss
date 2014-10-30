@@ -1,12 +1,9 @@
 .window {
-  $width: 100%;
   $bar-height: 30px;
   $circle-diam: 10px;
   $titlebar-color: #eee;
-  $background-color: #fff;
 
-  font-size: 13px;
-  width: $width;
+  width: 100%;
 
   .titlebar {
     height: $bar-height;
@@ -44,13 +41,18 @@
 
   .body {
     border: 1px solid $titlebar-color;
-    background-color: $background-color;
+    background: #fff;
 
     pre {
-      margin: 5px;
-      padding: 5px;
-      border: 0px;
-      background-color: $background-color;
+      background: #fff;
+      border: 0;
+      margin: 0;
+      font-size: 13px;
+      padding-left: 10px;
+
+      code {
+        padding: 0;
+      }
     }
   }
 }

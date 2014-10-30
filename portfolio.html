@@ -1,98 +1,105 @@
 ---
-layout: page
+title: Portfolio
 ---
 
-<div id="portfolio">
-  <div class="intro">
-    <h1>Portfolio</h1>
-    <p>
-      I write small libraries. If a project implements something that may
-      potentially be useful somewhere else, I'll factor it out.
-    </p>
-    <p>
-      My long term goal is to make Common Lisp a viable language for web
-      development, and most of the code you'll see here reflects this. I've
-      already done the ORM, a web framework, and a constellation of small
-      libraries.
-    </p>
-    <p>
-      Thankfully, I'm not alone in this, and other people have done a lot of
-      good work in this area:
-      <a href="https://github.com/fukamachi">Eitaro Fukamachi</a>,
-      <a href="https://github.com/Shinmera">Nicholas Hafner</a>, and
-      <a href="https://github.com/orthecreedence/">Andrew Lyon</a>. This
-      portfolio wouldn't be what it is without them.
-    </p>
-  </div>
+<head>
+  {% include head.html %}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="portfolio">
+    <div class="intro">
+      <h1>Portfolio</h1>
+      <p>
+        I write small libraries. If a project implements something that may
+        potentially be useful somewhere else, I'll factor it out.
+      </p>
+      <p>
+        My long term goal is to make Common Lisp a viable language for web
+        development, and most of the code you'll see here reflects this. I've
+        already done the ORM, a web framework, and a constellation of small
+        libraries.
+      </p>
+      <p>
+        Thankfully, I'm not alone in this, and other people have done a lot of
+        good work in this area:
+        <a href="https://github.com/fukamachi">Eitaro Fukamachi</a>,
+        <a href="https://github.com/Shinmera">Nicholas Hafner</a>, and
+        <a href="https://github.com/orthecreedence/">Andrew Lyon</a>. This
+        portfolio wouldn't be what it is without them.
+      </p>
+    </div>
 
-  <section class="open-source">
-    <h1>Open Source Work</h1>
+    <section class="open-source">
+      <h1>Open Source Work</h1>
 
-    {% for library in site.portfolio.open_source %}
-      <div class="item">
-        <div class="desc">
-          <div class="title">{{ library.name }}</div>
-          {{ library.desc | markdownify }}
-          <ul class="links">
-            {% if library.website %}
-              <li>
-                <a class="fa fa-globe" href="{{ library.website }}"></a>
-              </li>
-            {% endif %}
-            {% if library.github %}
-              <li>
-                <a class="fa fa-github" href="{{ library.github }}"></a>
-              </li>
-            {% endif %}
-            {% if library.reddit %}
-              <li>
-                <a class="fa fa-reddit" href="{{ library.reddit }}"></a>
-              </li>
-            {% endif %}
-            {% if library.hn %}
-              <li>
-                <a class="fa fa-hacker-news" href="{{ library.hn }}"></a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-        <div class="sample">
-          <div class="window">
-            <div class="titlebar">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="body">
-              <pre>
-                <code class="{{ library.code }}">
-{% include {{ library.sample }} %}
-                </code>
-              </pre>
+      {% for library in site.portfolio.open_source %}
+        <div class="item">
+          <div class="desc">
+            <div class="title">{{ library.name }}</div>
+            {{ library.desc | markdownify }}
+            <ul class="links">
+              {% if library.website %}
+                <li>
+                  <a class="fa fa-globe" href="{{ library.website }}"></a>
+                </li>
+              {% endif %}
+              {% if library.github %}
+                <li>
+                  <a class="fa fa-github" href="{{ library.github }}"></a>
+                </li>
+              {% endif %}
+              {% if library.reddit %}
+                <li>
+                  <a class="fa fa-reddit" href="{{ library.reddit }}"></a>
+                </li>
+              {% endif %}
+              {% if library.hn %}
+                <li>
+                  <a class="fa fa-hacker-news" href="{{ library.hn }}"></a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="sample">
+            <div class="window">
+              <div class="titlebar">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="body">
+                <pre>
+                  <code class="{{ library.code }}">
+  {% include {{ library.sample }} %}
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
-  </section>
-  <section class="other">
-    <h1>Other Libraries</h1>
-    <p>
-      These are smaller projects, usually dependencies of other larger libraries
-      (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
-      parts of bigger libraries I factored out so they'd be accessible to others
-      (Like <code>cl-pass</code>, which
-      grew out of <code>hermetic</code>).
-    </p>
-    <div class="lists-container">
-      {% for list in site.portfolio.others %}
-        <dl>
-          {% for item in list %}
-            <dt><a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a></dt>
-            <dd>{{ item.desc | markdownify }}</dd>
-          {% endfor %}
-        </dl>
       {% endfor %}
-    </div>
-  </section>
-</div>
+    </section>
+    <section class="other">
+      <h1>Other Libraries</h1>
+      <p>
+        These are smaller projects, usually dependencies of other larger libraries
+        (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
+        parts of bigger libraries I factored out so they'd be accessible to others
+        (Like <code>cl-pass</code>, which
+        grew out of <code>hermetic</code>).
+      </p>
+      <div class="lists-container">
+        {% for list in site.portfolio.others %}
+          <dl>
+            {% for item in list %}
+              <dt><a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a></dt>
+              <dd>{{ item.desc | markdownify }}</dd>
+            {% endfor %}
+          </dl>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</body>

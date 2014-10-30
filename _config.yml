@@ -8,11 +8,6 @@ sass:
 
 # Custom variables
 
-js:
-  - "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
-  - "https://highlightjs.org/static/highlight.pack.js"
-  - "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-
 # About page variables
 
 about:
