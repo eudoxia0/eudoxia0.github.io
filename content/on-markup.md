@@ -302,3 +302,4 @@ define macros. A hypothetical example:
 ~~~
 
 [stackoverflow-p]: http://stackoverflow.com/questions/3733411/xslt-convert-carriage-returns-to-paragraphs-in-mixed-node-while-preserving-html
+[wax]: https://github.com/eudoxia0/wax
