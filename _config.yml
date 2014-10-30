@@ -108,7 +108,7 @@ portfolio:
         - [Lazy evaluation][lazy]
         - [Algebraic data types][adt]
         - [Anaphoric macros][anaphora]
-        - [Resource-managing macros][res] (Automatically closing file pointers, etc.)
+        - [Resource-managing macros][res] (Automatically freeing pointers, etc.)
 
         [anon]: https://github.com/eudoxia0/magma#anonymous-functions
         [lazy]: https://github.com/eudoxia0/magma#lazy-evaluation
@@ -123,15 +123,19 @@ portfolio:
       code: lisp
       desc: |
 
-        Corona is basically a Vagrant clone. You define virtual machines (Their
-        name, a base system to build from, amount of RAM, IP address, etc.) and
-        Corona sets it up. It uses VirtualBox to run the machines and Vagrant
-        Cloud as a source of base images to build machines from.
+        Corona is basically a [Vagrant][vagrant] clone. You define virtual
+        machines (Their name, a base system to build from, amount of RAM, IP
+        address, etc.) and Corona sets it up. It uses VirtualBox to run the
+        machines and [Vagrant Cloud][vcloud] as a source of base images to build
+        machines from.
 
         The advantage it has over Vagrant is simply that it's pure Lisp, so it
         can be used as a dependency in a Common Lisp system, without the user
         having to set up the Ruby ecosystem to install Vagrant. It's also pretty
         nice to use.
+
+        [vagrant]: https://www.vagrantup.com/
+        [vcloud]: https://vagrantcloud.com/
 
       website: http://eudoxia0.github.io/corona/
       github: https://github.com/eudoxia0/corona
@@ -143,10 +147,13 @@ portfolio:
       desc: |
 
         Rock is an asset manager for Common Lisp, basically a combination of
-        Bower plus an asset pipeline. It automatically downloads web development
-        libraries (JavaScript libraries like jQuery, JS/CSS libraries like
-        Bootstrap, etc.), manages their versions, and allows you to merge their
-        files together so you only serve a single CSS file and a single JS one.
+        [Bower][bower] plus an asset pipeline. It automatically downloads web
+        development libraries (JavaScript libraries like jQuery, JS/CSS
+        libraries like Bootstrap, etc.), manages their versions, and allows you
+        to merge their files together so you only serve a single CSS file and a
+        single JS one.
+
+        [bower]: http://bower.io/
 
       website: http://eudoxia0.github.io/rock/
       github: https://github.com/eudoxia0/rock
