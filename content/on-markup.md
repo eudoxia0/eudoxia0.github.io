@@ -291,10 +291,10 @@ Is that clear?
 
 Anyways, back to the point: Markdown is simple but not extensible, XML is very
 dense on the eyes but can be extended, with some difficulty. What's missing is a
-markup language that has a higher signal-to-noise ratio than XML: One that keeps
-markup elements to a minimum, giving the most room to actual content. One that
-has extensibility built in, and doesn't require that you run the source through
-some external program to expand macros.
+reasonable midpoint: a markup language that has a higher signal-to-noise ratio
+than XML. One that keeps markup elements to a minimum, giving the most room to actual
+content. One that has extensibility built in, and doesn't require that you run
+the source through some external program to expand macros.
 
 And so I rolled my own: [Wax][wax] is a markup language with TeX syntax that lets you
 define macros. A hypothetical example:
