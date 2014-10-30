@@ -31,9 +31,8 @@ title: Portfolio
       </p>
     </div>
 
+    <h1 class="section-title">Open Source Work</h1>
     <section class="open-source">
-      <h1>Open Source Work</h1>
-
       {% for library in site.portfolio.open_source %}
         <div class="item">
           <div class="desc">
@@ -72,7 +71,7 @@ title: Portfolio
               <div class="body">
                 <pre>
                   <code class="{{ library.code }}">
-  {% include {{ library.sample }} %}
+{% include {{ library.sample }} %}
                   </code>
                 </pre>
               </div>
@@ -81,9 +80,9 @@ title: Portfolio
         </div>
       {% endfor %}
     </section>
+    <h1 class="section-title">Other Libraries</h1>
     <section class="other">
-      <h1>Other Libraries</h1>
-      <p>
+      <p class="desc">
         These are smaller projects, usually dependencies of other larger libraries
         (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
         parts of bigger libraries I factored out so they'd be accessible to others

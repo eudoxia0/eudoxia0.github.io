@@ -23,4 +23,3 @@ function createMap() {
 $(document).ready(function() {
     createMap();
 });
-
