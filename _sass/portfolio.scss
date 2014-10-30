@@ -1,6 +1,16 @@
+$section-margin-top: 40px;
+
 #portfolio {
   font-size: 1.1em;
   padding: $body-padding;
+
+  .section-title {
+    margin: 120px auto;
+    margin-bottom: 0;
+    width: 85%;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #bbb;
+  }
 
   .intro {
     width: 55%;
@@ -17,7 +27,14 @@
     overflow: hidden;
 
     .item {
-      margin-top: 150px;
+
+      &:not(:first-child) {
+        margin-top: 150px;
+      }
+
+      &:first-child {
+        margin-top: $section-margin-top;
+      }
 
       .title {
         font-size: 46px;
@@ -79,11 +96,16 @@
 
   .other {
     width: 100%;
-    margin-top: 150px;
+    margin-top: $section-margin-top;
+
+    .desc {
+      margin: 0 auto;
+      width: 75%;
+    }
 
     .lists-container {
       width: 90%;
-      margin: 0 auto;
+      margin: 25px auto;
     }
 
     /* Layout */
