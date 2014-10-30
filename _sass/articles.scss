@@ -3,6 +3,14 @@ article {
   padding-left: 45px;
   padding-top: 45px;
 
+  header {
+    hr {
+      height: 0;
+      border: 0;
+      border-top: 1px solid #ccc;
+    }
+  }
+
   p {
     text-align: justify;
 
@@ -12,10 +20,27 @@ article {
     }
   }
 
+  pre {
+    border: 1px solid #ddd;
+
+    @include on-desktop() {
+      width: 50%;
+    }
+  }
+
   .footnotes {
 
     .reversefootnote {
       display: none;
     }
+  }
+}
+
+footer {
+  height: 120px;
+  text-align: center;
+
+  .copyright {
+    padding-top: 75px;
   }
 }
