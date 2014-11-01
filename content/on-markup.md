@@ -70,10 +70,10 @@ A macro. This translates the XML to Markdown, so what you'd do is preprocess the
 the benefits of macros.
 
 But consider another side to this same example: The text of the references. They
-both follow the same pattern:
-`[author]. [italicized paper name in a link]`. Repetition violates DRY and
-introduces room for mistakes. And what about exceptional situations, such as no
-link being provided. What we need is a macro.
+both follow the same pattern: The author, followed by the italicized name of the
+reference, and a link. Repetition violates DRY and introduces room for
+mistakes. And what about exceptional situations, such as no link being provided?
+What we need is a macro.
 
 ~~~xml
 <xsl:template match="references">
@@ -126,12 +126,10 @@ Well, that's big. But now we can write something like this:
 </references>
 ~~~
 
-Automatic. Structured. *Autistic*. Composable.
-
 What if you want to include files? Pandoc has a simple extension that lets you
 do this, but what if you want to add a start-end range? For example, let's say
 you're writing a blog post describing some code, and you keep the code in a file
-(Where it can be run and tested) and include ranged snippets in your post.1
+(Where it can be run and tested) and include ranged snippets in your post.
 You'd need to modify the extension, which requires some knowledge of Haskell, or
 filtering the raw JSON.
 
@@ -153,12 +151,12 @@ Or, you can do this (Which only works with XSLT 2.0):
 Let's go further. You're writing a personal website -- such as this one -- using
 Markdown and Pandoc. You have a simple Makefile that runs the Markdown files
 through Pandoc, but you don't want all files to be treated equally: Files in the
-`osts/` folder are converted to HTML with the template for posts, files in
-`slideshows/` are converted using a template for reveal.js slideshows. You could
-do this by separating by files into folders, and telling Make to search for
-different files in different places. Or, you could have a root XML element that
-determines what template will be used, and write the templates along with the
-XSLT. Like this:
+`posts/` folder are converted to HTML with the template for posts, files in
+`slideshows/` are converted using a template for, say, [reveal.js][reveal]
+slideshows. You could do this by separating by files into folders, and telling
+Make to search for different files in different places. Or, you could have a
+root XML element that determines what template will be used, and write the
+templates along with the XSLT. Like this:
 
 ~~~xml
 <post title="Why XML is horrible and we should all be using Lisp">
@@ -168,7 +166,7 @@ XSLT. Like this:
 
 After doing all this, what *exactly* is left for Markdown? Replacing
 hashes/octothorpes/pounds/number signs with header tags isn't really
-problematic. I've come up with just two items.
+problematic. I've come up with just two items:
 
 * Smart typography: Replacing double dashes with en dashes, smart quotes, et
   cetera.
@@ -305,5 +303,6 @@ define macros. A hypothetical example:
 }
 ~~~
 
+[reveal]: http://lab.hakim.se/reveal-js/
 [stackoverflow-p]: http://stackoverflow.com/questions/3733411/xslt-convert-carriage-returns-to-paragraphs-in-mixed-node-while-preserving-html
 [wax]: https://github.com/eudoxia0/wax
