@@ -8,7 +8,7 @@
   <body>
     <article>
       <header>
-        <h1>{{ page.title }}</h1>
+        <h1><a href="{{ "/" | prepend: site.baseurl }}">{{ page.title }}</a></h1>
         <hr>
       </header>
       {{ content }}
