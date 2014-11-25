@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    {% include head.html %}
-    <!-- MathJax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  </head>
-  <body>
-    <article>
-      <header>
-        <h1><a href="{{ "/" | prepend: site.baseurl }}">{{ page.title }}</a></h1>
-        <hr>
-      </header>
-      {{ content }}
-    </article>
-    <!-- MathJax -->
-    <script type="text/x-mathjax-config">
-     {% include mathjax_config.js %}
-    </script>
-    {% include footer.html %}
-  </body>
-</html>
+---
+layout: page
+---
+<head>
+  {% include head.html %}
+  <!-- MathJax -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+  <article>
+    <header>
+      <h1><a href="{{ "/" | prepend: site.baseurl }}">{{ page.title }}</a></h1>
+      <hr>
+    </header>
+    {{ content }}
+  </article>
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">
+   {% include mathjax_config.js %}
+  </script>
+  {% include footer.html %}
+</body>
