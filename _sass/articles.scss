@@ -8,6 +8,10 @@ article {
 
     h1 {
       margin-bottom: 10px;
+
+      a {
+        color: $text-color !important;
+      }
     }
 
     hr {
