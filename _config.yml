@@ -6,6 +6,8 @@ markdown: kramdown
 sass:
     style: :compressed
 
+permalink: /post/:title
+
 # Custom variables
 
 # About page variables
