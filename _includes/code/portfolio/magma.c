@@ -6,7 +6,7 @@ data Token {
 
 /* Automatic resource management */
 with_open_file(file, "companies.csv", "w+") {
-  fwrite("Data!", 1, 5, file);
+  fwrite("IBM,1911,Public", 1, 15, file);
   /* The file pointer is closed here */
 }
 
