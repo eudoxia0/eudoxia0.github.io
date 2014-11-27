@@ -11,5 +11,5 @@
 (ssh:with-connection (conn "192.128.65.20" (ssh:agent "vagrant"))
   (ssh:with-command (conn iostream "whoami")))
 
-;; Stop it
+;; Shut it down
 (stop my-machine)
