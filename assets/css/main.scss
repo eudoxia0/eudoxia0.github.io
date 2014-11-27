@@ -15,11 +15,10 @@
 /* Libraries */
 @import "typeplate/typeplate";
 @import "typeplate/vars-typeplate";
-@import "bourbon/bourbon";
-@import "neat/neat";
 
 /* Internal imports */
 @import "mixins";
+@import "grid";
 @import "titlebar";
 @import "about";
 @import "portfolio";
