@@ -1,6 +1,9 @@
 ---
-title: Relativistic Propulsion
-layout: essay
+title:  Relativistic Propulsion
+author: Fernando Borretti
+date:   2014-10-23 16:57:31
+layout: post
+
 references:
   - id: relrob
     title: Relativistic robots and the feasibility of interstellar flight
