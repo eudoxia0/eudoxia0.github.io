@@ -106,6 +106,10 @@ $section-margin-top: 40px;
     .lists-container {
       width: 90%;
       margin: 25px auto;
+
+      dl {
+        padding: 25px;
+      }
     }
 
     /* Layout */
