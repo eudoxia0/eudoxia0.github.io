@@ -1,4 +1,20 @@
-#about {
+.about {
   padding: $body-padding;
   font-size: 1.1em;
+
+  $internal-padding: 40px;
+
+  .container {
+    @include row();
+
+    .text {
+      @include column(6);
+      padding: $internal-padding;
+    }
+
+    .links {
+      @include column(6);
+      padding-top: $internal-padding;
+    }
+  }
 }

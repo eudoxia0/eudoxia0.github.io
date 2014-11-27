@@ -22,6 +22,11 @@ about:
       I can often be found in the [##hplusroadmap][hplus] channel on Freenode
       ([Webchat][hplus-web]) as **eudoxia**.
 
+      [hplus]: irc://irc.freenode.net/##hplusroadmap
+      [hplus-web]: http://webchat.freenode.net/?channels=##hplusroadmap
+
+  links: |
+
       Github
       : [@eudoxia0](https://github.com/eudoxia0)
 
@@ -37,8 +42,6 @@ about:
       LinkedIn
       : [fernando-borretti][linkedin]
 
-      [hplus]: irc://irc.freenode.net/##hplusroadmap
-      [hplus-web]: http://webchat.freenode.net/?channels=##hplusroadmap
       [btc]: bitcoin:1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9
       [btc-web]: https://blockchain.info/address/1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9
       [hn-subs]: https://news.ycombinator.com/submitted?id=eudox
