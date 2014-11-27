@@ -38,7 +38,9 @@ layout: default
         <div class="item">
           <div class="desc">
             <div class="title">{{ library.name }}</div>
-            {{ library.desc | markdownify }}
+            <div class="text">
+              {{ library.desc | markdownify }}
+            </div>
             <ul class="links">
               {% if library.website %}
                 <li>

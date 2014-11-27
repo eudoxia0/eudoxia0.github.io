@@ -42,9 +42,14 @@ $section-margin-top: 40px;
 
       .desc {
 
+        .text {
+          padding-left: 30px;
+        }
+
         .links {
           list-style-type: none;
           padding-left: 30px;
+          margin-top: 30px;
 
           li {
             display: inline-block;
