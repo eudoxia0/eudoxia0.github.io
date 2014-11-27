@@ -25,9 +25,11 @@ layout: default
 
       <ul class="content-list">
         {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
+          {% if post.public %}
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>

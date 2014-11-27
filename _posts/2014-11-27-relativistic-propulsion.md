@@ -3,6 +3,7 @@ title:  Relativistic Propulsion
 author: Fernando Borretti
 date:   2014-10-23 16:57:31
 layout: post
+public: no
 
 references:
   - id: relrob
