@@ -1,19 +1,15 @@
 ---
 title: About
-layout: default
+layout: page
 ---
 
-<head>
-  {% include head.html %}
-</head>
-<body>
-  <div class="about">
-    <div class="container">
-      <div class="text">
-        {{ site.about.text | markdownify }}
-      </div>
-      <div class="links">
-        {{ site.about.links | markdownify }}
-      </div>
+<div class="about">
+  <div class="container">
+    <div class="text">
+      {{ site.about.text | markdownify }}
+    </div>
+    <div class="links">
+      {{ site.about.links | markdownify }}
+    </div>
   </div>
-</body>
+</div>
