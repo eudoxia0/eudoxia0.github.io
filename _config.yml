@@ -52,6 +52,23 @@ about:
 # Portfolio variables
 
 portfolio:
+  intro: |
+
+    [I write small libraries][libs]. If a project implements something that may
+    potentially be useful somewhere else, I'll factor it out.
+
+    My long term goal is to make Common Lisp a viable language for web
+    development, and most of the code you'll see here reflects this.
+
+    Thankfully, other people have done a lot of good work in this area: [Eitaro
+    Fukamachi][fukamachi], [Nicolas Hafner][shinmera], and [Andrew
+    Lyon][andrew]. This portfolio wouldn't be what it is without them.
+
+    [libs]: https://gist.github.com/substack/5075355
+    [fukamachi]: https://github.com/fukamachi
+    [shinmera]: https://github.com/Shinmera
+    [andrew]: https://github.com/orthecreedence/
+
   open_source:
     - name: Crane
       sample: code/portfolio/crane.lisp

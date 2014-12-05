@@ -8,24 +8,7 @@ layout: page
 
 <div id="portfolio">
   <div class="intro">
-    <p>
-      I write small libraries. If a project implements something that may
-      potentially be useful somewhere else, I'll factor it out.
-    </p>
-    <p>
-      My long term goal is to make Common Lisp a viable language for web
-      development, and most of the code you'll see here reflects this. I've
-      already done the ORM, a web framework, and a constellation of small
-      libraries.
-    </p>
-    <p>
-      Thankfully, I'm not alone in this, and other people have done a lot of
-      good work in this area:
-      <a href="https://github.com/fukamachi">Eitaro Fukamachi</a>,
-      <a href="https://github.com/Shinmera">Nicolas Hafner</a>, and
-      <a href="https://github.com/orthecreedence/">Andrew Lyon</a>. This
-      portfolio wouldn't be what it is without them.
-    </p>
+    {{ site.portfolio.intro | markdownify }}
   </div>
 
   <h1 class="section-title">Open Source Work</h1>
