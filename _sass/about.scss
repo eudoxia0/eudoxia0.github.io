@@ -1,8 +1,8 @@
 .about {
-  padding: $body-padding;
+  padding: 10px 30px;
   font-size: 1.1em;
 
-  $internal-padding: 40px;
+  $internal-padding: 10px 40px;
 
   .container {
     @include row();
