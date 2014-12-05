@@ -1,25 +1,6 @@
 article {
   font-size: 1.1em;
   padding-left: 45px;
-  padding-top: 45px;
-
-  header {
-    margin-bottom: 20px;
-
-    h1 {
-      margin-bottom: 10px;
-
-      a {
-        color: $text-color !important;
-      }
-    }
-
-    hr {
-      height: 0;
-      border: 0;
-      border-top: 1px solid #ccc;
-    }
-  }
 
   p {
     text-align: justify;

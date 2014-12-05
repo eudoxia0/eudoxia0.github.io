@@ -1,4 +1,7 @@
 ---
+# A midpoint between default.html and post.html: It's a page with a title, like
+# the posts, but without the article tag or MathJax or other post-specific
+# things
 layout: default
 ---
 <head>
@@ -6,12 +9,8 @@ layout: default
 </head>
 <body>
   {% include post_header.html %}
-  <article>
-    {{ content }}
-  </article>
+  {{ content }}
   <!-- MathJax -->
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <!-- MathJax config -->
   <script type="text/x-mathjax-config">
    {% include mathjax_config.js %}
   </script>

@@ -2,7 +2,7 @@ $section-margin-top: 40px;
 
 #portfolio {
   font-size: 1.1em;
-  padding: $body-padding;
+  padding: 30px;
 
   .section-title {
     margin: 120px auto;
@@ -22,8 +22,12 @@ $section-margin-top: 40px;
     }
   }
 
+  section {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .open-source {
-    width: 100%;
     overflow: hidden;
 
     .item {
