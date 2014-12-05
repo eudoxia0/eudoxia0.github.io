@@ -1,4 +1,4 @@
-/* Algebraic data types. In C */
+/* Algebraic data types */
 data Token {
   Integer { int i; };
   String  { char* str; };
