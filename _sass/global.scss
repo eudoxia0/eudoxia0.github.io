@@ -2,12 +2,14 @@
 
 html {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
+  margin: 0;
   padding: 0;
-  margin: 0 auto;
   font-family: $body-font-family;
   color: $text-color;
   background-color: $body-background;
@@ -71,4 +73,33 @@ dl {
 
 ul, ol {
   padding-left: 35px;
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+
+  .footer-content {
+    @include row();
+
+    .copyright {
+      @include column(6);
+    }
+
+    .social {
+      @include column(6);
+      list-style-type: none;
+
+      li {
+        display: inline;
+        padding-left: 25px;
+
+        a {
+          color: $text-color !important;
+        }
+      }
+    }
+  }
 }

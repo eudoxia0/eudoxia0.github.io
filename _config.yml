@@ -223,3 +223,11 @@ portfolio:
         desc: >
           A collection of extensions to ASDF, the de-facto build system for
           Common Lisp.
+
+links:
+  - service: github
+    url: https://github.com/eudoxia0
+  - service: twitter
+    url: https://twitter.com/eudxa
+  - service: linkedin
+    url: https://www.linkedin.com/pub/fernando-borretti/74/b74/827

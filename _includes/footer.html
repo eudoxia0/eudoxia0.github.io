@@ -1,5 +1,12 @@
 <footer>
-  <div class="copyright">
-    &copy; 2014 Fernando Borretti
+  <div class="footer-content">
+    <div class="copyright">
+      &copy; 2014 Fernando Borretti
+    </div>
+    <ul class="social">
+      {% for link in site.links %}
+        <li><a class="fa fa-{{ link.service }} fa-2x" href="{{ link.url }}"></a></li>
+      {% endfor %}
+    </ul>
   </div>
 </footer>
