@@ -80,9 +80,12 @@ footer {
   height: 120px;
   line-height: 120px;
   text-align: center;
+  background: #f4f4f4;
 
   .footer-content {
     @include row();
+    width: 80%;
+    margin: 0 auto;
 
     .copyright {
       @include column(6);
@@ -98,6 +101,8 @@ footer {
 
         a {
           color: $text-color !important;
+          vertical-align: middle;
+          font-size: 1.5em;
         }
       }
     }

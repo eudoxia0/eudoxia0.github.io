@@ -93,7 +93,7 @@ portfolio:
         [dbi]: https://github.com/fukamachi/cl-dbi
         [sxql]: https://github.com/fukamachi/sxql
 
-      website: http://eudoxia0.github.io/crane/
+      website: http://eudoxia.me/crane/
       github: https://github.com/eudoxia0/crane
       reddit: http://www.reddit.com/r/lisp/comments/27gpmx/crane_an_orm_for_common_lisp/
       hn: https://news.ycombinator.com/item?id=7857418
@@ -161,7 +161,7 @@ portfolio:
         [vagrant]: https://www.vagrantup.com/
         [vcloud]: https://vagrantcloud.com/
 
-      website: http://eudoxia0.github.io/corona/
+      website: http://eudoxia.me/corona/
       github: https://github.com/eudoxia0/corona
       reddit: http://www.reddit.com/r/lisp/comments/2k11io/corona_build_and_manage_virtual_machines_from/
 
@@ -179,7 +179,7 @@ portfolio:
 
         [bower]: http://bower.io/
 
-      website: http://eudoxia0.github.io/rock/
+      website: http://eudoxia.me/rock/
       github: https://github.com/eudoxia0/rock
 
   others:
