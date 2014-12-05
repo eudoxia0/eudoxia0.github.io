@@ -4,4 +4,8 @@
   (tonnage :type double :nullp nil)
   (length :type integer :nullp nil))
 
-(create 'ship :name "Mærsk Mc-Kinney Møller")
+(create 'ship
+        :name "Mærsk Mc-Kinney Møller"
+        :flag "Denmark"
+        :tonnage 194849
+        :length 400)
