@@ -16,5 +16,10 @@
       @include column(6);
       padding-top: $internal-padding;
     }
+
+    .colophon {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 }
