@@ -13,10 +13,15 @@ article {
 
   pre {
     border: 1px solid #ddd;
+    margin: 20px 0;
 
     @include on-desktop() {
       width: 50%;
     }
+  }
+
+  ul {
+    margin: 20px 0;
   }
 
   .footnotes {
