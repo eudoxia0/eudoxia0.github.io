@@ -56,6 +56,8 @@ about:
     [Sass][sass], a CSS preprocessor. Hosting is provided by [GitHub
     Pages][pages].
 
+    The grid system is a [custom][grid] 3-line thing.
+
     The map on the front page is generated dynamically with [Leaflet][leaflet],
     and the style was from a Leaflet providers [demo][demo]. The map shows a
     section of Montevideo, (coincidentally) almost centered on [TryoLabs][tryo].
@@ -63,6 +65,7 @@ about:
     [jekyll]: http://jekyllrb.com/
     [sass]: http://sass-lang.com/
     [pages]: https://pages.github.com/
+    [grid]: https://github.com/eudoxia0/eudoxia0.github.io/blob/master/_sass/grid.scss
     [leaflet]: http://leafletjs.com/
     [demo]: http://leaflet-extras.github.io/leaflet-providers/preview/
     [tryo]: http://tryolabs.com/
