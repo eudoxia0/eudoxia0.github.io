@@ -3,26 +3,18 @@
 
 @charset "utf-8";
 
-/* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-@import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
+@import "base/reset";
 
-/* Variables */
-@import "vars";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/grid";
 
-/* Libraries */
-@import "typeplate/typeplate";
-@import "typeplate/vars-typeplate";
+@import "components/os-x-window";
 
-/* Internal imports */
-@import "mixins";
-@import "grid";
-@import "titlebar";
-@import "pages";
-@import "about";
-@import "portfolio";
-@import "articles";
+@import "pages/common";
+@import "pages/home";
+@import "pages/about";
+@import "pages/portfolio";
+
 @import "global";
-@import "home-page";
