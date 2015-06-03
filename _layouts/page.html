@@ -9,7 +9,9 @@ layout: default
 </head>
 <body>
   {% include post_header.html %}
-  {{ content }}
+  <div class="page-content">
+    {{ content }}
+  </div>
   <!-- MathJax -->
   <script type="text/x-mathjax-config">
    {% include mathjax_config.js %}
