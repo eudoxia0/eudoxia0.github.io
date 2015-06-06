@@ -10,6 +10,8 @@ permalink: /post/:title
 
 # Custom variables
 
+post_images: /assets/img/posts
+
 # About page variables
 
 about:
