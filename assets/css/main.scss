@@ -12,7 +12,7 @@ $body-background: #fff;
 $body-font-family: 'Lusitana', serif;
 $body-padding: 45px;
 
-$code-background-color: #f6f6f6;
+$code-background-color: #fdfdfd;
 $code-border-color: #ddd;
 $code-block-font-size: 15.5px;
 $code-block-line-height: 1.2em;
@@ -345,8 +345,10 @@ $section-margin-top: 40px;
 /* Articles */
 
 .article {
-  width: 70%;
-  margin: 0 auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 130px;
 }
 
 article {
@@ -409,11 +411,20 @@ article {
   }
 
   pre {
+    display: block;
     background-color: $code-background-color;
-    border: 1px solid #ddd;
-    margin: 20px 0;
+
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
 
     code {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+
+      background-color: $code-background-color !important;
+
       font-size: $code-block-font-size;
       line-height: $code-block-line-height;
 
