@@ -1,21 +1,33 @@
 ---
-# A midpoint between default.html and post.html: It's a page with a title, like
-# the posts, but without the article tag or MathJax or other post-specific
-# things
 layout: default
+
+css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
+  - https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+js:
+  - https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+  - https://highlightjs.org/static/highlight.pack.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - /assets/js/scripts.js
 ---
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include post_header.html %}
-  <div class="page-content">
-    {{ content }}
-  </div>
-  <!-- MathJax -->
-  <script type="text/x-mathjax-config">
-   {% include mathjax_config.js %}
-  </script>
-  {% include footer.html %}
-  {% include libs.html %}
-</body>
+<header class="post-header">
+  <h1>
+    <a href="{% if page.backlink %}{{ page.backlink }}{% else %}/{% endif %}">
+      {{ page.title }}
+    </a>
+  </h1>
+  <hr>
+</header>
+<main class="{% if page.class %}{{ page.class }}{% endif %}">
+  {{ content }}
+</main>
+{% include footer.html %}
+<script type="text/x-mathjax-config">
+ {% include mathjax_config.js %}
+</script>
+{% for url in page.css %}
+  <link rel="stylesheet" href="{{ url }}"/>
+{% endfor %}
+{% for url in page.js %}
+  <script src="{{ url }}"></script>
+{% endfor %}

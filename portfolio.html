@@ -1,82 +1,87 @@
 ---
 title: Portfolio
 layout: page
+class: portfolio
+permalink: /portfolio/
 ---
 
-<div id="portfolio">
-  <div class="intro">
-    {{ site.portfolio.intro | markdownify }}
-  </div>
+<article class="intro">
+  {{ site.portfolio.intro | markdownify }}
+</article>
 
-  <h1 class="section-title">Open Source Work</h1>
-  <section class="open-source">
-    {% for library in site.portfolio.open_source %}
-    <div class="item">
-      <div class="desc">
-        <div class="title">{{ library.name }}</div>
-        <div class="text">
-          {{ library.desc | markdownify }}
+<h1 class="section-title">Open Source Work</h1>
+<section class="open-source">
+  {% for library in site.portfolio.open_source %}
+  <div class="item">
+    <div class="desc">
+      <div class="title">{{ library.name }}</div>
+      <article class="text">
+        {{ library.desc | markdownify }}
+      </article>
+      <ul class="links">
+        {% if library.website %}
+        <li>
+          <a class="fa fa-globe" href="{{ library.website }}"></a>
+        </li>
+        {% endif %}
+        {% if library.github %}
+        <li>
+          <a class="fa fa-github" href="{{ library.github }}"></a>
+        </li>
+        {% endif %}
+        {% if library.reddit %}
+        <li>
+          <a class="fa fa-reddit" href="{{ library.reddit }}"></a>
+        </li>
+        {% endif %}
+        {% if library.hn %}
+        <li>
+          <a class="fa fa-hacker-news" href="{{ library.hn }}"></a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="sample">
+      <div class="window">
+        <div class="titlebar">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <ul class="links">
-          {% if library.website %}
-          <li>
-            <a class="fa fa-globe" href="{{ library.website }}"></a>
-          </li>
-          {% endif %}
-          {% if library.github %}
-          <li>
-            <a class="fa fa-github" href="{{ library.github }}"></a>
-          </li>
-          {% endif %}
-          {% if library.reddit %}
-          <li>
-            <a class="fa fa-reddit" href="{{ library.reddit }}"></a>
-          </li>
-          {% endif %}
-          {% if library.hn %}
-          <li>
-            <a class="fa fa-hacker-news" href="{{ library.hn }}"></a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-      <div class="sample">
-        <div class="window">
-          <div class="titlebar">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="body">
-            <pre>
-              <code class="{{ library.code }}">
+        <div class="body">
+          <pre>
+            <code class="{{ library.code }}">
 {% include {{ library.sample }} %}
-              </code>
-            </pre>
-          </div>
+            </code>
+          </pre>
         </div>
       </div>
     </div>
-    {% endfor %}
-  </section>
-  <h1 class="section-title">Other Libraries</h1>
-  <section class="other">
-    <p class="desc">
+  </div>
+  {% endfor %}
+</section>
+<h1 class="section-title">Other Libraries</h1>
+<section class="other">
+  <article class="desc">
+    <p>
       These are smaller projects, usually dependencies of other larger libraries
       (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
       parts of bigger libraries I factored out so they'd be accessible to others
-      (Like <code>cl-pass</code>, which
-      grew out of <code>hermetic</code>).
+      (Like <code>cl-pass</code>, which grew out of <code>hermetic</code>).
     </p>
-    <div class="lists-container">
-      {% for list in site.portfolio.others %}
+  </article>
+  <div class="lists-container">
+    {% for list in site.portfolio.others %}
       <dl>
         {% for item in list %}
-        <dt><a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a></dt>
-        <dd>{{ item.desc | markdownify }}</dd>
+          <dt>
+            <a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a>
+          </dt>
+          <dd>
+            {{ item.desc | markdownify }}
+          </dd>
         {% endfor %}
       </dl>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+title: Articles
+layout: page
+class: articles
+permalink: /article/
+---
+
+<p>
+  Things I've written. You can <a href="/feed.xml">subscribe</a> through RSS.
+</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li class="post">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <div class="info">
+        <span class="date">
+          {{ post.date | date: "%-d %B, %Y" }}
+        </span>
+        &middot;
+        <div class="summary">
+          {{ post.summary }}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

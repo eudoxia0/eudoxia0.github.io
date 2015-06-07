@@ -1,6 +1,7 @@
 ---
 title: Common Lisp with Travis and Coveralls
-layout: post
+summary: How to set up Travis CI and Coveralls.io with a Common Lisp project.
+tags: [lisp, tutorial]
 ---
 
 [Travis][travis] is a service for running unit tests in the cloud. Every commit
@@ -251,7 +252,7 @@ Coveralls:
 * [Woo](https://github.com/fukamachi/woo)
 * [Jonathan](https://github.com/Rudolph-Miller/jonathan)
 
-# References
+# Footnotes
 
 [^uiop]:
     This is [ASDF's][asdf] portable tools layer. It provides a few very useful
