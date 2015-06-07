@@ -251,8 +251,9 @@ $section-margin-top: 40px;
       }
 
       .desc {
-
         .text {
+          font-size: 1.1em;
+          padding-top: 30px;
           padding-left: 30px;
         }
 
@@ -320,7 +321,12 @@ $section-margin-top: 40px;
       margin: 25px auto;
 
       dl {
+        font-size: 1.1em;
         padding: 25px;
+
+        dd {
+          padding-left: 15px;
+        }
       }
     }
 

@@ -5,9 +5,9 @@ class: portfolio
 permalink: /portfolio/
 ---
 
-<div class="intro">
+<article class="intro">
   {{ site.portfolio.intro | markdownify }}
-</div>
+</article>
 
 <h1 class="section-title">Open Source Work</h1>
 <section class="open-source">
@@ -15,9 +15,9 @@ permalink: /portfolio/
   <div class="item">
     <div class="desc">
       <div class="title">{{ library.name }}</div>
-      <div class="text">
+      <article class="text">
         {{ library.desc | markdownify }}
-      </div>
+      </article>
       <ul class="links">
         {% if library.website %}
         <li>
@@ -62,21 +62,26 @@ permalink: /portfolio/
 </section>
 <h1 class="section-title">Other Libraries</h1>
 <section class="other">
-  <p class="desc">
-    These are smaller projects, usually dependencies of other larger libraries
-    (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
-    parts of bigger libraries I factored out so they'd be accessible to others
-    (Like <code>cl-pass</code>, which
-    grew out of <code>hermetic</code>).
-  </p>
+  <article class="desc">
+    <p>
+      These are smaller projects, usually dependencies of other larger libraries
+      (Like <code>cl-virtualbox</code>, which is what Corona is built on) or
+      parts of bigger libraries I factored out so they'd be accessible to others
+      (Like <code>cl-pass</code>, which grew out of <code>hermetic</code>).
+    </p>
+  </article>
   <div class="lists-container">
     {% for list in site.portfolio.others %}
-    <dl>
-      {% for item in list %}
-      <dt><a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a></dt>
-      <dd>{{ item.desc | markdownify }}</dd>
-      {% endfor %}
-    </dl>
+      <dl>
+        {% for item in list %}
+          <dt>
+            <a href="https://github.com/eudoxia0/{{ item.name }}">{{ item.name }}</a>
+          </dt>
+          <dd>
+            {{ item.desc | markdownify }}
+          </dd>
+        {% endfor %}
+      </dl>
     {% endfor %}
   </div>
 </section>
