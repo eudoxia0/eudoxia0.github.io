@@ -121,20 +121,12 @@ $section-margin-top: 40px;
     /* Layout */
     @include on-desktop() {
       .lists-container {
-        @include row();
+        display: flex;
+        flex-flow: row wrap;
+        padding: 25px;
 
         dl {
-          @include column(6);
-        }
-      }
-    }
-
-    @include on-mobile() {
-      .lists-container {
-        @include row();
-
-        dl {
-          @include column(12);
+          width: 50%;
         }
       }
     }
