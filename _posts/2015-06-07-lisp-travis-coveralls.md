@@ -1,13 +1,12 @@
 ---
 title: Common Lisp with Travis and Coveralls
+summary: How to set up Travis CI and Coveralls.io with a Common Lisp project.
 ---
 
 [Travis][travis] is a service for running unit tests in the cloud. Every commit
 you make and every pull request your project receives is seen by Travis, which
 spins up a [Docker][docker] container and runs your tests. With a little work,
 it supports Common Lisp.
-
-<!-- more -->
 
 Travis is controlled by a file in your repo's root, `.travis.yml`. It defines
 some options, like the `language` the project is written in, the list of shell

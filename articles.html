@@ -1,6 +1,7 @@
 ---
 title: Articles
 layout: page
+class: articles
 permalink: /article/
 ---
 
@@ -15,8 +16,8 @@ permalink: /article/
       <span class="date">
         {{ post.date | date: "%-d %B, %Y" }}
       </span>
-      <div class="excerpt">
-        {{ post.excerpt }}
+      <div class="summary">
+        {{ post.summary }}
       </div>
     </li>
   {% endfor %}
