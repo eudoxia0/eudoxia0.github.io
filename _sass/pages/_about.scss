@@ -5,15 +5,12 @@
   $internal-padding: 10px 40px;
 
   .container {
-    @include row();
 
     .text {
-      @include column(6);
       padding: $internal-padding;
     }
 
     .links {
-      @include column(6);
       padding-top: $internal-padding;
     }
 
