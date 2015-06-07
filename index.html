@@ -1,39 +1,30 @@
 ---
 title: Fernando Borretti
 layout: default
+
+css:
+  - http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css
+
+js:
+  - http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+  - /assets/js/map.js
 ---
 
-<head>
-  {% include head.html %}
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-</head>
-<body>
-  <div id="map"></div>
-
-  <div class="panel-container">
-    <div class="panel">
-      <h1>Fernando Borretti</h1>
-
-      <nav>
-        <ul>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/portfolio.html">Portfolio</a></li>
-        </ul>
-      </nav>
-
-      <ul class="content-list">
-        {% for post in site.posts %}
-          {% if post.public %}
-            <li>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
+<div id="map"></div>
+<div class="home">
+  <div class="box">
+    <h1>Fernando Borretti</h1>
+    <nav>
+      <ul>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/article/">Articles</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="{{ "/assets/js/map.js" | prepend: site.baseurl }}"></script>
-</body>
+</div>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+{% for url in page.js %}
+  <script src="{{ url }}"></script>
+{% endfor %}
