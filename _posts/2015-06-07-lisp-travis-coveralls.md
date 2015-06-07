@@ -253,7 +253,7 @@ Coveralls:
 * [Woo](https://github.com/fukamachi/woo)
 * [Jonathan](https://github.com/Rudolph-Miller/jonathan)
 
-# References
+# Footnotes
 
 [^uiop]:
     This is [ASDF's][asdf] portable tools layer. It provides a few very useful

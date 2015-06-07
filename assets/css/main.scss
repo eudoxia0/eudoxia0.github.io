@@ -12,10 +12,13 @@ $body-background: #fff;
 $body-font-family: 'Lusitana', serif;
 $body-padding: 45px;
 
+$code-font-size: 1em;
 $code-background-color: #fdfdfd;
 $code-border-color: #ddd;
 $code-block-font-size: 15.5px;
 $code-block-line-height: 1.2em;
+
+$text-font-size: 1.2em;
 
 $text-color: #222;
 $link-color: #AD3108;
@@ -64,6 +67,8 @@ body {
   font-family: $body-font-family;
   color: $text-color;
   background-color: $body-background;
+
+  overflow-x: hidden;
 
   display: flex;
   min-height: 100vh;
@@ -379,12 +384,12 @@ $section-margin-top: 40px;
 
 article {
   // General text properties
-  font-size: 1.2em;
+  font-size: $text-font-size;
 
   // Layout
 
   & > *, dd > *, blockquote > * {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   li {
@@ -455,6 +460,7 @@ article {
     padding: 2px 5px;
     border: 1px solid $code-border-color;
     border-radius: 3px;
+    font-size: $code-font-size;
   }
 
   // Images and figures
