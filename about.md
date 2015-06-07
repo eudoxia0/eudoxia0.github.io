@@ -1,7 +1,8 @@
 ---
 title: About
-class: about
 layout: page
+class: about
+permalink: /about/
 ---
 
 I usually go by **eudoxia** on the Internet, and can usually be found in
