@@ -349,6 +349,32 @@ $section-margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 130px;
+  z-index: 0;
+
+  pre {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+
+    padding: 20px;
+
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+
+    code {
+      display: inline-block;
+      min-width: 60%;
+      text-align: left;
+      z-index: 100;
+    }
+  }
+
+  img {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 article {
@@ -411,20 +437,10 @@ article {
   }
 
   pre {
-    display: block;
     background-color: $code-background-color;
 
-    position: relative;
-    width: 100vw;
-    left: calc(-50vw + 50%);
-
     code {
-      display: block;
-      margin: 0 auto;
-      width: 60%;
-
       background-color: $code-background-color !important;
-
       font-size: $code-block-font-size;
       line-height: $code-block-line-height;
 
@@ -440,6 +456,10 @@ article {
     border: 1px solid $code-border-color;
     border-radius: 3px;
   }
+
+  // Images and figures
+
+  // Lists
 
   dl {
     dd {
