@@ -13,11 +13,14 @@ permalink: /article/
   {% for post in site.posts %}
     <li class="post">
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="date">
-        {{ post.date | date: "%-d %B, %Y" }}
-      </span>
-      <div class="summary">
-        {{ post.summary }}
+      <div class="info">
+        <span class="date">
+          {{ post.date | date: "%-d %B, %Y" }}
+        </span>
+        &middot;
+        <div class="summary">
+          {{ post.summary }}
+        </div>
       </div>
     </li>
   {% endfor %}

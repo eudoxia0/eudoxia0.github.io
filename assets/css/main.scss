@@ -202,19 +202,11 @@ footer {
   }
 }
 
-/* About page */
-
-#about {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Portfolio */
 
 $section-margin-top: 40px;
 
-#portfolio {
+.portfolio {
   font-size: 1.1em;
   padding: 30px;
 
@@ -349,7 +341,7 @@ $section-margin-top: 40px;
 
 /* Articles */
 
-.article article {
+.article-content {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -502,6 +494,46 @@ article {
   .footnotes {
     .reversefootnote {
       display: none;
+    }
+  }
+}
+
+/* About page */
+
+.about {
+  @extend .article-content;
+  @extend article;
+}
+
+/* Article list */
+
+.articles {
+  font-size: 1.5em;
+
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 130px;
+
+  .post-list {
+    margin-top: 30px;
+
+    .post {
+      margin-bottom: 35px;
+      list-style-type: none;
+
+      .info {
+        font-size: 15px;
+        margin-top: 5px;
+
+        .date {
+          color: #bbb;
+        }
+
+        .summary {
+          display: inline;
+        }
+      }
     }
   }
 }
