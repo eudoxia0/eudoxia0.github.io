@@ -6,7 +6,15 @@ markdown: kramdown
 sass:
     style: :compressed
 
-permalink: /articles/:title
+# Default layout
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+permalink: /article/:title
 
 # Custom variables
 

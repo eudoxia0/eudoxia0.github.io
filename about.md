@@ -1,5 +1,6 @@
 ---
 title: About
+class: about
 layout: page
 ---
 

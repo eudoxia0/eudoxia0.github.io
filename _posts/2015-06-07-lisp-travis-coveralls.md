@@ -1,6 +1,5 @@
 ---
 title: Common Lisp with Travis and Coveralls
-layout: post
 ---
 
 [Travis][travis] is a service for running unit tests in the cloud. Every commit

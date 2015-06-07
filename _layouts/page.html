@@ -18,7 +18,7 @@ js:
   </h1>
   <hr>
 </header>
-<main>
+<main class="{% if page.class %}{{ page.class }}{% endif %}">
   {{ content }}
 </main>
 {% include footer.html %}
