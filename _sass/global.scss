@@ -28,16 +28,22 @@ footer {
   background: #f4f4f4;
 
   .footer-content {
-    @include row();
     width: 80%;
     margin: 0 auto;
 
     .copyright {
-      @include column(6);
+      @include on-desktop() {
+        width: 50%;
+        float: left;
+      }
     }
 
     .social {
-      @include column(6);
+      @include on-desktop() {
+        width: 50%;
+        padding: 0;
+        float: right;
+      }
       list-style-type: none;
 
       li {
