@@ -33,8 +33,6 @@ This site is built with [Jekyll][jekyll], which needs no introduction, and
 [Sass][sass], a CSS preprocessor. Hosting is provided by [GitHub
 Pages][pages].
 
-The grid system is a [custom][grid] 3-line thing.
-
 The map on the front page is generated dynamically with [Leaflet][leaflet],
 and the style was from a Leaflet providers [demo][demo]. The map shows a
 section of Montevideo, (coincidentally) almost centered on [TryoLabs][tryo].

@@ -1,6 +1,7 @@
 ---
 title: Common Lisp with Travis and Coveralls
 summary: How to set up Travis CI and Coveralls.io with a Common Lisp project.
+tags: [lisp, tutorial]
 ---
 
 [Travis][travis] is a service for running unit tests in the cloud. Every commit
