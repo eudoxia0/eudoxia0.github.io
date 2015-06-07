@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 @import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 /* Variables */
 
@@ -198,6 +199,12 @@ footer {
 
 /* About page */
 
+#about {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Portfolio */
 
 $section-margin-top: 40px;
@@ -338,7 +345,58 @@ $section-margin-top: 40px;
 /* Articles */
 
 article {
+  font-size: 1.2em;
 
+  p {
+    text-align: justify;
+    text-indent: 20px;
+  }
+
+  code {
+    font-family: Inconsolata, monospace;
+  }
+
+  pre {
+    background-color: $code-background-color;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+
+    code {
+      font-size: $code-block-font-size;
+      line-height: $code-block-line-height;
+
+      .hljs {
+        display: inline;
+      }
+    }
+  }
+
+  :not(pre) > code {
+    background-color: $code-background-color;
+    padding: 2px 5px;
+    border: 1px solid $code-border-color;
+    border-radius: 3px;
+  }
+
+  dl {
+    dd {
+      padding-left: 15px;
+    }
+  }
+
+  ul, ol {
+    padding-left: 35px;
+  }
+
+  blockquote {
+    font-style: italic;
+  }
+
+  .footnotes {
+    .reversefootnote {
+      display: none;
+    }
+  }
 }
 
 /* The OS X titlebar window thingee in the portfolio */
