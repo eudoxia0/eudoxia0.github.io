@@ -1,3 +1,5 @@
+/* Mixins */
+
 @mixin on-desktop() {
   @media (min-width: $mobile-size) {
     @content;
