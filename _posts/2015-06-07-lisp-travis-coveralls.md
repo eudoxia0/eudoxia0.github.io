@@ -198,7 +198,7 @@ install:
 ~~~
 
 In the `script` part, we load coveralls along with our testing framework, and
-then wrap the code that runs tests in the `with-coverage` macro:
+then wrap the code that runs tests in the `with-coveralls` macro:
 
 ~~~yaml
 script:
