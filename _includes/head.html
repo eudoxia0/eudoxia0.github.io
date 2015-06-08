@@ -3,11 +3,23 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Metadata -->
   <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
   {% if page.class == "article" %}
     <meta name="author" content="Fernando Borretti">
     <meta name="keywords" content="{{page.tags | join: ', '}}">
   {% endif %}
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if page.class == "article" %}
+    <meta property="article:author" content="Fernando Borretti">
+    {% for tag in page.tags %}
+      <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+  {% endif %}
+  <!-- Resources -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <!-- Google Analytics -->
