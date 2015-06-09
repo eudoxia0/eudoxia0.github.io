@@ -159,7 +159,7 @@ update the list of repos.
 Then you click on the switch next to the repo's name to enable it, and then all
 you have to do is push a commit to trigger a build. Travis, like all services,
 has its ups and downs in terms of availability. So some times builds will start
-almost instantaneously, other times they'll take some time.
+almost instantaneously, other times they'll take longer.
 
 # Coverage Testing
 
