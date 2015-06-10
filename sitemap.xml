@@ -24,7 +24,7 @@
   </url>
 {% for article in site.posts %}
   <url>
-    <loc>{{ site.url }}/{{ post.url }}</loc>
+    <loc>{{ site.url }}/{{ article.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
