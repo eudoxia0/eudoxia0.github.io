@@ -16,6 +16,13 @@ js:
       {{ page.title }}
     </a>
   </h1>
+  {% if page.class == "article" %}
+    <ul class="links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/portfolio/">Portfolio</a></li>
+      <li><a href="/article/">Articles</a></li>
+    </ul>
+  {% endif %}
   <hr>
 </header>
 <main class="{% if page.class %}{{ page.class }}{% endif %}">

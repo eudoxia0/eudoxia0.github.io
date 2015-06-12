@@ -153,6 +153,22 @@ a {
     }
   }
 
+  ul {
+    list-style-type: none;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      font-size: 1.2em;
+    }
+
+    li+li:before {
+      content: "\A0/\A0";
+    }
+  }
+
   hr {
     height: 0;
     border: 0;
