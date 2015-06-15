@@ -18,7 +18,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/articles/</loc>
+    <loc>{{ site.url }}/article/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
