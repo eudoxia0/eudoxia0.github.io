@@ -2,7 +2,13 @@ title: Fernando Borretti
 description: Personal website
 baseurl: ""
 url: "http://eudoxia.me"
+
+
 markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+
 sass:
     style: :compressed
 
