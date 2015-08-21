@@ -1,0 +1,89 @@
+---
+layout: default
+
+css:
+  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
+  - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css
+  - /assets/css/sotu.css
+js:
+  - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+  - //highlightjs.org/static/highlight.pack.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js
+  - /assets/js/scripts.js
+  - /assets/js/sotu.js
+  - /assets/js/toc.js
+  - /assets/js/jquery.sticky.js
+---
+
+{% for url in page.css %}
+  <link rel="stylesheet" href="{{ url }}"/>
+{% endfor %}
+<div id="scroll-animate">
+  <div id="scroll-animate-main">
+    <div class="wrapper-parallax">
+      <header>
+        <div class="container">
+          <h1>
+            {{ page.title }}
+          </h1>
+          <div class="row">
+            <div class="text">
+              {{ page.description | markdownify }}
+            </div>
+            <div class="social">
+              <ul>
+                <li>
+                  <a class="fa fa-twitter" href="https://twitter.com/home?status=State%20of%20the%20Common%20Lisp%20Ecosystem,%202015%20http://eudoxia.me/article/common-lisp-sotu-2015"></a>
+                </li>
+                <li>
+                  <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://twitter.com/home?status=State%2520of%2520the%2520Common%2520Lisp%2520Ecosystem,%25202015%2520http://eudoxia.me/article/common-lisp-sotu-2015"></a>
+                </li>
+                <li>
+                  <a class="fa fa-google-plus" href="https://plus.google.com/share?url=https://www.facebook.com/sharer/sharer.php?u=https://twitter.com/home?status=State%252520of%252520the%252520Common%252520Lisp%252520Ecosystem,%2525202015%252520http://eudoxia.me/article/common-lisp-sotu-2015"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="post">
+        <div class="toc-container">
+          <div id="toc" class="toc"></div>
+        </div>
+        <article class="article-content">
+          {{ content }}
+        </article>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="text">
+            <div class="author">
+              Made by <a href="/">Fernando Borretti</a>
+            </div>
+            <div class="inspiration">
+              Inspired by the <a href="https://github.com/Gabriel439/post-rfc/blob/master/sotu.md">State of the Haskell Ecosystem</a>
+            </div>
+          </div>
+          <div class="social">
+            <ul>
+              <li>
+                <a class="fa fa-twitter" href="https://twitter.com/eudxa"></a>
+              </li>
+              <li>
+                <a class="fa fa-hacker-news" href=""></a>
+              </li>
+              <li>
+                <a class="fa fa-reddit" href=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+{% for url in page.js %}
+  <script src="{{ url }}"></script>
+{% endfor %}
