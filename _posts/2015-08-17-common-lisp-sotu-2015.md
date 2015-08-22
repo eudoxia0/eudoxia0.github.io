@@ -284,26 +284,25 @@ this area, like [log4cl][log4cl] and [vom][vom].
 
 ## Type System
 
-I often reach for [trivial-types][t-types].
-
-CLOS has no competition, e.g. from revived versions of Flavors, and is basically
-the only OOP system there is in Common Lisp.
+There's not much to say here, except that Common Lisp has a pretty great type
+system that is not exploited nearly enough.
 
 <div class="recommendations">
   <div class="consolidation">
 
 **Consolidation:**
 
-Not really needed, since there aren't many competing options in the area of type
-system extensions.
+Not applicable. CLOS has no competition, e.g. from revived versions of Flavors, and is basically
+the only OOP system there is in Common Lisp.
 
   </div>
   <div class="future">
 
 **Future Work:**
 
-A library with lots of useful type specifiers would be nice. See
-[trivial-types][t-types] and [this CDR][interval-types].
+I often reach for [trivial-types][t-types], a library that contains a bunch of
+simple type specifiers. A larger library, e.g. including
+[this CDR][interval-types], would be good.
 
   </div>
 </div>
