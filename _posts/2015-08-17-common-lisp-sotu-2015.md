@@ -188,8 +188,6 @@ separate library, along the lines of [SciPy][scipy] and [NumPy][numpy].
 
 ## Databases
 
-### SQL
-
 [cl-dbi][dbi] provides a uniform interface to the various database
 server-specific libraries (cl-postgres, cl-mysql, etc.). [SxQL][sxql] provides a
 DSL for building safe, automatically [parameterized][sql-parameter] SQL queries.
@@ -215,8 +213,6 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
   </div>
 </div>
 
-### NoSQL
-
 ## Graphics
 
 There's [CEPL][cepl], and its sister project, [Varjo][varjo].
@@ -232,6 +228,8 @@ Promote the use of CEPL.
   <div class="future">
 
 **Future Work:**
+
+A high-level OpenGL library, like [pg][pg], would be great.
 
 More libraries in this area, especially for manipulating different mesh or other
 3D formats.
@@ -646,6 +644,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [cepl]: https://github.com/cbaggers/cepl
 [varjo]: https://github.com/cbaggers/varjo
+[pg]: https://github.com/fogleman/pg
 
 [slime]: https://common-lisp.net/project/slime/
 [sly]: https://github.com/capitaomorte/sly
