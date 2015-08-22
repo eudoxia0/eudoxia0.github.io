@@ -450,7 +450,7 @@ would make distribution far simpler.
 
 **Consolidation:**
 
-Not needed.
+Not applicable.
 
   </div>
   <div class="future">
@@ -483,7 +483,7 @@ and clearly spelled out.
 
 **Consolidation:**
 
-Not needed.
+Not applicable.
 
   </div>
   <div class="future">
@@ -496,8 +496,6 @@ amazingly useful.
 
   </div>
 </div>
-
-## Logging
 
 ## IDEs
 
@@ -518,7 +516,8 @@ Reduce the barrier to entry to using SLIME.
 
 **Future Work:**
 
-
+Non-Emacs IDEs can't hurt. An [Atom][atom] plugin that interfaces with a Swank
+server, for instance, would be pretty great.
 
   </div>
 </div>
@@ -643,6 +642,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [slime]: https://common-lisp.net/project/slime/
 [sly]: https://github.com/capitaomorte/sly
+[atom]: https://atom.io/
 
 [github-repos]: http://planet.lisp.org/github.atom
 [news]: http://www.newsbeuter.org/
