@@ -114,16 +114,43 @@ header {
       font: $title-font;
     }
 
-    .text {
-      display: block;
-      width: 50%;
+    .row {
+      display: flex;
+      flex-direction: row;
       font: $header-font;
       line-height: 26px;
-      margin-top: 30px;
 
-      p {
-        text-align: justify;
-        margin-bottom: 10px;
+      .text {
+        display: block;
+        width: 50%;
+        margin-top: 30px;
+
+        p {
+          text-align: justify;
+          margin-bottom: 10px;
+        }
+      }
+
+      .social {
+        ul {
+          margin-left: 70px;
+          margin-top: 40px;
+          border-left: 1px solid white;
+
+          li {
+            padding-left: 20px;
+            list-style-type: none;
+
+            a {
+              color: white;
+              font-size: 36px;
+            }
+
+            &:not(:first-child) {
+              margin-top: 20px;
+            }
+          }
+        }
       }
     }
   }
