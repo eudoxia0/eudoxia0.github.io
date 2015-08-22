@@ -219,10 +219,14 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 
 ## Graphics
 
+There's [CEPL][cepl], and its sister project, [Varjo][varjo].
+
 <div class="recommendations">
   <div class="consolidation">
 
 **Consolidation:**
+
+Promote the use of CEPL.
 
   </div>
   <div class="future">
@@ -639,6 +643,9 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [sql-parameter]: http://blog.codinghorror.com/give-me-parameterized-sql-or-give-me-death/
 [crane]: https://github.com/eudoxia0/crane
 [integral]: https://github.com/fukamachi/integral
+
+[cepl]: https://github.com/cbaggers/cepl
+[varjo]: https://github.com/cbaggers/varjo
 
 [slime]: https://common-lisp.net/project/slime/
 [sly]: https://github.com/capitaomorte/sly
