@@ -501,10 +501,10 @@ amazingly useful.
 
 ## IDEs
 
-[SLIME][slime] is a Common Lisp IDE built on Emacs.
-
-This is a problem, as telling a new user they have to learn Emacs before using
-SLIME (which is not strictly true) is a significant artificial barrier to entry.
+[SLIME][slime] is a Common Lisp IDE built on Emacs, and the most widely-used CL
+IDE. The fact that it's built on Emacs is a problem, as telling a new user they
+have to learn Emacs before using SLIME (which is not strictly true) is a
+significant artificial barrier to entry.
 
 <div class="recommendations">
   <div class="consolidation">
