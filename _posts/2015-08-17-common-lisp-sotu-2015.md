@@ -339,17 +339,31 @@ should focus on consolidating the existing ones.
 
 ## Concurrency
 
+[cl-async][async] is probably the most complete solution to anything concurrency
+related. And it's built on [libuv][uv], the library that powers [Node.js][node].
+
+Other libraries of interest in this area are,
+
+* [STMX][stmx]: Provides support for software transactional memory, which is
+  pretty impressive.
+
+* [lparallel][lpara]: A very eframework for parallel programming.
+
+Libraries like [legion][legion] simplify concurrency for specific use cases.
+
 <div class="recommendations">
   <div class="consolidation">
 
 **Consolidation:**
+
+
 
   </div>
   <div class="future">
 
 **Future Work:**
 
-
+There's plenty of room for new ideas in this area.
 
   </div>
 </div>
@@ -618,6 +632,13 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [5am]: http://quickdocs.org/fiveam/
 [prove]: https://github.com/fukamachi/prove
+
+[async]: http://orthecreedence.github.io/cl-async/
+[uv]: https://github.com/joyent/libuv
+[node]: https://nodejs.org/
+[stmx]: http://stmx.org/
+[lpara]: http://lparallel.org/
+[legion]: https://github.com/fukamachi/legion
 
 [rtd]: https://readthedocs.org/
 [quickdocs]: http://quickdocs.org/
