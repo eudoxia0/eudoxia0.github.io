@@ -309,11 +309,6 @@ simple type specifiers. A larger library, e.g. including
 
 ## Testing
 
-<div class="recommendations">
-  <div class="consolidation">
-
-**Consolidation:**
-
 There are many existing test frameworks, the main ones being [FiveAM][5am] and
 the much newer [Prove][prove].
 
@@ -323,6 +318,13 @@ extensibility makes it a good solution to the problem of test frameworks.
 
 Other, older libraries depend on test frameworks like `rt` or `lisp-unit`, but
 these aren't relevant anymore.
+
+<div class="recommendations">
+  <div class="consolidation">
+
+**Consolidation:**
+
+Discourage using testing frameworks other than FiveAM and Prove.
 
   </div>
   <div class="future">
