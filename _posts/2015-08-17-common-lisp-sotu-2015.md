@@ -41,7 +41,10 @@ depending on a particular server.
 The importance of using Clack cannot be understated: If you build an application
 directly on, say, Hunchentoot, you're tied to Hunchentoot, and if a new, faster
 server -- like [Woo][woo] -- comes out, you have to rewrite the entire
-application to use it.
+application to use it. If you write a plugin for Clack -- like
+[clack-errors][clack-errors] -- it is automatically usable by all applications,
+regardless of framework, that are built on Clack, reducing useless duplication
+of code.
 
 With Clack, switching from Hunchentoot to Woo, and enjoying the incredible
 speedup, is a simple matter of installing [libev][libev] and changing a keyword
@@ -50,11 +53,15 @@ argument.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 *Stop using Hunchentoot directly*. Use Clack, or even better, one of the
 frameworks built on it.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 The foundation is finished, now it's time to write higher-level layers. An
 extensible administration framework for Clack applications, like Django's Admin,
@@ -65,21 +72,27 @@ would be a good example.
 
 ### Frontend
 
-The options are:
+This is limited by Common Lisp's ability to compile to JavaScript. Common Lisp
+being rather a sizeable language, the options are:
 
 * [Parenscript][parenscript]: A DSL that compiles a subset of Common Lisp to
   idiomatic JavaScript.
 
-* [JSCL][jscl]: An attempt to build a bootstrapping Common Lisp compiler. Lacks
-  CLOS, `format` and `loop`.
+* [JSCL][jscl]: A CL-to-JS compiler designed to be self-hosting from day
+  one. Lacks CLOS, `format` and `loop`.
 
 <div class="recommendations">
   <div class="consolidation">
 
-The best way to help consolidation is to drive one of the existing implementations forward.
+**Consolidation:**
+
+The best way to help consolidation is to drive one of the existing CL-to-JS
+implementations forward.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 Something like CFFI, but for CL-to-JavaScript implementations, so bindings to
 JavaScript libraries don't have to be rewritten if a new implementation comes
@@ -97,10 +110,14 @@ other implementation.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Kill cl-launch, use [Roswell][roswell].
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 More Roswell scripts.
 
@@ -123,6 +140,8 @@ up and deploying applications easier.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Focus on CommonQt, and help improve [cl-cffi-gtk][gtk], but other libraries
 should be considered deprecated.
 
@@ -131,6 +150,8 @@ user interfaces should be built, but is not a viable option in 2015.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 More tutorials and examples of using CommonQt and Qtools.
 
@@ -150,10 +171,14 @@ but sadly it depends on the [GNU Scientific Library][gsl], making it GPL.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Work should focus on CLML.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 CLML probably has a lot of numerical code that can be excised and released as a
 separate library, along the lines of [SciPy][scipy] and [NumPy][numpy].
@@ -175,10 +200,14 @@ There are two fairly complete ORMs: [Crane][crane], by yours truly, and
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Discourage using anything other than [cl-dbi][dbi].
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 [cl-dbi][dbi] would be the best course of action and help consolidation.
@@ -193,7 +222,7 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 <div class="recommendations">
   <div class="consolidation">
 
-
+**Consolidation:**
 
   </div>
   <div class="future">
@@ -213,10 +242,14 @@ programs to manipulating environment variables.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Use UIOP for everything. Don't use [cl-fad][fad]. Don't use [OSICAT][osicat].
 
+  </div>
+  <div class="future">
 
-  </div> <div class="future">
+**Future Work:**
 
 An interesting project to develop in this area would be a DSL
   for building LLVM IR, either as a string or using the LLVM API bindings. This
@@ -255,11 +288,15 @@ the only OOP system there is in Common Lisp.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Not really needed, since there aren't many competing options in the area of type
 system extensions.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 A library with lots of useful type specifiers would be nice. See
 [trivial-types][t-types] and [this CDR][interval-types].
@@ -271,6 +308,8 @@ A library with lots of useful type specifiers would be nice. See
 
 <div class="recommendations">
   <div class="consolidation">
+
+**Consolidation:**
 
 There are many existing test frameworks, the main ones being [FiveAM][5am] and
 the much newer [Prove][prove].
@@ -296,10 +335,12 @@ consolidating the existing ones.
 <div class="recommendations">
   <div class="consolidation">
 
-
+**Consolidation:**
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 
 
@@ -314,11 +355,15 @@ For online, automatically updated documentation, in the style of
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Promote the use of Quickdocs by linking to it in library READMEs, to new users,
 etc.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 
 
@@ -342,10 +387,14 @@ with C libraries.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Not applicable.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 None, to the best of my knowledge.
 
@@ -367,6 +416,8 @@ JSON encoder and decoder.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 There are too many XML and JSON libraries, this leads to choice paralysis.
 
   </div>
@@ -385,10 +436,14 @@ would make distribution far simpler.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Not needed.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 Tools built on Quicklisp, like [Quickdocs][quickdocs] and [qlot][qlot].
 
@@ -414,10 +469,14 @@ and clearly spelled out.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Not needed.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 More ASDF components, e.g. for buiding C/C++ files. A platform-independent
 package manager for downloading the C libraries needed by a library would be
@@ -438,10 +497,14 @@ SLIME (which is not strictly true) is a significant artificial barrier to entry.
 <div class="recommendations">
   <div class="consolidation">
 
+**Consolidation:**
+
 Reduce the barrier to entry to using SLIME.
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 
 
@@ -506,6 +569,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [woo]: https://github.com/fukamachi/woo
 [hunchentoot]: http://weitz.de/hunchentoot/
 [libev]: http://software.schmorp.de/pkg/libev.html
+[clack-errors]: https://github.com/eudoxia0/clack-errors
 
 [parenscript]: https://github.com/vsedach/Parenscript
 [jscl]: https://github.com/davazp/jscl
@@ -516,7 +580,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: http://shinmera.github.io/qtools/
 [qt-libs]: https://github.com/Shinmera/qt-libs
-[cl-cffi-gtk]: https://github.com/crategus/cl-cffi-gtk
+[gtk]: https://github.com/crategus/cl-cffi-gtk
 
 [antik]: https://www.common-lisp.net/project/antik/
 [gsl]: http://www.gnu.org/software/gsl/

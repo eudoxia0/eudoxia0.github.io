@@ -249,19 +249,8 @@ main {
         }
       }
 
-      .consolidation {
-
-        &:before {
-          content: "Consolidation";
-        }
-      }
-
       .future {
         margin-top: 30px;
-
-        &:before {
-          content: "Future Work";
-        }
       }
     }
 
