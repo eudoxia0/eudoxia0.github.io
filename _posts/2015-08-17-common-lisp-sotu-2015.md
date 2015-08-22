@@ -55,7 +55,7 @@ argument.
 
 **Consolidation:**
 
-*Stop using Hunchentoot directly*. Use Clack, or even better, one of the
+**Stop using Hunchentoot directly**. Use Clack, or even better, one of the
 frameworks built on it.
 
   </div>
