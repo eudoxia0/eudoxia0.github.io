@@ -131,11 +131,11 @@ solution. Well, now we have it: [CommonQt][commonqt] plus [Qtools][qtools]. The
 former has years of use in real-life applications, and the latter is a layer to
 make everything simpler.
 
-The biggest problem when using CommonQt is it requires Smoke to run, and getting
-the libraries can be difficult, especially on systems other than Linux. This is
-solved by Qtools, which depends on the [qt-libs][qt-libs] library. It downloads
-the Smoke libraries for whatever platform you're on, and this makes setting it
-up and deploying applications easier.
+The biggest problem when using CommonQt is it requires [Smoke][smoke] to run,
+and getting the libraries can be difficult, especially on systems other than
+Linux. This is solved by Qtools, which depends on the [qt-libs][qt-libs]
+library. It downloads the Smoke libraries for whatever platform you're on, and
+this makes setting it up and deploying applications easier.
 
 <div class="recommendations">
   <div class="consolidation">
@@ -160,10 +160,10 @@ More tutorials and examples of using CommonQt and Qtools.
 
 ## Machine Learning
 
-[CLML][clml], for Common Lisp Machine Learning, is a fairly extensive
-solution. It was developed by [Mathematical Systems Inc.][msi], a Japanese
-company. [Mike Maul][mmaul] then took it to GitHub and cleaned it up a little. A
-[tutorial][clml-tutorial] on time series is available.
+[CLML][clml] is a fairly extensive solution. It was developed by
+[Mathematical Systems Inc.][msi], a Japanese company. [Mike Maul][mmaul] then
+took it to GitHub and cleaned it up a little. A [tutorial][clml-tutorial] on
+time series is available.
 
 A library I've always though was interesting in this domain is [Antik][antik],
 but sadly it depends on the [GNU Scientific Library][gsl], making it GPL.
@@ -226,6 +226,8 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 
   </div>
   <div class="future">
+
+**Future Work:**
 
 More libraries in this area, especially for manipulating different mesh or other
 3D formats.
@@ -324,8 +326,10 @@ these aren't relevant anymore.
   </div>
   <div class="future">
 
-No more test frameworks should be written, and the focus should be on
-consolidating the existing ones.
+**Future Work:**
+
+Writing any new test frameworks will be counter-productive at this point. Work
+should focus on consolidating the existing ones.
 
   </div>
 </div>
@@ -352,6 +356,13 @@ consolidating the existing ones.
 For online, automatically updated documentation, in the style of
 [Read the Docs][rtd], we have [Quickdocs][quickdocs].
 
+There aren't many documentation generators, surprisingly. I use [Codex][codex]
+to generate my documentation. It's written on [CommonDoc][commondoc], a library
+that provides a format-agnostic internal representation for documents. Codex is
+designed along the lines of Sphinx: documentation is written in prose, and you
+insert automatically-extracted API documentation (functions, macros, classes,
+etc.) into the text using macros.
+
 <div class="recommendations">
   <div class="consolidation">
 
@@ -365,7 +376,8 @@ etc.
 
 **Future Work:**
 
-
+I'll continue working on Codex on CommonDoc, and any improvements to CommonDoc
+(mainly, more output formats and more macros) will be reflected in Codex.
 
   </div>
 </div>
@@ -579,6 +591,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: http://shinmera.github.io/qtools/
+[smoke]: https://techbase.kde.org/Development/Languages/Smoke
 [qt-libs]: https://github.com/Shinmera/qt-libs
 [gtk]: https://github.com/crategus/cl-cffi-gtk
 
@@ -606,6 +619,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [rtd]: https://readthedocs.org/
 [quickdocs]: http://quickdocs.org/
+[codex]: https://github.com/CommonDoc/codex
+[commondoc]: http://commondoc.github.io/
 
 [criterion]: https://hackage.haskell.org/package/criterion
 [esrap]: http://quickdocs.org/esrap/
