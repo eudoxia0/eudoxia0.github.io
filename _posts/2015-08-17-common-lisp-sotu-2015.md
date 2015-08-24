@@ -422,6 +422,29 @@ and [cl-coveralls][cl-coveralls], and they are both very easy to use. Testing
 and tracking the coverage of a Common Lisp project is certainly easier than
 doing the same with a Python project, in my experience.
 
+<div class="recommendations">
+  <div class="consolidation">
+
+**Consolidation:**
+
+cl-travis has some problems, namely, it requires `sudo` to install
+implementations, which means it can't use Travis' new Docker-based
+infrastructure.
+
+[Roswell][roswell] solves this problem, so using Roswell should be encouraged
+over cl-travis. A tutorial on using Roswell with Travis is [here][ros-travis].
+
+  </div>
+  <div class="future">
+
+**Future Work:**
+
+Supporting more services, like [Circle CI][circle], is always useful. Tutorials
+are always a good addition.
+
+  </div>
+</div>
+
 ## Documentation
 
 For online, automatically updated documentation, in the style of
@@ -649,6 +672,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [cl-travis]: https://github.com/luismbo/cl-travis
 [coveralls]: https://coveralls.io/
 [cl-coveralls]: https://github.com/fukamachi/cl-coveralls
+[circle]: https://circleci.com/
+[ros-travis]: https://github.com/snmsts/roswell/wiki/Using-with-Travis-CI
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: http://shinmera.github.io/qtools/
