@@ -561,8 +561,8 @@ Not applicable.
 **Future Work:**
 
 More ASDF components, e.g. for buiding C/C++ files. A platform-independent
-package manager for downloading the C libraries needed by a library would be
-amazingly useful.
+package manager for downloading the external C libraries required by a Lisp
+library would be amazingly useful.
 
   </div>
 </div>
