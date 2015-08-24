@@ -24,6 +24,12 @@ description: |
 
 <div class="extender"></div>
 
+<div class="rss-only">
+
+{{ page.description }}
+
+</div>
+
 # Application Domains
 
 ## Web Development
@@ -106,6 +112,9 @@ other implementation.
 </div>
 
 ## Command Line
+
+Over the years some tools have cropped up in this area, the latest, and the one
+that sees to have gained most momentum, is [Roswell][roswell].
 
 <div class="recommendations">
   <div class="consolidation">
@@ -215,7 +224,9 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 
 ## Graphics
 
-There's [CEPL][cepl], and its sister project, [Varjo][varjo].
+There's [CEPL][cepl], and its sister project, [Varjo][varjo]. Of course, there
+are lower level libraries, like [cl-opengl][opengl] and [cl-sdl2][sdl], but we
+won't discuss those.
 
 <div class="recommendations">
   <div class="consolidation">
@@ -233,6 +244,65 @@ A high-level OpenGL library, like [pg][pg], would be great.
 
 More libraries in this area, especially for manipulating different mesh or other
 3D formats.
+
+  </div>
+</div>
+
+## Concurrency
+
+[cl-async][async] is probably the most complete solution to anything concurrency
+related. And it's built on [libuv][uv], the library that powers [Node.js][node].
+
+Other libraries of interest in this area are,
+
+* [STMX][stmx]: Provides support for software transactional memory, which is
+  pretty impressive.
+
+* [lparallel][lpara]: A very eframework for parallel programming.
+
+Libraries like [legion][legion] simplify concurrency for specific use cases.
+
+<div class="recommendations">
+  <div class="consolidation">
+
+**Consolidation:**
+
+
+
+  </div>
+  <div class="future">
+
+**Future Work:**
+
+There's plenty of room for new ideas in this area.
+
+  </div>
+</div>
+
+## File Formats
+
+There exist Common Lisp libraries for all the major file formats:
+
+* XML: [Plump][plump]
+* JSON: [Yason][yason]
+* YAML: [cl-yaml][cl-yaml]
+* CSV: [cl-csv][cl-csv]
+
+A new player in the field of JSON libraries is [Jonathan][jonathan], a very fast
+JSON encoder and decoder.
+
+<div class="recommendations">
+  <div class="consolidation">
+
+**Consolidation:**
+
+There are too many XML and JSON libraries, this leads to choice paralysis.
+
+  </div>
+  <div class="future">
+
+A YAML parser so that [cl-yaml][cl-yaml] doesn't depend on the `libyaml` library
+would make distribution far simpler.
 
   </div>
 </div>
@@ -337,37 +407,6 @@ should focus on consolidating the existing ones.
   </div>
 </div>
 
-## Concurrency
-
-[cl-async][async] is probably the most complete solution to anything concurrency
-related. And it's built on [libuv][uv], the library that powers [Node.js][node].
-
-Other libraries of interest in this area are,
-
-* [STMX][stmx]: Provides support for software transactional memory, which is
-  pretty impressive.
-
-* [lparallel][lpara]: A very eframework for parallel programming.
-
-Libraries like [legion][legion] simplify concurrency for specific use cases.
-
-<div class="recommendations">
-  <div class="consolidation">
-
-**Consolidation:**
-
-
-
-  </div>
-  <div class="future">
-
-**Future Work:**
-
-There's plenty of room for new ideas in this area.
-
-  </div>
-</div>
-
 ## Documentation
 
 For online, automatically updated documentation, in the style of
@@ -430,37 +469,10 @@ None, to the best of my knowledge.
   </div>
 </div>
 
-## File Formats
-
-There exist Common Lisp libraries for all the major file formats:
-
-* XML: [Plump][plump]
-* JSON: [Yason][yason]
-* YAML: [cl-yaml][cl-yaml]
-* CSV: [cl-csv][cl-csv]
-
-A new player in the field of JSON libraries is [Jonathan][jonathan], a very fast
-JSON encoder and decoder.
-
-<div class="recommendations">
-  <div class="consolidation">
-
-**Consolidation:**
-
-There are too many XML and JSON libraries, this leads to choice paralysis.
-
-  </div>
-  <div class="future">
-
-A YAML parser so that [cl-yaml][cl-yaml] doesn't depend on the `libyaml` library
-would make distribution far simpler.
-
-  </div>
-</div>
-
 ## Package Management
 
-[Quicklisp][ql] is the de-facto package manager for Common Lisp.
+[Quicklisp][ql] is the de-facto package manager for Common Lisp. And that's
+pretty much it. Don't disrupt what works.
 
 <div class="recommendations">
   <div class="consolidation">
@@ -483,17 +495,19 @@ Tools built on Quicklisp, like [Quickdocs][quickdocs] and [qlot][qlot].
 
 ASDF is the de-facto build system of Common Lisp. Everyone uses it.
 
-Every project `.asd` file, called a system definition file, which defines
+Every project has an `.asd` file, called a system definition file, which defines
 project metadata (author, maintainer, homepage, etc.) and the components.
 
 This, to me, is one of the major selling points of Common Lisp. With languages
 like Python, every file imports whatever it needs, and your project becomes a
-massive graph of interdependent files.
+massive graph of interdependent files. In ASDF, you basically list the files in
+your project in the order in which they are defined. Or, you can specify the
+dependencies between the files, and let ASDF figure out a linear ordering. The
+point is that dependencies are explicit, and clearly spelled out.
 
-In ASDF, you basically list the files in your project in the order in which they
-are defined. Or, you can specify the dependencies between the files, and let
-ASDF figure out a linear ordering. The point is that dependencies are explicit,
-and clearly spelled out.
+But, enough proselytizing. The point is that there is no competition to ASDF,
+not because nobody has bothered to create a competitor, but because ASDF
+out-competed all the other alternatives years ago. And that's a good thing.
 
 <div class="recommendations">
   <div class="consolidation">
@@ -572,6 +586,17 @@ embed Lisp or [ABCL][abcl] to run on the JVM". Those are for more niche users,
 not new users asking how to get started.
 
 ## Growth
+
+### Quicklisp Downloads
+
+Below is the total number of downloads, of the top 100 most popular projects on
+[Quicklisp][ql], between January and July:
+
+<div class="plot" id="quicklisp-downloads">
+  <svg></svg>
+</div>
+
+### Repos
 
 I am subscribed to [this feed][github-repos] of new Common Lisp repos on
 GitHub. I wrote some code to query my [Newsbeuter][news] database:
@@ -666,6 +691,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [cepl]: https://github.com/cbaggers/cepl
 [varjo]: https://github.com/cbaggers/varjo
+[opengl]: http://quickdocs.org/cl-opengl/
+[sdl]: https://github.com/lispgames/cl-sdl2
 [pg]: https://github.com/fogleman/pg
 
 [slime]: https://common-lisp.net/project/slime/
