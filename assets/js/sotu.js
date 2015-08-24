@@ -1,4 +1,30 @@
-function renderChart() {
+function renderQuicklispChart() {
+  d3.json('/assets/data/sotu-2015/quicklisp-downloads.json', function(data) {
+    nv.addGraph(function() {
+      var chart = nv.models.discreteBarChart()
+                    .x(function(d) { return d[0]; })
+                    .y(function(d) { return d[1]; })
+                    .forceY([0,250000])
+                    .height(300);
+
+      chart.xAxis.tickFormat(function(month) { return month; });
+      chart.yAxis.tickFormat(d3.format(',d'));
+
+      var input = [{
+        key: 'Quicklisp Downloads',
+        values: data
+      }];
+
+      d3.select('#quicklisp-downloads svg').datum(input).transition().duration(500).call(chart);
+
+      nv.utils.windowResize(chart.update);
+
+      return chart;
+    });
+  });
+};
+
+function renderGitHubChart() {
   d3.json('/assets/data/sotu-2015/github.json', function(data) {
     /* Data is an array of [ISO 8601 string, count] pairs */
     nv.addGraph(function() {
@@ -90,7 +116,8 @@ function parallaxScrolling() {
 };
 
 $(document).ready(function() {
-  renderChart();
+  renderQuicklispChart();
+  renderGitHubChart();
   parallaxScrolling();
   $('#toc').toc({
     selectors: 'h1, h2',
