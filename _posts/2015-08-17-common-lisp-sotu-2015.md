@@ -230,16 +230,17 @@ Bindings for other database systems, e.g. Oracle, exist. Writing drivers for
 
 ## Graphics
 
-There's [CEPL][cepl], and its sister project, [Varjo][varjo]. Of course, there
-are lower level libraries, like [cl-opengl][opengl] and [cl-sdl2][sdl], but we
-won't discuss those.
+I've never done any graphics programming, so my knowledge of this area is
+lacking. There's [CEPL][cepl], and its sister project, [Varjo][varjo], which
+have a nice collection of [video tutorials][cepl-video]. Of course, there are
+lower level libraries, like [cl-opengl][opengl] and [cl-sdl2][sdl].
 
 <div class="recommendations">
   <div class="consolidation">
 
 **Consolidation:**
 
-Promote the use of CEPL.
+Promote the use of CEPL, because it's fairly complete.
 
   </div>
   <div class="future">
@@ -264,7 +265,7 @@ Other libraries of interest in this area are,
 * [STMX][stmx]: Provides support for software transactional memory, which is
   pretty impressive.
 
-* [lparallel][lpara]: A very eframework for parallel programming.
+* [lparallel][lpara]: A very complete framework for parallel programming.
 
 Libraries like [legion][legion] simplify concurrency for specific use cases.
 
@@ -736,6 +737,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [cepl]: https://github.com/cbaggers/cepl
 [varjo]: https://github.com/cbaggers/varjo
+[cepl-video]: https://www.youtube.com/playlist?list=PL2VAYZE_4wRKKr5pJzfYD1w4tKCXARs5y
 [opengl]: http://quickdocs.org/cl-opengl/
 [sdl]: https://github.com/lispgames/cl-sdl2
 [pg]: https://github.com/fogleman/pg
