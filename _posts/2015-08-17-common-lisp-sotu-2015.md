@@ -413,6 +413,15 @@ should focus on consolidating the existing ones.
   </div>
 </div>
 
+### Testing on the Cloud
+
+Common Lisp has good support for using services like [Travis][travis] and
+[Coveralls][coveralls], for testing code and tracking code coverage in the
+cloud, respectively. The two main libraries for this are [cl-travis][cl-travis]
+and [cl-coveralls][cl-coveralls], and they are both very easy to use. Testing
+and tracking the coverage of a Common Lisp project is certainly easier than
+doing the same with a Python project, in my experience.
+
 ## Documentation
 
 For online, automatically updated documentation, in the style of
@@ -638,6 +647,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [codex-ros]: https://github.com/CommonDoc/codex/blob/df9d478d1688e18bfe564038f86fbbcb35dcbdac/roswell/codex.ros
 [travis]: https://travis-ci.org/
 [cl-travis]: https://github.com/luismbo/cl-travis
+[coveralls]: https://coveralls.io/
+[cl-coveralls]: https://github.com/fukamachi/cl-coveralls
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: http://shinmera.github.io/qtools/
