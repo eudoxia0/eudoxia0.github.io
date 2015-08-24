@@ -114,7 +114,13 @@ other implementation.
 ## Command Line
 
 Over the years some tools have cropped up in this area, the latest, and the one
-that sees to have gained most momentum, is [Roswell][roswell].
+that sees to have gained most momentum, is [Roswell][roswell], an implementation
+manager/installer and script runner. One neat feature is support for very easily
+compiling tiny scripts into executables, e.g., for
+[building documentation][codex-ros].
+
+It has recently also been used to install implementations in [Travis][travis],
+thus circumventing some of the problems of [cl-travis][cl-travis].
 
 <div class="recommendations">
   <div class="consolidation">
@@ -629,6 +635,9 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [cl-launch]: https://github.com/luismbo/cl-launch
 [roswell]: https://github.com/snmsts/roswell
+[codex-ros]: https://github.com/CommonDoc/codex/blob/df9d478d1688e18bfe564038f86fbbcb35dcbdac/roswell/codex.ros
+[travis]: https://travis-ci.org/
+[cl-travis]: https://github.com/luismbo/cl-travis
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: http://shinmera.github.io/qtools/
