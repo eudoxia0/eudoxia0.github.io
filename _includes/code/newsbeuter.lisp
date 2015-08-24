@@ -5,7 +5,7 @@
                :database-name (merge-pathnames #p".newsbeuter/cache.db"
                                                (user-homedir-pathname))))
 
-(let* ((output (merge-pathnames #p"lisp.json"
+(let* ((output (merge-pathnames #p"lisp-github.json"
                                 (user-homedir-pathname)))
        (query (dbi:prepare *connection*
                            "SELECT pubDate FROM rss_item WHERE feedurl = ?"))
@@ -14,8 +14,7 @@
                              (getf result :|pubDate|)))
                         (dbi:fetch-all
                          (dbi:execute query "http://planet.lisp.org/github.atom")))))
-  (with-open-file (stream (merge-pathnames #p"lisp.json"
-                                           (user-homedir-pathname))
+  (with-open-file (stream output
                           :direction :output
                           :if-exists :supersede
                           :if-does-not-exist :create)
