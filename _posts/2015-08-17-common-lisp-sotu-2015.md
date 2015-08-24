@@ -78,8 +78,8 @@ would be a good example.
 
 ### Frontend
 
-This is limited by Common Lisp's ability to compile to JavaScript. Common Lisp
-being rather a sizeable language, the options are:
+This is bound by Common Lisp's ability to compile to JavaScript. Common Lisp
+being rather a sizeable language, the options are rather limited:
 
 * [Parenscript][parenscript]: A DSL that compiles a subset of Common Lisp to
   idiomatic JavaScript.
