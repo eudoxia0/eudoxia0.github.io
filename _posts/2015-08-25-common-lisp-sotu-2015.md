@@ -664,7 +664,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 ## Acknowledgements
 
-Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support, and
+Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support,
+[Eitaro Fukamachi][fukamachi] and [François-René Rideau][fare], and
 [Gabriel Gonzalez][gabriel] for the original State of the Haskell Ecosystem
 article.
 
@@ -781,4 +782,6 @@ article.
 [ecl]: https://common-lisp.net/project/ecl/
 [abcl]: https://common-lisp.net/project/ecl/
 [puercopop]: http://www.puercopop.com/
+[fukamachi]: http://8arrow.org/
+[fare]: http://fare.tunes.org/
 [gabriel]: http://www.haskellforall.com/
