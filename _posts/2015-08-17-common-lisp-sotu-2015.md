@@ -37,7 +37,7 @@ description: |
 ### Backend
 
 [Clack][clack], the equivalent of WSGI/Rack has existed since 2009, and is
-throughly tested and battle-tested. Thre web frameworks -- [Caveman2][caveman],
+throughly tested and battle-tested. Three web frameworks -- [Caveman2][caveman],
 [Ningle][ningle], and [Lucerne][lucerne] -- are built on top of it.
 
 Clack is an HTTP server abstraction, that allows the user to write web
@@ -316,7 +316,7 @@ would make distribution far simpler.
 
 ## System
 
-UIOP, ASDF's portable compatiblity layer, contains a large set of tools for
+UIOP, ASDF's portable compatibility layer, contains a large set of tools for
 portably doing everything from querying the hostname to running external
 programs to manipulating environment variables.
 
@@ -560,7 +560,7 @@ Not applicable.
 
 **Future Work:**
 
-More ASDF components, e.g. for buiding C/C++ files. A platform-independent
+More ASDF components, e.g. for building C/C++ files. A platform-independent
 package manager for downloading the external C libraries required by a Lisp
 library would be amazingly useful.
 
