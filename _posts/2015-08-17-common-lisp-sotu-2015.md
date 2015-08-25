@@ -479,10 +479,9 @@ I'll continue working on Codex on CommonDoc, and any improvements to CommonDoc
 
 ## Unicode
 
-This is essentially a solved problem: Characters in Common Lisp are Unicode
-glyphs, not bytes. Sometimes you can get tripped up if an implementation's
-encoding format is set to something like Latin-1 instead of UTF-8, but those are
-easily fixed, e.g. in SBCL:
+This is essentially a solved problem in most implementations. Sometimes you can
+get tripped up if an implementation's encoding format is set to something like
+Latin-1 instead of UTF-8, but those are easily fixed, e.g. in SBCL:
 
 ~~~lisp
 (setf sb-impl::*default-external-format* :utf-8)
@@ -496,14 +495,15 @@ with C libraries.
 
 **Consolidation:**
 
-Not applicable.
+Some implementations lag behind others in Unicode support, e.g. ABCL.
 
   </div>
   <div class="future">
 
 **Future Work:**
 
-None, to the best of my knowledge.
+There is some work to be done, in the form of missing features of
+[cl-unicode][uni].
 
   </div>
 </div>
@@ -715,6 +715,8 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [quickdocs]: http://quickdocs.org/
 [codex]: https://github.com/CommonDoc/codex
 [commondoc]: http://commondoc.github.io/
+
+[uni]: http://weitz.de/cl-unicode/
 
 [criterion]: https://hackage.haskell.org/package/criterion
 [esrap]: http://quickdocs.org/esrap/
