@@ -662,7 +662,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
   <svg></svg>
 </div>
 
-## Acknowledgments
+## Acknowledgements
 
 Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support, and
 [Gabriel Gonzalez][gabriel] for the original State of the Haskell Ecosystem
