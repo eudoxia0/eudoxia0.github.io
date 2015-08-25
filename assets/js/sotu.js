@@ -67,58 +67,9 @@ function renderGitHubChart() {
   });
 };
 
-function scrollFooter(scrollY, heightFooter) {
-  if(scrollY >= heightFooter)
-  {
-    $('footer').css({
-      'bottom' : '0px'
-    });
-  } else {
-    $('footer').css({
-      'bottom' : '-' + heightFooter + 'px'
-    });
-  }
-}
-
-function parallaxScrolling() {
-  var windowHeight = $(window).height();
-  var footerHeight = $('footer').height();
-  var heightDocument = (windowHeight) + ($('main').height()) + ($('footer').height()) - 20;
-
-  $('#scroll-animate, #scroll-animate-main').css({
-    'height' :  heightDocument + 'px'
-  });
-
-  $('header').css({
-    'height' : windowHeight + 'px',
-    'line-height' : windowHeight + 'px'
-  });
-
-  $('.wrapper-parallax').css({
-    'margin-top' : windowHeight + 'px'
-  });
-
-  scrollFooter(window.scrollY, footerHeight);
-
-  window.onscroll = function(){
-    var scroll = window.scrollY;
-
-    $('#scroll-animate-main').css({
-      'top' : '-' + scroll + 'px'
-    });
-
-    $('header').css({
-      'background-position-y' : 50 - (scroll * 100 / heightDocument) + '%'
-    });
-
-    scrollFooter(scroll, footerHeight);
-  }
-};
-
 $(document).ready(function() {
   renderQuicklispChart();
   renderGitHubChart();
-  parallaxScrolling();
   $('#toc').toc({
     selectors: 'h1, h2',
     container: 'article',
