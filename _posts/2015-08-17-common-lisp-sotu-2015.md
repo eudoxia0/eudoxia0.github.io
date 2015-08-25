@@ -180,15 +180,22 @@ More tutorials and examples of using CommonQt and Qtools.
 took it to GitHub and cleaned it up a little. A [tutorial][clml-tutorial] on
 time series is available.
 
-A library I've always though was interesting in this domain is [Antik][antik],
-but sadly it depends on the [GNU Scientific Library][gsl], making it GPL.
+Another candidate in this area is [mgl][mgl], used by [its author][melis] to
+[win][higgsml] the [Higgs Boson Machine Learning Challenge][higgs].
+
+In the area of numerical code, a library I've always though was interesting in
+this domain is [Antik][antik], but sadly it depends on the
+[GNU Scientific Library][gsl], making it GPL. There's also [mgl-mat][mgl-mat]
+and [LLA][lla].
 
 <div class="recommendations">
   <div class="consolidation">
 
 **Consolidation:**
 
-Work should focus on CLML.
+A merge of the numerical parts of [LLA][lla] and [mgl-mat], and the machine
+learning parts of [CLML][clml] and [mgl][mgl] would solve most consolidation
+problems in this area.
 
   </div>
   <div class="future">
@@ -692,6 +699,12 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [mmaul]: https://github.com/mmaul
 [clml]: https://github.com/mmaul/clml
 [clml-tutorial]: https://mmaul.github.io/clml.tutorials//2015/08/08/CLML-Time-Series-Part-1.html
+[mgl]: https://github.com/melisgl/mgl
+[melis]: http://quotenil.com/
+[higgsml]: https://github.com/melisgl/higgsml
+[higgs]: https://www.kaggle.com/c/higgs-boson
+[mgl-mat]: https://github.com/melisgl/mgl-mat
+[lla]: https://github.com/tpapp/lla
 [scipy]: http://www.scipy.org/
 [numpy]: http://www.numpy.org/
 
