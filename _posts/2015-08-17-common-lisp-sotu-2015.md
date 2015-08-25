@@ -451,7 +451,8 @@ are always a good addition.
 ## Documentation
 
 For online, automatically updated documentation, in the style of
-[Read the Docs][rtd], we have [Quickdocs][quickdocs].
+[Read the Docs][rtd], we have [Quickdocs][quickdocs], which extracts project API
+references using [docparser][docparser].
 
 There aren't many documentation generators, surprisingly. I use [Codex][codex]
 to generate my documentation. It's written on [CommonDoc][commondoc], a library
@@ -715,6 +716,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 [rtd]: https://readthedocs.org/
 [quickdocs]: http://quickdocs.org/
+[docparser]: https://github.com/eudoxia0/docparser
 [codex]: https://github.com/CommonDoc/codex
 [commondoc]: http://commondoc.github.io/
 
