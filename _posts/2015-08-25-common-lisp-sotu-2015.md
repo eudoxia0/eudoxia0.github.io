@@ -662,6 +662,12 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
   <svg></svg>
 </div>
 
+## Acknowledgments
+
+Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support, and
+[Gabriel Gonzalez][gabriel] for the original State of the Haskell Ecosystem
+article.
+
 <div class="extender"></div>
 
 [clack]: http://clacklisp.org/
@@ -774,3 +780,5 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 [ccl]: http://ccl.clozure.com/
 [ecl]: https://common-lisp.net/project/ecl/
 [abcl]: https://common-lisp.net/project/ecl/
+[puercopop]: http://www.puercopop.com/
+[gabriel]: http://www.haskellforall.com/
