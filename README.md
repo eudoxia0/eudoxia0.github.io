@@ -1,4 +1,6 @@
-This will be a personal site. Nothing to see here, yet.
+# Personal Site
+
+You can find the live version [here][site].
 
 # Setup
 
@@ -6,3 +8,5 @@ This will be a personal site. Nothing to see here, yet.
 gem install jekyll
 jekyll serve --watch
 ```
+
+[site]: http://eudoxia.me/
