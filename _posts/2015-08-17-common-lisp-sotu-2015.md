@@ -308,6 +308,8 @@ There are too many XML and JSON libraries, this leads to choice paralysis.
   </div>
   <div class="future">
 
+**Future Work:**
+
 A YAML parser so that [cl-yaml][cl-yaml] doesn't depend on the `libyaml` library
 would make distribution far simpler.
 
