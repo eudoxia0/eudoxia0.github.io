@@ -20,6 +20,10 @@ description: |
   [sotu-hn]: https://news.ycombinator.com/item?id=10071535
   [fare]: http://fare.livejournal.com/169346.html
 
+share:
+  tw: https://twitter.com/home?status=State%20of%20the%20Common%20Lisp%20Ecosystem,%202015%20http://eudoxia.me/article/common-lisp-sotu-2015
+  fb: https://www.facebook.com/sharer/sharer.php?u=http://eudoxia.me/article/common-lisp-sotu-2015/
+  gp: https://plus.google.com/share?url=http://eudoxia.me/article/common-lisp-sotu-2015/
 ---
 
 <div class="extender"></div>
