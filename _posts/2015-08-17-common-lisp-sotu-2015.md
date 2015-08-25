@@ -473,7 +473,7 @@ etc.
 
 **Future Work:**
 
-I'll continue working on Codex on CommonDoc, and any improvements to CommonDoc
+I'll continue working on Codex and CommonDoc, and any improvements to CommonDoc
 (mainly, more output formats and more macros) will be reflected in Codex.
 
   </div>
