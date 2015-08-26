@@ -33,7 +33,7 @@ $mobile-size: 768px;
 
 header {
   background: black;
-  height: 100vh;
+  min-height: 100vh;
 
   .container {
     position: relative;
@@ -56,8 +56,11 @@ header {
 
       .text {
         display: block;
-        width: 50%;
         margin-top: 30px;
+
+        @include on-desktop() {
+          width: 50%;
+        }
 
         p {
           text-align: justify;
@@ -66,6 +69,10 @@ header {
       }
 
       .social {
+        @include on-mobile() {
+          display: none;
+        }
+
         ul {
           margin-left: 70px;
           margin-top: 40px;
@@ -140,7 +147,14 @@ main {
   }
 
   .article-content {
-    width: 80%;
+    @include on-desktop() {
+      width: 80%;
+    }
+
+    @include on-mobile() {
+      width: 100%;
+    }
+
     padding: 30px 75px;
     margin: 0;
     overflow-y: hidden;
