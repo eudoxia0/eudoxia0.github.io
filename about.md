@@ -37,7 +37,7 @@ The map on the front page is generated dynamically with [Leaflet][leaflet],
 and the style was from a Leaflet providers [demo][demo]. The map shows a
 section of Montevideo, (coincidentally) almost centered on [TryoLabs][tryo].
 
-Except where otherwise noted, content on this site is licensed under the
+Unless otherwise noted, content on this site is licensed under the
 [Creative Commons Attribution 4.0 International][license] license.
 
 [hplus]: irc://irc.freenode.net/##hplusroadmap
