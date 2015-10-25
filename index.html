@@ -1,17 +1,9 @@
 ---
 title: Fernando Borretti
 layout: default
-
-css:
-  - http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css
-
-js:
-  - http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js
-  - https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-  - /assets/js/map.js
+body_class: landing
 ---
 
-<div id="map"></div>
 <div class="home">
   <div class="box">
     <h1>Fernando Borretti</h1>
@@ -24,7 +16,3 @@ js:
     </nav>
   </div>
 </div>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-{% for url in page.js %}
-  <script src="{{ url }}"></script>
-{% endfor %}
