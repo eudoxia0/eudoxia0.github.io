@@ -84,7 +84,8 @@ a {
 
 .landing {
     background-image: url('/assets/img/map.jpg');
-    background-size: cover;
+    background-size: auto;
+    background-position: center center;
 
     .home {
         z-index: 0;
