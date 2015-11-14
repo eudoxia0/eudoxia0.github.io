@@ -41,3 +41,19 @@
   font-weight: bold;
   font-style: normal;
 }
+
+/* Inconsolata */
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/font/inconsolata/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/font/inconsolata/Inconsolata-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
