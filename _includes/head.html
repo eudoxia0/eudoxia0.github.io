@@ -20,7 +20,11 @@
     {% endfor %}
   {% endif %}
   <!-- Resources -->
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  {% if page.css_file %}
+    <link rel="stylesheet" href="/assets/css/{{ page.css_file }}.css">
+  {% else %}
+    <link rel="stylesheet" href="/assets/css/main.css">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <!-- Google Analytics -->
   <script>
