@@ -1,4 +1,4 @@
-/* Mixins */
+/* Flexbox mixins */
 
 @mixin flex() {
     /* Portable version of `display: flex` */
@@ -29,4 +29,18 @@
 @mixin flex-flow($value) {
     flex-flow: $value;
     -webkit-flex-flow: $value;
+}
+
+/* Responsive mixins */
+
+@mixin on-desktop() {
+  @media (min-width: $mobile-size) {
+    @content;
+  }
+}
+
+@mixin on-mobile() {
+  @media (max-width: $mobile-size) {
+    @content;
+  }
 }
