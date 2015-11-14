@@ -9,6 +9,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'reset';
+@import 'landing';
 @import 'osx-window';
 @import 'portfolio';
 
@@ -31,62 +32,6 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-}
-
-/* Home page style */
-
-.landing {
-    background-image: url('/assets/img/map.jpg');
-    background-size: auto;
-    background-position: center center;
-
-    .home {
-        z-index: 0;
-        height: 100vh;
-        @include flex();
-        @include align-items(center);
-        @include justify-content(center);
-
-        .box {
-            @include on-desktop() {
-                width: 400px;
-
-                /* Not the exact center. Move it closer to eye level. */
-                margin-bottom: 70px;
-            }
-
-            @include on-mobile() {
-                width: 100%;
-            }
-
-            padding: 35px;
-
-            background-color: rgba(255, 255, 255, 0.90);
-
-            h1 {
-                text-align: center;
-                font-size: 2.5em;
-            }
-
-            nav {
-                ul {
-                    list-style-type: none;
-                    margin: 15px auto;
-                    @include flex();
-                    @include justify-content(center);
-
-                    li {
-                        display: inline-block;
-                        font-size: 1.2em;
-                    }
-
-                    li+li:before {
-                        content: "\A0—\A0";
-                    }
-                }
-            }
-        }
-    }
 }
 
 /* Pages */
