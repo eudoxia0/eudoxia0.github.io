@@ -13,6 +13,7 @@
 @import 'osx-window';
 @import 'portfolio';
 @import 'article';
+@import 'about';
 
 /* Global style */
 
@@ -114,48 +115,4 @@ footer {
       }
     }
   }
-}
-
-/* Articles */
-
-.article-content {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 130px;
-  z-index: 0;
-
-  font-size: 21px;
-
-  pre {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-
-    padding: 20px;
-
-    display: block;
-    position: relative;
-    text-align: center;
-    width: 100vw;
-    left: calc(-50vw + 50%);
-
-    code {
-      display: inline-block;
-      min-width: 60%;
-      text-align: left;
-      z-index: 100;
-    }
-  }
-
-  img {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* About page */
-
-.about {
-  @extend .article-content;
-  @extend article;
 }

@@ -1,0 +1,6 @@
+/* About page */
+
+.about {
+  @extend .article-content;
+  @extend article;
+}
