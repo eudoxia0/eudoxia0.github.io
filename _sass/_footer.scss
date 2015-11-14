@@ -1,0 +1,39 @@
+/* Footer style */
+
+footer {
+  line-height: 120px;
+  text-align: center;
+  background: #fafafa;
+
+  .footer-content {
+    width: 80%;
+    margin: 0 auto;
+
+    .copyright {
+      @include on-desktop() {
+        width: 50%;
+        float: left;
+      }
+    }
+
+    .social {
+      @include on-desktop() {
+        width: 50%;
+        padding: 0;
+        float: right;
+      }
+      list-style-type: none;
+
+      li {
+        display: inline;
+        padding-left: 25px;
+
+        a {
+          color: $text-color !important;
+          vertical-align: middle;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
