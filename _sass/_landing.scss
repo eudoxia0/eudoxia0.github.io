@@ -1,9 +1,9 @@
 /* Home page style */
 
 .landing {
-    background-image: url('/assets/img/map.jpg');
-    background-size: auto;
-    background-position: center center;
+    background: url('/assets/img/map.jpg'), url('/assets/img/map-small.jpg');
+    background-size: auto, cover;
+    background-position: center center, center center;
 
     .home {
         z-index: 0;
