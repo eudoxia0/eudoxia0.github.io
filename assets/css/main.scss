@@ -72,7 +72,7 @@ body {
 
   overflow-x: hidden;
 
-  display: flex;
+  @include flex();
   min-height: 100vh;
   flex-direction: column;
 }
@@ -92,7 +92,7 @@ a {
     .home {
         z-index: 0;
         height: 100vh;
-        display: flex;
+        @include flex();
         align-items: center;
         justify-content: center;
 
@@ -121,7 +121,7 @@ a {
                 ul {
                     list-style-type: none;
                     margin: 15px auto;
-                    display: flex;
+                    @include flex();
                     justify-content: center;
 
                     li {
@@ -157,7 +157,7 @@ a {
   ul {
     list-style-type: none;
     margin: 15px auto;
-    display: flex;
+    @include flex();
     justify-content: center;
 
     li {
@@ -298,7 +298,7 @@ $section-margin-top: 40px;
 
     /* Layout */
     .item {
-      display: flex;
+      @include flex();
       flex-flow: row wrap;
 
       @include on-desktop() {
@@ -350,7 +350,7 @@ $section-margin-top: 40px;
     /* Layout */
     @include on-desktop() {
       .lists-container {
-        display: flex;
+        @include flex();
         flex-flow: row wrap;
         padding: 25px;
 
