@@ -299,7 +299,7 @@ $section-margin-top: 40px;
     /* Layout */
     .item {
       @include flex();
-      flex-flow: row wrap;
+      @include flex-flow(row wrap);
 
       @include on-desktop() {
         .desc {
@@ -351,7 +351,7 @@ $section-margin-top: 40px;
     @include on-desktop() {
       .lists-container {
         @include flex();
-        flex-flow: row wrap;
+        @include flex-flow(row wrap);
         padding: 25px;
 
         dl {
