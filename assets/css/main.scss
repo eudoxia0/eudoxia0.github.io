@@ -5,6 +5,7 @@
 
 @import url('//fonts.googleapis.com/css?family=Lusitana:400,700');
 @import url('//fonts.googleapis.com/css?family=Inconsolata');
+@import 'fonts.scss';
 
 /* Variables */
 
@@ -505,6 +506,8 @@ article {
 
   blockquote {
     font-style: italic;
+    width: 85%;
+    margin: 0 auto;
   }
 
   table {
