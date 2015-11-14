@@ -8,6 +8,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
+@import 'reset';
 
 /* Mixins */
 
@@ -23,23 +24,7 @@
   }
 }
 
-/* Reset */
-
-*, *:after, *:before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /* Global style */
-
-html {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   margin: 0;
