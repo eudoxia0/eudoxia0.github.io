@@ -25,3 +25,8 @@
     align-items: $alignment;
     -webkit-align-items: $alignment;
 }
+
+@mixin flex-flow($value) {
+    flex-flow: $value;
+    -webkit-flex-flow: $value;
+}
