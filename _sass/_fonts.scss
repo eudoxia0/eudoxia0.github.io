@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* ET Book */
+
 @font-face {
   font-family: "et-book";
   src: url("/static/font/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
@@ -22,4 +24,20 @@
   src: url("/static/font/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("/static/font/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("/static/font/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("/static/font/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
   font-weight: bold;
   font-style: normal
+}
+
+/* Lusitana */
+
+@font-face {
+  font-family: "Lusitana";
+  src: url("/assets/font/lusitana/Lusitana-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lusitana";
+  src: url("/assets/font/lusitana/Lusitana-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
