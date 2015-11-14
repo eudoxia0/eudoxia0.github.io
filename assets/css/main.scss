@@ -74,7 +74,7 @@ body {
 
   @include flex();
   min-height: 100vh;
-  flex-direction: column;
+  @include flex-direction(column);
 }
 
 a {
