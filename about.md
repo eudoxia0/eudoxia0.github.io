@@ -2,6 +2,7 @@
 title: About
 layout: page
 class: about
+css_file: about
 permalink: /about/
 ---
 
