@@ -9,7 +9,7 @@ body {
 
   overflow-x: hidden;
 
-  @include flex();
+  @include flexbox();
   min-height: 100vh;
   @include flex-direction(column);
 }

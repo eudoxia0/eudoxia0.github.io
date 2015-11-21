@@ -16,8 +16,8 @@
 
   ul {
     list-style-type: none;
-    margin: 15px auto;
-    @include flex();
+    margin: 5px auto;
+    @include flexbox();
     @include justify-content(center);
 
     li {

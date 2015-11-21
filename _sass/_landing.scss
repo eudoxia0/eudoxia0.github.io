@@ -1,14 +1,17 @@
 /* Home page style */
 
 .landing {
+    width: 100vw;
     background: url('/assets/img/map.jpg'), url('/assets/img/map-small.jpg');
     background-size: auto, cover;
     background-position: center center, center center;
 
     .home {
         z-index: 0;
+        width: 100vw;
         height: 100vh;
-        @include flex();
+        @include flexbox();
+        @include flex-direction(row);
         @include align-items(center);
         @include justify-content(center);
 
@@ -37,7 +40,7 @@
                 ul {
                     list-style-type: none;
                     margin: 15px auto;
-                    @include flex();
+                    @include flexbox();
                     @include justify-content(center);
 
                     li {
