@@ -1,14 +1,5 @@
 ---
 layout: default
-
-css:
-  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
-  - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
-js:
-  - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-  - //highlightjs.org/static/highlight.pack.js
-  - //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  - /assets/js/scripts.js
 ---
 <header class="post-header">
   <h1>
@@ -25,7 +16,7 @@ js:
   {% endif %}
   <hr>
 </header>
-{% for url in page.css %}
+{% for url in site.post_resources.css %}
   <link rel="stylesheet" href="{{ url }}"/>
 {% endfor %}
 <main class="{% if page.class %}{{ page.class }}{% endif %}">
@@ -35,6 +26,6 @@ js:
 <script type="text/x-mathjax-config">
  {% include mathjax_config.js %}
 </script>
-{% for url in page.js %}
+{% for url in site.post_resources.js %}
   <script src="{{ url }}"></script>
 {% endfor %}
