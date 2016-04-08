@@ -24,6 +24,21 @@ share:
   tw: https://twitter.com/home?status=State%20of%20the%20Common%20Lisp%20Ecosystem,%202015%20http://eudoxia.me/article/common-lisp-sotu-2015
   fb: https://www.facebook.com/sharer/sharer.php?u=http://eudoxia.me/article/common-lisp-sotu-2015/
   gp: https://plus.google.com/share?url=http://eudoxia.me/article/common-lisp-sotu-2015/
+
+css:
+  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
+  - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css
+  - /assets/css/sotu.css
+js:
+  - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+  - //highlightjs.org/static/highlight.pack.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js
+  - /assets/js/scripts.js
+  - /assets/js/sotu.js
+  - /assets/js/toc.js
+  - /assets/js/jquery.sticky.js
 ---
 
 <div class="extender"></div>
