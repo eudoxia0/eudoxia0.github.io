@@ -7,12 +7,12 @@ permalink: /portfolio/
 ---
 
 <article class="intro">
-  {{ site.portfolio.intro | markdownify }}
+  {{ site.data.portfolio.intro | markdownify }}
 </article>
 
 <h1 class="section-title">Open Source Work</h1>
 <section class="open-source">
-  {% for library in site.portfolio.open_source %}
+  {% for library in site.data.portfolio.open_source %}
   <div class="item">
     <div class="desc">
       <div class="title">{{ library.name }}</div>
@@ -72,7 +72,7 @@ permalink: /portfolio/
     </p>
   </article>
   <div class="lists-container">
-    {% for list in site.portfolio.others %}
+    {% for list in site.data.portfolio.others %}
       <dl>
         {% for item in list %}
           <dt>
