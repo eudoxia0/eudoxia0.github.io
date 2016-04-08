@@ -1,6 +1,6 @@
 ---
 title: Using LMDB from Common Lisp
-summary: Announcement of LMDB bindings, and a tutorial.
+summary: Announcing an LMDB binding, and a tutorial.
 tags: [lisp, tutorial]
 ---
 
