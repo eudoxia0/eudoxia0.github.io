@@ -119,6 +119,10 @@ article {
   p {
     text-align: justify;
     text-indent: 20px;
+
+    &:first-child {
+      text-indent: 0;
+    }
   }
 
   code {
