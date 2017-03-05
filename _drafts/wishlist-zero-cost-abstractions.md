@@ -1,11 +1,12 @@
 ---
 title: A Wishlist of Zero-Cost Abstractions
-summary: What I want from the next generation of practical programming languages.
+summary: A wishlist of language features, their use cases, and how they affect language complexity.
 tags: [plt]
 ---
 
 This article is a list, in no particular order, of features I want to see in
-programming languages.
+programming languages. I note practical use cases, and the extent to which these
+features affect language complexity.
 
 # Units of Measure
 
