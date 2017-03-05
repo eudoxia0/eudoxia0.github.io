@@ -115,7 +115,7 @@ Another use case would be for a library like `libdill`, which implements
 Go-style concurrency in C. Briefly, the function that takes a thunk and spawns a
 thread for it, using an effects system, could be annotated to only allow pure
 thunks to be passed to it, thus avoiding a whole category of concurrency bugs
-without any special infrastructure (see Rust), with the obvious downsides of
+without any special infrastructure (see [Rust][rust]), with the obvious downsides of
 only being able to spawn purely-functional threads.
 
 Do effect systems increase language or implementation complexity? As with the
@@ -174,6 +174,7 @@ monoculture where everyone ends up using the same compiler.
 [audio-realtime]: http://atastypixel.com/blog/four-common-mistakes-in-audio-development/
 
 [haskell-ord]: https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Ord.html#t:Ordering
+[rust]: https://www.rust-lang.org/en-US/
 
 [iterate]: https://common-lisp.net/project/iterate/
 [for]: https://shinmera.github.io/for/
