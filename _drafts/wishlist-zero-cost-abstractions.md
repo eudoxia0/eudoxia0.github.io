@@ -111,7 +111,7 @@ whole[^real-time]. Other effects are also useful: annotating the function as
 being pure would rule out a large category of behaviour inside of it, possibly
 enabling better optimization.
 
-Another use case would be for a library like `libdill`, which implements
+Another use case would be for a library like [`libdill`][libdill], which implements
 Go-style concurrency in C. Briefly, the function that takes a thunk and spawns a
 thread for it, using an effects system, could be annotated to only allow pure
 thunks to be passed to it, thus avoiding a whole category of concurrency bugs
@@ -174,6 +174,7 @@ monoculture where everyone ends up using the same compiler.
 [audio-realtime]: http://atastypixel.com/blog/four-common-mistakes-in-audio-development/
 
 [haskell-ord]: https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Ord.html#t:Ordering
+[libdill]: http://libdill.org/
 [rust]: https://www.rust-lang.org/en-US/
 
 [iterate]: https://common-lisp.net/project/iterate/
