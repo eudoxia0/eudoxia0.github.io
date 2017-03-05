@@ -20,7 +20,7 @@ measure mass. But even without that, the compiler should provide these
 guarantees:
 
 1. Naturally, the compiler checks operations for dimensional validity: you can't
-   add a time-anottated value to a velocity-anottated value without compilation
+   add a time-annotated value to a velocity-annotated value without compilation
    failing.
 2. Dimensional analysis is automatically performed: dividing a value
    representing distance over one representing time, the resulting value should
