@@ -86,7 +86,7 @@ What does an effects system do, exactly?
    difference as an error.
 2. The function's declared effects signature, if any, is checked against its
    actual effects: if we allocate memory, or call a function that allocates
-   memory (or... ad nauseam) in a function which we have sworn to the compiler
+   memory, and so forth, in a function which we have sworn to the compiler
    allocates nothing, then the compiler signals an error. (An obvious problem
    arises here: what if we need to add a debugging `printf` in a function we've
    declared as being free of IO? Or which is called by a function, somewhere up
