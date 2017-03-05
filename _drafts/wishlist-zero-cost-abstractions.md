@@ -28,7 +28,7 @@ guarantees:
    and magnitudes to be defined in terms of arithmetic operators composing
    others, so the compiler can simplify the units in complex computations to
    their simplest, human-readable representation.
-3. Whether conversion between different units (e.g., adding Celsius to
+3. Whether automated conversion between different units (e.g., adding Celsius to
    Fahrenheit would yield a value converted to the obviously correct and
    canonical choice of degrees Kelvin) should be performed by the language is a
    matter of taste and depends on whether the language designers' place emphasis
