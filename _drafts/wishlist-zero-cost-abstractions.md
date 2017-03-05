@@ -159,9 +159,14 @@ automatically -- that is, every division must be in a branch where the
 denominator can be proved to be non-zero.
 
 This is obviously useful, but less straightforward to implement than either
-units of measure and an effects system. Implementational complexity matters
-because the natural result of a language that's difficult to implement is a
-monoculture where everyone ends up using the same compiler.
+units of measure and an effects system. Additionally, unlike any of the previous
+features I mentioned, refinement types are not orthogonal to the type system but
+a fundamental change to how it works. You can't bolt this onto an existing
+language, at least not without almost certainly losing important guarantees of
+your typechecking algorithm, like being able to complete in finite time). So any
+language that implements this universally useful feature will almost certainly
+have to be designed from the ground up, or be a feature-focused fork of a
+language like Rust.
 
 # Footnotes
 
