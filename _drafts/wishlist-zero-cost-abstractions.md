@@ -90,7 +90,9 @@ What does an effects system do, exactly?
    allocates nothing, then the compiler signals an error. (An obvious problem
    arises here: what if we need to add a debugging `printf` in a function we've
    declared as being free of IO? Or which is called by a function, somewhere up
-   the call tree, that is declared as being IO-free?)
+   the call tree, that is declared as being IO-free? The debugging facilities
+   would presumably provide a escape hatch from strict effect system
+   enforcement.)
 3. Calls to higher order functions are checked for effects-correctness. Just as
    a type checker prevents you from adding integers to strings, an effects
    system might prevent you from passing an impure function as the function
