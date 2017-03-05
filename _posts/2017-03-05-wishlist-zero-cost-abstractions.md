@@ -168,6 +168,10 @@ language that implements this universally useful feature will almost certainly
 have to be designed from the ground up, or be a feature-focused fork of a
 language like Rust.
 
+# Acknowledgements
+
+[Tim Herd][eqdw] helpfully proofread this post.
+
 # Footnotes
 
 [^real-time]:
@@ -188,3 +192,5 @@ language like Rust.
 [iterate]: https://common-lisp.net/project/iterate/
 [for]: https://shinmera.github.io/for/
 [loop]: http://www.lispworks.com/documentation/lw51/CLHS/Body/m_loop.
+
+[eqdw]: http://eqdw.net/
