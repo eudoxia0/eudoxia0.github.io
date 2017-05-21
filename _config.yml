@@ -43,7 +43,5 @@ post_resources:
 links:
   - service: github
     url: https://github.com/eudoxia0
-  - service: twitter
-    url: https://twitter.com/f_borretti
   - service: linkedin
     url: https://www.linkedin.com/pub/fernando-borretti/74/b74/827
