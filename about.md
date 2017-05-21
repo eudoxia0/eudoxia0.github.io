@@ -16,12 +16,6 @@ Email
 Github
 : [@eudoxia0](https://github.com/eudoxia0)
 
-Twitter
-: [@eudxa](https://twitter.com/eudxa)
-
-Bitcoin
-: [1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9][btc] ([blockchain.info][btc-web])
-
 Hacker News
 : [Submissions][hn-subs] and [Comments][hn-comments]
 
@@ -43,8 +37,6 @@ Unless otherwise noted, content on this site is licensed under the
 
 [hplus]: irc://irc.freenode.net/##hplusroadmap
 [hplus-web]: http://webchat.freenode.net/?channels=##hplusroadmap
-[btc]: bitcoin:1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9
-[btc-web]: https://blockchain.info/address/1PZTn2FANnaZ4M999MwBWevSxMJpnZYfJ9
 [hn-subs]: https://news.ycombinator.com/submitted?id=eudox
 [hn-comments]: https://news.ycombinator.com/threads?id=eudox
 [linkedin]: https://www.linkedin.com/pub/fernando-borretti/74/b74/827
