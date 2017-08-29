@@ -6,18 +6,11 @@ css_file: about
 permalink: /about/
 ---
 
-I usually go by **eudoxia** on the Internet, and can usually be found in
-the [##hplusroadmap][hplus] channel on Freenode ([Webchat][hplus-web])
-under that name.
-
 Email
 : [eudoxiahp@gmail.com](mailto:eudoxiahp@gmail.com)
 
 Github
 : [@eudoxia0](https://github.com/eudoxia0)
-
-Hacker News
-: [Submissions][hn-subs] and [Comments][hn-comments]
 
 LinkedIn
 : [fernando-borretti][linkedin]
@@ -35,10 +28,6 @@ section of Montevideo, (coincidentally) almost centered on [TryoLabs][tryo].
 Unless otherwise noted, content on this site is licensed under the
 [Creative Commons Attribution 4.0 International][license] license.
 
-[hplus]: irc://irc.freenode.net/##hplusroadmap
-[hplus-web]: http://webchat.freenode.net/?channels=##hplusroadmap
-[hn-subs]: https://news.ycombinator.com/submitted?id=eudox
-[hn-comments]: https://news.ycombinator.com/threads?id=eudox
 [linkedin]: https://www.linkedin.com/pub/fernando-borretti/74/b74/827
 [jekyll]: http://jekyllrb.com/
 [sass]: http://sass-lang.com/
