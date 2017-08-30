@@ -9,4 +9,4 @@ gem install jekyll
 jekyll serve --watch
 ```
 
-[site]: http://eudoxia.me/
+[site]: http://borretti.me/
