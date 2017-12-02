@@ -12,7 +12,6 @@ function fixCodeClasses(block) {
 function highlightEverything() {
   /* Highlight every code block */
   $('pre code').each(function(i, block) {
-    console.log(block);
     fixCodeClasses(block);
     hljs.highlightBlock(block);
   });
