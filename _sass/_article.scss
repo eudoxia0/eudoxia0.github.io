@@ -40,12 +40,7 @@
 
   font-size: 21px;
 
-  pre {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-
-    padding: 20px;
-
+  & > pre {
     display: block;
     position: relative;
     text-align: center;
@@ -72,7 +67,7 @@ article {
 
   // Layout
 
-  & > *, dd > *, blockquote > * {
+  & > *, dd > *, li > *, blockquote > * {
     margin-bottom: 20px;
   }
 
@@ -131,6 +126,8 @@ article {
 
   pre {
     background-color: $code-background-color;
+    border: 1px solid #f2f2f2;
+    padding: 20px;
 
     code {
       background-color: $code-background-color !important;
@@ -201,6 +198,10 @@ article {
   .footnotes {
     .reversefootnote {
       display: none;
+    }
+
+    li {
+        margin-top: 40px;
     }
   }
 
