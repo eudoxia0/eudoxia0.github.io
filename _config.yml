@@ -9,6 +9,8 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 
+highlighter: herpderp # I don't know how else to turn it off
+
 sass:
     style: :compressed
 
