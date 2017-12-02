@@ -35,11 +35,11 @@ post_images: /assets/img/posts
 
 post_resources:
   css:
-    - //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
+    - /assets/css/syntax-highlighting.css
     - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
   js:
     - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-    - //highlightjs.org/static/highlight.pack.js
+    - /assets/js/highlight.min.js
     - //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - /assets/js/scripts.js
 
