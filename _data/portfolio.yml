@@ -18,7 +18,7 @@ intro: |
 open_source:
   - name: Crane
     sample: code/portfolio/crane.lisp
-    code: lisp
+    code: common-lisp
     desc: |
 
       Crane is an ORM for Common Lisp. It uses CLOS's amazing MetaObject
@@ -90,7 +90,7 @@ open_source:
 
   - name: Corona
     sample: code/portfolio/corona.lisp
-    code: lisp
+    code: common-lisp
     desc: |
 
       Corona is basically a [Vagrant][vagrant] clone. You define virtual
@@ -113,7 +113,7 @@ open_source:
 
   - name: Rock
     sample: code/portfolio/rock.lisp
-    code: lisp
+    code: common-lisp
     desc: |
 
       Rock is an asset manager for Common Lisp, basically a combination of
