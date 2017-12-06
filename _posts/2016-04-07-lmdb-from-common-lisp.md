@@ -40,7 +40,7 @@ level of lifecycle management within databases.
 
 Starting by loading LMDB and Alexandria,
 
-~~~lisp
+~~~common-lisp
 CL-USER> (ql:quickload '(:lmdb :alexandria))
 To load "lmdb":
   Load 1 ASDF system:
@@ -58,7 +58,7 @@ To load "alexandria":
 We'll store the database in your home directory under `lmdb-test/`, and use a
 hardcoded named LMDB database:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (defparameter +directory+
            (merge-pathnames #p"lmdb-test/" (user-homedir-pathname)))
 +DIRECTORY+
@@ -69,7 +69,7 @@ CL-USER> (defparameter +db-name+ "mydb")
 
 First, let's abstract away all of the housekeeping:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (defmacro with-db ((db) &body body)
            (alexandria:with-gensyms (env txn)
              `(let ((,env (lmdb:make-environment +directory+)))
@@ -87,7 +87,7 @@ WITH-DB
 
 We can retrieve keys using the `get` function:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:get db #(1)))
 NIL
@@ -96,7 +96,7 @@ NIL
 Obviously this returns `NIL`, since we haven't actually set anything. To add or
 overwrite a key value pair, you use `put`:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:put db #(1) #(1 2 3)))
 #(1 2 3)
@@ -111,7 +111,7 @@ That's better. But raw byte vectors are unwieldy: how can we store _actual_ data
 First, let's get rid of this key/value pair so we can get back to a blank
 slate. We use the `del` function for that:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
 (lmdb:del db #(1))) T
 
@@ -128,7 +128,7 @@ I'll write a [Moneta][moneta] clone for Common Lisp.
 Storing strings is pretty simple, all you need is the [trivial-utf-8][utf8]
 library:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (ql:quickload :trivial-utf-8)
 To load "trivial-utf-8":
   Load 1 ASDF system:
@@ -148,7 +148,7 @@ VEC->STR
 
 Now we can use this like this:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:put db (str->vec "Common Lisp")
                         (str->vec "An ANSI-standarized Lisp dialect")))
@@ -162,7 +162,7 @@ CL-USER> (with-db (db)
 
 How about integers? We use [bit-smasher][bit] for that:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (ql:quickload :bit-smasher)
 To load "bit-smasher":
   Load 1 ASDF system:
@@ -182,7 +182,7 @@ VEC->INT
 
 And usage:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:put db (str->vec "Common Lisp/age")
                         (int->vec 21)))
@@ -196,7 +196,7 @@ CL-USER> (with-db (db)
 This works with Common Lisp's arbitrary-precision integers, as well. Let's try
 ten to the three hundredth power[^integer]:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (expt 10 300)
 1e300
 
@@ -208,7 +208,7 @@ Nine hundred and ninety seven bits is larger than the average machine word, and
 will be until we start dismanting planets into computers[^planets]. Let's see
 how it works:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:put db (str->vec "big integer")
                         (int->vec (expt 10 300))))
@@ -228,7 +228,7 @@ So all of this is fine, but what if we don't know the contents of the database?
 That's what cursors are for, but we don't need to deal with them directly
 because this wrapper abstracts them:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (with-db (db)
            (lmdb:do-pairs (db key value)
              (format t "~A: ~A~%~%" key value)))
@@ -260,7 +260,7 @@ Which is not very informative, since these are just byte vectors.
 
 Finally, you don't want to keep the database directory:
 
-~~~lisp
+~~~common-lisp
 CL-USER> (uiop:delete-directory-tree +directory+ :validate t)
 #P"/home/eudoxia/lmdb-test/"
 ~~~
