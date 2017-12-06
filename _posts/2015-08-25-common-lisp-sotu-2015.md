@@ -512,7 +512,7 @@ This is essentially a solved problem in most implementations. Sometimes you can
 get tripped up if an implementation's encoding format is set to something like
 Latin-1 instead of UTF-8, but those are easily fixed, e.g. in SBCL:
 
-~~~lisp
+~~~common-lisp
 (setf sb-impl::*default-external-format* :utf-8)
 ~~~
 
@@ -669,7 +669,7 @@ Below is the total number of downloads, of the top 100 most popular projects on
 I am subscribed to [this feed][github-repos] of new Common Lisp repos on
 GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
-~~~lisp
+~~~common-lisp
 {% include code/newsbeuter.lisp %}
 ~~~
 

@@ -51,8 +51,17 @@ permalink: /portfolio/
         </div>
         <div class="body">
           <pre>
-            <code class="{{ library.code }}">
+            <code>
+{% if library.code == "common-lisp" %}
+{% highlight common-lisp %}
 {% include {{ library.sample }} %}
+{% endhighlight %}
+{% endif %}
+{% if library.code == "cpp" %}
+{% highlight cpp %}
+{% include {{ library.sample }} %}
+{% endhighlight %}
+{% endif %}
             </code>
           </pre>
         </div>

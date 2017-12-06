@@ -9,10 +9,7 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 
-highlighter: none
-kramdown:
-   syntax_highlighter_opts:
-      disable : true
+highlighter: rouge
 
 sass:
     style: :compressed
@@ -39,8 +36,8 @@ post_resources:
     - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
   js:
     - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-    - /assets/js/highlight.min.js
-    - /assets/js/scripts.js
+#   - /assets/js/highlight.min.js
+#    - /assets/js/scripts.js
 
 # Portfolio variables
 
