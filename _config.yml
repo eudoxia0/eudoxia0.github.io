@@ -40,7 +40,6 @@ post_resources:
   js:
     - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
     - /assets/js/highlight.min.js
-    - //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - /assets/js/scripts.js
 
 # Portfolio variables

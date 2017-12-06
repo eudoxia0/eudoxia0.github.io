@@ -22,9 +22,6 @@ layout: default
   {{ content }}
 </main>
 {% include footer.html %}
-<script type="text/x-mathjax-config">
- {% include mathjax_config.js %}
-</script>
 {% for url in site.post_resources.js %}
   <script src="{{ url }}"></script>
 {% endfor %}
