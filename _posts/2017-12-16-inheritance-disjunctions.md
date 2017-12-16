@@ -550,7 +550,7 @@ illegal states unrepresentable.
 
     [React][react] works somewhat like this, althought in an object-oriented, dynamically-typed
     language: components in React are functions that take an input and return
-    a tree of other components or GUI promitives. By parameterizing components over the
+    a tree of other components or GUI primitives. By parameterizing components over the
     types of data they take as input, you can build a statically-typed React-like
     framework using only sum types.
 
