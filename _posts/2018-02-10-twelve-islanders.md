@@ -15,6 +15,9 @@ To measure them, you have a seesaw, which seats any number of people (but the
 same number on both sides). This is a discrete seesaw: either it's horizontal,
 or it dips fully in one or the other direction.
 
+You have up to three measurements to find the odd one out, and say whether they
+are heavier or lighter.
+
 # Solution
 
 ~~~ocaml
