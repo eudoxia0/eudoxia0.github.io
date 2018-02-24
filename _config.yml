@@ -31,8 +31,7 @@ post_images: /assets/img/posts
 # Post resources
 
 post_resources:
-  css:
-    - /assets/css/syntax-highlighting.css
+  css: []
   js: []
 
 # Portfolio variables
