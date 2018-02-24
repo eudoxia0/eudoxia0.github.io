@@ -4,50 +4,18 @@ summary: >
   The state of Common Lisp's library ecosystem, from the perspective of a
   contributor.
 tags: [lisp]
-layout: sotu
-description: |
-
-  This is a description of the Common Lisp ecosystem, as of August 2015, from the
-  perspective of a user and contributor.
-
-  The purpose of this article is both to give an overview of the ecosystem, and
-  to help drive [consolidation][fare] in each domain.
-
-  Each application domain has recommendations for consolidating that part of the
-  ecosystem, and pointers for interesting future work.
-
-  [sotu]: https://github.com/Gabriel439/post-rfc/blob/master/sotu.md
-  [sotu-hn]: https://news.ycombinator.com/item?id=10071535
-  [fare]: http://fare.livejournal.com/169346.html
-
-share:
-  tw: https://twitter.com/home?status=State%20of%20the%20Common%20Lisp%20Ecosystem,%202015%20http://eudoxia.me/article/common-lisp-sotu-2015
-  fb: https://www.facebook.com/sharer/sharer.php?u=http://eudoxia.me/article/common-lisp-sotu-2015/
-  gp: https://plus.google.com/share?url=http://eudoxia.me/article/common-lisp-sotu-2015/
-
 css:
-  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/color-brewer.min.css
-  - //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
-  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css
-  - /assets/css/sotu.css
-js:
-  - //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-  - //highlightjs.org/static/highlight.pack.js
-  - //cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js
-  - //cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js
-  - /assets/js/scripts.js
-  - /assets/js/sotu.js
-  - /assets/js/toc.js
-  - /assets/js/jquery.sticky.js
+    - /assets/css/sotu.css
 ---
 
-<div class="extender"></div>
+This is a description of the Common Lisp ecosystem, as of August 2015, from the
+perspective of a user and contributor.
 
-<div class="rss-only">
+The purpose of this article is both to give an overview of the ecosystem, and
+to help drive [consolidation][fare] in each domain.
 
-{{ page.description }}
-
-</div>
+Each application domain has recommendations for consolidating that part of the
+ecosystem, and pointers for interesting future work.
 
 # Application Domains
 
@@ -660,9 +628,7 @@ not new users asking how to get started.
 Below is the total number of downloads, of the top 100 most popular projects on
 [Quicklisp][ql], between January and July:
 
-<div class="plot" id="quicklisp-downloads">
-  <svg></svg>
-</div>
+![Plot of Quicklisp downloads per month]({{ site.post_images}}/sotu/downloads.png)
 
 ### Repos
 
@@ -673,13 +639,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 {% include code/newsbeuter.lisp %}
 ~~~
 
-<div class="plot" id="projects-per-day">
-  <div class="text">
-  From <span class="value" id="earliest"></span> to <span class="value" id="latest"></span>,
-  a total of <span class="value" id="number"></span> repos were created
-  </div>
-  <svg></svg>
-</div>
+![Plot of Common Lisp repositories created per day]({{ site.post_images}}/sotu/repos.png)
 
 ## Acknowledgements
 
@@ -688,7 +648,9 @@ Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support,
 [Gabriel Gonzalez][gabriel] for the original State of the Haskell Ecosystem
 article.
 
-<div class="extender"></div>
+[sotu]: https://github.com/Gabriel439/post-rfc/blob/master/sotu.md
+[sotu-hn]: https://news.ycombinator.com/item?id=10071535
+[fare]: http://fare.livejournal.com/169346.html
 
 [clack]: http://clacklisp.org/
 [caveman]: http://8arrow.org/caveman/
@@ -804,3 +766,14 @@ article.
 [fukamachi]: http://8arrow.org/
 [fare]: http://fare.tunes.org/
 [gabriel]: http://www.haskellforall.com/
+
+<style>
+.recommendations {
+    border-left: 2px solid #AD3108;
+    padding-left: 30px;
+}
+
+.recommendations .future {
+    margin-top: 30px;
+}
+</style>
