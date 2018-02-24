@@ -4,8 +4,6 @@ summary: >
   The state of Common Lisp's library ecosystem, from the perspective of a
   contributor.
 tags: [lisp]
-css:
-    - /assets/css/sotu.css
 ---
 
 This is a description of the Common Lisp ecosystem, as of August 2015, from the
