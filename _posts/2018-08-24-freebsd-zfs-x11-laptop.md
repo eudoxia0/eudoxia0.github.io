@@ -56,19 +56,20 @@ time.
 
 1. Press 1 to select boot multi user, wait for the blue screen to come up.
 
-2. Install
+2. Choose `Install`.
 
-3. Default keymap
+3. Choose your keymap.
 
-4. Enter meaningful hostname
+4. Enter a meaningful hostname.
 
-5. Optional system components, just the default
+5. You will be prompted for system components to install, I just choose the
+   default.
 
-6. Network install, use the default RealTek thing
+6. Network install. On my hardware it autodetected everything.
 
-7. Say yes to IPv4 and DHCP, wait for DHCP lease
+7. Say yes to using IPv4 and DHCP, wait for DHCP lease.
 
-8. Say yes to IPv6 and SLAAC, wait for router solicitation
+8. Say yes to IPv6 and SLAAC, wait for router solicitation.
 
 9. Set DNS to Google's
 
@@ -78,6 +79,8 @@ time.
     - IPv4:
         - `8.8.8.8`
         - `8.8.4.4`
+
+    Or whichever you want to use.
 
 10. Choose the mirror to download packages from.
 
