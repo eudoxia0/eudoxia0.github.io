@@ -56,8 +56,9 @@
   }
 
   img {
-    width: 100%;
-    text-align: center;
+      display: block;
+      max-width: 100%;
+      margin: 30px auto;
   }
 }
 
@@ -146,14 +147,6 @@ article {
     border: 1px solid $code-border-color;
     border-radius: 3px;
     font-size: $code-font-size;
-  }
-
-  // Images and figures
-
-  img {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 20px #ccc;
   }
 
   // Lists
