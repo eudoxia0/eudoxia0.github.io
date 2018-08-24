@@ -6,10 +6,10 @@ tags: [bsd, freebsd, tutorial]
 
 # Introduction
 
-A couple days ago I installed FreeBSD on my laptop with an encrypted ZFS root
-and a minimal X11 setup. I documented every step and then re-did the
-installation to ensure my setup was reproducible. This article is an edited
-version of my installation notes, which I hope is useful to you.
+A few days ago I installed FreeBSD on my laptop with an encrypted ZFS root and a
+minimal X11 setup. I documented every step and then re-did the installation to
+ensure my setup was reproducible. This article is an edited version of my
+installation notes, which I hope is useful to you.
 
 ## The Hardware
 
