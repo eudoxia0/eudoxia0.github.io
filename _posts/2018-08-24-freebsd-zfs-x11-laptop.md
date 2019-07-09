@@ -666,7 +666,7 @@ xcape -e "Shift_L=parenleft;Shift_R=parenright"
 ~~~
 
 In FreeBSD this doesn't work. More precisely, left shift inserts a 9 and right
-shift inserts a 0. [Others had this issue][xcape-issue]. Fortunately, a comment
+shift inserts a 0. [Others have had this issue][xcape-issue]. Fortunately, a comment
 in that issue provides the solution:
 
 ~~~bash
