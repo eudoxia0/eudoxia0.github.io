@@ -2,9 +2,10 @@
 
 .landing {
     width: 100vw;
-    background: url('/assets/img/map.jpg'), url('/assets/img/map-small.jpg');
+    background-image: url('/assets/img/map.jpg'), url('/assets/img/map-small.jpg');
     background-size: auto, cover;
-    background-position: center center, center center;
+    background-position: left center, left center;
+    background-repeat: no-repeat;
 
     .home {
         z-index: 0;
