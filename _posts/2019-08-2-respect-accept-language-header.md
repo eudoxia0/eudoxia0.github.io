@@ -22,6 +22,22 @@ visits Uruguay, they'll be treated to the same terrible experience.
 
 ## Google
 
+When logged out, Google ignores `Accept-Language` and uses geoip. When logged
+in, it does the exact same thing.
+
+My account language is English, but the search language is Spanish unless I tell
+it to use English. But this isn't an account-wide setting, because that would
+make sense: it's a client setting. So every time I use Google from a new
+browser, a new computer, or simply after deleting local storage, I have to
+remind Google for the billionth time, that I want English search results.
+
+Even after changing the language, search queries are parameterized by
+location. Which is determined by geoip. And geoip here is very coarse, so Google
+thinks I live in a different city, and this is reflected in the search results.
+
+DuckDuckGo and StartPage both respect `Accept-Language`, which is another reason
+to prefer either over Google.
+
 ## Airbnb
 
 Airbnb implements what I can only term Heisenlocalization: place names are
@@ -53,6 +69,15 @@ Sometimes this is useless because the language names themselves are localized to
 whatever locale the computer has decided you use. If you use a screenreader,
 you'll presumably hear ten minutes of Thai until you hear อังกฤษ.
 
+# Counterarguments
+
+"But A/B testing shows it improves our conversion."
+
+If you're willing to give your users a terrible experience for some dubious
+quantitative metric, you might as well implement every other dark pattern. Also,
+your A/B testing is unsound because it has no cause and effect model.
+
 # Conclusion
 
-Old man yells at ~~cloud~~ corporate race to the bottom.
+Old man yells at ~~cloud~~ the corporate race to the bottom that is the modern
+Internet.
