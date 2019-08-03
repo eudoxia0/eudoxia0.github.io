@@ -36,13 +36,12 @@ it back to English in the frontend, because I've the language set to English.
 
 If I browse US listings from Uruguay, by default, eBay will machine-translate
 the English to Spanish, with predictably awful results. This is so stupefyingly
-bad, I have no words to describe it. Instead, I will paraphrase Neal Stephenson:
-
->The dimensions of this [stupidity] were so vast that Hackworth's mind was still
->reeling through it, bouncing haplessly from one wall to another [...]
+bad, I have no words to describe it.
 
 The very real possibility that this decision was empirically good for eBay --
 that conversion and retention were improved by it -- is too terrifying to
 ponder.
 
 # Conclusion
+
+Old man yells at ~~cloud~~ corporate race to the bottom.
