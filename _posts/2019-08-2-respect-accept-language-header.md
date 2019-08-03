@@ -42,6 +42,17 @@ The very real possibility that this decision was empirically good for eBay --
 that conversion and retention were improved by it -- is too terrifying to
 ponder.
 
+# Accessibility
+
+Some of thse terrible websites implement a dropdown for choosing the language,
+and store the preference in a cookie or local storage -- essentially
+reimplementing `Accept-Language` one level up, a common pattern among JavaScript
+programmers.
+
+Sometimes this is useless because the language names themselves are localized to
+whatever locale the computer has decided you use. If you use a screenreader,
+you'll presumably hear ten minutes of Thai until you hear อังกฤษ.
+
 # Conclusion
 
 Old man yells at ~~cloud~~ corporate race to the bottom.
