@@ -7,7 +7,9 @@ tags: []
 You have a website in multiple languages. How do you decide which language to
 serve a user with? Easy, the `Accept-Language` header exists for this very
 purpose: it allows a user agent to provide servers with a list of prefered
-languages weighed by preference.
+languages weighed by preference. But nobody uses it. Instead, servers deduce the
+user agent's location from the IP address, and serve content accordingly. This
+is terrible.
 
 My operating system's language is English. The only locale is
 `en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en`.
