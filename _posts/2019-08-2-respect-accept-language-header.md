@@ -8,7 +8,7 @@ tags: []
 
 ## Google
 
-## AirBnB
+## Airbnb
 
 ## EBay
 
