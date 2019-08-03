@@ -10,6 +10,9 @@ tags: []
 
 ## Airbnb
 
-## EBay
+Airbnb implements what I can only term Heisenlocalization: place names are
+either in English or localized, seemingly at random.
+
+## eBay
 
 # Conclusion
