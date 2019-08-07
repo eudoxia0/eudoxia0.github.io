@@ -15,7 +15,9 @@ But not everyone uses it. Instead, websites often
 location from the IP address, and serve content accordingly. This is terrible.
 
 My operating system's language is English. The only locale is
-`en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en` exclusively. Despite this, I am often served content in Spanish, because websites think they're smarter than the user's own preferences.
+`en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en`
+exclusively. Despite this, I am often served content in Spanish, because
+websites think they're smarter than the user's own preferences.
 
 And I might be in the minority, but people travel. And if an L1 English speaker
 visits Uruguay, they'll be treated to the same terrible experience.
@@ -27,10 +29,11 @@ visits Uruguay, they'll be treated to the same terrible experience.
 When logged out, Google ignores `Accept-Language` and uses geolocation. When logged
 in, it does the exact same thing.
 
-My account language is English, but the search language (even when logged in) is Spanish unless I tell
-it to use English. But this isn't an account-wide setting, it's a client setting. So every time I use Google from a new
-browser, a new computer, or simply after deleting local storage, I have to
-remind Google for the billionth time that I want English search results.
+My account language is English, but the search language (even when logged in) is
+Spanish unless I tell it to use English. But this isn't an account-wide setting,
+it's a client setting. So every time I use Google from a new browser, a new
+computer, or simply after deleting local storage, I have to remind Google for
+the billionth time that I want English search results.
 
 Even after changing the language, search queries are parameterized by
 location. Which is determined by geoip. And geoip here is very coarse, so Google
