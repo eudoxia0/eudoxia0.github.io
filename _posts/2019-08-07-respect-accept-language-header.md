@@ -44,33 +44,25 @@ to prefer either over Google.
 ## Airbnb
 
 Airbnb implements what I can only term Heisenlocalization: place names are
-either in English or localized, seemingly at random.
-
-Examples:
+either in English or localized, seemingly at random. For example:
 
 ![An Airbnb search box, showing "London, United Kingdom" as the autocompletion of the string "London".]({{ site.post_images }}/accept-language/london.png)
 
 ![An Airbnb search box, showing "Cardiff, Reino Unido" as the autocompletion of the string "Cardiff".]({{ site.post_images }}/accept-language/cardiff.png)
 
-So this tells me they localize everything behind the scenes, and then translate
-it back to English in the frontend, because I've the language set to English.
-
 ## eBay
 
 If I browse US listings from Uruguay, by default, eBay will machine-translate
-the English to Spanish, with predictably awful results. This is so stupefyingly
-bad, I have no words to describe it.
-
-The very real possibility that this decision was empirically good for eBay --
-that conversion and retention were improved by it -- is too terrifying to
-ponder.
+the English to Spanish, with predictably unreadable results. I don't apprehend
+the motivation behind this decision.
 
 # Accessibility
 
 Some of thse terrible websites implement a dropdown for choosing the language,
 and store the preference in a cookie or local storage -- essentially
-reimplementing `Accept-Language` one level up, a common pattern among JavaScript
-programmers.
+reimplementing `Accept-Language` one level up. Implementing things one level up
+is a common pattern in the web ([example][nav]) and destroys performance and
+usability.
 
 Sometimes this is useless because the language names themselves are localized to
 whatever locale the computer has decided you use. If you use a screenreader,
@@ -91,3 +83,4 @@ Internet.
 
 [header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
 [geoip]: https://en.wikipedia.org/wiki/Geolocation_software
+[nav]: https://carter.sande.duodecima.technology/javascript-page-navigation/
