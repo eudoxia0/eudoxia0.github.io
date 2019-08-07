@@ -9,27 +9,26 @@ serve a user with? Easy, the [`Accept-Language` header](https://developer.mozill
 purpose: it allows a user agent to provide servers with a list of prefered
 languages, weighed by preference.
 
-But not everyone uses it. Instead, websites often deduce the user agent's location from the
+But not everyone uses it. Instead, websites often [deduce](https://en.wikipedia.org/wiki/Geolocation_software) the user agent's location from the
 IP address, and serve content accordingly. This is terrible.
 
 My operating system's language is English. The only locale is
-`en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en`.
+`en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en` exclusively. Despite this, I am often served content in Spanish, because websites think they're smarter than the user's own preferences.
 
-I might be in the minority, but people travel. And if an L1 English speaker
+And I might be in the minority, but people travel. And if an L1 English speaker
 visits Uruguay, they'll be treated to the same terrible experience.
 
 # Examples
 
 ## Google
 
-When logged out, Google ignores `Accept-Language` and uses geoip. When logged
+When logged out, Google ignores `Accept-Language` and uses geolocation. When logged
 in, it does the exact same thing.
 
-My account language is English, but the search language is Spanish unless I tell
-it to use English. But this isn't an account-wide setting, because that would
-make sense: it's a client setting. So every time I use Google from a new
+My account language is English, but the search language (even when logged in) is Spanish unless I tell
+it to use English. But this isn't an account-wide setting, it's a client setting. So every time I use Google from a new
 browser, a new computer, or simply after deleting local storage, I have to
-remind Google for the billionth time, that I want English search results.
+remind Google for the billionth time that I want English search results.
 
 Even after changing the language, search queries are parameterized by
 location. Which is determined by geoip. And geoip here is very coarse, so Google
@@ -44,6 +43,10 @@ Airbnb implements what I can only term Heisenlocalization: place names are
 either in English or localized, seemingly at random.
 
 Examples:
+
+![An Airbnb search box, showing "London, United Kingdom" as the autocompletion of the string "London".]({{ site.post_images }}/accept-language/london.png)
+
+![An Airbnb search box, showing "Cardiff, Reino Unido" as the autocompletion of the string "Cardiff".]({{ site.post_images }}/accept-language/cardiff.png)
 
 So this tells me they localize everything behind the scenes, and then translate
 it back to English in the frontend, because I've the language set to English.
