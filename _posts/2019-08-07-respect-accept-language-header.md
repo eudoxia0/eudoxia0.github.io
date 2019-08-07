@@ -7,7 +7,7 @@ tags: []
 You have a website with content in multiple languages. How do you decide which
 language to serve a user with? Easy, the [`Accept-Language` header][header]
 exists for this very purpose: it allows a user agent to provide servers with a
-list of prefered languages, weighed by preference.
+list of acceptable languages, weighed by preference.
 
 But not everyone uses it. Instead, websites often [deduce][geoip] the user
 agent's location from the IP address, and serve content accordingly. This is
@@ -25,8 +25,8 @@ visits Uruguay, they'll be treated to the same terrible experience.
 
 ## Google
 
-When logged out, Google ignores `Accept-Language` and uses geolocation. When logged
-in, it does the exact same thing.
+When logged out, Google ignores `Accept-Language` and uses geolocation. When
+logged in, it does the exact same thing.
 
 My account language is English, but the search language (even when logged in) is
 Spanish unless I tell it to use English. But this isn't an account-wide setting,
