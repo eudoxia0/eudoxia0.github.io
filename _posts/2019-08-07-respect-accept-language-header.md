@@ -5,7 +5,7 @@ tags: []
 ---
 
 You have a website with content in multiple languages. How do you decide which language to
-serve a user with? Easy, the `Accept-Language` header exists for this very
+serve a user with? Easy, the [`Accept-Language` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) exists for this very
 purpose: it allows a user agent to provide servers with a list of prefered
 languages, weighed by preference.
 
