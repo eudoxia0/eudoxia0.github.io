@@ -5,8 +5,7 @@ tags: []
 ---
 
 You have a website with content in multiple languages. How do you decide which
-language to serve a user with? Easy, the [`Accept-Language`
-header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+language to serve a user with? Easy, the [`Accept-Language` header][header]
 exists for this very purpose: it allows a user agent to provide servers with a
 list of prefered languages, weighed by preference.
 
@@ -89,3 +88,5 @@ your A/B testing is unsound because it has no cause and effect model.
 
 Old man yells at ~~cloud~~ the corporate race to the bottom that is the modern
 Internet.
+
+[header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
