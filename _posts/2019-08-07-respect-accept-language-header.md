@@ -10,8 +10,9 @@ header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Languag
 exists for this very purpose: it allows a user agent to provide servers with a
 list of prefered languages, weighed by preference.
 
-But not everyone uses it. Instead, websites often [deduce](https://en.wikipedia.org/wiki/Geolocation_software) the user agent's location from the
-IP address, and serve content accordingly. This is terrible.
+But not everyone uses it. Instead, websites often
+[deduce](https://en.wikipedia.org/wiki/Geolocation_software) the user agent's
+location from the IP address, and serve content accordingly. This is terrible.
 
 My operating system's language is English. The only locale is
 `en_US.UTF-8`. Firefox is set to English, and sends `Accept-Language: en` exclusively. Despite this, I am often served content in Spanish, because websites think they're smarter than the user's own preferences.
