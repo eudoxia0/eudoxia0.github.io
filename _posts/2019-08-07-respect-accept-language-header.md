@@ -4,10 +4,11 @@ summary: Internet is bad
 tags: []
 ---
 
-You have a website with content in multiple languages. How do you decide which language to
-serve a user with? Easy, the [`Accept-Language` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) exists for this very
-purpose: it allows a user agent to provide servers with a list of prefered
-languages, weighed by preference.
+You have a website with content in multiple languages. How do you decide which
+language to serve a user with? Easy, the [`Accept-Language`
+header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+exists for this very purpose: it allows a user agent to provide servers with a
+list of prefered languages, weighed by preference.
 
 But not everyone uses it. Instead, websites often [deduce](https://en.wikipedia.org/wiki/Geolocation_software) the user agent's location from the
 IP address, and serve content accordingly. This is terrible.
