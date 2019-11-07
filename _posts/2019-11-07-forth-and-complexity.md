@@ -4,7 +4,7 @@ summary: On the unsustainable complexity of modern computing.
 tags: [plt, forth]
 ---
 
-[_My history with Forth & stack machines_][yosef] is one of my favorite
+[_My history with Forth & stack machines_][yosef] is one of my favourite
 technical posts. While the author decides [Forth][forth] is not for him, it's
 written from a place of respect and admiration to the philosophy behind it:
 
