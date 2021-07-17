@@ -74,6 +74,12 @@ a {
 }
 
 //
+// Fonts
+//
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+//
 // Typography
 //
 
@@ -87,7 +93,7 @@ body {
 }
 
 code {
-    font-family: 'Inconsolata';
+    font-family: 'Inconsolata', monospace;
     font-size: 0.9em;
 }
 
