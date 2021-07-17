@@ -22,7 +22,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-{% for article in site.posts %}
+{% for article in site.categories.article %}
   <url>
     <loc>{{ site.url }}{{ article.url }}</loc>
     <changefreq>monthly</changefreq>
