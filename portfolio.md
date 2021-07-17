@@ -57,9 +57,8 @@ cmacro is written in Common Lisp, and is compiled to a native binary, so
 you can drop it right into your Makefile between a file and clang
 without changing anything.
 
-One of the project's goals is to show how much can be added to a
-language with nothing more than a few simple macros, and in this I've
-[succeeded](https://github.com/eudoxia0/magma).
+The companion project, [Magma][magma], is a collection of cmacro extensions that
+shows the scope of the macro system.
 
 </div>
 <div class="column">
@@ -70,6 +69,7 @@ language with nothing more than a few simple macros, and in this I've
 </div>
 
 [sjs]: http://sweetjs.org/
+[magma]: https://github.com/eudoxia0/magma
 
 # Corona
 
