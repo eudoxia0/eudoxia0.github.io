@@ -1,39 +1,32 @@
 ---
 title: About
-layout: page
-class: about
-css_file: about
-permalink: /about/
+layout: common
 ---
 
-Email
-: [eudoxiahp@gmail.com](mailto:eudoxiahp@gmail.com)
+<article>
 
-Github
-: [@eudoxia0](https://github.com/eudoxia0)
+# About Me
 
-LinkedIn
-: [fernando-borretti][linkedin]
+I'm a programmer. In my free time, I write [open source code][port], which you
+can find on [my GitHub][gh]. My interests include programming languages,
+compilers, logic, linguistics, and history.
 
-## Colophon
+My email address is [`fernando@borretti.me`][mail].
 
-This site is built with [Jekyll][jekyll], which needs no introduction, and
-[Sass][sass], a CSS preprocessor. Hosting is provided by [GitHub
-Pages][pages].
+# Colophon
 
-The map on the front page is generated dynamically with [Leaflet][leaflet],
-and the style was from a Leaflet providers [demo][demo]. The map shows a
-section of Montevideo, (coincidentally) almost centered on [TryoLabs][tryo].
+This website is built with [Jekyll][jekyll] and [Sass][sass], a CSS
+preprocessor. Hosting is provided by [GitHub Pages][pages].
 
-Unless otherwise noted, content on this site is licensed under the
-[Creative Commons Attribution 4.0 International][license] license.
+Unless otherwise noted, content on this site is licensed under the [Creative
+Commons Attribution 4.0 International][license] license.
 
-[linkedin]: https://www.linkedin.com/pub/fernando-borretti/74/b74/827
+</article>
+
+[port]: /portfolio/
+[gh]: https://github.com/eudoxia0
+[mail]: mailto:fernando@borretti.me
 [jekyll]: http://jekyllrb.com/
 [sass]: http://sass-lang.com/
 [pages]: https://pages.github.com/
-[grid]: https://github.com/eudoxia0/eudoxia0.github.io/blob/master/_sass/grid.scss
-[leaflet]: http://leafletjs.com/
-[demo]: http://leaflet-extras.github.io/leaflet-providers/preview/
-[tryo]: http://tryolabs.com/
 [license]: http://creativecommons.org/licenses/by/4.0/

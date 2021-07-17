@@ -1,8 +1,7 @@
 title: Fernando Borretti
 description: Personal website
 baseurl: ""
-url: "http://borretti.me/"
-
+url: "https://borretti.me/"
 
 markdown: kramdown
 
@@ -14,30 +13,14 @@ highlighter: rouge
 sass:
     style: :compressed
 
-# Default layout
 defaults:
   - scope:
-      path: ""
-      type: posts
+      path: "article"
     values:
-      layout: post
+      layout: article
 
-permalink: /article/:title
+permalink: /:categories/:title
 
 # Custom variables
 
-post_images: /assets/img/posts
-
-# Post resources
-
-post_resources:
-  css: []
-  js: []
-
-# Portfolio variables
-
-links:
-  - service: github
-    url: https://github.com/eudoxia0
-  - service: linkedin
-    url: https://www.linkedin.com/pub/fernando-borretti/74/b74/827
+post_images: /assets/content/

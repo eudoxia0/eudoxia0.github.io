@@ -1,0 +1,25 @@
+---
+title: Articles
+layout: common
+---
+
+<div class="post-list">
+  <ul class="posts">
+    {% for page in site.categories.article %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
+        <div class="info">
+          <span class="date">
+            {{ page.date | date: "%-d %B, %Y" }}
+          </span>
+          &middot;
+          <span class="summary">
+            {{ page.summary }}
+          </span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

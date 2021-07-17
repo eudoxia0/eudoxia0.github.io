@@ -1,0 +1,37 @@
+---
+layout: base
+---
+
+{% assign fleuron = "❖" %}
+
+<div class="layout-common">
+  <nav class="top-nav">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {% if page.categories[0] == "article" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/article/">Articles</a>
+      </li>
+      {% endif %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <div class="copy">
+      &copy; 2014 – 2021 Fernando Borretti
+    </div>
+  </footer>
+</div>
