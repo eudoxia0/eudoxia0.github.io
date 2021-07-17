@@ -1,6 +1,7 @@
 ---
 title: About
 layout: common
+permalink: /about/
 ---
 
 <article>

@@ -1,6 +1,7 @@
 ---
 title: Portfolio
 layout: common
+permalink: /portfolio/
 ---
 
 <article>
