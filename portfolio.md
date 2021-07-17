@@ -35,7 +35,7 @@ abstraction, and [SxQL][sxql] is used as the DSL for generating SQL.
 </div>
 <div class="column">
 
-![]({{ site.post_images }}/portfolio/crane.svg)
+![A screenshot of a code example of using Crane.]({{ site.post_images }}/portfolio/crane.svg)
 
 </div>
 </div>
@@ -64,7 +64,7 @@ shows the scope of the macro system.
 </div>
 <div class="column">
 
-![]({{ site.post_images }}/portfolio/cmacro.svg)
+![A screenshot of a code example of using cmacro.]({{ site.post_images }}/portfolio/cmacro.svg)
 
 </div>
 </div>
@@ -89,7 +89,7 @@ the Ruby ecosystem to install Vagrant. It's also pretty nice to use.
 </div>
 <div class="column">
 
-![]({{ site.post_images }}/portfolio/corona.svg)
+![A screenshot of a code example of using Corona.]({{ site.post_images }}/portfolio/corona.svg)
 
 </div>
 </div>
@@ -111,7 +111,7 @@ together so you only serve a single CSS file and a single JS one.
 </div>
 <div class="column">
 
-![]({{ site.post_images }}/portfolio/rock.svg)
+![A screenshot of a code example of using Rock.]({{ site.post_images }}/portfolio/rock.svg)
 
 </div>
 </div>
