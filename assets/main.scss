@@ -16,9 +16,9 @@ $mobile-size: 768px;
 // Mixins
 //
 
-$breakpoint-small: 375px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 1400px;
+$breakpoint-small: 375pt;
+$breakpoint-medium: 768pt;
+$breakpoint-large: 1400pt;
 
 @mixin small() {
     @media (max-width: $breakpoint-small) {
