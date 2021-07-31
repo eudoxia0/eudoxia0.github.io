@@ -33,7 +33,7 @@ $breakpoint-large: 1400pt;
 }
 
 @mixin large() {
-    @media (min-width: $breakpoint-medium + 1) {
+    @media (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {
         @content;
     }
 }
