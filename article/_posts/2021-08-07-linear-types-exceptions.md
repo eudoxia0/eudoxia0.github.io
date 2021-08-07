@@ -92,7 +92,8 @@ onerous for programmers to write linear code.
 
 # Example
 
-If you're convinced, skip this section. Otherwise, consider:
+If you're convinced that linear types and exceptions don't work together, skip
+this section. Otherwise, consider:
 
 ```c
 try {
