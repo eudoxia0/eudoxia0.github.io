@@ -15,6 +15,27 @@ mostly write compilers or small utilities.
 [libs]: https://gist.github.com/substack/5075355
 [lisp]: https://lisp-lang.org/
 
+# Austral
+
+<div class="two-columns">
+<div class="column">
+
+My current main project is the [Austral][austral] programming language: a
+systems programming language with a linear type system. The language is designed
+to be simple to understand and implement.
+
+The key features are: memory safety, data race freedom, and capability-based security.
+
+</div>
+<div class="column">
+
+![A screenshot of some Austral coode.]({{ site.post_images }}/portfolio/austral.svg)
+
+</div>
+</div>
+
+[austral]: https://github.com/austral/austral
+
 # Common Lisp Website
 
 <div class="two-columns">
