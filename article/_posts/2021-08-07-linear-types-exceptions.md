@@ -509,7 +509,7 @@ void f() throws Error(packet x, option<packet> y)
 
 ## Use Affine Types
 
-Affine types are a weaking of linear types, essentially linear types with
+Affine types are a weakening of linear types, essentially linear types with
 implicit destructors. In a linear type system, values of a linear type must be
 used exactly once. In an affine type system, values of an affine type can be
 used at most once. If they are unused, the compiler automatically inserts a
