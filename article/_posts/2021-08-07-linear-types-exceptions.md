@@ -9,15 +9,86 @@ type systems interact with error handling strategies. This article serializes
 those thoughts.
 
 A linear type system guarantees all resources allocated by a terminating program
-will be freed, and none will be used after being freed. That is:
+will be freed, and none will be used after being freed. This guarantee is lost
+with the introduction of exceptions: we can throw an exception before the
+consumer of a linear resource is called, leaking the resource. This article goes
+through different strategies for reconciling linear types and exceptions.
 
-1. If I allocate some memory, the compiler will ensure I free it.
-2. If I free said memory, I can't read from or write to it afterwards. This is
-   checked statically.
+# A Brief Introduction to Linear Types
 
-This guarantee is lost with the introduction of exceptions: we can throw an
-exception before the consumer of a linear resource is called, leaking the
-resource.
+In a normal type system, values can be copied arbitrarily. When you do `function
+(x) { return (x, x); }`, you're copying a value, even if it's a reference. This
+leads to problems: when you free a chunk of memory, there is no guarantee that
+there isn't another pointer to that same chunk. Reading from or writing to that
+chunk leads to a segmentation fault at best, a security vulnerability at
+worst.
+
+This is still a problem in langage with garbage collection: file handles and
+sockets are analogous to memory, in that they have to be explicitly opened and
+closed. Trying to write to a socket after it's been closed is an error. Trying
+to write to a file from multiple threads at once can lead to subtle, impossible
+to reproduce errors.
+
+In a linear type system, types are divided into two universes: unrestricted
+types are things like integers and booleans, which fit in a register and can be
+copied without that leading to security vulnerabilities. Resources like memory,
+file handles, etc. belong in the linear universe. The compiler checks statically
+that values whose type belongs to the linear universe can only be used once.
+
+This is simpler than it sounds, the rules basically are:
+
+1. If you have a ariable `x` of a linear type, then `x` must appear once and
+   exactly once in the scope in which it is defined.
+
+2. If it appears in a branch of an `if` statement, it must appear in all other
+   branches.
+
+3. And, finally, it can't appear in the body of a loop (if it was defined
+   outside that loop), because then it'd be used once every iteration. When a
+   linear value is used, it is said to be _consumed_.
+
+So, for example, the API to open, write data to, and close a file handle might be:
+
+```
+open(path: string): file!
+write(file: file!, data: string): file!
+close(file: file!): unit
+```
+
+The exclamation mark indicates that the type is linear. Everything here is
+fairly standard, except that the `write` function takes a file object and
+returns a file object. This is because files are linear. We can't write:
+
+```
+let f = open("data.txt")
+write(f, "foo")
+write(f, "bar")
+```
+
+because `f` is used twice. Similarly, we can't write:
+
+```
+let f = open("data.txt")
+```
+
+And forget about `f`, the compiler will complain that `f` is never used.
+
+
+But we can write:
+
+```
+let f = open("data.txt")
+let f' = write(f, "foo")
+close(f')
+```
+
+Because each one of `f` and `f'` is used once and only once. And this is the
+value of linear types: they constrain how we can use resources and ensure we
+handle their lifecycle correctly.
+
+So the basic rules are simple. Then on top of the simple rules you dump a
+truckload of convenience features like [borrowing][borrowing] to make it less
+onerous for programmers to write linear code.
 
 # Example
 
@@ -647,6 +718,7 @@ Not much, surprisingly:
    control."][subst] ACM SIGPLAN Notices. Vol. 46. No. 10. ACM, 2011.
 
 [austral]: https://github.com/austral/austral
+[borrowing]: https://doc.rust-lang.org/beta/rust-by-example/scope/borrow.html
 [overflow]: https://en.wikipedia.org/wiki/Integer_overflow
 [abort]: https://www.gnu.org/software/libc/manual/html_node/Aborting-a-Program.html
 [pthread_cancel]: http://man7.org/linux/man-pages/man3/pthread_cancel.3.html
