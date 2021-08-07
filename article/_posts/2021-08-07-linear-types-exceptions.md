@@ -37,7 +37,7 @@ that values whose type belongs to the linear universe can only be used once.
 
 This is simpler than it sounds, the rules basically are:
 
-1. If you have a ariable `x` of a linear type, then `x` must appear once and
+1. If you have a variable `x` of a linear type, then `x` must appear once and
    exactly once in the scope in which it is defined.
 
 2. If it appears in a branch of an `if` statement, it must appear in all other
