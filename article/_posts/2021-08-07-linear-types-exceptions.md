@@ -276,8 +276,10 @@ Result<T, OutOfBounds> nth(array<T> arr, size_t index) {
 }
 ```
 
-But this approach is immensely limiting, because as stated above, many
-fundamental operations have failure modes that have to be handled explicitly:
+This is appealing because much of the hassle of pattern matching `Result` types
+can be simplified by the compiler. But this approach is immensely limiting,
+because as stated above, many fundamental operations have failure modes that
+have to be handled explicitly:
 
 ```
 add : (Int, Int) -> Result<Int, Overflow>
