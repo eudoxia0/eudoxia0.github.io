@@ -547,6 +547,10 @@ like C++ and [Ada][finalization], that is:
    this is straghtforward: destructors are called in inverse declaration
    order. For temporaries, this is complicated.
 
+Additionally, destroying values we don't do anything with could lead to bugs if
+the programmer simply forgets about a value they were supposed to use, and
+instead of warning them, the compiler cleans it up.
+
 But there is a benefit to using affine types with destructors: exception
 handling integrates perfectly well. Again, Rust does this: [`panic`][rustpanic]
 and [`catch_unwind`][rustcatch] are similar to `try` and `catch`, and
