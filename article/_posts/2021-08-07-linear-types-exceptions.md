@@ -66,7 +66,8 @@ write(f, "foo")
 write(f, "bar")
 ```
 
-because `f` is used twice. Similarly, we can't write:
+because `f` is used twice (note that `let f` doesn't count as a
+usage). Similarly, we can't write:
 
 ```
 let f = open("data.txt")
