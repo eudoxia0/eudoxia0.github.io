@@ -203,11 +203,16 @@ code {
 //
 
 .post-list {
-    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    h2 {
+        padding-bottom: 0.1em;
+        border-bottom: 1px solid #ccc;
+        margin: 0.7em 0;
+    }
 
     ul.posts {
-        max-width: 1300px;
-
         list-style-type: none;
 
         li {
@@ -241,9 +246,15 @@ code {
     }
 
     @include small() {
+        padding: 40px 0;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
         ul.posts {
             margin: 0 auto;
-            padding: 40px;
+            padding: 0 40px;
 
             li {
                 font-size: 1.3rem;
@@ -256,9 +267,15 @@ code {
     }
 
     @include medium() {
+        padding: 40px 0;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
         ul.posts {
             margin: 0 auto;
-            padding: 40px;
+            padding: 0 40px;
 
             li {
                 font-size: 1.3rem;
@@ -271,9 +288,15 @@ code {
     }
 
     @include large() {
+        padding: 60px 0;
+
+        h2 {
+            font-size: 2.3rem;
+        }
+
         ul.posts {
             margin: 0 auto;
-            padding: 60px;
+            padding: 0 60px;
 
             li {
                 font-size: 2.3rem;
@@ -286,9 +309,15 @@ code {
     }
 
     @include largest() {
+        padding: 100px 0;
+
+        h2 {
+            font-size: 3.3rem;
+        }
+
         ul.posts {
             margin: 0 auto;
-            padding: 100px;
+            padding: 0 100px;
 
             li {
                 font-size: 3.3rem;
@@ -530,7 +559,7 @@ article {
 // Article layout
 //
 
-.layout-article {
+.layout-article, .layout-fiction {
     header {
         display: flex;
         flex-direction: column;
@@ -542,6 +571,11 @@ article {
         h1 {
             font-weight: normal;
             text-align: center;
+        }
+
+        span {
+            font-size: 0.8em;
+            margin-top: 30px;
         }
     }
 

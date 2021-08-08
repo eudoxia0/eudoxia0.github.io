@@ -17,6 +17,13 @@ layout: base
       <li>
         <a href="/article/">Articles</a>
       </li>
+      {% elsif page.categories[0] == "fiction" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/">Fiction</a>
+      </li>
       {% endif %}
       <li>
         <span class="sep">{{ fleuron }}</span>

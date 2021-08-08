@@ -18,6 +18,11 @@ defaults:
       path: "article"
     values:
       layout: article
+  - scope:
+      path: "fiction"
+    values:
+      layout: fiction
+
 
 permalink: /:categories/:title
 
