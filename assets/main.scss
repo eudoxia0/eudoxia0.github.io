@@ -753,11 +753,11 @@ article {
     }
 
     @include large() {
-        padding: 7rem;
-
         @media (max-resolution: 191dpi) {
             $initial: 150px;
             $final: 300px;
+
+            padding: 7rem;
 
             h1 {
                 font-size: 3rem;
@@ -798,6 +798,8 @@ article {
         @media (min-resolution: 192dpi) {
             $initial: 100px;
             $final: 200px;
+
+            padding: 5rem;
 
             h1 {
                 font-size: 3rem;
