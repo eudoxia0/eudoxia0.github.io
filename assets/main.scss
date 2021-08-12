@@ -79,10 +79,6 @@ a {
 
 html {
     font-size: 16px;
-
-    @media (min-resolution: 192dpi) {
-        font-size: 8px;
-    }
 }
 
 body {
