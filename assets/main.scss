@@ -758,40 +758,82 @@ article {
     @include large() {
         padding: 7rem;
 
-        $initial: 150px;
-        $final: 300px;
+        @media (max-resolution: 191dpi) {
+            $initial: 150px;
+            $final: 300px;
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 100px;
-        }
-        li {
-            .frame {
-                max-width: $initial;
-                max-height: $initial;
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 100px;
+            }
+            li {
+                .frame {
+                    max-width: $initial;
+                    max-height: $initial;
 
-                .shadow {
-                    width: $initial;
-                    height: $initial;
+                    .shadow {
+                        width: $initial;
+                        height: $initial;
 
-                    img {
+                        img {
+                            max-width: $final;
+                            max-height: $final;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 2.5rem;
+                    margin-left: 40px;
+                }
+
+                &:hover {
+                    .shadow {
                         max-width: $final;
                         max-height: $final;
+                        width: $final;
+                        height: $final;
                     }
                 }
             }
+        }
 
-            span {
-                font-size: 2.5rem;
-                margin-left: 40px;
+        @media (min-resolution: 192dpi) {
+            $initial: 100px;
+            $final: 200px;
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 100px;
             }
+            li {
+                .frame {
+                    max-width: $initial;
+                    max-height: $initial;
 
-            &:hover {
-                .shadow {
-                    max-width: $final;
-                    max-height: $final;
-                    width: $final;
-                    height: $final;
+                    .shadow {
+                        width: $initial;
+                        height: $initial;
+
+                        img {
+                            max-width: $final;
+                            max-height: $final;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 2.5rem;
+                    margin-left: 40px;
+                }
+
+                &:hover {
+                    .shadow {
+                        max-width: $final;
+                        max-height: $final;
+                        width: $final;
+                        height: $final;
+                    }
                 }
             }
         }
