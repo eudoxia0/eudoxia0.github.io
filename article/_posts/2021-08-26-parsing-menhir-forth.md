@@ -506,7 +506,7 @@ let _ = run_test_tt_main suite
 
 The full contents of `test/ParserTest.ml` file:
 
-```
+```ocaml
 open OUnit2
 open Menhir_tutorial_core.Ast
 open Menhir_tutorial_core.ParserInterface
@@ -557,7 +557,7 @@ let _ = run_test_tt_main suite
 
 I would be remiss in my duties if I didn't do this:
 
-```
+```ocaml
 (* bin/menhir_tutorial.ml *)
 open Menhir_tutorial_core.Ast
 open Menhir_tutorial_core.ParserInterface
@@ -621,7 +621,7 @@ let _ = repl ()
 
 You can clone this example, build it, and run the interpreter by running:
 
-```
+```bash
 $ git clone git@github.com:eudoxia0/parsing-menhir.git
 $ cd parsing-menhir/forth
 $ dune build
