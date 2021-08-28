@@ -12,7 +12,9 @@ I'm a programmer. In my free time, I write [open source code][port], which you
 can find on [my GitHub][gh]. My interests include programming languages,
 compilers, logic, linguistics, and history.
 
-My email address is [`fernando@borretti.me`][mail].
+- Email address: [`fernando@borretti.me`][mail]
+- Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
+- Hacker News: [profile][hn], [submissions][hnsub], [comments][hncom].
 
 # Colophon
 
@@ -31,3 +33,6 @@ Commons Attribution 4.0 International][license] license.
 [sass]: http://sass-lang.com/
 [pages]: https://pages.github.com/
 [license]: http://creativecommons.org/licenses/by/4.0/
+[hn]: https://news.ycombinator.com/user?id=zetalyrae
+[hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
+[hncom]: https://news.ycombinator.com/threads?id=zetalyrae
