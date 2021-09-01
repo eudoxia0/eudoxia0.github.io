@@ -14,6 +14,7 @@ compilers, logic, linguistics, and history.
 
 - Email address: [`fernando@borretti.me`][mail]
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
+- GitHub: [`eudoxia0`][gh]
 - Hacker News: [profile][hn], [submissions][hnsub], [comments][hncom].
 
 # Colophon
