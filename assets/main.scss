@@ -125,6 +125,10 @@ code {
 
     footer {
         border-top: 1px solid black;
+
+        a {
+            color: $highlight-color;
+        }
     }
 
     @include small() {
@@ -201,6 +205,15 @@ code {
         padding-bottom: 0.1em;
         border-bottom: 1px solid #ccc;
         margin: 0.7em 0;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+
+        a {
+            color: $highlight-color;
+        }
     }
 
     ul.posts {
