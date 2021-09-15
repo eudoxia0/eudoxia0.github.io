@@ -4,6 +4,8 @@ summary: The size of language ecosystems obscures the inherent design problems o
 tags: [plt]
 ---
 
+![Travis profile page]({{ site.post_images}}/languages-not-ecosystems/plot.svg)
+
 When discussing the relative merits of programming languages, people speak of
 the language and its ecosystem interchangeably. For good reason: the two are not
 separable; with few exceptions, you can't mix-and-match language and ecosystem.
