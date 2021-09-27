@@ -140,9 +140,9 @@ They agreed to petition the Maker.
 
 ***
 
-This is the noocene, two hundred billion seconds after the intelligence explosion: 10<sup>30</sup> immortal souls scattered over a billion stars, across a disk eight thousand light years in diameter. And a pantheon of some seven hundred gods, who have changed the face of nature. Most leave them a wide berth: the stars around Sadalmelik are not settled.
+This is the noocene: 10<sup>30</sup> immortal souls scattered over a billion stars, across a disk eight thousand light years in diameter. And a pantheon of some seven hundred gods, who have changed the face of nature. Most leave them a wide berth: the stars around Sadalmelik are not settled.
 
-And when gods die, grave-robbers flock to them and dig a quarry out of their bodies. This is the crew of the _Epiphany_: explorers who sift through the middens of collapsed civilizations and rob the graves of the gods, searching for beautiful things. This is the _Epiphany_: a treasure ship, laden to the gunwales with precious things from every world and every age, and proof that even gods can die.
+And when gods die, grave-robbers flock to them and dig a quarry out of their bodies. This is the crew of the _Epiphany_: explorers who sift through the middens of collapsed civilizations and rob the graves of the gods, searching for beautiful things. This is the _Epiphany_: a treasure ship, laden to the gunwales with precious things from every world and every age, and the burial hoards of the gods.
 
 ***
 
@@ -152,11 +152,11 @@ The _Epiphany_ arrived at Sadalmelik and slowed to seven hundred kilometers per 
 
 Soon their every action became subject to an infinite debate: what will the Maker think of this? Will it perceive a harmless action as a threat? Those debates ended always with a general admission of defeat: that they knew nothing about the psychology of the Maker, and could know very little of the comparative psychology of posthuman minds.
 
-Timon suggested they illuminate the planet with RADAR. Everyone else agreed that this was far too dangerous: that the Maker might interpret it as hostile action, even as an attempt to disrupt the thin radio links that connected the machines inside Terre Haute—unseen, the Maker’s agents on the planet—to the main Dyson swarm around the star.
+Timon suggested they illuminate the planet with RADAR. Everyone else agreed that this was far too dangerous: that the Maker might interpret it as hostile action, even as an attempt to interfere with the feeble radio links that connected the machines inside Terre Haute—unseen, the Maker’s agents on the planet—to the main Dyson swarm around the star.
 
-At night, Timon paced his room. *The gods are made of atoms*, he told himself. *They are not gods, but Titans. They are machines, machines, machines. Like us*.
+Alone, Timon paced his room. *The gods are made of atoms*, he told himself. *They are not gods, but Titans. They are machines, machines, machines. Like us*.
 
-They entered a polar orbit around Terre Haute, and imaged the surface with their telescopes: vast expanses of wild sea,  austral taiga, forests of spruce and birch Mountain ranges dominated the three continents of the southern hemisphere. And the half-buried ruins of a radial city at the head of a bay. And huge mirrors necklaced the planet in quiet orbits, warming the water just above freezing. And then they saw the pit.
+They entered a polar orbit around Terre Haute, and imaged the surface with their telescopes: vast expanses of wild sea,  austral taiga, forests of spruce and birch. Mountain ranges dominated the three continents of the southern hemisphere. And the half-buried ruins of a radial city at the head of a bay. And huge mirrors necklaced the planet in quiet orbits, warming the water just above freezing. And then they saw the pit.
 
 Said the treasure: “Petitions are made here.”
 
@@ -194,11 +194,15 @@ Slowly, with terror, she walked across rows of pink flowers, laid down on the gr
 
 The injury that had killed him was gone: the hole in the skull was absent, the coarse-cut flaps of skin were bound together, and no scar could report an injury.
 
-His head was crowned by a wreath cast from gold, intricately moulded twigs and leaves. The sunlight reflected on the crown and on his skin, and on beads of water on his face. A small pool of crystalline, almost white water had settled on his jugular notch.
+His head was crowned by a wreath cast from gold, intricately moulded twigs and leaves. The sunlight reflected on the wreath and on his skin, and on beads of water on his face. A small pool of crystalline, almost white water had settled on his jugular notch.
 
 Timon arrived soon after. He froze and said nothing.
 
-She lifted Tiet’s unconscious body and placed him over Timon’s back. Then the mirror turned and the light went off.
+She turned to him and mouthed:
+
+"Help me."
+
+She reached under Tiet's shoulders and legs, and lifted him up. Then the mirror turned and the light went off.
 
 
 
@@ -284,7 +288,7 @@ Sabra asked what it was like.
 
 A log cracked in the bonfire.
 
-"He had the face of a wolf, surrounded by a halo of Dyson spheres."
+"I saw the face of a wolf, surrounded by a halo of Dyson spheres."
 
 An unpleasant sensation grew in Sabra's throat. Tiet looked directly at the fire, and his face was clad in carnelian. The sound of the fire, the wind, the sea disappeared. All she saw was Tiet’s face in the void, and the flames danced on his face.
 
@@ -324,7 +328,7 @@ Embers rose in the endless night. In the forest, a nightingale began to sing.
 
 
 
-Tiet was the first to go back to the tent. Timon stood and began pawing sand at the fire. The wind picked up again.
+Tiet was the first to go back to the tent. Timon stood and began pawing sand on the fire. The wind picked up again.
 
 Sabra was very still, until she finally spoke:
 
@@ -350,11 +354,11 @@ The fire died and they returned to the tent.
 
 Early in the morning of the next day, they agreed to leave. They dismantled the tent, and put their equipment in its boxes. Sabra took a brief walk through the forest, then returned to shore. Tiet stood on the deck of the glider, picking the boxes Timon lifted up and lowering them into the hold. And she froze: from her vantage point, Tiet stood directly in front of the glider’s sole propfan, his head ringed by the thin halo of the engine inlet. Briefly. And then he squatted to pick up another box.
 
-Sitting in the glider, flying over the endless blue of the ocean, she held the gold wreath in her hands, careful not to bend the delicate leaves. Tears welled up but didn’t break. _The  wreath_. To the victor who had conquered death, who had swam back to shore from the abyss. She turned it in her hands, counting the leaves as if they were prayer beads. A crown of one hundred and nine leaves.
+Sitting in the glider, flying over the endless blue of the ocean, she held the gold wreath in her hands, careful not to bend the delicate leaves. _The wreath_: to the victor who had conquered death, who had swam back to shore from the abyss. She turned it in her hands, thumbing the leaves as if they were prayer beads, and counted one hundred and nine leaves.
 
 Timon was silent. Tiet was silent.
 
-The glider flew until the air was a thin whisper, where a cable from the ship picked them up and reeled them in.
+The glider soared until the air was a thin whisper, where a cable from the ship picked them up and reeled them in.
 
 The *Epiphany* flew away, and for many nights the actinic light from its exhaust illuminated the forest and the island far below them. Days passed and the exhaust faded and the *Epiphany* was gone.
 
