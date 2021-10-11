@@ -1,5 +1,5 @@
 ---
-title: Signed Integers are Assymetrical
+title: Signed Integers are Asymmetrical
 summary: An edge case in integer safety.
 ---
 
@@ -51,11 +51,11 @@ abs( 126) =  126
 abs( 127) =  127
 ```
 
-The very first case is wrong. Why? Because signed integers are assymetrical
+The very first case is wrong. Why? Because signed integers are asymmetrical
 around zero. Note how `INT8_MAX` is 127, while `INT8_MIN` is -128. You can think
 of it in terms of a number line, with the negative side being larger by one:
 
-![A number line from -128 to 126, with a dot at zero and at -127.]({{ site.post_images }}/signed-integers-assymetrical/number-line.png)
+![A number line from -128 to 126, with a dot at zero and at -127.]({{ site.post_images }}/signed-integers-asymmetrical/number-line.png)
 
 More generally: if a signed two's complement number has _n_ bits, the largest
 number it can represent is 2<sup>(n - 1)</sup> - 1, while the most negative
@@ -64,12 +64,12 @@ number it can represent is -2<sup>(n - 1)</sup>
 You can think of unary negation as rotating a number around zero on the number
 line. Evaluating `-(-127)` rotates the number and lands on 127:
 
-![The same number line as before, with an arc drawn from 127 to -127, showing how rotating one number around zero on the number line leads to the other.]({{ site.post_images }}/signed-integers-assymetrical/rotate1.png)
+![The same number line as before, with an arc drawn from 127 to -127, showing how rotating one number around zero on the number line leads to the other.]({{ site.post_images }}/signed-integers-asymmetrical/rotate1.png)
 
 Evaluating `-(-128)` rotates the number around zero, but it lands one step beyond
 `INT8_MAX`. Because of overflow, it lands right back on `INT8_MIN`.
 
-![The same number line as before, with an arc drawn from -128 to a point beyond the right side of the number line, showing how rotating the number -128 around zero on the number line leads to a number that is not representable in eight bits.]({{ site.post_images }}/signed-integers-assymetrical/rotate2.png)
+![The same number line as before, with an arc drawn from -128 to a point beyond the right side of the number line, showing how rotating the number -128 around zero on the number line leads to a number that is not representable in eight bits.]({{ site.post_images }}/signed-integers-asymmetrical/rotate2.png)
 
 Note that compiling with `-ftrapv` doesn't help. Neither GCC nor Clang catch
 this. Ada does, though:
