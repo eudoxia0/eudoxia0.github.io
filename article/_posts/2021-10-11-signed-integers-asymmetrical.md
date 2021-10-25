@@ -22,7 +22,7 @@ Seems straightforward enough. Let's try it with some representative numbers:
 #include <stdio.h>
 
 int8_t absolute(int8_t x) {
-  if (x > 0) {
+  if (x >= 0) {
     return x;
   } else {
     return -x;
