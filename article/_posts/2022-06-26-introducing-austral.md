@@ -61,6 +61,8 @@ sometimes, in rare situations, hide a complex system under a simple
 interface. But not programming languages, because complex programming languages
 are like a universe where the gravitational constant changes daily.
 
+Austral is simple. Short spec, thin runtime, small compiler.
+
 To give a concrete example: the linear type system was designed with brutal
 simplicity in mind. Consequently, Austral's equivalent of a borrow checker is
 [less than 600 lines of code][linearitycheck], including the implementation of
