@@ -235,13 +235,13 @@ object:
 
 We can depict this graphically like this:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.]({{ site.post_images }}/introducing-austral/file-api.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral/file-api.png)
 
 But, crucially: this lifecycle is _not enforced by the compiler_. There are a
 number of erroneous transitions that we don't consider, but which are
 technically possible:
 
-![The graph from the previous figure, with a new node labeled 'leak', and with four new arrows in red: one from 'closeFile' to itself labeled 'double close', one from 'closeFile' to 'writeString' labeled 'use after close', one from 'openFile' to 'leak' labeled 'forgot to close', and one from 'writeString' to 'leak' also labeled 'forgot to close'.]({{ site.post_images }}/introducing-austral/file-api-errors.png)
+![The graph from the previous figure, with a new node labeled 'leak', and with four new arrows in red: one from 'closeFile' to itself labeled 'double close', one from 'closeFile' to 'writeString' labeled 'use after close', one from 'openFile' to 'leak' labeled 'forgot to close', and one from 'writeString' to 'leak' also labeled 'forgot to close'.](/assets/content/introducing-austral/file-api-errors.png)
 
 These fall into two categories:
 
@@ -596,7 +596,7 @@ silently discarded. The compiler will whine at us.
 
 We can strike the "leak" transitions from the lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There are two red arrows: one from 'closeFile' to 'writeString' labeled 'use after close', and one from 'closeFile' to itself labeled 'double close'.]({{ site.post_images }}/introducing-austral/file-api-without-leaks.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There are two red arrows: one from 'closeFile' to 'writeString' labeled 'use after close', and one from 'closeFile' to itself labeled 'double close'.](/assets/content/introducing-austral/file-api-without-leaks.png)
 
 Can we close a file twice? No:
 
@@ -610,7 +610,7 @@ The compiler will complain that you're trying to consume a linear variable
 twice. So we can strike the "double close" erroneous transition from the
 lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There is one red arrow: from 'closeFile' to 'writeString' labeled 'use after close'.]({{ site.post_images }}/introducing-austral/file-api-without-leaks-and-double-close.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There is one red arrow: from 'closeFile' to 'writeString' labeled 'use after close'.](/assets/content/introducing-austral/file-api-without-leaks-and-double-close.png)
 
 And you can see where this is going. Can we write to a file after closing it?
 No:
@@ -623,7 +623,7 @@ File! file2 = writeString(file, "Doing some mischief.");
 
 The compiler will, again, complain that we're consuming `file` twice. So we can strike the "use after close" transition from the lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.]({{ site.post_images }}/introducing-austral//file-api.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral//file-api.png)
 
 And we have come full circle: the lifecycle that the compiler enforces is
 exactly, one-to-one, the lifecycle that we intended.
