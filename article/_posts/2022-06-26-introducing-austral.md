@@ -183,7 +183,13 @@ What Austral _does_ have:
 4. A strong, Ada-inspired module system which is not tied to filesystem
    structure and which separates module interfaces from implementations.
 
-5. A strict, context-free, unambiguous syntax, informed by [langsec][langsec]
+5. [Sum types][sum] with pattern matching and exhaustiveness checking.
+
+6. [Type classes][typeclass], as in Haskell, for restricted function
+   overloading, and type parameters can be constrained to only accept types that
+   implement a given typeclass.
+
+7. A strict, context-free, unambiguous syntax, informed by [langsec][langsec]
    ideas.
 
 # Linear Types {#linear}
@@ -1201,7 +1207,8 @@ end;
 [spectre]: https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)
 [spec]: https://austral.github.io/spec/
 [spec-linearity]: https://austral.github.io/spec/linearity
-
+[sum]: https://en.wikipedia.org/wiki/Algebraic_data_type
+[typeclass]: https://austral.github.io/spec/type-classes
 # Footnotes
 
 [^python]:
