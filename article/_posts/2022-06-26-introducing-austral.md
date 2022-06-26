@@ -4,9 +4,16 @@ summary: Introducing my programming language.
 tags: []
 ---
 
-[**Austral**][austral] is a new systems programming language. It features a strong static
-type system, linear types, capability-based security, and strong modularity. You
-can think of it as Rust: The Good Parts or a modernized, stripped-down Ada.
+[**Austral**][austral] is a new systems programming language. It features a
+strong static type system, linear types, capability-based security, and strong
+modularity. You can think of it as Rust: The Good Parts or a modernized,
+stripped-down Ada.
+
+This article is an introduction to the language. The first few sections are
+abstract: they are about the design and the mindset of the language. The next
+two sections, about linear types and capability-based security, are much more
+detailed and technical: they are meant to prove to the reader that the claims
+being made about security and correctness are true.
 
 # Contents
 
@@ -1168,11 +1175,17 @@ end;
 There is a bootstrapping [compiler][austral] written in OCaml. It implements the
 entire language. There is also a [specification][spec].
 
+Things are only ever asymtotically finished. The language is at a level of
+maturity where I can write simple programs and talk about it in public, however,
+as of late June 2022, a few missing pieces are expected.
+
 The compiler is a very simple, whole program compiler that outputs C. Separate
 compilation, for added performance, is not yet implemented but is in the works.
 
-The next steps are: a capability-secure standard library, and a build
-system+package manager. Contributions are welcome.
+The next steps are: function pointer types, a capability-secure standard
+library, and a build system/package manager, and separate compilation.
+
+Contributions are welcome.
 
 # Conclusion {#conclusion}
 
