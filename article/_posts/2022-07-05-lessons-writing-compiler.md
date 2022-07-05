@@ -471,7 +471,7 @@ namespace foo {
 
 Then the function `bar` can be identified by the string `foo::bar`. In most
 languages this is all it takes. But some languages -- Haskell, Rust, Austral --
-have declarations that don't identifying names. Namely, type class/trait
+have declarations that don't have identifying names. Namely, type class/trait
 instances:
 
 ```haskell
