@@ -24,7 +24,7 @@ frontend and middle-end? Semantic analysis, type checking, and checking the
 rules of declarations are the most important parts of modern compilers because
 this is where all the important diagnostics (other than syntax errors) are made.
 
-This article contains some of the lessons I learn writing the compiler for
+This article contains some of the lessons I learned writing the compiler for
 [Austral][austral], a new systems programming language with linear types that
 I've been working on for a while. The first few sections are high-level, the
 rest most specific to using OCaml to write a compiler.
