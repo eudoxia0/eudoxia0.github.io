@@ -211,7 +211,7 @@ codebases is intrinsically slow.
 
 Being able to typecheck, compile, and run code at a high frequency makes
 development less frustrating. Having to wait ten seconds to build hundreds of
-thousands of code, _ab initio_, for every change that you make is
+thousands of lines of code, _ab initio_, for every change that you make is
 frustrating. Performance requires separate compilation.
 
 Separate compilation requires careful thinking. It can't be an afterthought of
@@ -221,11 +221,11 @@ out from the start is a good idea.
 
 # Code Organization {#org}
 
-It's genrally good to separate _intermediate representations_ from _passes_. The
-former are types, the latter are a set of functions. This helps keep modules
-short and to the point. Besides, there's not always a one-to-one mapping from
-IRs to passes, you will be running multiple different analysis passes on the
-same representation.
+It's generally good to separate _intermediate representations_ from
+_passes_. The former are types, the latter are a set of functions. This helps
+keep modules short and to the point. Besides, there's not always a one-to-one
+mapping from IRs to passes, you will be running multiple different analysis
+passes on the same representation.
 
 The exception to this is where it would break encapsulation. Sometimes you want
 types to be opaque, so that the module that defines them can enforce invariants
