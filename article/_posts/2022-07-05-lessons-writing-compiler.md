@@ -333,7 +333,7 @@ type mod_rec = ModRec of {
 In addition to this there's a table of declarations, a table of typeclass
 instance methods, and a table of monomorphs (to implement generics).
 
-The environment has a simple CRUD API, and each function basic performs
+The environment has a simple CRUD API, and each function basically performs
 integrity checks like ensuring that you don't have two declarations with the
 same name in the same module.
 
