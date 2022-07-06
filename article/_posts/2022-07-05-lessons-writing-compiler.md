@@ -136,10 +136,10 @@ You need a parser. This is the most mind-numbing part of the compiler. Writing a
 parser by hand is tricky and not worth the alleged performance
 increases[^perf]. Parsing performance likely won't be the bottleneck.
 
-Parser generators are very popular. It's cute that you can parameterize grammars
-by making them into functions. But the problem with parser combinators is they
-implement [parsing expression grammars][peg]. PEGs are popular too, but they're
-too rigid.
+Parser combinators are very popular. It's cute that you can parameterize
+grammars by making them into functions. But the problem with parser combinators
+is they implement [parsing expression grammars][peg]. PEGs are popular too, but
+they're too rigid.
 
 In a PEG, the disjunction or choice operator (typically denoted by the pipe
 character `|`) is _ordered_ choice. If you have a context-free grammar like `foo
