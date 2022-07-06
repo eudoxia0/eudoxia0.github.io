@@ -51,8 +51,7 @@ a system.
 Complex systems, with lots of moving parts that impinge on one another, cannot
 be described briefly. Rube Goldberg machines, biology, and C++ are complex
 systems. Python is a complex system, despite being "easy" to
-use[^python]. Simple systems have compressible descriptions: a crystal can be
-described by a lattice, and three vectors of orientation and extent.
+use[^python]. Simple systems have short descriptions.
 
 Simplicity is an overriding goal because programming languages _are not
 tools_. A programming language is the toolbox, plus the building material, plus
