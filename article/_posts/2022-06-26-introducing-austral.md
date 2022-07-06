@@ -179,9 +179,9 @@ What Austral _does_ have:
 
 3. [Capability-based security][cap], which prevents [supply chain
    attacks][supplychain]. Your left-pad dependency can't be compromised to
-   upload the contents of your disk to a remote server, because code that
-   performs network access needs a network capability, code that performs
-   filesystem access needs a filesystem capability, and so on, while a
+   upload the contents of your disk to a remote server. This is because code
+   that performs network access has to be explicitly given a network capability,
+   code that performs filesystem access needs a filesystem capability, etc. A
    string-padding function that claims to need network access instantly stands
    out. Capabilities are unforgeable: they cannot be acquired arbitrarily, they
    have to be passed in by the client.
@@ -930,7 +930,7 @@ borrow x as ref in rho do
     --
     -- Within this block, `x` cannot be consumed because it is borrowed,
     -- but `ref` can be used freely.
-    let y: &[L, R] := transform(ref);
+    let y: &[L, rho] := transform(ref);
     -- etc.
 end;
 -- After the borrow, we can consume `x`.
@@ -989,7 +989,7 @@ attacker adds malware to an innocent library used transitively by millions. It
 is downloaded and run, with the user's permissions, on the computers of hundreds
 of thousands of programmers, and afterwards, on application servers.
 
-The solution is [capability-based security][cap]. Code should be
+Austral's solution is [capability-based security][cap]. Code should be
 permissioned. To access the terminal, or the filesystem, or the network,
 libraries should require permission to do so. Then it is evident, from function
 signatures, what each library is able to do, and what level of auditing is
@@ -1014,7 +1014,7 @@ permission to perform an action. They have the following properties:
 
 1. Capabilities can be destroyed.
 
-2. Capabilities can be surrended by passing them to others.
+2. Capabilities can be surrendered by passing them to others.
 
 3. Capabilities cannot be duplicated.
 
@@ -1022,7 +1022,7 @@ permission to perform an action. They have the following properties:
    client.
 
 Capabilities in Austral are implemented as linear types: they are destroyed by
-being consumed, they are surrended by simply passing the value to a function
+being consumed, they are surrendered by simply passing the value to a function
 (i.e., by being consumed), they are non-duplicable since linear types cannot be
 duplicated. The fourth restriction must be implemented manually by the
 programmer.
@@ -1053,7 +1053,7 @@ end module.
 
 Here, any client can construct a path from a string, then read the file pointed
 to by that path or write to it. A compromised transitive dependency could then
-read the contents of `/etc/passwd`, or any file in the filesystem that the
+read the contents of your home directory, or any file in the filesystem that the
 process has access to, like so:
 
 ```austral
