@@ -59,17 +59,6 @@ sometimes, in rare situations, hide a complex system under a simple
 interface. But not programming languages, because complex programming languages
 are like a universe where the gravitational constant changes daily.
 
-Austral is simple. Short spec, thin runtime, small compiler.
-
-To give a concrete example: the linear type system was designed with brutal
-simplicity in mind. Consequently, Austral's equivalent of a borrow checker is
-[less than 600 lines of code][linearitycheck], including the implementation of
-borrowing and other ergonomic features.
-
-The goal here is that the entire programming language should fit in your head,
-that you should be able to read the [specification][spec] from beginning to end
-and know all there is to know about the language.
-
 There's this famous [quiz][quiz] of the C language, where you have all these
 strange-looking programs and have to decide what they output. And people who
 have been working with the language for years struggle to answer correctly
@@ -80,6 +69,17 @@ If you think figuring out what the program does is a fun puzzle, Austral is not
 for you. [Language lawyering][lawyering] is a design flaw: if two people can
 look at the same basic program and disagree about its behaviour, that's a
 problem.
+
+Austral is simple. Short spec, thin runtime, small compiler.
+
+To give a concrete example: the linear type system was designed with brutal
+simplicity in mind. Consequently, Austral's equivalent of a borrow checker is
+[less than 600 lines of code][linearitycheck], including the implementation of
+borrowing and other ergonomic features.
+
+The goal here is that the entire programming language should fit in your head,
+that you should be able to read the [specification][spec] from beginning to end
+and know all there is to know about the language.
 
 _Strictness_ is half language features, and half a change in mindset.
 
@@ -110,10 +110,10 @@ vulnerabilities. It's self-evidently a design flaw. But if you suggest to
 programmers that they should add the braces, they will kick and scream as if
 you're taking away some fundamental freedom.
 
-Austral's syntax was designed with [langsec][langsec] in mind: it is
-context-free, it can be parsed from a grammar, no ["lexer hack"][lexerhack] or
-[strange ad-hoc ambiguity-resolution mechanisms][vexing] are needed. The
-pragmatics of the syntax are designed to minimize confusion and
+Austral's syntax was designed with [language security][langsec] principles in
+mind: it is context-free, it can be parsed from a grammar, no ["lexer
+hack"][lexerhack] or [strange ad-hoc ambiguity-resolution mechanisms][vexing]
+are needed. The pragmatics of the syntax are designed to minimize confusion and
 ambiguity. Anyone can remember [PEMDAS][pemdas], but programming languages have
 many categories of binary operators --- arithmetic, comparison, bitwise, Boolean
 --- and mixing them together creates room for error (what does `x ^ y && z / w`
