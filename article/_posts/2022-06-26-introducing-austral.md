@@ -1120,8 +1120,9 @@ But: how do we create a `Filesystem` value? The next section explains this.
 ## The Root Capability {#cap-root}
 
 Capabilities cannot be created out of thin air: they can only be created by
-proving proof that the client has access to a more powerful capability. This
-recursion has to end somewhere.
+proving proof that the client has access to a more powerful capability, for
+example by passing a reference to that capability. This recursion has to end
+somewhere.
 
 The root of the capability hierarchy is a value of type `Root_Capability`. This
 is the first argument to the entrypoint function of an Austral program. For our
