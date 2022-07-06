@@ -114,13 +114,14 @@ Austral's syntax was designed with [language security][langsec] principles in
 mind: it is context-free, it can be parsed from a grammar, no ["lexer
 hack"][lexerhack] or [strange ad-hoc ambiguity-resolution mechanisms][vexing]
 are needed. The pragmatics of the syntax are designed to minimize confusion and
-ambiguity. Anyone can remember [PEMDAS][pemdas], but programming languages have
-many categories of binary operators --- arithmetic, comparison, bitwise, Boolean
---- and mixing them together creates room for error (what does `x ^ y && z / w`
-evaluate to?). So in Austral there is simply no operator precedence: any binary
-expression deeper than one level is fully parenthesized. You have to type more,
-but we are not typists, we are programmers, and our task is to communicate _to
-others_ what we want computers to do. When in doubt: simplify.
+ambiguity. Consider the problem of operator precedence: anyone can remember
+[PEMDAS][pemdas], but programming languages have many categories of binary
+operators --- arithmetic, comparison, bitwise, Boolean --- and mixing them
+together creates room for error (what does `x ^ y && z / w` evaluate to?). So in
+Austral there is simply no operator precedence: any binary expression deeper
+than one level is fully parenthesized. You have to type more, but we are not
+typists, we are programmers, and our task is to communicate _to others_ what we
+want computers to do. When in doubt: simplify.
 
 This isn't for everyone. But it is for me, because after ten years in the
 industry, the last thing I want is power, what I want are fewer nightmares.
@@ -133,9 +134,8 @@ _anti-features_. Here are the things Austral proudly doesn't have:
 1. There are no pervasive `NULL`s, and therefore no null pointer dereference
    errors. You have to use an explicit `Option` type.
 
-2. There is no garbage collection.
-
-3. Therefore, there is no fat runtime.
+2. There is no garbage collection, so the runtime can be thin and performance is
+   predictable.
 
 4. There are no exceptions and no stack unwinding and no destructors.
 
@@ -164,8 +164,7 @@ _anti-features_. Here are the things Austral proudly doesn't have:
     concepts][concepts]).
 
 15. There is no syntactic ambiguity: no [dangling else][else] (and, therefore,
-    no [`gotofail`][gotofail]), no arithmetic precedence. All binary operations
-    beyond one level have to be fully parenthesized.
+    no [`gotofail`][gotofail]), no arithmetic precedence.
 
 # Features {#features}
 
@@ -173,10 +172,10 @@ What Austral _does_ have:
 
 1. A strong, static type system that's not too big-brained.
 
-2. Linear types, which allow resources to be handled correctly and safely
-   without runtime overhead. "Resource" here means memory, but also anything
-   that has an explicit lifecycle of create-use-destroy: file handles, sockets,
-   database handles.
+2. A type system which allows resources to be handled correctly and safely
+   without runtime overhead. "Resource" here means memory and anything that has
+   an explicit lifecycle of create-use-destroy: file handles, sockets, database
+   handles.
 
 3. [Capability-based security][cap], which prevents [supply chain
    attacks][supplychain]. Your left-pad dependency can't be compromised to
