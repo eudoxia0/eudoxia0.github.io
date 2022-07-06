@@ -1096,7 +1096,7 @@ module Files is
 end module.
 ```
 
-This demonstrates the hieararchical nature of capabilities, and how granular we
+This demonstrates the hierarchical nature of capabilities, and how granular we
 can go:
 
 1. If you have a `Filesystem` capability, you can get the `Path` to the root
