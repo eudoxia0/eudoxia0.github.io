@@ -4,10 +4,10 @@ summary: Introducing my programming language.
 tags: []
 ---
 
-[**Austral**][austral] is a new systems programming language. It features a
+[**Austral**][austral] is a new systems programming language. You can think of
+it as Rust: The Good Parts or a modernized, stripped-down Ada. It features a
 strong static type system, linear types, capability-based security, and strong
-modularity. You can think of it as Rust: The Good Parts or a modernized,
-stripped-down Ada.
+modularity.
 
 This article is an introduction to the language. The first few sections are
 abstract: they are about the design and the mindset of the language. The next
