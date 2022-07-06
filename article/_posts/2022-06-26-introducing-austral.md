@@ -10,7 +10,7 @@ strong static type system, linear types, capability-based security, and strong
 modularity.
 
 This article is an introduction to the language. The first few sections are
-abstract: they are about the design and the mindset of the language. The next
+high-level: they are about the design and the mindset of the language. The next
 two sections, about linear types and capability-based security, are much more
 detailed and technical: they are meant to prove to the reader that the claims
 being made about security and correctness are true.
