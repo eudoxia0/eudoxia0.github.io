@@ -44,8 +44,7 @@ Austral, but it boils down to two things:
 
 _Simplicity_ means different things to different people. Some use it to mean
 familiarity, or ease of use, or even terseness. Simplicity here has a
-straightforward definition: it is the dual of [Kolmogorov
-complexity][kolmogorov], which is the amount of information it takes to describe
+straightforward definition: it is the amount of information it takes to describe
 a system.
 
 Complex systems, with lots of moving parts that impinge on one another, cannot
@@ -1201,7 +1200,6 @@ end;
 
 [austral]: https://github.com/austral/austral
 [goals]: https://austral.github.io/spec/goals
-[kolmogorov]: https://en.wikipedia.org/wiki/Kolmogorov_complexity
 [quiz]: https://wordsandbuttons.online/so_you_think_you_know_c.html
 [lawyering]: http://www.catb.org/jargon/html/L/language-lawyer.html
 [else]: https://en.wikipedia.org/wiki/Dangling_else
