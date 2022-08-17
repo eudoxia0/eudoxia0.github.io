@@ -1,13 +1,13 @@
 ---
-title: First Impressions of Mochi Cards
+title: First Impressions of Mochi
 tags: []
-summary: Mochi Cards is a new multi-platform spaced repetition app.
+summary: Mochi is a new multi-platform spaced repetition app.
 ---
 
-![Mochi Cards' main user interface]({{ site.post_images }}/mochi-cards/mochi-ui.png)
+![Mochi's main user interface]({{ site.post_images }}/first-impressions-mochi/mochi-ui.png)
 
-[Mochi Cards][mochi] is a freemium [spaced repetition][sr] app. It is available
-on every platform and the paid version (5USD/month) has cross-device sync. This
+[Mochi][mochi] is a freemium [spaced repetition][sr] app. It is available on
+every platform and the paid version (5USD/month) has cross-device sync. This
 post is about my first impressions from using the free version, mostly comparing
 it with [Anki][anki].
 
@@ -18,11 +18,11 @@ beautiful, clean, and elegant. Anki has a very unfortunate UI.
 
 Here's how a card under review appears in Mochi:
 
-![How a card appears in Mochi]({{ site.post_images }}/mochi-cards/card-mochi.png)
+![How a card appears in Mochi]({{ site.post_images }}/first-impressions-mochi/card-mochi.png)
 
 Here's the same experience in Anki:
 
-![How a card appears in Anki]({{ site.post_images }}/mochi-cards/card-anki.png)
+![How a card appears in Anki]({{ site.post_images }}/first-impressions-mochi/card-anki.png)
 
 My only UI complaints with Mochi are:
 
@@ -38,7 +38,7 @@ Anki has a fairly detailed stats page (though the stat you care about, the
 retention rate, is underemphasized). Mochi's stats page is very anemic by
 comparison:
 
-![Mochi's stats page]({{ site.post_images }}/mochi-cards/stats.png)
+![Mochi's stats page]({{ site.post_images }}/first-impressions-mochi/stats.png)
 
 It would be good if, in the future, the stats page had a bit more detail. "Total
 number of cards" would be nice to have.
@@ -52,15 +52,15 @@ each one.
 
 Here's the template list, and a very simple template for defining terms:
 
-![The template list and the definition of a template.]({{ site.post_images }}/mochi-cards/template.png)
+![The template list and the definition of a template.]({{ site.post_images }}/first-impressions-mochi/template.png)
 
 And here's an example of editing a card with this template:
 
-![Example of editing a card with a template.]({{ site.post_images }}/mochi-cards/template-edit.png)
+![Example of editing a card with a template.]({{ site.post_images }}/first-impressions-mochi/template-edit.png)
 
 Along with how the card is rendered:
 
-![Example of how a templated card is rendered]({{ site.post_images }}/mochi-cards/template-render.png)
+![Example of how a templated card is rendered]({{ site.post_images }}/first-impressions-mochi/template-render.png)
 
 Anki has a more general concept called [notes][ankinotes]. A note is basically a
 data record from which multiple cards can be derived. For example, you could
@@ -139,9 +139,9 @@ Both Anki and Mochi have keyboard shortcuts, but Mochi's are emphasized in the
 UI (the button text includes the shortcut), so you learn them faster and more
 effectively than with Anki.
 
-![Highlighting the keyboard shortcuts when viewing a card.]({{ site.post_images }}/mochi-cards/view-card.png)
+![Highlighting the keyboard shortcuts when viewing a card.]({{ site.post_images }}/first-impressions-mochi/view-card.png)
 
-![Highlighting the keyboard shortcuts when editing a card.]({{ site.post_images }}/mochi-cards/edit-card.png)
+![Highlighting the keyboard shortcuts when editing a card.]({{ site.post_images }}/first-impressions-mochi/edit-card.png)
 
 # Language Learning
 
@@ -205,8 +205,8 @@ rather than falling into the failure mode of using it for two weeks every six
 months. Which is why a good presentation and user interface outweighs a lot of
 other considerations in my evaluation.
 
-If you've never used SR, or never managed to make it stick, give [Mochi
-Cards][mochi] a try.
+If you've never used SR, or never managed to make it stick, give [Mochi][mochi]
+a try.
 
 [mochi]: https://mochi.cards/
 [sr]: https://en.wikipedia.org/wiki/Spaced_repetition
