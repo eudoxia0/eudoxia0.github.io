@@ -182,9 +182,9 @@ sounds, Cloze deletions. They are essentially at feature parity.
 
 Anki is free and open source. Anki's note types feature is really powerful: it
 lets you create a large number of cards from a small amount of structured data,
-and handles updates and deletions for you. But the interface is a mess and any
-usage above "absolute novice" involves using multiple Python plugins. It
-does sync for free.
+and handles updates and deletions for you. It does sync for free. But the
+interface is ugly and any usage above "absolute novice" involves using multiple
+Python plugins.
 
 Mochi is freemium and the paid sync is a reasonable 5USD/month. It is slightly
 less powerful (in terms of automation from within), but it is more _featureful_:
@@ -196,7 +196,7 @@ Mochi's main deficiency is a spartan stats page and the lack of note types
 (which is not a showstopper). It would also be nice to have the ability to
 export a deck (including image cloze cards) _without_ review history so they can
 actually be shared. I'd also like the ability to back up my entire collection
-including metadata so a single file, so I can have a localhost backup if the
+including metadata to a single file, so I can have a localhost backup if the
 remote cloud backup fails or is no longer available.
 
 Where Mochi absolutely beats Anki is the user interface. Ultimately, what
