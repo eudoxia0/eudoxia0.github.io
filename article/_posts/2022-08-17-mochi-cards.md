@@ -171,7 +171,7 @@ For poetry I use a Python script based on [Gwern's `⁠mnemo.hs`][mnemo.hs] to
 generate the cards from a list of lines.
 
 Mochi doesn't support plugins, and I'm pretty happy with that. Most apps need
-plugins like I need a callostomy.
+plugins like I need a callosotomy.
 
 # Common Features
 
