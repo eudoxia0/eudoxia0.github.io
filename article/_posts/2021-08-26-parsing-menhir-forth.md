@@ -346,7 +346,7 @@ above: an atom is either an integer constant, a float constant, or a word.
 ```ocaml
 atom:
   | i=INT_CONSTANT { Int i }
-  | f=FLOAT_CONSTANT { Float i }
+  | f=FLOAT_CONSTANT { Float f }
   | s=WORD { Word s }
   ;
 ```
