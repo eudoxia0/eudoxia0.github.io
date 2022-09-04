@@ -1034,17 +1034,14 @@ end;
 There is a bootstrapping [compiler][austral] written in OCaml. It implements the
 entire language. There is also a [specification][spec].
 
-Things are only ever asymtotically finished. The language is at a level of
-maturity where I can write simple programs and talk about it in public, however,
-as of late June 2022, a few missing pieces are expected.
+Things are only ever asymtotically finished, the language is at a level of
+maturity where I can write simple programs and talk about it in public.
 
 The compiler is a very simple, whole program compiler that outputs C. Separate
 compilation, for added performance, is not yet implemented but is in the works.
 
-The next steps are: function pointer types, a capability-secure standard
-library, and a build system/package manager, and separate compilation.
-
-Contributions are welcome.
+The next steps are: a bigger, capability-secure standard library, a build
+system/package manager, and separate compilation.
 
 # Conclusion {#conclusion}
 
