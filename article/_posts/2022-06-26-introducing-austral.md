@@ -1048,12 +1048,12 @@ Contributions are welcome.
 
 # Conclusion {#conclusion}
 
-And finally:
+And without further ado:
 
 ```
-function Main(root: Root_Capability): Root_Capability is
-    PrintLn("Hello, world!");
-    return root;
+function main(): ExitCode is
+    printLn("Hello, world!");
+    return ExitSuccess();
 end;
 ```
 
