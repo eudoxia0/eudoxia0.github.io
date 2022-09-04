@@ -22,11 +22,12 @@ being made about security and correctness are true.
 3. [Features](#features)
 4. [Linear Types](#linear)
    1. [Motivation](#linear-motivation)
-   2. [What are Linear Types?](#linear-what)
+   2. [What Linear Types Are](#linear-what)
    3. [Universes](#linear-universes)
    4. [The Use-Once Rule](#linear-once)
    5. [Linear Types and Safety](#linear-safety)
-   6. [Borrowing](#linear-borrowing)
+   6. [A Safe Database API](#linear-db)
+   7. [Borrowing](#linear-borrowing)
 5. [Capability-Based Security](#cap)
    1. [Linear Capabilities](#cap-linear)
    2. [A Capability-Secure Filesystem API](#cap-fs)
@@ -97,34 +98,46 @@ pilots, to take on part of the load of flying.
 Because humans are tired, they are burned out, they have limited focus, limited
 working memory, they are traumatized by writing executable YAML, _etc_.
 
-An example: there is a design flaw in the C programming language where, for
-terseness, you can write `if` statements without braces. This introduces a
-syntactic ambiguity: it's called the ["dangling else"][else] problem. This isn't
-some abstract ivory tower concern: it has caused [real-world security
-vulnerabilities][gotofail]. If you suggest that this is a flaw,
-Stockholm-syndromed programmers will invoke the old [thought-terminating
-cliche][cliche]: "only a bad craftsman blames his tools!". But the tradeoff here
-is obvious: you save a few bytes and a few milliseconds of typing, but you
-introduce potentially billions of dollars of harm from security
-vulnerabilities. It's self-evidently a design flaw. But if you suggest to
-programmers that they should add the braces, they will kick and scream as if
-you're taking away some fundamental freedom.
+Strictness is rarely one big language feature, rather, it's about learning from
+the design flaws in other languages, the "death by a thousand cuts", and
+preventing the causes of each of them. This can be hard because programmers get
+very attached to the flaws.
+
+An example: there is a feature of C syntax where, for terseness, you can write
+`if` statements without braces. This introduces a syntactic ambiguity: it's
+called the ["dangling else"][else] problem. The fact that there's a Wikipedia
+article about it should suggest that this is bad. This isn't some abstract
+academic concern: it has caused [real-world security vulnerabilities][gotofail].
+
+Now, if you suggest that this is a flaw, some programmers will invoke the old
+[thought-terminating cliche][cliche]: "only a bad craftsman blames his
+tools!". But the tradeoff here is obvious: you save a few bytes and a few
+milliseconds of typing, but you roll the dice and possibly introduce a CVE that
+causes billions of dollars of harm. It's self-evidently a design flaw, but if
+you suggest to programmers that they should add the braces, they will kick and
+scream as if you're taking away some fundamental freedom.
 
 Austral's syntax was designed with [language security][langsec] principles in
-mind: it is context-free, it can be parsed from a grammar, no ["lexer
-hack"][lexerhack] or [strange ad-hoc ambiguity-resolution mechanisms][vexing]
-are needed. The pragmatics of the syntax are designed to minimize confusion and
-ambiguity. Consider the problem of operator precedence: anyone can remember
-[PEMDAS][pemdas], but programming languages have many categories of binary
-operators --- arithmetic, comparison, bitwise, Boolean --- and mixing them
-together creates room for error (what does `x ^ y && z / w` evaluate to?). So in
-Austral there is simply no operator precedence: any binary expression deeper
-than one level is fully parenthesized. You have to type more, but we are not
-typists, we are programmers, and our task is to communicate _to others_ what we
-want computers to do. When in doubt: simplify.
+mind: it is context-free, it can be parsed from a grammar, there's no ["lexer
+hack"][lexerhack], there are no [strange, ad-hoc ambiguity-resolution
+mechanisms][vexing]. The pragmatics of the syntax are designed to minimize
+confusion and ambiguity.
+
+For another example, consider the problem of operator precedence: anyone can
+remember [PEMDAS][pemdas], but programming languages have many categories of
+binary operators --- arithmetic, comparison, bitwise, Boolean --- and mixing
+them together creates room for error (what does `x ^ y && z / w` evaluate
+to?). So in Austral there is simply no operator precedence: any binary
+expression deeper than one level is fully parenthesized. You have to type more,
+but we are not typists, we are programmers, and our task is to communicate _to
+others_ what we want computers to do. When in doubt: simplify by paring down the
+language.
 
 This isn't for everyone. But it is for me, because after ten years in the
-industry, the last thing I want is power, what I want are fewer nightmares.
+industry, the last thing I want from a programming language is "power". What I
+want are fewer nightmares. The "liberties" that programming languages provide
+feel like expressive power _until_ your codebase becomes a mental health
+superfund site.
 
 # Anti-Features {#anti-features}
 
@@ -139,12 +152,13 @@ _anti-features_. Here are the things Austral proudly doesn't have:
 
 4. There are no exceptions and no stack unwinding and no destructors.
 
-5. Therefore, there is no surprise control flow.
+5. There is no surprise control flow: you have conditionals, loops, and function
+   calls. And nothing else.
 
 6. There are no implicit type conversions anywhere.
 
 7. More generally: _there are no implicit function calls_. If it's not on the
-   page, it's not happening, and you're not paying for it.
+   page, it's not happening, and you're not paying the cost of it.
 
 8. There is no global state.
 
@@ -164,7 +178,11 @@ _anti-features_. Here are the things Austral proudly doesn't have:
     concepts][concepts]).
 
 15. There is no syntactic ambiguity: no [dangling else][else] (and, therefore,
-    no [`gotofail`][gotofail]), no arithmetic precedence.
+    no [`gotofail`][gotofail]), no arithmetic precedence, no syntactic
+    precedence rules of any kind.
+
+16. There is no syntactic extension: you can't, for example, introduce new infix
+    operators.
 
 # Features {#features}
 
@@ -183,8 +201,7 @@ What Austral _does_ have:
    that performs network access has to be explicitly given a network capability,
    code that performs filesystem access needs a filesystem capability, etc. A
    string-padding function that claims to need network access instantly stands
-   out. Capabilities are unforgeable: they cannot be acquired arbitrarily, they
-   have to be passed in by the client.
+   out. Capabilities are unforgeable, secure authorization tokens for code.
 
 4. A strong, Ada-inspired module system which is not tied to filesystem
    structure and which separates module interfaces from implementations.
@@ -192,8 +209,8 @@ What Austral _does_ have:
 5. [Sum types][sum] with pattern matching and exhaustiveness checking.
 
 6. [Type classes][typeclass], as in Haskell, for restricted function
-   overloading, and type parameters can be constrained to only accept types that
-   implement a given typeclass.
+   overloading. As in Haskell, type parameters can be constrained to only accept
+   types that implement a given typeclass.
 
 7. A strict, context-free, unambiguous syntax, informed by [langsec][langsec]
    ideas.
@@ -203,33 +220,34 @@ What Austral _does_ have:
 It is difficult to advertise a language as being "simple" and then start talking
 about "linear types" and "type universes", but it is only the words that are
 new. The concepts are simple. Austral's entire linear type system [fits in a
-page][spec-linearity]. So, this isn't some abstract ivory tower feature that you need a
-PhD in category theory to understand.
+page][spec-linearity]. So, this isn't some abstract ivory tower feature that you
+need a PhD in category theory to understand.
 
 Linear types let us have manual memory management, without runtime overhead, and
 without security vulnerabilities: they prevent memory leaks, use-after-free, and
 double-free errors.
 
 This extends beyond memory to anything that has a lifecycle, where we have to
-create it, use it, and destroy it. File handles, network sockets, database
-handles, locks and mutexes: the correct usage of these objects can be enforced
-at compile time.
+create it, use it, and destroy it in a certain order. File handles, network
+sockets, database handles, locks and mutexes: the correct usage of these objects
+can be enforced at compile time.
 
 First, I'll explain the motivation: why do we need linear types? Then I'll
 explain what they are, and how they provide safety.
 
 ## Motivation {#linear-motivation}
 
-Consider a file handling API, in C++ syntax:
+Consider a file handling API:
 
-```c++
-struct File;
+```
+type File
 
-File openFile(string path);
+File openFile(String path)
 
-File writeString(File file, string content);
+File writeString(File file, String content)
 
-void closeFile(File file);
+void closeFile(File file)
+
 ```
 
 An experienced programmer understands the _implicit lifecycle_ of the `File`
@@ -241,20 +259,20 @@ object:
 
 We can depict this graphically like this:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral/file-api.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral/file-api.svg)
 
 But, crucially: this lifecycle is _not enforced by the compiler_. There are a
 number of erroneous transitions that we don't consider, but which are
 technically possible:
 
-![The graph from the previous figure, with a new node labeled 'leak', and with four new arrows in red: one from 'closeFile' to itself labeled 'double close', one from 'closeFile' to 'writeString' labeled 'use after close', one from 'openFile' to 'leak' labeled 'forgot to close', and one from 'writeString' to 'leak' also labeled 'forgot to close'.](/assets/content/introducing-austral/file-api-errors.png)
+![The graph from the previous figure, with a new node labeled 'leak', and with four new arrows in red: one from 'closeFile' to itself labeled 'double close', one from 'closeFile' to 'writeString' labeled 'use after close', one from 'openFile' to 'leak' labeled 'forgot to close', and one from 'writeString' to 'leak' also labeled 'forgot to close'.](/assets/content/introducing-austral/file-api-errors.svg)
 
 These fall into two categories:
 
 1. **Leaks:** we can forget to call `closeFile`, e.g.:
 
-    ```c++
-    auto file = openFile("hello.txt");
+    ```
+    let file = openFile("hello.txt");
     writeString(file, "Hello, world!");
     // Forgot to close
     ```
@@ -262,14 +280,14 @@ These fall into two categories:
 2. **Use-After-Close:** and we can call `writeString` on a `File` object that
    has already been closed:
 
-   ```c++
+   ```
    closeFile(file);
    writeString(file, "Goodbye, world!");
    ```
 
    And we can close the file handle after it has been closed:
 
-   ```c++
+   ```
    closeFile(file);
    closeFile(file);
    ```
@@ -281,14 +299,14 @@ more common.
 
 And they don't just apply to files. Consider a database access API:
 
-```c++
-struct Db;
+```
+type Db
 
-Db connect(string host);
+Db connect(String host)
 
-Rows query(Db db, string query);
+Rows query(Db db, String query)
 
-void close(Db db);
+void close(Db db)
 ```
 
 Again: after calling `close` we can still call `query` and `close`. And we can
@@ -296,18 +314,16 @@ also forget to call `close` at all.
 
 And --- crucially --- consider this memory management API:
 
-```c++
-template <typename T>
-*T allocate(T value);
+```
+type Pointer<T>
 
-template <typename T>
-T load(*T ptr);
+Pointer<T> allocate(T value)
 
-template <typename T>
-void store(*T ptr, T value)
+T load(Pointer<T> ptr)
 
-template <tyename T>
-void free(*T ptr)
+void store(Pointer<T> ptr, T value)
+
+void free(Pointer<T> ptr)
 ```
 
 Here, again, we can forget to call `free` after allocating a pointer, we can
@@ -374,7 +390,7 @@ So, to summarize our requirements:
 
 All these goals are achievable: the solution is _linear types_.
 
-## What are Linear Types? {#linear-what}
+## What Linear Types Are {#linear-what}
 
 In the physical world, an object occupies a single point in space, and objects
 can move from one place to the other. Copying an object, however, is
@@ -442,20 +458,16 @@ A value of a linear type must be used once and only once. Not _can_: _must_. It
 cannot be used zero times. This can be enforced entirely at compile time through
 a very simple set of checks.
 
-To understand what "using" a linear value means, let's look at some examples. We
-will use C syntax, rather than Austral syntax, so as to communicate just the
-concepts rather than the language syntax. With one minor change: linear types
-will be denoted by adding an exclamation mark after the name. So, `A` is a free
-type, but `B!` is a linear type.
+To understand what "using" a linear value means, let's look at some examples.
 
-Suppose you have a function `f` that returns a value of a linear type `L!`.
+Suppose you have a function `f` that returns a value of a linear type `L`.
 
 Then, the following code:
 
-```c
-{
-    L! x = f();
-}
+```austral
+begin
+    let x: L := f();
+end;
 ```
 
 is incorrect. `x` is a variable of a linear type, and it is used zero
@@ -463,10 +475,10 @@ times. The compiler will complain that `x` is being silently discarded.
 
 Similarly, if you have:
 
-```c
-{
+```austral
+begin
     f();
-}
+end;
 ```
 
 The compiler will complain that the return value of `f` is being silently
@@ -474,12 +486,12 @@ discarded, which you can't do to a linear type.
 
 If you have:
 
-```c
-{
-    L! x = f();
+```austral
+begin
+    let x: L := f();
     g(x);
     h(x);
-}
+end;
 ```
 
 The compiler will complain that `x` is being used twice: it is passed into
@@ -488,11 +500,11 @@ The compiler will complain that `x` is being used twice: it is passed into
 
 This code, however, passes: `x` is used once and exactly once:
 
-```c
-{
-    L! x = f();
+```austral
+begin
+    let x: L := f();
     g(x);
-}
+end;
 ```
 
 "Used" does not, however, mean "appears once in the code". Consider how `if`
@@ -500,29 +512,30 @@ statements work. The compiler will complain about the following code, because
 even though `x` appears only once in the source code, it is not being "used
 once", rather it's being used --- how shall I put it? 0.5 times?:
 
-```c
-{
-    L! x = f();
-    if (cond) {
+```austral
+begin
+    let x: L := f();
+    if cond() then
         g(x);
-    } else {
-        // Do nothing.
-    }
-}
+    else
+        -- Do nothing.
+        skip;
+    end if;
+end;
 ```
 
-`x` is consumed in one branch but not the other, and the compiler isn't
-happy. If we change the code to this:
+The variable `x` is consumed in one branch but not the other, and the compiler
+isn't happy. If we change the code to this:
 
-```c
-{
-    L! x = f();
-    if (cond) {
+```austral
+begin
+    let x: L := f();
+    if cond() then
         g(x);
-    } else {
+    else
         h(x);
-    }
-}
+    end if;
+end;
 ```
 
 Then we're good. The rule here is that a variable of a linear type, defined
@@ -531,13 +544,13 @@ or exactly once in each branch.
 
 A similar restriction applies to loops. We can't do this:
 
-```c
-{
-    L! x = f();
-    while cond() {
+```austral
+begin
+    let x: L := f();
+    while cond() do
         g(x);
-    }
-}
+    end while;
+end;
 ```
 
 Because even though `x` appears once, it is _used_ more than once: it is used
@@ -554,60 +567,60 @@ used in accordance to a lifecycle.
 
 ## Linear Types and Safety {#linear-safety}
 
-Let's consider a linear file system API. Again, we will use the modified C++ syntax.
+Let's consider a linear file system API. We'll use the syntax for Austral module specifications:
 
-The API looks like this:
+```austral
+module Files is
+    type File : Linear;
 
-```c++
-struct File!;
+    function openFile(path: String): File;
 
-File! openFile(string path);
+    function writeString(file: File, content: String): File;
 
-File! writeString(File! file, string content);
-
-void closeFile(File! file);
+    function closeFile(file: File): Unit;
+end module.
 ```
 
 The `openFile` function is fairly normal: takes a path and returns a linear
-`File!` object.
+`File` object.
 
-`writeString` is where things are different: it takes a linear `File!` object
-(and consumes it), and a string, and it returns a "new" linear `File!`
+`writeString` is where things are different: it takes a linear `File` object
+(and consumes it), and a string, and it returns a "new" linear `File`
 object. "New" is in quotes because it is a fresh linear value only from the
 perspective of the type system: it is still a handle to the same file. But don't
 think about the implementation too much: we'll look into how this is implemented
 later.
 
-`closeFile` is the destructor for the `File!` type, and is the terminus of the
-lifecycle graph: a `File!` enters and does not leave, and the object is disposed
+`closeFile` is the destructor for the `File` type, and is the terminus of the
+lifecycle graph: a `File` enters and does not leave, and the object is disposed
 of. Let's see how linear types help us write safe code.
 
-Can we leak a `File!` object? No:
+Can we leak a `File` object? No:
 
-```c++
-File! file = openFile("sonnets.txt");
-// Do nothing.
+```austral
+let file: File := openFile("test.txt");
+-- Do nothing.
 ```
 
 The compiler will complain: the variable `file` is used zero
 times. Alternatively:
 
-```c++
-File! file = openFile("sonnets.txt");
-writeString(file, "Devouring Time, blunt thou the lion’s paws, ...");
+```austral
+let file: File := openFile("test.txt");
+writeString(file, "Hello, world!");
 ```
 
-The return value of `writeString` is a linear `File!` object, and it is being
-silently discarded. The compiler will whine at us.
+The return value of `writeString` is a linear `File` object, and it is being
+silently discarded. The compiler will complain at us.
 
 We can strike the "leak" transitions from the lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There are two red arrows: one from 'closeFile' to 'writeString' labeled 'use after close', and one from 'closeFile' to itself labeled 'double close'.](/assets/content/introducing-austral/file-api-without-leaks.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There are two red arrows: one from 'closeFile' to 'writeString' labeled 'use after close', and one from 'closeFile' to itself labeled 'double close'.](/assets/content/introducing-austral/file-api-without-leaks.svg)
 
 Can we close a file twice? No:
 
-```c++
-File! file = openFile("test.txt");
+```austral
+let file: File := openFile("test.txt");
 closeFile(file);
 closeFile(file);
 ```
@@ -616,20 +629,21 @@ The compiler will complain that you're trying to consume a linear variable
 twice. So we can strike the "double close" erroneous transition from the
 lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There is one red arrow: from 'closeFile' to 'writeString' labeled 'use after close'.](/assets/content/introducing-austral/file-api-without-leaks-and-double-close.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four black arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'. There is one red arrow: from 'closeFile' to 'writeString' labeled 'use after close'.](/assets/content/introducing-austral/file-api-without-leaks-and-double-close.svg)
 
 And you can see where this is going. Can we write to a file after closing it?
 No:
 
-```c++
-File! file = openFile("test.txt");
+```austral
+let file: File := openFile("test.txt");
 closeFile(file);
-File! file2 = writeString(file, "Doing some mischief.");
+let file2: File := writeString(file, "Doing some mischief.");
 ```
 
-The compiler will, again, complain that we're consuming `file` twice. So we can strike the "use after close" transition from the lifecycle graph:
+The compiler will, again, complain that we're consuming `file` twice. So we can
+strike the "use after close" transition from the lifecycle graph:
 
-![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral//file-api.png)
+![A graph with three nodes labeled 'openFile', 'writeString', and 'close File'. There are four arrows: from 'openFile' to 'writeString', from 'openFile' to 'closeFile', from 'writeString' to itself, and from 'writeString' to 'closeFile'.](/assets/content/introducing-austral//file-api.svg)
 
 And we have come full circle: the lifecycle that the compiler enforces is
 exactly, one-to-one, the lifecycle that we intended.
@@ -637,13 +651,13 @@ exactly, one-to-one, the lifecycle that we intended.
 There is, ultimately, one and only one way to use this API such that the
 compiler doesn't complain:
 
-```c++
-File! f = openFile("rilke.txt");
-File! f_1= writeString(f, "We cannot know his legendary head\n");
-File! f_2= writeString(f_1, "with eyes like ripening fruit. And yet his torso\n");
+```austral
+let f: File := openFile("test.txt");
+let f1: File := writeString(f, "First line");
+let f2: File := writeString(f1, "Another line");
 ...
-File! f_15 = writeString(f_14, "You must change your life.");
-closeFile(f_15);
+let f15: File := writeString(f14, "Last line");
+closeFile(f15);
 ```
 
 Note how the file value is "threaded" through the code, and each linear variable
@@ -666,214 +680,59 @@ section:
 3. **Staticity Requirement:** Is it an ever-growing, ever-changing pile of
    heuristics? No: it is a fixed set of rules. Learn it once and use it forever.
 
+## A Safe Database API {#linear-db}
+
 And does this solution generalize? Let's consider a linear database API:
 
-```c++
-struct Db!;
+```austral
+module Database is
+    type Db: Linear;
 
-Db! connect(string host);
+    function connect(host: String): Db;
 
-std::pair<Db!, Rows> query(Db! db, string query);
+    function query(db: Db, query: String): Pair[Db, Rows];
 
-void close(Db! db);
+    function close(db: Db): Unit;
+end module.
 ```
 
 This one's a bit more involved: the `query` function has to return a tuple
-containing both the new `Db!` handle, and the result set.
+containing both the new `Db` handle, and the result set.
 
 Again: we can't leak a database handle:
 
-```c++
-Db! db = connect("localhost");
-// Do nothing.
+```austral
+let db: Db := connect("localhost");
+-- Do nothing.
 ```
 
 Because the compiler will point out that `db` is never consumed. We can't `close` a database handle twice:
 
-```c++
-Db! db = connect("localhost");
+```austral
+let db: Db := connect("localhost");
 close(db);
-close(db); // error: `db` consumed again.
+close(db); -- error: `db` consumed again.
 ```
 
 Because `db` is used twice. Analogously, we can't query a database once it's closed:
 
-```c++
-Db! db = connect("localhost");
+```austral
+let db: Db := connect("localhost");
 close(db);
-// auto [x,y] is tuple unpacking notation.
-auto [db1, rows] = query(db, "SELECT ...");
-close(db); // error: `db` consumed again.
+-- The below is tuple destructuring notation.
+let { first as db1: Db, second: Rows } := query(db, "SELECT ...");
+close(db); -- error: `db` consumed again.
+-- another error: `db1` never consumed.
 ```
 
 For the same reason. The only way to use the database correctly is:
 
-```c++
-let db: Db! := connect("localhost");
-auto [db1, rows] = query(db, "SELECT ...");
+```austral
+let db: Db := connect("localhost");
+let { first as db1: Db, second: Rows } = query(db, "SELECT ...");
 // Iterate over the rows or some such.
 close(db1);
 ```
-
-What about manual memory management? Can we make it safe? Let's consider a
-linear pointer API.
-
-For this example, we will switch to actual Austral syntax. This is because Austral lets us specify what universe type parameters belong to.
-
-When you have a generic type with generic type parameters, in a normal language
-(where all types belong to the same universe) you might declare it like:
-
-```c++
-type T<A, B, C>
-```
-
-In Austral, we have to specify what universe type parameters belong to, and what
-universe the resulting type belongs to. For example, here's a generic `Pair`
-type that takes two types in the `Free` universe, and is itself a `Free` type:
-
-```austral
-record Pair[A: Free, B: Free]: Free is
-    first: A;
-    second: B;
-end;
-```
-
-Sometimes we want a generic type to accept type arguments from any universe. In
-that case, instead of `Free` or `Linear`, we use `Type`:
-
-```
-record Pair[A: Type, B: Type]: Type is
-    first: A;
-    second: B;
-end;
-```
-
-This basically means: the type parameters `A` and `B` can be filled with types
-from either universe, and the universe that `Pair` belongs to is determined by
-said arguments:
-
-1. If `A` and `B` are both `Free`, then `Pair` is `Free`.
-2. If either one of `A` and `B` are `Linear`, then `Pair` is `Linear`.
-
-So, if we only pass `Free` types, the `Pair` type will be `Free`. But if we pass
-a single `Linear` type, `Pair` becomes `Linear`, because `Linear` types are
-viral.
-
-Here's the linear pointer API, in Austral syntax:
-
-```austral
-module LinearPointer is
-    type Pointer[T: Type]: Linear;
-
-    generic [T: Type]
-    function allocate(value: T): Pointer[T];
-
-    generic [T: Type]
-    function deallocate(ptr: Pointer[T]): T;
-
-    generic [T: Free]
-    function load(ptr: Pointer[T]): LoadResult[T];
-
-    record LoadResult[T: Free]: Linear is
-        pointer: Pointer[T];
-        value: T;
-    end;
-
-    generic [T: Free]
-    function store(ptr: Pointer[T] ptr, value: T): Pointer[T];
-end module.
-```
-
-This is more involved than previous examples, and uses new notation, so let's
-break it down declaration by declaration.
-
-1. First, we declare the `Pointer` type as a generic type that takes a parameter
-   from any universe, and belongs to the `Linear` universe by fiat. That is:
-   even if `T` is `Free`, `Pointer[T]` will be `Linear`.
-
-   ```austral
-   type Pointer[T: Type]: Linear;
-   ```
-
-   This syntax denotes an _opaque type_, whose implementation is provided in the
-   corresponding module body.
-
-2. Second, we define a generic function `allocate`, that takes a value from
-   either universe, allocates memory for it, and returns a linear pointer to it.
-
-   ```austral
-    generic [T: Type]
-    function allocate(value: T): Pointer[T];
-   ```
-
-3. Third, we define a slightly unusual `deallocate` function: rather than
-   returning `void`, it takes a pointer, dereferences it, deallocates the
-   memory, and returns the dereferenced value:
-
-   ```austral
-    generic [T: Type]
-    function deallocate(ptr: Pointer[T]): T;
-   ```
-
-4. Fourth, we define a generic function specifically for pointers that contain
-   free values: it takes a pointer, dereferences it, and returns a record with
-   both the pointer and the dereferenced free value.
-
-   ```austral
-   generic [T: Free]
-   function load(ptr: Pointer[T]): LoadResult[T];
-
-   record LoadResult[T: Free]: Linear is
-       pointer: Pointer[T];
-       value: T;
-   end;
-   ```
-
-   Why does `T` have to belong to the `Free` universe? Because otherwise we
-   could write code like this:
-
-   ```austral
-   // Suppose that `L` is a linear type.
-   let p: Pointer[L] := allocate(...);
-   // This is record destructuring notation.
-   let { pointer: Pointer[T], value: T } := load(p);
-   // `pointer` is consumed below.
-   let res: LoadResult[L] := load(pointer);
-   ```
-
-   Here, we've allocated a pointer to a linear value, but we've loaded it from
-   memory twice, effectively duplicating it. This obviously should not be
-   allowed. So the type parameter `T` is constrained to take only values of the
-   `Free` universe, which can be copied freely any number of times.
-
-5. Fifth, we define a generic function, again for pointers that contain free
-   values. It takes a pointer and a free value, and stores that value in the
-   memory allocated by the pointer, and returns the pointer again for reuse:
-
-   ```austral
-   generic [T: Free]
-   function store(ptr: Pointer[T] ptr, value: T): Pointer[T];
-   ```
-
-   Again: why can't this function be defined for linear values? Because then we
-   could write:
-
-   ```austral
-   // Suppose `L` is a linear type, and `a` and b`
-   // are variables of type `L`.
-   let p1: Pointer[L] := allocate(a);
-   let p2: Pointer[L] := store(p1, b);
-   let l: L := deallocate(p2);
-   ```
-
-   What happens to `a`? It is overwritten by `b` and lost. For values in the
-   `Free` universe this is no problem: who cares if a byte is overwritten? But
-   we can't overwrite linear values -- like database handles and such -- because
-   the they would be leaked.
-
-It is trivial to verify the safety properties. We can't leak memory, we can't
-deallocate twice, and we can't read or write from and to a pointer after it has
-been deallocated.
 
 ## Borrowing {#linear-borrowing}
 
@@ -1198,7 +1057,7 @@ function Main(root: Root_Capability): Root_Capability is
 end;
 ```
 
-[austral]: https://github.com/austral/austral
+[austral]: https://austral-lang.org/
 [goals]: https://austral.github.io/spec/goals
 [quiz]: https://wordsandbuttons.online/so_you_think_you_know_c.html
 [lawyering]: http://www.catb.org/jargon/html/L/language-lawyer.html
