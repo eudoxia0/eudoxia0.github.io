@@ -749,110 +749,43 @@ want the language to give us some guarantees: if a function should only be
 allowed to read from a linear value, but not deallocate it or mutate its
 interior, we want a way to represent that.
 
-_Borrowing_ is stolen lock, stock, and barrel from Rust. It improves ergonomics
-by allowing us to treat a linear value as free within a delineated context. And
-it allows us to degrade permissions: functions that should only be able to read
-data from a linear value can take a read-only reference, functions that should
-be able to mutate (but not destroy) a linear value can take a mutable reference.
+[_Borrowing_][borrowing] is stolen lock, stock, and barrel from Rust. It
+improves ergonomics by allowing us to treat a Linear value as Free within a
+delineated context. And it allows us to degrade permissions: functions that
+should only be able to read data from a linear value can take a read-only
+reference, functions that should be able to mutate (but not destroy) a linear
+value can take a mutable reference.
 
 Passing the linear value itself is the highest level of permissions: it allows
 the receiving function to do anything whatever with that value, by taking
 complete ownership of it.
 
-Unlike Rust, Austral's borrowing is more restricted, to make it clearer to the
-programmer what the lifetime of borrows is.
-
-A _reference_ is a free (copyable) pointer to a linear value. References come in
-two kinds: read-only and read-write.
-
-Reference types are tagged with a _region_, which you can think of as a
-singleton type that exists only within a lexical scope, i.e., within a block of
-code. This is to ensure that references cannot escape the scope in which they
-are defined, therefore, references cannot outlive the linear values they point
-to.
-
-Given a linear type `L`, and a region name `R`, `&[L, R]` is the type of a
-read-only reference to `L` in `R`, and `&![L, R]` the type of read-write
-references to `L` in `R`.
-
-In the most general case, references are made with the `borrow` statement. The
-`borrow` statement works on variables, rather than expressions: this simplifies
-the analysis.
-
-If you have a variable `x` with a linear type `L`, you can borrow it like so:
-
-```austral
-let x: L := f();
-borrow x as ref in rho do
-    -- The type of `ref` is `&[L, rho]`, it is a read-only reference to
-    -- `L` in the region `rho`.
-    --
-    -- Within this block, `x` cannot be consumed because it is borrowed,
-    -- but `ref` can be used freely.
-    let y: &[L, rho] := transform(ref);
-    -- etc.
-end;
--- After the borrow, we can consume `x`.
-destroy(x);
-```
-
-Within the body of a `borrow`, the variable being borrowed cannot be consumed or
-re-borrowed. This ensures we can't read from a reference after the value it
-points to has been destroyed.
-
-The name `rho` is only defined within the block of the `borrow` statement, which
-means you can't do this:
-
-```austral
-let escape: &[L, rho] := ...;
-borrow x as ref do
-    escape := ref;
-end;
-```
-
-The compiler will complain that `rho` is an unknown type, since it only exists
-in the body of the `borrow` statement. This restriction ensures that references
-cannot outlive the thing they reference.
-
-A more succint syntax is available. Where you don't care about the name of the
-region, i.e., where you have a function that takes a reference but whose return
-type does not include the reference region, like so:
-
-```austral
-generic [R: Region]
-function stringLength(ref: &[String, R]): Index;
-```
-
-Then you can call it like so:
-
-```austral
-stringLength(&str);
-```
-
-This is the equivalent of:
-
-```
-borrow str as ref in rho do
-    stringLength(ref);
-end;
-```
-
-Analogously, `&!` takes a read-write reference.
+Unlike Rust, Austral's borrowing is more restricted. The tradeoff is: you have
+to type more, but it's syntactically clearer where region lifetimes end, and the
+model is conceptually simpler. This is why the linearity checker is a mere 600
+lines of OCaml.
 
 # Capability-Based Security {#cap}
 
-Code is overwhelmingly permissionless. Or, rather: all code has uniform root
-permissions. The size of today's software ecosystems has introduced a new
-category of security vulnerability: the [supply chain attack][supplychain]. An
-attacker adds malware to an innocent library used transitively by millions. It
-is downloaded and run, with the user's permissions, on the computers of hundreds
-of thousands of programmers, and afterwards, on application servers.
+If you read software engineering literature from the 80's, the overwhelming
+concern is about software reuse. Today, we have the opposite problem: package
+ecosystems contain hundreds of thousands of packages, written by many authors,
+and applications transitively have thousands of dependencies. This introduces a
+new category of security vulnerability: the [supply chain attack][supplychain],
+where an attacker adds malware to a single library used transitively by
+millions of computers.
+
+But why is a _single_ malware dependency out of thousands enough to compromise
+security? Because code is overwhelmingly permissionless. Or, rather: all code
+has the same permission level: do anything. Without inspecting the code, you
+have no way of knowing whether `leftPad` pads a string _or_ reads your entire
+home directory and uploads it to a remote server.
 
 Austral's solution is [capability-based security][cap]. Code should be
-permissioned. To access the terminal, or the filesystem, or the network,
-libraries should require permission to do so. Then it is evident, from function
-signatures, what each library is able to do, and what level of auditing is
-required.
+permissioned. To access the filesystem, or the network, or other privileged
+resources, libraries should require permission to do so. Then it is evident,
+from function signatures, what each library is able to do, and what level of
+auditing is required.
 
 Furthermore: capabilities can be arbitrarily granular. Beneath the capability to
 access the entire filesystem, we can have a capability to access a specific
@@ -1077,6 +1010,8 @@ end;
 [spec-linearity]: https://austral.github.io/spec/linearity
 [sum]: https://en.wikipedia.org/wiki/Algebraic_data_type
 [typeclass]: https://austral.github.io/spec/type-classes
+[borrowing]: https://austral-lang.org/tutorial/borrowing
+
 # Footnotes
 
 [^python]:
