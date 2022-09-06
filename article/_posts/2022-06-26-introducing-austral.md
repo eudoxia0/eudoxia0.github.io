@@ -99,7 +99,7 @@ Because humans are tired, they are burned out, they have limited focus, limited
 working memory, they are traumatized by writing executable YAML, _etc_.
 
 Strictness is rarely one big language feature, rather, it's about learning from
-the design flaws in other languages, the "death by a thousand cuts", and
+the design flaws in other languages, the "death by a thousand cuts"[^cuts], and
 preventing the causes of each of them. This can be hard because programmers get
 very attached to the flaws.
 
@@ -988,7 +988,7 @@ end;
 ```
 
 [austral]: https://austral-lang.org/
-[goals]: https://austral.github.io/spec/goals
+[goals]: https://austral-lang.org/spec/spec.html#goals
 [quiz]: https://wordsandbuttons.online/so_you_think_you_know_c.html
 [lawyering]: http://www.catb.org/jargon/html/L/language-lawyer.html
 [else]: https://en.wikipedia.org/wiki/Dangling_else
@@ -1006,11 +1006,12 @@ end;
 [timing]: https://en.wikipedia.org/wiki/Timing_attack
 [side]: https://en.wikipedia.org/wiki/Side-channel_attack
 [spectre]: https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)
-[spec]: https://austral.github.io/spec/
-[spec-linearity]: https://austral.github.io/spec/linearity
+[spec]: https://austral-lang.org/spec/spec.html
+[spec-linearity]: https://austral-lang.org/spec/spec.html#linearity
 [sum]: https://en.wikipedia.org/wiki/Algebraic_data_type
-[typeclass]: https://austral.github.io/spec/type-classes
+[typeclass]: https://austral-lang.org/spec/spec.html#type-classes
 [borrowing]: https://austral-lang.org/tutorial/borrowing
+[copying-c]: https://eev.ee/blog/2016/12/01/lets-stop-copying-c/
 
 # Footnotes
 
@@ -1019,5 +1020,9 @@ end;
     decorators, constant leakage of implementation details, context-sensitive
     syntax, _etc_.
 
+[^cuts]:
+    [Here][copying-c] is a great article on the long litany of C design flaws
+    that have been copied into other languages.
+
 [^dotdot]:
-    Special paths like `..` should be banned, naturally.
+    Special paths like `..` have to be handled specially.
