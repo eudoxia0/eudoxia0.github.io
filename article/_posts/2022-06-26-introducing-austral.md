@@ -20,7 +20,8 @@ being made about security and correctness are true.
 1. [Design Goals](#goals)
 2. [Anti-Features](#anti-features)
 3. [Features](#features)
-4. [Linear Types](#linear)
+4. [Language Overview](#lang-overview)
+5. [Linear Types](#linear)
    1. [Motivation](#linear-motivation)
    2. [What Linear Types Are](#linear-what)
    3. [Universes](#linear-universes)
@@ -28,12 +29,12 @@ being made about security and correctness are true.
    5. [Linear Types and Safety](#linear-safety)
    6. [A Safe Database API](#linear-db)
    7. [Borrowing](#linear-borrowing)
-5. [Capability-Based Security](#cap)
+6. [Capability-Based Security](#cap)
    1. [Linear Capabilities](#cap-linear)
    2. [A Capability-Secure Filesystem API](#cap-fs)
    3. [The Root Capability](#cap-root)
-6. [Status and Future Work](#status)
-7. [Conclusion](#conclusion)
+7. [Status and Future Work](#status)
+8. [Conclusion](#conclusion)
 
 # Design Goals {#goals}
 
@@ -218,6 +219,42 @@ What Austral _does_ have:
 
 7. A strict, context-free, unambiguous syntax, informed by [langsec][langsec]
    ideas.
+
+# Language Overview {#lang-overview}
+
+The largest unit of code organization is the module. Modules have explicit names
+and are decoupled from the filesystem, like Haskell and unlike Python. Modules
+are divided into an interface and an implementation, like Ada or OCaml.
+
+This is _not_, as in C or C++, a hack to enable separate compilation. It's about
+readability and separation of concerns. The interface file contains declarations
+that are public, but no code. The implementation file contains the
+implementations of what is in the interface file, as well as private
+declarations.
+
+There are five kinds of declaration:
+
+1. Constants.
+2. Types.
+3. Functions.
+4. Typeclasses.
+5. Typeclass instances.
+
+Each of these can either be public (by appearing in the interface file) or
+private, which determines whether they are importable by other modules. Types
+have an additional visibility state: _opaque_, which means they can be imported
+by other modules, but they cannot be constructed or their contents accessed
+outside the module, except through the module's public API. Opaque types are the
+obvious choice for data structures whose internals are hidden.
+
+Functions work like you expect: they take values and return them. Instead of
+`void` there is a `Unit` type with a constant called `nil`.
+
+Typeclasses define an interface that types can conform to, and instances define
+how a particular type implements a particular typeclass.
+
+Types and functions can be generic. The way generics work is slightly different
+than in most languages, due to the linearity system.
 
 # Linear Types {#linear}
 
