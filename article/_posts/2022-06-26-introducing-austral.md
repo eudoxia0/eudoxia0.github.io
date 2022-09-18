@@ -93,10 +93,14 @@ fall off the plane."
 This doesn't happen in aviation, because in aviation we have decided, correctly,
 that _human error is an intrinsic and inseparable part of human activity_. And
 so we have built concentric layers of mechanical checks and balances around
-pilots, to take on part of the load of flying.
+pilots, to take on part of the load of flying. Because humans are tired, they
+are burned out, they have limited focus, limited working memory, they are
+traumatized by writing executable YAML, _etc_.
 
-Because humans are tired, they are burned out, they have limited focus, limited
-working memory, they are traumatized by writing executable YAML, _etc_.
+Mechanical processes — such as type systems, type checking, formal verification,
+design by contract, static assertion checking, dynamic assertion checking — are
+independent of the skill of the programmer. Mechanical processes _scale_, unlike
+berating people to simply write fewer bugs.
 
 Strictness is rarely one big language feature, rather, it's about learning from
 the design flaws in other languages, the "death by a thousand cuts"[^cuts], and
