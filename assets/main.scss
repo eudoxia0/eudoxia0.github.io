@@ -380,7 +380,11 @@ article {
         border: none;
         text-align: center;
 
-        @mixin small() {
+        @include small() {
+            margin: 30px auto;
+        }
+
+        @include medium() {
             margin: 30px auto;
         }
 
