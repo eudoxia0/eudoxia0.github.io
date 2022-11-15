@@ -1067,6 +1067,10 @@ nav.chapter-nav {
     margin: 45px auto 200px auto;
     width: 70%;
 
+    @include small() {
+        margin: 45px auto 50px auto;
+    }
+
     p {
         text-align: left;
         text-indent: 0;
