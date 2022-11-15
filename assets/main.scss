@@ -1102,4 +1102,8 @@ nav.chapter-nav {
 
 .spaced-image {
     margin: 100px auto;
+
+    @include small() {
+        margin: 30px auto;
+    }
 }
