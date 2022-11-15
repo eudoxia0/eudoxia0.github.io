@@ -17,7 +17,7 @@ They unfolded a telescope and swept it slowly side to side until they found a ta
 
 _Parandé_ spun up and extended a pair of cables in the ventral and dorsal directions. They ran electricity through them and sailed the faint stellar wind on a broad, slow arc to the asteroid. Gliese 581 was hardly visible at this distance: an unblinking red eye in the dark. _Parandé_ thought slowly and austerely, running on double-digit watts from the photovoltaics.
 
-It was a pile of dust, fine enough that they almost sunk into it. Small manipulator arms scraped chondrite from the surface and fed it to a chemical plant where it was broken down to the bare elements and fed to a matter compiler. There, atomic probes tipped with bespoke molecules worked chemistry with Ångström precision, building photovoltaics, flywheels, robots and computers and more of the industrial DAG.
+It was a pile of dust, fine enough that they almost sank into it. Small manipulator arms scraped chondrite from the surface and fed it to a chemical plant where it was broken down to the bare elements and fed to a matter compiler. There, atomic probes tipped with bespoke molecules worked chemistry with Ångström precision, building photovoltaics, flywheels, robots and computers and more of the industrial DAG.
 
 The first half of the curve was slow, and everything was a limiting factor. Gradually, an HO-scale mining and manufacturing base grew like mold on the gray surface. Then an inflection point was crossed and in a few hours a cubic kilometer of asteroid disappeared and became a cluster of tanks full of molecular feedstock.
 
