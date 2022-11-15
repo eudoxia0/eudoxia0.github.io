@@ -380,6 +380,10 @@ article {
         border: none;
         text-align: center;
 
+        @mixin small() {
+            margin: 30px auto;
+        }
+
         &:after {
             content: '❧';
             color: black;
