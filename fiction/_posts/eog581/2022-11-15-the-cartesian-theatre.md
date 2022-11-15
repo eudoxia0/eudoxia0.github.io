@@ -7,14 +7,14 @@ forward: wepwawet
 <div class="epigraph">
 <p>For a great deal is said about the forms of the gods, and about their locality, dwelling-places, and mode of life, and these points are disputed with the utmost difference of opinion among philosophers.</p>
 <p class="cite">
-&mdash;Cicero, <i>On the Nature of the Gods</i>
+&mdash; Cicero, <i>On the Nature of the Gods</i>
 </p>
 </div>
 
 <div class="epigraph">
 <p>The whole of the developments and operations of analysis are now capable of being executed by machinery.</p>
 <p class="cite">
-&mdash;Charles Babbage, 1864
+&mdash; Charles Babbage, 1864
 </p>
 </div>
 
