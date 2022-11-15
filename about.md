@@ -22,9 +22,6 @@ compilers, logic, linguistics, and history.
 This website is built with [Jekyll][jekyll] and [Sass][sass], a CSS
 preprocessor. Hosting is provided by [GitHub Pages][pages].
 
-Unless otherwise noted, content on this site is licensed under the [Creative
-Commons Attribution 4.0 International][license] license.
-
 </article>
 
 [port]: /portfolio/
@@ -33,7 +30,6 @@ Commons Attribution 4.0 International][license] license.
 [jekyll]: http://jekyllrb.com/
 [sass]: http://sass-lang.com/
 [pages]: https://pages.github.com/
-[license]: http://creativecommons.org/licenses/by/4.0/
 [hn]: https://news.ycombinator.com/user?id=zetalyrae
 [hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
