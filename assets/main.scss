@@ -1038,6 +1038,11 @@ nav.media-nav {
 
 .chapter-start {
     margin: 0 auto 45px auto;
+
+    @include small() {
+        margin: 45px auto 45px auto;
+    }
+
     width: 80%;
 
     p {
@@ -1047,6 +1052,10 @@ nav.media-nav {
 
 nav.chapter-nav {
     margin-top: 70px;
+
+    @include small() {
+        margin-top: 30px;
+    }
 
     ul {
         list-style-type: none;
