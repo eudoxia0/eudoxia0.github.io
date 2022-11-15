@@ -17,6 +17,19 @@ layout: base
       <li>
         <a href="/article/">Articles</a>
       </li>
+      {% elsif page.url contains "eog581/" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/">Fiction</a>
+      </li>
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/eog581/">The Epiphany of Gliese 581</a>
+      </li>
       {% elsif page.categories[0] == "fiction" %}
       <li>
         <span class="sep">{{ fleuron }}</span>
