@@ -394,7 +394,7 @@ article {
         }
     }
 
-    ul, ol, dl {
+    ul, ol, dl, blockquote {
         p:first-child {
             text-indent: 0;
         }
@@ -437,6 +437,11 @@ article {
         display: block;
         max-width: 80%;
         margin: 0 auto;
+    }
+
+    .cite {
+        text-align: right;
+        font-style: normal;
     }
 
     // Inline elements
