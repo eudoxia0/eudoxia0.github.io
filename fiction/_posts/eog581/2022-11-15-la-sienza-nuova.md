@@ -145,5 +145,11 @@ When the sun sets, hundreds of birds hidden among the trees sing at once; half-a
         Back
       </a>
     </li>
+    <span>❖</span>
+    <li>
+      <a href="/fiction/eog581/colophon">
+        Colophon
+      </a>
+    </li>
   </ul>
 </nav>
