@@ -1,11 +1,12 @@
 ---
 title: Fiction
 layout: common
-stories:
+novella:
   - title: The Epiphany of Gliese 581
     date: 2022-11-15
     summary: A linguist, a chemist, and a comparative psychologist explore the ruins of a dead superintelligence.
     url: eog581
+stories:
   - title: The Iron Lung of Su-Hui
     date: 2021-08-13
     summary: A man discovers a language that changes the world.
@@ -17,6 +18,27 @@ stories:
 ---
 
 <div class="post-list">
+  <h2>Novella</h2>
+  <ul class="posts">
+    {% for page in page.novella %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
+        <div class="info">
+          <span class="date">
+            {{ page.date | date: "%-d %B, %Y" }}
+          </span>
+          &nbsp;
+          &middot;
+          &nbsp;
+          <span class="summary">
+            {{ page.summary }}
+          </span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
   <h2>Short Stories</h2>
   <ul class="posts">
     {% for page in page.stories %}
