@@ -14,8 +14,12 @@ fiction, this means doing real math on real astronomical data. I ended up
 writing a small framework for doing astronomical calculations. In Common Lisp,
 for old time's sake.
 
+The code is in [this repo][repo]. The rest of this post is a walkthrough of the
+astronomy framework, followed by the story-specific code.
+
 [swarm]: https://en.wikipedia.org/wiki/Dyson_sphere#Dyson_swarm
 [g581]: https://en.wikipedia.org/wiki/Gliese_581
+[repo]: https://github.com/eudoxia0/astro-eog581
 
 # The Problem
 
@@ -751,6 +755,24 @@ animated where the entire plot is rotated about the vertical axis. It rewrote
 the script, preserving bit-for-bit identical output, and added animation
 support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
 fix.
+
+Here's the animated map of all place names mentioned in the story:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
+</video>
+
+Zoomed in around Gliese 581:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/g581-environs.mp4" type="video/mp4" />
+</video>
+
+And this is the network route from Ctesiphon to Wepwawet:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
+</video>
 
 # Conclusion
 
