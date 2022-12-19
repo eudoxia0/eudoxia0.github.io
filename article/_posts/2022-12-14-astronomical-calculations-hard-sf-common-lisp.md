@@ -265,7 +265,7 @@ And another to represent the star data we care about:
    (bayer :reader star-bayer
           :initarg :bayer
           :type (or null string)
-          :documentation "The star's Bayer / Flamsteed designation, if known.")
+          :documentation "The star's Bayer-Flamsteed designation, if known.")
    (distance :reader star-distance
              :initarg :distance
              :type parsecs
