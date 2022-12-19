@@ -508,7 +508,9 @@ This convenience function builds a graph object from the vector of edges:
 (defun make-graph-from-edges (edges)
   "Construct a graph from a vector of edges."
   (let ((vertex-table (make-hash-table :test 'equal)) ; table of seen IDs
-        (vertices (make-array 0 :adjustable t :element-type 'integer :fill-pointer 0))) ; vertex accumulator
+        (vertices (make-array 0 :adjustable t ; vertex accumulator
+                                :element-type 'integer
+                                :fill-pointer 0)))
     (loop for edge across edges do
       (with-slots (start end) edge
         (unless (gethash start vertex-table)
