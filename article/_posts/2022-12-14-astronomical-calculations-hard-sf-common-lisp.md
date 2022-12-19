@@ -104,7 +104,7 @@ PC = LY * 0.306601
 LY = PC * 3.26156
 ```
 
-In Common Lisp:
+In Common Lisp these can be implemented as:
 
 ```lisp
 (defun light-years-to-parsecs (ly)
@@ -131,17 +131,20 @@ CL-USER> (light-years-to-parsecs *)
 
 # Star Positions
 
-The positions of stars are given in [equatorial coordinates], a spherical
-coordinate system where a position is made up of a right ascension (RA),
-declination (DEC), and distance from the Sun (DIST). Two angles and a
-radius. For historical reasons, right ascension is reported in
-hours-minutes-seconds format, and declination is reported in
+Star positions are typically given in [equatorial coordinates][equatorial], a
+spherical coordinate system where positions in space are represented by two
+angles (called right ascension (RA) and declination (DEC)), and a radius (the
+star's distance from the Sun). For historical reasons, right ascension is
+reported in hours-minutes-seconds format, and declination is reported in
 degrees-minutes-seconds.
 
-Luckily the HYG database contains the Cartesian (X, Y, Z) coordinates as
-well. If it didn't, see below.
+[equatorial]: https://en.wikipedia.org/wiki/Equatorial_coordinate_system
 
-The `cartesian-position` class represent as Cartesian triple:
+Luckily, the HYG database contains the Cartesian (X, Y, Z) coordinates as
+well. This makes it much easier to calculate distances and, later, to make star
+maps (see the appendix for dealing with equatorial coordinates).
+
+The `cartesian-position` class represents a Cartesian triple:
 
 ```lisp
 (defclass cartesian-position ()
@@ -357,9 +360,7 @@ CL-USER> (star-cartesian-position star)
 # Nearest Stars
 
 Since Gliese 581 is not on the network, we need to find the star closest to
-it. This is easily done.
-
-First, this function returns all stars within a given radius of a position:
+it. First, this function returns all stars within a given radius of a position:
 
 ```lisp
 (defun find-stars-within-radius (db pos radius)
@@ -375,7 +376,7 @@ position."
     stars))
 ```
 
-Now the driver code. First, we load the database:
+Now, the driver code. First, we load the database:
 
 ```lisp
 (defparameter +db+
@@ -384,20 +385,12 @@ Now the driver code. First, we load the database:
 (assert (= (star-count +db+) 119614))
 ```
 
-Then find some stars by name:
+Then we find all the stars within 3 parsecs of Gliese 581, sort them, and print
+them out:
 
 ```lisp
-;;; Find the relevant stars.
-
-(defparameter +sol+ (find-star-by-name +db+ "Sol"))
 (defparameter +g581+ (find-star-by-name +db+ "Gl 581"))
-(defparameter +g555+ (find-star-by-name +db+ "Gl 555"))
-(defparameter +bpic+ (find-star-by-name +db+ "Bet Pic"))
-```
 
-Find the stars within 3 parsecs of Gliese 581, sort them, and print them out:
-
-```lisp
 (let ((stars (find-stars-within-radius +db+
                                        (star-cartesian-position +g581+)
                                        (make-parsecs 3.0))))
@@ -448,6 +441,8 @@ Ten stars closest to Gliese 581:
 
 The star closest to Gliese 581 is Gl 555 at 4.25ly
 ```
+
+Now we have to find a route from Beta Pictoris to Gliese 555.
 
 # The Network Route
 
@@ -502,7 +497,7 @@ The `edge` and `graph` classes represent a graph where edges have a cost:
   (:documentation "Represents a graph."))
 ```
 
-A convenience function to construct a graph from the vector of edges:
+This convenience function builds a graph object from the vector of edges:
 
 ```lisp
 (defun make-graph-from-edges (edges)
@@ -521,7 +516,7 @@ A convenience function to construct a graph from the vector of edges:
                           :edges edges)))
 ```
 
-Dijkstra:
+Finally, Dijkstra's algorithm:
 
 ```lisp
 (defun dijkstra (graph source destination)
@@ -560,10 +555,13 @@ Returns a vector of integer vertex IDs."
           (build-path destination previous))))))
 ```
 
-Auxiliary functions:
+And some auxiliary functions:
 
 ```lisp
 (defun build-path (destination previous)
+  "Given a vertex ID, and a hash table from vertex IDs to vertex IDs,
+follow the path starting from DESTINATION through the hash table, and
+return a vector of vertex IDs from the last visited node to the DESTINATION."
   (let ((path (make-array 0 :adjustable t :element-type 'integer :fill-pointer 0)))
     (let ((u destination))
       (loop while (gethash u previous) do
