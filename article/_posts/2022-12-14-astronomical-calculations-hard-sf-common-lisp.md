@@ -346,7 +346,9 @@ CL-USER> (star-cartesian-position star)
 # Nearest Stars
 
 Since Gliese 581 is not on the network, we need to find the star closest to
-it. This function returns all stars within a given radius of a position:
+it. This is easily done.
+
+First, this function returns all stars within a given radius of a position:
 
 ```lisp
 (defun find-stars-within-radius (db pos radius)
@@ -362,11 +364,9 @@ position."
     stars))
 ```
 
-And this is the driver code. First, we load the database:
+Now the driver code. First, we load the database:
 
 ```lisp
-;;; Load the HYG database.
-
 (defparameter +db+
   (load-hyg-database #p"hygdata_v3.csv"))
 
