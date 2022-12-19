@@ -754,15 +754,22 @@ So I showed ChatGPT my plotting code, and asked it to rewrite it to create an
 animated where the entire plot is rotated about the vertical axis. It rewrote
 the script, preserving bit-for-bit identical output, and added animation
 support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
-fix.
+fix. I'm really happy with this approach.
 
-Here's the animated map of all place names mentioned in the story:
+I'll start with the output first. Here's the animated map of all place names
+mentioned in the story:
 
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
 </video>
 
-Zoomed in around Gliese 581:
+Ararat is the in-universe name of [Gliese 570A][g570], Tigranes is [HD
+35650][tig].
+
+[g570]: https://en.wikipedia.org/wiki/Gliese_570
+[tig]: http://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40790560&Name=HD%20%2035650&submit=submit
+
+Zoomed in around Gliese 581 for clarity:
 
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/g581-environs.mp4" type="video/mp4" />
@@ -773,6 +780,85 @@ And this is the network route from Ctesiphon to Wepwawet:
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
 </video>
+
+To transfer data from Common Lisp to Python, I dumped the stars to different
+CSVs, one for each plot, with `X,Y,Z,Label` as the columns. I won't post the
+code since it's very ordinary.
+
+The main body of the Python plotting code (sans CSV parsing, etc.) is:
+
+```python
+def plot_stars(input_path, output_path, route=False):
+    """
+    Plot the stars from the CSV in `input_path`, writes an MP4
+    animated scatterplot to `output_path`.
+
+    If `route=True`, draws lines between adjacent points.
+    """
+    # Data.
+    x: list[float]    = []
+    y: list[float]    = []
+    z: list[float]    = []
+    labels: list[str] = []
+
+    # Parse the CSV.
+    # snipped
+
+    # Create a figure and a 3D Axes.
+    dpi = 600
+    fig = plt.figure(figsize=(2,2), dpi=dpi)
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Create the scatterplot.
+    scatter = ax.scatter(x, y, z, c='b', marker='.', s=1, alpha=0.5)
+
+    # Add labels to each star.
+    text = [
+        ax.text(x[i], y[i], z[i] + 0.1, label, fontsize=2) for i, label in enumerate(labels)
+    ]
+
+    # Draw the impulses.
+    impulses = [
+        ax.plot([x[i], x[i]], [y[i], y[i]], [0, z[i]], ':', c='k', linewidth=0.2) for i in range(len(x))
+    ]
+
+    # Are we plotting a route? If so, draw the lines between the stars:
+    if route:
+        lines = [
+            ax.plot(
+                [x[i], x[i+1]],
+                [y[i], y[i+1]],
+                [z[i], z[i+1]],
+                color='r',
+                linewidth=0.1
+            )
+            for i in range(len(labels)-1)
+        ]
+    else:
+        lines = []
+
+    # Plot the origin plane.
+    GAP = 1
+    X, Y = np.meshgrid(
+        np.linspace(min(x) - GAP, max(x) + GAP, 10),
+        np.linspace(min(y) - GAP, max(y) + GAP, 10)
+    )
+    Z = np.zeros_like(X)
+    origin_plane = ax.plot_wireframe(X, Y, Z, rstride=1, cstride=1, linewidths=0.1)
+
+    # Hide the axes and grid planes.
+    plt.axis("off")
+
+    # Define the animation function.
+    def animate(i):
+        ax.view_init(elev=30, azim=i)
+
+    # Create the animation object.
+    anim = animation.FuncAnimation(fig, animate, frames=360, interval=20, blit=False)
+
+    # Save the animation as an MP4 file.
+    anim.save(output_path, fps=30, extra_args=['-vcodec', 'libx264'], dpi=dpi)
+```
 
 # Conclusion
 
