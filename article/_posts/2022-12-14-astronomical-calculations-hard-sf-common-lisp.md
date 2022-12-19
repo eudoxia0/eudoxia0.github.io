@@ -822,7 +822,7 @@ def plot_stars(input_path, output_path, route=False):
         ax.plot([x[i], x[i]], [y[i], y[i]], [0, z[i]], ':', c='k', linewidth=0.2) for i in range(len(x))
     ]
 
-    # Are we plotting a route? If so, draw the lines between the stars:
+    # Are we plotting a route? If so, draw the lines between the stars.
     if route:
         lines = [
             ax.plot(
