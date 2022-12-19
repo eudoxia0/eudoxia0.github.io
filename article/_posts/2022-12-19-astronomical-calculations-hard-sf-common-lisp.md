@@ -1150,7 +1150,7 @@ CL-USER> (equatorial-to-cartesian tau-ceti)
 
     3. $+Z$ towards the north celestial pole.
 
-    The plane $Z=0$ is the plane of the ecliptic.
+    The $Z=0$ plane is the plane of the ecliptic.
 
 [^libra]:
     This is a simple check that the math is correct. Note that Gliese 581 is
