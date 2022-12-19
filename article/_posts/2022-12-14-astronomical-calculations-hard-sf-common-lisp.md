@@ -521,7 +521,21 @@ This convenience function builds a graph object from the vector of edges:
                           :edges edges)))
 ```
 
-Finally, Dijkstra's algorithm. This is the high-level pseudocode:
+Given a graph whose edges have a cost, Dijkstra's algorithm finds the cheapest
+path between given start and end nodes. When cost represents distance, this is
+the shortest path.
+
+At the highest level: Dijkstra is breadth-first beam search on a tree rooted at
+the start vertex.
+
+More detailed: Dijkstra begin with the start vertex, and performs breadth-first
+search by building up a tree through the neighbouring nodes. Each leaf node
+knows its cost, that is, the sum of the costs in the path from the root to the
+leaf. In normal breadth-first search, the search order is just the iteration
+order of the node's children. Dijkstra picks the next node that minimizes
+cost. That's the beam part of beam search.
+
+Even more detailed, here's the full pseudocode:
 
 **Dijkstra's Algorithm**
 
@@ -532,11 +546,11 @@ Finally, Dijkstra's algorithm. This is the high-level pseudocode:
 1. Let:
    1. $D: \text{Map}[\text{Vertex}, \mathbb{R}]$ is the table of distances from
       $V_i$ to every other vertex. Initially, we set $D[V_i] = 0$ and $D[v] =
-      +\infty, \forall v \in G \neq V_i$.
-   1. $L : \text{Map}[\text{Vertex}, \mathbb{R}]$ is the previous links table,
-      which keeps track of the path we build while the algorithm runs. It maps a
-      vertex to the previous vertex in the path. Initially, $L[v] = \text{NIL},
-      \forall v \in G$.
+      +\infty, \forall v \in G$ for all other vertices.
+   1. $L : \text{Map}[\text{Vertex}, \text{Option}[\text{Vertex}]]$ is the previous links
+      table, which keeps track of the path we build while the algorithm runs. It
+      maps a vertex to the previous vertex in the path. Initially, $L[v] =
+      \text{NIL}, \forall v \in G$.
    1. $N : \text{Map}[\text{Vertex}, \text{Map}[\text{Vertex}, \mathbb{R}]]$ is
       the table of neighbours. It maps a vertex to a map of its neighbour
       vertices to their costs.
