@@ -1,6 +1,7 @@
 ---
 title: Astronomical Calculations for Hard SF in Common Lisp
 summary: Worldbuilding with the HYG database and Lisp.
+math: yes
 ---
 
 In [_The Epiphany of Gliese 581_][eog581], a group of explorers search the
@@ -520,7 +521,47 @@ This convenience function builds a graph object from the vector of edges:
                           :edges edges)))
 ```
 
-Finally, Dijkstra's algorithm:
+Finally, Dijkstra's algorithm. This is the high-level pseudocode:
+
+**Dijkstra's Algorithm**
+
+1. Inputs:
+   1. $G : \text{Graph}$
+   1. $V_i: \text{Vertex}$: the start vertex.
+   1. $V_f: \text{Vertex}$: the end vertex.
+1. Let:
+   1. $D: \text{Map}[\text{Vertex}, \mathbb{R}]$ is the table of distances from
+      $V_i$ to every other vertex. Initially, we set $D[V_i] = 0$ and $D[v] =
+      +\infty, \forall v \in G \neq V_i$.
+   1. $L : \text{Map}[\text{Vertex}, \mathbb{R}]$ is the previous links table,
+      which keeps track of the path we build while the algorithm runs. It maps a
+      vertex to the previous vertex in the path. Initially, $L[v] = \text{NIL},
+      \forall v \in G$.
+   1. $N : \text{Map}[\text{Vertex}, \text{Map}[\text{Vertex}, \mathbb{R}]]$ is
+      the table of neighbours. It maps a vertex to a map of its neighbour
+      vertices to their costs.
+   1. $Q : \text{Queue}[\text{Vertex}]$ is a priority queue of vertices ordered
+      by $D[v]$. This is initialized to contain every vertex in $G$. This
+      supports one operation, $\text{pop}$, which takes the vertex $v$ with
+      minimum value of $D[v]$, removes it from $Q$, and returns it.
+1. While $Q$ is non-empty:
+   1. Let $u = \text{pop}(Q)$.
+   1. If $u = V_f \lor D[u] = +\infty$:
+      1. Break out of the loop.
+   1. Else:
+      1. For each pair $(v, c)$ in $N[u]$:
+         1. Let $d = c + D[u]$.
+         1. If $d < D[v]$:
+             1. $D[v] = d$
+             1. $L[v] = u$.
+1. Let $P: List[Vertex] = []$.
+1. Let $l = V_f$.
+1. While $L[l] \neq \text{NIL}$:
+   1. Append $l$ to $P$.
+   2. $l = P[l]$
+1. Reverse $P$ and return it.
+
+In Common Lisp we can realize this as follows:
 
 ```lisp
 (defun dijkstra (graph source destination)
