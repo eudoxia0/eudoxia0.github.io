@@ -2,6 +2,7 @@
 title: Astronomical Calculations for Hard SF in Common Lisp
 summary: Hard SF worldbuilding with the HYG database, Dijkstra's algorithm, and Lisp.
 math: yes
+card: astronomical-calculations-hard-sf-common-lisp.jpg
 ---
 
 In [_The Epiphany of Gliese 581_][eog581], a group of explorers search the
