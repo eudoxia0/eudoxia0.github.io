@@ -35,7 +35,7 @@ She turned the page.
 
 ---
 
-Tiet was born on Île de Sable, the fourth planet around Eggen-Greenstein 290, which they called Ararat. Once, over the course of a summer, one of the stars in the sky dimmed and disappeared. The network said it was a theogony.
+Tiet was born on Île de Sable, the fourth planet around Gliese 570A, which they called Ararat. Once, over the course of a summer, one of the stars in the sky dimmed and disappeared. The network said it was a theogony.
 
 The people around him spoke of the gods: of their power to see the past and the future, to transform matter into light and back, to think thoughts humans cannot think. Miraculous events were attributed to them. They said the gods knew the universal history, the first and last causes, all that would happen from the first singularity to that symmetrical point where, Tipler says, the dead will be redeemed. They said that to the eyes of the gods there were no distinctions, that they saw all things from every angle, as a monistic and comprehensive whole. They said the gods could construct universes as rich as ours---full of people, stars, cities and computers and other gods---as readily and as unconsciously as a human being might experience a dream (for what is your life? It is even a dream, it happens so briefly, and vanishes upon waking. And you are left with your face, reflected in a black mirror).
 
