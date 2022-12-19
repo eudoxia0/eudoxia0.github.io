@@ -539,6 +539,93 @@ stars that are less than DIST parsecs apart."
     (make-graph-from-edges edges)))
 ```
 
+The HYG database has over 100k stars, but all the stars in the story are within
+100 light years of the Sun. So we can pare down the graph considerably by
+dropping every star over 70 light years (22 parsecs) from the Sun:
+
+```lisp
+(defparameter +stars+
+  (remove-if #'(lambda (star)
+                 (> (value (star-distance star)) 22.0))
+             (copy-seq (database-stars +db+))))
+```
+
+Interstellar laser links reach ~16 light years (5 parsecs):
+
+```lisp
+(defparameter +laser-limit+ (make-parsecs 5.0))
+```
+
+Now we build the star graph:
+
+```lisp
+(defparameter +graph+
+  (make-graph +stars+ +laser-limit+))
+
+(format t "Star graph has ~A vertices and ~A edges.~%~%"
+        (length (graph-vertices +graph+))
+        (length (graph-edges +graph+)))
+```
+
+And run Dijkstra's algorithm to get the path and print it out:
+
+```lisp
+(defparameter +path+
+  (loop for id across (dijkstra +graph+ (star-id +bpic+) (star-id +g555+))
+        collecting (find id (database-stars +db+) :key #'star-id)))
+
+(format t "Network route has ~A jumps.~%~%" (1- (length +path+)))
+
+;;; Print the network route.
+
+(format t "~12@A ~12@A ~10@A~%" "Start" "End" "Dist")
+(format t "------------------------------------~%")
+(loop for (a b) on +path+ by #'cdr while b do
+  (format t "~12@A ~12@A ~8,2fly~%"
+          (star-name a)
+          (star-name b)
+          (value (parsecs-to-light-years (star-euclidean-distance a b)))))
+```
+
+And the output is:
+
+```
+Star graph has 2333 vertices and 32266 edges.
+
+Network route has 7 jumps.
+
+       Start          End       Dist
+------------------------------------
+     Bet Pic       Gl 238    14.08ly
+      Gl 238    HIP 27887    12.11ly
+   HIP 27887    HIP 31293    16.27ly
+   HIP 31293    HIP 31292     1.10ly
+   HIP 31292    HIP 58910    15.46ly
+   HIP 58910    Gl 563.2A    12.99ly
+   Gl 563.2A       Gl 555     6.24ly
+```
+
+Now let's add up the distances, and compare it to the Euclidean distance:
+
+```lisp
+(format t "Distance from Beta Pictoris to Gliese 555: ~,2fly~%~%"
+        (value (parsecs-to-light-years (star-euclidean-distance +bpic+ +g555+))))
+
+(let ((length 0.0))
+  (loop for (a b) on +path+ by #'cdr while b do
+    (incf length (value (star-euclidean-distance a b))))
+  (format t "Total network route length: ~,2fly~%"
+          (value (parsecs-to-light-years (make-parsecs length)))))
+```
+
+This outputs:
+
+```
+Distance from Beta Pictoris to Gliese 555: 70.80ly
+
+Total network route length: 78.25ly
+```
+
 # Star Maps
 
 There aren't any good plotting libraries for Common Lisp, so I used Python's
