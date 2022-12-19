@@ -554,7 +554,7 @@ Finally, Dijkstra's algorithm. This is the high-level pseudocode:
          1. If $d < D[v]$:
              1. $D[v] = d$
              1. $L[v] = u$.
-1. Let $P: List[Vertex] = []$.
+1. Let $P: \text{List}[\text{Vertex}] = ()$.
 1. Let $l = V_f$.
 1. While $L[l] \neq \text{NIL}$:
    1. Append $l$ to $P$.
@@ -600,7 +600,7 @@ Returns a vector of integer vertex IDs."
           (build-path destination previous))))))
 ```
 
-And some auxiliary functions:
+Using the following auxiliary functions:
 
 ```lisp
 (defun build-path (destination previous)
