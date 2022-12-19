@@ -82,6 +82,13 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
     (humanize d stream)))
 ```
 
+`humanize` is just so we can compose string representations better:
+
+```lisp
+(defgeneric humanize (object stream)
+  (:documentation "Return a human-readable representation of an object."))
+```
+
 # Star Positions
 
 The positions of stars are given in [equatorial coordinates], a spherical
