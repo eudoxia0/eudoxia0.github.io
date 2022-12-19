@@ -768,7 +768,7 @@ scatterplot with labeled points---that is, stars. Then I modified the
 presentation a bit, changing colours and font sizes, but the static plots have
 the problem that the perspective makes it hard to know where places really are.
 
-[chatgpt]: https://openai.com/blog/chatgpt/
+[chatgpt]: https://openai.com/blog/chatgpt
 
 So I showed ChatGPT my plotting code, and asked it to rewrite it to create an
 animated where the entire plot is rotated about the vertical axis. It rewrote
