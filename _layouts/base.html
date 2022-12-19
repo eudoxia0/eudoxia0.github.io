@@ -11,7 +11,7 @@
     <meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}Personal website of Fernando Borretti.{% endif %}" />
     <meta property="og:site_name" content="Fernando Borretti" />
     {% if page.card %}
-    <meta property="og:image" content="/assets/card/{{ page.card }}" />
+    <meta property="og:image" content="{{ site.url }}/assets/card/{{ page.card }}" />
     {% endif %}
     <meta name="author" content="Fernando Borretti" />
     <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}Personal website of Fernando Borretti.{% endif %}" />
