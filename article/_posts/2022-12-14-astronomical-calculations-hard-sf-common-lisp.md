@@ -345,6 +345,9 @@ CL-USER> (star-cartesian-position star)
 
 # Nearest Stars
 
+Since Gliese 581 is not on the network, we need to find the star closest to
+it. This function returns all stars within a given radius of a position:
+
 ```lisp
 (defun find-stars-within-radius (db pos radius)
   "Given an HYG database, a position in Cartesian coordinates, and a radius in
@@ -357,10 +360,6 @@ position."
                  (value radius))
           (vector-push-extend star stars))))
     stars))
-
-(defun star-euclidean-distance (a b)
-  "The Euclidean distance between two stars in parsecs."
-  (euclidean-distance (star-cartesian-position a) (star-cartesian-position b)))
 ```
 
 And this is the driver code. First, we load the database:
@@ -412,6 +411,10 @@ Find the stars within 3 parsecs of Gliese 581, sort them, and print them out:
         (format t "~%The star closest to Gliese 581 is ~A at ~0,2fly"
                 (star-name star)
                 (value (parsecs-to-light-years (dist star))))))))
+
+(defun star-euclidean-distance (a b)
+  "The Euclidean distance between two stars in parsecs."
+  (euclidean-distance (star-cartesian-position a) (star-cartesian-position b)))
 ```
 
 The output here is:
