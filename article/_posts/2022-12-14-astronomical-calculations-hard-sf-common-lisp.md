@@ -329,27 +329,9 @@ connections.
    (edges :accessor graph-edges
           :initarg :edges
           :type (vector edge)
-          :documentation "A vector of edge objects.")
-   (neighbors :accessor graph-neighbors
-              :initarg :neighbors
-              :type hash-table
-              :documentation "A hash table from vertex IDs to a hash table of vertex IDs to costs."))
+          :documentation "A vector of edge objects."))
   (:documentation "Represents a graph."))
 
-(defun construct-neighbors (vertices edges)
-  (let ((neighbors (make-hash-table :test 'equal)))
-    ;; Initialize.
-    (loop for vertex across vertices do
-      (setf (gethash vertex neighbors) (make-hash-table :test 'equal)))
-    ;; Fill.
-    (loop for edge across edges do
-      (with-slots (start end cost) edge
-        (setf (gethash end (gethash start neighbors)) cost)
-        (setf (gethash start (gethash end neighbors)) cost)))
-    ;; Return
-    neighbors))
-
-;(declaim (ftype (function ((vector edge)) graph) make-graph-from-edges))
 (defun make-graph-from-edges (edges)
   "Construct a graph from a vector of edges."
   (let ((vertex-table (make-hash-table :test 'equal)) ; table of seen IDs
@@ -363,10 +345,8 @@ connections.
           (vector-push-extend end vertices)
           (setf (gethash end vertex-table) t))))
     (make-instance 'graph :vertices vertices
-                          :edges edges
-                          :neighbors (construct-neighbors vertices edges))))
+                          :edges edges)))
 
-;(declaim (ftype (function ((vector star) parsecs) graph) make-graph))
 (defun make-graph (stars dist)
   "Create a graph from a vector of stars. Only create edges between stars that are less than DIST parsecs apart."
   (let ((n (length stars)) ; Number of stars.
@@ -390,11 +370,49 @@ connections.
     ;; Construct the graph from the edges.
     (make-graph-from-edges edges)))
 
+(defun build-path (destination previous)
+  (let ((path (make-array 0 :adjustable t :element-type 'integer :fill-pointer 0)))
+    (let ((u destination))
+      (loop while (gethash u previous) do
+        (vector-push-extend u path)
+        (setf u (gethash u previous)))
+      (vector-push-extend u path)
+      (reverse path))))
+
+(defun make-neighbors (graph)
+  "Construct the neighbors map. This is a hash table from vertex IDs to a hash
+  table of vertex IDs to costs. That is:
+Map[ID, Map[ID, Float]]"
+  (with-slots (vertices edges) graph
+    (let ((neighbors (make-hash-table :test 'equal)))
+      ;; Initialize.
+      (loop for vertex across vertices do
+        (setf (gethash vertex neighbors) (make-hash-table :test 'equal)))
+      ;; Fill.
+      (loop for edge across edges do
+        (with-slots (start end cost) edge
+          (setf (gethash end (gethash start neighbors)) cost)
+          (setf (gethash start (gethash end neighbors)) cost)))
+      ;; Return
+      neighbors)))
+
+(defun pop-min (queue dist)
+  "The worst priority queue implementation ever written."
+  (let ((min-id nil)
+        (min-dist nil))
+    (loop for vertex being the hash-keys of queue do
+      (when (or (null min-id)
+                (< (gethash vertex dist) min-dist))
+        (setf min-id vertex)
+        (setf min-dist (gethash vertex dist))))
+    (assert (not (null min-id)))
+    (assert (not (null min-dist)))
+    (remhash min-id queue)
+    min-id))
+
 (defun dijkstra (graph source destination)
   "Find a path from the source node to the destination in the given graph.
-
 GRAPH is an instance of GRAPH. SOURCE and DESTINATION are integer vertex IDs.
-
 Returns a vector of integer vertex IDs."
   ;; Table of distances.
   (let ((dist (make-hash-table :test 'equal)))
@@ -405,29 +423,19 @@ Returns a vector of integer vertex IDs."
     (let ((previous (make-hash-table :test 'equal)))
       (loop for vertex across (graph-vertices graph) do
         (setf (gethash vertex previous) nil))
-      ;; Queue.
-      (let ((q (make-hash-table :test 'equal)))
-        (loop for vertex across (graph-vertices graph) do
-          (setf (gethash vertex q) t))
-        (labels ((pop-min ()
-                   (let ((min-id nil)
-                         (min-dist nil))
-                     (loop for vertex being the hash-keys of q do
-                       (when (or (null min-id)
-                                 (< (gethash vertex dist) min-dist))
-                         (setf min-id vertex)
-                         (setf min-dist (gethash vertex dist))))
-                     (assert (not (null min-id)))
-                     (assert (not (null min-dist)))
-                     (remhash min-id q)
-                     min-id)))
+      ;; Table of neighbor costs.
+      (let ((neighbors (make-neighbors graph)))
+        ;; Queue.
+        (let ((q (make-hash-table :test 'equal)))
+          (loop for vertex across (graph-vertices graph) do
+            (setf (gethash vertex q) t))
           (loop while (> (hash-table-count q) 0) do
-            (let ((u (pop-min)))
+            (let ((u (pop-min q dist)))
               (when (or (= u destination)
                         (= (gethash u dist) double-float-positive-infinity))
                 (return))
               ;; Adjust neighbor distances.
-              (let ((neighbors (gethash u (graph-neighbors graph))))
+              (let ((neighbors (gethash u neighbors)))
                 (loop for v being the hash-keys of neighbors do
                   (let ((cost (gethash v neighbors)))
                     (let ((alt (+ cost (gethash u dist))))
@@ -435,13 +443,7 @@ Returns a vector of integer vertex IDs."
                         (setf (gethash v dist) alt)
                         (setf (gethash v previous) u))))))))
           ;; Build path
-          (let ((path (make-array 0 :adjustable t :element-type 'integer :fill-pointer 0)))
-            (let ((u destination))
-              (loop while (gethash u previous) do
-                (vector-push-extend u path)
-                (setf u (gethash u previous)))
-              (vector-push-extend u path)
-              (reverse path))))))))
+          (build-path destination previous))))))
 ```
 
 # Star Maps
