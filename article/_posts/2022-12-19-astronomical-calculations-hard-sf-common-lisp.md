@@ -309,7 +309,7 @@ Now we can query the database:
 
 ```lisp
 CL-USER> (defparameter db (load-hyg-database #p"hygdata_v3.csv"))
-#<HYG-DATABASE {1007007A63}>
+DB
 
 CL-USER> (defparameter star (find-star-by-name db "Gl 581"))
 #<STAR Gl 581>
@@ -747,7 +747,7 @@ Total network route length: 78.25ly
 
 A journey on the network is eight years longer than a straight-line journey, but
 fusion rockets are limited to ~10% of the speed of light, so the straight-line
-ballistic trajectory would be 700 years.
+ballistic trajectory would take 700 years.
 
 # Star Maps
 
