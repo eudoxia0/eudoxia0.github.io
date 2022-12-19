@@ -145,9 +145,9 @@ degrees-minutes-seconds.
 
 [equatorial]: https://en.wikipedia.org/wiki/Equatorial_coordinate_system
 
-Luckily, the HYG database contains the Cartesian (X, Y, Z) coordinates as
-well. This makes it much easier to calculate distances and, later, to make star
-maps (see the appendix for dealing with equatorial coordinates).
+Luckily, the HYG database contains the Cartesian (X, Y, Z) coordinates[^coords]
+as well. This makes it much easier to calculate distances and, later, to make
+star maps (see the appendix for dealing with equatorial coordinates).
 
 The `cartesian-position` class represents a Cartesian triple:
 
@@ -530,7 +530,7 @@ the start vertex.
 
 More detailed: Dijkstra begin with the start vertex, and performs breadth-first
 search by building up a tree through the neighbouring nodes. Each leaf node
-knows its cost, that is, the sum of the costs in the path from the root to the
+knows its cost, that is, the sum of the edge costs in the path from the root to the
 leaf. In normal breadth-first search, the search order is just the iteration
 order of the node's children. Dijkstra picks the next node that minimizes
 cost. That's the beam part of beam search.
@@ -551,29 +551,28 @@ Even more detailed, here's the full pseudocode:
       table, which keeps track of the path we build while the algorithm runs. It
       maps a vertex to the previous vertex in the path. Initially, $L[v] =
       \text{NIL}, \forall v \in G$.
-   1. $N : \text{Map}[\text{Vertex}, \text{Map}[\text{Vertex}, \mathbb{R}]]$ is
-      the table of neighbours. It maps a vertex to a map of its neighbour
-      vertices to their costs.
-   1. $Q : \text{Queue}[\text{Vertex}]$ is a priority queue of vertices ordered
-      by $D[v]$. This is initialized to contain every vertex in $G$. This
-      supports one operation, $\text{pop}$, which takes the vertex $v$ with
-      minimum value of $D[v]$, removes it from $Q$, and returns it.
+   1. $Q : \text{Queue}[\text{Vertex}]$ is a [priority queue][queue] of vertices
+      ordered by $D[v]$. This is initialized to contain every vertex in
+      $G$. This supports one operation, $\text{pop}$, which takes the vertex $v$
+      with minimum value of $D[v]$, removes it from $Q$, and returns it.
 1. While $Q$ is non-empty:
    1. Let $u = \text{pop}(Q)$.
    1. If $u = V_f \lor D[u] = +\infty$:
       1. Break out of the loop.
    1. Else:
-      1. For each pair $(v, c)$ in $N[u]$:
+      1. For each pair $(v, c)$ in the neighbours of $u$:
          1. Let $d = c + D[u]$.
          1. If $d < D[v]$:
-             1. $D[v] = d$
+             1. $D[v] = d$.
              1. $L[v] = u$.
 1. Let $P: \text{List}[\text{Vertex}] = ()$.
 1. Let $l = V_f$.
 1. While $L[l] \neq \text{NIL}$:
    1. Append $l$ to $P$.
-   2. $l = P[l]$
+   2. $l = P[l]$.
 1. Reverse $P$ and return it.
+
+[queue]: https://en.wikipedia.org/wiki/Priority_queue
 
 In Common Lisp we can realize this as follows:
 
@@ -812,7 +811,7 @@ support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
 fix. I'm really happy with this approach.
 
 I'll start with the output first. Here's the animated map of all place names
-mentioned in the story:
+mentioned in the story[^libra]:
 
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
@@ -1137,3 +1136,24 @@ CL-USER> (equatorial-to-cartesian tau-ceti)
     all coordinates are [J2000][j2000].
 
 [j2000]: https://en.wikipedia.org/wiki/Epoch_(astronomy)
+
+[^coords]:
+    The Cartesian coordinate system used by the HYG database has:
+
+    1. $+X$ towards the vernal point in J2000 (RA 0h, DEC 0°, in the constellation Pisces).
+
+    2. $+Y$ towards RA 6h, DEC 0° (in Monoceros).
+
+    3. $+Z$ towards the north celestial pole.
+
+    The plane $Z=0$ is the plane of the ecliptic.
+
+[^libra]:
+    This is a simple check that the math is correct. Note that Gliese 581 is
+    close to the plane of the ecliptic, while Ctesiphon (Beta Pictoris) is far
+    to galactic south. Gliese 581 has a declination of -7°, while Beta Pictoris
+    is -51°. If you look at a [map] of the constellations, Libra (where Gliese
+    581 is) is just off the ecliptic, while Pictor is far to the south. They are
+    also in roughly opposite directions in the sky.
+
+[map]: https://upload.wikimedia.org/wikipedia/commons/8/89/Constellations%2C_equirectangular_plot%2C_Menzel_families.svg
