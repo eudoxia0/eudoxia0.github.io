@@ -11,6 +11,9 @@
     <meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}Personal website of Fernando Borretti.{% endif %}">
     <meta property="og:site_name" content="Fernando Borretti">
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta name="twitter:creator" content="@zetalyrae" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.summary }}" />
     {% if page.layout == "article" or page.layout == "fiction" %}
     <meta name="author" content="Fernando Borretti">
     <meta name="keywords" content="{{ page.tags | join: ', ' }}">
@@ -27,11 +30,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
     {% endif %}
     {% if page.card %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@zetalyrae">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.summary }}">
-    <meta name="twitter:image" content="/assets/card/{{ page.card }}">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/assets/card/{{ page.card }}" />
+    <meta property="og:image" content="/assets/card/{{ page.card }}" />
     {% endif %}
   </head>
   <body>
