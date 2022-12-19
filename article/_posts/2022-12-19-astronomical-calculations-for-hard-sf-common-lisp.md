@@ -78,13 +78,14 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
   "Create an instance of PARSECS from a numeric value."
   (make-instance 'parsecs :value value))
 ```
-We can easily convert between the two units by multiplying by a constant:)
+We can easily convert between the two units by multiplying by a constant:
 
-```
-PC = LY * 0.306601
-
-LY = PC * 3.26156
-```
+$$
+\begin{align*}
+pc &= ly \times 0.306601 \\
+ly &= pc \times 3.26156
+\end{align*}
+$$
 
 In Common Lisp these can be implemented as:
 
