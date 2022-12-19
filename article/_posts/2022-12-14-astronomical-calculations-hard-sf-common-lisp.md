@@ -1009,6 +1009,22 @@ To convert from HMS and DMS to decimal, we have these functions:
          1.0)))
 ```
 
+And we can use these like so:
+
+```lisp
+CL-USER> (make-instance 'hms-degrees :hours 7.2 :minutes 2.24 :seconds 1.42)
+#<HMS-DEGREES 7.2h2.2m1.4s>
+
+CL-USER> (hms-to-decimal *)
+#<DECIMAL-DEGREES 108.6°>
+
+CL-USER> (make-instance 'dms-degrees :degrees 51.2 :minutes 2.24 :seconds 1.42)
+#<DMS-DEGREES 51.2°2.2m1.4s>
+
+CL-USER> (dms-to-decimal *)
+#<DECIMAL-DEGREES 51.2°>
+```
+
 Implementing `decimal-to-hms` and `decimal-to-dms` is left as an exercise to the
 reader.
 
