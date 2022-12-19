@@ -1032,6 +1032,8 @@ reader.
 
 I got the formula from the [Atomic Rockets][atom] website:
 
+[atom]: http://www.projectrho.com/public_html/starmaps/trigonometry.php
+
 ```lisp
 (defun equatorial-to-cartesian (pos)
   "Convert a position from equatorial to cartesian coordinates."
@@ -1055,7 +1057,19 @@ I got the formula from the [Atomic Rockets][atom] website:
 (defun cosr (x) (cos (rad x)))
 ```
 
-[atom]: http://www.projectrho.com/public_html/starmaps/trigonometry.php
+We can use this like so:
+
+```lisp
+CL-USER> (defparameter tau-ceti
+  (make-instance 'equatorial-position
+                 :right-ascension (make-instance 'hms-degrees :hours 1 :minutes 41 :seconds 45)
+                 :declination (make-instance 'dms-degrees :degrees -16.0 :minutes 12.0 :seconds 0.0)
+                 :distance (make-parsecs 3.61)))
+#<EQUATORIAL-POSITION RA=1.0h41.0m45.0s DEC=-16.0°12.0m.0s D=3.6pc>
+
+CL-USER> (equatorial-to-cartesian tau-ceti)
+#<CARTESIAN-POSITION X=3.1pc Y=1.5pc Z=-1.0pc>
+```
 
 # Footnotes
 
