@@ -5,14 +5,17 @@ summary: Worldbuilding with the HYG database and Lisp.
 
 In [_The Epiphany of Gliese 581_][eog581], a group of explorers search the
 mortal remains of a dead superintelligence. The expedition begins in Beta
-Pictoris---today an unremarkable blue star; in the story, a posthuman Dyson
-swarm civilization of quadrillions---then passes through Gliese 581, and ends
-where it started.
+Pictoris---today an unremarkable blue star; in the story, a posthuman [Dyson
+swarm][swarm] civilization of quadrillions---then passes through [Gliese
+581][g581], and ends where it started.
 
 I wanted to build a timeline of the story, and, because this is hard science
 fiction, this means doing real math on real astronomical data. I ended up
 writing a small framework for doing astronomical calculations. In Common Lisp,
 for old time's sake.
+
+[swarm]: https://en.wikipedia.org/wiki/Dyson_sphere#Dyson_swarm
+[g581]: https://en.wikipedia.org/wiki/Gliese_581
 
 # The Problem
 
