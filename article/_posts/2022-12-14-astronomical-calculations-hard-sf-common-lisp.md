@@ -900,16 +900,9 @@ Angle conversion:
 
 ## Equatorial to Cartesian
 
+I got the formula from the [Atomic Rockets][atom] website:
+
 ```lisp
-;;; Equatorial-to-cartesian conversion.
-;;; See: http://www.projectrho.com/public_html/starmaps/trigonometry.php
-
-(defun rad (x)
-  (* x 0.0174532925))
-
-(defun sinr (x) (sin (rad x)))
-(defun cosr (x) (cos (rad x)))
-
 (defun equatorial-to-cartesian (pos)
   "Convert a position from equatorial to cartesian coordinates."
   (with-slots (right-ascension declination distance) pos
@@ -924,7 +917,15 @@ Angle conversion:
                          :x (make-parsecs x)
                          :y (make-parsecs y)
                          :z (make-parsecs z)))))))
+
+(defun rad (x)
+  (* x 0.0174532925))
+
+(defun sinr (x) (sin (rad x)))
+(defun cosr (x) (cos (rad x)))
 ```
+
+[atom]: http://www.projectrho.com/public_html/starmaps/trigonometry.php
 
 # Footnotes
 
