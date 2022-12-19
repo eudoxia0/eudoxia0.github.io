@@ -782,135 +782,23 @@ SF, it's hard SF.
 
 # Appendix: Equatorial Coordinates
 
-Note of this is strictly necessary, because the HYG database has star positions
+This section describes to how accurately represent positions in equatorial
+coordinates, and how to convert them to Cartesian coordinates for ease of use.
+
+None of this is strictly necessary, because the HYG database has star positions
 both in equatorial and Cartesian coordinates, but I had to solve this problem,
 for two reasons. The first is that software is crystallized and verified
 understanding: you know you understand something when you can write a computer
 program that concretizes that understanding. The second is that when software
 solves a problem, it solves it in perpetuity.
 
-## Angles
+## Representation
 
-Decimal:
+A position in equatorial coordinates is a right ascension (RA, an angle, in
+hours-minutes-seconds), a declination (DEC, an angle, in
+degrees-minutes-seconds), and a distance from the Sun in parsecs.
 
-```lisp
-(defclass decimal-degrees ()
-  ((value :reader value
-          :initarg :value
-          :type real))
-  (:documentation "Represents an angle in decimal degrees."))
-
-(defmethod initialize-instance :after ((d decimal-degrees) &key)
-  (let ((d (value d)))
-    (unless (and (> d -180.0) (<= d 180.0))
-      (error "Value out of range for decimal degrees: ~A" d))))
-
-(defmethod humanize ((angle decimal-degrees) stream)
-  (format stream "~0,1f°" (value angle)))
-
-(defmethod print-object ((angle decimal-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-HMS (right ascension):
-
-```lisp
-(defclass hms-degrees ()
-  ((hours :reader hours
-          :initarg :hours
-          :type real)
-   (minutes :reader minutes
-            :initarg :minutes
-            :type real)
-   (seconds :reader seconds
-            :initarg :seconds
-            :type real))
-  (:documentation "Represents an angle in HMS (hours-minutes-seconds) format."))
-
-(defmethod initialize-instance :after ((angle hms-degrees) &key)
-  (with-slots (hours minutes seconds) angle
-    (unless (and (>= hours 0.0) (< hours 24.0))
-      (error "Invalid value for hours in hms-degrees: ~a" hours))
-    (unless (and (>= minutes 0.0) (< minutes 60.0))
-      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
-    (unless (and (>= seconds 0.0) (< seconds 60.0))
-      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
-
-(defmethod humanize ((angle hms-degrees) stream)
-  (with-slots (hours minutes seconds) angle
-    (format stream "~0,1fh~0,1fm~0,1fs" hours minutes seconds)))
-
-(defmethod print-object ((angle hms-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-DMS (declination)
-
-```lisp
-(defclass dms-degrees ()
-  ((degrees :reader degrees
-            :initarg :degrees
-            :type real)
-   (minutes :reader minutes
-            :initarg :minutes
-            :type real)
-   (seconds :reader seconds
-            :initarg :seconds
-            :type real))
-  (:documentation "Represents an angle in DMS (degrees-minutes-seconds) format."))
-
-(defmethod initialize-instance :after ((angle dms-degrees) &key)
-  (with-slots (degrees minutes seconds) angle
-    (unless (and (> degrees -90.0) (<= degrees 90.0))
-      (error "Invalid value for degrees in hms-degrees: ~a" degrees))
-    (unless (and (>= minutes 0.0) (< minutes 60.0))
-      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
-    (unless (and (>= seconds 0.0) (< seconds 60.0))
-      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
-
-(defmethod humanize ((angle dms-degrees) stream)
-  (with-slots (degrees minutes seconds) angle
-    (format stream "~0,1f°~0,1fm~0,1fs" degrees minutes seconds)))
-
-(defmethod print-object ((angle dms-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-Angle conversion:
-
-```lisp
-(defun hms-to-decimal (hms)
-  "Convert an HMS (hours-minutes-seconds) angle to decimal degrees."
-  (with-slots (hours minutes seconds) hms
-    (let ((d (+ (* 15.0 hours)
-                (/ (* 15.0 minutes) 60.0)
-                (/ (* 15.0 seconds) 3600.0))))
-      (make-instance 'decimal-degrees :value d))))
-```
-
-```lisp
-(defun dms-to-decimal (dms)
-  "Convert a DMS (degrees-minutes-seconds) angle to decimal degrees."
-  (with-slots (degrees minutes seconds) dms
-    (let ((d (* (sign degrees)
-                (+ (abs degrees)
-                   (/ minutes 60.0)
-                   (/ seconds 3600.0)))))
-      (make-instance 'decimal-degrees :value d))))
-
-(defun sign (x)
-  (cond ((< x 0.0)
-         -1)
-        ((= x 0.0)
-         0)
-        (t
-         1.0)))
-```
-
-## Equatorial Coordinates
+The `equatorial-position` class represents this:
 
 ```lisp
 (defclass equatorial-position ()
@@ -938,6 +826,105 @@ Angle conversion:
       (write-string " D=" stream)
       (humanize distance stream))))
 ```
+
+We could convert the right ascension and declination to angles eagerly, but I'd
+rather represent things explicitly, and add conversion functions as needed.
+
+We have three representations of angles: decimal degrees, hours-minutes-seconds,
+and degrees-minutes-seconds. Each corresponds to a CLOS class:
+
+```lisp
+(defclass decimal-degrees ()
+  ((value :reader value
+          :initarg :value
+          :type real))
+  (:documentation "Represents an angle in decimal degrees."))
+
+(defclass hms-degrees ()
+  ((hours :reader hours
+          :initarg :hours
+          :type real)
+   (minutes :reader minutes
+            :initarg :minutes
+            :type real)
+   (seconds :reader seconds
+            :initarg :seconds
+            :type real))
+  (:documentation "Represents an angle in HMS (hours-minutes-seconds) format."))
+
+(defclass dms-degrees ()
+  ((degrees :reader degrees
+            :initarg :degrees
+            :type real)
+   (minutes :reader minutes
+            :initarg :minutes
+            :type real)
+   (seconds :reader seconds
+            :initarg :seconds
+            :type real))
+  (:documentation "Represents an angle in DMS (degrees-minutes-seconds) format."))
+```
+
+We use `initialize-instance` methods to verify that all the values are in range:
+
+```lisp
+(defmethod initialize-instance :after ((d decimal-degrees) &key)
+  (let ((d (value d)))
+    (unless (and (> d -180.0) (<= d 180.0))
+      (error "Value out of range for decimal degrees: ~A" d))))
+
+(defmethod initialize-instance :after ((angle hms-degrees) &key)
+  (with-slots (hours minutes seconds) angle
+    (unless (and (>= hours 0.0) (< hours 24.0))
+      (error "Invalid value for hours in hms-degrees: ~a" hours))
+    (unless (and (>= minutes 0.0) (< minutes 60.0))
+      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
+    (unless (and (>= seconds 0.0) (< seconds 60.0))
+      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
+
+(defmethod initialize-instance :after ((angle dms-degrees) &key)
+  (with-slots (degrees minutes seconds) angle
+    (unless (and (> degrees -90.0) (<= degrees 90.0))
+      (error "Invalid value for degrees in hms-degrees: ~a" degrees))
+    (unless (and (>= minutes 0.0) (< minutes 60.0))
+      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
+    (unless (and (>= seconds 0.0) (< seconds 60.0))
+      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
+```
+
+## Angle Conversion
+
+To convert from HMS and DMS to decimal, we have these functions:
+
+```lisp
+(defun hms-to-decimal (hms)
+  "Convert an HMS (hours-minutes-seconds) angle to decimal degrees."
+  (with-slots (hours minutes seconds) hms
+    (let ((d (+ (* 15.0 hours)
+                (/ (* 15.0 minutes) 60.0)
+                (/ (* 15.0 seconds) 3600.0))))
+      (make-instance 'decimal-degrees :value d))))
+
+(defun dms-to-decimal (dms)
+  "Convert a DMS (degrees-minutes-seconds) angle to decimal degrees."
+  (with-slots (degrees minutes seconds) dms
+    (let ((d (* (sign degrees)
+                (+ (abs degrees)
+                   (/ minutes 60.0)
+                   (/ seconds 3600.0)))))
+      (make-instance 'decimal-degrees :value d))))
+
+(defun sign (x)
+  (cond ((< x 0.0)
+         -1)
+        ((= x 0.0)
+         0)
+        (t
+         1.0)))
+```
+
+Implementing `decimal-to-hms` and `decimal-to-dms` is left as an exercise to the
+reader.
 
 ## Equatorial to Cartesian
 
