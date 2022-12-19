@@ -282,6 +282,78 @@ position."
   (euclidean-distance (star-cartesian-position a) (star-cartesian-position b)))
 ```
 
+And this is the driver code. First, we load the database:
+
+```lisp
+;;; Load the HYG database.
+
+(defparameter +db+
+  (load-hyg-database #p"hygdata_v3.csv"))
+
+(assert (= (star-count +db+) 119614))
+```
+
+Then find some stars by name:
+
+```lisp
+;;; Find the relevant stars.
+
+(defparameter +sol+ (find-star-by-name +db+ "Sol"))
+(defparameter +g581+ (find-star-by-name +db+ "Gl 581"))
+(defparameter +g555+ (find-star-by-name +db+ "Gl 555"))
+(defparameter +bpic+ (find-star-by-name +db+ "Bet Pic"))
+```
+
+Find the stars within 3 parsecs of Gliese 581, sort them, and print them out:
+
+```lisp
+(let ((stars (find-stars-within-radius +db+
+                                       (star-cartesian-position +g581+)
+                                       (make-parsecs 3.0))))
+  ;; Sort stars by distance.
+  (flet ((dist (star)
+           ;; Distance to Gliese 581.
+           (star-euclidean-distance +g581+ star)))
+    (let ((sorted (sort stars
+                        #'(lambda (star-a star-b)
+                            (< (value (dist star-a))
+                               (value (dist star-b)))))))
+      ;; Print the list of stars.
+      (format t "Ten stars closest to Gliese 581:~%~%")
+      (format t "~8@A ~12@A~%" "Dist" "Star")
+      (format t "---------------------~%")
+      ; subseq because the first star is Gl581 itself, and because we only want the top 10
+      (loop for star across (subseq sorted 1 11) do
+        (format t "~6,2fly ~12@A~%"
+                (value (parsecs-to-light-years (dist star)))
+                (star-name star)))
+      (let ((star (elt sorted 1)))
+        (format t "~%The star closest to Gliese 581 is ~A at ~0,2fly"
+                (star-name star)
+                (value (parsecs-to-light-years (dist star))))))))
+```
+
+The output here is:
+
+```
+Ten stars closest to Gliese 581:
+
+    Dist         Star
+---------------------
+  4.25ly       Gl 555
+  5.15ly      Gl 570B
+  5.17ly      Gl 570A
+  7.43ly      NN 3877
+  7.87ly    Gl 563.2A
+  8.17ly      Gl 644B
+  8.18ly      Gl 644C
+  8.21ly       Gl 628
+  8.34ly      Gl 644A
+  8.83ly       Gl 643
+
+The star closest to Gliese 581 is Gl 555 at 4.25ly
+```
+
 # The Network Route
 
 The shortest path between two points is the Euclidean distance. But rockets are
