@@ -1,6 +1,6 @@
 ---
 title: Astronomical Calculations for Hard SF in Common Lisp
-summary: Worldbuilding with the HYG database and Lisp.
+summary: Hard SF worldbuilding with the HYG database, Dijkstra's algorithm, and Lisp.
 math: yes
 ---
 
