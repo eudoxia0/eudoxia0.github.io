@@ -199,193 +199,6 @@ CL-USER> (euclidean-distance a b)
 #<PARSECS 13.8pc>
 ```
 
-# Aside: Equatorial Coordinates
-
-Note of this is strictly necessary, because the HYG database has star positions
-both in equatorial and Cartesian coordinates, but I had to solve this problem,
-for two reasons. The first is that software is crystallized and verified
-understanding: you know you understand something when you can write a computer
-program that concretizes that understanding. The second is that when software
-solves a problem, it solves it in perpetuity.
-
-## Angles
-
-Decimal:
-
-```lisp
-(defclass decimal-degrees ()
-  ((value :reader value
-          :initarg :value
-          :type real))
-  (:documentation "Represents an angle in decimal degrees."))
-
-(defmethod initialize-instance :after ((d decimal-degrees) &key)
-  (let ((d (value d)))
-    (unless (and (> d -180.0) (<= d 180.0))
-      (error "Value out of range for decimal degrees: ~A" d))))
-
-(defmethod humanize ((angle decimal-degrees) stream)
-  (format stream "~0,1f°" (value angle)))
-
-(defmethod print-object ((angle decimal-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-HMS (right ascension):
-
-```lisp
-(defclass hms-degrees ()
-  ((hours :reader hours
-          :initarg :hours
-          :type real)
-   (minutes :reader minutes
-            :initarg :minutes
-            :type real)
-   (seconds :reader seconds
-            :initarg :seconds
-            :type real))
-  (:documentation "Represents an angle in HMS (hours-minutes-seconds) format."))
-
-(defmethod initialize-instance :after ((angle hms-degrees) &key)
-  (with-slots (hours minutes seconds) angle
-    (unless (and (>= hours 0.0) (< hours 24.0))
-      (error "Invalid value for hours in hms-degrees: ~a" hours))
-    (unless (and (>= minutes 0.0) (< minutes 60.0))
-      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
-    (unless (and (>= seconds 0.0) (< seconds 60.0))
-      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
-
-(defmethod humanize ((angle hms-degrees) stream)
-  (with-slots (hours minutes seconds) angle
-    (format stream "~0,1fh~0,1fm~0,1fs" hours minutes seconds)))
-
-(defmethod print-object ((angle hms-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-DMS (declination)
-
-```lisp
-(defclass dms-degrees ()
-  ((degrees :reader degrees
-            :initarg :degrees
-            :type real)
-   (minutes :reader minutes
-            :initarg :minutes
-            :type real)
-   (seconds :reader seconds
-            :initarg :seconds
-            :type real))
-  (:documentation "Represents an angle in DMS (degrees-minutes-seconds) format."))
-
-(defmethod initialize-instance :after ((angle dms-degrees) &key)
-  (with-slots (degrees minutes seconds) angle
-    (unless (and (> degrees -90.0) (<= degrees 90.0))
-      (error "Invalid value for degrees in hms-degrees: ~a" degrees))
-    (unless (and (>= minutes 0.0) (< minutes 60.0))
-      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
-    (unless (and (>= seconds 0.0) (< seconds 60.0))
-      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
-
-(defmethod humanize ((angle dms-degrees) stream)
-  (with-slots (degrees minutes seconds) angle
-    (format stream "~0,1f°~0,1fm~0,1fs" degrees minutes seconds)))
-
-(defmethod print-object ((angle dms-degrees) stream)
-  (print-unreadable-object (angle stream :type t)
-    (humanize angle stream)))
-```
-
-Angle conversion:
-
-```lisp
-(defun hms-to-decimal (hms)
-  "Convert an HMS (hours-minutes-seconds) angle to decimal degrees."
-  (with-slots (hours minutes seconds) hms
-    (let ((d (+ (* 15.0 hours)
-                (/ (* 15.0 minutes) 60.0)
-                (/ (* 15.0 seconds) 3600.0))))
-      (make-instance 'decimal-degrees :value d))))
-```
-
-```lisp
-(defun dms-to-decimal (dms)
-  "Convert a DMS (degrees-minutes-seconds) angle to decimal degrees."
-  (with-slots (degrees minutes seconds) dms
-    (let ((d (* (sign degrees)
-                (+ (abs degrees)
-                   (/ minutes 60.0)
-                   (/ seconds 3600.0)))))
-      (make-instance 'decimal-degrees :value d))))
-
-(defun sign (x)
-  (cond ((< x 0.0)
-         -1)
-        ((= x 0.0)
-         0)
-        (t
-         1.0)))
-```
-
-## Equatorial Coordinates
-
-```lisp
-(defclass equatorial-position ()
-  ((right-ascension :reader right-ascension
-                    :initarg :right-ascension
-                    :type hms-degrees
-                    :documentation "The right ascension in HMS.")
-   (declination :reader declination
-                :initarg :declination
-                :type dms-degrees
-                :documentation "The declination in DMS.")
-   (distance :reader distance
-             :initarg :distance
-             :type parsecs
-             :documentation "The distance in parsecs."))
-  (:documentation "A position in equatorial (RA, DEC, DIST) coordinates."))
-
-(defmethod print-object ((p equatorial-position) stream)
-  (print-unreadable-object (p stream :type t)
-    (with-slots (right-ascension declination distance) p
-      (write-string "RA=" stream)
-      (humanize right-ascension stream)
-      (write-string " DEC=" stream)
-      (humanize declination stream)
-      (write-string " D=" stream)
-      (humanize distance stream))))
-```
-
-## Equatorial to Cartesian
-
-```lisp
-;;; Equatorial-to-cartesian conversion.
-;;; See: http://www.projectrho.com/public_html/starmaps/trigonometry.php
-
-(defun rad (x)
-  (* x 0.0174532925))
-
-(defun sinr (x) (sin (rad x)))
-(defun cosr (x) (cos (rad x)))
-
-(defun equatorial-to-cartesian (pos)
-  "Convert a position from equatorial to cartesian coordinates."
-  (with-slots (right-ascension declination distance) pos
-    (let ((φ (value (hms-to-decimal right-ascension)))
-          (θ (value (dms-to-decimal declination)))
-          (ρ (value distance)))
-      (let ((rvect (* ρ (cosr θ))))
-        (let ((x (* rvect (cosr φ)))
-              (y (* rvect (sinr φ)))
-              (z (* ρ     (sinr θ))))
-          (make-instance 'cartesian-position
-                         :x (make-parsecs x)
-                         :y (make-parsecs y)
-                         :z (make-parsecs z)))))))
-```
-
 # Parsing the HYG Database
 
 The HYG database is a straightforward CSV, so we can parse it easily. We use the
@@ -406,7 +219,7 @@ First, a class to store the database:
   (length (database-stars db)))
 ```
 
-And stars:
+And another to represent the star data we care about:
 
 ```lisp
 (defclass star ()
@@ -438,9 +251,6 @@ And stars:
              :initarg :distance
              :type parsecs
              :documentation "The star's distance from the Sun in parsecs.")
-   (equatorial-position :reader star-equatorial-position
-                        :initarg :equatorial-position
-                        :documentation "The star's equatorial (RA, DEC, DIST) position.")
    (cartesian-position :reader star-cartesian-position
                        :initarg :cartesian-position
                        :documentation "The star's Cartesian (X, Y, Z) position."))
@@ -449,7 +259,7 @@ And stars:
 (defun star-name (star)
   "A star's name. The following are tried in order: proper name, Bayer
 designation, Gliese name, HIP name, HD name. If the star doesn't have any names,
-returns NIL."
+returns '?'."
   (with-slots (proper bayer gliese hip) star
     (or proper
         bayer
@@ -466,7 +276,22 @@ returns NIL."
 And the parsing code is very straightforward:
 
 ```lisp
+(defun load-hyg-database (pathname)
+  "Load the HYG database from a CSV file."
+  (with-open-file (stream pathname :direction :input)
+    ;; Discard the header.
+    (read-line stream nil)
+    (let ((stars (make-array 0 :adjustable t :element-type 'star :fill-pointer 0)))
+      (loop for line = (read-line stream nil)
+            while line
+            do
+               (let ((columns (uiop:split-string line :separator ",")))
+                 (let ((star (parse-star columns)))
+                   (vector-push-extend star stars))))
+      (make-instance 'hyg-database :stars stars))))
+
 (defun parse-star (cells)
+  "Parse a star from a row (a list of CSV cells)."
   (destructuring-bind (id hip hd hr gliese bayer proper ra dec dist prma prdec rv mag absmag spect ci x y z &rest etc) cells
     (declare (ignore hr ra dec prma prdec rv mag absmag spect ci etc))
     (make-instance 'star
@@ -481,20 +306,6 @@ And the parsing code is very straightforward:
                                                       :x (parse-parsecs x)
                                                       :y (parse-parsecs y)
                                                       :z (parse-parsecs z)))))
-
-(defun load-hyg-database (pathname)
-  "Load the HYG database from a CSV file."
-  (with-open-file (stream pathname :direction :input)
-    ;; Discard the header.
-    (read-line stream nil)
-    (let ((stars (make-array 0 :adjustable t :element-type 'star :fill-pointer 0)))
-      (loop for line = (read-line stream nil)
-            while line
-            do
-               (let ((columns (uiop:split-string line :separator ",")))
-                 (let ((star (parse-star columns)))
-                   (vector-push-extend star stars))))
-      (make-instance 'hyg-database :stars stars))))
 
 (defun string-or-nil (str)
   (if (string= str "") nil str))
@@ -905,6 +716,193 @@ I want to make three plots:
 All of this had very little consequence to the story: a few throwaway
 sentences. But I see it as a matter of respect for the audience. If it's hard
 SF, it's hard SF.
+
+# Appendix: Equatorial Coordinates
+
+Note of this is strictly necessary, because the HYG database has star positions
+both in equatorial and Cartesian coordinates, but I had to solve this problem,
+for two reasons. The first is that software is crystallized and verified
+understanding: you know you understand something when you can write a computer
+program that concretizes that understanding. The second is that when software
+solves a problem, it solves it in perpetuity.
+
+## Angles
+
+Decimal:
+
+```lisp
+(defclass decimal-degrees ()
+  ((value :reader value
+          :initarg :value
+          :type real))
+  (:documentation "Represents an angle in decimal degrees."))
+
+(defmethod initialize-instance :after ((d decimal-degrees) &key)
+  (let ((d (value d)))
+    (unless (and (> d -180.0) (<= d 180.0))
+      (error "Value out of range for decimal degrees: ~A" d))))
+
+(defmethod humanize ((angle decimal-degrees) stream)
+  (format stream "~0,1f°" (value angle)))
+
+(defmethod print-object ((angle decimal-degrees) stream)
+  (print-unreadable-object (angle stream :type t)
+    (humanize angle stream)))
+```
+
+HMS (right ascension):
+
+```lisp
+(defclass hms-degrees ()
+  ((hours :reader hours
+          :initarg :hours
+          :type real)
+   (minutes :reader minutes
+            :initarg :minutes
+            :type real)
+   (seconds :reader seconds
+            :initarg :seconds
+            :type real))
+  (:documentation "Represents an angle in HMS (hours-minutes-seconds) format."))
+
+(defmethod initialize-instance :after ((angle hms-degrees) &key)
+  (with-slots (hours minutes seconds) angle
+    (unless (and (>= hours 0.0) (< hours 24.0))
+      (error "Invalid value for hours in hms-degrees: ~a" hours))
+    (unless (and (>= minutes 0.0) (< minutes 60.0))
+      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
+    (unless (and (>= seconds 0.0) (< seconds 60.0))
+      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
+
+(defmethod humanize ((angle hms-degrees) stream)
+  (with-slots (hours minutes seconds) angle
+    (format stream "~0,1fh~0,1fm~0,1fs" hours minutes seconds)))
+
+(defmethod print-object ((angle hms-degrees) stream)
+  (print-unreadable-object (angle stream :type t)
+    (humanize angle stream)))
+```
+
+DMS (declination)
+
+```lisp
+(defclass dms-degrees ()
+  ((degrees :reader degrees
+            :initarg :degrees
+            :type real)
+   (minutes :reader minutes
+            :initarg :minutes
+            :type real)
+   (seconds :reader seconds
+            :initarg :seconds
+            :type real))
+  (:documentation "Represents an angle in DMS (degrees-minutes-seconds) format."))
+
+(defmethod initialize-instance :after ((angle dms-degrees) &key)
+  (with-slots (degrees minutes seconds) angle
+    (unless (and (> degrees -90.0) (<= degrees 90.0))
+      (error "Invalid value for degrees in hms-degrees: ~a" degrees))
+    (unless (and (>= minutes 0.0) (< minutes 60.0))
+      (error "Invalid value for minutes in hms-degrees: ~a" minutes))
+    (unless (and (>= seconds 0.0) (< seconds 60.0))
+      (error "Invalid value for seconds in hms-degrees: ~a" seconds))))
+
+(defmethod humanize ((angle dms-degrees) stream)
+  (with-slots (degrees minutes seconds) angle
+    (format stream "~0,1f°~0,1fm~0,1fs" degrees minutes seconds)))
+
+(defmethod print-object ((angle dms-degrees) stream)
+  (print-unreadable-object (angle stream :type t)
+    (humanize angle stream)))
+```
+
+Angle conversion:
+
+```lisp
+(defun hms-to-decimal (hms)
+  "Convert an HMS (hours-minutes-seconds) angle to decimal degrees."
+  (with-slots (hours minutes seconds) hms
+    (let ((d (+ (* 15.0 hours)
+                (/ (* 15.0 minutes) 60.0)
+                (/ (* 15.0 seconds) 3600.0))))
+      (make-instance 'decimal-degrees :value d))))
+```
+
+```lisp
+(defun dms-to-decimal (dms)
+  "Convert a DMS (degrees-minutes-seconds) angle to decimal degrees."
+  (with-slots (degrees minutes seconds) dms
+    (let ((d (* (sign degrees)
+                (+ (abs degrees)
+                   (/ minutes 60.0)
+                   (/ seconds 3600.0)))))
+      (make-instance 'decimal-degrees :value d))))
+
+(defun sign (x)
+  (cond ((< x 0.0)
+         -1)
+        ((= x 0.0)
+         0)
+        (t
+         1.0)))
+```
+
+## Equatorial Coordinates
+
+```lisp
+(defclass equatorial-position ()
+  ((right-ascension :reader right-ascension
+                    :initarg :right-ascension
+                    :type hms-degrees
+                    :documentation "The right ascension in HMS.")
+   (declination :reader declination
+                :initarg :declination
+                :type dms-degrees
+                :documentation "The declination in DMS.")
+   (distance :reader distance
+             :initarg :distance
+             :type parsecs
+             :documentation "The distance in parsecs."))
+  (:documentation "A position in equatorial (RA, DEC, DIST) coordinates."))
+
+(defmethod print-object ((p equatorial-position) stream)
+  (print-unreadable-object (p stream :type t)
+    (with-slots (right-ascension declination distance) p
+      (write-string "RA=" stream)
+      (humanize right-ascension stream)
+      (write-string " DEC=" stream)
+      (humanize declination stream)
+      (write-string " D=" stream)
+      (humanize distance stream))))
+```
+
+## Equatorial to Cartesian
+
+```lisp
+;;; Equatorial-to-cartesian conversion.
+;;; See: http://www.projectrho.com/public_html/starmaps/trigonometry.php
+
+(defun rad (x)
+  (* x 0.0174532925))
+
+(defun sinr (x) (sin (rad x)))
+(defun cosr (x) (cos (rad x)))
+
+(defun equatorial-to-cartesian (pos)
+  "Convert a position from equatorial to cartesian coordinates."
+  (with-slots (right-ascension declination distance) pos
+    (let ((φ (value (hms-to-decimal right-ascension)))
+          (θ (value (dms-to-decimal declination)))
+          (ρ (value distance)))
+      (let ((rvect (* ρ (cosr θ))))
+        (let ((x (* rvect (cosr φ)))
+              (y (* rvect (sinr φ)))
+              (z (* ρ     (sinr θ))))
+          (make-instance 'cartesian-position
+                         :x (make-parsecs x)
+                         :y (make-parsecs y)
+                         :z (make-parsecs z)))))))
+```
 
 # Footnotes
 
