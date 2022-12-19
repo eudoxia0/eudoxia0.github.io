@@ -130,6 +130,75 @@ degrees-minutes-seconds.
 Luckily the HYG database contains the Cartesian (X, Y, Z) coordinates as
 well. If it didn't, see below.
 
+The `cartesian-position` class represent as Cartesian triple:
+
+```lisp
+(defclass cartesian-position ()
+  ((x :reader x
+      :initarg :x
+      :type parsecs
+      :documentation "The X coordinate in parsecs.")
+   (y :reader y
+      :initarg :y
+      :type parsecs
+      :documentation "The Y coordinate in parsecs.")
+   (z :reader z
+      :initarg :z
+      :type parsecs
+      :documentation "The Z coordinate in parsecs."))
+  (:documentation "A position in Cartesian (X, Y, Z) coordinates."))
+
+(defmethod print-object ((p cartesian-position) stream)
+  (print-unreadable-object (p stream :type t)
+    (with-slots (x y z) p
+      (write-string "X=" stream)
+      (humanize x stream)
+      (write-string " Y=" stream)
+      (humanize y stream)
+      (write-string " Z=" stream)
+      (humanize z stream))))
+```
+
+And the `euclidean-distance` function calculates the distance between two points:
+
+```lisp
+(defun euclidean-distance (p1 p2)
+  "Calculate the Euclidean distance between two Cartesian coordinates.
+Returns a value in parsecs."
+  (with-slots ((x1 x) (y1 y) (z1 z)) p1
+    (with-slots ((x2 x) (y2 y) (z2 z)) p2
+      (let ((x1 (value x1))
+            (y1 (value y1))
+            (z1 (value z1))
+            (x2 (value x2))
+            (y2 (value y2))
+            (z2 (value z2)))
+        (make-parsecs (sqrt (+ (expt (- x1 x2) 2)
+                               (expt (- y1 y2) 2)
+                               (expt (- z1 z2) 2))))))))
+```
+
+We can use this like this:
+
+```lisp
+CL-USER> (defparameter a
+           (make-instance 'cartesian-position
+                          :x (make-parsecs 3.4)
+                          :y (make-parsecs -6.7)
+                          :z (make-parsecs -1.2)))
+#<CARTESIAN-POSITION X=3.4pc Y=-6.7pc Z=-1.2pc>
+
+CL-USER> (defparameter b
+           (make-instance 'cartesian-position
+                          :x (make-parsecs 9.1)
+                          :y (make-parsecs 4.3)
+                          :z (make-parsecs -7.2)))
+#<CARTESIAN-POSITION X=9.1pc Y=4.3pc Z=-7.2pc>
+
+CL-USER> (euclidean-distance a b)
+#<PARSECS 13.8pc>
+```
+
 # Aside: Equatorial Coordinates
 
 Note of this is strictly necessary, because the HYG database has star positions
