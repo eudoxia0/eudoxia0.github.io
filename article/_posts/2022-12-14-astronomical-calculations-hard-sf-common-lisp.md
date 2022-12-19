@@ -185,6 +185,24 @@ And the parsing code is very straightforward:
 
 # Nearest Stars
 
+```lisp
+(defun find-stars-within-radius (db pos radius)
+  "Given an HYG database, a position in Cartesian coordinates, and a radius in
+parsecs, return a vector of all the stars that are within the radius from that
+position."
+  (let ((stars (make-array 0 :adjustable t :element-type 'star :fill-pointer 0)))
+    (loop for star across (database-stars db) do
+      (let ((star-pos (star-cartesian-position star)))
+        (when (< (value (euclidean-distance pos star-pos))
+                 (value radius))
+          (vector-push-extend star stars))))
+    stars))
+
+(defun star-euclidean-distance (a b)
+  "The Euclidean distance between two stars in parsecs."
+  (euclidean-distance (star-cartesian-position a) (star-cartesian-position b)))
+```
+
 # The Network Route
 
 # Star Maps
