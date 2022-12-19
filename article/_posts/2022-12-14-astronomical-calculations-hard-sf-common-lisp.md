@@ -324,6 +324,14 @@ And, finally, some code to find stars by name:
   nil)
 ```
 
+Now we can query the database:
+
+```lisp
+(defparameter db (load-hyg-database #p"hygdata_v3.csv"))
+
+(defparameter star (find-star-by-name db "Gl 581"))
+```
+
 # Nearest Stars
 
 ```lisp
