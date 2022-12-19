@@ -73,6 +73,10 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
           :documentation "The underlying value."))
   (:documentation "Represents distance in parsecs."))
 
+(defun make-parsecs (value)
+  "Create an instance of PARSECS from a numeric value."
+  (make-instance 'parsecs :value value))
+
 (defmethod humanize ((d parsecs) stream)
   (let ((d (value d)))
     (format stream "~0,1fpc" d)))
@@ -87,6 +91,24 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
 ```lisp
 (defgeneric humanize (object stream)
   (:documentation "Return a human-readable representation of an object."))
+```
+
+We can easily convert between the two units:
+
+```lisp
+(defun light-years-to-parsecs (ly)
+  "Convert the given distance in light years to parsecs."
+  (make-parsecs (* (value ly) 0.306601)))
+
+(defun parsecs-to-light-years (pc)
+  "Convert the given distance in parsecs to light years."
+  (make-instance 'light-years :value (* (value pc) 3.26156)))
+```
+
+For example:
+
+```lisp
+WIP
 ```
 
 # Star Positions
