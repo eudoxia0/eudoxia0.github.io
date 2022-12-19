@@ -327,9 +327,22 @@ And, finally, some code to find stars by name:
 Now we can query the database:
 
 ```lisp
-(defparameter db (load-hyg-database #p"hygdata_v3.csv"))
-
-(defparameter star (find-star-by-name db "Gl 581"))
+CL-USER> (defparameter db (load-hyg-database #p"hygdata_v3.csv"))
+DB
+CL-USER> db
+#<HYG-DATABASE {1007007A63}>
+CL-USER> (defparameter star (find-star-by-name db "Gl 581"))
+STAR
+CL-USER> star
+#<STAR Gl 581>
+CL-USER> (star-name star)
+"Gl 581"
+CL-USER> (star-gliese star)
+"Gl 581"
+CL-USER> (star-distance star)
+#<PARSECS 6.2pc>
+CL-USER> (star-cartesian-position star)
+#<CARTESIAN-POSITION X=-4.0pc Y=-4.7pc Z=-.8pc>
 ```
 
 # Nearest Stars
