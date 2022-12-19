@@ -545,33 +545,33 @@ Even more detailed, here's the full pseudocode:
    1. $V_f: \text{Vertex}$: the end vertex.
 1. Let:
    1. $D: \text{Map}[\text{Vertex}, \mathbb{R}]$ is the table of distances from
-      $V_i$ to every other vertex. Initially, we set $D[V_i] = 0$ and $D[v] =
+      $V_i$ to every other vertex. Initially, we set $D[V_i] := 0$ and $D[v] :=
       +\infty, \forall v \in G$ for all other vertices.
    1. $L : \text{Map}[\text{Vertex}, \text{Option}[\text{Vertex}]]$ is the previous links
       table, which keeps track of the path we build while the algorithm runs. It
-      maps a vertex to the previous vertex in the path. Initially, $L[v] =
+      maps a vertex to the previous vertex in the path. Initially, $L[v] :=
       \text{NIL}, \forall v \in G$.
    1. $Q : \text{Queue}[\text{Vertex}]$ is a [priority queue][queue] of vertices
       ordered by $D[v]$. This is initialized to contain every vertex in
       $G$. This supports one operation, $\text{pop}$, which takes the vertex $v$
-      with minimum value of $D[v]$, removes it from $Q$, and returns it.
+      with the minimum value of $D[v]$, removes it from $Q$, and returns it.
 1. While $Q$ is non-empty:
-   1. Let $u = \text{pop}(Q)$.
+   1. Let $u := \text{pop}(Q)$.
    1. If $u = V_f$:
       1. Break out of the loop (found the target).
    1. If $D[u] = +\infty$:
-      1. Failed: there is no shortest path.
+      1. Failed: there is no path from $V_i$ to $V_f$.
    1. Else:
       1. For each pair $(v, c)$ in the neighbours of $u$:
-         1. Let $d = c + D[u]$.
+         1. Let $d := c + D[u]$.
          1. If $d < D[v]$:
-             1. $D[v] = d$.
-             1. $L[v] = u$.
+             1. $D[v] := d$.
+             1. $L[v] := u$.
 1. Let $P: \text{List}[\text{Vertex}] = ()$.
-1. Let $l = V_f$.
+1. Let $l := V_f$.
 1. While $L[l] \neq \text{NIL}$:
    1. Append $l$ to $P$.
-   2. $l = P[l]$.
+   2. $l := P[l]$.
 1. Reverse $P$ and return it.
 
 [queue]: https://en.wikipedia.org/wiki/Priority_queue
