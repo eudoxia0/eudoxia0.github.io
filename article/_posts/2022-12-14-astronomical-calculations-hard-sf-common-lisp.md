@@ -108,7 +108,14 @@ We can easily convert between the two units:
 For example:
 
 ```lisp
-WIP
+CL-USER> (make-parsecs 5.0)
+#<PARSECS 5.0pc>
+
+CL-USER> (parsecs-to-light-years *)
+#<LIGHT-YEARS 16.3ly>
+
+CL-USER> (light-years-to-parsecs *)
+#<PARSECS 5.0pc>
 ```
 
 # Star Positions
