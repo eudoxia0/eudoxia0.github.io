@@ -296,6 +296,8 @@ technology and economics to some constant distance? To find the answer, I just
 implemented Dijkstra's algorithm and ran it over the graph of stars and network
 connections.
 
+The `edge` and `graph` classes represent a graph where edges have a cost:
+
 ```lisp
 (defclass edge ()
   ((start :reader edge-start
@@ -331,7 +333,11 @@ connections.
           :type (vector edge)
           :documentation "A vector of edge objects."))
   (:documentation "Represents a graph."))
+```
 
+A convenience function to construct a graph from the vector of edges:
+
+```lisp
 (defun make-graph-from-edges (edges)
   "Construct a graph from a vector of edges."
   (let ((vertex-table (make-hash-table :test 'equal)) ; table of seen IDs
@@ -346,30 +352,50 @@ connections.
           (setf (gethash end vertex-table) t))))
     (make-instance 'graph :vertices vertices
                           :edges edges)))
+```
 
-(defun make-graph (stars dist)
-  "Create a graph from a vector of stars. Only create edges between stars that are less than DIST parsecs apart."
-  (let ((n (length stars)) ; Number of stars.
-        (edges (make-array 0 :adjustable t :element-type 'edge :fill-pointer 0))) ; edge accumulator
-    ;; Do the Cartesian product.
-    (loop for i from 0 to (- n 1) do
-      (loop for j from (+ i 1) to (- n 1) do
-        (let ((a (elt stars i))
-              (b (elt stars j)))
-          (assert (not (= (star-id a) (star-id b))))
-          ;; Find the distance between the two stars.
-          (let ((d (euclidean-distance (star-cartesian-position a)
-                                       (star-cartesian-position b))))
-            ;; If the distance is within the radius, add the edge to the graph.
-            (when (<= (value d) (value dist))
-              (vector-push-extend (make-instance 'edge
-                                                 :start (star-id a)
-                                                 :end (star-id b)
-                                                 :cost (value d))
-                                  edges))))))
-    ;; Construct the graph from the edges.
-    (make-graph-from-edges edges)))
+Dijkstra:
 
+```lisp
+(defun dijkstra (graph source destination)
+  "Find a path from the source node to the destination in the given graph.
+GRAPH is an instance of GRAPH. SOURCE and DESTINATION are integer vertex IDs.
+Returns a vector of integer vertex IDs."
+  ;; Table of distances.
+  (let ((dist (make-hash-table :test 'equal)))
+    (loop for vertex across (graph-vertices graph) do
+      (setf (gethash vertex dist) double-float-positive-infinity))
+    (setf (gethash source dist) 0.0)
+    ;; Table of previous nodes.
+    (let ((previous (make-hash-table :test 'equal)))
+      (loop for vertex across (graph-vertices graph) do
+        (setf (gethash vertex previous) nil))
+      ;; Table of neighbor costs.
+      (let ((neighbors (make-neighbors graph)))
+        ;; Queue.
+        (let ((q (make-hash-table :test 'equal)))
+          (loop for vertex across (graph-vertices graph) do
+            (setf (gethash vertex q) t))
+          (loop while (> (hash-table-count q) 0) do
+            (let ((u (pop-min q dist)))
+              (when (or (= u destination)
+                        (= (gethash u dist) double-float-positive-infinity))
+                (return))
+              ;; Adjust neighbor distances.
+              (let ((neighbors (gethash u neighbors)))
+                (loop for v being the hash-keys of neighbors do
+                  (let ((cost (gethash v neighbors)))
+                    (let ((alt (+ cost (gethash u dist))))
+                      (when (< alt (gethash v dist))
+                        (setf (gethash v dist) alt)
+                        (setf (gethash v previous) u))))))))
+          ;; Build path
+          (build-path destination previous))))))
+```
+
+Auxiliary functions:
+
+```lisp
 (defun build-path (destination previous)
   (let ((path (make-array 0 :adjustable t :element-type 'integer :fill-pointer 0)))
     (let ((u destination))
@@ -409,41 +435,36 @@ Map[ID, Map[ID, Float]]"
     (assert (not (null min-dist)))
     (remhash min-id queue)
     min-id))
+```
 
-(defun dijkstra (graph source destination)
-  "Find a path from the source node to the destination in the given graph.
-GRAPH is an instance of GRAPH. SOURCE and DESTINATION are integer vertex IDs.
-Returns a vector of integer vertex IDs."
-  ;; Table of distances.
-  (let ((dist (make-hash-table :test 'equal)))
-    (loop for vertex across (graph-vertices graph) do
-      (setf (gethash vertex dist) double-float-positive-infinity))
-    (setf (gethash source dist) 0.0)
-    ;; Table of previous nodes.
-    (let ((previous (make-hash-table :test 'equal)))
-      (loop for vertex across (graph-vertices graph) do
-        (setf (gethash vertex previous) nil))
-      ;; Table of neighbor costs.
-      (let ((neighbors (make-neighbors graph)))
-        ;; Queue.
-        (let ((q (make-hash-table :test 'equal)))
-          (loop for vertex across (graph-vertices graph) do
-            (setf (gethash vertex q) t))
-          (loop while (> (hash-table-count q) 0) do
-            (let ((u (pop-min q dist)))
-              (when (or (= u destination)
-                        (= (gethash u dist) double-float-positive-infinity))
-                (return))
-              ;; Adjust neighbor distances.
-              (let ((neighbors (gethash u neighbors)))
-                (loop for v being the hash-keys of neighbors do
-                  (let ((cost (gethash v neighbors)))
-                    (let ((alt (+ cost (gethash u dist))))
-                      (when (< alt (gethash v dist))
-                        (setf (gethash v dist) alt)
-                        (setf (gethash v previous) u))))))))
-          ;; Build path
-          (build-path destination previous))))))
+Now we can build the star graph. This function takes a vector of stars, and
+creates a graph where the nodes are star IDs, and two nodes are connected if the
+distance between two stars is less than the threshold:
+
+```lisp
+(defun make-graph (stars dist)
+  "Create a graph from a vector of stars. Only create edges between
+stars that are less than DIST parsecs apart."
+  (let ((n (length stars)) ; Number of stars.
+        (edges (make-array 0 :adjustable t :element-type 'edge :fill-pointer 0))) ; edge accumulator
+    ;; Do the Cartesian product.
+    (loop for i from 0 to (- n 1) do
+      (loop for j from (+ i 1) to (- n 1) do
+        (let ((a (elt stars i))
+              (b (elt stars j)))
+          (assert (not (= (star-id a) (star-id b))))
+          ;; Find the distance between the two stars.
+          (let ((d (euclidean-distance (star-cartesian-position a)
+                                       (star-cartesian-position b))))
+            ;; If the distance is within the radius, add the edge to the graph.
+            (when (<= (value d) (value dist))
+              (vector-push-extend (make-instance 'edge
+                                                 :start (star-id a)
+                                                 :end (star-id b)
+                                                 :cost (value d))
+                                  edges))))))
+    ;; Construct the graph from the edges.
+    (make-graph-from-edges edges)))
 ```
 
 # Star Maps
