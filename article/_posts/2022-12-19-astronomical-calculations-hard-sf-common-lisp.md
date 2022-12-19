@@ -66,14 +66,6 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
           :documentation "The underlying value."))
   (:documentation "Represents distance in light years."))
 
-(defmethod humanize ((d light-years) stream)
-  (let ((d (value d)))
-    (format stream "~0,1fly" d)))
-
-(defmethod print-object ((d light-years) stream)
-  (print-unreadable-object (d stream :type t)
-    (humanize d stream)))
-
 (defclass parsecs ()
   ((value :reader value
           :initarg :value
@@ -84,23 +76,7 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
 (defun make-parsecs (value)
   "Create an instance of PARSECS from a numeric value."
   (make-instance 'parsecs :value value))
-
-(defmethod humanize ((d parsecs) stream)
-  (let ((d (value d)))
-    (format stream "~0,1fpc" d)))
-
-(defmethod print-object ((d parsecs) stream)
-  (print-unreadable-object (d stream :type t)
-    (humanize d stream)))
 ```
-
-`humanize` is just so we can compose string representations better:
-
-```lisp
-(defgeneric humanize (object stream)
-  (:documentation "Return a human-readable representation of an object."))
-```
-
 We can easily convert between the two units by multiplying by a constant:)
 
 ```
@@ -166,16 +142,6 @@ The `cartesian-position` class represents a Cartesian triple:
       :type parsecs
       :documentation "The Z coordinate in parsecs."))
   (:documentation "A position in Cartesian (X, Y, Z) coordinates."))
-
-(defmethod print-object ((p cartesian-position) stream)
-  (print-unreadable-object (p stream :type t)
-    (with-slots (x y z) p
-      (write-string "X=" stream)
-      (humanize x stream)
-      (write-string " Y=" stream)
-      (humanize y stream)
-      (write-string " Z=" stream)
-      (humanize z stream))))
 ```
 
 And the `euclidean-distance` function calculates the distance between two points:
@@ -286,10 +252,6 @@ returns '?'."
         (if hip
             (concatenate 'string "HIP " hip)
             "?"))))
-
-(defmethod print-object ((star star) stream)
-  (print-unreadable-object (star stream :type t)
-    (format stream "~A" (star-name star))))
 ```
 
 And the parsing code is very straightforward:
@@ -959,16 +921,6 @@ The `equatorial-position` class represents this:
              :type parsecs
              :documentation "The distance in parsecs."))
   (:documentation "A position in equatorial (RA, DEC, DIST) coordinates."))
-
-(defmethod print-object ((p equatorial-position) stream)
-  (print-unreadable-object (p stream :type t)
-    (with-slots (right-ascension declination distance) p
-      (write-string "RA=" stream)
-      (humanize right-ascension stream)
-      (write-string " DEC=" stream)
-      (humanize declination stream)
-      (write-string " D=" stream)
-      (humanize distance stream))))
 ```
 
 We could convert the right ascension and declination to angles eagerly, but I'd
