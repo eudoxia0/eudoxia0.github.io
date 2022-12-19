@@ -961,7 +961,8 @@ and degrees-minutes-seconds. Each corresponds to a CLOS class:
   (:documentation "Represents an angle in DMS (degrees-minutes-seconds) format."))
 ```
 
-We use `initialize-instance` methods to verify that all the values are in range:
+We use `initialize-instance` methods to verify that all the values are in
+range[^checking]:
 
 ```lisp
 (defmethod initialize-instance :after ((d decimal-degrees) &key)
@@ -1113,3 +1114,7 @@ CL-USER> (equatorial-to-cartesian tau-ceti)
     also in roughly opposite directions in the sky.
 
 [map]: https://upload.wikimedia.org/wikipedia/commons/8/89/Constellations%2C_equirectangular_plot%2C_Menzel_families.svg
+
+[^checking]:
+    Much of this repetitive error-checking code was written by ChatGPT, but I
+    had to anneal the inequalities to get it right.
