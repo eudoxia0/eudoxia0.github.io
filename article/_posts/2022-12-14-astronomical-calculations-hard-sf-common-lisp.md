@@ -286,6 +286,27 @@ position."
 
 # Star Maps
 
+There aren't any good plotting libraries for Common Lisp, so I used Python's
+matplotlib, and used a CSV to generate the data.
+
+Plotting is always tedious, but happily I was able to use ChatGPT to write most
+of the plotting code. I asked it to generate a simple example of a scatterplot
+with labeled points---that is, stars. Then I modified the presentation a bit,
+changing colours and font sizes, but the static plots have the problem that the
+perspective makes it hard to know where places really are.
+
+So I showed ChatGPT my plotting code, and asked it to rewrite it to create an
+animated where the entire plot is rotated about the vertical axis. It rewrote
+the script, preserving bit-for-bit identical output, and added animation
+support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
+fix.
+
+I want to make three plots:
+
+1. A 3D star map showing the positions of all stars mentioned in the story.
+2. A map centered on Gliese 581.
+3. A map showing the route from Beta Pictoris to Gliese 555.
+
 # Conclusion
 
 All of this had very little consequence to the story: a few throwaway
