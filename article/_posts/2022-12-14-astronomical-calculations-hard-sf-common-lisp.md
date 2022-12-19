@@ -557,8 +557,10 @@ Even more detailed, here's the full pseudocode:
       with minimum value of $D[v]$, removes it from $Q$, and returns it.
 1. While $Q$ is non-empty:
    1. Let $u = \text{pop}(Q)$.
-   1. If $u = V_f \lor D[u] = +\infty$:
-      1. Break out of the loop.
+   1. If $u = V_f$:
+      1. Break out of the loop (found the target).
+   1. If $D[u] = +\infty$:
+      1. Failed: there is no shortest path.
    1. Else:
       1. For each pair $(v, c)$ in the neighbours of $u$:
          1. Let $d = c + D[u]$.
