@@ -632,9 +632,9 @@ stars that are less than DIST parsecs apart."
     (make-graph-from-edges edges)))
 ```
 
-The HYG database has over 100k stars, but all the stars in the story are within
-100 light years of the Sun. So we can pare down the graph considerably by
-dropping every star over 70 light years (22 parsecs) from the Sun:
+The HYG database has over 100k stars, but all the stars in the story are very
+close to the Sun. So we can pare down the graph considerably by dropping every
+star over 70 light years (22 parsecs) from the Sun:
 
 ```lisp
 (defparameter +stars+
@@ -643,11 +643,13 @@ dropping every star over 70 light years (22 parsecs) from the Sun:
              (copy-seq (database-stars +db+))))
 ```
 
-Interstellar laser links reach ~16 light years (5 parsecs):
+Interstellar laser links reach ~16 light years (5 parsecs).
 
 ```lisp
 (defparameter +laser-limit+ (make-parsecs 5.0))
 ```
+
+(This number is completely arbitrary, and arguably too high.)
 
 Now we build the star graph:
 
@@ -660,7 +662,7 @@ Now we build the star graph:
         (length (graph-edges +graph+)))
 ```
 
-And run Dijkstra's algorithm to get the path and print it out:
+And run Dijkstra's algorithm to get the shortest network route and print it out:
 
 ```lisp
 (defparameter +path+
@@ -680,7 +682,7 @@ And run Dijkstra's algorithm to get the path and print it out:
           (value (parsecs-to-light-years (star-euclidean-distance a b)))))
 ```
 
-And the output is:
+The output is:
 
 ```
 Star graph has 2333 vertices and 32266 edges.
@@ -719,28 +721,36 @@ Distance from Beta Pictoris to Gliese 555: 70.80ly
 Total network route length: 78.25ly
 ```
 
+A journey on the network is eight years longer than a straight-line journey, but
+fusion rockets are limited to ~10% of the speed of light, so the straight-line
+ballistic trajectory would be 700 years.
+
 # Star Maps
 
-There aren't any good plotting libraries for Common Lisp, so I used Python's
-matplotlib, and used a CSV to generate the data.
+I wanted to make a map of all the stars mentioned in the story, as well as a map
+showing the network route. Part to verify that the calculations were actually
+correct, part to have a better understanding of the story's geography: a picture
+is easier to understand that a table of numbers.
 
-Plotting is always tedious, but happily I was able to use ChatGPT to write most
-of the plotting code. I asked it to generate a simple example of a scatterplot
-with labeled points---that is, stars. Then I modified the presentation a bit,
-changing colours and font sizes, but the static plots have the problem that the
-perspective makes it hard to know where places really are.
+The simplest way to do this---without writing my own graphics code---is to use a
+3D scatter plot. There aren't any good plotting libraries for Common Lisp, so I
+used Python's [matplotlib][matplotlib], and used a CSV to transfer the data.
+
+[matplotlib]: https://matplotlib.org/
+
+Plotting is always tedious, but happily I was able to use [ChatGPT][chatgpt] to
+write most of the plotting code. I asked it to generate a simple example of a
+scatterplot with labeled points---that is, stars. Then I modified the
+presentation a bit, changing colours and font sizes, but the static plots have
+the problem that the perspective makes it hard to know where places really are.
+
+[chatgpt]: https://openai.com/blog/chatgpt/
 
 So I showed ChatGPT my plotting code, and asked it to rewrite it to create an
 animated where the entire plot is rotated about the vertical axis. It rewrote
 the script, preserving bit-for-bit identical output, and added animation
 support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
 fix.
-
-I want to make three plots:
-
-1. A 3D star map showing the positions of all stars mentioned in the story.
-2. A map centered on Gliese 581.
-3. A map showing the route from Beta Pictoris to Gliese 555.
 
 # Conclusion
 
