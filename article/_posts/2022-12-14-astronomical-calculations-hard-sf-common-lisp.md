@@ -96,7 +96,15 @@ two units, I _will_ confuse them and ruin all subsequent calculations.
   (:documentation "Return a human-readable representation of an object."))
 ```
 
-We can easily convert between the two units:
+We can easily convert between the two units by multiplying by a constant:)
+
+```
+PC = LY * 0.306601
+
+LY = PC * 3.26156
+```
+
+In Common Lisp:
 
 ```lisp
 (defun light-years-to-parsecs (ly)
