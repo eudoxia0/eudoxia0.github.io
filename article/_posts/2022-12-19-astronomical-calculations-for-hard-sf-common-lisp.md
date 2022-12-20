@@ -785,9 +785,12 @@ mentioned in the story[^libra]:
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
 </video>
 
-Ararat is the in-universe name of [Gliese 570A][g570], Tigranes is [HD
+The map uses the in-universe names: Ctesiphon is [Beta Pictoris][bpic], Wepwawet
+is [Gliese 555][g555], Ararat is [Gliese 570A][g570], Tigranes is [HD
 35650][tig].
 
+[bpic]: https://en.wikipedia.org/wiki/Beta_Pictoris
+[g555]: https://en.wikipedia.org/wiki/Gliese_555
 [g570]: https://en.wikipedia.org/wiki/Gliese_570
 [tig]: http://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40790560&Name=HD%20%2035650&submit=submit
 
