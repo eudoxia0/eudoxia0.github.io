@@ -773,8 +773,8 @@ the problem that the perspective makes it hard to know where places really are.
 [chatgpt]: https://openai.com/blog/chatgpt
 
 So I showed ChatGPT my plotting code, and asked it to rewrite it to create an
-animated where the entire plot is rotated about the vertical axis. It rewrote
-the script, preserving bit-for-bit identical output, and added animation
+animated version where the entire plot is rotated about the vertical axis. It
+rewrote the script, preserving bit-for-bit identical output, and added animation
 support. I got an inscrutable error, showed it to ChatGPT, and it suggested a
 fix. I'm really happy with this approach.
 
