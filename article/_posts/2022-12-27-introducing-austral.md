@@ -176,10 +176,11 @@ _anti-features_. Here are the things Austral proudly doesn't have:
     and function parameters, local variables, _etc._ have to have their types
     annotated.
 
-13. There is no first-class async.
+13. There is no first-class async[^async].
 
 14. Function overloading is very restricted through typeclasses (think [C++
-    concepts][concepts]).
+    concepts][concepts]). And the basic arithmetic operators cannot be
+    overloaded.
 
 15. There is no syntactic ambiguity: no [dangling else][else] (and, therefore,
     no [`gotofail`][gotofail]), no arithmetic precedence, no syntactic
@@ -1066,3 +1067,15 @@ end;
 
 [^dotdot]:
     Special paths like `..` have to be handled specially.
+
+[^async]:
+    There are two ways to build a general-purpose programming language:
+
+    1. Add features to specialize the language to _every_ domain.
+    2. Don't specialize to any one domain.
+
+    Only the latter approach is scalable. Async is a very specific feature, and
+    every way of doing concurrency other than kernel threads has come and gone
+    out of fashion (think Scala actors and Goroutines, two very admirable
+    features). So when async goes out of fashion, it will be a big problem if
+    Austral had async built right in the core language.
