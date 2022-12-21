@@ -161,8 +161,8 @@ _anti-features_. Here are the things Austral proudly doesn't have:
 
 6. There are no implicit type conversions anywhere.
 
-7. More generally: _there are no implicit function calls_. If it's not on the
-   page, it's not happening, and you're not paying the cost of it.
+7. More generally: _there are no implicit function calls_. If it's not in the
+   source code, it's not happening, and you're not paying the cost of it.
 
 8. There is no global state.
 
