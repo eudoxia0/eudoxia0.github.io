@@ -1005,17 +1005,22 @@ end;
 
 # Status and Future Work {#status}
 
-There is a bootstrapping [compiler][austral] written in OCaml. It implements the
-entire language. There is also a [specification][spec].
-
-Things are only ever asymtotically finished, the language is at a level of
-maturity where I can write simple programs and talk about it in public.
+There is a bootstrapping [compiler][austral] written in OCaml, and a
+[specification][spec]. Software is only ever asymptotically finished, but the
+compiler implements the entire language, and the compiler and spec are at a
+level of maturity where I can write simple programs and talk about it in public.
 
 The compiler is a very simple, whole program compiler that outputs C. Separate
-compilation, for added performance, is not yet implemented but is in the works.
+compilation, for added performance, is not yet implemented but is in the
+roadmap.
 
-The next steps are: a bigger, capability-secure standard library, a build
-system/package manager, and separate compilation.
+The immediate next steps are:
+
+1. Write the basic parts of the standard library.
+2. A build system+package manager.
+3. Separate compilation for the compiler.
+
+These are all open contribution areas.
 
 # Conclusion {#conclusion}
 
