@@ -180,7 +180,7 @@ _anti-features_. Here are the things Austral proudly doesn't have:
 
 14. Function overloading is very restricted through typeclasses (think [C++
     concepts][concepts]). And the basic arithmetic operators cannot be
-    overloaded.
+    overloaded[^overload].
 
 15. There is no syntactic ambiguity: no [dangling else][else] (and, therefore,
     no [`gotofail`][gotofail]), no arithmetic precedence, no syntactic
@@ -1079,3 +1079,8 @@ end;
     out of fashion (think Scala actors and Goroutines, two very admirable
     features). So when async goes out of fashion, it will be a big problem if
     Austral had async built right in the core language.
+
+[^overload]:
+    Because the semantics are different. Is `a * b` commutative? Depends on
+    whether they're floats are matrices. Just be explicit and write out the
+    function calls.
