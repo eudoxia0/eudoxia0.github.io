@@ -1018,7 +1018,7 @@ The immediate next steps are:
 
 1. Write the basic parts of the standard library.
 2. A build system+package manager.
-3. Separate compilation for the compiler.
+3. Fast separate compilation support.
 
 These are all open contribution areas.
 
