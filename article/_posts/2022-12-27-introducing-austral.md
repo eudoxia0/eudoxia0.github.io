@@ -98,8 +98,8 @@ pilots, to take on part of the load of flying. Because humans are tired, they
 are burned out, they have limited focus, limited working memory, they are
 traumatized by writing executable YAML, _etc_.
 
-Mechanical processes — such as type systems, type checking, formal verification,
-design by contract, static assertion checking, dynamic assertion checking — are
+Mechanical processes---such as type systems, type checking, formal verification,
+design by contract, static assertion checking, dynamic assertion checking---are
 independent of the skill of the programmer. Mechanical processes _scale_, unlike
 berating people to simply write fewer bugs.
 
