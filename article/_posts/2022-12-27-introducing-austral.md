@@ -130,13 +130,12 @@ confusion and ambiguity.
 
 For another example, consider the problem of operator precedence: anyone can
 remember [PEMDAS][pemdas], but programming languages have many categories of
-binary operators --- arithmetic, comparison, bitwise, Boolean --- and mixing
-them together creates room for error (what does `x ^ y && z / w` evaluate
-to?). So in Austral there is simply no operator precedence: any binary
-expression deeper than one level is fully parenthesized. You have to type more,
-but we are not typists, we are programmers, and our task is to communicate _to
-others_ what we want computers to do. When in doubt: simplify by paring down the
-language.
+binary operators---arithmetic, comparison, bitwise, Boolean---and mixing them
+together creates room for error (what does `x ^ y && z / w` evaluate to?). So in
+Austral there is simply no operator precedence: any binary expression deeper
+than one level is fully parenthesized. You have to type more, but we are not
+typists, we are programmers, and our task is to communicate _to others_ what we
+want computers to do. When in doubt: simplify by paring down the language.
 
 This isn't for everyone. But it is for me, because after ten years in the
 industry, the last thing I want from a programming language is "power". What I
