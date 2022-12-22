@@ -2,6 +2,46 @@
 title: Portfolio
 layout: common
 permalink: /portfolio/
+cl_projects:
+    - name: cl-virtualbox
+      url: https://github.com/eudoxia0/cl-virtualbox
+      description: A few functions that map to `vboxmanage` commands.
+    - name: trivial-ssh
+      url: https://github.com/eudoxia0/trivial-ssh
+      description: A simple abstraction layer over `cl-libssh2`, a binding to the `libssh2` library.
+    - name: trivial-extract
+      url: https://github.com/eudoxia0/trivial-extract
+      description: For extracting `.tar`, .`tar.gz` and `.zip` files simply.
+    - name: trivial-download
+      url: https://github.com/eudoxia0/trivial-download
+      description: It downloads files.
+    - name: cl-base58
+      url: https://github.com/eudoxia0/cl-base58
+      description: An implementation of Bitcoin’s base58 encoding and decoding.
+    - name: eco
+      url: https://github.com/eudoxia0/eco
+      description: A fast and designer-friendly template engine, inspired by the syntax of eRuby.
+    - name: cl-pass
+      url: https://github.com/eudoxia0/cl-pass
+      description: Password hashing and verification with reasonable, secure defaults.
+    - name: hermetic
+      url: https://github.com/eudoxia0/hermetic
+      description: An authentication library for Clack web applications.
+    - name: clack-errors
+      url: https://github.com/eudoxia0/clack-errors
+      description: A clone of [better_errors][be] for Clack.
+    - name: asdf-linguist
+      url: https://github.com/eudoxia0/asdf-linguist
+      description: A collection of extensions to ASDF, the de-facto build system for Common Lisp.
+    - name:
+      url: https://github.com/eudoxia0/
+      description:
+    - name:
+      url: https://github.com/eudoxia0/
+      description:
+    - name: x
+      url: https://github.com/eudoxia0/
+      description: x
 ---
 
 <article>
@@ -161,35 +201,19 @@ together so you only serve a single CSS file and a single JS one.
 
 # Other Projects
 
-[cl-virtualbox](https://github.com/eudoxia0/cl-virtualbox)
-: A few functions that map to vboxmanage commands.
+Common Lisp projects:
 
-[trivial-ssh](https://github.com/eudoxia0/trivial-ssh)
-: A simple abstraction layer over cl-libssh2, a binding to the libssh2 library.
-
-[trivial-extract](https://github.com/eudoxia0/trivial-extract)
-: For extracting .tar, .tar.gz and .zip files simply.
-
-[trivial-download](https://github.com/eudoxia0/trivial-download)
-: It downloads files.
-
-[cl-base58](https://github.com/eudoxia0/cl-base58)
-: An implementation of Bitcoin’s base58 encoding and decoding.
-
-[eco](https://github.com/eudoxia0/eco)
-: A fast and designer-friendly template engine, inspired by the syntax of eRuby.
-
-[cl-pass](https://github.com/eudoxia0/cl-pass)
-: Password hashing and verification with reasonable, secure defaults.
-
-[hermetic](https://github.com/eudoxia0/hermetic)
-: An authentication library for Clack web applications.
-
-[clack-errors](https://github.com/eudoxia0/clack-errors)
-: A clone of [better_errors][be] for Clack.
-
-[asdf-linguist](https://github.com/eudoxia0/asdf-linguist)
-: A collection of extensions to ASDF, the de-facto build system for Common Lisp.
+{% assign cl_projects_sorted = page.cl_projects | sort: 'name' %}
+<dl>
+{% for project in cl_projects_sorted %}
+<dt>
+<a href="{{ project.url }}">{{ project.name }}</a>
+</dt>
+<dd>
+{{ project.description }}
+</dd>
+{% endfor %}
+</dl>
 
 [be]: https://github.com/BetterErrors/better_errors
 
