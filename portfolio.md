@@ -305,7 +305,7 @@ together so you only serve a single CSS file and a single JS one.
 
 # Other Projects
 
-Common Lisp projects:
+## Common Lisp Projects
 
 {% assign cl_projects_sorted = page.cl_projects | sort: 'name' %}
 <dl>
@@ -319,7 +319,7 @@ Common Lisp projects:
 {% endfor %}
 </dl>
 
-[Standard ML][sml] projects:
+## Standard ML Projects
 
 {% assign sml_projects_sorted = page.sml_projects | sort: 'name' %}
 <dl>
@@ -333,7 +333,7 @@ Common Lisp projects:
 {% endfor %}
 </dl>
 
-Other projects:
+## Other Projects
 
 {% assign other_projects_sorted = page.other_projects | sort: 'name' %}
 <dl>
@@ -364,7 +364,6 @@ Other projects:
 [trello]: https://trello.com/
 [opencv]: https://opencv.org/
 [ne]: https://github.com/kanzure/nanoengineer
-[sml]: https://en.wikipedia.org/wiki/Standard_ML
 [parcom]: https://en.wikipedia.org/wiki/Parser_combinator
 [mlton]: http://mlton.org/
 [sqlite]: https://www.sqlite.org/index.html
