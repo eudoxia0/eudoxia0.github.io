@@ -8,7 +8,7 @@ cl_projects:
       description: A few functions that map to `vboxmanage` commands.
     - name: trivial-ssh
       url: https://github.com/eudoxia0/trivial-ssh
-      description: A simple abstraction layer over `cl-libssh2`, a binding to the `libssh2` library.
+      description: A simple abstraction layer over [`cl-libssh2`][cl-libssh2], a binding to the [`libssh2`][libssh2] library.
     - name: trivial-extract
       url: https://github.com/eudoxia0/trivial-extract
       description: For extracting `.tar`, .`tar.gz` and `.zip` files simply.
@@ -17,22 +17,22 @@ cl_projects:
       description: It downloads files.
     - name: cl-base58
       url: https://github.com/eudoxia0/cl-base58
-      description: An implementation of Bitcoin’s base58 encoding and decoding.
+      description: An implementation of Bitcoin’s [`base58`][b58] encoding and decoding.
     - name: eco
       url: https://github.com/eudoxia0/eco
-      description: A fast and designer-friendly template engine, inspired by the syntax of eRuby.
+      description: A fast and designer-friendly template engine, inspired by the syntax of [eRuby][eruby].
     - name: cl-pass
       url: https://github.com/eudoxia0/cl-pass
       description: Password hashing and verification with reasonable, secure defaults.
     - name: hermetic
       url: https://github.com/eudoxia0/hermetic
-      description: An authentication library for Clack web applications.
+      description: An authentication library for [Clack][clack] web applications.
     - name: clack-errors
       url: https://github.com/eudoxia0/clack-errors
-      description: A clone of [better_errors][be] for Clack.
+      description: A clone of [better_errors][be] for [Clack][clack].
     - name: asdf-linguist
       url: https://github.com/eudoxia0/asdf-linguist
-      description: A collection of extensions to ASDF, the de-facto build system for Common Lisp.
+      description: A collection of extensions to [ASDF][asdf], the de-facto build system for Common Lisp.
     - name:
       url: https://github.com/eudoxia0/
       description:
@@ -216,5 +216,11 @@ Common Lisp projects:
 </dl>
 
 [be]: https://github.com/BetterErrors/better_errors
+[asdf]: https://asdf.common-lisp.dev/
+[b58]: https://en.bitcoinwiki.org/wiki/Base58
+[eruby]: https://en.wikipedia.org/wiki/ERuby
+[clack]: https://github.com/fukamachi/clack
+[cl-libssh2]: https://github.com/alxchk/cl-libssh2
+[libssh2]: https://www.libssh2.org/
 
 </article>
