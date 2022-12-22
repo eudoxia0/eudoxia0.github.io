@@ -33,15 +33,75 @@ cl_projects:
     - name: asdf-linguist
       url: https://github.com/eudoxia0/asdf-linguist
       description: A collection of extensions to [ASDF][asdf], the de-facto build system for Common Lisp.
-    - name:
-      url: https://github.com/eudoxia0/
-      description:
-    - name:
-      url: https://github.com/eudoxia0/
-      description:
-    - name: x
-      url: https://github.com/eudoxia0/
-      description: x
+    - name:  find-port
+      url: https://github.com/eudoxia0/find-port
+      description: A Common Lisp library to programmatically find open ports.
+    - name: cl-yaml
+      url: https://github.com/eudoxia0/cl-yaml
+      description: Common Lisp [yaml][yaml] parser built on top of [cl-libyaml][cl-libyaml].
+    - name: cl-libyaml
+      url: https://github.com/eudoxia0/cl-libyaml
+      description: Low-level [libyaml][libyaml] bindings for Common Lisp.
+    - name: docparser
+      url: https://github.com/eudoxia0/docparser
+      description: Library to extract documentation from Common Lisp systems by injecting into the macroexpansion process.
+    - name: swank-protocol
+      url: https://github.com/eudoxia0/swank-protocol
+      description: Low-level client for [SLIME][slime]'s swank protocol.
+    - name: lucerne
+      url: https://github.com/eudoxia0/lucerne
+      description: Common Lisp web framework built on top of [Clack][clack].
+    - name: terminal-keypress
+      url: https://github.com/eudoxia0/terminal-keypress
+      description: Library to read terminal keypress events.
+    - name: terminal-size
+      url: https://github.com/eudoxia0/terminal-size
+      description: Library to query the size of a terminal window.
+    - name: git-file-history
+      url: https://github.com/eudoxia0/git-file-history
+      description: Library to retrieve a file's commit history in Git.
+    - name: parse-front-matter
+      url: https://github.com/eudoxia0/parse-front-matter
+      description: Jekyll-style [front matter][fmat] parser for Common Lisp.
+    - name: clos-fixtures
+      url: https://github.com/eudoxia0/clos-fixtures
+      description: Test fixtures for CLOS classes.
+    - name: trivial-open-browser
+      url: https://github.com/eudoxia0/trivial-open-browser
+      description: Portable library to open the system's web browser to a URL.
+    - name: which
+      url: https://github.com/eudoxia0/which
+      description: The `which` command in Common Lisp.
+    - name: path-parse
+      url: https://github.com/eudoxia0/path-parse
+      description: Parser of the `PATH` environment variable.
+    - name: lass-flexbox
+      url: https://github.com/eudoxia0/lass-flexbox
+      description: Flexbox macros for [Lass][lass].
+    - name: lime
+      url: https://github.com/eudoxia0/lime
+      description: High-level client for [SLIME][slime]'s swank protocol.
+    - name: avatar-api
+      url: https://github.com/eudoxia0/avatar-api
+      description: Retrieve avatar metadata from social media services.
+    - name: trello-json
+      url: https://github.com/eudoxia0/trello-json
+      description: Common Lisp parser and simplifier for [Trello][trello] JSON exports.
+    - name: arachne
+      url: https://github.com/eudoxia0/arachne
+      description:  A web crawling framework in Common Lisp, inspired by [Scrapy][scrapy].
+    - name: wax
+      url: https://github.com/eudoxia0/wax
+      description: TeX-like markup language experiment.
+    - name: postmaster
+      url: https://github.com/eudoxia0/postmaster
+      description: High-level library for sending and retrieving emails in Common Lisp.
+    - name: postmaster-mock
+      url: https://github.com/eudoxia0/postmaster-mock
+      description: Test classes for Postmaster.
+    - name: texgen
+      url: https://github.com/eudoxia0/texgen
+      description: Common Lisp DSL for generating TeX.
 ---
 
 <article>
@@ -222,5 +282,13 @@ Common Lisp projects:
 [clack]: https://github.com/fukamachi/clack
 [cl-libssh2]: https://github.com/alxchk/cl-libssh2
 [libssh2]: https://www.libssh2.org/
+[slime]: https://slime.common-lisp.dev/
+[fmat]: https://jekyllrb.com/docs/front-matter/
+[lass]: https://shinmera.github.io/LASS/
+[yaml]: https://yaml.org/
+[cl-libyaml]: https://github.com/eudoxia0/cl-libyaml
+[libyaml]: https://pyyaml.org/wiki/LibYAML
+[scrapy]: https://scrapy.org/
+[trello]: https://trello.com/
 
 </article>
