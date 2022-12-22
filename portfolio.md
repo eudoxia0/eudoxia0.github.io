@@ -103,6 +103,9 @@ cl_projects:
     - name: texgen
       url: https://github.com/eudoxia0/texgen
       description: Common Lisp DSL for generating TeX.
+    - name: lcm
+      url: https://github.com/eudoxia0/lcm
+      description: System configuration management in Common Lisp.
 
 sml_projects:
     - name: mlunit
@@ -134,6 +137,15 @@ other_projects:
     - name: MNT
       url: https://github.com/eudoxia0/MNT
       description: Simple molecular devices built with [NanoEngineer][ne].
+    - name: astro-eog581
+      url: https://github.com/eudoxia0/astro-eog581
+      description: Astronomical calculations for [_The Epiphany of Gliese 581_][eog581].
+    - name: eudoxia0.github.io
+      url: https://github.com/eudoxia0/eudoxia0.github.io
+      description: The source code for this website.
+    - name: dotfiles
+      url: https://github.com/eudoxia0/dotfiles
+      description: My dotfiles.
 ---
 
 <article>
@@ -357,5 +369,10 @@ Other projects:
 [mlton]: http://mlton.org/
 [sqlite]: https://www.sqlite.org/index.html
 [forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
+[eog581]: https://borretti.me/fiction/eog581
+
+
+
+
 
 </article>
