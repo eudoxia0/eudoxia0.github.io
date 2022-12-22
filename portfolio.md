@@ -106,6 +106,63 @@ cl_projects:
     - name: lcm
       url: https://github.com/eudoxia0/lcm
       description: System configuration management in Common Lisp.
+    - name: ansi-spec
+      url: https://github.com/LispLang/ansi-spec
+      description: A project to parse the TeX sources of the draft ANSI Common Lisp specification.
+    - name: antimer
+      url: https://github.com/antimer/antimer
+      description: A wiki in Common Lisp.
+    - name: liblmdb
+      url: https://github.com/antimer/liblmdb
+      description: Low-level bindings for [LMDB][lmdb].
+    - name: lmdb
+      url: https://github.com/antimer/lmdb
+      description: High-levels LMDB bindings for Common Lisp.
+    - name: remote-dom
+      url: https://github.com/ParenBook/remote-dom
+      description: A library to remotely-control the browser DOM from Common Lisp.
+    - name: ceramic
+      url: https://github.com/ceramic/ceramic
+      description: '[Electron][electron] for Common Lisp.'
+    - name: trivial-ws
+      url: https://github.com/ceramic/trivial-ws
+      description: Simple WebSockets for Common Lisp.
+    - name: trivial-compress
+      url: https://github.com/ceramic/trivial-compress
+      description: Utility library to compress a directory.
+    - name: trivial-build
+      url: https://github.com/ceramic/trivial-build
+      description: A tiny library to compile a Common Lisp system into an executable.
+    - name: remote-js
+      url: https://github.com/ceramic/remote-js
+      description:  Run JavaScript in the browser from Common Lisp.
+    - name: common-doc
+      url: https://github.com/CommonDoc/common-doc
+      description: A framework for representing and manipulating documents.
+    - name: scriba
+      url: https://github.com/CommonDoc/scriba
+      description: A markup language with Scribe syntax for CommonDoc.
+    - name: codex
+      url: https://github.com/CommonDoc/codex
+      description: A documentation system for Common Lisp built on top of CommonDoc.
+    - name: common-html
+      url: https://github.com/CommonDoc/common-html
+      description: An HTML target for CommonDoc.
+    - name: common-doc-plump
+      url: https://github.com/CommonDoc/common-doc-plump
+      description: Translates a Plump DOM into a CommonDoc document and back
+    - name: vertex
+      url: https://github.com/CommonDoc/vertex
+      description: A markup language with TeX syntax for CommonDoc.
+    - name: pandocl
+      url: https://github.com/CommonDoc/pandocl
+      description: A document converter built on CommonDoc, similar to Pandoc.
+    - name: thorn
+      url: https://github.com/CommonDoc/thorn
+      description: CommonDoc extension for inserting special characters.
+    - name: parenml
+      url: https://github.com/CommonDoc/parenml
+      description: An S-expression markup language for CommonDoc.
 
 sml_projects:
     - name: mlunit
@@ -369,9 +426,7 @@ together so you only serve a single CSS file and a single JS one.
 [sqlite]: https://www.sqlite.org/index.html
 [forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
 [eog581]: https://borretti.me/fiction/eog581
-
-
-
-
+[lmdb]: http://www.lmdb.tech/doc/
+[electron]: https://www.electronjs.org/
 
 </article>
