@@ -2,6 +2,7 @@
 title: Portfolio
 layout: common
 permalink: /portfolio/
+
 cl_projects:
     - name: cl-virtualbox
       url: https://github.com/eudoxia0/cl-virtualbox
@@ -102,6 +103,37 @@ cl_projects:
     - name: texgen
       url: https://github.com/eudoxia0/texgen
       description: Common Lisp DSL for generating TeX.
+
+sml_projects:
+    - name: mlunit
+      url: https://github.com/eudoxia0/mlunit
+      description: Unit testing framework for Standard ML.
+    - name: parsimony
+      url: https://github.com/eudoxia0/parsimony
+      description: '[Parser combinators][parcom] for Standard ML.'
+    - name: interim
+      url: https://github.com/eudoxia0/interim
+      description: Low-level Lisp with compile-time memory management.
+    - name: l0
+      url: https://github.com/eudoxia0/l0
+      description: Lisp with linear types.
+    - name: concordia
+      url: https://github.com/eudoxia0/concordia
+      description: A document preparation system.
+    - name: tfc
+      url: https://github.com/eudoxia0/tfc
+      description: A tiny compiler for a monomorphic typed [Forth][forth].
+    - name: sml-sqlite3
+      url: https://github.com/eudoxia0/sml-sqlite3
+      description: '[SQLite][sqlite] bindings for [MLton][mlton].'
+
+other_projects:
+    - name: NeuriteTracer
+      url: https://github.com/eudoxia0/NeuriteTracer
+      description: 'An old experiment in computer vision: using [OpenCV][opencv] to trace the contours of neurites in electron micrographs of human brain tissue.'
+    - name: MNT
+      url: https://github.com/eudoxia0/MNT
+      description: Simple molecular devices built with [NanoEngineer][ne].
 ---
 
 <article>
@@ -275,6 +307,34 @@ Common Lisp projects:
 {% endfor %}
 </dl>
 
+[Standard ML][sml] projects:
+
+{% assign sml_projects_sorted = page.sml_projects | sort: 'name' %}
+<dl>
+{% for project in sml_projects_sorted %}
+<dt>
+<a href="{{ project.url }}">{{ project.name }}</a>
+</dt>
+<dd>
+{{ project.description }}
+</dd>
+{% endfor %}
+</dl>
+
+Other projects:
+
+{% assign other_projects_sorted = page.other_projects | sort: 'name' %}
+<dl>
+{% for project in other_projects_sorted %}
+<dt>
+<a href="{{ project.url }}">{{ project.name }}</a>
+</dt>
+<dd>
+{{ project.description }}
+</dd>
+{% endfor %}
+</dl>
+
 [be]: https://github.com/BetterErrors/better_errors
 [asdf]: https://asdf.common-lisp.dev/
 [b58]: https://en.bitcoinwiki.org/wiki/Base58
@@ -290,5 +350,12 @@ Common Lisp projects:
 [libyaml]: https://pyyaml.org/wiki/LibYAML
 [scrapy]: https://scrapy.org/
 [trello]: https://trello.com/
+[opencv]: https://opencv.org/
+[ne]: https://github.com/kanzure/nanoengineer
+[sml]: https://en.wikipedia.org/wiki/Standard_ML
+[parcom]: https://en.wikipedia.org/wiki/Parser_combinator
+[mlton]: http://mlton.org/
+[sqlite]: https://www.sqlite.org/index.html
+[forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
 
 </article>
