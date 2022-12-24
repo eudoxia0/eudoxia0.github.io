@@ -247,17 +247,26 @@ not to personal databases where all the content is written by you.
 
 # My Current Wiki
 
+![The home page of my current personal wiki](/assets/content/unbundling-tools-for-thought/home.png)
+
 The natural conclusion of most tools for thought is a relational database with
 rich text as a possible column type. So that's essentially what I built: an
 object-oriented graph database on top of SQLite.
 
-The conceptual vocabulary is simple: there's objects, classes, and
-links. Objects are the nodes in the database: they have a globally-unique title
-and a set of properties, which are typed key-value pairs. Every object conforms
-to a class, which specifies what properties it has and their types. Property
-types can be: rich text, a link to a file, a boolean, a link to another object,
-or a list of links. Links go from one object property to another object (there's
-no block references). Notion inspired a lot of this.
+My current personal wiki is called Cartesian (after the [Cartesian
+theatre][cart], since I initially had much bigger ambitions for it as a
+full-blown personal exocortex). The conceptual vocabulary is simple: there's
+objects, classes, and links.
+
+[cart]: https://en.wikipedia.org/wiki/Cartesian_theater
+
+1. Objects are the nodes in the database: they have a globally-unique title and
+a set of properties, which are typed key-value pairs.
+2. Every object conforms to a class, which specifies what properties it has and
+their types. Property types can be: rich text, a link to a file, a boolean, a
+link to another object, or a list of links.
+3. Links go from one object property to another object (there's no block
+references). Notion inspired a lot of this.
 
 Most personal wikis are just a special case of this, where there's a single
 class with a single text property. And, unsurprisingly, the main class I use is
@@ -277,8 +286,17 @@ collections, e.g.:
 4. Classes to organize my legal documents, e.g. a `Document` class that has a
    file and a text property for notes.
 
-But I've largely used it for journalling and brief text notes. The barriers to
-using it as The One Database are:
+But I've largely used it for journalling and brief text notes, like my journal:
+
+![A screenshot of my personal wiki, showing a journal entry.](/assets/content/unbundling-tools-for-thought/journal.png)
+
+And study notes:
+
+![A screenshot of my personal wiki, showing notes on group theory.](/assets/content/unbundling-tools-for-thought/group1.png)
+
+![Another screenshot with notes on group theory.](/assets/content/unbundling-tools-for-thought/group2.png)
+
+The barriers to using it as The One Database are:
 
 1. **Activation Energy:** migrating everything from my filesystem, from Calibre,
    from Zotero, from my browser bookmarks, etc. is a huge process. Even just
