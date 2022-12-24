@@ -30,12 +30,15 @@ choice.
 
 2. **Storage:** I started with plain text files in a git repo, then moved to an
    SQLite database with a simple schema. The latest version is an avant-garde
-   object-oriented hypermedia database with bidirectional links implemnented on
+   object-oriented hypermedia database with bidirectional links implemented on
    top of SQLite.
 
-3. **Markup:** I used Markdown here and there. Then I built my own TeX-inspired
-   markup language. Then I tried XML, with mixed results. The latest version
-   uses a WYSIWYG editor made with ProseMirror.
+3. **Markup:** I used Markdown here and there. Then I built my own [TeX-inspired
+   markup language][tex]. Then I tried XML, with mixed results. The latest
+   version uses a WYSIWYG editor made with [ProseMirror][pm].
+
+[tex]: https://github.com/eudoxia0/concordia
+[pm]: https://prosemirror.net/
 
 And yet I don't _use_ them. Why? Building them was fun, sure, but surely there
 is utility to a personal database.
@@ -72,7 +75,10 @@ The following use cases are very naturally separable:
 
 - **Todo Lists:** I used to write todo lists in the daily entries in my personal
   wiki. But this is very spartan: what about recurring tasks, due dates,
-  reminders, etc.? Now I am a happy user of Todoist and I'm not looking back.
+  reminders, etc.? Now I am a happy user of [Todoist][todo] and I'm not looking
+  back.
+
+[todo]: https://todoist.com/
 
 - **Learning:** if you're studying something, you can keep your notes in a
   TfT. This is one of the biggest use cases. But the problem is never
@@ -100,12 +106,12 @@ The following use cases are very naturally separable:
   writing meeting notes or whatever. I find that this is pointless. You know who
   `[[John Doe]]` refers to. Just use Google Contacts or a spreadsheet.
 
-- **Fiction Writing:** I actually started writing _The Epiphany of Gliese 581_
-  in my personal wiki, with fragments and chapters in separate pages, but I
-  quickly moved to a git repo with Markdown files because 1) I could compile the
-  disparate files into a single PDF or HTML file for review, and 2) using git
-  for version control (rather than my personal wiki's native change tracking)
-  makes a lot more sense for writing projects.
+- **Fiction Writing:** I actually started writing [_The Epiphany of Gliese
+  581_][eog] in my personal wiki, with fragments and chapters in separate pages,
+  but I quickly moved to a git repo with Markdown files because 1) I could
+  compile the disparate files into a single PDF or HTML file for review, and 2)
+  using git for version control (rather than my personal wiki's native change
+  tracking) makes a lot more sense for writing projects.
 
   And you could argue that I could have stayed in my personal wiki by
   implementing support for transclusion (to assemble all the fragments into one
@@ -113,6 +119,8 @@ The following use cases are very naturally separable:
   equally to every domain I attack with a personal TfT and for which it is
   lacking: just write a plugin to do X. The work becomes infinite, the gains are
   imaginary.
+
+[eog]: https://borretti.me/fiction/eog581
 
 - **Process Notes:** e.g. "how do I do X in Docker". I often have cause to write
   notes like this and can never quite think of where to put them. But this can't
@@ -133,18 +141,19 @@ What is left?
 - **Collection Management:** this is an area where the software solutions are
   strangely very lacking.
 
-  I have a Calibre library for books. I have a Zotero library for papers. I
-  sometimes think about merging the former into the latter, which is more
-  general and has a cleaner UI, but there's no urgent need to do so. I also have
-  folders with music, games, interactive fiction games, RPG PDFs, board game
-  rule PDFs, and art.
+  I have a [Calibre][calibre] library for books. I have a [Zotero][zotero]
+  library for papers. I sometimes think about merging the former into the
+  latter, which is more general and has a cleaner UI, but there's no urgent need
+  to do so. I also have folders with music, games, interactive fiction games,
+  RPG PDFs, board game rule PDFs, and art.
 
   Organizing collections with the filesystem is difficult, because of the
-  hierarchical nature of the filesystem: do I file Nanosystems under "Chemistry"
-  or "Eric Drexler" or "Textbooks" or "1992"? Do I file The Mermaid under "John
-  William Waterhouse", "Painting", "Edwardian Era", "Pre-Raphaelite Art"? Any
-  categorization is defensible, and any categorization makes it harder to browse
-  by an alternative scheme[^fuse]. I need tags, that is: I need a database.
+  hierarchical nature of the filesystem: do I file [_Nanosystems_][nanosystems]
+  under "Chemistry" or "Eric Drexler" or "Textbooks" or "1992"? Do I file [_The
+  Mermaid_][mermaid] under "John William Waterhouse", "Painting", "Edwardian
+  Era", "Pre-Raphaelite Art"? Any categorization is defensible, and any
+  categorization makes it harder to browse by an alternative scheme[^fuse]. I
+  need tags, that is: I need a database.
 
   And there is a void in app-space, where there should be an app that subsumes
   Calibre and the rest, but inexplicably it doesn't exist[^notion]. And it's so
@@ -161,7 +170,11 @@ What is left?
   The closest thing to this is a KDE app called [Tellico][tellico] that I've
   never heard anyone talk about using.
 
-  [tellico]: https://tellico-project.org/
+[calibre]: https://calibre-ebook.com/
+[zotero]: https://www.zotero.org/
+[nanosystems]: https://www.amazon.com/Nanosystems-P-K-Eric-Drexler/dp/0471575186
+[mermaid]: https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_A_Mermaid.jpg
+[tellico]: https://tellico-project.org/
 
 When you take out everything that is better served by an app or plain old folder
 structure, all you're left with is collection management. So instead of building
@@ -170,11 +183,15 @@ a personal wiki I should just build a "generalized Calibre".
 # The Uselessness of Scale
 
 So I often wonder: what do other people use their personal knowledge bases for?
-And I look up blog and forum posts where Obsidian and Roam power users explain
-their setup. And most of what I see is junk. It's never the Zettelkasten of the
-next Vannevar Bush, it's always a setup with tens of plugins, a daily note three
-pages long that is subdivided into fifty subpages recording every inane detail
-of life.
+And I look up blog and forum posts where [Obsidian][obs] and [Roam][roam] power
+users explain their setup. And most of what I see is junk. It's never the
+[Zettelkasten][zet] of the next Vannevar Bush, it's always a setup with tens of
+plugins, a daily note three pages long that is subdivided into fifty subpages
+recording every inane detail of life.
+
+[obs]: https://obsidian.md/
+[roam]: https://roamresearch.com/
+[zet]: https://en.wikipedia.org/wiki/Zettelkasten
 
 People have this aspirational idea of building a vast, oppressively colossal,
 deeply interlinked knowledge graph to the point that it almost mirrors every
@@ -224,7 +241,9 @@ personal database it makes a lot more sense that links should follow _usage_:
 they should be a crystallization of the trails you've followed, rather than an
 a-priori structure that you impose before usage.)
 
-The final argument against this is feasibility. Tiago Forte writes:
+The final argument against this is feasibility. Tiago Forte [writes][para]:
+
+[para]: https://every.to/praxis/the-para-method-a-universal-system-540221
 
 >... you will always need to use multiple programs to complete projects. You may
 >use a centralized platform like Basecamp, Asana, Jira, or Zoho, but technology
