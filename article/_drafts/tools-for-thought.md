@@ -247,6 +247,61 @@ not to personal databases where all the content is written by you.
 
 # My Current Wiki
 
+The natural conclusion of most tools for thought is a relational database with
+rich text as a possible column type. So that's essentially what I built: an
+object-oriented graph database on top of SQLite.
+
+The conceptual vocabulary is simple: there's objects, classes, and
+links. Objects are the nodes in the database: they have a globally-unique title
+and a set of properties, which are typed key-value pairs. Every object conforms
+to a class, which specifies what properties it has and their types. Property
+types can be: rich text, a link to a file, a boolean, a link to another object,
+or a list of links. Links go from one object property to another object (there's
+no block references). Notion inspired a lot of this.
+
+Most personal wikis are just a special case of this, where there's a single
+class with a single text property. And, unsurprisingly, the main class I use is
+`Note`, which has a single rich text property called `Text`.
+
+Initially I had an idea to build classes for managing bibliographies and other
+collections, e.g.:
+
+1. A `Book` class to replace Calibre, with fields like:
+   1. `Authors`: a list of links to the author objects (thanks to bidirectional
+      linking, going to an author's page shows you the list of all objects that
+      link to it, i.e. the things they've authored).
+   1. `PDF`: a file link.
+2. A `Paper` class to replace Zotero, with the fields you'd expect.
+3. An `Art` class to manage my art collection, with fields like `Arist`, `Year`,
+   `Period`, `Genre`, `File`.
+4. Classes to organize my legal documents, e.g. a `Document` class that has a
+   file and a text property for notes.
+
+But I've largely used it for journalling and brief text notes. The barriers to
+using it as The One Database are:
+
+1. **Activation Energy:** migrating everything from my filesystem, from Calibre,
+   from Zotero, from my browser bookmarks, etc. is a huge process. Even just
+   migrating stuff from Calibre to the database would require me to write a
+   script because my Calibre library is so huge.
+1. **UI:** replacing the filesystem and most of my domain-specific apps means
+   the wiki's UI has to be stellar. It has to support searching, filtering,
+   sorting, viewing collections of objects in different modes (list, table,
+   gallery, etc.). Getting this to the UX sweet spot where things are
+   frictionless enough to use the app productively requires a significant time
+   investment.
+1. **Pointlessness of Organization:** my Calibre and Zotero libraries are a
+   mess. But is that _bad_? Is there any point to organizing them? I can always
+   find what I need, either by searching or browsing, because I have a spatial
+   sense of where each book is in Calibre's big grid view. If I went through
+   everything in Calibre and Zotero, and fixed the titles, added missing
+   authors, publishers, publication years, fixed the cover images---what then?
+   What have I gained? Nothing. It is a waste of time to organize things too
+   much.
+1. **Uncertain Payoff:** silver bullets are rare, and it's possible that after
+   making a titanic effort to migrate all my data and build a great UI, the
+   result of very underwhelming.
+
 # Footnotes
 
 [^college]:
