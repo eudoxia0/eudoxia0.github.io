@@ -254,7 +254,7 @@ a-priori structure that you impose before usage.)
 
 The final argument against this is feasibility. Tiago Forte [writes][para]:
 
-[para]: https://every.to/praxis/the-para-method-a-universal-system-540221
+[para]: https://fortelabs.com/blog/para/
 
 >... you will always need to use multiple programs to complete projects. You may
 >use a centralized platform like Basecamp, Asana, Jira, or Zoho, but technology
