@@ -9,12 +9,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="{{ site.baseurl | prepend: site.url }}/assets/card/{{ page.card }}">
     <meta property="og:image" content="{{ site.baseurl | prepend: site.url }}/assets/card/{{ page.card }}" />
+    {% endif %}
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}Personal website of Fernando Borretti.{% endif %}" />
     <meta property="og:site_name" content="Fernando Borretti" />
-    {% endif %}
     <meta name="author" content="Fernando Borretti" />
     <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}Personal website of Fernando Borretti.{% endif %}" />
     <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
