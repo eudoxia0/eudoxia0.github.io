@@ -40,18 +40,17 @@ choice.
 [tex]: https://github.com/eudoxia0/concordia
 [pm]: https://prosemirror.net/
 
-And yet I don't _use_ them. Why? Building them was fun, sure, but surely there
-is utility to a personal database.
+And yet I don't _use_ them. Why? Building them was fun, sure, but there must be
+utility to a personal database.
 
 At first I thought the problem was friction: the higher the activation energy to
 using a tool, the less likely you are to use it. Even a small amount of friction
 can cause me to go, oh, who cares, can't be bothered. So each version gets
 progressively more frictionless[^xml]. The latest version uses a WYSIWYG editor
-using ProseMirror (it took a great deal for me to actually give in to
-WYSIWYG). It also has a link specifically to create/go to a page with the
-current date as the title, to make journalling easier. The only friction is in
-clicking the bookmark to `localhost:5000` and go there. It is literally _two
-clicks_ to get to the daily note.
+built on top of ProseMirror (it took a great deal for me to actually give in to
+WYSIWYG). It also has a link to the daily note page, to make journalling
+easier. The only friction is in clicking the bookmark to `localhost:5000`. It is
+literally _two clicks_ to get to the daily note.
 
 And yet I still don't use it. Why? I'm a great deal more organized now than I
 was a few years ago. My filesystem is beautifully structured and everything is
@@ -67,16 +66,16 @@ The following use cases are very naturally separable:
 
 - **Journalling:** 86% of the nodes in my personal wiki are journal
   entries. Mostly there's no reason for them to be there, they are rarely linked
-  to by anything. I have this fallacious view that I have to use the app,
-  therefore I should use it every day, and the obvious thing you can do every
-  day is write a daily entry that has, say, the tasks for today along with
-  journal-like text. Rarely do journal entries link to anything except
-  incidentally.
+  to by anything. I have this fallacious view that I have to use the app to
+  justify the time investment, therefore I should use it every day, and the
+  obvious thing you can do every day is write a daily entry that has, say, the
+  tasks for today along with journal-like text. Rarely do journal entries link
+  to anything except incidentally.
 
 - **Todo Lists:** I used to write todo lists in the daily entries in my personal
   wiki. But this is very spartan: what about recurring tasks, due dates,
-  reminders, etc.? Now I am a happy user of [Todoist][todo] and I'm not looking
-  back.
+  reminders, etc.? Now I am a very happy user of [Todoist][todo] (which has
+  increased my productivity at least 150%) and I'm not looking back.
 
 [todo]: https://todoist.com/
 
@@ -90,8 +89,8 @@ The following use cases are very naturally separable:
   themselves redundant.
 
   I also tried writing notes to ensure I understand something first, and then
-  translating them to flash cards. I've found that all this does is add an extra
-  layer of friction with no benefit.
+  translating them to flash cards. I've found that, usually, all this does is
+  add an extra layer of friction with no benefit.[^notes]
 
   I also find that long-form study notes are a form of procrastination. I start
   re-organizing the headings, playing with the LaTeX to make everything look
@@ -99,12 +98,18 @@ The following use cases are very naturally separable:
   that when future me, who has forgotten everything, reads the notes back, he
   can easily re-acquire the information because of how well it is
   presented. This is planning for failure. Spaced repetition is insanely
-  effective.
+  effective, even more so when you get the hang of writing flashcards that work
+  for you.
+
+  [RemNote][remnote] combines long-form prose notes and flashcards in the same
+  interface. The result is that both look like a mess.
+
+[remnote]: https://www.remnote.com/
 
 - **Contacts:** if you have a page for a person, with data about them, you can
   then link to them: when you mention them in journal entries for example, or in
-  writing meeting notes or whatever. I find that this is pointless. You know who
-  `[[John Doe]]` refers to. Just use Google Contacts or a spreadsheet.
+  writing meeting notes. I find that this is pointless. You know who `[[John
+  Doe]]` refers to. Just use Google Contacts or a spreadsheet.
 
 - **Fiction Writing:** I actually started writing [_The Epiphany of Gliese
   581_][eog] in my personal wiki, with fragments and chapters in separate pages,
@@ -118,7 +123,9 @@ The following use cases are very naturally separable:
   view) and improved the version control UI. But this advice can be applied
   equally to every domain I attack with a personal TfT and for which it is
   lacking: just write a plugin to do X. The work becomes infinite, the gains are
-  imaginary.
+  imaginary. You end up with this rickety structure of plugin upon plugin
+  sitting on top of your TfT, and UX typically suffers the death by a thousand
+  cuts.
 
 [eog]: https://borretti.me/fiction/eog581
 
@@ -128,8 +135,9 @@ The following use cases are very naturally separable:
   to create links between process notes. So this is just a matter of finding
   somewhere to put them in the filesystem or in a note-taking app.
 
-- **Organizing Documents:** a decent folder structure and a few spreadsheets is
-  all it takes in practice.
+- **Organizing Legal Documents:** like immigration papers or medical test
+  results. A decent folder structure and a few spreadsheets is all it takes in
+  practice.
 
 - **Lists:** of things you own, people you know, places you've lived in,
   education history, work history, the administrativia of life. Spreadsheets
@@ -145,15 +153,15 @@ What is left?
   library for papers. I sometimes think about merging the former into the
   latter, which is more general and has a cleaner UI, but there's no urgent need
   to do so. I also have folders with music, games, interactive fiction games,
-  RPG PDFs, board game rule PDFs, and art.
+  RPG PDFs, board game rulebook PDFs, and art.
 
   Organizing collections with the filesystem is difficult, because of the
-  hierarchical nature of the filesystem: do I file [_Nanosystems_][nanosystems]
-  under "Chemistry" or "Eric Drexler" or "Textbooks" or "1992"? Do I file [_The
-  Mermaid_][mermaid] under "John William Waterhouse", "Painting", "Edwardian
-  Era", "Pre-Raphaelite Art"? Any categorization is defensible, and any
-  categorization makes it harder to browse by an alternative scheme[^fuse]. I
-  need tags, that is: I need a database.
+  hierarchical nature of the filesystem[^fs]: do I file
+  [_Nanosystems_][nanosystems] under "Chemistry" or "Eric Drexler" or
+  "Textbooks" or "1992"? Do I file [_The Mermaid_][mermaid] under "John William
+  Waterhouse", "Painting", "Edwardian Era", "Pre-Raphaelite Art"? Any
+  categorization is defensible, and any categorization makes it harder to browse
+  by an alternative scheme[^fuse]. I need tags, that is: I need a database.
 
   And there is a void in app-space, where there should be an app that subsumes
   Calibre and the rest, but inexplicably it doesn't exist[^notion]. And it's so
@@ -187,7 +195,7 @@ And I look up blog and forum posts where [Obsidian][obs] and [Roam][roam] power
 users explain their setup. And most of what I see is junk. It's never the
 [Zettelkasten][zet] of the next Vannevar Bush, it's always a setup with tens of
 plugins, a daily note three pages long that is subdivided into fifty subpages
-recording every inane detail of life.
+recording all the inane minutiae of life. This is a recipe for burnout.
 
 [obs]: https://obsidian.md/
 [roam]: https://roamresearch.com/
@@ -196,13 +204,15 @@ recording every inane detail of life.
 People have this aspirational idea of building a vast, oppressively colossal,
 deeply interlinked knowledge graph to the point that it almost mirrors every
 discrete concept and memory in their brain. And I get the appeal of
-maximalism. But they're counting on the wrong side of the ledger. Every node in
-your knowledge graph is a _debt_. Every link doubly so. The more you have, the
-more in the red you are. Every node that has utility---an interesting excerpt
-from a book, a pithy quote, a poem, a fiction fragment, a few sentences that
-form the seed of a future essay, a list of links that are the starting point of
-a project---is drowned in an ocean of banality. Most of our thoughts appear and
-pass away instantly, for good reason.
+maximalism. But they're counting [on the wrong side of the
+ledger][dijkstra]. Every node in your knowledge graph is a _debt_. Every link
+doubly so. The more you have, the more in the red you are. Every node that has
+utility---an interesting excerpt from a book, a pithy quote, a poem, a fiction
+fragment, a few sentences that are the seed of a future essay, a list of links
+that are the launching-off point of a project---is drowned in an ocean of
+banality. Most of our thoughts appear and pass away instantly, for good reason.
+
+[dijkstra]: https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html#:~:text=wrong%20side%20of%20the%20ledger
 
 # The Single Graph Fallacy
 
@@ -221,7 +231,7 @@ be built on top of that data, using plugins. There are two pros here:
    3. Link calendar events to tasks, dates, people, and projects.
 
 Obsidian does this: it has some 700 plugins for this reason. There's plugins for
-todolists, calendar integration, spaced repetition, whatever.
+todo lists, calendar integration, spaced repetition, whatever.
 
 The main drawback is the user experience for this plugin-based app universe is
 always going to be inferior to the user experience for domain-specific
@@ -257,8 +267,7 @@ A final note: I find that upwards of 80% of the links in my wikis are
 essentially structural, they basically replicate folder structures. The rest are
 "incidental reference" links: I'm writing a journal entry saying I'm working on
 project X, so I add a link to project X, out of some vague feeling of duty to
-link things. And it's pointless. Does it really help that `[[group]]` links to
-the root page of group theory notes?
+link things. And it's pointless.
 
 The idea of hyperlinks as "generative", as a path that can follow and acquire
 new ideas from the random collision of information, mostly applies to the web,
@@ -268,14 +277,18 @@ not to personal databases where all the content is written by you.
 
 ![The home page of my current personal wiki](/assets/content/unbundling-tools-for-thought/home.png)
 
+(The text is a quote from [_Accelerando_][acc].)
+
+[acc]: https://www.antipope.org/charlie/blog-static/fiction/accelerando/accelerando.html
+
 The natural conclusion of most tools for thought is a relational database with
 rich text as a possible column type. So that's essentially what I built: an
 object-oriented graph database on top of SQLite.
 
 My current personal wiki is called Cartesian (after the [Cartesian
-theatre][cart], since I initially had much bigger ambitions for it as a
-full-blown personal exocortex). The conceptual vocabulary is simple: there's
-objects, classes, and links.
+theatre][cart], since I initially thought to build something much more
+ambitious). The conceptual vocabulary is simple: there's objects, classes, and
+links.
 
 [cart]: https://en.wikipedia.org/wiki/Cartesian_theater
 
@@ -315,6 +328,10 @@ And study notes:
 
 ![Another screenshot with notes on group theory.](/assets/content/unbundling-tools-for-thought/group2.png)
 
+Here's an example of how you'd use it to organize an art collection:
+
+![A screenshot of my personal wiki, showing an entry for John William Waterhouse's Jason and Medea, with fields for the artist, medium, period, image file, and year.](/assets/content/unbundling-tools-for-thought/art.png)
+
 The barriers to using it as The One Database are:
 
 1. **Activation Energy:** migrating everything from my filesystem, from Calibre,
@@ -324,9 +341,9 @@ The barriers to using it as The One Database are:
 1. **UI:** replacing the filesystem and most of my domain-specific apps means
    the wiki's UI has to be stellar. It has to support searching, filtering,
    sorting, viewing collections of objects in different modes (list, table,
-   gallery, etc.). Getting this to the UX sweet spot where things are
-   frictionless enough to use the app productively requires a significant time
-   investment.
+   gallery, etc., like in Notion). Getting this to the UX sweet spot where
+   things are frictionless enough to use the app productively requires a
+   significant time investment.
 1. **Pointlessness of Organization:** my Calibre and Zotero libraries are a
    mess. But is that _bad_? Is there any point to organizing them? I can always
    find what I need, either by searching or browsing, because I have a spatial
@@ -338,6 +355,18 @@ The barriers to using it as The One Database are:
 1. **Uncertain Payoff:** silver bullets are rare, and it's possible that after
    making a titanic effort to migrate all my data and build a great UI, the
    result of very underwhelming.
+
+# Conclusion
+
+Having reached the [trough of disillusionment][hype]: what's next? I think I
+might clean up Cartesian and release it as a kind of "generalized Calibre", for
+people who want to manage their disparate collections.
+
+Or I might try writing personal wiki #8 or so, since, while writing this post, I
+got a whole lot of new ideas, so I might allocate some time during the holidays
+to pushing that boulder up again.
+
+[hype]: https://en.wikipedia.org/wiki/Gartner_hype_cycle
 
 # Footnotes
 
@@ -393,15 +422,16 @@ The barriers to using it as The One Database are:
     </ul>
     ```
 
-    By the time you're done with this Shakespearean soliloquy, you've lost whatever
-    train of thought you were trying to capture. Meanwhile, in another Everett
-    branch, your wiser, Markdown-using twin has already finished writing and moved
-    on to doing, while you marvel at the strictness, the sheer extensibility of your
-    DTD schema.
+    By the time you're done with this Shakespearean soliloquy, you've lost
+    whatever train of thought you were trying to capture. Meanwhile, in another
+    Everett branch, your wiser, Markdown-using twin has already finished writing and
+    moved on to doing, while you marvel at the crystalline strictness, the _sheer
+    extensibility_ of your DTD schema.
 
 [^notion]:
     Notion is actually good for this, except that uploading multiple gigabytes
-    of PDFs one by one is inconvenient.
+    of PDFs one by one is inconvenient. But if a tool is to be my second brain,
+    it can't live on somebody else's computer.
 
 [^fuse]:
     If you're going to tell me to use symbolic links or, God help me, some
@@ -409,3 +439,16 @@ The barriers to using it as The One Database are:
     in the world. I'm not 17 anymore, I don't have time for, "Mom, cancel my
     appointments for the rest of the day, ZFS is broken". I don't want my TfT to
     be a kernel driver, I want things to be simple and portable.
+
+[^notes]:
+    I sometimes use a small scratchpad to serialize my mental model of something
+    until I understand it, and then move it to flashcards. But the crucial
+    distinction here is: there aren't two big stages, one where I just take
+    prose notes, and one where I translate all the notes to flashcards. It's
+    like agile vs. waterfall: the notes should become flashcards as early as
+    possible, not after you're done taking all of the notes.
+
+[^fs]:
+    [This][fsblog] is a great blog post on the difficulties and limitations of hierarchical filesystems.
+
+[fsblog]: https://www.nayuki.io/page/designing-better-file-organization-around-tags-not-hierarchies
