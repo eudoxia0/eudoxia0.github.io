@@ -1,6 +1,6 @@
 ---
 title: Introducing Austral
-summary: Introducing my programming language.
+summary: Introducing a new programming language.
 tags: []
 ---
 
