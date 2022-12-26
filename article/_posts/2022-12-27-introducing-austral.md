@@ -34,7 +34,8 @@ being made about security and correctness are true.
    2. [A Capability-Secure Filesystem API](#cap-fs)
    3. [The Root Capability](#cap-root)
 7. [Status and Future Work](#status)
-8. [Conclusion](#conclusion)
+8. [Getting Involved](#involved)
+9. [Conclusion](#conclusion)
 
 # Design Goals {#goals}
 
@@ -1027,7 +1028,7 @@ for this, because the separation of module interfaces and implementations means
 I can probably design an interface and have a model complete the implementation
 for me.
 
-# Getting Involved
+# Getting Involved {#involved}
 
 A beginning is a unique time. Like annealing: the atoms are in rapid motion, and
 have yet to settle in a fixed configuration. Decisions made early have a vastly
