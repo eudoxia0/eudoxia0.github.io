@@ -1,5 +1,6 @@
 ---
 title: Unbundling Tools for Thought
+summary: Disparate thoughts on personal information management after traversing the hype cycle.
 ---
 
 Short version:
