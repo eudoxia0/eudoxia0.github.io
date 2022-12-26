@@ -1017,10 +1017,31 @@ roadmap.
 The immediate next steps are:
 
 1. Write the basic parts of the standard library.
-2. A build system+package manager.
+2. A build system and package manager.
 3. Fast separate compilation support.
 
-These are all open contribution areas.
+If I can allocate the time, I'd like to use OpenAI's finetuning API to teach a
+code completion model to write Austral for me. I had some promising results
+teaching Austral to ChatGPT interactively. I think the language is uniquely good
+for this, because the separation of module interfaces and implementations means
+I can probably design an interface and have a model complete the implementation
+for me.
+
+# Getting Involved
+
+A beginning is a unique time. Like annealing: the atoms are in rapid motion, and
+have yet to settle in a fixed configuration. Decisions made early have a vastly
+disproportionate impact. So if you have strong opinions about standard library
+APIs, or build systems and package managers, or security, I'd like to hear from
+you.
+
+There's a small [Discord][discord] for the language, but the best way to
+communicate is probably through public [GitHub issues][issues]. Or you can ping
+me on [Twitter][tw], which is the fastest way to reach me.
+
+[discord]: https://discord.gg/GFVZzV46
+[issues]: https://github.com/austral/austral/issues
+[tw]: https://twitter.com/zetalyrae
 
 # Conclusion {#conclusion}
 
