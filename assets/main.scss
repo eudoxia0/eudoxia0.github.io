@@ -168,8 +168,14 @@ nav.media-nav {
 
                 > span {
                     display: block;
-                    font-size: $f4;
+                    font-size: $f3;
                     line-height: $b4;
+                }
+
+                &:hover {
+                    > .shadow {
+
+                    }
                 }
             }
         }
