@@ -141,7 +141,7 @@ body {
     h1 {
         font-size: $f4;
         line-height: $b4;
-        margin-bottom: $b2;
+        margin-bottom: $b4;
     }
 }
 
@@ -150,11 +150,13 @@ body {
 //
 
 nav.media-nav {
-    $initial: 100px;
-    $final: 200px;
+    $initial: $b * 8;
+    $final: $initial * 2;
 
     > ul {
         > li {
+            margin-bottom: $b2;
+
             > a {
                 display: flex;
                 flex-direction: row;
@@ -196,6 +198,7 @@ nav.media-nav {
                     display: block;
                     font-size: $f3;
                     line-height: $b4;
+                    margin-left: $b2;
                 }
 
                 &:hover {
