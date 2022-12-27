@@ -446,6 +446,7 @@ article {
 
         td, th {
             border: 1px solid black;
+            padding: 2px 4px;
         }
 
         th {
@@ -546,9 +547,10 @@ article {
 }
 
 nav.chapter-nav {
-    margin-top: 70px;
+    margin-top: $b2;
 
     ul {
+        margin: 0;
         list-style-type: none;
 
         display: flex;
