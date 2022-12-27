@@ -314,6 +314,7 @@ article {
     h2 {
         font-size: $f2;
         line-height: $b3;
+        height: $b3;
         margin-bottom: $b1;
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
@@ -338,7 +339,11 @@ article {
         }
     }
 
-    p, blockquote, table, ul, ol, dl, h1, h2, h3, pre {
+    p, blockquote, table, ul, ol, dl, h1, h2, h3 {
+        margin-bottom: $b1;
+    }
+
+    .highlighter-rouge, pre {
         margin-bottom: $b1;
     }
 
@@ -359,7 +364,7 @@ article {
     code {
         font-family: 'Inconsolata';
         font-size: $f1;
-        line-height: $b1;
+        line-height: $b2;
     }
 
     pre {
@@ -370,7 +375,7 @@ article {
 
         > code {
             font-size: $fs;
-            line-height: $b1;
+            line-height: $b2;
         }
     }
 
