@@ -302,6 +302,42 @@ nav.media-nav {
 article {
     padding: $b2;
 
+    h1 {
+        font-size: $f3;
+        line-height: $b4;
+        height: $b4;
+        margin-bottom: $b2;
+        border-bottom: 1px solid #8a8a8a;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-size: $f2;
+        line-height: $b3;
+        margin-bottom: $b1;
+        border-bottom: 1px solid #c6c6c6;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: $f1;
+        line-height: $b*3;
+        font-weight: bold;
+    }
+
+    sup[role=doc-noteref] {
+        font-size: $f1;
+        vertical-align: 0;
+
+        &:before {
+            content: "[";
+        }
+
+        &:after {
+            content: "]";
+        }
+    }
+
     p, blockquote, table, ul, ol, dl, h1, h2, h3, pre {
         margin-bottom: $b1;
     }
