@@ -338,11 +338,41 @@ article {
         }
     }
 
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol, dl {
+        margin-left: $b2;
+    }
+
     dl {
         dt {
             font-weight: bold;
         }
+
+        dd {
+            margin-left: $b2;
+        }
     }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td, th {
+            border: 1px solid black;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    }
+
 
     a {
         color: $link-color;
