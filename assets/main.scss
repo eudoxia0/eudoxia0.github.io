@@ -301,6 +301,27 @@ nav.media-nav {
 
 article {
     padding: $b2;
+
+    p, blockquote, table, ul, ol, dl, h1, h2, h3, pre {
+        margin-bottom: $b1;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+        padding: $b1;
+    }
+
+    blockquote {
+        margin: 0 auto;
+        padding: 0 $b2;
+        font-style: italic;
+
+    }
+
 }
 
 // Uncomment the following to draw a grid on the page:
