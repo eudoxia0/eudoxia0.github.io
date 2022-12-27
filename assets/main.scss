@@ -272,5 +272,36 @@ nav.media-nav {
     }
 }
 
+//
+// Article Text Style
+//
+
+.layout-article, .layout-fiction {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // We can't know the height of this element ahead of time (because in
+        // small screens, the title might spill over multiple lines). Therefore
+        // we can't use `box-sizing: border-box;`. Therefore, if we add a
+        // border, all subsequent elements will be vertically misaligned by
+        // 1px. So we simulate a border using an inset box shadow.
+        box-shadow: 0 -1px 0 #000 inset;
+
+        h1 {
+            font-size: $f4;
+            line-height: $b4;
+            margin: $b2 0;
+            text-align: center;
+        }
+    }
+}
+
+article {
+    padding: $b2;
+}
+
 // Uncomment the following to draw a grid on the page:
-//body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
+body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
