@@ -534,5 +534,53 @@ article {
 .highlight .vm { color: #008080 } /* Name.Variable.Magic */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
+//
+// EOG581
+//
+
+.chapter-start {
+    margin: $b2 0;
+
+    p {
+        text-align: center;
+    }
+}
+
+nav.chapter-nav {
+    margin-top: 70px;
+
+    ul {
+        list-style-type: none;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        font-style: italic;
+        margin: 0 20px;
+    }
+}
+
+.epigraph {
+    padding: $b2;
+}
+
+
+.nameplate p {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.center p {
+    text-align: center;
+}
+
+.spaced-image {
+    margin: 100px auto;
+}
+
 // Uncomment the following to draw a grid on the page:
 body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
