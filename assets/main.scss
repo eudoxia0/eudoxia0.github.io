@@ -337,6 +337,17 @@ article {
             line-height: $b1;
         }
     }
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+    }
 }
 
 // Uncomment the following to draw a grid on the page:
