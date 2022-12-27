@@ -73,7 +73,7 @@ body {
 }
 
 // Uncomment the following to draw a grid on the page:
-// body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
+ body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
 
 //
 // Typography
@@ -135,6 +135,7 @@ body {
 
     h1 {
         font-size: $f4;
-        line-height: $b * 4;
+        line-height: $b4;
+        margin-bottom: $b2;
     }
 }
