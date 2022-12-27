@@ -136,7 +136,7 @@ body {
 //
 
 .home-page {
-    padding: $b2;
+    padding: $b4;
 
     h1 {
         font-size: $f4;
@@ -150,6 +150,9 @@ body {
 //
 
 nav.media-nav {
+    $initial: 100px;
+    $final: 200px;
+
     > ul {
         > li {
             > a {
@@ -159,9 +162,32 @@ nav.media-nav {
                 align-items: center;
 
                 > .frame {
-                    > .shadow {
-                        > img {
+                    position: relative;
 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    max-width: $initial;
+                    max-height: $initial;
+
+                    > .shadow {
+                        position: relative;
+                        overflow: hidden;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        width: $initial;
+                        height: $initial;
+
+                        > img {
+                            max-width: $final;
+                            max-height: $final;
                         }
                     }
                 }
@@ -173,8 +199,14 @@ nav.media-nav {
                 }
 
                 &:hover {
-                    > .shadow {
+                    > .frame > .shadow {
+                        z-index: 1;
+                        transition: width 0.3s ease-out, height 0.3s ease-out;
 
+                        max-width: $final;
+                        max-height: $final;
+                        width: $final;
+                        height: $final;
                     }
                 }
             }
