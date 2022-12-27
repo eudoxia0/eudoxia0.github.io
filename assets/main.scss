@@ -148,6 +148,11 @@ nav.media-nav {
     > ul {
         > li {
             > a {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
                 > .frame {
                     > .shadow {
                         > img {
