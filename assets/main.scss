@@ -101,17 +101,19 @@ body {
     flex-direction: column;
 
     > nav.top-nav {
-        height: $b4;
         padding: $b1;
-        border-bottom: 1px solid black;
+
+        // We can't know the height of this element ahead of time (because in
+        // small screens, the title might spill over multiple lines). Therefore
+        // we can't use `box-sizing: border-box;`. Therefore, if we add a
+        // border, all subsequent elements will be vertically misaligned by
+        // 1px. So we simulate a border using an inset box shadow.
+        box-shadow: 0 -1px 0 #000 inset;
 
         ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-
             li {
+                display: inline-block;
+
                 a {
                     color: black;
                     text-decoration: none;
