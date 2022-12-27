@@ -28,3 +28,14 @@ ul, ol {
 img {
     display: block;
 }
+
+//
+// Parameters to the design system.
+//
+
+// `f` is the base font size: 16px;
+$f: 16px;
+// `s` is the font scale; 1.250 (major third).
+$s: 1.250;
+// `b` is the rhythm baseline: 12px;
+$b: 12px;
