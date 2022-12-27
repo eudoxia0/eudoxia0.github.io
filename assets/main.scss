@@ -139,3 +139,27 @@ body {
         margin-bottom: $b2;
     }
 }
+
+//
+// Media List Component
+//
+
+nav.media-nav {
+    > ul {
+        > li {
+            > a {
+                > .frame {
+                    > .shadow {
+                        > img {
+
+                        }
+                    }
+                }
+
+                > span {
+
+                }
+            }
+        }
+    }
+}
