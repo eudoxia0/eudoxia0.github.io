@@ -578,5 +578,20 @@ nav.chapter-nav {
     text-align: center;
 }
 
+//
+// Portfolio
+//
+
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .column {
+        width: 50%;
+    }
+}
+
 // Uncomment the following to draw a grid on the page:
 //body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }

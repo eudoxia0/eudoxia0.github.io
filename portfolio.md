@@ -230,7 +230,7 @@ The key features are: memory safety, data race freedom, and capability-based sec
 </div>
 <div class="column">
 
-![A screenshot of some Austral coode.]({{ site.post_images }}/portfolio/austral.svg)
+[![A screenshot of some Austral coode.]({{ site.post_images }}/portfolio/austral.svg)]({{ site.post_images }}/portfolio/austral.svg)
 
 </div>
 </div>
@@ -248,7 +248,7 @@ stories][lisp-success], [a wiki][lisp-wiki], and [a tutorial][lisp-tutorial].
 </div>
 <div class="column">
 
-![A screenshot of the lisp-lang.org website.]({{ site.post_images }}/portfolio/lisp-lang.png)
+[![A screenshot of the lisp-lang.org website.]({{ site.post_images }}/portfolio/lisp-lang.png)]({{ site.post_images }}/portfolio/lisp-lang.png)
 
 </div>
 </div>
@@ -277,7 +277,7 @@ abstraction, and [SxQL][sxql] is used as the DSL for generating SQL.
 </div>
 <div class="column">
 
-![A screenshot of a code example of using Crane.]({{ site.post_images }}/portfolio/crane.svg)
+[![A screenshot of a code example of using Crane.]({{ site.post_images }}/portfolio/crane.svg)]({{ site.post_images }}/portfolio/crane.svg)
 
 </div>
 </div>
@@ -306,7 +306,7 @@ shows the scope of the macro system.
 </div>
 <div class="column">
 
-![A screenshot of a code example of using cmacro.]({{ site.post_images }}/portfolio/cmacro.svg)
+[![A screenshot of a code example of using cmacro.]({{ site.post_images }}/portfolio/cmacro.svg)]({{ site.post_images }}/portfolio/cmacro.svg)
 
 </div>
 </div>
@@ -331,7 +331,7 @@ the Ruby ecosystem to install Vagrant. It's also pretty nice to use.
 </div>
 <div class="column">
 
-![A screenshot of a code example of using Corona.]({{ site.post_images }}/portfolio/corona.svg)
+[![A screenshot of a code example of using Corona.]({{ site.post_images }}/portfolio/corona.svg)]({{ site.post_images }}/portfolio/corona.svg)
 
 </div>
 </div>
@@ -353,7 +353,7 @@ together so you only serve a single CSS file and a single JS one.
 </div>
 <div class="column">
 
-![A screenshot of a code example of using Rock.]({{ site.post_images }}/portfolio/rock.svg)
+[![A screenshot of a code example of using Rock.]({{ site.post_images }}/portfolio/rock.svg)]({{ site.post_images }}/portfolio/rock.svg)
 
 </div>
 </div>
