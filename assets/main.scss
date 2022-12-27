@@ -167,7 +167,9 @@ nav.media-nav {
                 }
 
                 > span {
-
+                    display: block;
+                    font-size: $f4;
+                    line-height: $b4;
                 }
             }
         }
