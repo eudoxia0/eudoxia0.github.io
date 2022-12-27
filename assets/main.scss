@@ -45,11 +45,14 @@ $s: 1.250;
 // `b` is the rhythm baseline: 12px.
 $b: 12px;
 
+$link-color: #B1002E;
+
 //
 // Derived Constants
 //
 
 // Font sizes.
+$fs: $f * (1 / $s);
 $f1: $f;
 $f2: $f * $s;
 $f3: $f * $s * $s * $s;
@@ -76,9 +79,6 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 }
-
-// Uncomment the following to draw a grid on the page:
- body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
 
 //
 // Typography
@@ -128,6 +128,10 @@ body {
     > footer {
         padding: $b1;
         border-top: 1px solid black;
+
+        a {
+            color: $link-color;
+        }
     }
 }
 
@@ -216,3 +220,57 @@ nav.media-nav {
         }
     }
 }
+
+//
+// Post List Component
+//
+
+.post-list {
+    padding: $b2;
+
+    > p {
+        margin-bottom: $b2;
+
+        a {
+            color: $link-color;
+        }
+    }
+
+    > ul.posts {
+        > li {
+            margin-bottom: $b2;
+
+            > a {
+                display: block;
+                font-size: $f2;
+                line-height: $b2;
+
+                color: black;
+                transition: color 0.3s linear;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    color: $link-color;
+                    transition: color 0.3s linear;
+                    border-color: #bbb;
+                }
+            }
+
+            > .info {
+                font-size: $fs;
+                line-height: $b2;
+
+                > .date {
+                    color: #474747;
+                }
+
+                > .summary {
+
+                }
+            }
+        }
+    }
+}
+
+// Uncomment the following to draw a grid on the page:
+//body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
