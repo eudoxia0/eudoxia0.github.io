@@ -33,9 +33,27 @@ img {
 // Parameters to the design system.
 //
 
-// `f` is the base font size: 16px;
+// `f` is the base font size: 16px.
 $f: 16px;
 // `s` is the font scale; 1.250 (major third).
 $s: 1.250;
-// `b` is the rhythm baseline: 12px;
+// `b` is the rhythm baseline: 12px.
 $b: 12px;
+
+//
+// Derived Constants
+//
+
+// Font sizes.
+$f1: $f;
+$f2: $f * $s;
+$f3: $f * $s * $s * $s;
+$f4: $f * $s * $s * $s * $s;
+$f5: $f * $s * $s * $s * $s * $s;
+
+// Sizes.
+$b1: $b;
+$b2: $b * 2;
+$b3: $b * 3;
+$b4: $b * 4;
+$b5: $b * 5;
