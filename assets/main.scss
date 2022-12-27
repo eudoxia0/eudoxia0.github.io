@@ -316,12 +316,27 @@ article {
     }
 
     blockquote {
-        margin: 0 auto;
-        padding: 0 $b2;
+        margin: 0 $b2;
         font-style: italic;
-
     }
 
+    code {
+        font-family: 'Inconsolata';
+        font-size: $f1;
+        line-height: $b1;
+    }
+
+    pre {
+        border: 1px solid #f2f2f2;
+        background: #fcfcfc;
+        overflow-x: scroll;
+        padding: $b1;
+
+        > code {
+            font-size: $fs;
+            line-height: $b1;
+        }
+    }
 }
 
 // Uncomment the following to draw a grid on the page:
