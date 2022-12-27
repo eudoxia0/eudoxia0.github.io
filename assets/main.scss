@@ -125,3 +125,16 @@ body {
         border-top: 1px solid black;
     }
 }
+
+//
+// Home Page Layout
+//
+
+.home-page {
+    padding: $b2;
+
+    h1 {
+        font-size: $f4;
+        line-height: $b * 4;
+    }
+}
