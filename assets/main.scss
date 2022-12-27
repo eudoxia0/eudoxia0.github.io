@@ -73,7 +73,18 @@ body {
 }
 
 // Uncomment the following to draw a grid on the page:
-// body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
+body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
+
+//
+// Typography
+//
+
+body {
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    font-size: $f1;
+    line-height: $b * 2;
+}
 
 //
 // Common Layout
@@ -85,8 +96,9 @@ body {
     flex-direction: column;
 
     > nav.top-nav {
-        border-bottom: 1px solid black;
+        height: $b4;
         padding: $b1;
+        //border-bottom: 1px solid black;
 
         ul {
             display: flex;
@@ -109,7 +121,8 @@ body {
     }
 
     > footer {
-        border-top: 1px solid black;
+        height: $b4;
         padding: $b1;
+        border-top: 1px solid black;
     }
 }
