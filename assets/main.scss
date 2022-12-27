@@ -363,7 +363,7 @@ article {
         }
     }
 
-    p, blockquote, table, ul, ol, dl, h1, h2, h3 {
+    p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
         margin-bottom: $b1;
     }
 
@@ -426,7 +426,6 @@ article {
     }
 
     hr {
-        margin: $b1 none;
         border: none;
         text-align: center;
 
@@ -568,7 +567,6 @@ nav.chapter-nav {
     padding: $b2;
 }
 
-
 .nameplate p {
     text-align: center;
     font-variant: small-caps;
@@ -576,10 +574,6 @@ nav.chapter-nav {
 
 .center p {
     text-align: center;
-}
-
-.spaced-image {
-    margin: 100px auto;
 }
 
 // Uncomment the following to draw a grid on the page:
