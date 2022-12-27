@@ -57,3 +57,17 @@ $b2: $b * 2;
 $b3: $b * 3;
 $b4: $b * 4;
 $b5: $b * 5;
+
+//
+// Root Styles
+//
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
