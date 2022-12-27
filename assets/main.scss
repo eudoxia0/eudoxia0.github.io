@@ -73,7 +73,7 @@ body {
 }
 
 // Uncomment the following to draw a grid on the page:
-body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
+// body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
 
 //
 // Typography
@@ -98,7 +98,7 @@ body {
     > nav.top-nav {
         height: $b4;
         padding: $b1;
-        //border-bottom: 1px solid black;
+        border-bottom: 1px solid black;
 
         ul {
             display: flex;
