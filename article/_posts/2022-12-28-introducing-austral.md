@@ -1,5 +1,5 @@
 ---
-title: Introducing Austral
+title: 'Introducing Austral: A Systems Language with Linear Types and Capabilities'
 summary: Introducing a new programming language.
 tags: []
 card: introducing-austral.jpg
