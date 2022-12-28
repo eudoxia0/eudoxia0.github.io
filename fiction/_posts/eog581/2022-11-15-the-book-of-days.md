@@ -1,6 +1,7 @@
 ---
 title: The Book of Days
 permalink: /fiction/eog581/the-book-of-days
+summary: Stay — among the gods — before a wing
 forward: the-lunar-surface
 back: ring-zero
 ---
