@@ -3,70 +3,30 @@
 
 @charset "utf-8";
 
-
-//
-// Variables
-//
-
-$highlight-color: #C40234;
-$link-color: #B1002E;
-$mobile-size: 768px;
-
-//
-// Mixins
-//
-
-$breakpoint-small: 375pt;
-$breakpoint-medium: 768pt;
-$breakpoint-large: 1400pt;
-
-@mixin small() {
-    @media (max-width: $breakpoint-small) {
-        @content;
-    }
-}
-
-@mixin medium() {
-    @media (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-medium) {
-        @content;
-    }
-}
-
-@mixin large() {
-    @media (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {
-        @content;
-    }
-}
-
-@mixin largest() {
-    @media (min-width: $breakpoint-large + 1) {
-        @content;
-    }
-}
-
 //
 // Reset
 //
 
-*, :after, :before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-html {
-    width: 100vw;
-    height: 100vh;
+* {
     margin: 0;
     padding: 0;
-    overflow-x: clip;
 }
 
-body {
-    width: 100%;
-    height: 100%;
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
 }
 
 a {
@@ -75,574 +35,144 @@ a {
 }
 
 //
-// Typography
+// Parameters to the design system.
+//
+
+// `f` is the base font size: 16px.
+$f: 16px;
+// `s` is the font scale; 1.250 (major third).
+$s: 1.250;
+// `b` is the rhythm baseline: 12px.
+$b: 12px;
+
+$link-color: #B1002E;
+
+//
+// Derived Constants
+//
+
+// Font sizes.
+$fs: $f * (1 / $s);
+$f1: $f;
+$f2: $f * $s;
+$f3: $f * $s * $s * $s;
+$f4: $f * $s * $s * $s * $s;
+$f5: $f * $s * $s * $s * $s * $s;
+
+// Sizes.
+$b1: $b;
+$b2: $b * 2;
+$b3: $b * 3;
+$b4: $b * 4;
+$b5: $b * 5;
+
+//
+// Root Styles
 //
 
 html {
-    font-size: 16px;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 body {
-    font-family: 'Nimbus Roman', 'Times', serif;
-    color: black;
-}
-
-code {
-    font-family: 'Inconsolata', monospace;
-    font-size: 0.9em;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 //
-// Common layout
+// Typography
+//
+
+body {
+    font-family: 'Times', 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: $f1;
+    line-height: $b * 2;
+}
+
+//
+// Common Layout
 //
 
 .layout-common {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 
-    .top-nav {
-        width: 100%;
-        border-bottom: 1px solid black;
+    > nav.top-nav {
+        padding: $b1;
+
+        // We can't know the height of this element ahead of time (because in
+        // small screens, the title might spill over multiple lines). Therefore
+        // we can't use `box-sizing: border-box;`. Therefore, if we add a
+        // border, all subsequent elements will be vertically misaligned by
+        // 1px. So we simulate a border using an inset box shadow.
+        box-shadow: 0 -1px 0 #000 inset;
 
         ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-
-            list-style-type: none;
-
             li {
-                margin: 0 5px;
+                display: inline-block;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                a, .sep {
+                    margin-right: $b1;
+                }
             }
         }
     }
 
-    main {
+    > main {
         flex: 1;
     }
 
-    footer {
+    > footer {
+        padding: $b1;
         border-top: 1px solid black;
 
         a {
-            color: $highlight-color;
-        }
-    }
-
-    @include small() {
-        .top-nav {
-            padding: 1rem;
-
-            ul {
-                flex-direction: column;
-
-                a, .sep {
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        footer {
-            padding: 0.5rem;
-            font-size: 0.8rem;
-        }
-    }
-    @include medium() {
-        .top-nav {
-            padding: 1rem;
-
-            a, .sep {
-                font-size: 1rem;
-            }
-        }
-
-        footer {
-            padding: 1rem;
-            font-size: 1rem;
-        }
-    }
-    @include large() {
-        .top-nav {
-            padding: 1.3rem;
-
-            a, .sep {
-                font-size: 1.5rem;
-            }
-        }
-
-        footer {
-            padding: 1.5rem;
-            font-size: 1.3rem;
-        }
-    }
-    @include largest() {
-        .top-nav {
-            padding: 2rem;
-
-            a, .sep {
-                font-size: 2rem;
-            }
-        }
-
-        footer {
-            padding: 2rem;
-            font-size: 1.5rem;
+            color: $link-color;
         }
     }
 }
 
 //
-// Post List
+// Home Page Layout
 //
 
-.post-list {
-    max-width: 1300px;
-    margin: 0 auto;
-
-    h2 {
-        padding-bottom: 0.1em;
-        border-bottom: 1px solid #ccc;
-        margin: 0.7em 0;
-    }
-
-    p {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-
-        a {
-            color: $highlight-color;
-        }
-    }
-
-    ul.posts {
-        list-style-type: none;
-
-        li {
-            margin-bottom: 3rem;
-
-            display: flex;
-            flex-direction: column;
-
-            a {
-                margin-bottom: 10px;
-                border-bottom: 1px solid white;
-
-                transition: color 0.3s linear;
-            }
-
-            .info {
-                .date {
-                    color: #474747;
-                }
-            }
-
-            &:hover {
-                a {
-                    border-color: #bbb;
-                    color: $highlight-color;
-
-                    transition: color 0.3s linear;
-                }
-            }
-        }
-    }
-
-    @include small() {
-        padding: 40px 0;
-
-        h2 {
-            font-size: 1.3rem;
-        }
-
-        ul.posts {
-            margin: 0 auto;
-            padding: 0 40px;
-
-            li {
-                font-size: 1.3rem;
-
-                .info {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-
-    @include medium() {
-        padding: 40px 0;
-
-        h2 {
-            font-size: 1.3rem;
-        }
-
-        ul.posts {
-            margin: 0 auto;
-            padding: 0 40px;
-
-            li {
-                font-size: 1.3rem;
-
-                .info {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-
-    @include large() {
-        padding: 60px 0;
-
-        h2 {
-            font-size: 2.3rem;
-        }
-
-        ul.posts {
-            margin: 0 auto;
-            padding: 0 60px;
-
-            li {
-                font-size: 2.3rem;
-
-                .info {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-
-    @include largest() {
-        padding: 100px 0;
-
-        h2 {
-            font-size: 3.3rem;
-        }
-
-        ul.posts {
-            margin: 0 auto;
-            padding: 0 100px;
-
-            li {
-                font-size: 3.3rem;
-
-                .info {
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
-}
-
-//
-// Formatting for textual content
-//
-
-article {
-    max-width: 1800px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.2em;
-
-    // Block elements
-
-    p, blockquote, table, ul, ol, dl, h1, h2, h3 {
-        margin-bottom: 0.8em;
-    }
-
-    pre {
-        margin-bottom: 2em;
-    }
+.home-page {
+    padding: $b4;
 
     h1 {
-        font-size: 1.8em;
-        padding-bottom: 0.3em;
-        border-bottom: 1px solid #ccc;
-        margin: 0.9em 0;
-    }
-
-    h2 {
-        font-size: 1.3em;
-        padding-bottom: 0.1em;
-        border-bottom: 1px solid #ccc;
-        margin: 0.7em 0;
-    }
-
-    h3 {
-        font-size: 1em;
-        padding-bottom: 0em;
-        margin-bottom: 0.5em;
-        margin: 0.5em 0;
-    }
-
-    hr {
-        margin: 60px auto;
-        border: none;
-        text-align: center;
-
-        @include small() {
-            margin: 30px auto;
-        }
-
-        @include medium() {
-            margin: 30px auto;
-        }
-
-        &:after {
-            content: '❧';
-            color: black;
-        }
-    }
-
-    ul, ol, dl, blockquote {
-        p:first-child {
-            text-indent: 0;
-        }
-    }
-
-    dl {
-        dt {
-            font-weight: bold;
-        }
-    }
-
-    pre {
-        border: 2px solid #f2f2f2;
-        background: #fcfcfc;
-        line-height: 1.1em;
-        overflow-x: auto;
-    }
-
-    blockquote {
-        width: 90%;
-        margin: 0 auto;
-        padding: 1rem;
-        font-style: italic;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-
-        td, th {
-            border: 1px solid black;
-        }
-
-        th {
-            font-weight: bold;
-        }
-    }
-
-    img {
-        display: block;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .cite {
-        text-align: right;
-        font-style: normal;
-    }
-
-    // Inline elements
-
-    a {
-        color: $link-color;
-        text-decoration: none;
-    }
-
-    @include small() {
-        font-size: 1rem;
-        padding: 10px;
-
-        p {
-            text-indent: 1rem;
-        }
-
-        ul, ol, dl {
-            margin-left: 40px;
-        }
-
-        dl {
-            dd {
-                margin-left: 20px;
-            }
-        }
-
-        table {
-            td, th {
-                padding: 2px 4px;
-            }
-        }
-
-        pre {
-            padding: 8px 10px;
-            font-size: 0.6rem;
-        }
-    }
-
-    @include medium() {
-        font-size: 1.5rem;
-        padding: 30px;
-
-        p {
-            text-indent: 1.5rem;
-        }
-
-        ul, ol, dl {
-            margin-left: 50px;
-        }
-
-        dl {
-            dd {
-                margin-left: 50px;
-            }
-        }
-
-        table {
-            td, th {
-                padding: 3px 10px;
-            }
-        }
-
-        pre {
-            padding: 14px 20px;
-            font-size: 1rem;
-        }
-    }
-
-    @include large() {
-        font-size: 2rem;
-        padding: 100px;
-
-        p {
-            text-indent: 2rem;
-        }
-
-        ul, ol, dl {
-            margin-left: 50px;
-        }
-
-        dl {
-            dd {
-                margin-left: 50px;
-            }
-        }
-
-        table {
-            td, th {
-                padding: 5px 15px;
-            }
-        }
-
-        pre {
-            padding: 34px 40px;
-            font-size: 1.4rem;
-        }
-    }
-
-    @include largest() {
-        font-size: 2.5rem;
-        padding: 100px;
-
-        p {
-            text-indent: 2.75rem;
-        }
-
-        ul, ol, dl {
-            margin-left: 80px;
-        }
-
-        dl {
-            dd {
-                margin-left: 80px;
-            }
-        }
-
-        table {
-            td, th {
-                padding: 10px 20px;
-            }
-        }
-
-        pre {
-            padding: 34px 40px;
-            font-size: 1.5rem;
-        }
+        font-size: $f4;
+        line-height: $b4;
+        margin-bottom: $b4;
     }
 }
 
 //
-// Article layout
-//
-
-.layout-article, .layout-fiction {
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        border-bottom: 1px solid black;
-
-        h1 {
-            font-weight: normal;
-            text-align: center;
-        }
-    }
-
-    @include small() {
-        header {
-            font-size: 1.2rem;
-            padding: 4rem;
-        }
-    }
-    @include medium() {
-        header {
-            font-size: 1.5rem;
-            padding: 4rem;
-        }
-    }
-    @include large() {
-        header {
-            font-size: 2rem;
-            padding: 4rem;
-        }
-    }
-    @include largest() {
-        header {
-            font-size: 3rem;
-            padding: 4rem;
-        }
-    }
-}
-
-//
-// Media Nav
+// Media List Component
 //
 
 nav.media-nav {
-    $initial-large: 200px;
-    $final-large: 400px;
-    $initial-small: 100px;
-    $final-small: 200px;
-    $t: 0.3s ease-out;
+    $initial: $b * 8;
+    $final: $initial * 2;
 
-    $breakpoint: 768px;
+    > ul {
+        > li {
+            margin-bottom: $b2;
 
-    ul {
-        list-style-type: none;
-
-        li {
-            margin-top: 40px;
-
-            a {
+            > a {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
 
-                .frame {
+                > .frame {
                     position: relative;
 
                     display: flex;
@@ -650,7 +180,10 @@ nav.media-nav {
                     justify-content: center;
                     align-items: center;
 
-                    .shadow {
+                    max-width: $initial;
+                    max-height: $initial;
+
+                    > .shadow {
                         position: relative;
                         overflow: hidden;
 
@@ -660,163 +193,28 @@ nav.media-nav {
                         align-items: center;
                         flex-shrink: 0;
 
-                        img {
-                            margin: 0;
+                        width: $initial;
+                        height: $initial;
+
+                        > img {
+                            max-width: $final;
+                            max-height: $final;
                         }
                     }
                 }
 
-                span {
+                > span {
                     display: block;
-                    color: black;
+                    font-size: $f3;
+                    line-height: $b4;
+                    margin-left: $b2;
                 }
 
                 &:hover {
-                    .shadow {
+                    > .frame > .shadow {
                         z-index: 1;
-                        transition: width $t, height $t;
-                    }
-                }
-            }
-        }
-    }
+                        transition: width 0.3s ease-out, height 0.3s ease-out;
 
-    @include small() {
-        $initial: 100px;
-        $final: 200px;
-
-        li {
-            .frame {
-                max-width: $initial;
-                max-height: $initial;
-
-                .shadow {
-                    width: $initial;
-                    height: $initial;
-
-                    img {
-                        max-width: $final;
-                        max-height: $final;
-                    }
-                }
-            }
-
-            span {
-                font-size: 1.5rem;
-                margin-left: 30px;
-            }
-
-            &:hover {
-                .shadow {
-                    max-width: $final;
-                    max-height: $final;
-                    width: $final;
-                    height: $final;
-                }
-            }
-        }
-    }
-
-    @include medium() {
-        $initial: 100px;
-        $final: 200px;
-
-        li {
-            .frame {
-                max-width: $initial;
-                max-height: $initial;
-
-                .shadow {
-                    width: $initial;
-                    height: $initial;
-
-                    img {
-                        max-width: $final;
-                        max-height: $final;
-                    }
-                }
-            }
-
-            span {
-                font-size: 1.8rem;
-                margin-left: 40px;
-            }
-
-            &:hover {
-                .shadow {
-                    max-width: $final;
-                    max-height: $final;
-                    width: $final;
-                    height: $final;
-                }
-            }
-        }
-    }
-
-    @include large() {
-        @media (max-resolution: 191dpi) {
-            $initial: 150px;
-            $final: 300px;
-
-            li {
-                .frame {
-                    max-width: $initial;
-                    max-height: $initial;
-
-                    .shadow {
-                        width: $initial;
-                        height: $initial;
-
-                        img {
-                            max-width: $final;
-                            max-height: $final;
-                        }
-                    }
-                }
-
-                span {
-                    font-size: 2.5rem;
-                    margin-left: 40px;
-                }
-
-                &:hover {
-                    .shadow {
-                        max-width: $final;
-                        max-height: $final;
-                        width: $final;
-                        height: $final;
-                    }
-                }
-            }
-        }
-
-        @media (min-resolution: 192dpi) {
-            $initial: 100px;
-            $final: 200px;
-
-            li {
-                .frame {
-                    max-width: $initial;
-                    max-height: $initial;
-
-                    .shadow {
-                        width: $initial;
-                        height: $initial;
-
-                        img {
-                            max-width: $final;
-                            max-height: $final;
-                        }
-                    }
-                }
-
-                span {
-                    font-size: 2.5rem;
-                    margin-left: 40px;
-                }
-
-                &:hover {
-                    .shadow {
                         max-width: $final;
                         max-height: $final;
                         width: $final;
@@ -827,37 +225,71 @@ nav.media-nav {
         }
     }
 
-    @include largest() {
-        $initial: 200px;
-        $final: 400px;
+    // Because this compoene might be embedded inside an article, we have to reset some things.
+    li {
+        list-style-type: none;
 
-        li {
-            .frame {
-                max-width: $initial;
-                max-height: $initial;
+        a {
+            color: black;
+        }
+    }
+}
 
-                .shadow {
-                    width: $initial;
-                    height: $initial;
+//
+// Post List Component
+//
 
-                    img {
-                        max-width: $final;
-                        max-height: $final;
-                    }
+.post-list {
+    padding: $b2;
+
+    > p {
+        margin-bottom: $b2;
+
+        a {
+            color: $link-color;
+        }
+    }
+
+    > h2 {
+        font-size: $f2;
+        line-height: $b3;
+        height: $b3;
+        margin-bottom: $b1;
+        border-bottom: 1px solid #c6c6c6;
+        font-weight: bold;
+    }
+
+    > ul.posts {
+
+        > li {
+            margin-bottom: $b2;
+
+            > a {
+                display: block;
+                font-size: $f2;
+                line-height: $b2;
+
+                color: black;
+                transition: color 0.3s linear;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    color: $link-color;
+                    transition: color 0.3s linear;
+                    border-color: #bbb;
                 }
             }
 
-            span {
-                font-size: 3.5rem;
-                margin-left: 40px;
-            }
+            > .info {
+                font-size: $fs;
+                line-height: $b2;
 
-            &:hover {
-                .shadow {
-                    max-width: $final;
-                    max-height: $final;
-                    width: $final;
-                    height: $final;
+                > .date {
+                    color: #474747;
+                }
+
+                > .summary {
+
                 }
             }
         }
@@ -865,102 +297,167 @@ nav.media-nav {
 }
 
 //
-// Home page
+// Article Text Style
 //
 
-.home-page {
-    .box {
-        display: inline-block;
+.layout-article, .layout-fiction {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // We can't know the height of this element ahead of time (because in
+        // small screens, the title might spill over multiple lines). Therefore
+        // we can't use `box-sizing: border-box;`. Therefore, if we add a
+        // border, all subsequent elements will be vertically misaligned by
+        // 1px. So we simulate a border using an inset box shadow.
+        box-shadow: 0 -1px 0 #000 inset;
 
         h1 {
-            font-weight: normal;
-        }
-    }
-
-    @include small() {
-        padding: 1rem;
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-    }
-
-    @include medium() {
-        padding: 4rem;
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-    }
-
-    @include large() {
-        @media (max-resolution: 191dpi) {
-            padding: 7rem;
-
-            h1 {
-                font-size: 3rem;
-                margin-bottom: 100px;
-            }
-        }
-
-        @media (min-resolution: 192dpi) {
-            padding: 5rem;
-
-            h1 {
-                font-size: 3rem;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    @include largest() {
-        padding: 7rem;
-
-        h1 {
-            font-size: 4.3rem;
-            margin-bottom: 100px;
+            font-size: $f4;
+            line-height: $b4;
+            margin: $b2 0;
+            text-align: center;
         }
     }
 }
 
-//
-// About page
-//
+article {
+    padding: $b2;
 
-//
-// Portfolio
-//
-
-.two-columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .column {
-        width: 50%;
+    h1 {
+        font-size: $f3;
+        line-height: $b4;
+        height: $b4;
+        margin-bottom: $b2;
+        border-bottom: 1px solid #8a8a8a;
+        font-weight: normal;
     }
 
-    @include small() {
-        flex-direction: column;
+    h2 {
+        font-size: $f2;
+        line-height: $b3;
+        height: $b3;
+        margin-bottom: $b1;
+        border-bottom: 1px solid #c6c6c6;
+        font-weight: bold;
+    }
 
-        .column {
-            width: 100%;
+    h3 {
+        font-size: $f1;
+        line-height: $b*3;
+        font-weight: bold;
+    }
+
+    sup[role=doc-noteref] {
+        font-size: $f1;
+        vertical-align: 0;
+
+        &:before {
+            content: "[";
+        }
+
+        &:after {
+            content: "]";
         }
     }
-    @include medium() {
-        flex-direction: column;
 
-        .column {
-            width: 100%;
+    p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
+        margin-bottom: $b1;
+    }
+
+    .highlighter-rouge, pre {
+        margin-bottom: $b1;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+        padding: $b1;
+    }
+
+    blockquote {
+        margin: 0 $b2;
+        font-style: italic;
+    }
+
+    code {
+        font-family: 'Inconsolata';
+        font-size: $f1;
+        line-height: $b2;
+    }
+
+    pre {
+        border: 1px solid #f2f2f2;
+        background: #fcfcfc;
+        overflow-x: scroll;
+        padding: $b1;
+
+        > code {
+            font-size: $fs;
+            line-height: $b2;
         }
     }
-    @include large() {
-        flex-direction: row;
+
+    ul {
+        list-style-type: disc;
     }
-    @include largest() {
-        flex-direction: row;
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol, dl {
+        margin-left: $b2;
+    }
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: $b2;
+        }
+    }
+
+    hr {
+        border: none;
+        text-align: center;
+
+        &:after {
+            content: '❧';
+            color: black;
+        }
+    }
+
+    .cite {
+        text-align: right;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td, th {
+            border: 1px solid black;
+            padding: 2px 4px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    }
+
+
+    a {
+        color: $link-color;
+        text-decoration: none;
     }
 }
 
@@ -1042,13 +539,7 @@ nav.media-nav {
 //
 
 .chapter-start {
-    margin: 0 auto 45px auto;
-
-    @include small() {
-        margin: 45px auto 45px auto;
-    }
-
-    width: 80%;
+    margin: $b2 0;
 
     p {
         text-align: center;
@@ -1056,13 +547,10 @@ nav.media-nav {
 }
 
 nav.chapter-nav {
-    margin-top: 70px;
-
-    @include small() {
-        margin-top: 30px;
-    }
+    margin-top: $b2;
 
     ul {
+        margin: 0;
         list-style-type: none;
 
         display: flex;
@@ -1078,23 +566,8 @@ nav.chapter-nav {
 }
 
 .epigraph {
-    margin: 45px auto 200px auto;
-    width: 70%;
-
-    @include small() {
-        margin: 45px auto 50px auto;
-    }
-
-    p {
-        text-align: justify;
-        text-indent: 0;
-    }
-
-    p.cite {
-        text-align: right;
-    }
+    padding: $b2;
 }
-
 
 .nameplate p {
     text-align: center;
@@ -1105,10 +578,20 @@ nav.chapter-nav {
     text-align: center;
 }
 
-.spaced-image {
-    margin: 100px auto;
+//
+// Portfolio
+//
 
-    @include small() {
-        margin: 30px auto;
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .column {
+        width: 50%;
     }
 }
+
+// Uncomment the following to draw a grid on the page:
+//body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
