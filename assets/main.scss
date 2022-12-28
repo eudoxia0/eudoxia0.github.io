@@ -4,6 +4,18 @@
 @charset "utf-8";
 
 //
+// Local Fonts
+//
+
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Bold.ttf") format("opentype"),
+       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-BoldItalic.ttf") format("opentype"),
+       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Italic.ttf") format("opentype"),
+       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Regular.ttf") format("opentype");
+}
+
+//
 // Reset
 //
 
