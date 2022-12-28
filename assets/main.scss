@@ -484,10 +484,13 @@ article {
         }
     }
 
-
     a {
         color: $link-color;
         text-decoration: none;
+    }
+
+    b, strong {
+        font-weight: bold;
     }
 }
 
