@@ -8,11 +8,31 @@
 //
 
 @font-face {
-  font-family: "LiberationSerif";
-  src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Bold.ttf") format("opentype"),
-       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-BoldItalic.ttf") format("opentype"),
-       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Italic.ttf") format("opentype"),
-       url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Regular.ttf") format("opentype");
+    font-family: "LiberationSerif";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "LiberationSerif";
+    font-weight: normal;
+    font-style: italic;
+    src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Italic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "LiberationSerif";
+    font-weight: bold;
+    font-style: normal;
+    src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "LiberationSerif";
+    font-weight: bold;
+    font-style: italic;
+    src: url("/assets/fonts/liberation-fonts-ttf-2.1.5/LiberationSerif-BoldItalic.ttf") format("opentype");
 }
 
 //
