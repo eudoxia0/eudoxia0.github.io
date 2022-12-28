@@ -283,13 +283,9 @@ Consider a file handling API:
 
 ```
 type File
-
 File openFile(String path)
-
 File writeString(File file, String content)
-
 void closeFile(File file)
-
 ```
 
 An experienced programmer understands the _implicit lifecycle_ of the `File`
@@ -343,11 +339,8 @@ And they don't just apply to files. Consider a database access API:
 
 ```
 type Db
-
 Db connect(String host)
-
 Rows query(Db db, String query)
-
 void close(Db db)
 ```
 
@@ -358,13 +351,9 @@ And --- crucially --- consider this memory management API:
 
 ```
 type Pointer<T>
-
 Pointer<T> allocate(T value)
-
 T load(Pointer<T> ptr)
-
 void store(Pointer<T> ptr, T value)
-
 void free(Pointer<T> ptr)
 ```
 
@@ -614,11 +603,8 @@ Let's consider a linear file system API. We'll use the syntax for Austral module
 ```austral
 module Files is
     type File : Linear;
-
     function openFile(path: String): File;
-
     function writeString(file: File, content: String): File;
-
     function closeFile(file: File): Unit;
 end module.
 ```
@@ -729,11 +715,8 @@ And does this solution generalize? Let's consider a linear database API:
 ```austral
 module Database is
     type Db: Linear;
-
     function connect(host: String): Db;
-
     function query(db: Db, query: String): Pair[Db, Rows];
-
     function close(db: Db): Unit;
 end module.
 ```
@@ -869,15 +852,12 @@ Consider a non-capability-secure filesystem API:
 module Files is
     -- File and directory paths.
     type Path: Linear;
-
     -- Creating and disposing of paths.
     function Make_Path(value: String): Path;
     function Dispose_Path(path: Path): Unit;
-
     -- Reading and writing.
     generic [R: Region]
     function Read_File(path: &[Path, R]): String;
-
     generic [R: Region]
     function Write_File(path: &![Path, R], content: String): Unit;
 end module.
@@ -908,23 +888,18 @@ What does a capability-secure filesystem API look like? Like this:
 ```austral
 module Files is
     type Path: Linear;
-
     -- The filesystem access capability.
     type Filesystem: Linear;
-
     -- Given a read reference to the filesystem access capability,
     -- get the root directory.
     generic [R: Region]
     function Get_Root(fs: &[Filesystem, R]): Path;
-
     -- Given a directory path, append a directory or
     -- file name at the end.
     function Append(path: Path, name: String): Path;
-
     -- Reading and writing.
     generic [R: Region]
     function Read_File(path: &[Path, R]): String;
-
     generic [R: Region]
     function Write_File(path: &[Path, R], content: String): Unit;
 end module.
