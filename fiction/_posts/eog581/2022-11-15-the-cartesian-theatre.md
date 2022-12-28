@@ -2,6 +2,7 @@
 title: The Cartesian Theatre
 permalink: /fiction/eog581/the-cartesian-theatre
 summary: Gentzen trees — concave ocean — paradise regained
+card: eog581/the-cartesian-theatre.jpg
 forward: wepwawet
 ---
 

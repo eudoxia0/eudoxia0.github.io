@@ -2,6 +2,7 @@
 title: Without Organs
 permalink: /fiction/eog581/without-organs
 summary: drowned — starlings — this is all that you are
+card: eog581/without-organs.jpg
 forward: ring-zero
 back: objects-in-space
 ---

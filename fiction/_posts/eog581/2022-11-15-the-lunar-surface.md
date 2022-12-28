@@ -2,6 +2,7 @@
 title: The Lunar Surface
 permalink: /fiction/eog581/the-lunar-surface
 summary: life in amber — nothing left — Rijndael
+card: eog581/the-lunar-surface.jpg
 forward: la-sienza-nuova
 back: the-book-of-days
 ---
