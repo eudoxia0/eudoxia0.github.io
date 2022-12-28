@@ -2,6 +2,7 @@
 title: Introducing Austral
 summary: Introducing a new programming language.
 tags: []
+card: introducing-austral.jpg
 ---
 
 [**Austral**][austral] is a new systems programming language. You can think of
