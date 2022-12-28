@@ -633,7 +633,7 @@ nav.chapter-nav {
 @media (min-width: 1200px) {
     .layout-common {
         .post-list, article {
-            width: 60%;
+            max-width: 900px;
             margin-right: auto;
             margin-left: auto;
         }
