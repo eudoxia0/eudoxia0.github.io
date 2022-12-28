@@ -259,11 +259,15 @@ nav.media-nav {
     }
 
     // Because this compoene might be embedded inside an article, we have to reset some things.
-    li {
-        list-style-type: none;
+    ul {
+        margin-left: 0;
 
-        a {
-            color: black;
+        li {
+            list-style-type: none;
+
+            a {
+                color: black;
+            }
         }
     }
 }
