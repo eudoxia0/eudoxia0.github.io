@@ -133,6 +133,12 @@ body {
     display: flex;
     flex-direction: column;
 
+    .post-list, article {
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     > nav.top-nav {
         padding: $b1;
 
@@ -627,20 +633,6 @@ nav.chapter-nav {
 
     .column {
         width: 50%;
-    }
-}
-
-//
-// Device-Specific Adjustments
-//
-
-@media (min-width: 1200px) {
-    .layout-common {
-        .post-list, article {
-            max-width: 900px;
-            margin-right: auto;
-            margin-left: auto;
-        }
     }
 }
 
