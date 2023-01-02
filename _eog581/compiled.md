@@ -1,7 +1,7 @@
 % The Epiphany of Gliese 581
 % Fernando Borretti
 
-<div class="epigraph">
+<div class="epigraph-group"><div class="epigraph">
 <p>For a great deal is said about the forms of the gods, and about their locality, dwelling-places, and mode of life, and these points are disputed with the utmost difference of opinion among philosophers.</p>
 <p class="cite">
 &mdash; Cicero, <i>On the Nature of the Gods</i>
@@ -13,7 +13,7 @@
 <p class="cite">
 &mdash; Charles Babbage, 1864
 </p>
-</div>
+</div></div>
 
 # The Cartesian Theatre
 
@@ -78,7 +78,7 @@ In the transit lounge, a woman with the head of a hyena holds forth on the philo
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_breathed water --- K2 --- had been human_
 
 </div>
 
@@ -119,7 +119,7 @@ Asman negotiated, and _Parandé_ accepted the terms: fame and glory and a privat
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_Nimrud --- travel backwards --- what hope?_
 
 </div>
 
@@ -446,7 +446,7 @@ They illuminated the torus with RADAR and tried the contact protocols and when n
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_drowned --- starlings --- this is all that you are_
 
 </div>
 
@@ -836,7 +836,7 @@ She said nothing.
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_fire and light --- Wang tiles --- Brodmann 39_
 
 </div>
 
@@ -1242,7 +1242,7 @@ Dejected, Asman continued:
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_Stay --- among the gods --- before a wing_
 
 </div>
 
@@ -1673,7 +1673,7 @@ A few hours later, Tiet vomited in his suit.
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_life in amber --- nothing left --- Rijndael_
 
 </div>
 
@@ -1887,7 +1887,7 @@ Gliese 581 · Ne plus ultra
 
 <div class="chapter-start">
 
-_Gentzen trees --- concave ocean --- paradise regained_
+_That I had wings like a dove --- for then I would fly away --- and be at rest --- I would wander far away --- and in the wilderness remain_
 
 </div>
 
@@ -2022,7 +2022,11 @@ When the sun sets, hundreds of birds hidden among the trees sing at once; half-a
 
 # Colophon
 
+<div class="chapter-start">
 
+_Acknowledgments, things stolen, and astronomical math._
+
+</div>
 
 ## Tools
 
@@ -2166,23 +2170,7 @@ am mighty"
 
 ## Star Positions
 
-All place names:
 
-<video width="100%" autoplay=true loop=true>
-  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
-</video>
-
-Detail of the stars around Gliese 581:
-
-<video width="100%" autoplay=true loop=true>
-  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/g581-environs.mp4" type="video/mp4" />
-</video>
-
-The network route from Ctesiphon to Wepwawet:
-
-<video width="100%" autoplay=true loop=true>
-  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
-</video>
 
 ## Table of Travel Times
 

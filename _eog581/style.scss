@@ -37,7 +37,7 @@ a {
 //
 
 // `f` is the base font size: 16px.
-$f: 16px;
+$f: 18px;
 // `s` is the font scale; 1.250 (major third).
 $s: 1.250;
 // `b` is the rhythm baseline: 12px.
@@ -86,7 +86,7 @@ body {
     font-family: 'Times', 'Times New Roman', 'NimbusRoman', serif;
     font-weight: normal;
     font-size: $f1;
-    line-height: $b * 2;
+    line-height: $b2;
 }
 
 ///
@@ -95,29 +95,72 @@ body {
 
 #title-block-header {
     page-break-after: always;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
 
     h1 {
-        font-size: $f4;
+        padding-top: $b * 20;
+        font-size: $f5;
+        line-height: $b5;
+        margin-bottom: $b4;
     }
 
     .author {
-        font-size: $f2;
+        font-size: $f3;
+    }
+}
+
+.epigraph-group {
+    page-break-after: always;
+    width: 100vw;
+    height: 100vh;
+    padding-top: $b * 20;
+
+    .epigraph {
+        width: 60%;
+        margin: 0 auto;
+
+        p {
+            text-align: justify;
+            padding-bottom: $b2;
+        }
+
+        .cite {
+            text-align: right;
+        }
+    }
+}
+
+section.level1 {
+    page-break-after: always;
+    padding: $b * 10;
+}
+
+nav {
+    padding: $b * 10;
+    h1 {
+        font-size: $f3;
+        line-height: $f3;
     }
 }
 
 section {
-    page-break-after: always;
 
-    h1 {
-        font-size: $f3;
-    }
-
-    .chapter-start {
+    .chapter-start p {
         text-align: center;
+        margin: $b4 auto $b4 auto;
+        max-width: 80%;
     }
 
     p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
         margin-bottom: $b1;
+    }
+
+    h1 {
+        padding-top: $b * 15;
+        font-size: $f4;
+        line-height: $f4;
     }
 
     .highlighter-rouge, pre {
@@ -133,9 +176,8 @@ section {
         padding: $b1;
     }
 
-    blockquote {
-        margin: 0 $b2;
-        font-style: italic;
+    blockquote, .center {
+        margin: $b3 $b5;
     }
 
     code {
@@ -215,4 +257,13 @@ section {
     b, strong {
         font-weight: bold;
     }
+}
+
+.nameplate p {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.center p {
+    text-align: center;
 }

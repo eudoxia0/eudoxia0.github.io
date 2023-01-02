@@ -1,19 +1,19 @@
 ---
-title: Objects in Space
-permalink: /fiction/eog581/objects-in-space
-summary: Nimrud — travel backwards — what hope?
-card: eog581/objects-in-space.jpg
-forward: without-organs
-back: wepwawet
----
+    title: Objects in Space
+    permalink: /fiction/eog581/objects-in-space
+    summary: Nimrud — travel backwards — what hope?
+    card: eog581/objects-in-space.jpg
+    forward: without-organs
+    back: wepwawet
+    ---
 
-<div class="chapter-start">
+    <div class="chapter-start">
 
-_Nimrud --- travel backwards --- what hope?_
+    _Nimrud --- travel backwards --- what hope?_
 
-</div>
+    </div>
 
-_Parandé_ fell through the dark for close to half a century. When their last tank was spent and discarded, what was left was a slender cylinder of diamond a few meters long, a single covalently-bonded crystal containing a modest computer, oceans of storage, and a seed factory.
+    _Parandé_ fell through the dark for close to half a century. When their last tank was spent and discarded, what was left was a slender cylinder of diamond a few meters long, a single covalently-bonded crystal containing a modest computer, oceans of storage, and a seed factory.
 
 They unfolded a telescope and swept it slowly side to side until they found a target: a mound of chondrite floating in space.
 
@@ -331,18 +331,19 @@ Asman objected: "That doesn't make sense. There should be nothing left."
 
 They illuminated the torus with RADAR and tried the contact protocols and when nothing answered, they decided to go inside.
 
-<nav class="chapter-nav">
-  <ul>
-    <li>
-      <a href="/fiction/eog581/{{ page.back }}">
-        Back
-      </a>
-    </li>
-    <span>❖</span>
-    <li>
-      <a href="/fiction/eog581/{{ page.forward }}">
-        Forward
-      </a>
-    </li>
-  </ul>
-</nav>
+    <nav class="chapter-nav">
+      <ul>
+        <li>
+          <a href="/fiction/eog581/{{ page.back }}">
+            Back
+          </a>
+        </li>
+        <span>❖</span>
+        <li>
+          <a href="/fiction/eog581/{{ page.forward }}">
+            Forward
+          </a>
+        </li>
+      </ul>
+    </nav>
+    

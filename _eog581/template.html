@@ -14,12 +14,10 @@
       <p class="author">$author$</p>
       $endfor$
     </header>
+    $body$
     <nav id="$idprefix$TOC" role="doc-toc">
-      $if(toc-title)$
-      <h2 id="$idprefix$toc-title">$toc-title$</h2>
-      $endif$
+      <h1>Table of Contents</h1>
       $table-of-contents$
     </nav>
-    $body$
   </body>
 </html>

@@ -39,7 +39,7 @@ CHAPTERS: list[dict[str, str]] = [
 
 assert len(CHAPTERS) == 9
 
-EPIGRAPH: str = """<div class="epigraph">
+EPIGRAPH: str = """<div class="epigraph-group"><div class="epigraph">
 <p>For a great deal is said about the forms of the gods, and about their locality, dwelling-places, and mode of life, and these points are disputed with the utmost difference of opinion among philosophers.</p>
 <p class="cite">
 &mdash; Cicero, <i>On the Nature of the Gods</i>
@@ -51,119 +51,120 @@ EPIGRAPH: str = """<div class="epigraph">
 <p class="cite">
 &mdash; Charles Babbage, 1864
 </p>
-</div>"""
+</div></div>"""
 
 def slugify(s: str) -> str:
     return s.lower().replace(" ", "-")
 
-# Generate pages.
-for idx, chapter in enumerate(CHAPTERS):
-    idx += 1
-    # Parse.
-    title: str = chapter["title"]
-    poem: str = chapter["poem"]
-    # Construct slug, file paths.
-    slug: str = slugify(title)
-    source_file: str = f"{idx}-{slug}.md"
-    target_file: str = f"../fiction/_posts/eog581/2022-11-15-{slug}.md"
-    # Navigation.
-    backward: str | None
-    forward: str | None
-    if idx == 1:
-        backward = None
-        forward = slugify(CHAPTERS[idx]["title"])
-    elif idx == 8:
-        backward = slugify(CHAPTERS[idx-2]["title"])
-        forward = "colophon"
-    elif idx == 9:
-        backward = None
-        forward = None
-    else:
-        backward = slugify(CHAPTERS[idx-2]["title"])
-        forward = slugify(CHAPTERS[idx]["title"])
-    # Synthesize front matter.
-    front_matter: str
-    if idx == 9:
-        front_matter = f"""---
-title: {title}
-permalink: /fiction/eog581/{slug}
-summary: {poem}
-card: eog581/{slug}.jpg
----"""
-    else:
-        front_matter = f"""---
-title: {title}
-permalink: /fiction/eog581/{slug}
-summary: {poem}
-card: eog581/{slug}.jpg
-forward: {forward or "null"}
-back: {backward or "null"}
----"""
-    # Synthesize navigation.
-    nav: str
-    if forward and backward:
-        nav = f"""
-<nav class="chapter-nav">
-  <ul>
-    <li>
-      <a href="/fiction/eog581/{{{{ page.back }}}}">
-        Back
-      </a>
-    </li>
-    <span>❖</span>
-    <li>
-      <a href="/fiction/eog581/{{{{ page.forward }}}}">
-        {"Colophon" if idx == 8 else "Forward"}
-      </a>
-    </li>
-  </ul>
-</nav>"""
-    elif forward and (not backward):
-        nav = """
-<nav class="chapter-nav">
-  <ul>
-    <li>
-      <a href="/fiction/eog581/{{ page.forward }}">
-        Forward
-      </a>
-    </li>
-  </ul>
-</nav>"""
-    elif (not forward) and (not backward):
-        nav = ""
-    # Read source.
-    body: str
-    with open(source_file, "r") as stream:
-        body = stream.read()
-    # Construct file.
-    start: str
-    if idx == 1:
-        start = f"""
+def generate_pages():
+    # Generate pages.
+    for idx, chapter in enumerate(CHAPTERS):
+        idx += 1
+        # Parse.
+        title: str = chapter["title"]
+        poem: str = chapter["poem"]
+        # Construct slug, file paths.
+        slug: str = slugify(title)
+        source_file: str = f"{idx}-{slug}.md"
+        target_file: str = f"../fiction/_posts/eog581/2022-11-15-{slug}.md"
+        # Navigation.
+        backward: str | None
+        forward: str | None
+        if idx == 1:
+            backward = None
+            forward = slugify(CHAPTERS[idx]["title"])
+        elif idx == 8:
+            backward = slugify(CHAPTERS[idx-2]["title"])
+            forward = "colophon"
+        elif idx == 9:
+            backward = None
+            forward = None
+        else:
+            backward = slugify(CHAPTERS[idx-2]["title"])
+            forward = slugify(CHAPTERS[idx]["title"])
+        # Synthesize front matter.
+        front_matter: str
+        if idx == 9:
+            front_matter = f"""---
+    title: {title}
+    permalink: /fiction/eog581/{slug}
+    summary: {poem}
+    card: eog581/{slug}.jpg
+    ---"""
+        else:
+            front_matter = f"""---
+    title: {title}
+    permalink: /fiction/eog581/{slug}
+    summary: {poem}
+    card: eog581/{slug}.jpg
+    forward: {forward or "null"}
+    back: {backward or "null"}
+    ---"""
+        # Synthesize navigation.
+        nav: str
+        if forward and backward:
+            nav = f"""
+    <nav class="chapter-nav">
+      <ul>
+        <li>
+          <a href="/fiction/eog581/{{{{ page.back }}}}">
+            Back
+          </a>
+        </li>
+        <span>❖</span>
+        <li>
+          <a href="/fiction/eog581/{{{{ page.forward }}}}">
+            {"Colophon" if idx == 8 else "Forward"}
+          </a>
+        </li>
+      </ul>
+    </nav>"""
+        elif forward and (not backward):
+            nav = """
+    <nav class="chapter-nav">
+      <ul>
+        <li>
+          <a href="/fiction/eog581/{{ page.forward }}">
+            Forward
+          </a>
+        </li>
+      </ul>
+    </nav>"""
+        elif (not forward) and (not backward):
+            nav = ""
+        # Read source.
+        body: str
+        with open(source_file, "r") as stream:
+            body = stream.read()
+        # Construct file.
+        start: str
+        if idx == 1:
+            start = f"""
 
-{EPIGRAPH}
+    {EPIGRAPH}
 
-<div class="chapter-start">
+    <div class="chapter-start">
 
-_{poem.replace("—", "---")}_
+    _{poem.replace("—", "---")}_
 
-</div>"""
-    elif idx == 9:
-        start = ""
-    else:
-        start = f"""
+    </div>"""
+        elif idx == 9:
+            start = ""
+        else:
+            start = f"""
 
-<div class="chapter-start">
+    <div class="chapter-start">
 
-_{poem.replace("—", "---")}_
+    _{poem.replace("—", "---")}_
 
-</div>"""
-    page_contents: str = f"""{front_matter}{start}
+    </div>"""
+        page_contents: str = f"""{front_matter}{start}
 
-{body}{nav}
-"""
-    # Create page.
-    with open(target_file, "w") as stream:
-        stream.write(page_contents)
+    {body}{nav}
+    """
+        # Create page.
+        with open(target_file, "w") as stream:
+            stream.write(page_contents)
 
 PREAMBLE: str = f"""% The Epiphany of Gliese 581
 % Fernando Borretti
@@ -180,6 +181,23 @@ def fix_colophon(s: str) -> str:
     s = s.replace("# Table of Travel Times", "## Table of Travel Times")
     s = s.replace("# Icon Sources", "## Icon Sources")
     s = s.replace("# Footnotes", "## Footnotes")
+    s = s.replace("""All place names:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/all-stars.mp4" type="video/mp4" />
+</video>
+
+Detail of the stars around Gliese 581:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/g581-environs.mp4" type="video/mp4" />
+</video>
+
+The network route from Ctesiphon to Wepwawet:
+
+<video width="100%" autoplay=true loop=true>
+  <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
+</video>""", "")
     return s
 
 
@@ -199,14 +217,14 @@ def concatenate():
         if idx == 9:
             body = fix_colophon(body)
         start: str
-        if idx == 1:
+        if idx == 0:
+            start = ""
+        else:
             start = f"""<div class="chapter-start">
 
 _{poem.replace("—", "---")}_
 
 </div>"""
-        elif idx == 9:
-            start = ""
 
         compiled += f"""# {title}
 
@@ -219,4 +237,5 @@ _{poem.replace("—", "---")}_
     with open(target_file, "w") as stream:
         stream.write(compiled)
 
+generate_pages()
 concatenate()

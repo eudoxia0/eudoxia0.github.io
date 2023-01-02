@@ -1,19 +1,19 @@
 ---
-title: The Book of Days
-permalink: /fiction/eog581/the-book-of-days
-summary: Stay — among the gods — before a wing
-card: eog581/the-book-of-days.jpg
-forward: the-lunar-surface
-back: ring-zero
----
+    title: The Book of Days
+    permalink: /fiction/eog581/the-book-of-days
+    summary: Stay — among the gods — before a wing
+    card: eog581/the-book-of-days.jpg
+    forward: the-lunar-surface
+    back: ring-zero
+    ---
 
-<div class="chapter-start">
+    <div class="chapter-start">
 
-_Stay --- among the gods --- before a wing_
+    _Stay --- among the gods --- before a wing_
 
-</div>
+    </div>
 
-Timon and Attila walked up the length of the passage, and took the transport back to _Parandé_. They all agreed, as did _Parandé_, that they had crossed a risk-reward threshold, and it was best to leave. Timon went to his workshop, carrying the various samples they had drilled or scraped or cut from the inside of the torus, in airtight boxes filled with sensors that would burn them if they detected any activity inside. Had he had a heart, it would have beat anxiously; had he had skin, he would have been drenched in sweat. He meant to resume work, and immediately fell asleep.
+    Timon and Attila walked up the length of the passage, and took the transport back to _Parandé_. They all agreed, as did _Parandé_, that they had crossed a risk-reward threshold, and it was best to leave. Timon went to his workshop, carrying the various samples they had drilled or scraped or cut from the inside of the torus, in airtight boxes filled with sensors that would burn them if they detected any activity inside. Had he had a heart, it would have beat anxiously; had he had skin, he would have been drenched in sweat. He meant to resume work, and immediately fell asleep.
 
 They were making preparations for Tiet: repressurizing the interior with oxygen, since Tiet had real lungs and needed to breathe air, printing atmosphere and water recyclers, and a bioreactor to make food. They had printed a Class IV suit for him, Attila and Timon would fly to the torus with the suit, and bring themselves, Tiet, and Sabra back.
 
@@ -435,18 +435,19 @@ Points of white light, like a blizzard, filled Sabra's vision, they appeared and
 
 A few hours later, Tiet vomited in his suit.
 
-<nav class="chapter-nav">
-  <ul>
-    <li>
-      <a href="/fiction/eog581/{{ page.back }}">
-        Back
-      </a>
-    </li>
-    <span>❖</span>
-    <li>
-      <a href="/fiction/eog581/{{ page.forward }}">
-        Forward
-      </a>
-    </li>
-  </ul>
-</nav>
+    <nav class="chapter-nav">
+      <ul>
+        <li>
+          <a href="/fiction/eog581/{{ page.back }}">
+            Back
+          </a>
+        </li>
+        <span>❖</span>
+        <li>
+          <a href="/fiction/eog581/{{ page.forward }}">
+            Forward
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
