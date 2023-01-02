@@ -221,8 +221,6 @@ The network route from Ctesiphon to Wepwawet:
       <td class="number">4.3</td>
       <td class="number">35.4</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Time Spent in Gliese 581</th>
     </tr>
@@ -230,8 +228,6 @@ The network route from Ctesiphon to Wepwawet:
       <th colspan=3>Activity</th>
       <th>Time (y)</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td colspan=3 style="text-align: right;">Rebuilding <i>Parandé</i></td>
       <td class="number">0.8</td>
@@ -248,8 +244,6 @@ The network route from Ctesiphon to Wepwawet:
       <td colspan=3 style="text-align: right;">Building the <i>Epiphany</i></td>
       <td class="number">0.9</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Return Journey</th>
     </tr>
@@ -259,8 +253,6 @@ The network route from Ctesiphon to Wepwawet:
       <th>Distance (ly)</th>
       <th>Time (y)</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Gliese 581</td>
       <td>Gliese 555</td>
@@ -273,13 +265,9 @@ The network route from Ctesiphon to Wepwawet:
       <td class="number">70.9</td>
       <td class="number">157.3</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Totals</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td colspan=3 style="text-align: right;">Time elapsed</td>
       <td class="number">282.6 years</td>
