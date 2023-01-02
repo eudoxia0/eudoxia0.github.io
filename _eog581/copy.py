@@ -198,7 +198,7 @@ The network route from Ctesiphon to Wepwawet:
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
 </video>""", "")
-    s = s.replace("/assets", "../assets")
+    s = s.replace("/assets", "./../assets")
     return s
 
 

@@ -1051,13 +1051,13 @@ Crystalline structures appeared in her mind’s eye: a forest of candidate gramm
 
 Slate-like fragments of a language surfaced in her mind's eye:
 
-![](../assets/content/eog581/grammar.png)
+![](./../assets/content/eog581/grammar.png)
 
 "_Ennépo mou, navi-ye talai Abél hierós?_"
 
 Every conjunction of sounds ground volumes of possibility space to nothing. The words marched together, they formed themselves, recursively, into larger structures:
 
-![](../assets/content/eog581/prooftree.png)
+![](./../assets/content/eog581/prooftree.png)
 
 And when the structure was firmly anchored in her mind, meaning showed itself.
 
