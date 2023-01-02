@@ -120,6 +120,7 @@ body {
     .epigraph {
         width: 60%;
         margin: 0 auto;
+        margin-bottom: $b4;
 
         p {
             text-align: justify;
@@ -134,11 +135,12 @@ body {
 
 section.level1 {
     page-break-after: always;
-    padding: $b * 10;
+    padding: $b * 5;
 }
 
 nav {
-    padding: $b * 10;
+    padding: $b * 5;
+
     h1 {
         font-size: $f3;
         line-height: $f3;
@@ -146,21 +148,30 @@ nav {
 }
 
 section {
-
     .chapter-start p {
         text-align: center;
         margin: $b4 auto $b4 auto;
         max-width: 80%;
     }
 
-    p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
+    p, blockquote, table, ul, ol, dl, h1, h2 {
         margin-bottom: $b1;
     }
 
+    hr {
+        margin: $b2 auto;
+    }
+
     h1 {
-        padding-top: $b * 15;
+        padding-top: $b * 5;
         font-size: $f4;
         line-height: $f4;
+    }
+
+    h2 {
+        font-size: $f2;
+        line-height: $f2;
+        font-weight: bold;
     }
 
     .highlighter-rouge, pre {
@@ -186,18 +197,6 @@ section {
         line-height: $b2;
     }
 
-    pre {
-        border: 1px solid #f2f2f2;
-        background: #fcfcfc;
-        overflow-x: scroll;
-        padding: $b1;
-
-        > code {
-            font-size: $fs;
-            line-height: $b2;
-        }
-    }
-
     ul {
         list-style-type: disc;
     }
@@ -208,16 +207,6 @@ section {
 
     ul, ol, dl {
         margin-left: $b2;
-    }
-
-    dl {
-        dt {
-            font-weight: bold;
-        }
-
-        dd {
-            margin-left: $b2;
-        }
     }
 
     hr {
@@ -238,6 +227,7 @@ section {
     table {
         width: 100%;
         border-collapse: collapse;
+        margin-top: $b1;
 
         td, th {
             border: 1px solid black;
