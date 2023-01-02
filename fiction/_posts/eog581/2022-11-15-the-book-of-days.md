@@ -7,13 +7,13 @@ forward: the-lunar-surface
 back: ring-zero
 ---
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _Stay --- among the gods --- before a wing_
+_Stay --- among the gods --- before a wing_
 
-    </div>
+</div>
 
-    Timon and Attila walked up the length of the passage, and took the transport back to _Parandé_. They all agreed, as did _Parandé_, that they had crossed a risk-reward threshold, and it was best to leave. Timon went to his workshop, carrying the various samples they had drilled or scraped or cut from the inside of the torus, in airtight boxes filled with sensors that would burn them if they detected any activity inside. Had he had a heart, it would have beat anxiously; had he had skin, he would have been drenched in sweat. He meant to resume work, and immediately fell asleep.
+Timon and Attila walked up the length of the passage, and took the transport back to _Parandé_. They all agreed, as did _Parandé_, that they had crossed a risk-reward threshold, and it was best to leave. Timon went to his workshop, carrying the various samples they had drilled or scraped or cut from the inside of the torus, in airtight boxes filled with sensors that would burn them if they detected any activity inside. Had he had a heart, it would have beat anxiously; had he had skin, he would have been drenched in sweat. He meant to resume work, and immediately fell asleep.
 
 They were making preparations for Tiet: repressurizing the interior with oxygen, since Tiet had real lungs and needed to breathe air, printing atmosphere and water recyclers, and a bioreactor to make food. They had printed a Class IV suit for him, Attila and Timon would fly to the torus with the suit, and bring themselves, Tiet, and Sabra back.
 
@@ -434,20 +434,19 @@ _Parandé_ was ringed by concentric spheres of blinding light. Then there was no
 Points of white light, like a blizzard, filled Sabra's vision, they appeared and were gone in less than the blink of an eye. She turned and saw the torus, breaking up and glowing like iron in a furnace, dense clouds of soot billowing in vacuum. Billions of little embers glowing briefly where _Parandé_ had been.
 
 A few hours later, Tiet vomited in his suit.
-
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.back }}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>
+<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{ page.back }}">
+      Back
+    </a>
+  </li>
+  <span>❖</span>
+  <li>
+    <a href="/fiction/eog581/{{ page.forward }}">
+      Forward
+    </a>
+  </li>
+</ul>
+</nav>
     

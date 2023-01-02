@@ -7,7 +7,7 @@ forward: wepwawet
 back: null
 ---
 
-    <div class="epigraph-group"><div class="epigraph">
+<div class="epigraph-group"><div class="epigraph">
 <p>For a great deal is said about the forms of the gods, and about their locality, dwelling-places, and mode of life, and these points are disputed with the utmost difference of opinion among philosophers.</p>
 <p class="cite">
 &mdash; Cicero, <i>On the Nature of the Gods</i>
@@ -21,13 +21,13 @@ back: null
 </p>
 </div></div>
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _Gentzen trees --- concave ocean --- paradise regained_
+_Gentzen trees --- concave ocean --- paradise regained_
 
-    </div>
+</div>
 
-    Salvation came in the form of algebra. She discovered, in the treasure, a family of string rewriting systems that she used for her own amusement, and later found that these were not logics with _sui generis_ terminology but an algebraic description of human languages. She found, pulling that thread, that there was more than one language, that Hinton Station was not the extent of the universe: that it was one of millions of places where people lived, around a star, and that there were things called stars, planets, flowers and computers. That there existed a universe outside the transparent towers and the words of Gödel and Frege. She found an old network socket and decided to escape.
+Salvation came in the form of algebra. She discovered, in the treasure, a family of string rewriting systems that she used for her own amusement, and later found that these were not logics with _sui generis_ terminology but an algebraic description of human languages. She found, pulling that thread, that there was more than one language, that Hinton Station was not the extent of the universe: that it was one of millions of places where people lived, around a star, and that there were things called stars, planets, flowers and computers. That there existed a universe outside the transparent towers and the words of Gödel and Frege. She found an old network socket and decided to escape.
 
 Sabra was born in the computer. She was made by an algebraist, from a linear combination of six other minds, because the population was held stable at 2<sup>8</sup> and each departure was followed by the manufacture of a new soul.
 
@@ -77,13 +77,13 @@ In a corridor, a Fedorovist preacher speaks to an unhearing crowd:
 
 In the transit lounge, a woman with the head of a hyena holds forth on the philosophy of Ernst Mach.
 
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>
+<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{ page.forward }}">
+      Forward
+    </a>
+  </li>
+</ul>
+</nav>
     

@@ -7,13 +7,13 @@ forward: la-sienza-nuova
 back: the-book-of-days
 ---
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _life in amber --- nothing left --- Rijndael_
+_life in amber --- nothing left --- Rijndael_
 
-    </div>
+</div>
 
-    The transport arced down the orbits towards the wreck. She braked as much as she could, until the tanks had too little pressure and the exhaust was an empty exhalation. Then, turning with the gyroscopes, she wedged the transport in one of the huge tears in the hull, she and Tiet secured it and went inside, carrying the harness.
+The transport arced down the orbits towards the wreck. She braked as much as she could, until the tanks had too little pressure and the exhaust was an empty exhalation. Then, turning with the gyroscopes, she wedged the transport in one of the huge tears in the hull, she and Tiet secured it and went inside, carrying the harness.
 
 "We are dead," Tiet said. "We will die here."
 
@@ -217,20 +217,19 @@ Epiphany
 Gliese 581 · Ne plus ultra
 
 </div>
-
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.back }}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>
+<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{ page.back }}">
+      Back
+    </a>
+  </li>
+  <span>❖</span>
+  <li>
+    <a href="/fiction/eog581/{{ page.forward }}">
+      Forward
+    </a>
+  </li>
+</ul>
+</nav>
     

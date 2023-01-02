@@ -103,33 +103,32 @@ back: {backward or "null"}
         # Synthesize navigation.
         nav: str
         if forward and backward:
-            nav = f"""
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{{{ page.back }}}}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{{{ page.forward }}}}">
-            {"Colophon" if idx == 8 else "Forward"}
-          </a>
-        </li>
-      </ul>
-    </nav>"""
+            nav = f"""<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{{{ page.back }}}}">
+      Back
+    </a>
+  </li>
+  <span>❖</span>
+  <li>
+    <a href="/fiction/eog581/{{{{ page.forward }}}}">
+      {"Colophon" if idx == 8 else "Forward"}
+    </a>
+  </li>
+</ul>
+</nav>"""
         elif forward and (not backward):
             nav = """
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>"""
+<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{ page.forward }}">
+      Forward
+    </a>
+  </li>
+</ul>
+</nav>"""
         elif (not forward) and (not backward):
             nav = ""
         # Read source.
@@ -141,26 +140,26 @@ back: {backward or "null"}
         if idx == 1:
             start = f"""
 
-    {EPIGRAPH}
+{EPIGRAPH}
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _{poem.replace("—", "---")}_
+_{poem.replace("—", "---")}_
 
-    </div>"""
+</div>"""
         elif idx == 9:
             start = ""
         else:
             start = f"""
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _{poem.replace("—", "---")}_
+_{poem.replace("—", "---")}_
 
-    </div>"""
+</div>"""
         page_contents: str = f"""{front_matter}{start}
 
-    {body}{nav}
+{body}{nav}
     """
         # Create page.
         with open(target_file, "w") as stream:

@@ -7,13 +7,13 @@ forward: ring-zero
 back: objects-in-space
 ---
 
-    <div class="chapter-start">
+<div class="chapter-start">
 
-    _drowned --- starlings --- this is all that you are_
+_drowned --- starlings --- this is all that you are_
 
-    </div>
+</div>
 
-    Gliese 581 was drowned in satellites, still, they were awash in blood-red light, the white trusswork of the transport turned pink. Sabra turned back on her seat, and saw _Parandé_'s broadside, half a kilometer long but already barely visible. Timon sat behind her, and he was darker than the space around them, the dim longwave light sank into his skin, while the void was aglow with zodiacal light. He looked back at her, and the _tapeta lucida_ behind his eyes blinked red for an instant.
+Gliese 581 was drowned in satellites, still, they were awash in blood-red light, the white trusswork of the transport turned pink. Sabra turned back on her seat, and saw _Parandé_'s broadside, half a kilometer long but already barely visible. Timon sat behind her, and he was darker than the space around them, the dim longwave light sank into his skin, while the void was aglow with zodiacal light. He looked back at her, and the _tapeta lucida_ behind his eyes blinked red for an instant.
 
 The torus was made of diamond. Where the crater had formed, the surface had not crumpled or collapsed: it pyrolized and turned to smoke. The solid surface was buried under a layer of soot.
 
@@ -393,20 +393,19 @@ _Parandé_ spoke in her head:
 She said nothing.
 
 “We heard a voice in the walls, in the first year,” Tiet said. “It tried to speak twice.”
-
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.back }}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>
+<nav class="chapter-nav">
+<ul>
+  <li>
+    <a href="/fiction/eog581/{{ page.back }}">
+      Back
+    </a>
+  </li>
+  <span>❖</span>
+  <li>
+    <a href="/fiction/eog581/{{ page.forward }}">
+      Forward
+    </a>
+  </li>
+</ul>
+</nav>
     
