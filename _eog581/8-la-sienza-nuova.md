@@ -1,19 +1,4 @@
----
-title: La Sienza Nuova
-permalink: /fiction/eog581/la-sienza-nuova
-summary: That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain
-card: eog581/la-sienza-nuova.jpg
-forward: colophon
-back: the-lunar-surface
----
-
-    <div class="chapter-start">
-
-    _That I had wings like a dove --- for then I would fly away --- and be at rest --- I would wander far away --- and in the wilderness remain_
-
-    </div>
-
-    Wepwawet traffic control intercepted them two light-weeks out: the _Epiphany_'s exhaust had the spectral signature of the ships of the gods, and the locals panicked, and thought one of the gods had come for their star and their matter.
+Wepwawet traffic control intercepted them two light-weeks out: the _Epiphany_'s exhaust had the spectral signature of the ships of the gods, and the locals panicked, and thought one of the gods had come for their star and their matter.
 
 They were boarded and a toposophist administered the tests of Taylor and Airy, the cubes of Hinton and the test of Madurai, and decreed that they were two nearbaseline transhumans and a baseline human, and congratulated them for their safe return.
 
@@ -140,20 +125,3 @@ In the bird market, Tiet bought a blue starling and brought it to the cabin. The
 In the streets of the town, Sabra sees a dog with yellow eyes. It looks at her kindly, and she expects it to speak Babelian words.
 
 When the sun sets, hundreds of birds hidden among the trees sing at once; half-asleep, she hears fragments of the divine language.
-
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.back }}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Colophon
-          </a>
-        </li>
-      </ul>
-    </nav>
-    

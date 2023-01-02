@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+//
+// Reset
+//
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+//
+// Parameters to the design system.
+//
+
+// `f` is the base font size: 16px.
+$f: 18px;
+// `s` is the font scale; 1.250 (major third).
+$s: 1.250;
+// `b` is the rhythm baseline: 12px.
+$b: 12px;
+
+$link-color: #B1002E;
+
+//
+// Derived Constants
+//
+
+// Font sizes.
+$fs: $f * (1 / $s);
+$f1: $f;
+$f2: $f * $s;
+$f3: $f * $s * $s * $s;
+$f4: $f * $s * $s * $s * $s;
+$f5: $f * $s * $s * $s * $s * $s;
+
+// Sizes.
+$b1: $b;
+$b2: $b * 2;
+$b3: $b * 3;
+$b4: $b * 4;
+$b5: $b * 5;
+
+//
+// Root Styles
+//
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+//
+// Typography
+//
+
+body {
+    font-family: 'Times', 'Times New Roman', 'NimbusRoman', serif;
+    font-weight: normal;
+    font-size: $f1;
+    line-height: $b2;
+}
+
+///
+/// Style
+///
+
+#title-block-header {
+    page-break-after: always;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        padding-top: $b * 20;
+        font-size: $f5;
+        line-height: $b5;
+        margin-bottom: $b4;
+    }
+
+    .author {
+        font-size: $f3;
+    }
+}
+
+.epigraph-group {
+    page-break-after: always;
+    width: 100vw;
+    height: 100vh;
+    padding-top: $b * 20;
+
+    .epigraph {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: $b4;
+
+        p {
+            text-align: justify;
+            padding-bottom: $b2;
+        }
+
+        .cite {
+            text-align: right;
+        }
+    }
+}
+
+section.level1 {
+    page-break-after: always;
+    padding: $b * 5;
+}
+
+nav {
+    padding: $b * 5;
+
+    h1 {
+        padding-top: $b * 5;
+        font-size: $f3;
+        line-height: $f3;
+    }
+
+    ul {
+        margin: $b5 $b5;
+        list-style-type: disc;
+        padding: 0;
+    }
+}
+
+section {
+    blockquote, .center {
+        margin: $b3 $b5;
+    }
+}
+
+section#colophon {
+    blockquote {
+        margin: $b2 $b5;
+    }
+}
+
+
+section {
+    .chapter-start p {
+        text-align: center;
+        margin: $b4 auto $b4 auto;
+        max-width: 80%;
+    }
+
+    p, blockquote, table, ul, ol, dl, h1, h2 {
+        margin-bottom: $b1;
+    }
+
+    hr {
+        margin: $b2 auto;
+    }
+
+    h1 {
+        padding-top: $b * 5;
+        font-size: $f4;
+        line-height: $f4;
+    }
+
+    h2 {
+        font-size: $f2;
+        line-height: $f2;
+        font-weight: bold;
+    }
+
+    .highlighter-rouge, pre {
+        margin-bottom: $b1;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: $b1;
+    }
+
+    code {
+        font-family: 'Inconsolata';
+        font-size: $f1;
+        line-height: $b2;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol, dl {
+        margin-left: $b2;
+    }
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: $b2;
+        }
+    }
+
+    hr {
+        border: none;
+        text-align: center;
+
+        &:after {
+            content: '❧';
+            color: black;
+        }
+    }
+
+    .cite {
+        text-align: right;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td, th {
+            border: 1px solid black;
+            padding: 2px 4px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+    }
+
+    b, strong {
+        font-weight: bold;
+    }
+}
+
+.nameplate p {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.center p {
+    text-align: center;
+}
+
+#star-positions img {
+    max-width: 60%;
+}

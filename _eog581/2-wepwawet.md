@@ -1,19 +1,4 @@
----
-title: Wepwawet
-permalink: /fiction/eog581/wepwawet
-summary: breathed water — K2 — had been human
-card: eog581/wepwawet.jpg
-forward: objects-in-space
-back: the-cartesian-theatre
----
-
-    <div class="chapter-start">
-
-    _breathed water --- K2 --- had been human_
-
-    </div>
-
-    There were just four of them: Asman, a toposophist who led the expedition; Attila, a toposophist; Sabra, a linguist; and Timon, a chemist.
+There were just four of them: Asman, a toposophist who led the expedition; Attila, a toposophist; Sabra, a linguist; and Timon, a chemist.
 
 They backed themselves up, sharded the keys, and left them in the hands of different insurers. Then they beamed themselves, from Ctesiphon and through six other stars, to the network relay closest to Gliese 581. Sixty years passed for the world outside, but they experienced only a few days, waiting in network queues and negotiating passage in-between transits.
 
@@ -44,20 +29,3 @@ One of them was _Parandé_. When it was laid down --- around Sol, they claimed, 
 The original crew had been human, and they had all either left or gone into the computer. They wired their cortex to the ship's body, and when they found that they were seven minds entangled in a single body, they opened their minds to each other. _Parandé_ used the royal _we_, but they were a single mind, _sui generis_, made by hand.
 
 Asman negotiated, and _Parandé_ accepted the terms: fame and glory and a private key to an account in Ctesiphon, whose value no-one could know centuries away.
-
-    <nav class="chapter-nav">
-      <ul>
-        <li>
-          <a href="/fiction/eog581/{{ page.back }}">
-            Back
-          </a>
-        </li>
-        <span>❖</span>
-        <li>
-          <a href="/fiction/eog581/{{ page.forward }}">
-            Forward
-          </a>
-        </li>
-      </ul>
-    </nav>
-    

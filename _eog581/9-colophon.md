@@ -1,11 +1,4 @@
----
-title: Colophon
-permalink: /fiction/eog581/colophon
-summary: Acknowledgments, things stolen, and astronomical math.
-card: eog581/colophon.jpg
----
-
-    # Tools
+# Tools
 
 [Emacs][emacs] and Markdown. Astronomical calculations were made using the [HYG
 database][hyg], [Python][py], and [Jupyter][jup].  Coordinates are J2000[^coord].
@@ -325,5 +318,3 @@ The network route from Ctesiphon to Wepwawet:
     since stars don't move in a straight line, and thus calculating future star
     positions accurately requires solving a large _n_-body problem with huge
     positional uncertainty, which is beyond my limited skills.
-
-    
