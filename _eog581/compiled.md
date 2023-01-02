@@ -2170,7 +2170,17 @@ And other things:
 
 ## Star Positions
 
+All place names:
 
+![](all-stars.png)
+
+Detail of the stars around Gliese 581:
+
+![](g581-environs.png)
+
+The network route from Ctesiphon to Wepwawet:
+
+![](route.png)
 
 ## Table of Travel Times
 

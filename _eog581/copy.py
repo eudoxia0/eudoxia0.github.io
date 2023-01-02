@@ -197,7 +197,17 @@ The network route from Ctesiphon to Wepwawet:
 
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
-</video>""", "")
+</video>""", """All place names:
+
+![](all-stars.png)
+
+Detail of the stars around Gliese 581:
+
+![](g581-environs.png)
+
+The network route from Ctesiphon to Wepwawet:
+
+![](route.png)""")
     s = s.replace("/assets", "./../assets")
     return s
 
