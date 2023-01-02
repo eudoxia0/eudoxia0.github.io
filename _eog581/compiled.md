@@ -2024,7 +2024,7 @@ When the sun sets, hundreds of birds hidden among the trees sing at once; half-a
 
 
 
-# Tools
+## Tools
 
 [Emacs][emacs] and Markdown. Astronomical calculations were made using the [HYG
 database][hyg], [Python][py], and [Jupyter][jup].  Coordinates are J2000[^coord].
@@ -2039,7 +2039,7 @@ years, to account for beam divergence over interstellar distances.
 [jup]: https://jupyter.org/
 [algo]: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
-# Acknowledgments
+## Acknowledgments
 
 Great thanks to
 [@93odradek](https://twitter.com/93odradek),
@@ -2065,7 +2065,7 @@ drafts.
 [fred]: http://fredkozlowski.com/
 [jordan]: https://twitter.com/jachaseyoung
 
-# Index of Things Stolen
+## Index of Things Stolen
 
 From [Orion's Arm][oa]: the terms [_toposophy_][topo] (in turn from Stanisław
 Lem) and [_intelligent superobject_][iso], the name [_The Futurological
@@ -2164,7 +2164,7 @@ am mighty"
 [plate]: https://www.sacred-texts.com/egy/ebod/ebod33.htm
 [poem]: https://www.bcs.org/articles-opinion-and-research/remembering-alan-turing/
 
-# Star Positions
+## Star Positions
 
 All place names:
 
@@ -2184,7 +2184,7 @@ The network route from Ctesiphon to Wepwawet:
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
 </video>
 
-# Table of Travel Times
+## Table of Travel Times
 
 <table class="travel-times">
   <thead>
@@ -2322,7 +2322,7 @@ The network route from Ctesiphon to Wepwawet:
   .number { text-align: right; }
 </style>
 
-# Icon Sources
+## Icon Sources
 
 1. **The Cartesian Theatre**: [_Magdalene with Two Flames_][icon1], Georges de La Tour.
 1. **Wepwawet**: [_Airborne Event_][icon2], Fred Tomaselli.
@@ -2346,7 +2346,7 @@ The network route from Ctesiphon to Wepwawet:
 [rings]: https://archive.org/details/AILS-AC81-7069
 
 
-# Footnotes
+## Footnotes
 
 [^coord]:
     More-or-less accurate velocity vectors for stars can be obtained in the

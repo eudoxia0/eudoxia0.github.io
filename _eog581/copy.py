@@ -172,6 +172,17 @@ PREAMBLE: str = f"""% The Epiphany of Gliese 581
 
 """
 
+def fix_colophon(s: str) -> str:
+    s = s.replace("# Tools", "## Tools")
+    s = s.replace("# Acknowledgments", "## Acknowledgments")
+    s = s.replace("# Index of Things Stolen", "## Index of Things Stolen")
+    s = s.replace("# Star Positions", "## Star Positions")
+    s = s.replace("# Table of Travel Times", "## Table of Travel Times")
+    s = s.replace("# Icon Sources", "## Icon Sources")
+    s = s.replace("# Footnotes", "## Footnotes")
+    return s
+
+
 def concatenate():
     # Concatenate to a single Markdown file
     compiled: str = PREAMBLE
@@ -185,6 +196,8 @@ def concatenate():
         body: str
         with open(source_file, "r") as stream:
             body = stream.read()
+        if idx == 9:
+            body = fix_colophon(body)
         start: str
         if idx == 1:
             start = f"""<div class="chapter-start">
