@@ -89,9 +89,31 @@ body {
     line-height: $b * 2;
 }
 
-section {
-    h1 {
+///
+/// Style
+///
 
+#title-block-header {
+    page-break-after: always;
+
+    h1 {
+        font-size: $f4;
+    }
+
+    .author {
+        font-size: $f2;
+    }
+}
+
+section {
+    page-break-after: always;
+
+    h1 {
+        font-size: $f3;
+    }
+
+    .chapter-start {
+        text-align: center;
     }
 
     p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
