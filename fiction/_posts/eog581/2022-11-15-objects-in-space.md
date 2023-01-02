@@ -1,11 +1,11 @@
 ---
-    title: Objects in Space
-    permalink: /fiction/eog581/objects-in-space
-    summary: Nimrud — travel backwards — what hope?
-    card: eog581/objects-in-space.jpg
-    forward: without-organs
-    back: wepwawet
-    ---
+title: Objects in Space
+permalink: /fiction/eog581/objects-in-space
+summary: Nimrud — travel backwards — what hope?
+card: eog581/objects-in-space.jpg
+forward: without-organs
+back: wepwawet
+---
 
     <div class="chapter-start">
 

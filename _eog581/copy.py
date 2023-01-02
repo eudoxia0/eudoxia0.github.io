@@ -86,20 +86,20 @@ def generate_pages():
         front_matter: str
         if idx == 9:
             front_matter = f"""---
-    title: {title}
-    permalink: /fiction/eog581/{slug}
-    summary: {poem}
-    card: eog581/{slug}.jpg
-    ---"""
+title: {title}
+permalink: /fiction/eog581/{slug}
+summary: {poem}
+card: eog581/{slug}.jpg
+---"""
         else:
             front_matter = f"""---
-    title: {title}
-    permalink: /fiction/eog581/{slug}
-    summary: {poem}
-    card: eog581/{slug}.jpg
-    forward: {forward or "null"}
-    back: {backward or "null"}
-    ---"""
+title: {title}
+permalink: /fiction/eog581/{slug}
+summary: {poem}
+card: eog581/{slug}.jpg
+forward: {forward or "null"}
+back: {backward or "null"}
+---"""
         # Synthesize navigation.
         nav: str
         if forward and backward:
@@ -180,7 +180,7 @@ def fix_colophon(s: str) -> str:
     s = s.replace("# Star Positions", "## Star Positions")
     s = s.replace("# Table of Travel Times", "## Table of Travel Times")
     s = s.replace("# Icon Sources", "## Icon Sources")
-    s = s.replace("# Footnotes", "## Footnotes")
+    s = s.replace("# Footnotes", "")
     s = s.replace("""All place names:
 
 <video width="100%" autoplay=true loop=true>

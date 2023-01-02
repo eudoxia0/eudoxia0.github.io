@@ -1,11 +1,11 @@
 ---
-    title: La Sienza Nuova
-    permalink: /fiction/eog581/la-sienza-nuova
-    summary: That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain
-    card: eog581/la-sienza-nuova.jpg
-    forward: colophon
-    back: the-lunar-surface
-    ---
+title: La Sienza Nuova
+permalink: /fiction/eog581/la-sienza-nuova
+summary: That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain
+card: eog581/la-sienza-nuova.jpg
+forward: colophon
+back: the-lunar-surface
+---
 
     <div class="chapter-start">
 

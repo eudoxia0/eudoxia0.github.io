@@ -1,11 +1,11 @@
 ---
-    title: The Cartesian Theatre
-    permalink: /fiction/eog581/the-cartesian-theatre
-    summary: Gentzen trees — concave ocean — paradise regained
-    card: eog581/the-cartesian-theatre.jpg
-    forward: wepwawet
-    back: null
-    ---
+title: The Cartesian Theatre
+permalink: /fiction/eog581/the-cartesian-theatre
+summary: Gentzen trees — concave ocean — paradise regained
+card: eog581/the-cartesian-theatre.jpg
+forward: wepwawet
+back: null
+---
 
     <div class="epigraph-group"><div class="epigraph">
 <p>For a great deal is said about the forms of the gods, and about their locality, dwelling-places, and mode of life, and these points are disputed with the utmost difference of opinion among philosophers.</p>
