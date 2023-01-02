@@ -148,6 +148,19 @@ nav {
 }
 
 section {
+    blockquote, .center {
+        margin: $b3 $b5;
+    }
+}
+
+section#colophon {
+    blockquote {
+        margin: $b2 $b5;
+    }
+}
+
+
+section {
     .chapter-start p {
         text-align: center;
         margin: $b4 auto $b4 auto;
@@ -187,10 +200,6 @@ section {
         padding: $b1;
     }
 
-    blockquote, .center {
-        margin: $b3 $b5;
-    }
-
     code {
         font-family: 'Inconsolata';
         font-size: $f1;
@@ -207,6 +216,16 @@ section {
 
     ul, ol, dl {
         margin-left: $b2;
+    }
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: $b2;
+        }
     }
 
     hr {
@@ -235,7 +254,6 @@ section {
 
         th {
             font-weight: bold;
-            border: 1px solid black;
         }
     }
 

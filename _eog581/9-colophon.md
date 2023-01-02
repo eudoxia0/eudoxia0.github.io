@@ -88,7 +88,8 @@ And other things:
 
 "We are memories"
 : The idea of an eschatology inspired by the works of Nikolai Fedorov and Frank
-  Tipler comes from, particularly, this paragraph from [_The Quantum Thief_][tqt]:
+  Tipler comes from, particularly, this paragraph from [_The Quantum
+  Thief_][tqt]:
 
   >"I lost my faith in the past. Something is wrong with it. Something is wrong
   >with what we know. That is why I didn't want you to study the texts in the
@@ -97,22 +98,21 @@ And other things:
   >some transhuman gods; perhaps the Sobornost has already won, Fedorov's dreams
   >are true and we are merely memories."
 
-"... I am crowned, I am mighty; I sit among the gods, and even among the gods I
-am mighty"
+"... I am crowned, I am mighty; I sit among the gods, and even among the gods I am mighty"
 : from Sir E. A. Wallis Budge's translation of the [_Book of the
-  Dead_][bookdead] ([Plate XXVII][plate]):
+    Dead_][bookdead] ([Plate XXVII][plate]):
 
   >I sail (6) among them, and I come; I am crowned, I am become a shining one,
   >(7) I am mighty, I am become holy among the gods. I am the god Khonsu who
   >driveth back all that opposeth him.
 
 "... hyperboloids of wondrous light..."
-: from a [poem][poem] by Alan Turing, our patron saint:
+:  from a [poem][poem] by Alan Turing, our patron saint:
 
-  >Hyperboloids of wondrous Light<br>
-  >Rolling for aye through space and time<br>
-  >Harbour those waves which somehow might<br>
-  >Play out God’s holy pantomime
+   >Hyperboloids of wondrous Light<br>
+   >Rolling for aye through space and time<br>
+   >Harbour those waves which somehow might<br>
+   >Play out God’s holy pantomime
 
 [oa]: https://www.orionsarm.com/
 [topo]: https://www.orionsarm.com/eg-topic/45b3daabb2329
@@ -306,7 +306,6 @@ The network route from Ctesiphon to Wepwawet:
 [icon7]: https://en.wikipedia.org/wiki/Black_Square_(painting)
 [icon8]: https://en.wikipedia.org/wiki/The_Roses_of_Heliogabalus
 [rings]: https://archive.org/details/AILS-AC81-7069
-
 
 # Footnotes
 

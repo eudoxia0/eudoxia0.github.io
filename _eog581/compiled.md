@@ -2118,7 +2118,8 @@ And other things:
 
 "We are memories"
 : The idea of an eschatology inspired by the works of Nikolai Fedorov and Frank
-  Tipler comes from, particularly, this paragraph from [_The Quantum Thief_][tqt]:
+  Tipler comes from, particularly, this paragraph from [_The Quantum
+  Thief_][tqt]:
 
   >"I lost my faith in the past. Something is wrong with it. Something is wrong
   >with what we know. That is why I didn't want you to study the texts in the
@@ -2127,22 +2128,21 @@ And other things:
   >some transhuman gods; perhaps the Sobornost has already won, Fedorov's dreams
   >are true and we are merely memories."
 
-"... I am crowned, I am mighty; I sit among the gods, and even among the gods I
-am mighty"
+"... I am crowned, I am mighty; I sit among the gods, and even among the gods I am mighty"
 : from Sir E. A. Wallis Budge's translation of the [_Book of the
-  Dead_][bookdead] ([Plate XXVII][plate]):
+    Dead_][bookdead] ([Plate XXVII][plate]):
 
   >I sail (6) among them, and I come; I am crowned, I am become a shining one,
   >(7) I am mighty, I am become holy among the gods. I am the god Khonsu who
   >driveth back all that opposeth him.
 
 "... hyperboloids of wondrous light..."
-: from a [poem][poem] by Alan Turing, our patron saint:
+:  from a [poem][poem] by Alan Turing, our patron saint:
 
-  >Hyperboloids of wondrous Light<br>
-  >Rolling for aye through space and time<br>
-  >Harbour those waves which somehow might<br>
-  >Play out God’s holy pantomime
+   >Hyperboloids of wondrous Light<br>
+   >Rolling for aye through space and time<br>
+   >Harbour those waves which somehow might<br>
+   >Play out God’s holy pantomime
 
 [oa]: https://www.orionsarm.com/
 [topo]: https://www.orionsarm.com/eg-topic/45b3daabb2329
@@ -2235,8 +2235,6 @@ am mighty"
       <td class="number">4.3</td>
       <td class="number">35.4</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Time Spent in Gliese 581</th>
     </tr>
@@ -2244,8 +2242,6 @@ am mighty"
       <th colspan=3>Activity</th>
       <th>Time (y)</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td colspan=3 style="text-align: right;">Rebuilding <i>Parandé</i></td>
       <td class="number">0.8</td>
@@ -2262,8 +2258,6 @@ am mighty"
       <td colspan=3 style="text-align: right;">Building the <i>Epiphany</i></td>
       <td class="number">0.9</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Return Journey</th>
     </tr>
@@ -2273,8 +2267,6 @@ am mighty"
       <th>Distance (ly)</th>
       <th>Time (y)</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Gliese 581</td>
       <td>Gliese 555</td>
@@ -2287,13 +2279,9 @@ am mighty"
       <td class="number">70.9</td>
       <td class="number">157.3</td>
     </tr>
-  </tbody>
-  <thead>
     <tr>
       <th colspan=4>Totals</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td colspan=3 style="text-align: right;">Time elapsed</td>
       <td class="number">282.6 years</td>
@@ -2334,7 +2322,6 @@ am mighty"
 [rings]: https://archive.org/details/AILS-AC81-7069
 
 
-## Footnotes
 
 [^coord]:
     More-or-less accurate velocity vectors for stars can be obtained in the
