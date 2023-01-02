@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+//
+// Reset
+//
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+//
+// Parameters to the design system.
+//
+
+// `f` is the base font size: 16px.
+$f: 16px;
+// `s` is the font scale; 1.250 (major third).
+$s: 1.250;
+// `b` is the rhythm baseline: 12px.
+$b: 12px;
+
+$link-color: #B1002E;
+
+//
+// Derived Constants
+//
+
+// Font sizes.
+$fs: $f * (1 / $s);
+$f1: $f;
+$f2: $f * $s;
+$f3: $f * $s * $s * $s;
+$f4: $f * $s * $s * $s * $s;
+$f5: $f * $s * $s * $s * $s * $s;
+
+// Sizes.
+$b1: $b;
+$b2: $b * 2;
+$b3: $b * 3;
+$b4: $b * 4;
+$b5: $b * 5;
+
+//
+// Root Styles
+//
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+//
+// Typography
+//
+
+body {
+    font-family: 'Times', 'Times New Roman', 'NimbusRoman', serif;
+    font-weight: normal;
+    font-size: $f1;
+    line-height: $b * 2;
+}
+
+section {
+    h1 {
+
+    }
+
+    p, blockquote, table, ul, ol, dl, h1, h2, h3, hr {
+        margin-bottom: $b1;
+    }
+
+    .highlighter-rouge, pre {
+        margin-bottom: $b1;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+        padding: $b1;
+    }
+
+    blockquote {
+        margin: 0 $b2;
+        font-style: italic;
+    }
+
+    code {
+        font-family: 'Inconsolata';
+        font-size: $f1;
+        line-height: $b2;
+    }
+
+    pre {
+        border: 1px solid #f2f2f2;
+        background: #fcfcfc;
+        overflow-x: scroll;
+        padding: $b1;
+
+        > code {
+            font-size: $fs;
+            line-height: $b2;
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol, dl {
+        margin-left: $b2;
+    }
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: $b2;
+        }
+    }
+
+    hr {
+        border: none;
+        text-align: center;
+
+        &:after {
+            content: '❧';
+            color: black;
+        }
+    }
+
+    .cite {
+        text-align: right;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td, th {
+            border: 1px solid black;
+            padding: 2px 4px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+    }
+
+    b, strong {
+        font-weight: bold;
+    }
+}
