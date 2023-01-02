@@ -56,6 +56,7 @@ EPIGRAPH: str = """<div class="epigraph">
 def slugify(s: str) -> str:
     return s.lower().replace(" ", "-")
 
+# Generate pages.
 for idx, chapter in enumerate(CHAPTERS):
     idx += 1
     # Parse.
@@ -163,3 +164,46 @@ _{poem.replace("—", "---")}_
     # Create page.
     with open(target_file, "w") as stream:
         stream.write(page_contents)
+
+PREAMBLE: str = f"""% The Epiphany of Gliese 581
+% Fernando Borretti
+
+{EPIGRAPH}
+
+"""
+
+def concatenate():
+    # Concatenate to a single Markdown file
+    compiled: str = PREAMBLE
+    target_file: str = "compiled.md"
+    for idx, chapter in enumerate(CHAPTERS):
+        idx += 1
+        title: str = chapter["title"]
+        poem: str = chapter["poem"]
+        slug: str = slugify(title)
+        source_file: str = f"{idx}-{slug}.md"
+        body: str
+        with open(source_file, "r") as stream:
+            body = stream.read()
+        start: str
+        if idx == 1:
+            start = f"""<div class="chapter-start">
+
+_{poem.replace("—", "---")}_
+
+</div>"""
+        elif idx == 9:
+            start = ""
+
+        compiled += f"""# {title}
+
+{start}
+
+{body}
+
+"""
+
+    with open(target_file, "w") as stream:
+        stream.write(compiled)
+
+concatenate()
