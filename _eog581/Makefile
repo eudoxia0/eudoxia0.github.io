@@ -8,7 +8,7 @@ compiled.md:
 	python3 copy.py
 
 epiphany.html: compiled.md template.html style.css
-	pandoc -s --toc --template=template.html --toc-depth=1 --section-divs compiled.md -o epiphany.html
+	pandoc -s --toc --template=template.html --toc-depth=1 --section-divs --reference-location=section compiled.md -o epiphany.html
 
 clean:
 	rm compiled.md
