@@ -142,8 +142,15 @@ nav {
     padding: $b * 5;
 
     h1 {
+        padding-top: $b * 5;
         font-size: $f3;
         line-height: $f3;
+    }
+
+    ul {
+        margin: $b5 $b5;
+        list-style-type: disc;
+        padding: 0;
     }
 }
 
