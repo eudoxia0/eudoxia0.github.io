@@ -173,7 +173,7 @@ PREAMBLE: str = f"""% The Epiphany of Gliese 581
 
 """
 
-def fix_colophon(s: str) -> str:
+def fix_body(s: str) -> str:
     s = s.replace("# Tools", "## Tools")
     s = s.replace("# Acknowledgments", "## Acknowledgments")
     s = s.replace("# Index of Things Stolen", "## Index of Things Stolen")
@@ -198,6 +198,7 @@ The network route from Ctesiphon to Wepwawet:
 <video width="100%" autoplay=true loop=true>
   <source src="/assets/content/astronomical-calculations-hard-sf-common-lisp/route.mp4" type="video/mp4" />
 </video>""", "")
+    s = s.replace("/assets", "../assets")
     return s
 
 
@@ -213,9 +214,7 @@ def concatenate():
         source_file: str = f"{idx}-{slug}.md"
         body: str
         with open(source_file, "r") as stream:
-            body = stream.read()
-        if idx == 9:
-            body = fix_colophon(body)
+            body = fix_body(stream.read())
         start: str
         if idx == 0:
             start = ""
