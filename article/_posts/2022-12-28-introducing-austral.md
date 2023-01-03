@@ -969,7 +969,7 @@ function Main(root: Root_Capability): Root_Capability is
     -- Get the root directory.
     let r: Path := Get_Root(&fs);
     -- Get the path to the `/var` directory.
-    let p: Path := Append(p, "var");
+    let p: Path := Append(r, "var");
     -- Do something with the path to the `/var` directory, confident that nothing
     -- this dependency does can go outside `/var`.
     Do_Something(p);
