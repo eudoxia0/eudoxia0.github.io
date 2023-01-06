@@ -171,7 +171,7 @@ Timon objected:
 
 “Perhaps it is meant as a lure,” Attila said.
 
-"The fact that it can't communicate, that is has a cognitive deficit," Sabra said, "should be evidence that it is not superintelligent."
+"The fact that it can't communicate, that it has a cognitive deficit," Sabra said, "should be evidence that it is not superintelligent."
 
 "It could be a trick," Asman said.
 
