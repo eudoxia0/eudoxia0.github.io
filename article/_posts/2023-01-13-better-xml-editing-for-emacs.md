@@ -17,8 +17,9 @@ backwards to find which tag you're in.
 
 Many XML editors have a feature where typing the start tag causes them to
 complete the end tag, and leave the cursor between the two. So if you have
-`<foo.`  (period is the [point][pt], or cursor), typing the right angle bracket
-completes this to `<foo>.</foo>`, leaving the point between the two elements.
+`<foo|` (where the pipe character is the [point][pt], or cursor), typing the
+right angle bracket completes this to `<foo>|</foo>`, leaving the point between
+the two elements.
 
 [pt]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Point.html
 
@@ -56,7 +57,7 @@ Another complaint I have is indentation. By default, if you have:
 
 ```xml
 <foo>
-    <bar>.</bar>
+    <bar>|</bar>
 </foo>
 ```
 
@@ -65,7 +66,7 @@ And you press enter, you get:
 ```xml
 <foo>
     <bar>
-    .</bar>
+    |</bar>
 </foo>
 ```
 
@@ -74,7 +75,7 @@ But this isn't what I want. I want to leave the point in an indented blank line 
 ```xml
 <foo>
     <bar>
-        .
+        |
     </bar>
 </foo>
 ```
