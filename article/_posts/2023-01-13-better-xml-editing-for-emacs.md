@@ -82,7 +82,7 @@ But this isn't what I want. I want to leave the point in an indented blank line 
 We can do this very straightforwardly:
 
 ```elisp
-un my-nxml-newline ()
+(defun my-nxml-newline ()
   "Insert a newline, indenting the current line and the newline appropriately in nxml-mode."
   (interactive)
   ;; Are we between an open and closing tag?
