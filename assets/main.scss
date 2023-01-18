@@ -420,7 +420,7 @@ article {
         font-style: italic;
     }
 
-    code {
+    :not(pre) > code {
         font-family: 'Inconsolata';
         font-size: $f1;
         line-height: $b2;
@@ -432,9 +432,11 @@ article {
         overflow-x: scroll;
         padding: $b1;
 
+        line-height: 15px;
+
         > code {
-            font-size: $fs;
-            line-height: $b2;
+            font-size: 12px;
+            line-height: 15px;
         }
     }
 
