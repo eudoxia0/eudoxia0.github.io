@@ -283,13 +283,6 @@ I'll walk through the code as of commit [`7ed2a1b`][commit]. The code is in two 
 - examples
 - algorithm
 
-https://github.com/austral/austral/blob/b8c4da80228952c33a1bdc06a2742b0767572afd/lib/LinearityCheck.mli
-
-https://github.com/austral/austral/blob/b8c4da80228952c33a1bdc06a2742b0767572afd/lib/LinearityCheck.ml
-
-- describing the algo as of `b8c4da8`
-  - https://github.com/austral/austral/commit/b8c4da80228952c33a1bdc06a2742b0767572afd
-  - haven't touched most of the code in june 2022
 
 - outline
   - overview
