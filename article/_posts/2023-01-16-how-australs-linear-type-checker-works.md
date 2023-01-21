@@ -258,6 +258,15 @@ you can understand, the other you can only get used to.
 
 # The Algorithm, In Code
 
+I'll walk through the code as of commit [`7ed2a1b`][commit]. The code is in two files:
+
+- [`LinearityCheck.mli`][mli] is the OCaml module interface file.
+- [`LinearityCheck.ml`][ml] is the OCaml module body file.
+
+[commit]: https://github.com/austral/austral/commit/7ed2a1b8cf4b808933fe9ddbc880aa0aa6c12fc0
+[mli]: https://github.com/austral/austral/blob/a9cdfc77cd129afbcd6a4c5e2879109adeb76492/lib/LinearityCheck.mli
+[ml]: https://github.com/austral/austral/blob/a9cdfc77cd129afbcd6a4c5e2879109adeb76492/lib/LinearityCheck.ml
+
 # Conclusion
 
 ---
