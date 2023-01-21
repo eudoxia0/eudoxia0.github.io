@@ -268,13 +268,6 @@ I'll walk through the code as of commit [`7ed2a1b`][commit]. The code is in two 
 [ml]: https://github.com/austral/austral/blob/a9cdfc77cd129afbcd6a4c5e2879109adeb76492/lib/LinearityCheck.ml
 
 ```ocaml
-open Identifier
-open Tast
-open Type
-open TypeSystem
-open Reporter
-open Error
-
 (* Data structures *)
 
 type loop_depth = int
