@@ -267,9 +267,9 @@ I'll walk through the code as of commit [`7ed2a1b`][commit]. The code is in two 
 [mli]: https://github.com/austral/austral/blob/a9cdfc77cd129afbcd6a4c5e2879109adeb76492/lib/LinearityCheck.mli
 [ml]: https://github.com/austral/austral/blob/a9cdfc77cd129afbcd6a4c5e2879109adeb76492/lib/LinearityCheck.ml
 
-```ocaml
-(* Data structures *)
+## Common Data Structures
 
+```ocaml
 type loop_depth = int
 [@@deriving show]
 
@@ -279,7 +279,11 @@ type var_state =
   | BorrowedWrite
   | Consumed
 [@@deriving show]
+```
 
+## The State Table
+
+```ocaml
 type state_tbl = (identifier * loop_depth * var_state) list
 [@@deriving show]
 
@@ -353,7 +357,11 @@ let rec remove_entries (tbl: state_tbl) (names: identifier list): state_tbl =
 
 let tbl_to_list (tbl: state_tbl): (identifier * loop_depth * var_state) list =
   tbl
+```
 
+# The Table of Appearances
+
+```ocaml
 type appearances = {
     consumed: int;
     read: int;
@@ -408,7 +416,11 @@ let merge_list (l: appearances list): appearances =
   List.fold_left merge zero_appearances l
 
 (* Counting appearances of variables in expressions *)
+```
 
+# Counting Appearances
+
+```ocaml
 let rec count (name: identifier) (expr: texpr): appearances =
   let c = count name in
   match expr with
@@ -506,6 +518,21 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
      zero_appearances
   | TArrayIndex (e, _) ->
      count name e
+```
+
+## Linearity Checking
+
+```ocaml
+let rec linearity_check (params: value_parameter list) (body: tstmt): unit =
+  (* Initialize the loop depth to zero, *)
+  let depth: int = 0 in
+  (* Initialize the state table to the empty table. *)
+  let tbl: state_tbl = empty_tbl in
+  (* Populate the table with the linear parameters. *)
+  let tbl: state_tbl = init_tbl tbl params in
+  (* Traverse the code in execution order. *)
+  let _ = check_stmt tbl depth body in
+  ()
 
 (* Linearity checking *)
 
@@ -525,17 +552,6 @@ let partition (n: int): partitions =
         Zero
       else
         internal_err "Impossible"
-
-let rec linearity_check (params: value_parameter list) (body: tstmt): unit =
-  (* Initialize the loop depth to zero, *)
-  let depth: int = 0 in
-  (* Initialize the state table to the empty table. *)
-  let tbl: state_tbl = empty_tbl in
-  (* Populate the table with the linear parameters. *)
-  let tbl: state_tbl = init_tbl tbl params in
-  (* Traverse the code in execution order. *)
-  let _ = check_stmt tbl depth body in
-  ()
 
 and init_tbl (tbl: state_tbl) (params: value_parameter list): state_tbl =
   let f (tbl: state_tbl) (ValueParameter (name, ty)): state_tbl =
@@ -883,6 +899,9 @@ and check_var_in_expr (tbl: state_tbl) (depth: loop_depth) (name: identifier) (e
              (* The variable is not used in this expression. *)
              tbl)
 
+## Utilities
+
+```ocaml
 and get_state (tbl: state_tbl) (name: identifier): var_state =
   let (_, state) = get_entry_or_fail tbl name in
   state
@@ -909,8 +928,9 @@ and humanize_state (state: var_state): string =
   | BorrowedWrite -> "borrowed (read-write)"
   | Consumed -> "consumed"
 
-(* Linearity checking of whole modules *)
+## Modules
 
+```ocaml
 let rec check_module_linearity (TypedModule (_, decls)): unit =
   with_frame "Linearity Checker"
     (fun _ ->
