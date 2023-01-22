@@ -252,6 +252,30 @@ you can understand, the other you can only get used to.
 
 ## Paths
 
+This rule is a concession to usability. Consider a `Linear` record with `Free`
+contents:
+
+```austral
+record Position: Linear is
+    x: Int32;
+    y: Int32;
+end;
+```
+
+Then, if we have a variable `pos: Position`, we can do something like this:
+
+```austral
+print("x = ");
+printLn(pos.x);
+print("y = ");
+printLn(pos.y);
+```
+
+And this doesn't count as consuming the value, because we're only accessing the
+`Free` components.
+
+**Rule 6:** a record access expression that starts with a linear variable
+doesn't count as consuming the variable if it ends in a `Free` value.
 
 ## Borrowing: Overview
 
