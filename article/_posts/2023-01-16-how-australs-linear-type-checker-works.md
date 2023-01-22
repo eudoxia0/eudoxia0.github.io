@@ -296,6 +296,8 @@ I'll walk through the code as of commit [`811b001`][commit]. The code is in two 
 [mli]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.mli
 [ml]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.ml
 
+## Entrypoint
+
 The entrypoint to the linearity checker is the function `check_module_linearity`, which takes a typed module and runs the linearity checker over every declaration in the module:
 
 ```ocaml
@@ -342,6 +344,69 @@ let linearity_check (params: value_parameter list) (body: tstmt): unit =
   let _ = check_stmt tbl depth body in
   ()
 ```
+
+## The State Table
+
+The state table maps a linear variable's name to its consumption state, and the
+loop depth of the statement where the variable was defined. The purpose of the
+table is to track the consumption state of a variable throughout the linearity
+checking process.
+
+````ocaml
+```ocaml
+(** The state table maps linear variables to the loop depth at the point where
+    they are defined and their consumption state. *)
+type state_tbl
+
+(** The loop depth represents, for a particular piece of code, how many loops
+    into the function that piece of code is. *)
+type loop_depth = int
+
+(** The consumption state of a variable. *)
+type var_state =
+  | Unconsumed
+  | BorrowedRead
+  | BorrowedWrite
+  | Consumed
+```
+
+It's essentially abstract interpretation: we traverse the code in execution
+order, and when we encounter a linear variable, we add it to the table with
+state `Unconsumed`. When it is borrowed we mark its state as `BorrowedRead` or
+`BorrowedWrite` within the scope of the `borrow` statement. When the variable is
+consumed, we mark it as `Consumed`.
+
+The loop depth is just an integer that's used to check whether a variable
+defined outside a loop is being consumed in a loop. The loop depth for code at
+the toplevel of a function is zero. When we enter the body of a loop, we
+increase it by one. We keep track of the loop depth where the variable is
+defined, and the loop depth at the point where it's consumed, in order to check
+they're the same.
+
+```ocaml
+(** The empty state table. *)
+val empty_tbl : state_tbl
+
+(** Find an entry in the state table. *)
+val get_entry : state_tbl -> identifier -> (loop_depth * var_state) option
+
+(** Add a new entry to the state table. Throws an error if an entry with that name already exists. All new variables start as unconsumed. *)
+val add_entry : state_tbl -> identifier -> loop_depth -> state_tbl
+
+(** Update the state of a variable in the table. Throws an error if there is no entry with this name. *)
+val update_tbl : state_tbl -> identifier -> var_state -> state_tbl
+
+(** Remove a row from the table. If the variable is not consumed, throws an error. *)
+val remove_entry : state_tbl -> identifier -> state_tbl
+
+(** Remove a set of variables from the table. If any of them are not consumed, throws an error. *)
+val remove_entries : state_tbl -> identifier list -> state_tbl
+
+(** Return all entries as a list. *)
+val tbl_to_list : state_tbl -> (identifier * loop_depth * var_state) list
+```
+
+## Statement Checking
 
 And `check_stmt` recursively traverses the code in execution order (depth
 first). It takes the initial state table and returns the final state table.
