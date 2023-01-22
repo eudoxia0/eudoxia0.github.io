@@ -352,7 +352,6 @@ loop depth of the statement where the variable was defined. The purpose of the
 table is to track the consumption state of a variable throughout the linearity
 checking process.
 
-````ocaml
 ```ocaml
 (** The state table maps linear variables to the loop depth at the point where
     they are defined and their consumption state. *)
@@ -382,6 +381,9 @@ the toplevel of a function is zero. When we enter the body of a loop, we
 increase it by one. We keep track of the loop depth where the variable is
 defined, and the loop depth at the point where it's consumed, in order to check
 they're the same.
+
+The code for the state table is just CRUD, so I won't post the code, just the
+API definition:
 
 ```ocaml
 (** The empty state table. *)
@@ -434,25 +436,6 @@ individual cases separately.
        tbl
      else
        check_stmt tbl depth body
-```
-
-```ocaml
-  | TIf (_, cond, tb, fb) ->
-     let tbl: state_tbl = check_expr tbl depth cond in
-     let true_tbl: state_tbl = check_stmt tbl depth tb in
-     let false_tbl: state_tbl = check_stmt tbl depth fb in
-     let _ = tables_are_consistent "an if" true_tbl false_tbl in
-     true_tbl
-  | TCase (_, expr, whens) ->
-     let tbl: state_tbl = check_expr tbl depth expr in
-     let tbls: state_tbl list = check_whens tbl depth whens in
-     let _ = table_list_is_consistent tbls in
-     (match tbls with
-      | first::rest ->
-         let _ = rest in
-         first
-      | [] ->
-         tbl)
 ```
 
 ```ocaml
@@ -514,6 +497,348 @@ When entering a loop, we recur into the loop's body, and increase the loop depth
      in
      tbl
 ```
+
+```ocaml
+  | TIf (_, cond, tb, fb) ->
+     let tbl: state_tbl = check_expr tbl depth cond in
+     let true_tbl: state_tbl = check_stmt tbl depth tb in
+     let false_tbl: state_tbl = check_stmt tbl depth fb in
+     let _ = tables_are_consistent "an if" true_tbl false_tbl in
+     true_tbl
+  | TCase (_, expr, whens) ->
+     let tbl: state_tbl = check_expr tbl depth expr in
+     let tbls: state_tbl list = check_whens tbl depth whens in
+     let _ = table_list_is_consistent tbls in
+     (match tbls with
+      | first::rest ->
+         let _ = rest in
+         first
+      | [] ->
+         tbl)
+```
+
+```ocaml
+let tables_are_consistent (stmt_name: string) (a: state_tbl) (b: state_tbl): unit =
+  (* Tables should have the same set of variable names. *)
+  let names_a: identifier list = List.map (fun (name, _, _) -> name) (tbl_to_list a)
+  and names_b: identifier list = List.map (fun (name, _, _) -> name) (tbl_to_list b)
+  in
+  if List.equal equal_identifier names_a names_b then
+    (* Make a list of triples with the variable name, its state in A, and its
+       state in B. *)
+    let common: (identifier * var_state * var_state) list =
+      List.filter_map (fun (name, _, state_a) ->
+          match get_entry b name with
+          | Some (_, state_b) ->
+             Some (name, state_a, state_b)
+          | None ->
+             None)
+        (tbl_to_list a)
+    in
+    (* Ensure the states are the same. *)
+    List.iter (fun (name, state_a, state_b) ->
+        if state_a <> state_b then
+          austral_raise LinearityError [
+              Text "The variable ";
+              Code (ident_string name);
+              Text " is used inconsistently in the branches of ";
+              Text stmt_name;
+              Text " statement. In one branch it is ";
+              Text (humanize_state state_a);
+              Text " while in the other it is ";
+              Text (humanize_state state_b);
+              Text "."
+            ]
+        else
+          ()) common
+  else
+    (* I *think* this is an internal error. *)
+    internal_err ("Consumption state tables are inconsistent. This is likely a bug in the linearity checker. Table contents:\n\n"
+                  ^ (show_state_tbl a)
+                  ^ "\n\n"
+                  ^ (show_state_tbl b))
+```
+
+## Expression Checking
+
+```ocaml
+let check_expr (tbl: state_tbl) (depth: loop_depth) (expr: texpr): state_tbl =
+  (* For each variable in the table, check if the variable is used correctly in
+     the expression. *)
+  let names: identifier list = List.map (fun (name, _, _) -> name) (tbl_to_list tbl) in
+  let f (tbl: state_tbl) (name: identifier): state_tbl =
+    check_var_in_expr tbl depth name expr
+  in
+  Util.iter_with_context f tbl names
+```
+
+```ocaml
+let rec check_var_in_expr (tbl: state_tbl) (depth: loop_depth) (name: identifier) (expr: texpr): state_tbl =
+  (* Count the appearances of the variable in the expression. *)
+  let apps: appearances = count name expr in
+  (* Destructure apps. *)
+  let { consumed: int; write: int; read: int; path: int } = apps in
+  (* What is the current state of this variable? *)
+  let state: var_state = get_state tbl name in
+  (* Make a tuple with the variable's state, and the partitioned appearances. *)
+  let tup = (state, partition consumed, partition write, partition read, partition path) in
+  match tup with
+  (*       State        Consumed      WBorrow       RBorrow      Path    *)
+  (* ---------------|-------------|-------------|------------|---------- *)
+  | (     Unconsumed,         Zero,         Zero,           _,           _) -> (* Not yet consumed, and at most used through immutable borrows or path reads. *)
+     tbl
+  | (     Unconsumed,         Zero,          One,        Zero,        Zero) -> (* Not yet consumed, borrowed mutably once, and nothing else. *)
+     tbl
+  | (     Unconsumed,         Zero,          One,           _,           _) -> (* Not yet consumed, borrowed mutably, then either borrowed immutably or accessed through a path. *)
+     error_borrowed_mutably_and_used name
+  | (     Unconsumed,         Zero,  MoreThanOne,           _,           _) -> (* Not yet consumed, borrowed mutably more than once. *)
+     error_borrowed_mutably_more_than_once name
+  | (     Unconsumed,          One,         Zero,        Zero,        Zero) -> (* Not yet consumed, consumed once, and nothing else. Valid IF the loop depth matches. *)
+     consume_once tbl depth name
+  | (     Unconsumed,          One,            _,           _,           _) -> (* Not yet consumed, consumed once, then either borrowed or accessed through a path. *)
+     error_consumed_and_something_else name
+  | (     Unconsumed,  MoreThanOne,            _,           _,           _) -> (* Not yet consumed, consumed more than once. *)
+     error_consumed_more_than_once name
+  | (   BorrowedRead,         Zero,         Zero,        Zero,           _) -> (* Read borrowed, and at most accessed through a path. *)
+     tbl
+  | (   BorrowedRead,            _,            _,           _,           _) -> (* Read borrowed, and either consumed or borrowed again. *)
+     error_read_borrowed_and_something_else name
+  | (  BorrowedWrite,         Zero,         Zero,        Zero,        Zero) -> (* Write borrowed, unused. *)
+     tbl
+  | (  BorrowedWrite,            _,            _,           _,           _) -> (* Write borrowed, used in some way. *)
+     error_write_borrowed_and_something_else name
+  | (       Consumed,         Zero,         Zero,        Zero,        Zero) -> (* Already consumed, and unused. *)
+     tbl
+  | (       Consumed,            _,            _,           _,           _) -> (* Already consumed, and used in some way. *)
+     error_already_consumed name
+```
+
+```ocaml
+and consume_once (tbl: state_tbl) (depth: loop_depth) (name: identifier): state_tbl =
+   if depth = get_loop_depth tbl name then
+      update_tbl tbl name Consumed
+   else
+      austral_raise LinearityError [
+         Text "The variable ";
+         Code (ident_string name);
+         Text " was defined outside a loop, but you're trying to consume it inside a loop.";
+         Break;
+         Text "This is not allowed because it could be consumed zero times or more than once."
+       ]
+```
+
+```ocaml
+and error_borrowed_mutably_and_used (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Text " is borrowed mutably, while also being either borrowed or used through a path.";
+      Break;
+      Text "Mutable borrows cannot appear in the same expression where the variable is used elsewhere."
+   ]
+
+and error_borrowed_mutably_more_than_once (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Code " is borrowed mutably multiple times in the same expression."
+   ]
+
+and error_consumed_and_something_else (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Code " is consumed in the same expression where it is used in some other way.";
+      Break;
+      Text "A linear variable cannot appear multiple times in the expression that consumes it.";
+   ]
+
+and error_consumed_more_than_once (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Text " is consumed multiple times within the same expression.";
+   ]
+
+and error_read_borrowed_and_something_else (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Text " cannot be consumed or borrowed again while it is borrowed (immutably).";
+   ]
+
+and error_write_borrowed_and_something_else (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Text "cannot be used in any way while it is vorrowed (mutably).";
+   ]
+
+and error_already_consumed (name: identifier) =
+   austral_raise LinearityError [
+      Text "The variable ";
+      Code (ident_string name);
+      Text " has already been consumed.";
+   ]
+```
+
+## Counting Appearances
+
+```ocaml
+type appearances = {
+    consumed: int;
+    read: int;
+    write: int;
+    path: int;
+  }
+
+let zero_appearances: appearances = {
+    consumed = 0;
+    read = 0;
+    write = 0;
+    path = 0;
+  }
+
+let consumed_once: appearances = {
+    consumed = 1;
+    read = 0;
+    write = 0;
+    path = 0;
+  }
+
+let read_once: appearances = {
+    consumed = 0;
+    read = 1;
+    write = 0;
+    path = 0;
+  }
+
+let write_once: appearances = {
+    consumed = 0;
+    read = 0;
+    write = 1;
+    path = 0;
+  }
+
+let path_once: appearances = {
+    consumed = 0;
+    read = 0;
+    write = 0;
+    path = 1;
+  }
+
+let merge (a: appearances) (b: appearances): appearances =
+  {
+    consumed = a.consumed + b.consumed;
+    read = a.read + b.read;
+    write = a.write + b.write;
+    path = a.path + b.path;
+  }
+
+let merge_list (l: appearances list): appearances =
+  List.fold_left merge zero_appearances l
+```
+
+```ocaml
+let rec count (name: identifier) (expr: texpr): appearances =
+  let c = count name in
+  match expr with
+  | TNilConstant ->
+     zero_appearances
+  | TBoolConstant _ ->
+     zero_appearances
+  | TIntConstant _ ->
+     zero_appearances
+  | TFloatConstant _ ->
+     zero_appearances
+  | TStringConstant _ ->
+     zero_appearances
+  | TConstVar _ ->
+     (* Constants variables can't be linear. *)
+     zero_appearances
+  | TParamVar (name', _) ->
+     if equal_identifier name name' then
+       consumed_once
+     else
+       zero_appearances
+  | TLocalVar (name', _) ->
+     if equal_identifier name name' then
+       consumed_once
+     else
+       zero_appearances
+  | TFunVar _ ->
+     zero_appearances
+  | TFuncall (_, _, args, _, _) ->
+     merge_list (List.map c args)
+  | TMethodCall (_, _, _, args, _, _) ->
+     merge_list (List.map c args)
+  | TVarMethodCall { args; _ } ->
+     merge_list (List.map c args)
+  | TFptrCall (_, args, _) ->
+     merge_list (List.map c args)
+  | TCast (e, _) ->
+     c e
+  | TComparison (_, lhs, rhs) ->
+     merge (c lhs) (c rhs)
+  | TConjunction (lhs, rhs) ->
+     merge (c lhs) (c rhs)
+  | TDisjunction (lhs, rhs) ->
+     merge (c lhs) (c rhs)
+  | TNegation e ->
+     c e
+  | TIfExpression (e, t, f) ->
+     merge (c e) (merge (c t) (c f))
+  | TRecordConstructor (_, args) ->
+     merge_list (List.map (fun (_, e) -> c e) args)
+  | TUnionConstructor (_, _, args) ->
+     merge_list (List.map (fun (_, e) -> c e) args)
+  | TPath { head; elems; _ } ->
+     let head_apps: appearances =
+       (* If the head of the path is a variable, check if it is the one we are
+          looking for. If it is, count that as a path appearance. *)
+       (match head with
+        | TParamVar (name', _) ->
+           if equal_identifier name name' then
+             path_once
+           else
+             zero_appearances
+        | TLocalVar (name', _) ->
+           if equal_identifier name name' then
+             path_once
+           else
+             zero_appearances
+        | _ ->
+           (* Otherwise, just count the appearances inside the expression. *)
+           c head)
+     and path_apps: appearances = merge_list (List.map (count_path_elem name) elems)
+     in
+     merge head_apps path_apps
+  | TEmbed (_, _, args) ->
+     merge_list (List.map c args)
+  | TDeref e ->
+     c e
+  | TSizeOf _ ->
+     zero_appearances
+  | TBorrowExpr (mode, name', _, _) ->
+     if equal_identifier name name' then
+       (match mode with
+        | ReadBorrow ->
+           read_once
+        | WriteBorrow ->
+           write_once)
+     else
+       zero_appearances
+
+and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
+  match elem with
+  | TSlotAccessor _ ->
+     zero_appearances
+  | TPointerSlotAccessor _ ->
+     zero_appearances
+  | TArrayIndex (e, _) ->
+     count name e
+```
+
 
 # Conclusion
 
