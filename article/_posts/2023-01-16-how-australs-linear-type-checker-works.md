@@ -343,8 +343,112 @@ let linearity_check (params: value_parameter list) (body: tstmt): unit =
   ()
 ```
 
-The comments are fairly self-explanatory: some set up and then we traverse the
-code in execution order, which is depth-first.
+And `check_stmt` recursively traverses the code in execution order (depth
+first). It takes the initial state table and returns the final state table.
+
+```ocaml
+let rec check_stmt (tbl: state_tbl) (depth: loop_depth) (stmt: tstmt): state_tbl =
+  match stmt with
+  | TSkip _ -> tbl (* do nothing *)
+  (* ... *)
+```
+
+The code is too long to put it one big code block, so I'll go through the
+individual cases separately.
+
+```ocaml
+  | TLet (_, name, ty, expr, body) ->
+     (* First, check the expression. *)
+     let tbl: state_tbl = check_expr tbl depth expr in
+     (* If the type is linear, add an entry to the table. *)
+     if universe_linear_ish (type_universe ty) then
+       let tbl: state_tbl = add_entry tbl name depth in
+       let tbl: state_tbl = check_stmt tbl depth body in
+       (* Once we leave the scope, remove the variable we added. *)
+       let tbl: state_tbl = remove_entry tbl name in
+       tbl
+     else
+       check_stmt tbl depth body
+```
+
+```ocaml
+  | TIf (_, cond, tb, fb) ->
+     let tbl: state_tbl = check_expr tbl depth cond in
+     let true_tbl: state_tbl = check_stmt tbl depth tb in
+     let false_tbl: state_tbl = check_stmt tbl depth fb in
+     let _ = tables_are_consistent "an if" true_tbl false_tbl in
+     true_tbl
+  | TCase (_, expr, whens) ->
+     let tbl: state_tbl = check_expr tbl depth expr in
+     let tbls: state_tbl list = check_whens tbl depth whens in
+     let _ = table_list_is_consistent tbls in
+     (match tbls with
+      | first::rest ->
+         let _ = rest in
+         first
+      | [] ->
+         tbl)
+```
+
+```ocaml
+  | TBorrow { original; mode; body; _ } ->
+     (* Ensure the original variable is unconsumed to be borrowed. *)
+     if is_unconsumed tbl original then
+       let tbl: state_tbl =
+         match mode with
+         | ReadBorrow ->
+            update_tbl tbl original BorrowedRead
+         | WriteBorrow ->
+            update_tbl tbl original BorrowedWrite
+       in
+       (* Traverse the body. *)
+       let tbl: state_tbl = check_stmt tbl depth body in
+       (* After the body, unborrow the variable. *)
+       let tbl: state_tbl = update_tbl tbl original Unconsumed in
+       tbl
+     else
+       let state: var_state = get_state tbl original in
+       austral_raise LinearityError [
+           Text "Cannot borrow the variable ";
+           Code (ident_string original);
+           Text " because it is already ";
+           Text (humanize_state state);
+           Text "."
+         ]
+```
+
+When entering a loop, we recur into the loop's body, and increase the loop depth by one:
+
+```ocaml
+  | TWhile (_, cond, body) ->
+     let tbl: state_tbl = check_expr tbl depth cond in
+     let tbl: state_tbl = check_stmt tbl (depth + 1) body in
+     tbl
+  | TFor (_, _, start, final, body) ->
+     let tbl: state_tbl = check_expr tbl depth start in
+     let tbl: state_tbl = check_expr tbl depth final in
+     let tbl: state_tbl = check_stmt tbl (depth + 1) body in
+     tbl
+```
+
+```ocaml
+  | TReturn (_, expr) ->
+     let tbl: state_tbl = check_expr tbl depth expr in
+     (* Ensure that all variables are Consumed. *)
+     let _ =
+       List.map (fun (name, _, state) ->
+           if state = Consumed then
+             ()
+           else
+             austral_raise LinearityError [
+                 Text "The variable ";
+                 Code (ident_string name);
+                 Text " is not consumed by the time of the return statement. Did you forget to call a destructure, or destructure the contents?"
+               ])
+         (tbl_to_list tbl)
+     in
+     tbl
+```
 
 # Conclusion
 
