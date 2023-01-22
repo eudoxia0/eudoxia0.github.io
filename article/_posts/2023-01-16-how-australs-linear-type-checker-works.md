@@ -844,19 +844,6 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
 
 ---
 
-- Type checking and linearity checking are separated
-  - Type checking happens before
-    - In the typingpass module
-    - AST is augmented with the type information of every expression
-  - Linearity checking happens after, using the type information acquired by the typing pass
-- LinearityCheck
-  - 600 lines
-  - most complex data structure is a record with four integers
-- rules
-- examples
-- algorithm
-
-
 - outline
   - overview
   - what linear types are
