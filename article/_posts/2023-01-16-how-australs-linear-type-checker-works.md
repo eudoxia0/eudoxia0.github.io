@@ -287,7 +287,7 @@ doesn't count as consuming the variable if it ends in a `Free` value.
 
 # The Algorithm, In Code
 
-I'll walk through the code as of commit [`811b001 `][commit]. The code is in two files:
+I'll walk through the code as of commit [`811b001`][commit]. The code is in two files:
 
 - [`LinearityCheck.mli`][mli] is the OCaml module interface file.
 - [`LinearityCheck.ml`][ml] is the OCaml module body file.
