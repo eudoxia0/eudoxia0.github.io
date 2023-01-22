@@ -296,6 +296,56 @@ I'll walk through the code as of commit [`811b001 `][commit]. The code is in two
 [mli]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.mli
 [ml]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.ml
 
+The entrypoint to the linearity checker is the function `check_module_linearity`, which takes a typed module and runs the linearity checker over every declaration in the module:
+
+```ocaml
+let rec check_module_linearity (TypedModule (_, decls)): unit =
+  with_frame "Linearity Checker"
+    (fun _ ->
+      let _ = List.map check_decl_linearity decls in
+      ())
+```
+
+The only declarations we have to check are places where code is: functions and typeclass methods:
+
+```ocaml
+and check_decl_linearity (decl: typed_decl): unit =
+  match decl with
+  | TFunction (_, _, name, _, params, _, b, _) ->
+     with_frame ("Checking linearity of function " ^ (ident_string name))
+       (fun _ -> linearity_check params b)
+  | TInstance (_, _, _, _, _, methods, _) ->
+     let _ = List.map check_method_linearity methods in
+     ()
+  | _ ->
+     ()
+
+and check_method_linearity (TypedMethodDef (_, name, params, _, b)) =
+  with_frame ("Checking linearity of method " ^ (ident_string name))
+    (fun _ -> linearity_check params b)
+```
+
+The `linearity_check` function takes the list of value parameters for a function
+or method, and the function's body, and runs the linearity checker over the
+body. The value parameter is list is necessary because some parameters have
+linear types and therefore count as linear variables.
+
+```ocaml
+let linearity_check (params: value_parameter list) (body: tstmt): unit =
+  (* Initialize the loop depth to zero. *)
+  let depth: int = 0 in
+  (* Initialize the state table to the empty table. *)
+  let tbl: state_tbl = empty_tbl in
+  (* Populate the table with the linear parameters. *)
+  let tbl: state_tbl = init_tbl tbl params in
+  (* Traverse the code in execution order. *)
+  let _ = check_stmt tbl depth body in
+  ()
+```
+
+The comments are fairly self-explanatory: some set up and then we traverse the
+code in execution order, which is depth-first.
+
 # Conclusion
 
 ---
