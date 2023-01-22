@@ -250,6 +250,11 @@ learning or using the language, because there is an ocean of difference between
 a small set of simple rules vs. an ever-growing pile of heuristics. The former
 you can understand, the other you can only get used to.
 
+## Paths
+
+
+## Borrowing: Overview
+
 ## Borrowing: The Simple Case
 
 ## Borrowing: The General Case
