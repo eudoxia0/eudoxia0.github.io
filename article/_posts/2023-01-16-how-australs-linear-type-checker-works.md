@@ -359,7 +359,7 @@ let tbl_to_list (tbl: state_tbl): (identifier * loop_depth * var_state) list =
   tbl
 ```
 
-# The Table of Appearances
+## The Table of Appearances
 
 ```ocaml
 type appearances = {
