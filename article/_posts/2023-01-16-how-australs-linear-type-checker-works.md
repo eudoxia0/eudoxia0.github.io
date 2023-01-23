@@ -444,6 +444,8 @@ table.
        check_stmt tbl depth body
 ```
 
+In a borrow statemnet etc.
+
 ```ocaml
   | TBorrow { original; mode; body; _ } ->
      (* Ensure the original variable is unconsumed to be borrowed. *)
@@ -485,6 +487,10 @@ When entering a loop, we recur into the loop's body, and increase the loop depth
      tbl
 ```
 
+Finally, when we reach a `return` statement, we have to check that all the
+variables in the state table have been consumed. And if they haven't, show the
+user an error.
+
 ```ocaml
   | TReturn (_, expr) ->
      let tbl: state_tbl = check_expr tbl depth expr in
@@ -504,6 +510,12 @@ When entering a loop, we recur into the loop's body, and increase the loop depth
      tbl
 ```
 
+The `if` and `case` statements are a special case, because of rules 3 and 4,
+respectively. Here we hace to check that variables defined outside the statement
+are used consistently inside the statement. Essentially, we run the linearity
+checker "in parallel" for each branch, and then check that the state table at
+the each of each branch is identical:
+
 ```ocaml
   | TIf (_, cond, tb, fb) ->
      let tbl: state_tbl = check_expr tbl depth cond in
@@ -522,6 +534,8 @@ When entering a loop, we recur into the loop's body, and increase the loop depth
       | [] ->
          tbl)
 ```
+
+The consistency checking is done by the function `tables_are_consistent`:
 
 ```ocaml
 let tables_are_consistent (stmt_name: string) (a: state_tbl) (b: state_tbl): unit =
