@@ -603,6 +603,170 @@ let check_expr (tbl: state_tbl) (depth: loop_depth) (expr: texpr): state_tbl =
   Util.iter_with_context f tbl names
 ```
 
+The previous section describing the algorithm in prose is very verbal. Maybe
+it's useful for learning, but when implemented directly, it becomes a huge tree
+of unwieldy `if` statements. So I turned it into a [decision table][dt]:
+
+<table>
+  <thead>
+    <th>Previous State</th>
+    <th>Consumed</th>
+    <th>Borrowed mutably</th>
+    <th>Borrowed immutably</th>
+    <th>Path access</th>
+    <th>Valid?</th>
+    <th>Reason</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>✅</td>
+      <td>Not yet consumed, and at most immutable borrows or path reads.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="zero">Zero times</td>
+      <td class="once">Once</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td>✅</td>
+      <td>Not yet consumed, borrowed mutably once, and nothing else.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="zero">Zero times</td>
+      <td class="once">Once</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Not yet consumed, borrowed mutably, then either borrowed immutably or accessed through a path.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="zero">Zero times</td>
+      <td class="more">More than once</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Not yet consumed, borrowed mutably more than once.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="once">Once</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td>✅</td>
+      <td>Consumed once, and nothing else.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="once">Once</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Consumed once, then either borrowed or accessed through a path.</td>
+    </tr>
+    <tr>
+      <td class="unconsumed">Unconsumed</td>
+      <td class="more">More than once</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Not yet consumed, consumed more than once.</td>
+    </tr>
+    <tr>
+      <td class="read">Read</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="any">&mdash;</td>
+      <td>✅</td>
+      <td>Read borrowed, and at most accessed through a path.</td>
+    </tr>
+    <tr>
+      <td class="read">Read</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Read borrowed, and either consumed or borrowed again.</td>
+    </tr>
+    <tr>
+      <td class="write">Write</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td>✅</td>
+      <td>Write borrowed, unused.</td>
+    </tr>
+    <tr>
+      <td class="write">Write</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Write borrowed, used in some way.</td>
+    </tr>
+    <tr>
+      <td class="consumed">Consumed</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td class="zero">Zero times</td>
+      <td>✅</td>
+      <td>Already consumed, and unused.</td>
+    </tr>
+    <tr>
+      <td class="consumed">Consumed</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td class="any">&mdash;</td>
+      <td>❌</td>
+      <td>Already consumed, and used in some way.</td>
+    </tr>
+  </tbody>
+</table>
+<style>
+  .unconsumed  { background-color: #eceff1; }
+  .read  { background-color: #eceff1; }
+  .write  { background-color: #eceff1; }
+  .consumed  { background-color: #eceff1; }
+
+  .unconsumed { background-color: #e0f7fa;}
+  .read { background-color: #b2ebf2;}
+  .write { background-color: #80deea; }
+  .consumed  { background-color: #4dd0e1; }
+
+  .zero { background-color: #f1f8e9;}
+  .once { background-color: #f0f4c3;}
+  .more { background-color: #ffe0b2; }
+  .any  { background-color: #eceff1; }
+</style>
+
+The first five columns are inputs:
+
+1. The variable's previous consumption state (unconsumed, borrowed mutably, borrowed immutably, consumed).
+1. The number of times the variable is consumed in the expression (e.g. `foo(x)`).
+1. The number of times the variable is mutably borrowed in the expression (e.g. `&!x`).
+1. The number of times the variable is borrowed immutably in the expression (e.g. `&x`).
+1. The number of times the variable is at the head of a path expression (e.g. `x.foo.bar[baz]`).
+
+The last two columns are outputs: whether this situation should pass or signal
+an error, and why.
+
+[dt]: https://en.wikipedia.org/wiki/Decision_table
+
 ```ocaml
 let rec check_var_in_expr (tbl: state_tbl) (depth: loop_depth) (name: identifier) (expr: texpr): state_tbl =
   (* Count the appearances of the variable in the expression. *)
