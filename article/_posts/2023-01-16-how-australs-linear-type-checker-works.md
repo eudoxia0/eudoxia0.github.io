@@ -852,5 +852,8 @@ WIP
 
 # Footnotes
 
-[^linearish]
-    The type parameters of a generic function can be constrained to accept only types in the linear universe, or only types in the free universe, or, for more general code, they can accept types from either universe but treatment as if they were linear, since that's the lowest common denominator behaviour. Hence "linearish",
+[^linearish] The type parameters of a generic function can be constrained to
+    accept only types in the linear universe, or only types in the free
+    universe, or, for more general code, they can accept types from either
+    universe but treatment as if they were linear, since that's the lowest
+    common denominator behaviour. Hence "linearish".
