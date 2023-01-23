@@ -528,7 +528,7 @@ let tables_are_consistent (stmt_name: string) (a: state_tbl) (b: state_tbl): uni
                   ^ (show_state_tbl b))
 ```
 
-In a borrow statemnet etc.
+In a borrow statement, we have to check that the variable is unconsumed:
 
 ```ocaml
   | TBorrow { original; mode; body; _ } ->
