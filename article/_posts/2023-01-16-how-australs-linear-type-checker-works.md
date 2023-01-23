@@ -423,6 +423,12 @@ let rec check_stmt (tbl: state_tbl) (depth: loop_depth) (stmt: tstmt): state_tbl
 The code is too long to put it one big code block, so I'll go through the
 individual cases separately.
 
+The first non-trivial case is the `let` statement. Here we just check that if a
+variable is of a linear type[^linearish], and if so, add it to the state table
+with the initial state of `Unconsumed`, recur into the body of the `let`
+statement, which is where the variable is defined, and then take it out of the
+table.
+
 ```ocaml
   | TLet (_, name, ty, expr, body) ->
      (* First, check the expression. *)
@@ -843,3 +849,8 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
 # Conclusion
 
 WIP
+
+# Footnotes
+
+[^linearish]
+    The type parameters of a generic function can be constrained to accept only types in the linear universe, or only types in the free universe, or, for more general code, they can accept types from either universe but treatment as if they were linear, since that's the lowest common denominator behaviour. Hence "linearish",
