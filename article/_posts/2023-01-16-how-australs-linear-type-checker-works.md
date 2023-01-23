@@ -586,6 +586,12 @@ user an error.
 
 ## Expression Checking
 
+"Expression checking" means checking that all the linear variables in the table
+are used correctly within a given expression. That is, linear variables can only
+be consumed once, you can't have multiple mutable borrows in the same
+expression, you can't consume a variable that's borrowed or already consumed,
+etc. The full rules are below.
+
 ```ocaml
 let check_expr (tbl: state_tbl) (depth: loop_depth) (expr: texpr): state_tbl =
   (* For each variable in the table, check if the variable is used correctly in
@@ -638,6 +644,8 @@ let rec check_var_in_expr (tbl: state_tbl) (depth: loop_depth) (name: identifier
      error_already_consumed name
 ```
 
+And each case in the table is implemented as a separate function, which mostly just throw errors:
+
 ```ocaml
 and consume_once (tbl: state_tbl) (depth: loop_depth) (name: identifier): state_tbl =
    if depth = get_loop_depth tbl name then
@@ -650,9 +658,7 @@ and consume_once (tbl: state_tbl) (depth: loop_depth) (name: identifier): state_
          Break;
          Text "This is not allowed because it could be consumed zero times or more than once."
        ]
-```
 
-```ocaml
 and error_borrowed_mutably_and_used (name: identifier) =
    austral_raise LinearityError [
       Text "The variable ";
@@ -709,6 +715,16 @@ and error_already_consumed (name: identifier) =
 
 ## Counting Appearances
 
+There are four ways a variable can appear in an expression:
+
+1. Being consumed.
+1. Being borrowed immutably.
+1. Being borrowed mutably.
+1. At the head of a path (e.g. `city->pos->latitude`).
+
+We have to count how many times a variable appears in each of these four
+ways. We track that in the `appearances` type:
+
 ```ocaml
 type appearances = {
     consumed: int;
@@ -716,7 +732,15 @@ type appearances = {
     write: int;
     path: int;
   }
+```
 
+What I like about Austral's semantics is that the most fanciful data structure
+the linearity checker needs is a hash table and a record of four integers.
+
+The following constants are essentially basis vectors for building `apperances`
+values:
+
+```ocaml
 let zero_appearances: appearances = {
     consumed = 0;
     read = 0;
@@ -751,7 +775,11 @@ let path_once: appearances = {
     write = 0;
     path = 1;
   }
+```
 
+And the function `merge` is the addition operation for `appearances` values:
+
+```ocaml
 let merge (a: appearances) (b: appearances): appearances =
   {
     consumed = a.consumed + b.consumed;
@@ -763,6 +791,10 @@ let merge (a: appearances) (b: appearances): appearances =
 let merge_list (l: appearances list): appearances =
   List.fold_left merge zero_appearances l
 ```
+
+The way we do the counting is: recur down the AST, and at the leaf nodes, return
+one of the four constants, and at any branch node, just call `merge` on the
+result of the recursion:
 
 ```ocaml
 let rec count (name: identifier) (expr: texpr): appearances =
