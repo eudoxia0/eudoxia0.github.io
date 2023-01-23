@@ -444,36 +444,8 @@ table.
        check_stmt tbl depth body
 ```
 
-In a borrow statemnet etc.
-
-```ocaml
-  | TBorrow { original; mode; body; _ } ->
-     (* Ensure the original variable is unconsumed to be borrowed. *)
-     if is_unconsumed tbl original then
-       let tbl: state_tbl =
-         match mode with
-         | ReadBorrow ->
-            update_tbl tbl original BorrowedRead
-         | WriteBorrow ->
-            update_tbl tbl original BorrowedWrite
-       in
-       (* Traverse the body. *)
-       let tbl: state_tbl = check_stmt tbl depth body in
-       (* After the body, unborrow the variable. *)
-       let tbl: state_tbl = update_tbl tbl original Unconsumed in
-       tbl
-     else
-       let state: var_state = get_state tbl original in
-       austral_raise LinearityError [
-           Text "Cannot borrow the variable ";
-           Code (ident_string original);
-           Text " because it is already ";
-           Text (humanize_state state);
-           Text "."
-         ]
-```
-
-When entering a loop, we recur into the loop's body, and increase the loop depth by one:
+When entering a loop, we recur into the loop's body, and increase the loop depth
+by one:
 
 ```ocaml
   | TWhile (_, cond, body) ->
@@ -484,29 +456,6 @@ When entering a loop, we recur into the loop's body, and increase the loop depth
      let tbl: state_tbl = check_expr tbl depth start in
      let tbl: state_tbl = check_expr tbl depth final in
      let tbl: state_tbl = check_stmt tbl (depth + 1) body in
-     tbl
-```
-
-Finally, when we reach a `return` statement, we have to check that all the
-variables in the state table have been consumed. And if they haven't, show the
-user an error.
-
-```ocaml
-  | TReturn (_, expr) ->
-     let tbl: state_tbl = check_expr tbl depth expr in
-     (* Ensure that all variables are Consumed. *)
-     let _ =
-       List.map (fun (name, _, state) ->
-           if state = Consumed then
-             ()
-           else
-             austral_raise LinearityError [
-                 Text "The variable ";
-                 Code (ident_string name);
-                 Text " is not consumed by the time of the return statement. Did you forget to call a destructure, or destructure the contents?"
-               ])
-         (tbl_to_list tbl)
-     in
      tbl
 ```
 
@@ -578,6 +527,59 @@ let tables_are_consistent (stmt_name: string) (a: state_tbl) (b: state_tbl): uni
                   ^ "\n\n"
                   ^ (show_state_tbl b))
 ```
+
+In a borrow statemnet etc.
+
+```ocaml
+  | TBorrow { original; mode; body; _ } ->
+     (* Ensure the original variable is unconsumed to be borrowed. *)
+     if is_unconsumed tbl original then
+       let tbl: state_tbl =
+         match mode with
+         | ReadBorrow ->
+            update_tbl tbl original BorrowedRead
+         | WriteBorrow ->
+            update_tbl tbl original BorrowedWrite
+       in
+       (* Traverse the body. *)
+       let tbl: state_tbl = check_stmt tbl depth body in
+       (* After the body, unborrow the variable. *)
+       let tbl: state_tbl = update_tbl tbl original Unconsumed in
+       tbl
+     else
+       let state: var_state = get_state tbl original in
+       austral_raise LinearityError [
+           Text "Cannot borrow the variable ";
+           Code (ident_string original);
+           Text " because it is already ";
+           Text (humanize_state state);
+           Text "."
+         ]
+```
+
+Finally, when we reach a `return` statement, we have to check that all the
+variables in the state table have been consumed. And if they haven't, show the
+user an error.
+
+```ocaml
+  | TReturn (_, expr) ->
+     let tbl: state_tbl = check_expr tbl depth expr in
+     (* Ensure that all variables are Consumed. *)
+     let _ =
+       List.map (fun (name, _, state) ->
+           if state = Consumed then
+             ()
+           else
+             austral_raise LinearityError [
+                 Text "The variable ";
+                 Code (ident_string name);
+                 Text " is not consumed by the time of the return statement. Did you forget to call a destructure, or destructure the contents?"
+               ])
+         (tbl_to_list tbl)
+     in
+     tbl
+```
+
 
 ## Expression Checking
 
