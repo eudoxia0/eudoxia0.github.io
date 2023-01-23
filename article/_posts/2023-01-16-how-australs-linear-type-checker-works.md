@@ -528,7 +528,11 @@ let tables_are_consistent (stmt_name: string) (a: state_tbl) (b: state_tbl): uni
                   ^ (show_state_tbl b))
 ```
 
-In a borrow statement, we have to check that the variable's state is `Unconsumed`:
+In a borrow statement, we have to check that the variable's state is
+`Unconsumed`. Then we update the variable's state to either `BorrowedRead` or
+`BorrowedWrite`, depending on what kind of `borrow` it is, for the duration of
+the statement's body. Then, when the statement ends, we mark the variable as
+`Unconsumed` again.
 
 ```ocaml
   | TBorrow { original; mode; body; _ } ->
