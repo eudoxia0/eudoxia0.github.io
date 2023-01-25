@@ -316,6 +316,12 @@ Where the return type contains the length and the original list again. This isn'
 
 _Borrowing_ allows us to suspend linearity in a safe way. We can take free (copyable) references to linear types, pass them around, store them in data structures, access (free) data through them. Mutable references can even edit the contents of linear values. And references are limited in such a way that they cannot escape the lifetime of a linear value: the compiler ensures that by the time a linear value is consumed, every reference is no longer available.
 
+## Reference Types
+
+There are two reference types: immutable references and mutable references. Every reference type has two type parameters: the type of the thing they point to, and the _region_ the reference is in. A region is like a type tag that is used by the compiler to preserve the linearity guarantees.
+
+The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region `R`, and `&![T, R]` is the mutable reference analogue.
+
 ## Borrowing: The Simple Case
 
 ## Borrowing: The General Case
