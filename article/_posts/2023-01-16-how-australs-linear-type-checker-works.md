@@ -322,9 +322,55 @@ There are two reference types: immutable references and mutable references. Ever
 
 The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region `R`, and `&![T, R]` is the mutable reference analogue.
 
-## Borrowing: The Simple Case
+## Borrowing: The Shorthand Syntax
 
-## Borrowing: The General Case
+There are two ways to do borrowing: a shorthand form that works for most cases, and a more general but more verbose form.
+
+Suppose we have a function `foo` that takes an immutable reference to a `Lin` value and returns nothing:
+
+```austral
+generic [R: Region]
+function foo(ref: &[Lin, R]): Unit;
+```
+
+Then we can write something like this:
+
+```austral
+let x: Lin := make(); -- Create
+foo(&x);              -- Borrow
+consume(x);           -- Consume
+```
+
+The shorthand syntax is `&x` for taking an immutable reference, and `&!` for a mutable reference.
+
+Naturally we can't do this:
+
+```austral
+let x: Lin := make();
+consume(x);
+foo(&x);
+```
+
+Because `x` is being borrowed after being consumed. Thus:
+
+**Rule 8: borrowing cannot happen after consumption**
+
+There is another restriction, but this one doesn't require an explicit rule, it's just something that won't typecheck in the first place. We can't do this:
+
+```austral
+let x: Lin := make();
+let ref: &[Lin, R] := foo(&x);
+consume(x);
+-- Do something with `ref`, after the thing it points to
+-- has been consumed.
+bad(ref);
+```
+
+This won't compile because the compiler doesn't know what `R` is: it has never been defined. When borrowing using the shorthand syntax, the region the reference belongs to is a region without a name, that can't be referred to.
+
+The function `foo` is generic over the region, so it doesn't need to know the region name to accept the reference. Inside `foo` you can do almost anything with the reference: pass it around, transform it, store it in data structure (as long as that data structure's lifetime does not exceed the execution of `foo`) and extract it. But the reference cannot escape its call site, because it's type cannot be written, and therefore it can't be stored in some variable or data structure that survives the call to `foo`.
+
+## Borrowing: The General Syntax
 
 # The Algorithm, In Prose
 
