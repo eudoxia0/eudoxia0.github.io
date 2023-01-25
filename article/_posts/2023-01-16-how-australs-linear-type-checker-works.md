@@ -435,7 +435,7 @@ borrow! x as ref1 in R do
 end;
 ```
 
-**Rule 11:** you can't borrow a variable that is already borrowed.
+**Rule 11:** you can't mutably borrow a variable that is already mutably borrowed.
 
 # The Algorithm, In Prose
 
