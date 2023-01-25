@@ -277,6 +277,19 @@ And this doesn't count as consuming the value, because we're only accessing the
 **Rule 6:** a record access expression that starts with a linear variable
 doesn't count as consuming the variable if it ends in a `Free` value.
 
+## Returning
+
+The next rule is simple. We can't do this:
+
+```
+let x: Lin := make();
+return foo;
+```
+
+Because we would be discarding `x`. Then:
+
+**Rule 7:** every linear variable in scope must have been consumed when execution reaches a `return` statement.
+
 ## Borrowing: Overview
 
 ## Borrowing: The Simple Case
