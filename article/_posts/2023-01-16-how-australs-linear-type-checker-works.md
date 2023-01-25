@@ -366,11 +366,76 @@ consume(x);
 bad(ref);
 ```
 
-This won't compile because the compiler doesn't know what `R` is: it has never been defined. When borrowing using the shorthand syntax, the region the reference belongs to is a region without a name, that can't be referred to.
+This won't even reach the type checker: the compiler will complain it doesn't know what `R` is, since it has never been defined. When borrowing using the shorthand syntax, the region the reference belongs to is a region without a name, that can't be referred to.
 
 The function `foo` is generic over the region, so it doesn't need to know the region name to accept the reference. Inside `foo` you can do almost anything with the reference: pass it around, transform it, store it in data structure (as long as that data structure's lifetime does not exceed the execution of `foo`) and extract it. But the reference cannot escape its call site, because it's type cannot be written, and therefore it can't be stored in some variable or data structure that survives the call to `foo`.
 
+There is one more restriction, and this is to ensure we can't have multiple mutable references live at once (this will be important for multithreading). The restriction is we can't write something like:
+
+```
+doSomething(&!x, &!x)
+```
+
+**Rule 9:** the same variable cannot be borrowed mutably multiple times in the same expression.
+
 ## Borrowing: The General Syntax
+
+The shorthand syntax covers 95% of the cases of borrowing. But sometimes it's convenient to be able to write the type of the reference, if we're doing complex control flow or data flow. This is where the `borrow` statement comes in:
+
+```
+let x: Lin := make();
+borrow x as ref in R do
+   -- Here, we can refer to the region by
+   -- its name, `R`.
+   let ref2: &[T, R] := transform(ref);
+end;
+consume(x);
+```
+
+In the shorthand syntax, regions have no name. In the `borrow` statement, regions are given a name, which exists within the body of the region. Again, references cannot escape the `borrow` statement, because the following:
+
+```
+let escape: &[T, R] := ...;
+borrow x as ref in R 
+   escape := ref;
+end;
+```
+
+The compiler won't even get to the borrow statement, it will stop at `let` and complain that `R` is not defined.
+
+And, again, we can't do this:
+
+```austral
+let x: Lin := make();
+consume(x);
+borrow x as ...
+```
+
+Rule 8 applies to the general syntax too.
+
+There are two more restrictions that does have to be enforced explicitly. The first one is obvious:
+
+```austral
+let x: Lin := make();
+borrow x as ref in R do
+   consume(x);
+end;
+```
+
+**Rule 10:** a linear variable cannot be consumed in a `borrow` statement that borrows it.
+
+The second restriction is analogous to Rule 9. We can't do this:
+
+```
+let x: Lin := make();
+borrow! x as ref1 in R do
+   borrow! x as ref1 in R do
+      consume(x);
+   end;
+end;
+```
+
+**Rule 11:** you can't borrow a variable that is already borrowed.
 
 # The Algorithm, In Prose
 
