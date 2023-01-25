@@ -314,6 +314,8 @@ function length(list: List[T]): Pair[Index, List[T]];
 
 Where the return type contains the length and the original list again. This isn't ideal.
 
+_Borrowing_ allows us to suspend linearity in a safe way. We can take free (copyable) references to linear types, pass them around, store them in data structures, access (free) data through them. Mutable references can even edit the contents of linear values. And references are limited in such a way that they cannot escape the lifetime of a linear value: the compiler ensures that by the time a linear value is consumed, every reference is no longer available.
+
 ## Borrowing: The Simple Case
 
 ## Borrowing: The General Case
