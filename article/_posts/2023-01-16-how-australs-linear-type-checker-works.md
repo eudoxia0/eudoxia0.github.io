@@ -292,6 +292,28 @@ Because we would be discarding `x`. Then:
 
 ## Borrowing: Overview
 
+The linearity rules are very onerous. For example, imagine a generic `List` type:
+
+```austral
+type List[T: Type]: Linear;
+```
+
+If we wanted to write a function to get the length of a list, we couldn't write:
+
+```austral
+generic [T: Type]
+function length(list: List[T]): Index;
+```
+
+This function would have to consume and deallocate the list just to return its length[^length]. And if the list has linear contents, it wouldn't know how to consume them. We would have to do this:
+
+```austral
+generic [T: Type]
+function length(list: List[T]): Pair[Index, List[T]];
+```
+
+Where the return type contains the length and the original list again. This isn't ideal.
+
 ## Borrowing: The Simple Case
 
 ## Borrowing: The General Case
@@ -1086,3 +1108,6 @@ WIP
     universe, or, for more general code, they can accept types from either
     universe but treatment as if they were linear, since that's the lowest
     common denominator behaviour. Hence "linearish".
+
+[^length]:
+   But we are allowed to use record accesses to free values inside linear types. So why can't we do `list.length`? You could do this within the same module that defines `List`, but for opaque types (which data structures generally should be), their contents cannot be accessed from other modules except through the public API.
