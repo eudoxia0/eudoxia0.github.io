@@ -33,6 +33,15 @@
     {% endif %}
   </head>
   <body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K22R3KCK9H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K22R3KCK9H');
+    </script>
     {{ content }}
     <script defer data-domain="borretti.me" src="https://plausible.io/js/plausible.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
