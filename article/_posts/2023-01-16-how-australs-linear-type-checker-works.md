@@ -492,7 +492,7 @@ a time.
    - `d`: the current loop depth, a natural number. Initially this is zero.
 - Start: traverse `b` in execution order, that is, depth first, and at each statement:
    1. Go through each expression `e` that appears in the statement in evaluation
-      order, and count the number of times that `x` appears in `e`. There are
+      order, and count the number of times `x` appears in `e`. There are
       four ways `x` can appear in an expression: being consumed, being borrowed
       mutably, being borrowed immutably, or appearing at the head of a path.
       1. If `x` does not appear in `e`, continue.
@@ -706,7 +706,7 @@ by one:
 ```
 
 The `if` and `case` statements are a special case, because of rules 3 and 4,
-respectively. Here we hace to check that variables defined outside the statement
+respectively. Here we have to check that variables defined outside the statement
 are used consistently inside the statement. Essentially, we run the linearity
 checker "in parallel" for each branch, and then check that the state table at
 the each of each branch is identical:
@@ -1153,7 +1153,7 @@ type appearances = {
 What I like about Austral's semantics is that the most fanciful data structure
 the linearity checker needs is a hash table and a record of four integers.
 
-The following constants are essentially basis vectors for building `apperances`
+The following constants are essentially basis vectors for building `appearances`
 values:
 
 ```ocaml
