@@ -449,17 +449,31 @@ For simplicity, I'll describe the narrow case, where we consider one variable at
 - Let:
    - `s`: the variable's consumption state, which is one of `Unconsumed`, `BorrowedRead`, `BorrowedWrite`, or `Consumed`. Initially this is `Unconsumed`.
    - `d`: the current loop depth, a natural number. Initially this is zero.
-- Start:
-   1. Traverse `b` in execution order, that is, depth first, and at each statement:
-      1. If we're at an `if` statement, run the algorithm in each of the branches in parallel, and check that the resulting state is the same in both. That is, either the variable is consumed in all branches, or in none. If the variable is used inconsistently between the branches (e.g. consumed in one but not the other), signal an error.
-      1. If we're at a `case` statement, same logic as with an `if` statement.
-      1. If we're at a `for` or `while` loop, increase `d` by one and run the algorithm in the loop's body, then decrement `d` by one.
-      1. If we're at a `return` statement:
-         - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be consumed before returning.
+- Start: traverse `b` in execution order, that is, depth first, and at each statement:
+   1. Go through each expression `e` that appears in the statement in evaluation order, and count
+      the number of times that `x` appears in `e`. There are four ways `x` can appear in an expression:
+      being consumed, being  borrowed mutably, being borrowed immutably, or appearing at the head of a path.
+      1. If `x` does not appear in `e`, continue.
+      1. If `x` is consumed in `e`, set `s := Consumed` as long as the following are true, and otherwise signal an error:
+         1. `x` only appears once in `e` (can't consume multiple times).
+         1. `s = Unconsumed` (can't consume if it's borrowed, or already consumed).
+         1. `d = 0` (we're not consuming the variable inside a loop). 
+      1. If `x` is borrowed mutably, check that the following are true, or signal an error:
+         1. `s = Unconsumed` (can't borrow if it's consumed or already borrowed)
+         1. `x` is only borrowed mutably once, and does not appear in any other way (can't have multiple mutable references).
+      1. If the variable is neither consumed nor borrowed mutably, then it can be borrowed immutably, or appear at the head of a path, any number of times, as long as `s = Unconsumed`.
+   1. If we're at an `if` or `case` statement:
+      - Run the algorithm in each of the branches in parallel, and check that the resulting state is the same in both. That is, either the variable is consumed in all branches, or in none.
+      - If the variable is used inconsistently between the branches, signal an error.
+   1. If we're at a `for` or `while` loop:
+      - Increase `d` by one and run the algorithm in the loop's body, then decrement `d` by one.
+   1 If we're at a `borrow` statement for `x`:
+      - Check that `s = Unconsumed`, and signal an error otherwise.
+      - Set `s := BorrowedRead` or `BorrowedWrite` for the duration of the statement's body, depending on what kind of borrow it is. Afterwards, set `s := Unconsumed` again. 
+   1. If we're at a `return` statement:
+      - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be consumed before returning.
 
-So let `x` be a variable of a linear type, then the algorithm is going to traverse the scope where the variable is defined in execution order, that is, depth-first. And at each step:
-
-
+And that's it.
 
 # The Algorithm, In Code
 
