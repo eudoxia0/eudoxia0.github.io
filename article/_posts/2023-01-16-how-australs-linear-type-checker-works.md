@@ -531,14 +531,14 @@ And that's it.
 
 # The Algorithm, In Code
 
-I'll walk through the code as of commit [`811b001`][commit]. The code is in two files:
+I'll walk through the code as of commit [`c22914c`][commit]. The code is in two files:
 
 - [`LinearityCheck.mli`][mli] is the OCaml module interface file.
 - [`LinearityCheck.ml`][ml] is the OCaml module body file.
 
-[commit]: https://github.com/austral/austral/commit/811b001f4bd8848fe11f8e03a633db01e6caec38
-[mli]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.mli
-[ml]: https://github.com/austral/austral/blob/811b001f4bd8848fe11f8e03a633db01e6caec38/lib/LinearityCheck.ml
+[commit]: https://github.com/austral/austral/commit/c22914c3dec4fe3235e8cc13a0df195f76b6779d
+[mli]: https://github.com/austral/austral/blob/c22914c3dec4fe3235e8cc13a0df195f76b6779d/lib/LinearityCheck.mli
+[ml]: https://github.com/austral/austral/blob/c22914c3dec4fe3235e8cc13a0df195f76b6779d/lib/LinearityCheck.ml
 
 ## Entrypoint
 
