@@ -14,11 +14,15 @@ capability-based security. Linear types give you compile-time memory and
 resource safety, capability-based security allows you to constrain the kind of
 side effects a program can do.
 
+[austral]: https://austral-lang.org/
+
 In my [last post][intro] introducing the language I went over what linear types
 are, how they work, and the rules that characterize them In this post I'll
 explain linear types from another perspective: the compiler's point of
 view. That is, how does the Austral compiler actually enforce the linearity
 rules?
+
+[intro]: https://borretti.me/article/introducing-austral
 
 This article is a walkthrough of the Austral compiler's linearity checker: the
 compiler pass that enforces the linear type rules.
