@@ -7,8 +7,6 @@ summary: A walkthrough of Austral's linearity checker algorithm.
 >
 > <p class="cite">—  Richard Feynman</p>
 
-# Introduction
-
 [Austral][austral] is a new programming language featuring linear types and
 capability-based security. Linear types give you compile-time memory and
 resource safety, capability-based security allows you to constrain the kind of
