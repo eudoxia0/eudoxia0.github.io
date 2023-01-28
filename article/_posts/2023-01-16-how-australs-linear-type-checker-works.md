@@ -22,7 +22,7 @@ rules?
 
 [intro]: https://borretti.me/article/introducing-austral
 
-This article is a walkthrough of the Austral compiler's linearity checker: the
+This article is a walkthrough of the Austral compiler's linearity checker; the
 compiler pass that enforces the linear type rules.
 
 # The Goal
