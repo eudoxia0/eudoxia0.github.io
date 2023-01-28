@@ -1269,4 +1269,7 @@ WIP
     common denominator behaviour. Hence "linearish".
 
 [^length]:
-   But we are allowed to use record accesses to free values inside linear types. So why can't we do `list.length`? You could do this within the same module that defines `List`, but for opaque types (which data structures generally should be), their contents cannot be accessed from other modules except through the public API.
+    But we are allowed to use record accesses to free values inside linear types.
+    So why can't we do `list.length`? You could do this within the same module that
+    defines `List`, but for opaque types (which data structures generally should be),
+    their contents cannot be accessed from other modules except through the public API.
