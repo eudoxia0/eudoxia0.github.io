@@ -329,9 +329,9 @@ the time a linear value is consumed, every reference is no longer available.
 ## Reference Types
 
 There are two reference types: immutable references and mutable
-references. Both reference types have two type parameters: the type of the thing
+references. Both reference types have two generic type parameters: the type of the thing
 they point to, and the _region_ the reference is in. A region is like a type tag
-that is used by the compiler to preserve the linearity guarantees.
+that is used by the compiler to ensure references do not outlive the thing they point to.
 
 The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region
 `R`, and `&![T, R]` is the mutable reference analogue.
