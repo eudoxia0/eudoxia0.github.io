@@ -31,8 +31,8 @@ We want one language feature that gives us:
 
 1. No memory or resource leaks.
 1. Memory safety without garbage collection.
-1. Resource safety more broadly: ensure file handles, sockets etc. are cleaned
-   up properly.
+1. Resource safety: file handles, sockets, database handles etc. are
+   guaranteed to be closed properly and there are no use-after-free errors.
 1. Safe concurrency.
 1. Capability-based security.
 1. The ability to enforce high-level protocols in APIs, e.g. that certain
