@@ -14,8 +14,8 @@ side effects a program can do.
 
 [austral]: https://austral-lang.org/
 
-In my [last post][intro] introducing the language I went over what linear types
-are, how they work, and the rules that characterize them In this post I'll
+In my [last post][intro], I introduced the language and went over what linear types
+are, how they work, and the rules that characterize them. In this post, I'll
 explain linear types from another perspective: the compiler's point of
 view. That is, how does the Austral compiler actually enforce the linearity
 rules?
