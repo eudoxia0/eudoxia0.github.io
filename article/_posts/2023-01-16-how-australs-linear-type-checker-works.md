@@ -439,6 +439,25 @@ end;
 
 # The Algorithm, In Prose
 
+Putting all of this together, we can now describe the linearity checking algorithm.
+
+For simplicity, I'll describe the narrow case, where we consider one variable at a time.
+
+- Given:
+   - `x`: a variable of some linear type.
+   - `b`: the block of code where the variable is defined, i.e., its scope.
+- Let:
+   - `s`: the variable's consumption state, which is one of `Unconsumed`, `BorrowedRead`, `BorrowedWrite`, or `Consumed`. Initially this is `Unconsumed`.
+   - `d`: the current loop depth, a natural number. Initially this is zero.
+- Start:
+   1. Traverse `b` in execution order, that is, depth first, and at each statement:
+      1. If we're at a `return` statement:
+         - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be consumed before returning.
+
+So let `x` be a variable of a linear type, then the algorithm is going to traverse the scope where the variable is defined in execution order, that is, depth-first. And at each step:
+
+
+
 # The Algorithm, In Code
 
 I'll walk through the code as of commit [`811b001`][commit]. The code is in two files:
