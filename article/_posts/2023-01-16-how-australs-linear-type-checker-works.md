@@ -30,9 +30,9 @@ compiler pass that enforces the linear type rules.
 We want one language feature that gives us:
 
 1. No memory or resource leaks.
-1. Memory safety without garbage collection.
+1. Memory safety without runtime checks or garbage collection.
 1. Resource safety: file handles, sockets, database handles etc. are
-   guaranteed to be closed properly and there are no use-after-free errors.
+   guaranteed to be closed properly and there are no use-after-free errors, without runtime checks.
 1. Safe concurrency.
 1. Capability-based security.
 1. The ability to enforce high-level protocols in APIs, e.g. that certain
@@ -445,9 +445,9 @@ consume(x);
 borrow x as ...
 ```
 
-Rule 8 applies to the general syntax too.
+Because Rule 8 applies to the general syntax, too.
 
-There are two more restrictions that does have to be enforced explicitly. The
+There are two more restrictions that have to be enforced explicitly. The
 first one is obvious:
 
 ```austral
