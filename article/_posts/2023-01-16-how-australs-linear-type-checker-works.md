@@ -329,7 +329,7 @@ the time a linear value is consumed, every reference is no longer available.
 ## Reference Types
 
 There are two reference types: immutable references and mutable
-references. Every reference type has two type parameters: the type of the thing
+references. Both reference types have two type parameters: the type of the thing
 they point to, and the _region_ the reference is in. A region is like a type tag
 that is used by the compiler to preserve the linearity guarantees.
 
