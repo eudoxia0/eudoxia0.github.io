@@ -290,7 +290,8 @@ return foo;
 
 Because we would be discarding `x`. Then:
 
-**Rule 7:** every linear variable in scope must have been consumed when execution reaches a `return` statement.
+**Rule 7:** every linear variable in scope must have been consumed when
+execution reaches a `return` statement.
 
 ## Borrowing: Overview
 
@@ -307,7 +308,9 @@ generic [T: Type]
 function length(list: List[T]): Index;
 ```
 
-This function would have to consume and deallocate the list just to return its length[^length]. And if the list has linear contents, it wouldn't know how to consume them. We would have to do this:
+This function would have to consume and deallocate the list just to return its
+length[^length]. And if the list has linear contents, it wouldn't know how to
+consume them. We would have to do this:
 
 ```austral
 generic [T: Type]
@@ -316,19 +319,30 @@ function length(list: List[T]): Pair[Index, List[T]];
 
 Where the return type contains the length and the original list again. This isn't ideal.
 
-_Borrowing_ allows us to suspend linearity in a safe way. We can take free (copyable) references to linear types, pass them around, store them in data structures, access (free) data through them. Mutable references can even edit the contents of linear values. And references are limited in such a way that they cannot escape the lifetime of a linear value: the compiler ensures that by the time a linear value is consumed, every reference is no longer available.
+_Borrowing_ allows us to suspend linearity in a safe way. We can take free
+(copyable) references to linear types, pass them around, store them in data
+structures, access (free) data through them. Mutable references can even edit
+the contents of linear values. And references are limited in such a way that
+they cannot escape the lifetime of a linear value: the compiler ensures that by
+the time a linear value is consumed, every reference is no longer available.
 
 ## Reference Types
 
-There are two reference types: immutable references and mutable references. Every reference type has two type parameters: the type of the thing they point to, and the _region_ the reference is in. A region is like a type tag that is used by the compiler to preserve the linearity guarantees.
+There are two reference types: immutable references and mutable
+references. Every reference type has two type parameters: the type of the thing
+they point to, and the _region_ the reference is in. A region is like a type tag
+that is used by the compiler to preserve the linearity guarantees.
 
-The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region `R`, and `&![T, R]` is the mutable reference analogue.
+The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region
+`R`, and `&![T, R]` is the mutable reference analogue.
 
 ## Borrowing: The Shorthand Syntax
 
-There are two ways to do borrowing: a shorthand form that works for most cases, and a more general but more verbose form.
+There are two ways to do borrowing: a shorthand form that works for most cases,
+and a more general but more verbose form.
 
-Suppose we have a function `foo` that takes an immutable reference to a `Lin` value and returns nothing:
+Suppose we have a function `foo` that takes an immutable reference to a `Lin`
+value and returns nothing:
 
 ```austral
 generic [R: Region]
@@ -343,7 +357,8 @@ foo(&x);              -- Borrow
 consume(x);           -- Consume
 ```
 
-The shorthand syntax is `&x` for taking an immutable reference, and `&!` for a mutable reference.
+The shorthand syntax is `&x` for taking an immutable reference, and `&!` for a
+mutable reference.
 
 Naturally we can't do this:
 
@@ -357,7 +372,8 @@ Because `x` is being borrowed after being consumed. Thus:
 
 **Rule 8: borrowing cannot happen after consumption**
 
-There is another restriction, but this one doesn't require an explicit rule, it's just something that won't typecheck in the first place. We can't do this:
+There is another restriction, but this one doesn't require an explicit rule,
+it's just something that won't typecheck in the first place. We can't do this:
 
 ```austral
 let x: Lin := make();
@@ -368,11 +384,22 @@ consume(x);
 bad(ref);
 ```
 
-This won't even reach the type checker: the compiler will complain it doesn't know what `R` is, since it has never been defined. When borrowing using the shorthand syntax, the region the reference belongs to is a region without a name, that can't be referred to.
+This won't even reach the type checker: the compiler will complain it doesn't
+know what `R` is, since it has never been defined. When borrowing using the
+shorthand syntax, the region the reference belongs to is a region without a
+name, that can't be referred to.
 
-The function `foo` is generic over the region, so it doesn't need to know the region name to accept the reference. Inside `foo` you can do almost anything with the reference: pass it around, transform it, store it in data structure (as long as that data structure's lifetime does not exceed the execution of `foo`) and extract it. But the reference cannot escape its call site, because it's type cannot be written, and therefore it can't be stored in some variable or data structure that survives the call to `foo`.
+The function `foo` is generic over the region, so it doesn't need to know the
+region name to accept the reference. Inside `foo` you can do almost anything
+with the reference: pass it around, transform it, store it in data structure (as
+long as that data structure's lifetime does not exceed the execution of `foo`)
+and extract it. But the reference cannot escape its call site, because it's type
+cannot be written, and therefore it can't be stored in some variable or data
+structure that survives the call to `foo`.
 
-There is one more restriction, and this is to ensure we can't have multiple mutable references live at once (this will be important for multithreading). The restriction is we can't write something like:
+There is one more restriction, and this is to ensure we can't have multiple
+mutable references live at once (this will be important for multithreading). The
+restriction is we can't write something like:
 
 ```
 doSomething(&!x, &!x)
@@ -382,7 +409,9 @@ doSomething(&!x, &!x)
 
 ## Borrowing: The General Syntax
 
-The shorthand syntax covers 95% of the cases of borrowing. But sometimes it's convenient to be able to write the type of the reference, if we're doing complex control flow or data flow. This is where the `borrow` statement comes in:
+The shorthand syntax covers 95% of the cases of borrowing. But sometimes it's
+convenient to be able to write the type of the reference, if we're doing complex
+control flow or data flow. This is where the `borrow` statement comes in:
 
 ```
 let x: Lin := make();
@@ -394,16 +423,19 @@ end;
 consume(x);
 ```
 
-In the shorthand syntax, regions have no name. In the `borrow` statement, regions are given a name, which exists within the body of the region. Again, references cannot escape the `borrow` statement, because the following:
+In the shorthand syntax, regions have no name. In the `borrow` statement,
+regions are given a name, which exists within the body of the region. Again,
+references cannot escape the `borrow` statement, because the following:
 
 ```
 let escape: &[T, R] := ...;
-borrow x as ref in R 
+borrow x as ref in R
    escape := ref;
 end;
 ```
 
-The compiler won't even get to the borrow statement, it will stop at `let` and complain that `R` is not defined.
+The compiler won't even get to the borrow statement, it will stop at `let` and
+complain that `R` is not defined.
 
 And, again, we can't do this:
 
@@ -415,7 +447,8 @@ borrow x as ...
 
 Rule 8 applies to the general syntax too.
 
-There are two more restrictions that does have to be enforced explicitly. The first one is obvious:
+There are two more restrictions that does have to be enforced explicitly. The
+first one is obvious:
 
 ```austral
 let x: Lin := make();
@@ -424,7 +457,8 @@ borrow x as ref in R do
 end;
 ```
 
-**Rule 10:** a linear variable cannot be consumed in a `borrow` statement that borrows it.
+**Rule 10:** a linear variable cannot be consumed in a `borrow` statement that
+borrows it.
 
 The second restriction is analogous to Rule 9. We can't do this:
 
@@ -437,43 +471,61 @@ borrow! x as ref1 in R do
 end;
 ```
 
-**Rule 11:** you can't mutably borrow a variable that is already mutably borrowed.
+**Rule 11:** you can't mutably borrow a variable that is already mutably
+borrowed.
 
 # The Algorithm, In Prose
 
-Putting all of this together, we can now describe the linearity checking algorithm.
+Putting all of this together, we can now describe the linearity checking
+algorithm.
 
-For simplicity, I'll describe the narrow case, where we consider one variable at a time.
+For simplicity, I'll describe the narrow case, where we consider one variable at
+a time.
 
 - Given:
    - `x`: a variable of some linear type.
    - `b`: the block of code where the variable is defined, i.e., its scope.
 - Let:
-   - `s`: the variable's consumption state, which is one of `Unconsumed`, `BorrowedRead`, `BorrowedWrite`, or `Consumed`. Initially this is `Unconsumed`.
+   - `s`: the variable's consumption state, which is one of `Unconsumed`,
+     `BorrowedRead`, `BorrowedWrite`, or `Consumed`. Initially this is
+     `Unconsumed`.
    - `d`: the current loop depth, a natural number. Initially this is zero.
 - Start: traverse `b` in execution order, that is, depth first, and at each statement:
-   1. Go through each expression `e` that appears in the statement in evaluation order, and count
-      the number of times that `x` appears in `e`. There are four ways `x` can appear in an expression:
-      being consumed, being  borrowed mutably, being borrowed immutably, or appearing at the head of a path.
+   1. Go through each expression `e` that appears in the statement in evaluation
+      order, and count the number of times that `x` appears in `e`. There are
+      four ways `x` can appear in an expression: being consumed, being borrowed
+      mutably, being borrowed immutably, or appearing at the head of a path.
       1. If `x` does not appear in `e`, continue.
-      1. If `x` is consumed in `e`, set `s := Consumed` as long as the following are true, and otherwise signal an error:
+      1. If `x` is consumed in `e`, set `s := Consumed` as long as the following
+         are true, and otherwise signal an error:
          1. `x` only appears once in `e` (can't consume multiple times).
-         1. `s = Unconsumed` (can't consume if it's borrowed, or already consumed).
-         1. `d = 0` (we're not consuming the variable inside a loop). 
+         1. `s = Unconsumed` (can't consume if it's borrowed, or already
+            consumed).
+         1. `d = 0` (we're not consuming the variable inside a loop).
       1. If `x` is borrowed mutably, check that the following are true, or signal an error:
          1. `s = Unconsumed` (can't borrow if it's consumed or already borrowed)
-         1. `x` is only borrowed mutably once, and does not appear in any other way (can't have multiple mutable references).
-      1. If the variable is neither consumed nor borrowed mutably, then it can be borrowed immutably, or appear at the head of a path, any number of times, as long as `s = Unconsumed`.
+         1. `x` is only borrowed mutably once, and does not appear in any other
+            way (can't have multiple mutable references).
+      1. If the variable is neither consumed nor borrowed mutably, then it can
+         be borrowed immutably, or appear at the head of a path, any number of
+         times, as long as `s = Unconsumed`.
    1. If we're at an `if` or `case` statement:
-      - Run the algorithm in each of the branches in parallel, and check that the resulting state is the same in both. That is, either the variable is consumed in all branches, or in none.
-      - If the variable is used inconsistently between the branches, signal an error.
+      - Run the algorithm in each of the branches in parallel, and check that
+        the resulting state is the same in both. That is, either the variable is
+        consumed in all branches, or in none.
+      - If the variable is used inconsistently between the branches, signal an
+        error.
    1. If we're at a `for` or `while` loop:
-      - Increase `d` by one and run the algorithm in the loop's body, then decrement `d` by one.
-   1 If we're at a `borrow` statement for `x`:
+      - Increase `d` by one and run the algorithm in the loop's body, then
+        decrement `d` by one.
+   1. If we're at a `borrow` statement for `x`:
       - Check that `s = Unconsumed`, and signal an error otherwise.
-      - Set `s := BorrowedRead` or `BorrowedWrite` for the duration of the statement's body, depending on what kind of borrow it is. Afterwards, set `s := Unconsumed` again. 
+      - Set `s := BorrowedRead` or `BorrowedWrite` for the duration of the
+        statement's body, depending on what kind of borrow it is. Afterwards,
+        set `s := Unconsumed` again.
    1. If we're at a `return` statement:
-      - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be consumed before returning.
+      - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be
+        consumed before returning.
 
 And that's it.
 
@@ -490,7 +542,9 @@ I'll walk through the code as of commit [`811b001`][commit]. The code is in two 
 
 ## Entrypoint
 
-The entrypoint to the linearity checker is the function `check_module_linearity`, which takes a typed module and runs the linearity checker over every declaration in the module:
+The entrypoint to the linearity checker is the function
+`check_module_linearity`, which takes a typed module and runs the linearity
+checker over every declaration in the module:
 
 ```ocaml
 let rec check_module_linearity (TypedModule (_, decls)): unit =
@@ -948,11 +1002,16 @@ of unwieldy `if` statements. So I turned it into a [decision table][dt]:
 
 The first five columns are inputs:
 
-1. The variable's previous consumption state (unconsumed, borrowed mutably, borrowed immutably, consumed).
-1. The number of times the variable is consumed in the expression (e.g. `foo(x)`).
-1. The number of times the variable is mutably borrowed in the expression (e.g. `&!x`).
-1. The number of times the variable is borrowed immutably in the expression (e.g. `&x`).
-1. The number of times the variable is at the head of a path expression (e.g. `x.foo.bar[baz]`).
+1. The variable's previous consumption state (unconsumed, borrowed mutably,
+   borrowed immutably, consumed).
+1. The number of times the variable is consumed in the expression
+   (e.g. `foo(x)`).
+1. The number of times the variable is mutably borrowed in the expression
+   (e.g. `&!x`).
+1. The number of times the variable is borrowed immutably in the expression
+   (e.g. `&x`).
+1. The number of times the variable is at the head of a path expression
+   (e.g. `x.foo.bar[baz]`).
 
 The last two columns are outputs: whether this situation should pass or signal
 an error, and why.
@@ -1000,7 +1059,8 @@ let rec check_var_in_expr (tbl: state_tbl) (depth: loop_depth) (name: identifier
      error_already_consumed name
 ```
 
-And each case in the table is implemented as a separate function, which mostly just throw errors:
+And each case in the table is implemented as a separate function, which mostly
+just throw errors:
 
 ```ocaml
 and consume_once (tbl: state_tbl) (depth: loop_depth) (name: identifier): state_tbl =
@@ -1255,21 +1315,27 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
 
 # Conclusion
 
-The overriding goal in designing Austral was fits-in-head simplicity, and I think this was accomplished. The linearity checking algorithm is a page of text, the corresponding code is less than 1k lines of code. The concepts and rules are simple enough that anyone can understand them, and essentially run the algorithm in their head while reading the code.
+The overriding goal in designing Austral was fits-in-head simplicity, and I
+think this was accomplished. The linearity checking algorithm is a page of text,
+the corresponding code is less than 1k lines of code. The concepts and rules are
+simple enough that anyone can understand them, and essentially run the algorithm
+in their head while reading the code.
 
-And, importantly: the rules are static, so that you learn them once, and can apply the same rules in perpetuity, just like a type system.
+And, importantly: the rules are static, so that you learn them once, and can
+apply the same rules in perpetuity, just like a type system.
 
 # Footnotes
 
 [^linearish]:
-    The type parameters of a generic function can be constrained to
-    accept only types in the linear universe, or only types in the free
-    universe, or, for more general code, they can accept types from either
-    universe but treatment as if they were linear, since that's the lowest
-    common denominator behaviour. Hence "linearish".
+    The type parameters of a generic function can be constrained to accept only
+    types in the linear universe, or only types in the free universe, or, for
+    more general code, they can accept types from either universe but treatment
+    as if they were linear, since that's the lowest common denominator
+    behaviour. Hence "linearish".
 
 [^length]:
-    But we are allowed to use record accesses to free values inside linear types.
-    So why can't we do `list.length`? You could do this within the same module that
-    defines `List`, but for opaque types (which data structures generally should be),
-    their contents cannot be accessed from other modules except through the public API.
+    But we are allowed to use record accesses to free values inside linear
+    types.  So why can't we do `list.length`? You could do this within the same
+    module that defines `List`, but for opaque types (which data structures
+    generally should be), their contents cannot be accessed from other modules
+    except through the public API.
