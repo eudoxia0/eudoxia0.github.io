@@ -1255,7 +1255,9 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
 
 # Conclusion
 
-WIP
+The overriding goal in designing Austral was fits-in-head simplicity, and I think this was accomplished. The linearity checking algorithm is a page of text, the corresponding code is less than 1k lines of code. The concepts and rules are simple enough that anyone can understand them, and essentially run the algorithm in their head while reading the code.
+
+And, importantly: the rules are static, so that you learn them once, and can apply the same rules in perpetuity, just like a type system.
 
 # Footnotes
 
