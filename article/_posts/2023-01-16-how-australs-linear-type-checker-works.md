@@ -1165,8 +1165,7 @@ type appearances = {
 What I like about Austral's semantics is that the most fanciful data structure
 the linearity checker needs is a hash table and a record of four integers.
 
-The following constants are essentially basis vectors for building `appearances`
-values:
+The following constants are essentially the base cases for the recursion in the `count` function:
 
 ```ocaml
 let zero_appearances: appearances = {
