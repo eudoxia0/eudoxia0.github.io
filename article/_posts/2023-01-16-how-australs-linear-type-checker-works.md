@@ -29,7 +29,7 @@ compiler pass that enforces the linear type rules.
 
 We want one language feature that gives us:
 
-1. Leak freedom.
+1. No memory or resource leaks.
 1. Memory safety without garbage collection.
 1. Resource safety more broadly: ensure file handles, sockets etc. are cleaned
    up properly.
