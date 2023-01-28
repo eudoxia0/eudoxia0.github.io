@@ -476,7 +476,7 @@ borrowed.
 
 # The Algorithm, In Prose
 
-Putting all of this together, we can now describe the linearity checking
+Putting all the previous rules together, we can now describe the linearity checking
 algorithm.
 
 For simplicity, I'll describe the narrow case, where we consider one variable at
