@@ -446,7 +446,7 @@ let bar: &[T, R] := ...;
 
 Because `R` is not defined outside the `borrow` statement.
 
-And, again, we can't do this:
+And, again, we can't borrow after consumption:
 
 ```austral
 let x: Lin := make();
