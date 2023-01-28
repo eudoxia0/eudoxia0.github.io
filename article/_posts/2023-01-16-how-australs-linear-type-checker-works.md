@@ -451,6 +451,9 @@ For simplicity, I'll describe the narrow case, where we consider one variable at
    - `d`: the current loop depth, a natural number. Initially this is zero.
 - Start:
    1. Traverse `b` in execution order, that is, depth first, and at each statement:
+      1. If we're at an `if` statement, run the algorithm in each of the branches in parallel, and check that the resulting state is the same in both. That is, either the variable is consumed in all branches, or in none. If the variable is used inconsistently between the branches (e.g. consumed in one but not the other), signal an error.
+      1. If we're at a `case` statement, same logic as with an `if` statement.
+      1. If we're at a `for` or `while` loop, increase `d` by one and run the algorithm in the loop's body, then decrement `d` by one.
       1. If we're at a `return` statement:
          - Check that `s = Consumed`. Otherwise, signal an error saying `x` must be consumed before returning.
 
