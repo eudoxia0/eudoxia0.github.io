@@ -44,7 +44,7 @@ be as fast as C, and the rules should be simple enough they fit in a page of
 text. And the implementation should be simple enough for anyone to understand.
 
 Linear types are this feature. The rules fit in a page. The implementation of
-Austral's linearity checking algorithm is 600 lines of OCaml, most of which is
+Austral's linearity checking algorithm is 600 lines of OCaml, much of which is
 error reporting, comments, and utility functions.
 
 # What Linear Types Are
