@@ -435,7 +435,16 @@ end;
 ```
 
 The compiler won't even get to the borrow statement, it will stop at `let` and
-complain that `R` is not defined.
+complain that `R` is not defined. And, analogously, we can't do this:
+
+```
+borrow x as ref in R
+   -- ...
+end;
+let bar: &[T, R] := ...;
+```
+
+Because `R` is not defined outside the `borrow` statement.
 
 And, again, we can't do this:
 
