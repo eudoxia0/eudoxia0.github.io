@@ -464,6 +464,7 @@ The second restriction is analogous to Rule 9. We can't do this:
 
 ```
 let x: Lin := make();
+-- `borrow!` is the mutable version of `borrow`
 borrow! x as ref1 in R do
    borrow! x as ref1 in R do
       consume(x);
