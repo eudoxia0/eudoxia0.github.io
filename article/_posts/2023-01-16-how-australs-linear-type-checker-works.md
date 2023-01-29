@@ -1,6 +1,7 @@
 ---
 title: How Austral’s Linear Type Checker Works
 summary: A walkthrough of Austral's linearity checker algorithm.
+card: how-australs-linear-type-checker-works.jpg
 ---
 
 >What I cannot create, I do not understand.
