@@ -424,7 +424,7 @@ and extract it. But the reference cannot escape its call site, because it's type
 cannot be written, and therefore it can't be stored in some variable or data
 structure that survives the call to `foo`.
 
-And the way Austral ensures that references do not outlive the thing they reference is very simple. There's no need to do sophisticated control flow analysis. It's very simple: there's no way to write the type of a reference outside the scope where that reference is defined. So, you can't define a variable that can hold a reference past its scope, you can't design a data structure that can capture a reference and hide it internally.
+And the way Austral ensures that references do not outlive the thing they reference is very simple. There's no need to do sophisticated control flow analysis. There's no way to write the type of a reference outside the scope where that reference is defined, therefore, you can't define a variable that can hold a reference past its scope, you can't design a data structure that can capture a reference and hide it internally.
 
 There is one more restriction, and this is to ensure we can't have multiple
 mutable references live at once (this will be important for multithreading). The
