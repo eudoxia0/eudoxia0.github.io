@@ -26,7 +26,33 @@ rules?
 This article is a walkthrough of the Austral compiler's linearity checker; the
 compiler pass that enforces the linear type rules.
 
-# The Goal
+# Contents
+
+1. [The Goal](#goal)
+1. [What Linear Types Are](#linear)
+1. [Use-Once Rules](#use-once)
+   1. [Variable Discarding](#var-discard)
+   1. [Expression Discarding](#expr-discard)
+   1. [If Statements](#if)
+   1. [Case Statements](#case)
+   1. [Loops](#loops)
+   1. [A Brief Comment on Loops](#brief-loops)
+   1. [Paths](#paths)
+   1. [Returning](#return)
+   1. [Borrowing: Overview](#borrowing)
+   1. [Reference Types](#refs)
+   1. [Borrowing: The Shorthand Syntax](#borrow-simple)
+   1. [Borrowing: The General Syntax](#borrow-long)
+1. [The Algorithm, In Prose](#algo-prose)
+1. [The Algorithm, In Code](#algo-code)
+   1. [Entrypoint](#entry)
+   1. [The State Table](#state)
+   1. [Statement Checking](#stmt)
+   1. [Expression Checking](#expr)
+   1. [Counting Appearances](#appear)
+1. [Conclusion](#conclusion)
+
+# The Goal {#goal}
 
 We want one language feature that gives us:
 
@@ -48,13 +74,13 @@ Linear types are this feature. The rules fit in a page. The implementation of
 Austral's linearity checking algorithm is 600 lines of OCaml, much of which is
 error reporting, comments, and utility functions.
 
-# What Linear Types Are
+# What Linear Types Are {#linear}
 
 I don't want to endlessly repeat introductory information, because that leads to
 fragmentation (i.e. which of these ten articles should I read?), so for an
 overview of linear types, check [_Introducing Austral_][intro].
 
-# Use-Once Rules
+# Use-Once Rules {#use-once}
 
 A linear type is a type whose values must be used once. Not zero times or
 multiple times: once and exactly once.
@@ -80,7 +106,7 @@ function make(): Lin;
 function consume(x: Lin): Unit;
 ```
 
-## Variable Discarding
+## Variable Discarding {#var-discard}
 
 The simplest case is something like this:
 
@@ -108,7 +134,7 @@ consume(x);
 
 Then `x` is used once and the rules are respected.
 
-## Expression Discarding
+## Expression Discarding {#expr-discard}
 
 A kind of corollary to the above is we can't do this either:
 
@@ -122,7 +148,7 @@ value of a linear type and it's still being discarded. So we get another rule:
 
 **Rule 2:** values of a linear type cannot be silently discarded.
 
-## If Statements
+## If Statements {#if}
 
 "Used once" does not mean "appears once". Consider this:
 
@@ -171,7 +197,7 @@ Because the variable exists only in one branch of the `if` statement, it is
 created there and consumed there, once and exactly once. The key distinction
 here is whether the variable was defined outside the statement.
 
-## Case Statements
+## Case Statements {#case}
 
 `case` statements are just `if` statements but for taking apart sum types. So if
 we had:
@@ -196,7 +222,7 @@ consistently inside of it. Which leads to a rule analogous to the previous one.
 consistently in all `when` clauses, that is, they must either be consumed in
 every clause or appear zero times in every clause.
 
-## Loops
+## Loops {#loops}
 
 Consider:
 
@@ -224,7 +250,7 @@ end while;
 Because `x` is being created inside the loop, and definitely consumed once. Each
 iteration of the loop has a new and distinct value of `x`.
 
-## A Brief Comment on Loops
+## A Brief Comment on Loops {#brief-loops}
 
 What about this?
 
@@ -253,7 +279,7 @@ learning or using the language, because there is an ocean of difference between
 a small set of simple rules vs. an ever-growing pile of heuristics. The former
 you can understand, the other you can only get used to.
 
-## Paths
+## Paths {#paths}
 
 This rule is a concession to usability. Consider a `Linear` record with `Free`
 contents:
@@ -280,7 +306,7 @@ And this doesn't count as consuming the value, because we're only accessing the
 **Rule 6:** a record access expression that starts with a linear variable
 doesn't count as consuming the variable if it ends in a `Free` value.
 
-## Returning
+## Returning {#return}
 
 The next rule is simple. We can't do this:
 
@@ -294,7 +320,7 @@ Because we would be discarding `x`. Then:
 **Rule 7:** every linear variable in scope must have been consumed when
 execution reaches a `return` statement.
 
-## Borrowing: Overview
+## Borrowing: Overview {#borrowing}
 
 The linearity rules are very onerous. For example, imagine a generic `List` type:
 
@@ -327,7 +353,7 @@ the contents of linear values. And references are limited in such a way that
 they cannot escape the lifetime of a linear value: the compiler ensures that by
 the time a linear value is consumed, every reference is no longer available.
 
-## Reference Types
+## Reference Types {#refs}
 
 There are two reference types: immutable references and mutable
 references. Both reference types have two generic type parameters: the type of the thing
@@ -337,7 +363,7 @@ that is used by the compiler to ensure references do not outlive the thing they 
 The syntax is: `&[T, R]` is an immutable reference to a type `T` in the region
 `R`, and `&![T, R]` is the mutable reference analogue.
 
-## Borrowing: The Shorthand Syntax
+## Borrowing: The Shorthand Syntax {#borrow-simple}
 
 There are two ways to do borrowing: a shorthand form that works for most cases,
 and a more general but more verbose form.
@@ -410,7 +436,7 @@ doSomething(&!x, &!x)
 
 **Rule 9:** the same variable cannot be borrowed mutably multiple times in the same expression.
 
-## Borrowing: The General Syntax
+## Borrowing: The General Syntax {#borrow-long}
 
 The shorthand syntax covers 95% of the cases of borrowing. But sometimes it's
 convenient to be able to write the type of the reference, if we're doing complex
@@ -487,7 +513,7 @@ end;
 **Rule 11:** you can't mutably borrow a variable that is already mutably
 borrowed.
 
-# The Algorithm, In Prose
+# The Algorithm, In Prose {#algo-prose}
 
 Putting all the previous rules together, we can now describe the linearity checking
 algorithm.
@@ -542,7 +568,7 @@ a time.
 
 And that's it.
 
-# The Algorithm, In Code
+# The Algorithm, In Code {#algo-code}
 
 I'll walk through the code as of commit [`c22914c`][commit]. The code is in two files:
 
@@ -553,7 +579,7 @@ I'll walk through the code as of commit [`c22914c`][commit]. The code is in two 
 [mli]: https://github.com/austral/austral/blob/c22914c3dec4fe3235e8cc13a0df195f76b6779d/lib/LinearityCheck.mli
 [ml]: https://github.com/austral/austral/blob/c22914c3dec4fe3235e8cc13a0df195f76b6779d/lib/LinearityCheck.ml
 
-## Entrypoint
+## Entrypoint {#entry}
 
 The entrypoint to the linearity checker is the function
 `check_module_linearity`, which takes a typed module and runs the linearity
@@ -604,7 +630,7 @@ let linearity_check (params: value_parameter list) (body: tstmt): unit =
   ()
 ```
 
-## The State Table
+## The State Table {#state}
 
 The state table maps a linear variable's name to its consumption state, and the
 loop depth of the statement where the variable was defined. The purpose of the
@@ -667,7 +693,7 @@ val remove_entries : state_tbl -> identifier list -> state_tbl
 val tbl_to_list : state_tbl -> (identifier * loop_depth * var_state) list
 ```
 
-## Statement Checking
+## Statement Checking {#stmt}
 
 And `check_stmt` recursively traverses the code in execution order (depth
 first). It takes the initial state table and returns the final state table.
@@ -843,7 +869,7 @@ user an error.
      tbl
 ```
 
-## Expression Checking
+## Expression Checking {#expr}
 
 "Expression checking" means checking that all the linear variables in the table
 are used correctly within a given expression. That is, linear variables can only
@@ -1142,7 +1168,7 @@ and error_already_consumed (name: identifier) =
    ]
 ```
 
-## Counting Appearances
+## Counting Appearances {#appear}
 
 There are four ways a variable can appear in an expression:
 
@@ -1325,7 +1351,7 @@ and count_path_elem (name: identifier) (elem: typed_path_elem): appearances =
 ```
 
 
-# Conclusion
+# Conclusion {#conclusion}
 
 The overriding goal in designing Austral was fits-in-head simplicity, and I
 think this was accomplished. The linearity checking algorithm is a page of text,
