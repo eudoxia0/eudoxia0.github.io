@@ -33,10 +33,16 @@ So the programming language aspect suffers: shell scripts are an unreadable
 nightmare of stringly-typed code resembling cypertext.
 
 Of course No True Scotsman would write a large and complex program as a shell
-script, but according to this lovely one-liner:
+script, but according to this lovely seven-line one-liner:
 
 ```bash
-find / -type f -exec awk '/^#!.*sh/{print FILENAME}' {} + | xargs file | awk '!/ASCII text/{next} {print}' | cut -d: -f1 | xargs -I {} wc -l {} | sort -n | uniq
+find / -type f -exec awk '/^#!.*sh/{print FILENAME}' {} + \
+  | xargs file \
+  | awk '!/ASCII text/{next} {print}' \
+  | cut -d: -f1 \
+  | xargs -I {} wc -l {} \
+  | sort -n \
+  | uniq
 ```
 
 There are 4890 shell scripts in my humble Ubuntu box. 72 of these have over one
