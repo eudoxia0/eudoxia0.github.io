@@ -44,9 +44,9 @@ find / -type f -exec awk '/^#!.*sh/{print FILENAME}' {} + \
   | uniq
 ```
 
-There are 4890 shell scripts in my humble Ubuntu box. 72 of these have over one
-thousand lines of text, the largest is `/usr/share/libtool/configure`[^config],
-a 16,394-line shell script the devil wrote[^lines]. In total, there are 657,848
+There are 5,635 shell scripts on my humble Ubuntu box. Of these, 79 are over one
+thousand lines of text, the largest being `/usr/share/libtool/configure`[^config],
+a 16,394-line shell script the devil wrote[^lines]. In total, there are 726,938
 lines of stringly-typed shell script on my machine. This is more than I am
 comfortable with.
 
@@ -54,8 +54,7 @@ And the solution is obvious, but hard to implement because preserving backwards
 compatibility would require a great deal of elbow grease.
 
 The solution is that we have one tool, but there are two things, and so there
-should be two tools. Programs should export the terse, command-line interface,
-for use in the shell:
+should be two tools. Shells should be terse, fast, interactive, and not too scriptable. Programs should export the terse command-line interface for use in the shell:
 
 ```bash
 pandoc -t latex \
@@ -119,11 +118,9 @@ lowest-common-denominator interface, which is the string.
     ```
 
     Further down there's some 300 lines of C code embedded in a multi-line
-    string. 
+    string.
 
-    Lines 11,266 to 11,417 are empty.
-
-    Lines 15,569 to 16,361 are a shell script embedded a string literal.
+    Lines 11,266 to 11,417 are simply empty. Just a whole page of white. Lines 15,569 to 16,361 are another shell script, embedded a string literal.
 
 [^lines]:
     The fact that the line count is just a hair off 2<sup>16</sup> surely has
