@@ -6,17 +6,16 @@ summary: Command languages are scripting languages are and should be different t
 The fundamental problem of shells is they are required to be two things.
 
 1. **A high-frequency REPL**, which requires terseness, short command names,
-   little to no syntax, implicit rather than explicit, in order to minimize the
-   REPL cycle duration.
+   little to no syntax, implicit rather than explicit, so as to minimize the duration of REPL cycles.
 2. **A programming language**, which requires readable and maintainable syntax,
-   static types, modules, visibiliy, declarations, explicit configuration rather
+   static types, modules, visibility, declarations, explicit configuration rather
    than implicit conventions.
 
 And you can't do both. You can't be explicit and implicit, you can't be terse
-and readable in the large.
+and readable, you can't be flexible and robust.
 
-Shells optimize the former case, because if instead of `cat beef.txt | grep
-"lasagna" | sort -n | uniq` you had to write:
+Shells optimize the former case, so that you can write `cat beef.txt | grep
+"lasagna" | sort -n | uniq` instead of:
 
 ```python
 with open(Path("beef.txt")) as stream:
@@ -27,10 +26,10 @@ with open(Path("beef.txt")) as stream:
     print(set(reverse(sorted(lines))))
 ```
 
-It would not spark joy.
+Which does not spark joy.
 
 So the programming language aspect suffers: shell scripts are an unreadable
-nightmare of stringly-typed code resembling cypertext.
+nightmare of stringly-typed code resembling cyphertext.
 
 Of course No True Scotsman would write a large and complex program as a shell
 script, but according to this lovely seven-line one-liner:
@@ -120,7 +119,7 @@ lowest-common-denominator interface, which is the string.
     ```
 
     Further down there's some 300 lines of C code embedded in a multi-line
-    string.
+    string. 
 
     Lines 11,266 to 11,417 are empty.
 
