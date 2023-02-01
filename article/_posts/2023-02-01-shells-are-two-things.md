@@ -3,7 +3,7 @@ title: Shells are Two Things
 summary: Command languages are scripting languages are and should be different things.
 ---
 
-The fundamental problem of system shells is they are required to be too things.
+The fundamental problem of shells is they are required to be two things.
 
 1. **A high-frequency REPL**, which requires terseness, short command names,
    little to no syntax, implicit rather than explicit, in order to minimize the
@@ -59,13 +59,27 @@ should be two tools. Programs should export the terse, command-line interface,
 for use in the shell:
 
 ```bash
-pandoc [TODO]
+pandoc -t latex \
+       -f markdown \
+       --pdf-engine=xelatex \
+       --table-of-contents \
+       --toc-depth=2 \
+       --resource-path=. \
+       --standalone \
+       input.md \
+       -o output.pdf
 ```
 
 And the typed interface, for use in a more scalable programming language:
 
 ```
-[TODO]
+Pandoc(
+    input = (Path("input.md"), MD),
+    output = (Path("output.pdf"), PDF),
+    pdfEngine = XELATEX,
+    resourcePath=Path("."),
+    completenessMode=STANDALONE,
+)
 ```
 
 And the former can be derived from the latter, because it is a strict weakening
