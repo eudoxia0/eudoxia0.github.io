@@ -1,6 +1,6 @@
 ---
 title: Shells are Two Things
-summary: Command languages are scripting languages are and should be different things.
+summary: Command languages and scripting languages are and should be different things.
 card: shells-are-two-things.jpg
 ---
 
