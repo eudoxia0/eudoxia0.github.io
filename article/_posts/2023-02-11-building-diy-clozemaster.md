@@ -6,21 +6,26 @@ I want to learn French. I was doing the Duolingo course, until they redesigned
 the whole UI, and now there's five times more gamification than there is actual
 learning. It's just become incredibly tedious.
 
-A friend introduced me to Clozemaster, which is a very simple concept: you get
-two sentences, one in English, another in French, and one of the words is a
-Cloze deletion. You have to figure out what goes in the blank. You're testing
-vocabulary, grammar, and since the blank can appear in either sentence, you're
-testing in both directions. But Clozemaster has an absolutely demonic UX: the
-font is this ridiculous, unserious, 8 bit font literally from Super Mario Bros;
-pasted over some tired Bootstrap theme. And the free version is limited to 30
-sentences a day.
+A friend introduced me to [Clozemaster][cm], which is a very simple concept: you
+get two sentences, one in English, another in French, and one of the words is a
+[Cloze deletion][cloze]. You have to figure out what goes in the blank. You're
+testing vocabulary, grammar, and since the blank can appear in either sentence,
+you're testing in both directions. But Clozemaster has an absolutely demonic UX:
+the font is this ridiculous, unserious, 8 bit font literally from Super Mario
+Bros; pasted over some tired Bootstrap theme. And the free version is limited to
+30 sentences a day.
+
+[cm]: https://www.clozemaster.com
+[cloze]: https://en.wikipedia.org/wiki/Cloze_test
 
 So I looked for ways to build my own language learning flashcards for use with
-Mochi. I found a French frequency list, and thought to use that to learn
-vocabulary, but vocabulary alone is not useful. Then I found a list of
+[Mochi][mochi]. I found a French frequency list, and thought to use that to
+learn vocabulary, but vocabulary alone is not useful. Then I found a list of
 English-French sentence pairs, ranked by frequency; but the corpus is open
 subtitles, so the vocabulary has a very heavy bias. And then I found Tatoeba: an
 open-source database of sentences and their translations.
+
+[mochi]: https://mochi.cards/
 
 So I started by downloading all the English-French sentence pairs. The result is
 a 30 MiB TSV with 344,000 sentence pairs.
