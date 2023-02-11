@@ -33,16 +33,6 @@ an unmanageable combinatorial explosion.
 Code:
 
 ```python
-#!/usr/bin/env python
-"""
-Generates a CSV of flashcards for import into Mochi from Tatoeba sentence
-pairs.
-"""
-import csv
-import re
-from collections import Counter
-from dataclasses import dataclass
-
 #
 # Pair
 #
