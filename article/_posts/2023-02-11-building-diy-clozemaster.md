@@ -2,17 +2,33 @@
 title: Building a DIY Clozemaster
 ---
 
-I want to learn French. I was doing the Duolingo course, until they redesigned the whole UI, and now there's five times more gamification than there is actual learning. It's just become incredibly tedious.
+I want to learn French. I was doing the Duolingo course, until they redesigned
+the whole UI, and now there's five times more gamification than there is actual
+learning. It's just become incredibly tedious.
 
-A friend introduced me to Clozemaster, which is a very simple concept: you get two sentences, one in English, another in French, and one of the words is a Cloze deletion. You have to figure out what goes in the blank. You're testing vocabulary, grammar, and since the blank can appear in either sentence, you're testing in both directions. But Clozemaster has an absolutely demonic UX: the font is this ridiculous, unserious, 8 bit font literally from Super Mario Bros; pasted over some tired Bootstrap theme. And the free version is limited to 30 sentences a day.
+A friend introduced me to Clozemaster, which is a very simple concept: you get
+two sentences, one in English, another in French, and one of the words is a
+Cloze deletion. You have to figure out what goes in the blank. You're testing
+vocabulary, grammar, and since the blank can appear in either sentence, you're
+testing in both directions. But Clozemaster has an absolutely demonic UX: the
+font is this ridiculous, unserious, 8 bit font literally from Super Mario Bros;
+pasted over some tired Bootstrap theme. And the free version is limited to 30
+sentences a day.
 
-So I looked for ways to build my own language learning flashcards for use with Mochi. I found a French frequency list, and thought to use that to learn vocabulary, but vocabulary alone is not useful. Then I found a list of English-French sentence pairs, ranked by frequency; but the corpus is open subtitles, so the vocabulary has a very heavy bias. And then I found Tatoeba: an open-source database of sentences and their translations.
+So I looked for ways to build my own language learning flashcards for use with
+Mochi. I found a French frequency list, and thought to use that to learn
+vocabulary, but vocabulary alone is not useful. Then I found a list of
+English-French sentence pairs, ranked by frequency; but the corpus is open
+subtitles, so the vocabulary has a very heavy bias. And then I found Tatoeba: an
+open-source database of sentences and their translations.
 
-So I started by downloading all the English-French sentence pairs. The result is a 30 MiB TSV with 344,000 sentence pairs.
+So I started by downloading all the English-French sentence pairs. The result is
+a 30 MiB TSV with 344,000 sentence pairs.
 
 Draft:
 
-At first I thought to do the obvious thing: Cloze every word. But that creates an unmanageable combinatorial explosion.
+At first I thought to do the obvious thing: Cloze every word. But that creates
+an unmanageable combinatorial explosion.
 
 Code:
 
