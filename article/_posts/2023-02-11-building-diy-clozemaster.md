@@ -30,14 +30,9 @@ Draft:
 At first I thought to do the obvious thing: Cloze every word. But that creates
 an unmanageable combinatorial explosion.
 
-Code:
+Pair class:
 
 ```python
-#
-# Pair
-#
-
-
 @dataclass(frozen=True)
 class Pair:
     eng: str
@@ -50,23 +45,21 @@ class Pair:
         print(f"\teng_words={self.eng_words}")
         print(f"\tfra={self.fra}")
         print(f"\tfra_words={self.fra_words}")
+```
 
+Split sentences:
 
-#
-# Split sentences
-#
-
+```python
 WORD_BOUNDARY: re.Pattern[str] = re.compile(r"""[ ,\.!?"]""")
 
 
 def words(line: str) -> list[str]:
     return [w.strip() for w in re.split(WORD_BOUNDARY, line) if w.strip()]
+```
 
+Parse sentences:
 
-#
-# Parse sentences
-#
-
+```python
 FILE: str = "Sentence pairs in English-French - 2023-02-06.tsv"
 
 WORD_LIMIT: int = 10
@@ -96,13 +89,11 @@ def parse_sentences():
                 pairs.append(pair)
     print(f"Found {len(pairs):,} sentence pairs.")
     return pairs
+```
 
+Language frequency table:
 
-#
-# Language frequency tables
-#
-
-
+```python
 def language_frequency_table(sentences: list[list[str]]) -> Counter[str]:
     """
     Given a list of sentences (lists of words), build up a frequency table.
@@ -136,24 +127,22 @@ def counter_avg(c: Counter) -> float:
     n = len(c)
     average_frequency = total / n
     return average_frequency
+```
 
 
-#
-# Frequency cutoff
-#
+Frequency cutoff
 
+```python
 MOST_COMMON_WORDS_CUTOFF: float = 5000
 
 
 def freq_cutoff(c: Counter) -> float:
     return c.most_common(MOST_COMMON_WORDS_CUTOFF)[-1]
+```
 
+Sorting:
 
-#
-# Sorting
-#
-
-
+```python
 def sort_pairs(pairs: list[Pair], fra_freq: Counter[str]) -> list[Pair]:
     """
     Sort pairs from shortest and most common French words. Specifically, we
@@ -172,12 +161,11 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     Return the average frequency for the words.
     """
     return sum(tbl[w] for w in words) / len(words)
+```
 
+Clozes:
 
-#
-# Build Clozes
-#
-
+```python
 # List of French sentences to skip.
 SKIP_LIST: list[str] = ["Eu cheguei ontem."]
 
@@ -266,13 +254,11 @@ def build_clozes(
         "frequency limit."
     )
     return clozes
+```
 
+Dump clozes:
 
-#
-# Dump clozes
-#
-
-
+```python
 def dump_clozes(clozes: list[Cloze]):
     print(f"Compiled {len(clozes)} clozes.")
     # Group sentences into units of 100 each.
@@ -297,13 +283,11 @@ def group(lst, n):
     for i in range(0, len(lst), n):
         result.append(lst[i : i + n])
     return result
+```
 
+Putting it together:
 
-#
-# Put together
-#
-
-
+```python
 def main():
     # Parse sentence pairs.
     pairs: list[Pair] = parse_sentences()
@@ -336,9 +320,4 @@ def main():
         pairs, eng_freq, fra_freq, eng_freq_cutoff, fra_freq_cutoff
     )
     dump_clozes(clozes)
-
-
-if __name__ == "__main__":
-    main()
-
 ```
