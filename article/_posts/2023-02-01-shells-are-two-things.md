@@ -124,5 +124,5 @@ lowest-common-denominator interface, which is the string.
     Lines 11,266 to 11,417 are simply empty. Just a whole page of white. Lines 15,569 to 16,361 are another shell script, embedded a string literal.
 
 [^lines]:
-    The fact that the line count is just a hair off 2<sup>16</sup> surely has
+    The fact that the line count is just a hair off 2<sup>14</sup> surely has
     some sinister, esoteric significance.
