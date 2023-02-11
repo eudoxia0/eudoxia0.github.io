@@ -22,10 +22,12 @@ So I looked for ways to build my own language learning flashcards for use with
 [Mochi][mochi]. I found a French frequency list, and thought to use that to
 learn vocabulary, but vocabulary alone is not useful. Then I found a list of
 English-French sentence pairs, ranked by frequency; but the corpus is open
-subtitles, so the vocabulary has a very heavy bias. And then I found Tatoeba: an
-open-source database of sentences and their translations.
+subtitles, so the vocabulary has a very heavy bias. And then I
+found [Tatoeba][tatoeba]: an open-source database of sentences and their
+translations.
 
 [mochi]: https://mochi.cards/
+[tatoeba]: https://tatoeba.org/en/
 
 So I started by downloading all the English-French sentence pairs. The result is
 a 30 MiB TSV with 344,000 sentence pairs.
