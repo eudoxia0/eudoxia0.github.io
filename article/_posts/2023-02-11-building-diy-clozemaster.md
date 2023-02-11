@@ -237,7 +237,7 @@ def build_clozes(
             skipped_freq += 1
         else:
             cloze_eng: Cloze = Cloze(
-                eng=pair.eng.replace(rarest_eng, "{{c::" + rarest_eng + "}}"),
+                eng=pair.eng.replace(rarest_eng, "{{ "{{" }}c::" + rarest_eng + "}}"),
                 fra=pair.fra,
             )
             clozes.append(cloze_eng)
@@ -250,7 +250,7 @@ def build_clozes(
         else:
             cloze_fra: Cloze = Cloze(
                 eng=pair.eng,
-                fra=pair.fra.replace(rarest_fra, "{{c::" + rarest_fra + "}}"),
+                fra=pair.fra.replace(rarest_fra, "{{ "{{" }}c::" + rarest_fra + "}}"),
             )
             clozes.append(cloze_fra)
             cloze_count_fra.update({rarest_fra: 1})
@@ -329,4 +329,20 @@ def main():
         pairs, eng_freq, fra_freq, eng_freq_cutoff, fra_freq_cutoff
     )
     dump_clozes(clozes)
+```
+
+```
+[RUN OUTPUT]
+```
+
+Sample CSV:
+
+```csv
+[UNIT 1 CSV]
+```
+
+Sample CSV:
+
+```csv
+[LAST UNIT CSV]
 ```
