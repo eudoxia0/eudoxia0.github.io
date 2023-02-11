@@ -29,8 +29,10 @@ translations.
 [mochi]: https://mochi.cards/
 [tatoeba]: https://tatoeba.org/en/
 
-So I started by downloading all the English-French sentence pairs. The result is
-a 30 MiB TSV with 344,000 sentence pairs.
+So I started by [downloading][download] all the English-French sentence
+pairs. The result is a 30 MiB TSV with 344,000 sentence pairs.
+
+[download]: https://tatoeba.org/en/downloads
 
 Draft:
 
