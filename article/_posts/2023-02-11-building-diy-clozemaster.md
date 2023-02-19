@@ -34,12 +34,9 @@ pairs. The result is a 30 MiB TSV with 344,000 sentence pairs.
 
 [download]: https://tatoeba.org/en/downloads
 
-Draft:
-
-At first I thought to do the obvious thing: Cloze every word. But that creates
-an unmanageable combinatorial explosion.
-
-Pair class:
+First things first: a `Pair` class to represent sentence pairs. We'll
+store both the original text of each sentence, and a list of the words
+in each:
 
 ```python
 @dataclass(frozen=True)
@@ -56,7 +53,8 @@ class Pair:
         print(f"\tfra_words={self.fra_words}")
 ```
 
-Split sentences:
+The `words` function splits sentences along the usual word
+boundaries. Regexes are arguably overkill here:
 
 ```python
 WORD_BOUNDARY: re.Pattern[str] = re.compile(r"""[ ,\.!?"]""")
@@ -66,13 +64,22 @@ def words(line: str) -> list[str]:
     return [w.strip() for w in re.split(WORD_BOUNDARY, line) if w.strip()]
 ```
 
-Parse sentences:
+Then we parse sentences from the TSV. There are only two constraints
+here: the first is we reject any sentence pair where the French
+sentence has more than ten words, for simplicity. Also, there is at
+least one sentence in the TSV that's in Portuguese rather than French,
+which for some reason hasn't been removed, so we special-case
+rejecting it:
+
 
 ```python
 FILE: str = "Sentence pairs in English-French - 2023-02-06.tsv"
 
+# Only accept sentences with this many words.
 WORD_LIMIT: int = 10
 
+# List of French sentences to skip.
+SKIP_LIST: list[str] = ["Eu cheguei ontem."]
 
 def parse_sentences():
     """
@@ -99,6 +106,22 @@ def parse_sentences():
     print(f"Found {len(pairs):,} sentence pairs.")
     return pairs
 ```
+
+To generate Cloze deletions for sentence pairs, the simplest, obvious
+thing is to generate a distinct Cloze for every word. But this creates
+an unmanageable combinatorial explosion, as well as a lot of
+repetition.
+
+The Clozemaster approach, according to their FAQ, is to make only one
+Cloze for each sentence: they Cloze out the rarest word in the
+sentence. We could separately download a frequency table for English
+and French, but a simpler approach (and one that guarantees every word
+has a frequency) is to build the frequency map from the collection
+itself.
+
+The `language_frequency_table` function takes a list of sentences
+(lists of words) and returns a `Counter` object associating words with
+the number of times they appear in the corpus:
 
 Language frequency table:
 
@@ -138,8 +161,8 @@ def counter_avg(c: Counter) -> float:
     return average_frequency
 ```
 
-
-Frequency cutoff
+We also implement a frequency cutoff: we don't need to learn the very
+obscure words, only the top 5000 words from the corpus:
 
 ```python
 MOST_COMMON_WORDS_CUTOFF: float = 5000
@@ -149,7 +172,12 @@ def freq_cutoff(c: Counter) -> float:
     return c.most_common(MOST_COMMON_WORDS_CUTOFF)[-1]
 ```
 
-Sorting:
+We want the cards to be organized from the simplest to more
+complex. So we sort them by the average frequency of the words in the
+French sentence, divided by sentence length. Shorter and more common
+sentences flashcards will appear first, longer sentences of rarer
+words will appear later.
+
 
 ```python
 def sort_pairs(pairs: list[Pair], fra_freq: Counter[str]) -> list[Pair]:
@@ -172,12 +200,9 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     return sum(tbl[w] for w in words) / len(words)
 ```
 
-Clozes:
+Finally, we can create the flashcards:
 
 ```python
-# List of French sentences to skip.
-SKIP_LIST: list[str] = ["Eu cheguei ontem."]
-
 CLOZE_LIMIT: int = 5
 
 
@@ -265,7 +290,10 @@ def build_clozes(
     return clozes
 ```
 
-Dump clozes:
+When dumping the clozes, we write them into multiple CSV files of at
+most 100 flashcards each. These are analogous to units in a language
+learning course. This makes it easier to import them into separate
+Mochi decks.
 
 ```python
 def dump_clozes(clozes: list[Cloze]):
@@ -330,6 +358,8 @@ def main():
     )
     dump_clozes(clozes)
 ```
+
+Running the script prints some diagnostic information:
 
 ```
 [RUN OUTPUT]
