@@ -314,7 +314,7 @@ def build_clozes(
 When dumping the clozes, we write them into multiple CSV files of at
 most 100 flashcards each. These are analogous to units in a language
 learning course. This makes it easier to import them into separate
-Mochi decks.
+Mochi decks. To make the text more natural, and since we lowecased it first, we call `.capitalize()` to uppercase the first character. Nouns like "Canada" or "Christmas" stay lowercased but that's a small inconvenience.
 
 ```python
 def dump_clozes(clozes: list[Cloze]):
@@ -382,7 +382,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Running the script prints some diagnostic information:
+Running the script takes six seconds on my laptop:
 
 ```
 Found 304,304 sentence pairs.
