@@ -67,18 +67,11 @@ def words(line: str) -> list[str]:
     return l
 ```
 
-Then we parse sentences from the TSV. There are only two constraints
-here: the first is we reject any sentence pair where the French
-sentence has more than ten words, for simplicity. Also, there is at
-least one sentence in the TSV that's in Portuguese rather than French,
-which for some reason hasn't been removed, so we special-case
-rejecting it:
-
+Then we parse sentences from the TSV:
 
 ```python
 FILE: str = "Sentence pairs in English-French - 2023-02-06.tsv"
 
-# Only accept sentences with this many words.
 WORD_LIMIT: int = 10
 
 # List of French sentences to skip.
@@ -92,24 +85,31 @@ def parse_sentences():
     with open(FILE, "r") as stream:
         reader = csv.reader(stream, delimiter="\t")
         for row in reader:
-            eng: str = row[1].strip()
-            fra: str = row[3].strip()
-            eng[0] = eng[0]
+            eng: str = row[1].strip().lower()
+            fra: str = row[3].strip().lower()
             if fra in SKIP_LIST:
                 continue
             eng_words: list[str] = words(eng)
             fra_words: list[str] = words(fra)
-            if len(fra_words) <= WORD_LIMIT:
-                pair: Pair = Pair(
-                    eng=eng,
-                    eng_words=eng_words,
-                    fra=fra,
-                    fra_words=fra_words,
-                )
-                pairs.append(pair)
+            # Skip long sentences.
+            if len(fra_words) > WORD_LIMIT:
+                continue
+            # Skip if there are no proper words.
+            if (not eng_words) or (not fra_words):
+                continue
+            pair: Pair = Pair(
+                eng=eng,
+                eng_words=eng_words,
+                fra=fra,
+                fra_words=fra_words,
+            )
+            pairs.append(pair)
     print(f"Found {len(pairs):,} sentence pairs.")
     return pairs
 ```
+
+We lowercase the entire sentence, this ensures that we don't make duplicate clozes for the same word just because the case is different. We also reject sentence pairs that are too long. Also, there is at least one sentence in the TSV that's in Portuguese rather than French, which for some reason hasn't been removed, so we special-case
+rejecting it.
 
 To generate Cloze deletions for sentence pairs, the simplest, obvious
 thing is to generate a distinct Cloze for every word. But this creates
@@ -166,14 +166,14 @@ def counter_avg(c: Counter) -> float:
 ```
 
 We also implement a frequency cutoff: we don't need to learn the very
-obscure words, only the top 5000 words from the corpus:
+obscure words, only the top 5000 words from the corpus. So that we don't have to juggle frequency values and make numeric comparisons, we just build a set of the 5000 most common words, and test words for membership:
 
 ```python
 MOST_COMMON_WORDS_CUTOFF: float = 5000
 
 
-def freq_cutoff(c: Counter) -> float:
-    return c.most_common(MOST_COMMON_WORDS_CUTOFF)[-1]
+def most_common_words(c: Counter) -> set[str]:
+    return set([p[0] for p in c.most_common(MOST_COMMON_WORDS_CUTOFF)])
 ```
 
 We want the cards to be organized from the simplest to more
@@ -204,10 +204,37 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     return sum(tbl[w] for w in words) / len(words)
 ```
 
+We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one English or French sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers.
+
+```
+def remove_duplicates(pairs: list[Pair]) -> list[Pair]:
+    result: list[Pair] = []
+    seen_eng: set[str] = set()
+    seen_fra: set[str] = set()
+    skipped: int = 0
+    for pair in pairs:
+        stripped_eng: str = (
+            pair.eng.replace("!", "").replace(".", "").replace(",", "").strip()
+        )
+        stripped_fra: str = (
+            pair.fra.replace("!", "").replace(".", "").replace(",", "").strip()
+        )
+        if stripped_eng in seen_eng:
+            skipped += 1
+        elif stripped_fra in seen_fra:
+            skipped += 1
+        else:
+            result.append(pair)
+            seen_eng.add(stripped_eng)
+            seen_fra.add(stripped_fra)
+    print(f"Skipped {skipped} sentence pairs that had the same text.")
+    return pairs
+```
+
 Finally, we can create the flashcards:
 
 ```python
-CLOZE_LIMIT: int = 5
+CLOZE_LIMIT: int = 3
 
 
 @dataclass(frozen=True)
@@ -235,12 +262,10 @@ def build_clozes(
     pairs: list[Pair],
     eng_freq: Counter[str],
     fra_freq: Counter[str],
-    eng_freq_cutoff: float,
-    fra_freq_cutoff: float,
+    eng_common: set[str],
+    fra_common: set[str],
 ) -> list[Cloze]:
     clozes: list[Cloze] = []
-    # Track French sentences we've seen, so we don't make duplicates.
-    seen_fra: set[str] = set()
     # Track how many times we've made a cloze for each word. We don't need too
     # many clozes per word.
     cloze_count_fra: Counter[str] = Counter()
@@ -248,21 +273,13 @@ def build_clozes(
     skipped_limit: int = 0
     skipped_freq: int = 0
     for pair in pairs:
-        # Don't print multiple clozes for the same French text.
-        stripped_fra: str = (
-            pair.fra.replace("!", "").replace(".", "").replace(",", "").strip()
-        )
-        if stripped_fra in seen_fra:
-            continue
-        else:
-            seen_fra.add(stripped_fra)
         # Find the rarest words in English and French.
         rarest_eng: str = minimize(pair.eng_words, lambda w: eng_freq[w])
         rarest_fra: str = minimize(pair.fra_words, lambda w: fra_freq[w])
         # Cloze the English word.
-        if cloze_count_eng[rarest_eng] >= CLOZE_LIMIT:
+        if cloze_count_eng[rarest_eng] == CLOZE_LIMIT:
             skipped_limit += 1
-        elif eng_freq[rarest_eng] < eng_freq_cutoff:
+        elif rarest_eng not in eng_common:
             skipped_freq += 1
         else:
             cloze_eng: Cloze = Cloze(
@@ -272,9 +289,9 @@ def build_clozes(
             clozes.append(cloze_eng)
             cloze_count_eng.update({rarest_eng: 1})
         # Cloze the French word.
-        if cloze_count_fra[rarest_fra] > CLOZE_LIMIT:
+        if cloze_count_fra[rarest_fra] == CLOZE_LIMIT:
             skipped_limit += 1
-        elif fra_freq[rarest_fra] < fra_freq_cutoff:
+        elif rarest_fra not in fra_common:
             skipped_freq += 1
         else:
             cloze_fra: Cloze = Cloze(
@@ -289,7 +306,7 @@ def build_clozes(
     )
     print(
         f"Skipped {skipped_freq} clozes because the word was under the "
-        "frequency limit."
+        "frequency cutoff."
     )
     return clozes
 ```
@@ -316,7 +333,9 @@ def dump_clozes(clozes: list[Cloze]):
             )
             writer.writerow(["English", "French"])
             for cloze in unit:
-                writer.writerow([cloze.eng, cloze.fra])
+                writer.writerow(
+                    [cloze.eng.capitalize(), cloze.fra.capitalize()]
+                )
 
 
 def group(lst, n):
@@ -342,15 +361,11 @@ def main():
         [pair.fra_words for pair in pairs]
     )
     # Find the frequency cutoff.
-    eng_cutoff = freq_cutoff(eng_freq)
-    fra_cutoff = freq_cutoff(fra_freq)
-    print(f"English cutoff: {eng_cutoff}")
-    print(f"French cutoff: {fra_cutoff}")
-    eng_freq_cutoff: float = eng_cutoff[1]
-    fra_freq_cutoff: float = fra_cutoff[1]
+    eng_common = most_common_words(eng_freq)
+    fra_common = most_common_words(fra_freq)
     print("Sorting...")
     pairs = sort_pairs(pairs, fra_freq)
-    print("\tDone")
+    pairs = remove_duplicates(pairs)
     # Print first and last sentences.
     print("First sentence:")
     pairs[0].dump()
@@ -358,25 +373,71 @@ def main():
     pairs[-1].dump()
     # Build clozes.
     clozes: list[Cloze] = build_clozes(
-        pairs, eng_freq, fra_freq, eng_freq_cutoff, fra_freq_cutoff
+        pairs, eng_freq, fra_freq, eng_common, fra_common
     )
     dump_clozes(clozes)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 Running the script prints some diagnostic information:
 
 ```
-[RUN OUTPUT]
+Found 304,304 sentence pairs.
+English frequency table:
+	Found 25685 words.
+	Most common: 'i' (67167).
+	Least common: 'disappoints' (1).
+	Average English frequency: 67.66474596067744
+French frequency table:
+	Found 43845 words.
+	Most common: 'je' (57774).
+	Least common: 'astrophysicien' (1).
+	Average English frequency: 40.90099213137188
+Sorting...
+Skipped 96278 sentence pairs that had the same text.
+First sentence:
+	eng=i am!
+	eng_words=['i', 'am']
+	fra=je suis !
+	fra_words=['je', 'suis']
+Last sentence:
+	eng=impudent strumpet!
+	eng_words=['impudent', 'strumpet']
+	fra=impudente courtisane !
+	fra_words=['impudente', 'courtisane']
+Skipped 412548 clozes because the word appeared too many times.
+Skipped 166299 clozes because the word was under the frequency cutoff.
+Compiled 29761 clozes.
+Dumping 298 units.
 ```
 
-Sample CSV:
+Here's sample text from Unit 0:
 
 ```csv
-[UNIT 1 CSV]
+"I'm {{c::staying}}.","Je reste."
+"I'm staying.","Je {{c::reste}}."
+"I {{c::pray}}.","Je prie."
+"I pray.","Je {{c::prie}}."
+"I am {{c::working}}.","Je travaille."
+"I am working.","Je {{c::travaille}}."
+"I {{c::work}}.","Je travaille."
+"I work.","Je {{c::travaille}}."
+"I'm {{c::working}}.","Je travaille."
+"I'm working.","Je {{c::travaille}}."
 ```
 
-Sample CSV:
+And from Unit 132:
 
 ```csv
-[LAST UNIT CSV]
+"The sun is {{c::shining}}.","Le soleil brille."
+"The sun is shining.","Le soleil {{c::brille}}."
+"They don't have a car.","Elles {{c::n'ont}} pas de voiture."
+"Let me {{c::repair}} it.","Laissez-moi le réparer."
+"{{c::hats}} off to him!","Chapeau à lui !"
+"I don't live in {{c::finland}}.","Je ne vis pas en finlande."
+"I didn't feel like waiting.","Je n'avais pas envie {{c::d'attendre}}."
+"Fire {{c::burns}}.","Le feu brûle."
 ```
