@@ -1,11 +1,12 @@
 ---
 title: Building a DIY Clozemaster
 summary: Replacing Duo the owl with a simple Python script.
+card: building-diy-clozemaster.jpg
 ---
 
-I want to learn French. I was doing the Duolingo course, until they [redesigned][redesign]
-the whole UI, and now there's five times more gamification than there is actual
-learning. It's just become incredibly tedious.
+I want to learn French. I was doing the Duolingo course, until they
+[redesigned][redesign] the whole UI, and now there's five times more
+gamification than there is actual learning. It's just become incredibly tedious.
 
 [redesign]: https://blog.duolingo.com/new-duolingo-home-screen-design/
 
@@ -15,18 +16,19 @@ get two sentences, one in English, another in French, and one of the words is a
 testing vocabulary, grammar, and, since the blank can appear in either sentence,
 you're testing in both directions. But Clozemaster has an absolutely demonic UX:
 the font is this ridiculous, unserious, 8 bit font literally from Super Mario
-Bros.; pasted over some tired Bootstrap theme. And the free version is limited to
-30 sentences a day.
+Bros.; pasted over some tired Bootstrap theme. And the free version is limited
+to 30 sentences a day.
 
 [cm]: https://www.clozemaster.com
 [cloze]: https://en.wikipedia.org/wiki/Cloze_test
 
 So I looked for ways to build my own language learning flashcards for use with
-[Mochi][mochi]. I found some [French frequency lists][frlist], and thought to use that to
-learn vocabulary, but vocabulary alone is not useful. Then I found a [list of
-English-French sentence pairs][frsen], ranked by frequency; but the corpus is [OpenSubtitles][os], so the vocabulary is very skewed to movie dialogue. And then I
-found [Tatoeba][tatoeba]: an open-source database of sentences and their
-translations.
+[Mochi][mochi]. I found some [French frequency lists][frlist], and thought to
+use that to learn vocabulary, but vocabulary alone is not useful. Then I found a
+[list of English-French sentence pairs][frsen], ranked by frequency; but the
+corpus is [OpenSubtitles][os], so the vocabulary is very skewed to movie
+dialogue. And then I found [Tatoeba][tatoeba]: an open-source database of
+sentences and their translations.
 
 [frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/A_Frequency_Dictionary_of_French
 [frsen]: http://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.html
@@ -34,7 +36,8 @@ translations.
 [mochi]: https://mochi.cards/
 [tatoeba]: https://tatoeba.org/en/
 
-The rest of this post is a walkthrough of the Python code I wrote to generate Cloze flashcards from Tatoeba sentence pairs.
+The rest of this post is a walkthrough of the Python code I wrote to generate
+Cloze flashcards from Tatoeba sentence pairs.
 
 # The Code
 
@@ -43,9 +46,8 @@ pairs. The result is a 30 MiB TSV with 344,000 sentence pairs.
 
 [download]: https://tatoeba.org/en/downloads
 
-First things first: a `Pair` class to represent sentence pairs. We'll
-store both the original text of each sentence, and a list of the words
-in each:
+First things first: a `Pair` class to represent sentence pairs. We'll store both
+the original text of each sentence, and a list of the words in each:
 
 ```python
 @dataclass(frozen=True)
@@ -62,8 +64,8 @@ class Pair:
         print(f"\tfra_words={self.fra_words}")
 ```
 
-The `words` function splits sentences along the usual word
-boundaries. It also throws out words if they're just numbers. Regexes are arguably overkill here:
+The `words` function splits sentences along the usual word boundaries. It also
+throws out words if they're just numbers. Regexes are arguably overkill here:
 
 ```python
 WORD_BOUNDARY: re.Pattern[str] = re.compile(r"""[\s,\.!?"]""")
@@ -117,26 +119,27 @@ def parse_sentences():
     return pairs
 ```
 
-We lowercase the entire sentence, this ensures that we don't make duplicate clozes for the same word just because the case is different. We also reject sentence pairs that are too long. Also, there is at least one sentence in the TSV that's in Portuguese rather than French, which for some reason hasn't been removed, so we special-case
-rejecting it.
+We lowercase the entire sentence, this ensures that we don't make duplicate
+clozes for the same word just because the case is different. We also reject
+sentence pairs that are too long. Also, there is at least one sentence in the
+TSV that's in Portuguese rather than French, which for some reason hasn't been
+removed, so we special-case rejecting it.
 
-To generate Cloze deletions for sentence pairs, the simplest, obvious
-thing is to generate a distinct Cloze for every word. But this creates
-an unmanageable combinatorial explosion, as well as a lot of
-repetition.
+To generate Cloze deletions for sentence pairs, the simplest, obvious thing is
+to generate a distinct Cloze for every word. But this creates an unmanageable
+combinatorial explosion, as well as a lot of repetition.
 
 The Clozemaster [approach][cm-faq], according to their FAQ, is to make only one
-Cloze for each sentence: they Cloze out the rarest word in the
-sentence. We could separately download a frequency table for English
-and French, but a simpler approach (and one that guarantees every word
-has a frequency) is to build the frequency map from the collection
-itself.
+Cloze for each sentence: they Cloze out the rarest word in the sentence. We
+could separately download a frequency table for English and French, but a
+simpler approach (and one that guarantees every word has a frequency) is to
+build the frequency map from the collection itself.
 
 [cm-faq]: https://www.clozemaster.com/faq#how-are-the-blanks-in-the-sentences-selected
 
-The `language_frequency_table` function takes a list of sentences
-(lists of words) and returns a `Counter` object associating words with
-the number of times they appear in the corpus:
+The `language_frequency_table` function takes a list of sentences (lists of
+words) and returns a `Counter` object associating words with the number of times
+they appear in the corpus:
 
 ```python
 def language_frequency_table(sentences: list[list[str]]) -> Counter[str]:
@@ -177,7 +180,8 @@ def counter_avg(c: Counter) -> float:
 We also implement a frequency cutoff: we don't need to learn the very
 obscure words, only the top 5000 words from the corpus.
 
-And, in order to avoid juggling frequency values and making numeric comparisons, we just build a set of the most common words, and test words for membership:
+And, in order to avoid juggling frequency values and making numeric comparisons,
+we just build a set of the most common words, and test words for membership:
 
 ```python
 MOST_COMMON_WORDS_CUTOFF: float = 5000
@@ -187,11 +191,10 @@ def most_common_words(c: Counter) -> set[str]:
     return set([p[0] for p in c.most_common(MOST_COMMON_WORDS_CUTOFF)])
 ```
 
-We want the cards to be organized from the simple to more
-complex. So we sort them by the average frequency of the words in the
-French sentence, divided by sentence length. Shorter and more common
-flashcards appear first, longer sentences and rarer
-words appear later.
+We want the cards to be organized from the simple to more complex. So we sort
+them by the average frequency of the words in the French sentence, divided by
+sentence length. Shorter and more common flashcards appear first, longer
+sentences and rarer words appear later.
 
 
 ```python
@@ -215,7 +218,10 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     return sum(tbl[w] for w in words) / len(words)
 ```
 
-We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers. Which is bad for recall.
+We also remove sentence pairs that have the same text in either French or
+English. Otherwise, the cards become non-deterministic: if one sentence maps to
+multiple sentences in the other language, the Cloze deletion could have multiple
+valid answers. Which is bad for recall.
 
 ```python
 def remove_duplicates(pairs: list[Pair]) -> list[Pair]:
@@ -246,7 +252,8 @@ Finally, we can create the flashcards. The basic loop is:
 
 1. Iterate over every pair.
 2. Find the rarest word in the English sentence.
-3. If it's not been clozed too many times, and if it's in the frequency cutoff (within the set of common words), make a flashcard for it.
+3. If it's not been clozed too many times, and if it's in the frequency cutoff
+   (within the set of common words), make a flashcard for it.
 4. Same for the French sentence.
 
 ```python
@@ -327,10 +334,12 @@ def build_clozes(
     return clozes
 ```
 
-When dumping the clozes, we write them into multiple CSV files of at
-most 100 flashcards each. These are analogous to units in a language
-learning course. This makes it easier to import them into separate
-Mochi decks. To make the text more natural, and since we lowercased it during the parsing step, we call `.capitalize()` to uppercase the first character of each sentence. Nouns like "Canada" or "Christmas" stay lowercased but that's a small inconvenience.
+When dumping the clozes, we write them into multiple CSV files of at most 100
+flashcards each. These are analogous to units in a language learning
+course. This makes it easier to import them into separate Mochi decks. To make
+the text more natural, and since we lowercased it during the parsing step, we
+call `.capitalize()` to uppercase the first character of each sentence. Nouns
+like "Canada" or "Christmas" stay lowercased but that's a small inconvenience.
 
 ```python
 def dump_clozes(clozes: list[Cloze]):
@@ -458,6 +467,8 @@ And from Unit 132:
 "Fire {{ "{{" }}c::burns}}.","Le feu brûle."
 ```
 
-The code is in [this repository][repo]. Overall this took about as much time as it takes to go through three units of the new Duolingo, but it was a lot less tiresome.
+The code is in [this repository][repo]. Overall this took about as much time as
+it takes to go through three units of the new Duolingo, but it was a lot less
+tiresome.
 
 [repo]: https://github.com/eudoxia0/diy-clozemaster
