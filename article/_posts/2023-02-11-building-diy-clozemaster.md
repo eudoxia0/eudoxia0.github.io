@@ -214,7 +214,7 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     return sum(tbl[w] for w in words) / len(words)
 ```
 
-We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers.
+We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers. Which is bad for recall.
 
 ```python
 def remove_duplicates(pairs: list[Pair]) -> list[Pair]:
@@ -241,7 +241,12 @@ def remove_duplicates(pairs: list[Pair]) -> list[Pair]:
     return pairs
 ```
 
-Finally, we can create the flashcards:
+Finally, we can create the flashcards. The basic loop is:
+
+1. Iterate over every pair.
+2. Find the rarest word in the English sentence.
+3. If it's not been clozed too many times, and if it's in the frequency cutoff (within the set of common words), make a flashcard for it.
+4. Same for the French sentence.
 
 ```python
 CLOZE_LIMIT: int = 3
@@ -324,7 +329,7 @@ def build_clozes(
 When dumping the clozes, we write them into multiple CSV files of at
 most 100 flashcards each. These are analogous to units in a language
 learning course. This makes it easier to import them into separate
-Mochi decks. To make the text more natural, and since we lowecased it first, we call `.capitalize()` to uppercase the first character. Nouns like "Canada" or "Christmas" stay lowercased but that's a small inconvenience.
+Mochi decks. To make the text more natural, and since we lowercased it during the parsing step, we call `.capitalize()` to uppercase the first character of each sentence. Nouns like "Canada" or "Christmas" stay lowercased but that's a small inconvenience.
 
 ```python
 def dump_clozes(clozes: list[Cloze]):
@@ -355,7 +360,7 @@ def group(lst, n):
     return result
 ```
 
-Putting it together:
+Tying it together:
 
 ```python
 def main():
@@ -392,7 +397,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Running the script takes six seconds on my laptop:
+Running the script takes six seconds on my laptop, and prints these diagnostics:
 
 ```
 Found 304,304 sentence pairs.
@@ -451,3 +456,7 @@ And from Unit 132:
 "I didn't feel like waiting.","Je n'avais pas envie {{ "{{" }}c::d'attendre}}."
 "Fire {{ "{{" }}c::burns}}.","Le feu brûle."
 ```
+
+The code is in [this repository][repo]. Overall this took about as much time as it takes to go through three units of the new Duolingo, but it was a lot less tiresome.
+
+[repo]: https://github.com/eudoxia0/diy-clozemaster
