@@ -2,32 +2,40 @@
 title: Building a DIY Clozemaster
 ---
 
-I want to learn French. I was doing the Duolingo course, until they redesigned
+I want to learn French. I was doing the Duolingo course, until they [redesigned][redesign]
 the whole UI, and now there's five times more gamification than there is actual
 learning. It's just become incredibly tedious.
+
+[redesign]: https://blog.duolingo.com/new-duolingo-home-screen-design/
 
 A friend introduced me to [Clozemaster][cm], which is a very simple concept: you
 get two sentences, one in English, another in French, and one of the words is a
 [Cloze deletion][cloze]. You have to figure out what goes in the blank. You're
-testing vocabulary, grammar, and since the blank can appear in either sentence,
+testing vocabulary, grammar, and, since the blank can appear in either sentence,
 you're testing in both directions. But Clozemaster has an absolutely demonic UX:
 the font is this ridiculous, unserious, 8 bit font literally from Super Mario
-Bros; pasted over some tired Bootstrap theme. And the free version is limited to
+Bros.; pasted over some tired Bootstrap theme. And the free version is limited to
 30 sentences a day.
 
 [cm]: https://www.clozemaster.com
 [cloze]: https://en.wikipedia.org/wiki/Cloze_test
 
 So I looked for ways to build my own language learning flashcards for use with
-[Mochi][mochi]. I found a French frequency list, and thought to use that to
-learn vocabulary, but vocabulary alone is not useful. Then I found a list of
-English-French sentence pairs, ranked by frequency; but the corpus is open
-subtitles, so the vocabulary has a very heavy bias. And then I
+[Mochi][mochi]. I found some [French frequency lists][frlist], and thought to use that to
+learn vocabulary, but vocabulary alone is not useful. Then I found a [list of
+English-French sentence pairs][frsen], ranked by frequency; but the corpus is [OpenSubtitles][os], so the vocabulary is very skewed to movie dialogue. And then I
 found [Tatoeba][tatoeba]: an open-source database of sentences and their
 translations.
 
+[frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/A_Frequency_Dictionary_of_French
+[frsen]: http://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.html
+[os]: https://www.opensubtitles.org/en/en%20
 [mochi]: https://mochi.cards/
 [tatoeba]: https://tatoeba.org/en/
+
+The rest of this post is a walkthrough of the Python code I wrote to generate Cloze flashcards from Tatoeba sentence pairs.
+
+# The Code
 
 So I started by [downloading][download] all the English-French sentence
 pairs. The result is a 30 MiB TSV with 344,000 sentence pairs.
@@ -116,18 +124,18 @@ thing is to generate a distinct Cloze for every word. But this creates
 an unmanageable combinatorial explosion, as well as a lot of
 repetition.
 
-The Clozemaster approach, according to their FAQ, is to make only one
+The Clozemaster [approach][cm-faq], according to their FAQ, is to make only one
 Cloze for each sentence: they Cloze out the rarest word in the
 sentence. We could separately download a frequency table for English
 and French, but a simpler approach (and one that guarantees every word
 has a frequency) is to build the frequency map from the collection
 itself.
 
+[cm-faq]: https://www.clozemaster.com/faq#how-are-the-blanks-in-the-sentences-selected
+
 The `language_frequency_table` function takes a list of sentences
 (lists of words) and returns a `Counter` object associating words with
 the number of times they appear in the corpus:
-
-Language frequency table:
 
 ```python
 def language_frequency_table(sentences: list[list[str]]) -> Counter[str]:
@@ -166,7 +174,9 @@ def counter_avg(c: Counter) -> float:
 ```
 
 We also implement a frequency cutoff: we don't need to learn the very
-obscure words, only the top 5000 words from the corpus. So that we don't have to juggle frequency values and make numeric comparisons, we just build a set of the 5000 most common words, and test words for membership:
+obscure words, only the top 5000 words from the corpus.
+
+And, in order to avoid juggling frequency values and making numeric comparisons, we just build a set of the most common words, and test words for membership:
 
 ```python
 MOST_COMMON_WORDS_CUTOFF: float = 5000
@@ -176,11 +186,11 @@ def most_common_words(c: Counter) -> set[str]:
     return set([p[0] for p in c.most_common(MOST_COMMON_WORDS_CUTOFF)])
 ```
 
-We want the cards to be organized from the simplest to more
+We want the cards to be organized from the simple to more
 complex. So we sort them by the average frequency of the words in the
 French sentence, divided by sentence length. Shorter and more common
-sentences flashcards will appear first, longer sentences of rarer
-words will appear later.
+flashcards appear first, longer sentences and rarer
+words appear later.
 
 
 ```python
@@ -204,9 +214,9 @@ def avg_freq(words: list[str], tbl: Counter[str]) -> float:
     return sum(tbl[w] for w in words) / len(words)
 ```
 
-We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one English or French sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers.
+We also remove sentence pairs that have the same text in either French or English. Otherwise, the cards become non-deterministic: if one sentence maps to multiple sentences in the other language, the Cloze deletion could have multiple valid answers.
 
-```
+```python
 def remove_duplicates(pairs: list[Pair]) -> list[Pair]:
     result: list[Pair] = []
     seen_eng: set[str] = set()
