@@ -1,5 +1,6 @@
 ---
 title: Building a DIY Clozemaster
+summary: Replacing Duo the owl with a simple Python script.
 ---
 
 I want to learn French. I was doing the Duolingo course, until they [redesigned][redesign]
