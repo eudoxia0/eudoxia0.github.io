@@ -39,13 +39,34 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 
 # Frontend
 
+- cst
+- parser
+    - parser is written in menhir
+    - lexer is ocamllex
+
 ## The Concrete Syntax Tree
+
+- simplest representation
 
 ## Lexing
 
+- ocamllex
+- give example
+
 ## Parsing
 
+- menhir
+- example
+    - production rule
+    - input
+    - example
+
 ## Combining Pass
+
+- example
+    - interface
+    - body
+    - combined representation
 
 # Core
 
