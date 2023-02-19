@@ -472,3 +472,16 @@ it takes to go through three units of the new Duolingo, but it was a lot less
 tiresome.
 
 [repo]: https://github.com/eudoxia0/diy-clozemaster
+
+# Prior Art
+
+[Kevin Sookocheff][kev] did the same thing years ago, but for Anki: [_Bulk
+Generating Cloze Deletions for Learning a Language with Anki_][post]. His
+approach is arguably more rigorous, and uses [Amazon Polly][polly] to generate
+sound samples. His code has a feature to specifically not make Cloze cards for
+proper nouns, reading this I realized I was doubly-counting differently-cased
+words and went back and added those `.lower()` calls in `parse_sentences`.
+
+[kev]: https://sookocheff.com/
+[post]: https://sookocheff.com/post/language/bulk-generating-cloze-deletions-for-learning-a-language-with-anki
+[polly]: https://aws.amazon.com/polly/
