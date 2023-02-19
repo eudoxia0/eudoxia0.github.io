@@ -54,14 +54,17 @@ class Pair:
 ```
 
 The `words` function splits sentences along the usual word
-boundaries. Regexes are arguably overkill here:
+boundaries. It also throws out words if they're just numbers. Regexes are arguably overkill here:
 
 ```python
-WORD_BOUNDARY: re.Pattern[str] = re.compile(r"""[ ,\.!?"]""")
+WORD_BOUNDARY: re.Pattern[str] = re.compile(r"""[\s,\.!?"]""")
 
 
 def words(line: str) -> list[str]:
-    return [w.strip() for w in re.split(WORD_BOUNDARY, line) if w.strip()]
+    l = [w.strip() for w in re.split(WORD_BOUNDARY, line) if w.strip()]
+    # Skip numbers.
+    l = [w for w in l if not w.isdigit()]
+    return l
 ```
 
 Then we parse sentences from the TSV. There are only two constraints
@@ -91,6 +94,7 @@ def parse_sentences():
         for row in reader:
             eng: str = row[1].strip()
             fra: str = row[3].strip()
+            eng[0] = eng[0]
             if fra in SKIP_LIST:
                 continue
             eng_words: list[str] = words(eng)
