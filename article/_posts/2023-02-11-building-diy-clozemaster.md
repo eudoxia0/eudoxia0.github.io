@@ -417,27 +417,27 @@ Dumping 298 units.
 Here's sample text from Unit 0:
 
 ```csv
-"I'm {{c::staying}}.","Je reste."
-"I'm staying.","Je {{c::reste}}."
-"I {{c::pray}}.","Je prie."
-"I pray.","Je {{c::prie}}."
-"I am {{c::working}}.","Je travaille."
-"I am working.","Je {{c::travaille}}."
-"I {{c::work}}.","Je travaille."
-"I work.","Je {{c::travaille}}."
-"I'm {{c::working}}.","Je travaille."
-"I'm working.","Je {{c::travaille}}."
+"I'm {{ "{{" }}c::staying}}.","Je reste."
+"I'm staying.","Je {{ "{{" }}c::reste}}."
+"I {{ "{{" }}c::pray}}.","Je prie."
+"I pray.","Je {{ "{{" }}c::prie}}."
+"I am {{ "{{" }}c::working}}.","Je travaille."
+"I am working.","Je {{ "{{" }}c::travaille}}."
+"I {{ "{{" }}c::work}}.","Je travaille."
+"I work.","Je {{ "{{" }}c::travaille}}."
+"I'm {{ "{{" }}c::working}}.","Je travaille."
+"I'm working.","Je {{ "{{" }}c::travaille}}."
 ```
 
 And from Unit 132:
 
 ```csv
-"The sun is {{c::shining}}.","Le soleil brille."
-"The sun is shining.","Le soleil {{c::brille}}."
-"They don't have a car.","Elles {{c::n'ont}} pas de voiture."
-"Let me {{c::repair}} it.","Laissez-moi le réparer."
-"{{c::hats}} off to him!","Chapeau à lui !"
-"I don't live in {{c::finland}}.","Je ne vis pas en finlande."
-"I didn't feel like waiting.","Je n'avais pas envie {{c::d'attendre}}."
-"Fire {{c::burns}}.","Le feu brûle."
+"The sun is {{ "{{" }}c::shining}}.","Le soleil brille."
+"The sun is shining.","Le soleil {{ "{{" }}c::brille}}."
+"They don't have a car.","Elles {{ "{{" }}c::n'ont}} pas de voiture."
+"Let me {{ "{{" }}c::repair}} it.","Laissez-moi le réparer."
+"{{ "{{" }}c::hats}} off to him!","Chapeau à lui !"
+"I don't live in {{ "{{" }}c::finland}}.","Je ne vis pas en finlande."
+"I didn't feel like waiting.","Je n'avais pas envie {{ "{{" }}c::d'attendre}}."
+"Fire {{ "{{" }}c::burns}}.","Le feu brûle."
 ```
