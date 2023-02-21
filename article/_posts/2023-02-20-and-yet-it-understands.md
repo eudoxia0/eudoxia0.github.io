@@ -118,7 +118,9 @@ matrix multiplication for the same reason you can't get to the Moon by piling up
 chairs[^nelson]. I was wrong, possibly about the last thing that ever
 mattered. A more rigorous thinker would have started paying attention around
 2014, but it really took me until the general availability of DALL-E: I could
-not pick my jaw up from the floor for days.
+not pick my jaw up from the floor [for days][thread].
+
+[thread]: https://twitter.com/zetalyrae/status/1537355933076045824
 
 [^nelson]:
     This turn of phrase is from Ted Nelson.
