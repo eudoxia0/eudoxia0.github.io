@@ -131,7 +131,7 @@ people still clinging to GOFAI nostalgia like the Japanese holdouts.
 
 If you're going to tell me intelligence requires symbolic rules, fine: show me
 the symbolic version of ChatGPT. If it is truly so unimpressive, then it must be
-trivial to replicate.[^trivial]
+trivial to replicate.
 
 There is a species of denialist for whom no evidence whatever will convince them
 that a computer is doing anything other than shuffling symbols without
@@ -269,10 +269,6 @@ In high-dimensional vector spaces, numerical optimization is omnipotent.
 
 [^tokamak]:
     Tokamaks don't work so in a few years this will be either ironic or fitting.
-
-[^trivial]:
-    The reply would be that this is a waste of time because LLMs are bad and
-    toxic etc. and therefore not even worth reproducing.
 
 [rodney]: https://www.edge.org/response-detail/25336
 [simon]: https://conversableeconomist.blogspot.com/2020/04/1957-when-machines-that-think-learn-and.html
