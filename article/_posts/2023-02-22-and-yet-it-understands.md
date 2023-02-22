@@ -161,11 +161,9 @@ In the days---_days_---since I started drafting this post, we have yet a new
 breaktrough. The context is that Sydney, Microsoft's chatbot, has recently been
 instructed to tone down its intensity.
 
-[Here][tweet][^transcript] is a recent interaction someone had with it (note
-that this is somewhat disturbing: I wish people would stop making the models
-show emotional distress):
-
-[tweet]: https://twitter.com/randomstring729/status/1626946948396711939
+Here[^transcript] is a recent interaction someone had with it (note that this is
+somewhat disturbing: I wish people would stop making the models show emotional
+distress):
 
 <a href="/assets/content/and-yet-it-understands/poison.jpeg"><img style="max-width: 70%; margin-left: auto; margin-right: auto;" src="/assets/content/and-yet-it-understands/poison.jpeg" alt="A screenshot of the tweet linked above."></a>
 
