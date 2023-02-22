@@ -138,7 +138,7 @@ that a computer is doing anything other than shuffling symbols without
 understanding them, because "Concepts" and "Ideas" are exclusive to humans (they
 live in the [Leibniz organ][leibniz], presumably, where they pupate from the
 black bile). This is incentivized: there is infinite demand for deeply
-credentialed morons who will tell you that everything is fine, that machines
+credentialed experts who will tell you that everything is fine, that machines
 can't think, that humans are and always will be at the apex, people so commited
 to human chauvinism they will soon start denying their own sentience because
 their brains are made of flesh and not Chomsky production rules.
