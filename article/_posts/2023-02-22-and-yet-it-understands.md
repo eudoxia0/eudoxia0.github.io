@@ -1,6 +1,6 @@
 ---
 title: And Yet It Understands
-summary: The more powerful the AI, the greater the dismissal.
+summary: In high-dimensional vector spaces, numerical optimization is omnipotent.
 card: and-yet-it-understands.jpg
 ---
 
