@@ -7,7 +7,59 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 
 [austral]: https://austral-lang.org/
 
-# Requirements
+# Contents
+
+1. [Overview](#overview)
+2. [Requirements](#requirements)
+3. [Limitations](#limitations)
+4. [High-Level View](#high-level-view)
+5. [Frontend](#frontend)
+    1. [The Concrete Syntax Tree](#cst)
+    2. [Lexing](#lexing)
+    3. [Parsing](#parsing)
+    4. [Combining Pass](#combining)
+6. [Core](#core)
+    1. [Type Representation](#type)
+    2. [The Environment](#env)
+    3. [Import Resolution](#imports)
+    4. [The Abstract Syntax Tree](#ast)
+    5. [Abstraction Pass](#abst)
+    6. [Extraction Pass](#extract)
+    7. [Linked Representation](#linked)
+    8. [Typing Pass](#typing)
+    9. [Linearity Checking](#linearity)
+    10. [Monomorphization](#mono)
+7. [Backend](#backend)
+    1. [C Representation](#crepr)
+    2. [Code Generation](#codegen)
+    3. [C Rendering](#crender)
+8. [Built-In Modules](#builtins)
+9. [The Entrypoint](#entrypoint)
+10. [Testing](#testing)
+11. [Future Work](#future)
+
+# Overview {#overview}
+
+- austral
+  - features
+    - linear types
+    - capability-based security
+    - a good module system
+  - design goals
+    - simplicity
+    - short implementation
+- compiler
+  - written in ocaml
+  - few lines of code
+  - braindead code style: readable by anyone
+  - bootstrapping: can't be written in austral because nothing is written in austral
+- why ocaml
+  - good language for writing compilers
+  - algebraic data types
+  - pattern matching
+- link to "lessons from writing a compiler" post
+
+# Requirements {#requirements}
 
 - bootstrapping compiler
     - readable
@@ -19,13 +71,13 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 - whole program
 - good diagnostics
 
-# Limitations
+# Limitations {#limitations}
 
 - batch
 - very functional
     - poor performance
 
-# High-Level View
+# High-Level View {#high-level-view}
 
 - parsing
 - combining
@@ -37,23 +89,23 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 - code generation
 - gcc
 
-# Frontend
+# Frontend {#frontend}
 
 - cst
 - parser
     - parser is written in menhir
     - lexer is ocamllex
 
-## The Concrete Syntax Tree
+## The Concrete Syntax Tree {#cst}
 
 - simplest representation
 
-## Lexing
+## Lexing {#lexing}
 
 - ocamllex
 - give example
 
-## Parsing
+## Parsing {#parsing}
 
 - menhir
 - example
@@ -61,36 +113,71 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
     - input
     - example
 
-## Combining Pass
+## Combining Pass {#combining}
 
 - example
     - interface
     - body
     - combined representation
 
-# Core
+# Core {#core}
 
-## Type Representation
+- environment
+  - decls are stored
+- typing
+- linearity
+- monomorphization
 
-## The Environment
+## Type Representation {#type}
 
-## Import Resolution
+- ty adt
 
-## The Abstract Syntax Tree
+## The Environment {#env}
 
-## Abstraction Pass
+- env interface
+- env impl
+- ids
+- env manipulation is functional
 
-## Extraction Pass
+## Import Resolution {#imports}
 
-## Linked Representation
+- identifiers are qualified
+- rules
 
-## Representation of Types
+## The Abstract Syntax Tree {#ast}
 
-## Typing Pass
+- repr
+- differences from cst
 
-## Monomorphization
+## Abstraction Pass {#abst}
 
-# Backend
+- import resolution
+- abstraction
+
+## Extraction Pass {#extract}
+
+- describe rule checking
+
+## Linked Representation {#linked}
+
+- adt
+
+## Typing Pass {#typing}
+
+- code quality: 5 out of 5 cthulhus
+- big mess
+
+## Linearity Checking {#linearity}
+
+Describe [here](/article/how-australs-linear-type-checker-works).
+
+## Monomorphization {#mono}
+
+- mono ty
+- mono expr
+- monomorphization example
+
+# Backend {#backend}
 
 - very simple
 - mono language is essentially equivalent to C
@@ -98,11 +185,11 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 - used to be c++ to take advantage of templates
     - that had problems
 
-## C Representation
+## C Representation {#crepr}
 
 - simple c ast
 
-## Code Generation
+## Code Generation {#codegen}
 
 - code generation is a straightforward map
 - a few things worth pointing out
@@ -110,8 +197,16 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
     - compilation of unions
     - compilation of case statements
 - future work
-    - context comments to identify what a monomorph is 
+    - context comments to identify what a monomorph is
 
-## C Rendering
+## C Rendering {#crender}
 
 - codegen is just string concatenation
+
+# Built-In Modules {#builtin}
+
+# The Entrypoint {#entrypoint}
+
+# Testing {#testing}
+
+# Future Work {#future}
