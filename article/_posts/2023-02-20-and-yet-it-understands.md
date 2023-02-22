@@ -103,13 +103,13 @@ saying_, and we have clearly passed it.
 
 # Denial
 
-There is a principle in [Bayesian epistemology][bayes] called
-conditionalization: the more surprised you are by some evidence, the more you
-should change your mind in response. The corollary is: if you are constantly
-surprised by events, your mental model of the world is wrong. If you keep making
-predictions that fail, time and time and time again, you must change your
-mind. If the frequency with which you have to move the goal posts is down to
-_single digit weeks_, you must change your mind urgently.
+There's this thing in probability called [conditionalization][bayes]: the more
+surprised you are by some evidence, the more you should change your mind in
+response to it. The corollary is: if you are constantly surprised by events,
+your mental model of the world is wrong. If you keep making predictions that
+fail, time and time and time again, you must change your mind. If the frequency
+with which you have to move the goal posts is down to _single digit weeks_, you
+must change your mind urgently.
 
 [bayes]: https://plato.stanford.edu/entries/epistemology-bayesian/
 
