@@ -1,6 +1,7 @@
 ---
 title: And Yet It Understands
 summary: The more powerful the AI, the greater the dismissal.
+card: and-yet-it-understands.jpg
 ---
 
 >To think is to forget differences, to generalize, to abstract.
