@@ -201,13 +201,11 @@ general, maybe prone to strange and ahuman errors, but you need something that
 can turn gigabytes of text into an abstract, compressed world model.
 
 And stochastic gradient descent is nothing if not relentless. You need an
-appropriate network architecture (e.g. [convnets][conv] have many problems), a
-big model and lots of training time, and a star to steer her by: a quantifiable
-objective function. If intelligence exists somewhere in the Platonic realm, it
-will be found. Then it's no longer predicting text from text, it's abstracting
-text into concepts, then writing text from the concepts.
-
-[conv]: https://en.wikipedia.org/wiki/Convolutional_neural_network
+appropriate network architecture, a big model and lots of training time, and a
+star to steer her by: a quantifiable objective function. If intelligence exists
+somewhere in the Platonic realm, it will be found. Then it's no longer
+predicting text from text, it's abstracting text into concepts, then writing
+text from the concepts.
 
 In high-dimensional vector spaces, numerical optimization is omnipotent.
 
