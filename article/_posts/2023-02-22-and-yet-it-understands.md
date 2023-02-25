@@ -2,6 +2,8 @@
 title: And Yet It Understands
 summary: In high-dimensional vector spaces, numerical optimization is omnipotent.
 card: and-yet-it-understands.jpg
+card_source: |
+    "A verdigris angel whose head is the Antikythera mechanism, 1899, oil on canvas, trending on ArtStation", DALL-E, June 2022.
 ---
 
 >To think is to forget differences, to generalize, to abstract.
