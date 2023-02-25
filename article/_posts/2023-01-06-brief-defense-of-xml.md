@@ -2,6 +2,10 @@
 title: A Brief Defense of XML
 summary: On the difference between markup and data exchange languages.
 card: brief-defense-xml.jpg
+card_source: |
+  [_Dimostrazione del Prospetto del Tempio di Vesta in Tivoli_][link], Francesco Piranesi, 1780.
+
+  [link]: https://commons.wikimedia.org/wiki/File:Piranesi-6004.jpg
 ---
 
 In computing, the word "document" is unfortunately overloaded. It used to mean
