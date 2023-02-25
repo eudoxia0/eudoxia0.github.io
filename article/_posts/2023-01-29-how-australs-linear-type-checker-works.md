@@ -2,6 +2,10 @@
 title: How Austral’s Linear Type Checker Works
 summary: A walkthrough of Austral's linearity checker algorithm.
 card: how-australs-linear-type-checker-works.jpg
+card_source: |
+   [RL-10 rocket engine propellant flow diagram][link].
+
+   [link]: https://www.enginehistory.org/Rockets/RPE08.21/RPE08.21.shtml
 ---
 
 >What I cannot create, I do not understand.
