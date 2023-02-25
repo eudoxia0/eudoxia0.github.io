@@ -2,6 +2,9 @@
 title: Building a DIY Clozemaster
 summary: Replacing Duo the owl with a simple Python script.
 card: building-diy-clozemaster.jpg
+card_source: |
+    [_Catalogo delle Opere Date Finora Alla Lvce Da Gio Battista Piranesi_][link],
+    Giovanni Battista Piranesi and Francesco Piranesi, c. 1780.
 ---
 
 I want to learn French. I was doing the Duolingo course, until they
