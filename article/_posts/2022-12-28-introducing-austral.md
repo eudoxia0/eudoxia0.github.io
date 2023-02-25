@@ -3,6 +3,10 @@ title: 'Introducing Austral: A Systems Language with Linear Types and Capabiliti
 summary: Introducing a new programming language.
 tags: []
 card: introducing-austral.jpg
+card_source: |
+  [_Pianta di ampio magnifico Collegio_][link], Giovanni Battista Piranesi, c. 1750.
+
+  [link]: https://archive.org/details/piranesi-062c80a0-6d44-4178-a899-a2451c0cfd4b/mode/1up
 ---
 
 [**Austral**][austral] is a new systems programming language. You can think of
