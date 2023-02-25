@@ -2,6 +2,10 @@
 title: Shells are Two Things
 summary: Command languages and scripting languages are and should be different things.
 card: shells-are-two-things.jpg
+card_source: |
+    [_Ammonitida_][link], Ernst Haeckel, 1904.
+
+    [link]: https://commons.wikimedia.org/wiki/File:Haeckel_Ammonitida.jpg
 ---
 
 The fundamental problem of shells is they are required to be two things.
