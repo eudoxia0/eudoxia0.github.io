@@ -3,6 +3,8 @@ title: Astronomical Calculations for Hard SF in Common Lisp
 summary: Hard SF worldbuilding with the HYG database, Dijkstra's algorithm, and Lisp.
 math: yes
 card: astronomical-calculations-hard-sf-common-lisp.jpg
+card_source: |
+  [AILS-AC81-7069](https://archive.org/details/AILS-AC81-7069), Saturn's rings photographed by Voyager 2.
 ---
 
 In [_The Epiphany of Gliese 581_][eog581], a group of explorers search the
