@@ -3,13 +3,21 @@ title: Design of the Austral Compiler
 summary: A high-level walkthrough of the Austral bootstrapping compiler.
 ---
 
-This post describes the design of the bootstrapping compiler for [Austral][austral].
+[Austral][austral] is a new systems programming language. It features [linear types][linear] for safe, compile-time memory and resource management; [capability-based security][cap] to prevent [supply chain attacks][chain]; and strong modularity. It is designed with fits-in-head simplicity as the goal.
 
 [austral]: https://austral-lang.org/
+[linear]: https://austral-lang.org/spec/spec.html#rationale-linear-types
+[cap]: https://austral-lang.org/spec/spec.html#rationale-cap
+[chain]: https://en.wikipedia.org/wiki/Supply_chain_attack
+
+A while back I wrote a post on the [lessons I learnt writing the Austral compiler][lessons]. This post is a more detailed walkthrough of the [bootstrapping compiler][compiler] for Austral.
+
+[lessons]: /article/lessons-writing-compiler
+[compiler]: https://github.com/austral/austral
 
 # Contents
 
-1. [Overview](#overview)
+1. [Why OCaml?](#why)
 2. [Requirements](#requirements)
 3. [Limitations](#limitations)
 4. [High-Level View](#high-level-view)
@@ -38,63 +46,45 @@ This post describes the design of the bootstrapping compiler for [Austral][austr
 10. [Testing](#testing)
 11. [Future Work](#future)
 
-# Overview {#overview}
+# Why OCaml? {#why}
 
-- austral
-  - features
-    - linear types
-    - capability-based security
-    - a good module system
-  - design goals
-    - simplicity
-    - short implementation
-- compiler
-  - written in ocaml
-  - few lines of code
-  - braindead code style: readable by anyone
-  - bootstrapping: can't be written in austral because nothing is written in austral
-- why ocaml
-  - good language for writing compilers
-  - algebraic data types
-  - pattern matching
-- link to "lessons from writing a compiler" post
+[OCaml][ocaml] is a great language for writing compilers. Like Haskell and other languages in the ML family, its support for [sum types][sum] and pattern matching makes it very easy to write tree transformations, which is what most of a compiler is. Like Haskell, you can write functional code; unlike Haskell, you can mutate and perform side effects pervasively. And OCaml has [Menhir][menhir], a really outstanding parser generator on par with Java's [ANTLR][antlr].
+
+[ocaml]: https://ocaml.org/
+[sum]: https://ocaml.org/docs/data-types#a-simple-custom-type
+[menhir]: http://gallium.inria.fr/~fpottier/menhir/
+[antlr]: https://www.antlr.org/
 
 # Requirements {#requirements}
 
-- bootstrapping compiler
-    - readable
-    - maintanable
-    - hackable
-    - evolvable
-    - not necessarily performant
-- batch
-- whole program
-- good diagnostics
+1. **Short Time to MVP:** it's a bootstrapping compiler, not a production compiler, so the goal is to be able to get to "Hello, world!" as early as possible. Consequently the implementation should be as simple and quick to implement as possible. As a result the compiler is just 12,000 lines of straightforward grugbrained OCaml.
+    
+1. **Readable:** the compiler is written in the least fanciful style of OCaml imaginable. There's no transdimensional optical profunctors or whatever Haskellers are up to.
+
+1. **Hackable:** languages evolve most in their early stages. Writing a highly-optimized production compiler would be premature if you end up having to throw out most of it because you changed your mind about some central language feature. So the compiler is designed to be hackable and gradually evolvable, at the expensive of semantics-specific optimizations and thus performance.
+
+1. **Correctness:** the compiler is a reference implementation, so correctness matters above most other things.
 
 # Limitations {#limitations}
 
-- batch
-- very functional
-    - poor performance
+The above requirements, which prioritize certain dimensions over others, have some consequences:
+
+1. **No Separate Compilation:** for simplicity, the compiler is a whole-program compiler. It compiles all source files, in order, from the first one to the last one. Separate compilation is not supported.
+1. **Batch Compilation:** also for simplicity, the compiler is a batch compiler, so there's no incremental compilation or external symbol database. Everything happens in one long pipeline.
+1. **Performance:** much of the compiler is written in an easily-testable functional style, potentially at the expense of performance.
+1. **Backend:** the backend is just C, which is in turn compiled by a C compiler (though it would not be too much work to "upgrade" this to compile to LLVM IR).
 
 # High-Level View {#high-level-view}
 
-- parsing
-- combining
-- import resolution
-- abstraction
-- extraction
-- tast
-- monomorphization
-- code generation
-- gcc
+The following diagram shows the flow of data in the compiler. Blue nodes are source representations, green nodes are compiler passes:
+
+<a href="/assets/content/design-austral-compiler/pipeline.png"><img style="max-width: 30%; margin-left: auto; margin-right: auto;" src="/assets/content/design-austral-compiler/pipeline.png" alt="Graphviz diagram of the compiler pipeline."></a>
 
 # Frontend {#frontend}
 
-- cst
-- parser
-    - parser is written in menhir
-    - lexer is ocamllex
+The frontend is the parser, which takes source code and turns it into the earliest tree representation: the concrete syntax tree. After that there's the combining pass, where the separate module interface and module body are combined into a single object. The parser is written in [Menhir][menhir], a powerful parser generator for OCaml, and the lexer is writting in [ocamllex][lex].
+
+[lex]: https://v2.ocaml.org/manual/lexyacc.html
 
 ## The Concrete Syntax Tree {#cst}
 
