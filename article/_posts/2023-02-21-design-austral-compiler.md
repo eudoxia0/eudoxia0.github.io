@@ -337,11 +337,20 @@ Described [here](/article/how-australs-linear-type-checker-works).
 
 # Backend {#backend}
 
-- very simple
-- mono language is essentially equivalent to C
-- c ast
-- used to be c++ to take advantage of templates
-    - that had problems
+The backend is very simple: it spits out C code. There's a group of types to
+represent C ASTs, the monomorphic AST gets transformed into a C AST by the code
+generation step. The codegen is very simple given that monomorphized Austral is
+very close to C, pretty much the only feature Austral has that C doesn't is
+tagged unions.
+
+It used to be the backend was C++, and generic Austral functions and generic
+typeclass instances were compiled to templated C++ functions. That meant I
+didn't have to implement monomorphization myself (which was a huge pain in the
+ass) but it created these inscrutable bugs due to the subtle differences between
+the two type systems. It also covered up bugs in type-checking and typeclass
+resolution that would have shown up had I implemented monomorphization. So I
+ended up changing the backend to straightforward C and implementing
+monomorphization in OCaml.
 
 ## C Representation {#crepr}
 
