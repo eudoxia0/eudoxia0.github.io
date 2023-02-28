@@ -398,7 +398,54 @@ analogously.
 
 ## C Rendering {#crender}
 
-- codegen is just string concatenation
+And as if the compiler wasn't braindead enough, the last step of code generation
+is literally string concatenation: the C AST gets turned into a string. This process is called rendering.
+
+Ideally the compiled C code should be readable, which means it has to be
+indented. Rather than handle the string padding when rendering the C AST, the
+rendering process returns a list of `line` values, which have an indentation
+count and a string of the actual contents of that line, e.g.:
+
+```ocaml
+and render_stmt (i: indentation) (stmt: c_stmt): line list =
+  match stmt with
+  | CLet (name, ty, value) ->
+     let s = (render_type ty) ^ " " ^ name ^ " = " ^ (e value) ^ ";" in
+     [Line (i, s)]
+  | CAssign (lvalue, value) ->
+     let s = (e lvalue) ^ " = " ^ (e value) ^ ";" in
+     [Line (i, s)]
+  | CDiscarding value ->
+     [Line (i, (e value) ^ ";")]
+  | CIf (c, t, f) ->
+     List.concat [
+         [Line (i, "if (" ^ (e c) ^ ") {")];
+         render_stmt (indent i) t;
+         [Line (i, "} else {")];
+         render_stmt (indent i) f;
+         [Line (i, "}")]
+       ]
+```
+
+Each line then gets turned into a string by turning its identation count `i`
+into a string of with `i` space characters and prefixing it to the code:
+
+```ocaml
+let render_line (Line (Indentation i, s)) =
+  (String.make i ' ') ^ s
+```
+
+And then all the lines get concatenated together:
+
+```ocaml
+let rec render_unit (CUnit (name, decls)): string =
+  let rd d =
+    String.concat "\n" (List.map render_line (render_decl zero_indent d))
+  in
+  "/* --- BEGIN translation unit for module '" ^ name ^ "' --- */\n"
+  ^ (String.concat "\n\n" (List.map rd decls))
+  ^ "\n/* --- END translation unit for module '" ^ name ^ "' --- */\n"
+```
 
 # Built-In Modules {#builtin}
 
