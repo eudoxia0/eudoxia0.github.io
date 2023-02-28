@@ -388,11 +388,50 @@ analogously.
 
 ## Code Generation {#codegen}
 
-- code generation is a straightforward map
-- a few things worth pointing out
-    - compilation of structs
-    - compilation of unions
-    - compilation of case statements
+Code generation is mostly a one-to-one map from the monomorphic AST to the C
+AST. The function that codegens expressions makes this clear:
+
+```ocaml
+let rec gen_exp (mn: module_name) (e: mexpr): c_expr =
+  let g = gen_exp mn in
+  match e with
+  | MNilConstant ->
+     CBool false
+  | MBoolConstant b ->
+     CBool b
+  | MIntConstant i ->
+     CInt i
+  | MFloatConstant f ->
+     CFloat f
+  | MStringConstant s ->
+     CFuncall (
+         "au_make_array_from_string",
+         [
+           CString s;
+           CInt (string_of_int (String.length (escaped_to_string s)))
+         ]
+       )
+  | MConstVar (n, _) ->
+     CVar (gen_qident n)
+  | MParamVar (n, _) ->
+     CVar (gen_ident n)
+  | MLocalVar (n, _) ->
+     CVar (gen_ident n)
+  | MGenericFunVar (id, _) ->
+     CCast (CVar (gen_mono_id id), fn_type)
+  | MConcreteFunVar (id, _) ->
+     CCast (CVar (gen_decl_id id), fn_type)
+  | MConcreteFuncall (id, _, args, _) ->
+     CFuncall (gen_decl_id id, List.map g args)
+  | MGenericFuncall (id, args, _) ->
+     CFuncall (gen_mono_id id, List.map g args)
+  | MConcreteMethodCall (id, _, args, _) ->
+     CFuncall (gen_ins_meth_id id, List.map g args)
+  | MGenericMethodCall (_, id, args, _) ->
+     CFuncall (gen_mono_id id, List.map g args)
+
+  ...
+```
 
 
 Something I want to improve in the future: right now each monomorph gets
