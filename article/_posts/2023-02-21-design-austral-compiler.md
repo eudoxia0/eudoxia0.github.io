@@ -433,6 +433,62 @@ let rec gen_exp (mn: module_name) (e: mexpr): c_expr =
   ...
 ```
 
+The only thing that is different is the one feature monomorphic Austral (i.e.,
+Austral with all generic functions and typeclass instances monomorphized) has
+that C does not: tagged unions.
+
+An Austral union like this:
+
+```austral
+union OptionalInt: Free is
+    case Present is
+        value: Int32;
+    case Absent;
+end;
+```
+
+Gets compiled into something like this:
+
+```c
+enum OptionalInt_tag {
+   PRESENT,
+   ABSENT
+}
+
+typedef struct {
+   OptionalInt_tag tag;
+   union {
+       struct { int32_t value; } Present;
+       struct {} Absent;
+   } data;
+} OptionalInt;
+```
+
+Then, a case statement like:
+
+```austral
+let opt: OptionalInt := Present(value => 123);
+case opt of
+    when Present(value: Int32) do
+        -- Do something with `value`.
+    when Absent do
+        -- Do something else.
+end case;
+```
+
+Gets compiled into:
+
+```c
+switch (opt.tag) {
+   case OptionalInt_tag.PRESENT:
+        int32_t value = opt.data.Present.value;
+        /* Do something with `value`. */
+        break;
+   case OptionalInt_tag.ABSENT:
+        /* Do something else. */
+        break;
+}
+```
 
 Something I want to improve in the future: right now each monomorph gets
 compiled to a function with the monomorph ID as the name, e.g.:
