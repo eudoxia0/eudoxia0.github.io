@@ -297,7 +297,7 @@ argument_list:
 
 ## Linearity Checking {#linearity}
 
-Describe [here](/article/how-australs-linear-type-checker-works).
+Described [here](/article/how-australs-linear-type-checker-works).
 
 ## Monomorphization {#mono}
 
