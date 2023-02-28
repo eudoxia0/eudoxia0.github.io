@@ -58,7 +58,7 @@ A while back I wrote a post on the [lessons I learnt writing the Austral compile
 # Requirements {#requirements}
 
 1. **Short Time to MVP:** it's a bootstrapping compiler, not a production compiler, so the goal is to be able to get to "Hello, world!" as early as possible. Consequently the implementation should be as simple and quick to implement as possible. As a result the compiler is just 12,000 lines of straightforward grugbrained OCaml.
-    
+
 1. **Readable:** the compiler is written in the least fanciful style of OCaml imaginable. There's no transdimensional optical profunctors or whatever Haskellers are up to.
 
 1. **Hackable:** languages evolve most in their early stages. Writing a highly-optimized production compiler would be premature if you end up having to throw out most of it because you changed your mind about some central language feature. So the compiler is designed to be hackable and gradually evolvable, at the expensive of semantics-specific optimizations and thus performance.
@@ -89,11 +89,95 @@ The frontend is the parser, which takes source code and turns it into the earlie
 ## The Concrete Syntax Tree {#cst}
 
 - simplest representation
+- just types
+`concrete_decl`
+`concrete_def`
+
+```ocaml
+and cexpr =
+  | CNilConstant of span
+  | CBoolConstant of span * bool
+  | CIntConstant of span * string
+  | CFloatConstant of span * string
+  | CStringConstant of span * string
+  | CVariable of span * identifier
+  | CArith of span * arithmetic_operator * cexpr * cexpr
+  | CFuncall of span * identifier * concrete_arglist
+  | CComparison of span * comparison_operator * cexpr * cexpr
+  | CConjunction of span * cexpr * cexpr
+  | CDisjunction of span * cexpr * cexpr
+  | CNegation of span * cexpr
+  | CIfExpression of span * cexpr * cexpr * cexpr
+  | CPath of span * cexpr * concrete_path_elem list
+  | CEmbed of span * typespec * string * cexpr list
+  | CDeref of span * cexpr
+  | CTypecast of span * cexpr * typespec
+  | CSizeOf of span * typespec
+  | CBorrowExpr of span * borrowing_mode * identifier
+```
+
+```ocaml
+and cstmt =
+  | CSkip of span
+  | CLet of span * identifier * typespec * cexpr
+  | CDestructure of span * concrete_binding list * cexpr
+  | CAssign of span * concrete_lvalue * cexpr
+  | CIf of span * cexpr * cstmt * cstmt
+  | CCase of span * cexpr * concrete_when list
+  | CWhile of span * cexpr * cstmt
+  | CFor of span * identifier * cexpr * cexpr * cstmt
+  | CBorrow of {
+      span: span;
+      original: identifier;
+      rename: identifier;
+      region: identifier;
+      body: cstmt;
+      mode: borrowing_mode
+    }
+  | CBlock of span * cstmt list
+  | CDiscarding of span * cexpr
+  | CReturn of span * cexpr
+```
+
+```ocaml
+and typespec =
+  | TypeSpecifier of identifier * typespec list
+  | ConcreteReadRef of typespec * typespec
+  | ConcreteWriteRef of typespec * typespec
+```
 
 ## Lexing {#lexing}
 
 - ocamllex
 - give example
+- `token` rule
+
+```ocaml
+rule token = parse
+  (* Comments *)
+  | comment { advance_line lexbuf; token lexbuf }
+  (* Brackets *)
+  | "(" { LPAREN }
+  | ")" { RPAREN }
+  | "[" { LBRACKET }
+  | "]" { RBRACKET }
+  | "{" { LCURLY }
+  | "}" { RCURLY }
+  (* Arithmetic operators *)
+  | "+" { PLUS }
+  | "-" { MINUS }
+  | "*" { MUL }
+  | "/" { DIV }
+  (* ... *)
+  | identifier { IDENTIFIER (Lexing.lexeme lexbuf) }
+  (* etc. *)
+  | whitespace { token lexbuf }
+  | newline { advance_line lexbuf; token lexbuf }
+  | eof { EOF }
+  | _ {err ("Character not allowed in source text: '" ^ Lexing.lexeme lexbuf ^ "'") }
+```
+
+`if x > 0` gets turned into the token stream `IF, IDENTIFIER "x", GREATER_THAN, INT "0"`.
 
 ## Parsing {#parsing}
 
@@ -102,6 +186,60 @@ The frontend is the parser, which takes source code and turns it into the earlie
     - production rule
     - input
     - example
+
+```ocaml
+/* Module interfaces and bodies */
+
+module_int:
+  | doc=docstringopt imports=import_stmt* MODULE
+    name=module_name IS decls=interface_decl*
+    END MODULE PERIOD EOF
+    { ConcreteModuleInterface (name, doc, imports, decls) }
+  ;
+
+module_body:
+  | doc=docstringopt imports=import_stmt* MODULE BODY
+    name=module_name IS pragmas=pragma* decls=body_decl*
+    END MODULE BODY PERIOD EOF
+    { make_module_body name imports pragmas decls doc }
+  ;
+```
+
+```ocaml
+atomic_expression:
+  | NIL { CNilConstant (from_loc $loc) }
+  | TRUE { CBoolConstant (from_loc $loc, true) }
+  | FALSE { CBoolConstant (from_loc $loc, false) }
+  | int_constant { $1 }
+  | float_constant { $1 }
+  | string_constant { $1 }
+  | path { $1 }
+  | variable { $1 }
+  | funcall { $1 }
+  | parenthesized_expr { $1 }
+  | intrinsic { $1 }
+  | SIZEOF LPAREN typespec RPAREN { CSizeOf (from_loc $loc, $3) }
+  | BORROW_READ identifier { CBorrowExpr (from_loc $loc, ReadBorrow, $2) }
+  | BORROW_WRITE identifier { CBorrowExpr (from_loc $loc, WriteBorrow, $2) }
+  | DEREF atomic_expression { CDeref (from_loc $loc, $2) }
+  ;
+```
+
+```ocaml
+funcall:
+  | identifier argument_list { CFuncall (from_loc $loc, $1, $2) }
+  ;
+
+parenthesized_expr:
+  | LPAREN expression RPAREN { $2 }
+  ;
+
+argument_list:
+  | LPAREN positional_arglist RPAREN { ConcretePositionalArgs $2 }
+  | LPAREN named_arglist RPAREN { ConcreteNamedArgs $2 }
+  | LPAREN RPAREN { ConcretePositionalArgs [] }
+  ;
+```
 
 ## Combining Pass {#combining}
 
