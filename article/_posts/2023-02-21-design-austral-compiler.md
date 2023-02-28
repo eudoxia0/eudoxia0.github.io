@@ -28,15 +28,16 @@ A while back I wrote a post on the [lessons I learnt writing the Austral compile
     4. [Combining Pass](#combining)
 6. [Core](#core)
     1. [Type Representation](#type)
-    2. [The Environment](#env)
-    3. [Import Resolution](#imports)
-    4. [The Abstract Syntax Tree](#ast)
-    5. [Abstraction Pass](#abst)
-    6. [Extraction Pass](#extract)
-    7. [Linked Representation](#linked)
-    8. [Typing Pass](#typing)
-    9. [Linearity Checking](#linearity)
-    10. [Monomorphization](#mono)
+    2. [Errors](#errors)
+    3. [The Environment](#env)
+    4. [Import Resolution](#imports)
+    5. [The Abstract Syntax Tree](#ast)
+    6. [Abstraction Pass](#abst)
+    7. [Extraction Pass](#extract)
+    8. [Linked Representation](#linked)
+    9. [Typing Pass](#typing)
+    10. [Linearity Checking](#linearity)
+    11. [Monomorphization](#mono)
 7. [Backend](#backend)
     1. [C Representation](#crepr)
     2. [Code Generation](#codegen)
@@ -289,6 +290,8 @@ argument_list:
 ## Type Representation {#type}
 
 - ty adt
+
+## Errors {#errors}
 
 ## The Environment {#env}
 
