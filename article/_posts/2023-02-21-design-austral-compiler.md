@@ -393,8 +393,20 @@ analogously.
     - compilation of structs
     - compilation of unions
     - compilation of case statements
-- future work
-    - context comments to identify what a monomorph is
+
+
+Something I want to improve in the future: right now each monomorph gets
+compiled to a function with the monomorph ID as the name, e.g.:
+
+```
+int mono_12() {
+  ...
+}
+```
+
+I'd like to add some more metadata to the compiled code, so there's at least a
+comment above the function that says which function or typeclass method this
+monomorph points to, and the type arguments it was called with.
 
 ## C Rendering {#crender}
 
