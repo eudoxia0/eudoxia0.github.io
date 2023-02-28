@@ -354,7 +354,37 @@ monomorphization in OCaml.
 
 ## C Representation {#crepr}
 
-- simple c ast
+The C AST is defined by the types in the `CRepr` module. This is more or less
+what you'd expect, for example, the type of C expressions is:
+
+```ocaml
+type c_expr =
+  | CBool of bool
+  | CInt of string
+  | CFloat of string
+  | CString of escaped_string
+  | CVar of string
+  | CFuncall of string * c_expr list
+  | CFptrCall of c_expr * c_ty * c_ty list * c_expr list
+  | CCast of c_expr * c_ty
+  | CArithmetic of arithmetic_operator * c_expr * c_expr
+  | CComparison of comparison_operator * c_expr * c_expr
+  | CConjunction of c_expr * c_expr
+  | CDisjunction of c_expr * c_expr
+  | CNegation of c_expr
+  | CIfExpression of c_expr * c_expr * c_expr
+  | CStructInitializer of (string * c_expr) list
+  | CStructAccessor of c_expr * string
+  | CPointerStructAccessor of c_expr * string
+  | CIndex of c_expr * c_expr
+  | CAddressOf of c_expr
+  | CEmbed of c_ty * string * c_expr list
+  | CDeref of c_expr
+  | CSizeOf of c_ty
+```
+
+The types for C type specifiers, statements, and declarations are defined
+analogously.
 
 ## Code Generation {#codegen}
 
