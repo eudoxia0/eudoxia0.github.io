@@ -13,25 +13,25 @@
                 {
                     "prompt": "Anubis in the style of Rembrandt, circa 1630, oil on canvas, from the Rijksmuseum.",
                     "files": [
-                        "best-of/anubis.png"
+                        "best-of/anubis.jpg"
                     ]
                 },
                 {
                     "prompt": "Alan Turing surrounded by a halo of Dyson spheres, 1899, oil on canvas, trending on ArtStation.",
                     "files": [
-                        "best-of/turing.png"
+                        "best-of/turing.jpg"
                     ]
                 },
                 {
                     "prompt": "Anubis lecturing on algebraic geometry, 1873, oil on canvas, from the Metropolitan Museum of Art.",
                     "files": [
-                        "best-of/algebraist.png"
+                        "best-of/algebraist.jpg"
                     ]
                 },
                 {
                     "prompt": "The stone where Nietzsche saw Zarathustra, Ivan Shishkin, 1893, oil on canvas, from the Musée du Louvre.",
                     "files": [
-                        "best-of/zarathustra.png"
+                        "best-of/zarathustra.jpg"
                     ]
                 }
             ]
