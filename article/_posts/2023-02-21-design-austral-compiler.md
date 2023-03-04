@@ -180,9 +180,49 @@ and cstmt =
 
 ## Lexing {#lexing}
 
-- ocamllex
-- give example
-- `token` rule
+Lexing turns a string into a stream of tokens. For example, a code fragment like `if x > 0` gets turned into the token stream `IF, IDENTIFIER "x", GREATER_THAN, DEC_CONSTANT "0"`.
+
+Tokens are defined, strangely, in the parser. Tokens that carry no information (like symbols are language keywords) are defined like this:
+
+```c
+/* Brackets */
+%token LPAREN
+%token RPAREN
+%token LBRACKET
+%token RBRACKET
+%token LCURLY
+%token RCURLY
+```
+
+Tokens that carry a value (like integer literals or identifiers) are defined like this:
+
+```c
+/* Strings and docstrings */
+%token <string> STRING_CONSTANT
+%token <string> TRIPLE_STRING_CONSTANT
+/* Identifiers and constants */
+...
+%token <string> DEC_CONSTANT
+%token <string> HEX_CONSTANT
+%token <string> BIN_CONSTANT
+%token <string> OCT_CONSTANT
+%token <string> CHAR_CONSTANT
+%token <string> FLOAT_CONSTANT
+%token <string> IDENTIFIER
+```
+
+Every `%token` declaration essentially corresponds to the constructors of a `token` sum type (which you don't define, but the parser defines it internally):
+
+```ocaml
+type token =
+  | LPAREN
+  | RPAREN
+  ...
+  | IDENTIFIER of string
+  | STRING_CONSTANT of string
+```
+
+The main part of the lexer is the `token` rule, which associates regular expressions with code that evaluates to a token:
 
 ```ocaml
 rule token = parse
@@ -208,8 +248,6 @@ rule token = parse
   | eof { EOF }
   | _ {err ("Character not allowed in source text: '" ^ Lexing.lexeme lexbuf ^ "'") }
 ```
-
-`if x > 0` gets turned into the token stream `IF, IDENTIFIER "x", GREATER_THAN, INT "0"`.
 
 ## Parsing {#parsing}
 
