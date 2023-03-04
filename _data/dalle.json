@@ -1,0 +1,443 @@
+{
+    "sections": [      
+        {
+            "id": "best",
+            "title": "Best Of",
+            "prompts": [
+                {
+                    "prompt": "A verdigris angel whose head is the Antikythera mechanism, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "best-of/angel.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Anubis in the style of Rembrandt, circa 1630, oil on canvas, from the Rijksmuseum.",
+                    "files": [
+                        "best-of/anubis.png"
+                    ]
+                },
+                {
+                    "prompt": "Alan Turing surrounded by a halo of Dyson spheres, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "best-of/turing.png"
+                    ]
+                },
+                {
+                    "prompt": "Anubis lecturing on algebraic geometry, 1873, oil on canvas, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "best-of/algebraist.png"
+                    ]
+                },
+                {
+                    "prompt": "The stone where Nietzsche saw Zarathustra, Ivan Shishkin, 1893, oil on canvas, from the Musée du Louvre.",
+                    "files": [
+                        "best-of/zarathustra.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "anachron",
+            "title": "Anachronistic Objects",
+            "prompts": [
+                {
+                    "prompt": "An ornate Persian miniature of an iron lung, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/iron-lung-1.png",
+                        "anachron/iron-lung-2.png",
+                        "anachron/iron-lung-3.png",
+                        "anachron/iron-lung-4.png",
+                        "anachron/iron-lung-5.png",
+                        "anachron/iron-lung-6.png"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of an electron beam lithography machine, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/lithography-1.png",
+                        "anachron/lithography-2.png",
+                        "anachron/lithography-3.png"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Mughal diagram of a heat exchanger, circa 1600, auctioned by Christie's.",
+                    "files": [
+                        "anachron/heat-exchanger-1.png",
+                        "anachron/heat-exchanger-2.png"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of a pump jack, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/pump-jack-1.png",
+                        "anachron/pump-jack-2.png",
+                        "anachron/pump-jack-3.png"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of an oil rig, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/oil-rig-1.png",
+                        "anachron/oil-rig-2.png",
+                        "anachron/oil-rig-3.png",
+                        "anachron/oil-rig-4.png",
+                        "anachron/oil-rig-5.png",
+                        "anachron/oil-rig-6.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "mali",
+            "title": "Malian Village",
+            "prompts": [
+                {
+                    "prompt": "Wepwawet, oil on canvas, 1899, trending on ArtStation.",
+                    "files": [
+                        "wepwawet/1.png",
+                        "wepwawet/2.png",
+                        "wepwawet/3.png",
+                        "wepwawet/4.png",
+                        "wepwawet/5.png",
+                        "wepwawet/6.png",
+                        "wepwawet/7.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "murals",
+            "title": "Murals",
+            "prompts": [
+                {
+                    "prompt": "The creation of the world, Diego Rivera, 1959, mural.",
+                    "files": [
+                        "rivera/creation-1.png",
+                        "rivera/creation-2.png",
+                        "rivera/creation-3.png",
+                        "rivera/creation-4.png"
+                    ]
+                },
+                {
+                    "prompt": "Man makes himself, William Blake, 1905, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "blake/1.png",
+                        "blake/2.png",
+                        "blake/3.png",
+                        "blake/4.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "flowers",
+            "title": "Flowers",
+            "prompts": [
+                {
+                    "prompt": "Flowers in the desert, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "flowers/desert-1.png",
+                        "flowers/desert-2.png",
+                        "flowers/desert-3.png",
+                        "flowers/desert-4.png",
+                        "flowers/desert-5.png",
+                        "flowers/desert-6.png"
+                    ]
+                },
+                {
+                    "prompt": "Flowers by a desert oasis under an azure sky, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "flowers/azure-1.png",
+                        "flowers/azure-2.png",
+                        "flowers/azure-3.png",
+                        "flowers/azure-4.png",
+                        "flowers/azure-5.png",
+                        "flowers/azure-6.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "kowloon",
+            "title": "The Kowloon Walled City",
+            "prompts": [
+                {
+                    "prompt": "Painting of an alley in the Kowloon Walled City, by Eugene Boudin, 1895, trending on ArtStation.",
+                    "files": [
+                        "kowloon/boudin-1.png",
+                        "kowloon/boudin-2.png",
+                        "kowloon/boudin-3.png"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, 1960, black and white photograph, trending on ArtStation.",
+                    "files": [
+                        "kowloon/bw-1.png",
+                        "kowloon/bw-2.png",
+                        "kowloon/bw-3.png",
+                        "kowloon/bw-4.png"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, by Maria Fortuny, 1850, oil on canvas, detailed, impressionistic, thick impasto, trending on ArtStation.",
+                    "files": [
+                        "kowloon/fortuny-1.png",
+                        "kowloon/fortuny-2.png",
+                        "kowloon/fortuny-3.png",
+                        "kowloon/fortuny-4.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "irem",
+            "title": "Irem",
+            "prompts": [
+                {
+                    "prompt": "Irem, John Singer Sargent, 1899, watercolor, ruins half-buried in a desert under a sky full of stars, auctioned by Christie's.",
+                    "files": [
+                        "irem/1.png",
+                        "irem/2.png",
+                        "irem/3.png",
+                        "irem/4.png",
+                        "irem/5.png",
+                        "irem/6.png",
+                        "irem/7.png",
+                        "irem/8.png",
+                        "irem/9.png",
+                        "irem/10.png",
+                        "irem/11.png",
+                        "irem/12.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sunrise",
+            "title": "Sunrise on Gliese 581c",
+            "prompts": [
+                {
+                    "prompt": "Sunrise on Gliese 581c, Winslow Homer, 1876, watercolor, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "sunrise/1.png",
+                        "sunrise/2.png",
+                        "sunrise/3.png",
+                        "sunrise/4.png",
+                        "sunrise/5.png",
+                        "sunrise/6.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "yellow",
+            "title": "Yellow",
+            "prompts": [
+                {
+                    "prompt": "The Stranger, 1961, blurry photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/stranger-1.png",
+                        "yellow/stranger-2.png",
+                        "yellow/stranger-3.png",
+                        "yellow/stranger-4.png",
+                        "yellow/stranger-5.png",
+                        "yellow/stranger-6.png"
+                    ]
+                },
+                {
+                    "prompt": "Dream Story, 1961, blurry black and white photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/dream-1.png",
+                        "yellow/dream-2.png",
+                        "yellow/dream-3.png",
+                        "yellow/dream-4.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "carcosa",
+            "title": "Carcosa",
+            "prompts": [
+                {
+                    "prompt": "Film still from Lost Carcosa, dir. Andrei Tarkovsky, 1984, from the National Film Registry.",
+                    "files": [
+                        "carcosa/a/1.png",
+                        "carcosa/a/2.png",
+                        "carcosa/a/3.png",
+                        "carcosa/a/4.png",
+                        "carcosa/a/5.png"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "carcosa/b/1.png",
+                        "carcosa/b/2.png",
+                        "carcosa/b/3.png",
+                        "carcosa/b/4.png",
+                        "carcosa/b/5.png",
+                        "carcosa/b/6.png"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, John Singer Sargent, 1876, oil on canvas, from the British Museum.",
+                    "files": [
+                        "carcosa/c/1.png",
+                        "carcosa/c/2.png"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, dir. Andrei Tarkovsky, 1981, black and white film still, from the National Film Registry.",
+                    "files": [
+                        "carcosa/d/1.png",
+                        "carcosa/d/2.png",
+                        "carcosa/d/3.png",
+                        "carcosa/d/4.png",
+                        "carcosa/d/5.png",
+                        "carcosa/d/6.png",
+                        "carcosa/d/7.png",
+                        "carcosa/d/8.png",
+                        "carcosa/d/9.png"
+                    ]
+                },
+                {
+                    "prompt": "Lost Carcosa, dir. Andrei Tarkovsky, 1984, film still, from the National Film Registry.",
+                    "files": [
+                        "carcosa/e/1.png",
+                        "carcosa/e/2.png",
+                        "carcosa/e/3.png",
+                        "carcosa/e/4.png",
+                        "carcosa/e/5.png",
+                        "carcosa/e/6.png",
+                        "carcosa/e/7.png",
+                        "carcosa/e/8.png",
+                        "carcosa/e/9.png",
+                        "carcosa/e/10.png",
+                        "carcosa/e/11.png",
+                        "carcosa/e/12.png",
+                    ]
+                },
+                {
+                    "prompt": "Dim Carcosa, yellow-tinted blurry photograph, 1961, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "carcosa/f/1.png",
+                        "carcosa/f/2.png",
+                        "carcosa/f/3.png",
+                        "carcosa/f/4.png",
+                        "carcosa/f/5.png",
+                        "carcosa/f/6.png"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, 1961, blurry amber tint photograph of a garnled tree, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "carcosa/g/1.png",
+                        "carcosa/g/2.png",
+                        "carcosa/g/3.png",
+                        "carcosa/g/4.png",
+                        "carcosa/g/5.png",
+                        "carcosa/g/6.png",
+                        "carcosa/g/7.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lovecraft",
+            "title": "Lovecraft",
+            "prompts": [
+                {
+                    "prompt": "Innsmouth, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/innsmouth/1.png",
+                        "lovecraft/innsmouth/2.png",
+                        "lovecraft/innsmouth/3.png",
+                        "lovecraft/innsmouth/4.png",
+                        "lovecraft/innsmouth/5.png",
+                        "lovecraft/innsmouth/6.png"
+                    ]
+                },
+                {
+                    "prompt": "At the Mountains of Madness, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/mountains/1.png",
+                        "lovecraft/mountains/2.png",
+                        "lovecraft/mountains/3.png",
+                        "lovecraft/mountains/4.png",
+                        "lovecraft/mountains/5.png"
+                    ]
+                },
+                {
+                    "prompt": "The Call of Cthulhu, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/call/call.png"
+                    ]
+                },
+                {
+                    "prompt": "Illustration for At the Mountains of Madness, H. P. Lovecraft, black and white, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "lovecraft/illustration/illustration.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "timon",
+            "title": "Timon of Athens",
+            "prompts": [
+                {
+                    "prompt": "Performance of Timon of Athens, Ilya Repin, 1905, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/ilya/1.png",
+                        "timon/ilya/2.png",
+                        "timon/ilya/3.png",
+                        "timon/ilya/4.png",
+                        "timon/ilya/5.png",
+                        "timon/ilya/6.png"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/malevich/1.png",
+                        "timon/malevich/2.png",
+                        "timon/malevich/3.png",
+                        "timon/malevich/4.png",
+                        "timon/malevich/5.png",
+                        "timon/malevich/6.png"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Jackson Pollock, 1948, abstract expressionism, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "timon/pollock/1.png",
+                        "timon/pollock/2.png",
+                        "timon/pollock/3.png",
+                        "timon/pollock/4.png",
+                        "timon/pollock/5.png",
+                        "timon/pollock/6.png"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, James Abbott McNeill Whistler, 1871, oil on canvas, from the British Museum.",
+                    "files": [
+                        "timon/whistler/1.png",
+                        "timon/whistler/2.png",
+                        "timon/whistler/3.png",
+                        "timon/whistler/4.png",
+                        "timon/whistler/5.png"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, 1888, oil on canvas, from the Musée du Louvre.",
+                    "files": [
+                        "timon/louvre/1.png",
+                        "timon/louvre/2.png",
+                        "timon/louvre/3.png"
+                    ]
+                }
+            ]
+        }
+    ]
+}
