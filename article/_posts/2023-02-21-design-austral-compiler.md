@@ -119,10 +119,14 @@ parser generator for OCaml, and the lexer is writting in [ocamllex][lex].
 
 ## The Concrete Syntax Tree {#cst}
 
-- simplest representation
-- just types
-`concrete_decl`
-`concrete_def`
+The concrete syntax tree is the first tree representation in the compiler, and the one closest to the original source code. It's defined in the Cst module and it's just a set of types. The main four types represent:
+
+- Module interface declarations.
+- Module body declarations.
+- Statements.
+- Expressions.
+
+And there's other auxiliary types. As an example, the sum type that represents expressions looks like this:
 
 ```ocaml
 and cexpr =
@@ -147,6 +151,10 @@ and cexpr =
   | CBorrowExpr of span * borrowing_mode * identifier
 ```
 
+Every case has a `span`, which carries source position information, and optionally other data. For example, an arithmetic expression `a+b` is represented by an instance of `CArith`, which has four values: the source span, the arithmetic operator `+`, and the expressions `a` and `b`.
+
+Analogously, `cstmt` is the type of concrete statements:
+
 ```ocaml
 and cstmt =
   | CSkip of span
@@ -168,13 +176,6 @@ and cstmt =
   | CBlock of span * cstmt list
   | CDiscarding of span * cexpr
   | CReturn of span * cexpr
-```
-
-```ocaml
-and typespec =
-  | TypeSpecifier of identifier * typespec list
-  | ConcreteReadRef of typespec * typespec
-  | ConcreteWriteRef of typespec * typespec
 ```
 
 ## Lexing {#lexing}
