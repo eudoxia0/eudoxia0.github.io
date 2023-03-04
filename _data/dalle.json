@@ -134,23 +134,33 @@
                 {
                     "prompt": "Flowers in the desert, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
                     "files": [
-                        "flowers/desert-1.png",
-                        "flowers/desert-2.png",
-                        "flowers/desert-3.png",
-                        "flowers/desert-4.png",
-                        "flowers/desert-5.png",
-                        "flowers/desert-6.png"
+                        "flowers/desert-1.jpg",
+                        "flowers/desert-2.jpg",
+                        "flowers/desert-3.jpg",
+                        "flowers/desert-4.jpg",
+                        "flowers/desert-5.jpg",
+                        "flowers/desert-6.jpg"
                     ]
                 },
                 {
                     "prompt": "Flowers by a desert oasis under an azure sky, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
                     "files": [
-                        "flowers/azure-1.png",
-                        "flowers/azure-2.png",
-                        "flowers/azure-3.png",
-                        "flowers/azure-4.png",
-                        "flowers/azure-5.png",
-                        "flowers/azure-6.png"
+                        "flowers/azure-1.jpg",
+                        "flowers/azure-2.jpg",
+                        "flowers/azure-3.jpg",
+                        "flowers/azure-4.jpg",
+                        "flowers/azure-5.jpg",
+                        "flowers/azure-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Realist watercolor sketch of blue flowers in a desert under a deep blue sky, 1891, auctioned by Christie's.",
+                    "files": [
+                        "flowers/blue-1.jpg",
+                        "flowers/blue-2.jpg",
+                        "flowers/blue-3.jpg",
+                        "flowers/blue-4.jpg",
+                        "flowers/blue-5.jpg"
                     ]
                 }
             ]
