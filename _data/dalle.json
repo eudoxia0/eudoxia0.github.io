@@ -112,19 +112,17 @@
                 {
                     "prompt": "The creation of the world, Diego Rivera, 1959, mural.",
                     "files": [
-                        "rivera/creation-1.png",
-                        "rivera/creation-2.png",
-                        "rivera/creation-3.png",
-                        "rivera/creation-4.png"
+                        "rivera/creation-1.jpg",
+                        "rivera/creation-2.jpg"
                     ]
                 },
                 {
                     "prompt": "Man makes himself, William Blake, 1905, watercolor, auctioned by Christie's.",
                     "files": [
-                        "blake/1.png",
-                        "blake/2.png",
-                        "blake/3.png",
-                        "blake/4.png"
+                        "blake/1.jpg",
+                        "blake/2.jpg",
+                        "blake/3.jpg",
+                        "blake/4.jpg"
                     ]
                 }
             ]
