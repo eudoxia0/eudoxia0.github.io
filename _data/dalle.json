@@ -172,27 +172,27 @@
                 {
                     "prompt": "Painting of an alley in the Kowloon Walled City, by Eugene Boudin, 1895, trending on ArtStation.",
                     "files": [
-                        "kowloon/boudin-1.png",
-                        "kowloon/boudin-2.png",
-                        "kowloon/boudin-3.png"
+                        "kowloon/boudin-1.jpg",
+                        "kowloon/boudin-2.jpg",
+                        "kowloon/boudin-3.jpg"
                     ]
                 },
                 {
                     "prompt": "An alley in the Kowloon Walled City, 1960, black and white photograph, trending on ArtStation.",
                     "files": [
-                        "kowloon/bw-1.png",
-                        "kowloon/bw-2.png",
-                        "kowloon/bw-3.png",
-                        "kowloon/bw-4.png"
+                        "kowloon/bw-1.jpg",
+                        "kowloon/bw-2.jpg",
+                        "kowloon/bw-3.jpg",
+                        "kowloon/bw-4.jpg"
                     ]
                 },
                 {
                     "prompt": "An alley in the Kowloon Walled City, by Maria Fortuny, 1850, oil on canvas, detailed, impressionistic, thick impasto, trending on ArtStation.",
                     "files": [
-                        "kowloon/fortuny-1.png",
-                        "kowloon/fortuny-2.png",
-                        "kowloon/fortuny-3.png",
-                        "kowloon/fortuny-4.png"
+                        "kowloon/fortuny-1.jpg",
+                        "kowloon/fortuny-2.jpg",
+                        "kowloon/fortuny-3.jpg",
+                        "kowloon/fortuny-4.jpg"
                     ]
                 }
             ]
