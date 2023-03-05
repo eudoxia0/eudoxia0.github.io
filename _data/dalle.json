@@ -92,6 +92,78 @@
                         "anachron/rig/oil-rig-5.jpg",
                         "anachron/rig/oil-rig-6.jpg"
                     ]
+                },
+                {
+                    "prompt": "3D printer, Paul Klee, 1929, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/3d/1.jpg",
+                        "anachron/klee/3d/2.jpg",
+                        "anachron/klee/3d/3.jpg",
+                        "anachron/klee/3d/4.jpg",
+                        "anachron/klee/3d/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Electron beam lithography machine, Paul Klee, 1929, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/ebl/1.jpg",
+                        "anachron/klee/ebl/2.jpg",
+                        "anachron/klee/ebl/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Electron microscope, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/em/1.jpg",
+                        "anachron/klee/em/2.jpg",
+                        "anachron/klee/em/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Diagram of a gas turbine, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/gas/1.jpg",
+                        "anachron/klee/gas/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Pump jack, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/pump/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/reactor/1.jpg",
+                        "anachron/klee/reactor/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Oil rig, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/rig/1.jpg",
+                        "anachron/klee/rig/2.jpg",
+                        "anachron/klee/rig/3.jpg",
+                        "anachron/klee/rig/4.jpg",
+                        "anachron/klee/rig/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "SR-71, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/sr71/1.jpg",
+                        "anachron/klee/sr71/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Voyager 2 probe, Paul Klee, 1921, auctioned by Sotheby's.",
+                    "files": [
+                        "anachron/klee/vy2/1.jpg",
+                        "anachron/klee/vy2/2.jpg",
+                        "anachron/klee/vy2/3.jpg",
+                        "anachron/klee/vy2/1.jpg"
+                    ]
                 }
             ]
         },
