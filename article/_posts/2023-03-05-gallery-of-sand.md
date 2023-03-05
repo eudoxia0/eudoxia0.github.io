@@ -28,6 +28,10 @@ Much of DALL-E's output is disappointing, but you can play into this: it's good 
 
 [ost]: https://en.wikipedia.org/wiki/Defamiliarization
 
+Most of these were posted on [this Twitter thread][thread] as I made them.
+
+[thread]: https://twitter.com/zetalyrae/status/1537354966658174976
+
 # Contents
 
 <ol>
