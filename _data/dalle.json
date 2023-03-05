@@ -793,6 +793,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "glass",
+            "title": "Glass",
+            "prompts": [
+                {
+                    "prompt": "Early color photograph of a birch forest, Sergey Prokudin-Gorsky, 1914, auctioned by Christie's.",
+                    "files": [
+                        "glass/1.jpg",
+                        "glass/2.jpg",
+                        "glass/3.jpg",
+                        "glass/4.jpg",
+                        "glass/5.jpg",
+                        "glass/6.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
