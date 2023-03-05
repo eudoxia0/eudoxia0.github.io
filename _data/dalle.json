@@ -473,6 +473,22 @@
                     "files": [
                         "circles/f/1.jpg"
                     ]
+                },
+                {
+                    "prompt": "A textureless black sphere floats mysteriously over a farm, black and white photograph, 1920",
+                    "files": [
+                        "circles/g/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A black punched hole floats mysteriously over a farm, black and white photograph, 1920",
+                    "files": [
+                        "circles/h/1.jpg",
+                        "circles/h/2.jpg",
+                        "circles/h/3.jpg",
+                        "circles/h/4.jpg",
+                        "circles/h/5.jpg"
+                    ]
                 }
             ]
         }
