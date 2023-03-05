@@ -1,0 +1,1182 @@
+{
+    "sections": [      
+        {
+            "id": "best",
+            "title": "Best Of",
+            "prompts": [
+                {
+                    "prompt": "A verdigris angel whose head is the Antikythera mechanism, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "best-of/angel.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Anubis in the style of Rembrandt, circa 1630, oil on canvas, from the Rijksmuseum.",
+                    "files": [
+                        "best-of/anubis.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Alan Turing surrounded by a halo of Dyson spheres, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "best-of/turing.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Anubis lecturing on algebraic geometry, 1873, oil on canvas, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "best-of/algebraist.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The stone where Nietzsche saw Zarathustra, Ivan Shishkin, 1893, oil on canvas, from the Musée du Louvre.",
+                    "files": [
+                        "best-of/zarathustra.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "anachron",
+            "title": "Anachronistic Objects",
+            "prompts": [
+                {
+                    "prompt": "An ornate Persian miniature of an iron lung, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/lung/iron-lung-1.jpg",
+                        "anachron/lung/iron-lung-2.jpg",
+                        "anachron/lung/iron-lung-3.jpg",
+                        "anachron/lung/iron-lung-5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of an electron beam lithography machine, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/electron/lithography-1.jpg",
+                        "anachron/electron/lithography-2.jpg",
+                        "anachron/electron/lithography-3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Mughal diagram of a heat exchanger, circa 1600, auctioned by Christie's.",
+                    "files": [
+                        "anachron/exchanger/heat-exchanger-1.jpg",
+                        "anachron/exchanger/heat-exchanger-2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of a pump jack, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/pump-persian/pump-jack-1.jpg",
+                        "anachron/pump-persian/pump-jack-2.jpg",
+                        "anachron/pump-persian/pump-jack-3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Pump jack, attributed to Rembrandt, circa. 1650, oil on canvas, from the British Museum.",
+                    "files": [
+                        "anachron/pump-rembrandt/1.jpg",
+                        "anachron/pump-rembrandt/2.jpg",
+                        "anachron/pump-rembrandt/3.jpg",
+                        "anachron/pump-rembrandt/4.jpg",
+                        "anachron/pump-rembrandt/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An ornate Persian miniature of an oil rig, Herat, circa 1300, auctioned by Christie's.",
+                    "files": [
+                        "anachron/rig/oil-rig-1.jpg",
+                        "anachron/rig/oil-rig-2.jpg",
+                        "anachron/rig/oil-rig-3.jpg",
+                        "anachron/rig/oil-rig-4.jpg",
+                        "anachron/rig/oil-rig-5.jpg",
+                        "anachron/rig/oil-rig-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "3D printer, Paul Klee, 1929, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/3d/1.jpg",
+                        "anachron/klee/3d/2.jpg",
+                        "anachron/klee/3d/3.jpg",
+                        "anachron/klee/3d/4.jpg",
+                        "anachron/klee/3d/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Electron beam lithography machine, Paul Klee, 1929, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/ebl/1.jpg",
+                        "anachron/klee/ebl/2.jpg",
+                        "anachron/klee/ebl/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Electron microscope, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/em/1.jpg",
+                        "anachron/klee/em/2.jpg",
+                        "anachron/klee/em/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Diagram of a gas turbine, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/gas/1.jpg",
+                        "anachron/klee/gas/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Pump jack, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/pump/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "anachron/klee/reactor/1.jpg",
+                        "anachron/klee/reactor/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Oil rig, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/rig/1.jpg",
+                        "anachron/klee/rig/2.jpg",
+                        "anachron/klee/rig/3.jpg",
+                        "anachron/klee/rig/4.jpg",
+                        "anachron/klee/rig/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "SR-71, Paul Klee, 1921, watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "anachron/klee/sr71/1.jpg",
+                        "anachron/klee/sr71/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Voyager 2 probe, Paul Klee, 1921, auctioned by Sotheby's.",
+                    "files": [
+                        "anachron/klee/vy2/1.jpg",
+                        "anachron/klee/vy2/2.jpg",
+                        "anachron/klee/vy2/3.jpg",
+                        "anachron/klee/vy2/4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "kowloon",
+            "title": "Kowloon",
+            "prompts": [
+                {
+                    "prompt": "Painting of an alley in the Kowloon Walled City, by Eugene Boudin, 1895, trending on ArtStation.",
+                    "files": [
+                        "kowloon/boudin-1.jpg",
+                        "kowloon/boudin-2.jpg",
+                        "kowloon/boudin-3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, 1960, black and white photograph, trending on ArtStation.",
+                    "files": [
+                        "kowloon/bw-1.jpg",
+                        "kowloon/bw-2.jpg",
+                        "kowloon/bw-3.jpg",
+                        "kowloon/bw-4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, by Maria Fortuny, 1850, oil on canvas, detailed, impressionistic, thick impasto, trending on ArtStation.",
+                    "files": [
+                        "kowloon/fortuny-1.jpg",
+                        "kowloon/fortuny-2.jpg",
+                        "kowloon/fortuny-3.jpg",
+                        "kowloon/fortuny-4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "flowers",
+            "title": "Flowers",
+            "prompts": [
+                {
+                    "prompt": "Flowers in the desert, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "flowers/desert-1.jpg",
+                        "flowers/desert-2.jpg",
+                        "flowers/desert-3.jpg",
+                        "flowers/desert-4.jpg",
+                        "flowers/desert-5.jpg",
+                        "flowers/desert-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Flowers by a desert oasis under an azure sky, 1893, John Singer Sargent, realist watercolor, from the Musée du Louvre.",
+                    "files": [
+                        "flowers/azure-1.jpg",
+                        "flowers/azure-2.jpg",
+                        "flowers/azure-3.jpg",
+                        "flowers/azure-4.jpg",
+                        "flowers/azure-5.jpg",
+                        "flowers/azure-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Realist watercolor sketch of blue flowers in a desert under a deep blue sky, 1891, auctioned by Christie's.",
+                    "files": [
+                        "flowers/blue-1.jpg",
+                        "flowers/blue-2.jpg",
+                        "flowers/blue-3.jpg",
+                        "flowers/blue-4.jpg",
+                        "flowers/blue-5.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "yellow",
+            "title": "Yellow",
+            "prompts": [
+                {
+                    "prompt": "The Stranger, 1961, blurry photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/stranger-1.jpg",
+                        "yellow/stranger-2.jpg",
+                        "yellow/stranger-3.jpg",
+                        "yellow/stranger-4.jpg",
+                        "yellow/stranger-5.jpg",
+                        "yellow/stranger-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Dream Story, 1961, blurry black and white photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/dream-1.jpg",
+                        "yellow/dream-2.jpg",
+                        "yellow/dream-3.jpg",
+                        "yellow/dream-4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "irem",
+            "title": "Irem",
+            "prompts": [
+                {
+                    "prompt": "Irem, John Singer Sargent, 1899, watercolor, ruins half-buried in a desert under a sky full of stars, auctioned by Christie's.",
+                    "files": [
+                        "irem/1.jpg",
+                        "irem/2.jpg",
+                        "irem/3.jpg",
+                        "irem/4.jpg",
+                        "irem/5.jpg",
+                        "irem/6.jpg",
+                        "irem/7.jpg",
+                        "irem/8.jpg",
+                        "irem/9.jpg",
+                        "irem/10.jpg",
+                        "irem/11.jpg",
+                        "irem/12.jpg"
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "carcosa",
+            "title": "Carcosa",
+            "prompts": [
+                {
+                    "prompt": "Film still from Lost Carcosa, dir. Andrei Tarkovsky, 1984, from the National Film Registry.",
+                    "files": [
+                        "carcosa/a/1.jpg",
+                        "carcosa/a/2.jpg",
+                        "carcosa/a/3.jpg",
+                        "carcosa/a/4.jpg",
+                        "carcosa/a/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "carcosa/b/1.jpg",
+                        "carcosa/b/2.jpg",
+                        "carcosa/b/3.jpg",
+                        "carcosa/b/4.jpg",
+                        "carcosa/b/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, John Singer Sargent, 1876, oil on canvas, from the British Museum.",
+                    "files": [
+                        "carcosa/c/1.jpg",
+                        "carcosa/c/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, dir. Andrei Tarkovsky, 1981, black and white film still, from the National Film Registry.",
+                    "files": [
+                        "carcosa/d/1.jpg",
+                        "carcosa/d/2.jpg",
+                        "carcosa/d/3.jpg",
+                        "carcosa/d/4.jpg",
+                        "carcosa/d/5.jpg",
+                        "carcosa/d/6.jpg",
+                        "carcosa/d/7.jpg",
+                        "carcosa/d/8.jpg",
+                        "carcosa/d/9.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Lost Carcosa, dir. Andrei Tarkovsky, 1984, film still, from the National Film Registry.",
+                    "files": [
+                        "carcosa/e/1.jpg",
+                        "carcosa/e/2.jpg",
+                        "carcosa/e/4.jpg",
+                        "carcosa/e/5.jpg",
+                        "carcosa/e/6.jpg",
+                        "carcosa/e/7.jpg",
+                        "carcosa/e/9.jpg",
+                        "carcosa/e/11.jpg",
+                        "carcosa/e/12.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Dim Carcosa, yellow-tinted blurry photograph, 1961, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "carcosa/f/1.jpg",
+                        "carcosa/f/2.jpg",
+                        "carcosa/f/3.jpg",
+                        "carcosa/f/4.jpg",
+                        "carcosa/f/5.jpg",
+                        "carcosa/f/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Carcosa, 1961, blurry amber tint photograph of a gnarled tree, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "carcosa/g/1.jpg",
+                        "carcosa/g/2.jpg",
+                        "carcosa/g/3.jpg",
+                        "carcosa/g/4.jpg",
+                        "carcosa/g/5.jpg",
+                        "carcosa/g/6.jpg",
+                        "carcosa/g/7.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lovecraft",
+            "title": "Lovecraft",
+            "prompts": [
+                {
+                    "prompt": "Innsmouth, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/innsmouth/1.jpg",
+                        "lovecraft/innsmouth/2.jpg",
+                        "lovecraft/innsmouth/3.jpg",
+                        "lovecraft/innsmouth/4.jpg",
+                        "lovecraft/innsmouth/5.jpg",
+                        "lovecraft/innsmouth/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "At the Mountains of Madness, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/mountains/1.jpg",
+                        "lovecraft/mountains/2.jpg",
+                        "lovecraft/mountains/3.jpg",
+                        "lovecraft/mountains/4.jpg",
+                        "lovecraft/mountains/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Call of Cthulhu, dir. Andrei Tarkovsky, 1984, film still from the National Film Registry.",
+                    "files": [
+                        "lovecraft/call/call.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Illustration for At the Mountains of Madness, H. P. Lovecraft, black and white, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "lovecraft/illustration/illustration.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "timon",
+            "title": "Timon of Athens",
+            "prompts": [
+                {
+                    "prompt": "Performance of Timon of Athens, Ilya Repin, 1905, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/ilya/2.jpg",
+                        "timon/ilya/3.jpg",
+                        "timon/ilya/5.jpg",
+                        "timon/ilya/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/malevich/2.jpg",
+                        "timon/malevich/3.jpg",
+                        "timon/malevich/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Jackson Pollock, 1948, abstract expressionism, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "timon/pollock/1.jpg",
+                        "timon/pollock/2.jpg",
+                        "timon/pollock/3.jpg",
+                        "timon/pollock/4.jpg",
+                        "timon/pollock/5.jpg",
+                        "timon/pollock/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, James Abbott McNeill Whistler, 1871, oil on canvas, from the British Museum.",
+                    "files": [
+                        "timon/whistler/1.jpg",
+                        "timon/whistler/2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "mali",
+            "title": "Malian Village",
+            "prompts": [
+                {
+                    "prompt": "Wepwawet, oil on canvas, 1899, trending on ArtStation.",
+                    "files": [
+                        "wepwawet/1.jpg",
+                        "wepwawet/2.jpg",
+                        "wepwawet/3.jpg",
+                        "wepwawet/4.jpg",
+                        "wepwawet/5.jpg",
+                        "wepwawet/6.jpg",
+                        "wepwawet/7.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sunrise",
+            "title": "Sunrise on Gliese 581c",
+            "prompts": [
+                {
+                    "prompt": "Sunrise on Gliese 581c, Winslow Homer, 1876, watercolor, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "sunrise/1.jpg",
+                        "sunrise/2.jpg",
+                        "sunrise/3.jpg",
+                        "sunrise/4.jpg",
+                        "sunrise/5.jpg",
+                        "sunrise/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "murals",
+            "title": "Murals",
+            "prompts": [
+                {
+                    "prompt": "The creation of the world, Diego Rivera, 1959, mural.",
+                    "files": [
+                        "rivera/creation-1.jpg",
+                        "rivera/creation-2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Man makes himself, William Blake, 1905, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "blake/1.jpg",
+                        "blake/2.jpg",
+                        "blake/3.jpg",
+                        "blake/4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sets",
+            "title": "Set Design",
+            "prompts": [
+                {
+                    "prompt": "Set design for The One Thousand and One Nights, Léon Bakst, 1912, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "set-design/bakst/1.jpg",
+                        "set-design/bakst/2.jpg",
+                        "set-design/bakst/3.jpg",
+                        "set-design/bakst/4.jpg",
+                        "set-design/bakst/5.jpg",
+                        "set-design/bakst/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, 1927, black and white photograph, German expressionism, from the British Museum.",
+                    "files": [
+                        "set-design/german/1.jpg",
+                        "set-design/german/2.jpg",
+                        "set-design/german/3.jpg",
+                        "set-design/german/4.jpg",
+                        "set-design/german/5.jpg",
+                        "set-design/german/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Paul Klee, 1921, watercolor, from the British Museum.",
+                    "files": [
+                        "set-design/klee/1.jpg",
+                        "set-design/klee/2.jpg",
+                        "set-design/klee/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for The One Thousand and One Nights, Gustave Moreau, 1876, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "set-design/moreau/1.jpg",
+                        "set-design/moreau/2.jpg",
+                        "set-design/moreau/3.jpg",
+                        "set-design/moreau/4.jpg",
+                        "set-design/moreau/5.jpg",
+                        "set-design/moreau/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Jeweled, ornate set design for Timon of Athens, Gustave Moreau, 1876, from the British Museum.",
+                    "files": [
+                        "set-design/moreau-timon/1.jpg",
+                        "set-design/moreau-timon/2.jpg",
+                        "set-design/moreau-timon/3.jpg",
+                        "set-design/moreau-timon/4.jpg",
+                        "set-design/moreau-timon/5.jpg",
+                        "set-design/moreau-timon/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Rembrandt, circa 1650, oil on canvas, from the Rijksmuseum.",
+                    "files": [
+                        "set-design/rembrandt/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Ivan Shishkin, 1876, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "set-design/shishkin/1.jpg",
+                        "set-design/shishkin/2.jpg",
+                        "set-design/shishkin/3.jpg",
+                        "set-design/shishkin/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, J. M. W. Turner, 1853, oil on canvas, from the British Museum.",
+                    "files": [
+                        "set-design/turner/1.jpg",
+                        "set-design/turner/2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "circles",
+            "title": "Circles",
+            "prompts": [
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a black circle punched through it, from the Library of Congress.",
+                    "files": [
+                        "circles/a/1.jpg",
+                        "circles/a/2.jpg",
+                        "circles/a/3.jpg",
+                        "circles/a/4.jpg",
+                        "circles/a/5.jpg",
+                        "circles/a/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a small black circle punched through it where the sky is, from the Library of Congress.",
+                    "files": [
+                        "circles/b/1.jpg",
+                        "circles/b/2.jpg",
+                        "circles/b/3.jpg",
+                        "circles/b/4.jpg",
+                        "circles/b/5.jpg",
+                        "circles/b/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a black circle punched through it, from the Library of Congress.",
+                    "files": [
+                        "circles/e/1.jpg",
+                        "circles/e/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A black circle floats mysteriously over a farm, black and white photograph, 1920.",
+                    "files": [
+                        "circles/f/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A textureless black sphere floats mysteriously over a farm, black and white photograph, 1920",
+                    "files": [
+                        "circles/g/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "A black punched hole floats mysteriously over a farm, black and white photograph, 1920",
+                    "files": [
+                        "circles/h/1.jpg",
+                        "circles/h/2.jpg",
+                        "circles/h/3.jpg",
+                        "circles/h/4.jpg",
+                        "circles/h/5.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tarkovsky",
+            "title": "Tarkovsky",
+            "prompts": [
+                {
+                    "prompt": "City of Darkness, dir. Andrei Tarkovsky, 1979, film still, alley in the Kowloon Walled City, from the National Film Registry.",
+                    "files": [
+                        "tarkovsky/1.jpg",
+                        "tarkovsky/2.jpg",
+                        "tarkovsky/3.jpg",
+                        "tarkovsky/4.jpg",
+                        "tarkovsky/5.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "magritte",
+            "title": "Magritte",
+            "prompts": [
+                {
+                    "prompt": "Hope, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/hope/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Bridge of Sighs, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/bridge/1.jpg",
+                        "magritte/bridge/2.jpg",
+                        "magritte/bridge/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Night Ocean, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/ocean/1.jpg",
+                        "magritte/ocean/2.jpg",
+                        "magritte/ocean/3.jpg",
+                        "magritte/ocean/4.jpg",
+                        "magritte/ocean/5.jpg",
+                        "magritte/ocean/6.jpg",
+                        "magritte/ocean/7.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Cove, René Magritte, 1950, oil on canvas, from the Musée Magritte.",
+                    "files": [
+                        "magritte/cove/1.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "klimt",
+            "title": "Klimt",
+            "prompts": [
+                {
+                    "prompt": "The Metamorphosis, Gustav Klimt, 1907, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "klimt/1.jpg",
+                        "klimt/2.jpg",
+                        "klimt/3.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bw",
+            "title": "Black and White",
+            "prompts": [
+                {
+                    "prompt": "Entrance to a dark cave, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/cave/1.jpg",
+                        "bw/cave/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Black, featureless jackal, black and white photograph, 1920, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "bw/jackal/1.jpg",
+                        "bw/jackal/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Pyramid half-buried in the desert, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/pyramid/1.jpg",
+                        "bw/pyramid/2.jpg",
+                        "bw/pyramid/3.jpg",
+                        "bw/pyramid/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Locomotive half-buried in the desert, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/train/1.jpg",
+                        "bw/train/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "I don't know how I reached the forest, black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/forest/2.jpg",
+                        "bw/forest/3.jpg",
+                        "bw/forest/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The first photograph of Earth taken from space, 1946, grainy black and white photograph, from the Smithsonian National Air and Space Museum.",
+                    "files": [
+                        "bw/earth/1.jpg",
+                        "bw/earth/2.jpg",
+                        "bw/earth/3.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "exclusion",
+            "title": "Exclusion Zone",
+            "prompts": [
+                {
+                    "prompt": "Figure 6 a shed in the exclusion zone showing abnormal lichen growths, black and white photograph, 1997.",
+                    "files": [
+                        "exclusion/shed/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Figure 3 A well in the exclusion zone showing abnormal fungal growths, black and white photograph, from the 6th Lake Baikal Expedition, 1993.",
+                    "files": [
+                        "exclusion/well/1.jpg",
+                        "exclusion/well/2.jpg",
+                        "exclusion/well/3.jpg",
+                        "exclusion/well/4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "time",
+            "title": "Time",
+            "prompts": [
+                {
+                    "prompt": "Time has ended, oil on canvas, 1905, trending on ArtStation.",
+                    "files": [
+                        "time/1.jpg",
+                        "time/2.jpg",
+                        "time/3.jpg",
+                        "time/4.jpg",
+                        "time/5.jpg",
+                        "time/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "neuromancer",
+            "title": "Neuromancer",
+            "prompts": [
+                {
+                    "prompt": "Cover for Neuromancer, Paul Klee, 1927, watercolor, from Wikipedia",
+                    "files": [
+                        "neuromancer/klee/1.jpg",
+                        "neuromancer/klee/2.jpg",
+                        "neuromancer/klee/3.jpg",
+                        "neuromancer/klee/4.jpg",
+                        "neuromancer/klee/5.jpg",
+                        "neuromancer/klee/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Cover for Neuromancer in the style of Kazimir Malevich, 1914, oil on canvas, from Wikipedia",
+                    "files": [
+                        "neuromancer/malevich/1.jpg",
+                        "neuromancer/malevich/2.jpg",
+                        "neuromancer/malevich/3.jpg",
+                        "neuromancer/malevich/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Andrei Tarkovsky, 1983, noir city landscape, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/noir/1.jpg",
+                        "neuromancer/noir/2.jpg",
+                        "neuromancer/noir/3.jpg",
+                        "neuromancer/noir/4.jpg",
+                        "neuromancer/noir/5.jpg",
+                        "neuromancer/noir/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Andrei Tarkovsky, 1983, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/tarkovsky/1.jpg",
+                        "neuromancer/tarkovsky/2.jpg",
+                        "neuromancer/tarkovsky/3.jpg",
+                        "neuromancer/tarkovsky/4.jpg",
+                        "neuromancer/tarkovsky/5.jpg",
+                        "neuromancer/tarkovsky/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Steven Soderbergh, 2002, city landscape, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/soderbergh/1.jpg",
+                        "neuromancer/soderbergh/2.jpg",
+                        "neuromancer/soderbergh/3.jpg",
+                        "neuromancer/soderbergh/4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "piranesi",
+            "title": "Piranesi",
+            "prompts": [
+                {
+                    "prompt": "The End of Days, Giovanni Battista Piranesi, 1755, engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/end/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Gate of God overlooking the night ocean, Giovanni Battista Piranesi, 1755, engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/gate/1.jpg",
+                        "piranesi/gate/2.jpg",
+                        "piranesi/gate/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Labyrinth, Giovanni Battista Piranesi, 1750, engraving, from the British Museum.",
+                    "files": [
+                        "piranesi/labyrinth/1.jpg",
+                        "piranesi/labyrinth/2.jpg",
+                        "piranesi/labyrinth/3.jpg",
+                        "piranesi/labyrinth/4.jpg",
+                        "piranesi/labyrinth/5.jpg",
+                        "piranesi/labyrinth/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Fractal prisons, Giovanni Battista Piranesi, 1755, detailed engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/prison/1.jpg",
+                        "piranesi/prison/2.jpg",
+                        "piranesi/prison/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Type VII U-boat, detailed cutaway, Giovanni Battista Piranesi, 1941, engraving, from the British Museum.",
+                    "files": [
+                        "piranesi/uboat/1.jpg",
+                        "piranesi/uboat/2.jpg",
+                        "piranesi/uboat/3.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "shishkin",
+            "title": "Shishkin",
+            "prompts": [
+                {
+                    "prompt": "A forest made of glass, Ivan Shishkin, 1889, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "shishkin/1.jpg",
+                        "shishkin/2.jpg",
+                        "shishkin/3.jpg",
+                        "shishkin/4.jpg",
+                        "shishkin/5.jpg",
+                        "shishkin/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lithium",
+            "title": "Lithium",
+            "prompts": [
+                {
+                    "prompt": "Nikolai Fedorov in a garden of lithium flowers at the end of time, 1895, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "lithium/1.jpg",
+                        "lithium/2.jpg",
+                        "lithium/3.jpg",
+                        "lithium/4.jpg",
+                        "lithium/5.jpg",
+                        "lithium/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "stars",
+            "title": "Stars",
+            "prompts": [
+                {
+                    "prompt": "A meteor streaks across a sky full of stars, grainy black and white photograph, 1963, from the British Museum.",
+                    "files": [
+                        "stars/1.jpg",
+                        "stars/2.jpg",
+                        "stars/3.jpg",
+                        "stars/4.jpg",
+                        "stars/5.jpg",
+                        "stars/6.jpg",
+                        "stars/7.jpg",
+                        "stars/8.jpg",
+                        "stars/9.jpg",
+                        "stars/10.jpg",
+                        "stars/11.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "glass",
+            "title": "Glass",
+            "prompts": [
+                {
+                    "prompt": "Early color photograph of a birch forest, Sergey Prokudin-Gorsky, 1914, auctioned by Christie's.",
+                    "files": [
+                        "glass/1.jpg",
+                        "glass/2.jpg",
+                        "glass/3.jpg",
+                        "glass/4.jpg",
+                        "glass/5.jpg",
+                        "glass/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "klee",
+            "title": "Klee",
+            "prompts": [
+                {
+                    "prompt": "A sextant in the style of Paul Klee, watercolor, 1921, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "klee/sextant-1/1.jpg",
+                        "klee/sextant-1/2.jpg",
+                        "klee/sextant-1/3.jpg",
+                        "klee/sextant-1/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Sextant, Paul Klee, watercolor, 1921, auctioned by Christie's.",
+                    "files": [
+                        "klee/sextant-2/1.jpg",
+                        "klee/sextant-2/2.jpg",
+                        "klee/sextant-2/3.jpg",
+                        "klee/sextant-2/4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sag",
+            "title": "Sagittarius",
+            "prompts": [
+                {
+                    "prompt": "Sagittarius, 1915, xenon on canvas, trending on ArtStation.",
+                    "files": [
+                        "sagittarius/1.jpg",
+                        "sagittarius/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Chiron, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "sagittarius/chiron1.jpg",
+                        "sagittarius/chiron2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "minotaur",
+            "title": "Minotaur",
+            "prompts": [
+                {
+                    "prompt": "Minotaur, Paul Klee, 1921, watercolor, from the British Museum.",
+                    "files": [
+                        "minotaur/klee/1.jpg",
+                        "minotaur/klee/2.jpg",
+                        "minotaur/klee/3.jpg",
+                        "minotaur/klee/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, Zdzisław Beksiński, 1978, oil on canvas, from the British Museum.",
+                    "files": [
+                        "minotaur/beksinski/1.jpg",
+                        "minotaur/beksinski/2.jpg",
+                        "minotaur/beksinski/3.jpg",
+                        "minotaur/beksinski/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, John William Waterhouse, 1889, oil on canvas, from the British Museum.",
+                    "files": [
+                        "minotaur/waterhouse/1.jpg",
+                        "minotaur/waterhouse/2.jpg",
+                        "minotaur/waterhouse/3.jpg",
+                        "minotaur/waterhouse/4.jpg",
+                        "minotaur/waterhouse/5.jpg",
+                        "minotaur/waterhouse/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "minotaur/stars/1.jpg",
+                        "minotaur/stars/2.jpg",
+                        "minotaur/stars/3.jpg",
+                        "minotaur/stars/4.jpg",
+                        "minotaur/stars/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "minotaur/malevich/1.jpg",
+                        "minotaur/malevich/2.jpg",
+                        "minotaur/malevich/3.jpg",
+                        "minotaur/malevich/4.jpg",
+                        "minotaur/malevich/5.jpg",
+                        "minotaur/malevich/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "malevich",
+            "title": "Malevich",
+            "prompts": [
+                {
+                    "prompt": "The end of the human era, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/end/1.jpg",
+                        "malevich/end/2.jpg",
+                        "malevich/end/3.jpg",
+                        "malevich/end/4.jpg",
+                        "malevich/end/5.jpg",
+                        "malevich/end/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The End of Days, Kazimir Malevich, 1914, oil on canvas, suprematism, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/end2/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Last and First Men, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/last/1.jpg",
+                        "malevich/last/2.jpg",
+                        "malevich/last/3.jpg",
+                        "malevich/last/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Star Gauge, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/star/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Troy, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/troy/1.jpg",
+                        "malevich/troy/2.jpg",
+                        "malevich/troy/3.jpg",
+                        "malevich/troy/4.jpg",
+                        "malevich/troy/5.jpg",
+                        "malevich/troy/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "muse",
+            "title": "Muse",
+            "prompts": [
+                {
+                    "prompt": "The Muse of Artificial Intelligence, 1881, oil on canvas, Pre-Raphaelite style, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "muse/a/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with mask and academic papers, 1881, oil on canvas, Pre-Raphaelite style, from the Metropolitan Museum of Art.jpg.",
+                    "files": [
+                        "muse/b/1.jpg",
+                        "muse/b/2.jpg",
+                        "muse/b/3.jpg",
+                        "muse/b/4.jpg",
+                        "muse/b/5.jpg",
+                        "muse/b/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with featureless mask and academic papers, John William Waterhouse, 1881, oil on canvas, Pre-Raphaelite style, fro.",
+                    "files": [
+                        "muse/c/1.jpg",
+                        "muse/c/2.jpg",
+                        "muse/c/3.jpg",
+                        "muse/c/4.jpg",
+                        "muse/c/5.jpg",
+                        "muse/c/6.jpg",
+                        "muse/c/7.jpg",
+                        "muse/c/8.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with plain ceramic mask and academic papers, John William Waterhouse, 1881, oil on canvas, Pre-Raphaelite style, f.",
+                    "files": [
+                        "muse/d/1.jpg",
+                        "muse/d/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with scientific papers, face obscured, John William Godward, 1903, oil on canvas, from the British Museum.",
+                    "files": [
+                        "muse/e/1.jpg"
+                    ]
+                }
+            ]
+        }
+    ]
+}

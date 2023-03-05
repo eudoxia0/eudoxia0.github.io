@@ -633,5 +633,36 @@ nav.chapter-nav {
     }
 }
 
+//
+// Gallery component
+//
+
+.prompt p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 1.2em 0;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    > .gallery-entry {
+        flex-basis: 33%;
+
+        @media (min-width: 501px) and (max-width: 768px) {
+            flex-basis: 50%;
+        }
+
+        @media (max-width: 500px) {
+            flex-basis: 100%;
+        }
+    }
+}
+
 // Uncomment the following to draw a grid on the page:
 //body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
