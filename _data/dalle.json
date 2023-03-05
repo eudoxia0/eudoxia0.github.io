@@ -1002,6 +1002,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "sag",
+            "title": "Sagittarius",
+            "prompts": [
+                {
+                    "prompt": "Sagittarius, 1915, xenon on canvas, trending on ArtStation.",
+                    "files": [
+                        "sagittarius/1.jpg",
+                        "sagittarius/2.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
