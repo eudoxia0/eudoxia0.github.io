@@ -73,6 +73,16 @@
                     ]
                 },
                 {
+                    "prompt": "Pump jack, attributed to Rembrandt, circa. 1650, oil on canvas, from the British Museum.",
+                    "files": [
+                        "anachron/pump-rembrandt/1.jpg",
+                        "anachron/pump-rembrandt/2.jpg",
+                        "anachron/pump-rembrandt/3.jpg",
+                        "anachron/pump-rembrandt/4.jpg",
+                        "anachron/pump-rembrandt/5.jpg"
+                    ]
+                },
+                {
                     "prompt": "An ornate Persian miniature of an oil rig, Herat, circa 1300, auctioned by Christie's.",
                     "files": [
                         "anachron/rig/oil-rig-1.jpg",
