@@ -25,13 +25,11 @@ summary: .
 
 <div class="gallery">
 {% for file in prompt.files %}
-
 <div class="gallery-entry">
 <a href="/assets/content/dall-e-explorations/{{ file }}">
 <img src="/assets/content/dall-e-explorations/{{ file }}">
 </a>
 </div>
-
 {% endfor %}
 </div>
 

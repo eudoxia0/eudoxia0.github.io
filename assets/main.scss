@@ -652,7 +652,15 @@ nav.chapter-nav {
 
 
     > .gallery-entry {
-        max-width: 33%;
+        flex-basis: 33%;
+
+        @media (min-width: 501px) and (max-width: 768px) {
+            flex-basis: 50%;
+        }
+
+        @media (max-width: 500px) {
+            flex-basis: 100%;
+        }
     }
 }
 
