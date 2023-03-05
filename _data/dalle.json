@@ -434,6 +434,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "circles",
+            "title": "Circles",
+            "prompts": [
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a black circle punched through it, from the Library of Congress.",
+                    "files": [
+                        "circles/a/1.jpg",
+                        "circles/a/2.jpg",
+                        "circles/a/3.jpg",
+                        "circles/a/4.jpg",
+                        "circles/a/5.jpg",
+                        "circles/a/6.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
