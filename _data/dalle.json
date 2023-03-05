@@ -616,6 +616,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "time",
+            "title": "Time",
+            "prompts": [
+                {
+                    "prompt": "Time has ended, oil on canvas, 1905, trending on ArtStation.",
+                    "files": [
+                        "time/1.jpg",
+                        "time/2.jpg",
+                        "time/3.jpg",
+                        "time/4.jpg",
+                        "time/5.jpg",
+                        "time/6.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
