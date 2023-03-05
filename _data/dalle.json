@@ -810,6 +810,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "tarkovsky",
+            "title": "Andrei Tarkovsky",
+            "prompts": [
+                {
+                    "prompt": "City of Darkness, dir. Andrei Tarkovsky, 1979, film still, alley in the Kowloon Walled City, from the National Film Registry.",
+                    "files": [
+                        "tarkovsky/1.jpg",
+                        "tarkovsky/2.jpg",
+                        "tarkovsky/3.jpg",
+                        "tarkovsky/4.jpg",
+                        "tarkovsky/5.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
