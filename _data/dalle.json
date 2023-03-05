@@ -264,46 +264,6 @@
             ]
         },
         {
-            "id": "mali",
-            "title": "Malian Village",
-            "prompts": [
-                {
-                    "prompt": "Wepwawet, oil on canvas, 1899, trending on ArtStation.",
-                    "files": [
-                        "wepwawet/1.jpg",
-                        "wepwawet/2.jpg",
-                        "wepwawet/3.jpg",
-                        "wepwawet/4.jpg",
-                        "wepwawet/5.jpg",
-                        "wepwawet/6.jpg",
-                        "wepwawet/7.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "murals",
-            "title": "Murals",
-            "prompts": [
-                {
-                    "prompt": "The creation of the world, Diego Rivera, 1959, mural.",
-                    "files": [
-                        "rivera/creation-1.jpg",
-                        "rivera/creation-2.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Man makes himself, William Blake, 1905, watercolor, auctioned by Christie's.",
-                    "files": [
-                        "blake/1.jpg",
-                        "blake/2.jpg",
-                        "blake/3.jpg",
-                        "blake/4.jpg"
-                    ]
-                }
-            ]
-        },
-        {
             "id": "irem",
             "title": "Irem",
             "prompts": [
@@ -451,6 +411,24 @@
             ]
         },
         {
+            "id": "mali",
+            "title": "Malian Village",
+            "prompts": [
+                {
+                    "prompt": "Wepwawet, oil on canvas, 1899, trending on ArtStation.",
+                    "files": [
+                        "wepwawet/1.jpg",
+                        "wepwawet/2.jpg",
+                        "wepwawet/3.jpg",
+                        "wepwawet/4.jpg",
+                        "wepwawet/5.jpg",
+                        "wepwawet/6.jpg",
+                        "wepwawet/7.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "sunrise",
             "title": "Sunrise on Gliese 581c",
             "prompts": [
@@ -463,6 +441,28 @@
                         "sunrise/4.jpg",
                         "sunrise/5.jpg",
                         "sunrise/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "murals",
+            "title": "Murals",
+            "prompts": [
+                {
+                    "prompt": "The creation of the world, Diego Rivera, 1959, mural.",
+                    "files": [
+                        "rivera/creation-1.jpg",
+                        "rivera/creation-2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Man makes himself, William Blake, 1905, watercolor, auctioned by Christie's.",
+                    "files": [
+                        "blake/1.jpg",
+                        "blake/2.jpg",
+                        "blake/3.jpg",
+                        "blake/4.jpg"
                     ]
                 }
             ]
