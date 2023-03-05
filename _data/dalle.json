@@ -578,6 +578,22 @@
                         "bw/train/2.jpg"
                     ]
                 },
+                {
+                    "prompt": "I don't know how I reached the forest, black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/forest/2.jpg",
+                        "bw/forest/3.jpg",
+                        "bw/forest/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The first photograph of Earth taken from space, 1946, grainy black and white photograph, from the Smithsonian National Air and Space Museum.",
+                    "files": [
+                        "bw/earth/1.jpg",
+                        "bw/earth/2.jpg",
+                        "bw/earth/3.jpg"
+                    ]
+                }
             ]
         }
     ]
