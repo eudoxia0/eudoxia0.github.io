@@ -424,14 +424,6 @@
                         "timon/whistler/1.jpg",
                         "timon/whistler/2.jpg"
                     ]
-                },
-                {
-                    "prompt": "Performance of Timon of Athens, 1888, oil on canvas, from the Musée du Louvre.",
-                    "files": [
-                        "timon/louvre/1.jpg",
-                        "timon/louvre/2.jpg",
-                        "timon/louvre/3.jpg"
-                    ]
                 }
             ]
         }
