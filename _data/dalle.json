@@ -467,6 +467,12 @@
                         "circles/e/1.jpg",
                         "circles/e/2.jpg"
                     ]
+                },
+                {
+                    "prompt": "A black circle floats mysteriously over a farm, black and white photograph, 1920.",
+                    "files": [
+                        "circles/f/1.jpg"
+                    ]
                 }
             ]
         }
