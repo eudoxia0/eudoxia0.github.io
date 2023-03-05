@@ -595,6 +595,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "exclusion",
+            "title": "Exclusion Zone",
+            "prompts": [
+                {
+                    "prompt": "Figure 6 a shed in the exclusion zone showing abnormal lichen growths, black and white photograph, 1997.",
+                    "files": [
+                        "exclusion/shed/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Figure 3 A well in the exclusion zone showing abnormal fungal growths, black and white photograph, from the 6th Lake Baikal Expedition, 1993.",
+                    "files": [
+                        "exclusion/well/1.jpg",
+                        "exclusion/well/2.jpg",
+                        "exclusion/well/3.jpg",
+                        "exclusion/well/4.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
