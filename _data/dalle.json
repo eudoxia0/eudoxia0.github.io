@@ -491,6 +491,44 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "magritte",
+            "title": "Magritte",
+            "prompts": [
+                {
+                    "prompt": "Hope, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/hope/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Bridge of Sighs, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/bridge/1.jpg",
+                        "magritte/bridge/2.jpg",
+                        "magritte/bridge/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Night Ocean, René Magritte, 1950, oil on canvas, from the Musées Royaux des Beaux-Arts.",
+                    "files": [
+                        "magritte/ocean/1.jpg",
+                        "magritte/ocean/2.jpg",
+                        "magritte/ocean/3.jpg",
+                        "magritte/ocean/4.jpg",
+                        "magritte/ocean/5.jpg",
+                        "magritte/ocean/6.jpg",
+                        "magritte/ocean/7.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Cove, René Magritte, 1950, oil on canvas, from the Musée Magritte.",
+                    "files": [
+                        "magritte/cove/1.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
