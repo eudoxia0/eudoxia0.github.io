@@ -1,6 +1,6 @@
 ---
 title: The Gallery of Sand
-summary: .
+summary: Sampling image space with DALL-E.
 ---
 
 This is a collection of images I made with [DALL-E][dalle]. Most of these were made between late June and early July 2022.
