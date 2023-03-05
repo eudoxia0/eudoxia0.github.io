@@ -1,6 +1,9 @@
 ---
 title: The Gallery of Sand
 summary: Sampling image space with DALL-E.
+card: gallery-of-sand.jpg
+card_source: |
+    "The Mirror-Like Surface, Eugénie Ogilvy, 1879, watercolor sketch of the sea from Birgu at night, from the Musée du Louvre", DALL-E, June 2022.
 ---
 
 This is a collection of images I made with [DALL-E][dalle]. Most of these were made between late June and early July 2022.
