@@ -75,12 +75,12 @@
                 {
                     "prompt": "An ornate Persian miniature of an oil rig, Herat, circa 1300, auctioned by Christie's.",
                     "files": [
-                        "anachron/oil-rig-1.png",
-                        "anachron/oil-rig-2.png",
-                        "anachron/oil-rig-3.png",
-                        "anachron/oil-rig-4.png",
-                        "anachron/oil-rig-5.png",
-                        "anachron/oil-rig-6.png"
+                        "anachron/rig/oil-rig-1.jpg",
+                        "anachron/rig/oil-rig-2.jpg",
+                        "anachron/rig/oil-rig-3.jpg",
+                        "anachron/rig/oil-rig-4.jpg",
+                        "anachron/rig/oil-rig-5.jpg",
+                        "anachron/rig/oil-rig-6.jpg"
                     ]
                 }
             ]
