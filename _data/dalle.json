@@ -43,12 +43,10 @@
                 {
                     "prompt": "An ornate Persian miniature of an iron lung, Herat, circa 1300, auctioned by Christie's.",
                     "files": [
-                        "anachron/iron-lung-1.png",
-                        "anachron/iron-lung-2.png",
-                        "anachron/iron-lung-3.png",
-                        "anachron/iron-lung-4.png",
-                        "anachron/iron-lung-5.png",
-                        "anachron/iron-lung-6.png"
+                        "anachron/lung/iron-lung-1.jpg",
+                        "anachron/lung/iron-lung-2.jpg",
+                        "anachron/lung/iron-lung-3.jpg",
+                        "anachron/lung/iron-lung-5.jpg"
                     ]
                 },
                 {
