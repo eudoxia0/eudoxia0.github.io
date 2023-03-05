@@ -460,6 +460,13 @@
                         "circles/b/5.jpg",
                         "circles/b/6.jpg"
                     ]
+                },
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a black circle punched through it, from the Library of Congress.",
+                    "files": [
+                        "circles/e/1.jpg",
+                        "circles/e/2.jpg"
+                    ]
                 }
             ]
         }
