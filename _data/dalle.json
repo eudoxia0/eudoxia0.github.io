@@ -326,23 +326,7 @@
                 }
             ]
         },
-        {
-            "id": "sunrise",
-            "title": "Sunrise on Gliese 581c",
-            "prompts": [
-                {
-                    "prompt": "Sunrise on Gliese 581c, Winslow Homer, 1876, watercolor, from the Metropolitan Museum of Art.",
-                    "files": [
-                        "sunrise/1.jpg",
-                        "sunrise/2.jpg",
-                        "sunrise/3.jpg",
-                        "sunrise/4.jpg",
-                        "sunrise/5.jpg",
-                        "sunrise/6.jpg"
-                    ]
-                }
-            ]
-        },
+
         {
             "id": "carcosa",
             "title": "Carcosa",
@@ -462,6 +446,23 @@
                     "prompt": "Illustration for At the Mountains of Madness, H. P. Lovecraft, black and white, from the Metropolitan Museum of Art.",
                     "files": [
                         "lovecraft/illustration/illustration.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sunrise",
+            "title": "Sunrise on Gliese 581c",
+            "prompts": [
+                {
+                    "prompt": "Sunrise on Gliese 581c, Winslow Homer, 1876, watercolor, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "sunrise/1.jpg",
+                        "sunrise/2.jpg",
+                        "sunrise/3.jpg",
+                        "sunrise/4.jpg",
+                        "sunrise/5.jpg",
+                        "sunrise/6.jpg"
                     ]
                 }
             ]
