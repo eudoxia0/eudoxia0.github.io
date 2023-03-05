@@ -1015,6 +1015,55 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "malevich",
+            "title": "Malevich",
+            "prompts": [
+                {
+                    "prompt": "The end of the human era, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/end/1.jpg",
+                        "malevich/end/2.jpg",
+                        "malevich/end/3.jpg",
+                        "malevich/end/4.jpg",
+                        "malevich/end/5.jpg",
+                        "malevich/end/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The End of Days, Kazimir Malevich, 1914, oil on canvas, suprematism, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/end2/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Last and First Men, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/last/1.jpg",
+                        "malevich/last/2.jpg",
+                        "malevich/last/3.jpg",
+                        "malevich/last/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Star Gauge, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/star/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Troy, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "malevich/troy/1.jpg",
+                        "malevich/troy/2.jpg",
+                        "malevich/troy/3.jpg",
+                        "malevich/troy/4.jpg",
+                        "malevich/troy/5.jpg",
+                        "malevich/troy/6.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
