@@ -755,5 +755,22 @@
                 }
             ]
         },
+        {
+            "id": "lithium",
+            "title": "Lithium",
+            "prompts": [
+                {
+                    "prompt": "Nikolai Fedorov in a garden of lithium flowers at the end of time, 1895, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "lithium/1.jpg",
+                        "lithium/2.jpg",
+                        "lithium/3.jpg",
+                        "lithium/4.jpg",
+                        "lithium/5.jpg",
+                        "lithium/6.jpg"
+                    ]
+                }
+            ]
+        }
     ]
 }
