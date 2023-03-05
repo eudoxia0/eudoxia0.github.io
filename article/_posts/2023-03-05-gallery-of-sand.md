@@ -17,6 +17,8 @@ e.g.:
 
 >Forest and Exit Wounds, Paul Klee, watercolor, 1927, from the British Museum.
 
+This works mainly by lowering your expectations: images have too many degrees of freedom to be described. Citing them is more like drilling core samples from latent space, and less like specifying every feature of the image you want.
+
 Many of the prompts are anachronistic: I wanted DALL-E to try and imagine what an electron beam lithography machine would look like as a Persian miniature from medieval Herat, for example.
 
 Much of DALL-E's output is disappointing, but you can play into this: it's good at impressionism, abstraction, and [ostranenie][ost].
