@@ -1024,6 +1024,62 @@
             ]
         },
         {
+            "id": "minotaur",
+            "title": "Minotaur",
+            "prompts": [
+                {
+                    "prompt": "Minotaur, Paul Klee, 1921, watercolor, from the British Museum.",
+                    "files": [
+                        "minotaur/klee/1.jpg",
+                        "minotaur/klee/2.jpg",
+                        "minotaur/klee/3.jpg",
+                        "minotaur/klee/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, Zdzisław Beksiński, 1978, oil on canvas, from the British Museum.",
+                    "files": [
+                        "minotaur/beksinski/1.jpg",
+                        "minotaur/beksinski/2.jpg",
+                        "minotaur/beksinski/3.jpg",
+                        "minotaur/beksinski/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, John William Waterhouse, 1889, oil on canvas, from the British Museum.",
+                    "files": [
+                        "minotaur/waterhouse/1.jpg",
+                        "minotaur/waterhouse/2.jpg",
+                        "minotaur/waterhouse/3.jpg",
+                        "minotaur/waterhouse/4.jpg",
+                        "minotaur/waterhouse/5.jpg",
+                        "minotaur/waterhouse/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur made of stars, 1899, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "minotaur/stars/1.jpg",
+                        "minotaur/stars/2.jpg",
+                        "minotaur/stars/3.jpg",
+                        "minotaur/stars/4.jpg",
+                        "minotaur/stars/5.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Minotaur, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "minotaur/malevich/1.jpg",
+                        "minotaur/malevich/2.jpg",
+                        "minotaur/malevich/3.jpg",
+                        "minotaur/malevich/4.jpg",
+                        "minotaur/malevich/5.jpg",
+                        "minotaur/malevich/6.jpg"
+                    ]
+                },
+            ]
+        },
+        {
             "id": "malevich",
             "title": "Malevich",
             "prompts": [
