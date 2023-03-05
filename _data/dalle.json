@@ -530,7 +530,6 @@
                 }
             ]
         },
-
         {
             "id": "klimt",
             "title": "Klimt",
@@ -541,6 +540,19 @@
                         "klimt/1.jpg",
                         "klimt/2.jpg",
                         "klimt/3.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bw",
+            "title": "Black and White",
+            "prompts": [
+                {
+                    "prompt": "Entrance to a dark cave, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/cave/1.jpg",
+                        "bw/cave/2.jpg"
                     ]
                 }
             ]
