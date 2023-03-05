@@ -5,9 +5,13 @@ summary: .
 
 # Contents
 
+<ol>
 {% for section in site.data.dalle.sections %}
-1. [{{ section.title }}](#{{ section.id }})
+<li>
+<a href="#{{ section.id }}">{{ section.title }}</a>
+</li>
 {% endfor %}
+</ol>
 
 {% for section in site.data.dalle.sections %}
 
