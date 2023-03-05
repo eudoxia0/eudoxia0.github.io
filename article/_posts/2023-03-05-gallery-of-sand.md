@@ -1,5 +1,5 @@
 ---
-title: DALL-E Explorations
+title: The Gallery of Sand
 summary: .
 ---
 
