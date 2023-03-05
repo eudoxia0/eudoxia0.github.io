@@ -449,6 +449,17 @@
                         "circles/a/5.jpg",
                         "circles/a/6.jpg"
                     ]
+                },
+                {
+                    "prompt": "A black and white photograph of a farm in 1920, with a small black circle punched through it where the sky is, from the Library of Congress.",
+                    "files": [
+                        "circles/b/1.jpg",
+                        "circles/b/2.jpg",
+                        "circles/b/3.jpg",
+                        "circles/b/4.jpg",
+                        "circles/b/5.jpg",
+                        "circles/b/6.jpg"
+                    ]
                 }
             ]
         }
