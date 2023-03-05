@@ -737,6 +737,23 @@
                     ]
                 }
             ]
-        }
+        },
+        {
+            "id": "shishkin",
+            "title": "Shishkin",
+            "prompts": [
+                {
+                    "prompt": "A forest made of glass, Ivan Shishkin, 1889, oil on canvas, trending on ArtStation.",
+                    "files": [
+                        "shishkin/1.jpg",
+                        "shishkin/2.jpg",
+                        "shishkin/3.jpg",
+                        "shishkin/4.jpg",
+                        "shishkin/5.jpg",
+                        "shishkin/6.jpg"
+                    ]
+                }
+            ]
+        },
     ]
 }
