@@ -28,9 +28,11 @@ Much of DALL-E's output is disappointing, but you can play into this: it's good 
 
 [ost]: https://en.wikipedia.org/wiki/Defamiliarization
 
-Most of these were posted on [this Twitter thread][thread] as I made them.
+Most of these were posted on [this Twitter thread][thread] as I made them. For a brief review, see [War and Theatre #004][substack] by [Mónica Belevan][monica].
 
 [thread]: https://twitter.com/zetalyrae/status/1537354966658174976
+[monica]: https://covidianaesthetics.substack.com/
+[substack]: https://covidianaesthetics.substack.com/p/kunstlosigkeit-or-fully-algorithmic
 
 # Contents
 
