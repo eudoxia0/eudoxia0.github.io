@@ -1076,7 +1076,7 @@
                         "minotaur/malevich/5.jpg",
                         "minotaur/malevich/6.jpg"
                     ]
-                },
+                }
             ]
         },
         {
@@ -1124,6 +1124,55 @@
                         "malevich/troy/4.jpg",
                         "malevich/troy/5.jpg",
                         "malevich/troy/6.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "muse",
+            "title": "Muse",
+            "prompts": [
+                {
+                    "prompt": "The Muse of Artificial Intelligence, 1881, oil on canvas, Pre-Raphaelite style, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "muse/a/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with mask and academic papers, 1881, oil on canvas, Pre-Raphaelite style, from the Metropolitan Museum of Art.jpg.",
+                    "files": [
+                        "muse/b/1.jpg",
+                        "muse/b/2.jpg",
+                        "muse/b/3.jpg",
+                        "muse/b/4.jpg",
+                        "muse/b/5.jpg",
+                        "muse/b/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with featureless mask and academic papers, John William Waterhouse, 1881, oil on canvas, Pre-Raphaelite style, fro.",
+                    "files": [
+                        "muse/c/1.jpg",
+                        "muse/c/2.jpg",
+                        "muse/c/3.jpg",
+                        "muse/c/4.jpg",
+                        "muse/c/5.jpg",
+                        "muse/c/6.jpg",
+                        "muse/c/7.jpg",
+                        "muse/c/8.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with plain ceramic mask and academic papers, John William Waterhouse, 1881, oil on canvas, Pre-Raphaelite style, f.",
+                    "files": [
+                        "muse/d/1.jpg",
+                        "muse/d/2.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Muse of Artificial Intelligence with scientific papers, face obscured, John William Godward, 1903, oil on canvas, from the British Museum.",
+                    "files": [
+                        "muse/e/1.jpg"
                     ]
                 }
             ]
