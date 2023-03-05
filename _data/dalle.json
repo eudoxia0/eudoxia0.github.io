@@ -238,6 +238,32 @@
             ]
         },
         {
+            "id": "yellow",
+            "title": "Yellow",
+            "prompts": [
+                {
+                    "prompt": "The Stranger, 1961, blurry photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/stranger-1.jpg",
+                        "yellow/stranger-2.jpg",
+                        "yellow/stranger-3.jpg",
+                        "yellow/stranger-4.jpg",
+                        "yellow/stranger-5.jpg",
+                        "yellow/stranger-6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Dream Story, 1961, blurry black and white photograph, yellow tint, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "yellow/dream-1.jpg",
+                        "yellow/dream-2.jpg",
+                        "yellow/dream-3.jpg",
+                        "yellow/dream-4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "mali",
             "title": "Malian Village",
             "prompts": [
@@ -313,32 +339,6 @@
                         "sunrise/4.jpg",
                         "sunrise/5.jpg",
                         "sunrise/6.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "yellow",
-            "title": "Yellow",
-            "prompts": [
-                {
-                    "prompt": "The Stranger, 1961, blurry photograph, yellow tint, from the Metropolitan Museum of Art.",
-                    "files": [
-                        "yellow/stranger-1.jpg",
-                        "yellow/stranger-2.jpg",
-                        "yellow/stranger-3.jpg",
-                        "yellow/stranger-4.jpg",
-                        "yellow/stranger-5.jpg",
-                        "yellow/stranger-6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Dream Story, 1961, blurry black and white photograph, yellow tint, from the Metropolitan Museum of Art.",
-                    "files": [
-                        "yellow/dream-1.jpg",
-                        "yellow/dream-2.jpg",
-                        "yellow/dream-3.jpg",
-                        "yellow/dream-4.jpg"
                     ]
                 }
             ]
