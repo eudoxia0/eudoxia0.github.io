@@ -561,6 +561,15 @@
                         "bw/jackal/1.jpg",
                         "bw/jackal/2.jpg"
                     ]
+                },
+                {
+                    "prompt": "Pyramid half-buried in the desert, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/pyramid/1.jpg",
+                        "bw/pyramid/2.jpg",
+                        "bw/pyramid/3.jpg",
+                        "bw/pyramid/4.jpg"
+                    ]
                 }
             ]
         }
