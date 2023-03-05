@@ -410,30 +410,30 @@
                 {
                     "prompt": "Performance of Timon of Athens, Jackson Pollock, 1948, abstract expressionism, from the Metropolitan Museum of Art.",
                     "files": [
-                        "timon/pollock/1.png",
-                        "timon/pollock/2.png",
-                        "timon/pollock/3.png",
-                        "timon/pollock/4.png",
-                        "timon/pollock/5.png",
-                        "timon/pollock/6.png"
+                        "timon/pollock/1.jpg",
+                        "timon/pollock/2.jpg",
+                        "timon/pollock/3.jpg",
+                        "timon/pollock/4.jpg",
+                        "timon/pollock/5.jpg",
+                        "timon/pollock/6.jpg"
                     ]
                 },
                 {
                     "prompt": "Performance of Timon of Athens, James Abbott McNeill Whistler, 1871, oil on canvas, from the British Museum.",
                     "files": [
-                        "timon/whistler/1.png",
-                        "timon/whistler/2.png",
-                        "timon/whistler/3.png",
-                        "timon/whistler/4.png",
-                        "timon/whistler/5.png"
+                        "timon/whistler/1.jpg",
+                        "timon/whistler/2.jpg",
+                        "timon/whistler/3.jpg",
+                        "timon/whistler/4.jpg",
+                        "timon/whistler/5.jpg"
                     ]
                 },
                 {
                     "prompt": "Performance of Timon of Athens, 1888, oil on canvas, from the Musée du Louvre.",
                     "files": [
-                        "timon/louvre/1.png",
-                        "timon/louvre/2.png",
-                        "timon/louvre/3.png"
+                        "timon/louvre/1.jpg",
+                        "timon/louvre/2.jpg",
+                        "timon/louvre/3.jpg"
                     ]
                 }
             ]
