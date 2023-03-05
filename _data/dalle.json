@@ -570,7 +570,14 @@
                         "bw/pyramid/3.jpg",
                         "bw/pyramid/4.jpg"
                     ]
-                }
+                },
+                {
+                    "prompt": "Locomotive half-buried in the desert, south Egypt, 1921, grainy black and white photograph, from the British Museum.",
+                    "files": [
+                        "bw/train/1.jpg",
+                        "bw/train/2.jpg"
+                    ]
+                },
             ]
         }
     ]
