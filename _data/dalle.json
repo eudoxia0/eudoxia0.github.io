@@ -411,6 +411,47 @@
             ]
         },
         {
+            "id": "timon",
+            "title": "Timon of Athens",
+            "prompts": [
+                {
+                    "prompt": "Performance of Timon of Athens, Ilya Repin, 1905, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/ilya/2.jpg",
+                        "timon/ilya/3.jpg",
+                        "timon/ilya/5.jpg",
+                        "timon/ilya/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "timon/malevich/2.jpg",
+                        "timon/malevich/3.jpg",
+                        "timon/malevich/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, Jackson Pollock, 1948, abstract expressionism, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "timon/pollock/1.jpg",
+                        "timon/pollock/2.jpg",
+                        "timon/pollock/3.jpg",
+                        "timon/pollock/4.jpg",
+                        "timon/pollock/5.jpg",
+                        "timon/pollock/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Performance of Timon of Athens, James Abbott McNeill Whistler, 1871, oil on canvas, from the British Museum.",
+                    "files": [
+                        "timon/whistler/1.jpg",
+                        "timon/whistler/2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "mali",
             "title": "Malian Village",
             "prompts": [
@@ -463,47 +504,6 @@
                         "blake/2.jpg",
                         "blake/3.jpg",
                         "blake/4.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "timon",
-            "title": "Timon of Athens",
-            "prompts": [
-                {
-                    "prompt": "Performance of Timon of Athens, Ilya Repin, 1905, oil on canvas, from Mikhailovsky Palace.",
-                    "files": [
-                        "timon/ilya/2.jpg",
-                        "timon/ilya/3.jpg",
-                        "timon/ilya/5.jpg",
-                        "timon/ilya/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Performance of Timon of Athens, Kazimir Malevich, 1914, oil on canvas, from Mikhailovsky Palace.",
-                    "files": [
-                        "timon/malevich/2.jpg",
-                        "timon/malevich/3.jpg",
-                        "timon/malevich/4.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Performance of Timon of Athens, Jackson Pollock, 1948, abstract expressionism, from the Metropolitan Museum of Art.",
-                    "files": [
-                        "timon/pollock/1.jpg",
-                        "timon/pollock/2.jpg",
-                        "timon/pollock/3.jpg",
-                        "timon/pollock/4.jpg",
-                        "timon/pollock/5.jpg",
-                        "timon/pollock/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Performance of Timon of Athens, James Abbott McNeill Whistler, 1871, oil on canvas, from the British Museum.",
-                    "files": [
-                        "timon/whistler/1.jpg",
-                        "timon/whistler/2.jpg"
                     ]
                 }
             ]
