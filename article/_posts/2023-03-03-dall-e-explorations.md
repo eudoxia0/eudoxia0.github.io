@@ -37,23 +37,3 @@ summary: .
 
 {% endfor %}
 {% endfor %}
-
-<style>
-.prompt p {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 1.2em 0;
-}
-
-.gallery {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery-entry {
-    max-width: 33%;
-}
-</style>
