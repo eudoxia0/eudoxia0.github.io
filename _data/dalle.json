@@ -554,6 +554,13 @@
                         "bw/cave/1.jpg",
                         "bw/cave/2.jpg"
                     ]
+                },
+                {
+                    "prompt": "Black, featureless jackal, black and white photograph, 1920, from the Metropolitan Museum of Art.",
+                    "files": [
+                        "bw/jackal/1.jpg",
+                        "bw/jackal/2.jpg"
+                    ]
                 }
             ]
         }
