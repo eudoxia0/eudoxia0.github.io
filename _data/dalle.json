@@ -633,6 +633,63 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "neuromancer",
+            "title": "Neuromancer",
+            "prompts": [
+                {
+                    "prompt": "Cover for Neuromancer, Paul Klee, 1927, watercolor, from Wikipedia",
+                    "files": [
+                        "neuromancer/klee/1.jpg",
+                        "neuromancer/klee/2.jpg",
+                        "neuromancer/klee/3.jpg",
+                        "neuromancer/klee/4.jpg",
+                        "neuromancer/klee/5.jpg",
+                        "neuromancer/klee/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Cover for Neuromancer in the style of Kazimir Malevich, 1914, oil on canvas, from Wikipedia",
+                    "files": [
+                        "neuromancer/malevich/1.jpg",
+                        "neuromancer/malevich/2.jpg",
+                        "neuromancer/malevich/3.jpg",
+                        "neuromancer/malevich/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Andrei Tarkovsky, 1983, noir city landscape, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/noir/1.jpg",
+                        "neuromancer/noir/2.jpg",
+                        "neuromancer/noir/3.jpg",
+                        "neuromancer/noir/4.jpg",
+                        "neuromancer/noir/5.jpg",
+                        "neuromancer/noir/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Andrei Tarkovsky, 1983, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/tarkovsky/1.jpg",
+                        "neuromancer/tarkovsky/2.jpg",
+                        "neuromancer/tarkovsky/3.jpg",
+                        "neuromancer/tarkovsky/4.jpg",
+                        "neuromancer/tarkovsky/5.jpg",
+                        "neuromancer/tarkovsky/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Neuromancer, dir. Steven Soderbergh, 2002, city landscape, film still from the National Film Registry",
+                    "files": [
+                        "neuromancer/soderbergh/1.jpg",
+                        "neuromancer/soderbergh/2.jpg",
+                        "neuromancer/soderbergh/3.jpg",
+                        "neuromancer/soderbergh/4.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
