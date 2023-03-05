@@ -1013,6 +1013,13 @@
                         "sagittarius/1.jpg",
                         "sagittarius/2.jpg"
                     ]
+                },
+                {
+                    "prompt": "Chiron, Kazimir Malevich, 1910, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "sagittarius/chiron1.jpg",
+                        "sagittarius/chiron2.jpg"
+                    ]
                 }
             ]
         },
