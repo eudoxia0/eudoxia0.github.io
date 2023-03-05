@@ -771,6 +771,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "stars",
+            "title": "Stars",
+            "prompts": [
+                {
+                    "prompt": "A meteor streaks across a sky full of stars, grainy black and white photograph, 1963, from the British Museum.",
+                    "files": [
+                        "stars/1.jpg",
+                        "stars/2.jpg",
+                        "stars/3.jpg",
+                        "stars/4.jpg",
+                        "stars/5.jpg",
+                        "stars/6.jpg",
+                        "stars/7.jpg",
+                        "stars/8.jpg",
+                        "stars/9.jpg",
+                        "stars/10.jpg",
+                        "stars/11.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
