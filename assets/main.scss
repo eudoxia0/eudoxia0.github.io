@@ -649,10 +649,11 @@ nav.chapter-nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
 
-.gallery-entry {
-    max-width: 33%;
+
+    > .gallery-entry {
+        max-width: 33%;
+    }
 }
 
 // Uncomment the following to draw a grid on the page:
