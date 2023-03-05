@@ -509,6 +509,86 @@
             ]
         },
         {
+            "id": "sets",
+            "title": "Set Design",
+            "prompts": [
+                {
+                    "prompt": "Set design for The One Thousand and One Nights, Léon Bakst, 1912, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "set-design/bakst/1.jpg",
+                        "set-design/bakst/2.jpg",
+                        "set-design/bakst/3.jpg",
+                        "set-design/bakst/4.jpg",
+                        "set-design/bakst/5.jpg",
+                        "set-design/bakst/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, 1927, black and white photograph, German expressionism, from the British Museum.",
+                    "files": [
+                        "set-design/german/1.jpg",
+                        "set-design/german/2.jpg",
+                        "set-design/german/3.jpg",
+                        "set-design/german/4.jpg",
+                        "set-design/german/5.jpg",
+                        "set-design/german/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Paul Klee, 1921, watercolor, from the British Museum.",
+                    "files": [
+                        "set-design/klee/1.jpg",
+                        "set-design/klee/2.jpg",
+                        "set-design/klee/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for The One Thousand and One Nights, Gustave Moreau, 1876, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "set-design/moreau/1.jpg",
+                        "set-design/moreau/2.jpg",
+                        "set-design/moreau/3.jpg",
+                        "set-design/moreau/4.jpg",
+                        "set-design/moreau/5.jpg",
+                        "set-design/moreau/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Jeweled, ornate set design for Timon of Athens, Gustave Moreau, 1876, from the British Museum.",
+                    "files": [
+                        "set-design/moreau-timon/1.jpg",
+                        "set-design/moreau-timon/2.jpg",
+                        "set-design/moreau-timon/3.jpg",
+                        "set-design/moreau-timon/4.jpg",
+                        "set-design/moreau-timon/5.jpg",
+                        "set-design/moreau-timon/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Rembrandt, circa 1650, oil on canvas, from the Rijksmuseum.",
+                    "files": [
+                        "set-design/rembrandt/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, Ivan Shishkin, 1876, oil on canvas, from Mikhailovsky Palace.",
+                    "files": [
+                        "set-design/shishkin/1.jpg",
+                        "set-design/shishkin/2.jpg",
+                        "set-design/shishkin/3.jpg",
+                        "set-design/shishkin/4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Set design for Timon of Athens, J. M. W. Turner, 1853, oil on canvas, from the British Museum.",
+                    "files": [
+                        "set-design/turner/1.jpg",
+                        "set-design/turner/2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "circles",
             "title": "Circles",
             "prompts": [
@@ -896,86 +976,6 @@
                         "tarkovsky/3.jpg",
                         "tarkovsky/4.jpg",
                         "tarkovsky/5.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "sets",
-            "title": "Set Design",
-            "prompts": [
-                {
-                    "prompt": "Set design for The One Thousand and One Nights, Léon Bakst, 1912, oil on canvas, auctioned by Christie's.",
-                    "files": [
-                        "set-design/bakst/1.jpg",
-                        "set-design/bakst/2.jpg",
-                        "set-design/bakst/3.jpg",
-                        "set-design/bakst/4.jpg",
-                        "set-design/bakst/5.jpg",
-                        "set-design/bakst/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for Timon of Athens, 1927, black and white photograph, German expressionism, from the British Museum.",
-                    "files": [
-                        "set-design/german/1.jpg",
-                        "set-design/german/2.jpg",
-                        "set-design/german/3.jpg",
-                        "set-design/german/4.jpg",
-                        "set-design/german/5.jpg",
-                        "set-design/german/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for Timon of Athens, Paul Klee, 1921, watercolor, from the British Museum.",
-                    "files": [
-                        "set-design/klee/1.jpg",
-                        "set-design/klee/2.jpg",
-                        "set-design/klee/3.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for The One Thousand and One Nights, Gustave Moreau, 1876, oil on canvas, auctioned by Christie's.",
-                    "files": [
-                        "set-design/moreau/1.jpg",
-                        "set-design/moreau/2.jpg",
-                        "set-design/moreau/3.jpg",
-                        "set-design/moreau/4.jpg",
-                        "set-design/moreau/5.jpg",
-                        "set-design/moreau/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Jeweled, ornate set design for Timon of Athens, Gustave Moreau, 1876, from the British Museum.",
-                    "files": [
-                        "set-design/moreau-timon/1.jpg",
-                        "set-design/moreau-timon/2.jpg",
-                        "set-design/moreau-timon/3.jpg",
-                        "set-design/moreau-timon/4.jpg",
-                        "set-design/moreau-timon/5.jpg",
-                        "set-design/moreau-timon/6.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for Timon of Athens, Rembrandt, circa 1650, oil on canvas, from the Rijksmuseum.",
-                    "files": [
-                        "set-design/rembrandt/1.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for Timon of Athens, Ivan Shishkin, 1876, oil on canvas, from Mikhailovsky Palace.",
-                    "files": [
-                        "set-design/shishkin/1.jpg",
-                        "set-design/shishkin/2.jpg",
-                        "set-design/shishkin/3.jpg",
-                        "set-design/shishkin/4.jpg"
-                    ]
-                },
-                {
-                    "prompt": "Set design for Timon of Athens, J. M. W. Turner, 1853, oil on canvas, from the British Museum.",
-                    "files": [
-                        "set-design/turner/1.jpg",
-                        "set-design/turner/2.jpg"
                     ]
                 }
             ]
