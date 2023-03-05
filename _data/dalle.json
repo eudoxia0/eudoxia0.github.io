@@ -690,6 +690,53 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "piranesi",
+            "title": "Piranesi",
+            "prompts": [
+                {
+                    "prompt": "The End of Days, Giovanni Battista Piranesi, 1755, engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/end/1.jpg"
+                    ]
+                },
+                {
+                    "prompt": "The Gate of God overlooking the night ocean, Giovanni Battista Piranesi, 1755, engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/gate/1.jpg",
+                        "piranesi/gate/2.jpg",
+                        "piranesi/gate/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Labyrinth, Giovanni Battista Piranesi, 1750, engraving, from the British Museum.",
+                    "files": [
+                        "piranesi/labyrinth/1.jpg",
+                        "piranesi/labyrinth/2.jpg",
+                        "piranesi/labyrinth/3.jpg",
+                        "piranesi/labyrinth/4.jpg",
+                        "piranesi/labyrinth/5.jpg",
+                        "piranesi/labyrinth/6.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Fractal prisons, Giovanni Battista Piranesi, 1755, detailed engraving, from Mikhailovsky Palace.",
+                    "files": [
+                        "piranesi/prison/1.jpg",
+                        "piranesi/prison/2.jpg",
+                        "piranesi/prison/3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "Type VII U-boat, detailed cutaway, Giovanni Battista Piranesi, 1941, engraving, from the British Museum.",
+                    "files": [
+                        "piranesi/uboat/1.jpg",
+                        "piranesi/uboat/2.jpg",
+                        "piranesi/uboat/3.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
