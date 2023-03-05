@@ -244,21 +244,21 @@
                 {
                     "prompt": "The Stranger, 1961, blurry photograph, yellow tint, from the Metropolitan Museum of Art.",
                     "files": [
-                        "yellow/stranger-1.png",
-                        "yellow/stranger-2.png",
-                        "yellow/stranger-3.png",
-                        "yellow/stranger-4.png",
-                        "yellow/stranger-5.png",
-                        "yellow/stranger-6.png"
+                        "yellow/stranger-1.jpg",
+                        "yellow/stranger-2.jpg",
+                        "yellow/stranger-3.jpg",
+                        "yellow/stranger-4.jpg",
+                        "yellow/stranger-5.jpg",
+                        "yellow/stranger-6.jpg"
                     ]
                 },
                 {
                     "prompt": "Dream Story, 1961, blurry black and white photograph, yellow tint, from the Metropolitan Museum of Art.",
                     "files": [
-                        "yellow/dream-1.png",
-                        "yellow/dream-2.png",
-                        "yellow/dream-3.png",
-                        "yellow/dream-4.png"
+                        "yellow/dream-1.jpg",
+                        "yellow/dream-2.jpg",
+                        "yellow/dream-3.jpg",
+                        "yellow/dream-4.jpg"
                     ]
                 }
             ]
