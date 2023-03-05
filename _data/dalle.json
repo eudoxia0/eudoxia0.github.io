@@ -646,6 +646,22 @@
             ]
         },
         {
+            "id": "tarkovsky",
+            "title": "Tarkovsky",
+            "prompts": [
+                {
+                    "prompt": "City of Darkness, dir. Andrei Tarkovsky, 1979, film still, alley in the Kowloon Walled City, from the National Film Registry.",
+                    "files": [
+                        "tarkovsky/1.jpg",
+                        "tarkovsky/2.jpg",
+                        "tarkovsky/3.jpg",
+                        "tarkovsky/4.jpg",
+                        "tarkovsky/5.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "magritte",
             "title": "Magritte",
             "prompts": [
@@ -960,22 +976,6 @@
                         "glass/4.jpg",
                         "glass/5.jpg",
                         "glass/6.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "tarkovsky",
-            "title": "Tarkovsky",
-            "prompts": [
-                {
-                    "prompt": "City of Darkness, dir. Andrei Tarkovsky, 1979, film still, alley in the Kowloon Walled City, from the National Film Registry.",
-                    "files": [
-                        "tarkovsky/1.jpg",
-                        "tarkovsky/2.jpg",
-                        "tarkovsky/3.jpg",
-                        "tarkovsky/4.jpg",
-                        "tarkovsky/5.jpg"
                     ]
                 }
             ]
