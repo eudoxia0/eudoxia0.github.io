@@ -529,6 +529,21 @@
                     ]
                 }
             ]
+        },
+
+        {
+            "id": "klimt",
+            "title": "Klimt",
+            "prompts": [
+                {
+                    "prompt": "The Metamorphosis, Gustav Klimt, 1907, oil on canvas, auctioned by Christie's.",
+                    "files": [
+                        "klimt/1.jpg",
+                        "klimt/2.jpg",
+                        "klimt/3.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
