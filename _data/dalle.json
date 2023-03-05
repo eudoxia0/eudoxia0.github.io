@@ -168,6 +168,38 @@
             ]
         },
         {
+            "id": "kowloon",
+            "title": "The Kowloon Walled City",
+            "prompts": [
+                {
+                    "prompt": "Painting of an alley in the Kowloon Walled City, by Eugene Boudin, 1895, trending on ArtStation.",
+                    "files": [
+                        "kowloon/boudin-1.jpg",
+                        "kowloon/boudin-2.jpg",
+                        "kowloon/boudin-3.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, 1960, black and white photograph, trending on ArtStation.",
+                    "files": [
+                        "kowloon/bw-1.jpg",
+                        "kowloon/bw-2.jpg",
+                        "kowloon/bw-3.jpg",
+                        "kowloon/bw-4.jpg"
+                    ]
+                },
+                {
+                    "prompt": "An alley in the Kowloon Walled City, by Maria Fortuny, 1850, oil on canvas, detailed, impressionistic, thick impasto, trending on ArtStation.",
+                    "files": [
+                        "kowloon/fortuny-1.jpg",
+                        "kowloon/fortuny-2.jpg",
+                        "kowloon/fortuny-3.jpg",
+                        "kowloon/fortuny-4.jpg"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "mali",
             "title": "Malian Village",
             "prompts": [
@@ -241,38 +273,6 @@
                         "flowers/blue-3.jpg",
                         "flowers/blue-4.jpg",
                         "flowers/blue-5.jpg"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "kowloon",
-            "title": "The Kowloon Walled City",
-            "prompts": [
-                {
-                    "prompt": "Painting of an alley in the Kowloon Walled City, by Eugene Boudin, 1895, trending on ArtStation.",
-                    "files": [
-                        "kowloon/boudin-1.jpg",
-                        "kowloon/boudin-2.jpg",
-                        "kowloon/boudin-3.jpg"
-                    ]
-                },
-                {
-                    "prompt": "An alley in the Kowloon Walled City, 1960, black and white photograph, trending on ArtStation.",
-                    "files": [
-                        "kowloon/bw-1.jpg",
-                        "kowloon/bw-2.jpg",
-                        "kowloon/bw-3.jpg",
-                        "kowloon/bw-4.jpg"
-                    ]
-                },
-                {
-                    "prompt": "An alley in the Kowloon Walled City, by Maria Fortuny, 1850, oil on canvas, detailed, impressionistic, thick impasto, trending on ArtStation.",
-                    "files": [
-                        "kowloon/fortuny-1.jpg",
-                        "kowloon/fortuny-2.jpg",
-                        "kowloon/fortuny-3.jpg",
-                        "kowloon/fortuny-4.jpg"
                     ]
                 }
             ]
