@@ -710,5 +710,11 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    idea, of all things, from [Inform 7][i7], which is far from a normal
    programming language but their error output has always been lovely.
 
+1. **JSON Error Reporting:** this is for the end-to-end tests. Right now, tests
+   of programs that are expected to fail to compile just assert that the
+   compiler produces a particular message. This is not robust to changes in the
+   error reporting format. So I'd like to add JSON error reporting that just
+   produces a reliably structured message for the end-to-end tests or for
+   clients to parse the errors if they want to.
 
 [i7]: https://ganelson.github.io/inform-website/
