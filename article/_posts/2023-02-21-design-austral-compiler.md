@@ -405,11 +405,9 @@ end combined module.
 
 # Core {#core}
 
-- environment
-  - decls are stored
-- typing
-- linearity
-- monomorphization
+The core is the largest part of the compiler. It contains the environment, where
+declarations are stored, and the type checking, linearity checking, and
+monomorphization passes.
 
 ## Type Representation {#type}
 
