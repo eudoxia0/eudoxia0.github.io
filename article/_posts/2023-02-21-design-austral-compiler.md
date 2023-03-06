@@ -703,3 +703,12 @@ The [test runner][runner] is a simple Python program that walks the test folder 
 [runner]: https://github.com/austral/austral/blob/96f007fd9bad0ad8070669acb9757231d785b4b8/test-programs/runner.py
 
 # Future Work {#future}
+
+In addition to many bug fixes, these are some things I plan to do with the compiler in the future:
+
+1. **HTML Error Reporting:** because terminals are incredibly anemic. I got the
+   idea, of all things, from [Inform 7][i7], which is far from a normal
+   programming language but their error output has always been lovely.
+
+
+[i7]: https://ganelson.github.io/inform-website/
