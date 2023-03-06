@@ -47,10 +47,8 @@ compiler][lessons]. This post is a more detailed walkthrough of the
     1. [C Representation](#crepr)
     2. [Code Generation](#codegen)
     3. [C Rendering](#crender)
-8. [Built-In Modules](#builtins)
-9. [The Entrypoint](#entrypoint)
-10. [Testing](#testing)
-11. [Future Work](#future)
+8. [Testing](#testing)
+9. [Future Work](#future)
 
 # Why OCaml? {#why}
 
@@ -676,10 +674,6 @@ let rec render_unit (CUnit (name, decls)): string =
   ^ (String.concat "\n\n" (List.map rd decls))
   ^ "\n/* --- END translation unit for module '" ^ name ^ "' --- */\n"
 ```
-
-# Built-In Modules {#builtin}
-
-# The Entrypoint {#entrypoint}
 
 # Testing {#testing}
 
