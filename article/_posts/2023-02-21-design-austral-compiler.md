@@ -415,6 +415,16 @@ monomorphization passes.
 
 ## Errors {#errors}
 
+- structured text
+  - err_text type
+  - console output
+  - html output
+- errors are structured
+  - source location
+  - text
+- exceptions carry errors
+  - adorn functions
+
 ## The Environment {#env}
 
 - env interface
