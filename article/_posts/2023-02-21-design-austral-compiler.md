@@ -717,4 +717,8 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    produces a reliably structured message for the end-to-end tests or for
    clients to parse the errors if they want to.
 
+1. **Separate Compilation:** this will likely involve significant refactoring,
+   but it will allow large programs to be compiled effectively by allowing
+   compilation to happen in parallel and to pick up where it left off.
+
 [i7]: https://ganelson.github.io/inform-website/
