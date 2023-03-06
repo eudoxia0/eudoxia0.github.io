@@ -329,10 +329,35 @@ argument_list:
 
 ## Combining Pass {#combining}
 
-- example
-    - interface
-    - body
-    - combined representation
+In the combining pass, the separate CST representations for the module interface
+and module body are combined into one object, that has one collection of
+declarations, augmented with visibility information.
+
+For example, given the following interface:
+
+```austral
+module Foo is
+
+end module.
+```
+
+And the following body:
+
+```
+module body Foo is
+
+end module body.
+```
+
+The combined representation, if rendered as code, might look something like
+this:
+
+
+```austral
+combined module Foo is
+
+end combined module.
+```
 
 # Core {#core}
 
