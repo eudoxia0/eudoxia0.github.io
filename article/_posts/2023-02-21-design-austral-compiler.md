@@ -691,8 +691,21 @@ refactoring.
 Instead, most of the tests are end-to-end tests, where the compiler is treated
 as a black box.
 
-- test hierarchy
-- test example
-- test runner
+Tests are stored in the [`test-programs/suites/`][suites] directory, each test
+is a folder with some Austral code, and the test is essentially defined by the
+files in that folder:
+
+[suites]: https://github.com/austral/austral/tree/96f007fd9bad0ad8070669acb9757231d785b4b8/test-programs/suites
+
+- If the code is meant to compile and run successfully, you just need a
+  `Test.aum` file.
+- If the code is meant to compile, and run, and emit some specific output, you
+  need a `program-stdout.txt` file with the expected output.
+- If the code is meant to _fail_ to compile, you need an `austral-stderr.txt`
+  file with the expected compiler error message.
+
+The [test runner][runner] is a simple Python program that walks the test folder and executes every test it finds.
+
+[runner]: https://github.com/austral/austral/blob/96f007fd9bad0ad8070669acb9757231d785b4b8/test-programs/runner.py
 
 # Future Work {#future}
