@@ -265,9 +265,13 @@ rule token = parse
 
 ## Parsing {#parsing}
 
-Parsing turns a sequence of tokens into a tree, specifically into the concrete syntax tree. The parser is written in Menhir, which is simple to use although the documentation is lacking: you just write a BNF grammar, and tell it how the right-hand side of each production rule should map to a CST instance.
+Parsing turns a sequence of tokens into a tree, specifically into the concrete
+syntax tree. The parser is written in Menhir, which is simple to use although
+the documentation is lacking: you just write a BNF grammar, and tell it how the
+right-hand side of each production rule should map to a CST instance.
 
-For example: in the `cexpr` type (the CST type for Austral expressions), the constructor for function calls looks like this:
+For example: in the `cexpr` type (the CST type for Austral expressions), the
+constructor for function calls looks like this:
 
 ```ocaml
 type cexpr =
@@ -294,7 +298,9 @@ funcall:
   ;
 ```
 
-There are two parts to this: the (E)BNF part and and the OCaml code in curly braces. The BNF says the `funcall` non-terminal is an `identifier` followed by an `argument_list`.
+There are two parts to this: the (E)BNF part and and the OCaml code in curly
+braces. The BNF says the `funcall` non-terminal is an `identifier` followed by
+an `argument_list`.
 
 When this is encountered, this parser will execute the code in the curly
 braces. This creates a `cexpr` value through the `CFuncall` constructor. `$loc`
