@@ -449,8 +449,20 @@ end combined module.
 
 ## Typing Pass {#typing}
 
-- code quality: 5 out of 5 cthulhus
-- big mess
+Other than the environment, the typing pass is the most important part of the
+compiler. And it's a big mess. The code quality is solidly 4/5 Cthulhus. Mostly
+because the functions have accumulated context parameters so gradually that I
+never noticed, so many of the functions have four or five parameters they have
+to pass all the way down.
+
+Conceptually, the way it works is very simple: the typing pass recurs down the
+AST, and from the bottom up, turns every AST node into a TAST node, the TAST
+being essentially the same as the AST but some[^some] nodes now carry type
+information.
+
+[^some]:
+    "Some" because certain nodes don't need to carry a type, e.g. the `nil`
+    constant will always have type `Unit`.
 
 ## Linearity Checking {#linearity}
 
