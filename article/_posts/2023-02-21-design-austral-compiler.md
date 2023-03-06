@@ -683,6 +683,14 @@ let rec render_unit (CUnit (name, decls)): string =
 
 # Testing {#testing}
 
+The compiler has some OCaml tests that test the individual components
+directly. But because this is a bootstrapping compiler that is meant to evolve
+rapidly there's few of these: they'd mostly be destroyed by large-scale
+refactoring.
+
+Instead, most of the tests are end-to-end tests, where the compiler is treated
+as a black box.
+
 - test hierarchy
 - test example
 - test runner
