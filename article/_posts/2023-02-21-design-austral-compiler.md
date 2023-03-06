@@ -337,7 +337,16 @@ For example, given the following interface:
 
 ```austral
 module Foo is
+    constant Pi: Float32;
 
+    record Pair: Free is
+        x: Int32;
+        y: Int32;
+    end;
+
+    type Quux: Free;
+
+    function zero(): Nat64;
 end module.
 ```
 
@@ -345,7 +354,20 @@ And the following body:
 
 ```
 module body Foo is
+    constant Pi: Float32 := 3.14;
 
+    union Quux: Free is
+        case Up;
+        case Down;
+    end;
+
+    function zero(): Nat64 is
+        return 0;
+    end;
+
+    function infinite(): Unit is
+        return infinite();
+    end;
 end module body.
 ```
 
@@ -355,7 +377,25 @@ this:
 
 ```austral
 combined module Foo is
+    public constant Pi: Float32 := 3.14;
 
+    public record Pair: Free is
+        x: Int32;
+        y: Int32;
+    end;
+
+    opaque union Quux: Free is
+        case Up;
+        case Down;
+    end;
+
+    public function zero(): Nat64 is
+        return 0;
+    end;
+
+    private function infinite(): Unit is
+        return infinite();
+    end;
 end combined module.
 ```
 
