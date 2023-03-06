@@ -748,3 +748,5 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    show you how to build a production-quality compiler.
 
 [i7]: https://ganelson.github.io/inform-website/
+
+# Footnotes
