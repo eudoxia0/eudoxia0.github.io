@@ -3,14 +3,19 @@ title: Design of the Austral Compiler
 summary: A high-level walkthrough of the Austral bootstrapping compiler.
 ---
 
-[Austral][austral] is a new systems programming language. It features [linear types][linear] for safe, compile-time memory and resource management; [capability-based security][cap] to prevent [supply chain attacks][chain]; and strong modularity. It is designed with fits-in-head simplicity as the goal.
+[Austral][austral] is a new systems programming language. It features [linear
+types][linear] for safe, compile-time memory and resource management;
+[capability-based security][cap] to prevent [supply chain attacks][chain]; and
+strong modularity. It is designed with fits-in-head simplicity as the goal.
 
 [austral]: https://austral-lang.org/
 [linear]: https://austral-lang.org/spec/spec.html#rationale-linear-types
 [cap]: https://austral-lang.org/spec/spec.html#rationale-cap
 [chain]: https://en.wikipedia.org/wiki/Supply_chain_attack
 
-A while back I wrote a post on the [lessons I learnt writing the Austral compiler][lessons]. This post is a more detailed walkthrough of the [bootstrapping compiler][compiler] for Austral.
+A while back I wrote a post on the [lessons I learnt writing the Austral
+compiler][lessons]. This post is a more detailed walkthrough of the
+[bootstrapping compiler][compiler] for Austral.
 
 [lessons]: /article/lessons-writing-compiler
 [compiler]: https://github.com/austral/austral
@@ -119,14 +124,17 @@ parser generator for OCaml, and the lexer is writting in [ocamllex][lex].
 
 ## The Concrete Syntax Tree {#cst}
 
-The concrete syntax tree is the first tree representation in the compiler, and the one closest to the original source code. It's defined in the Cst module and it's just a set of types. The main four types represent:
+The concrete syntax tree is the first tree representation in the compiler, and
+the one closest to the original source code. It's defined in the Cst module and
+it's just a set of types. The main four types represent:
 
 - Module interface declarations.
 - Module body declarations.
 - Statements.
 - Expressions.
 
-And there's other auxiliary types. As an example, the sum type that represents expressions looks like this:
+And there's other auxiliary types. As an example, the sum type that represents
+expressions looks like this:
 
 ```ocaml
 and cexpr =
@@ -151,7 +159,10 @@ and cexpr =
   | CBorrowExpr of span * borrowing_mode * identifier
 ```
 
-Every case has a `span`, which carries source position information, and optionally other data. For example, an arithmetic expression `a+b` is represented by an instance of `CArith`, which has four values: the source span, the arithmetic operator `+`, and the expressions `a` and `b`.
+Every case has a `span`, which carries source position information, and
+optionally other data. For example, an arithmetic expression `a+b` is
+represented by an instance of `CArith`, which has four values: the source span,
+the arithmetic operator `+`, and the expressions `a` and `b`.
 
 Analogously, `cstmt` is the type of concrete statements:
 
@@ -180,9 +191,12 @@ and cstmt =
 
 ## Lexing {#lexing}
 
-Lexing turns a string into a stream of tokens. For example, a code fragment like `if x > 0` gets turned into the token stream `IF, IDENTIFIER "x", GREATER_THAN, DEC_CONSTANT "0"`.
+Lexing turns a string into a stream of tokens. For example, a code fragment like
+`if x > 0` gets turned into the token stream `IF, IDENTIFIER "x", GREATER_THAN,
+DEC_CONSTANT "0"`.
 
-Tokens are defined, strangely, in the parser. Tokens that carry no information (like symbols are language keywords) are defined like this:
+Tokens are defined, strangely, in the parser. Tokens that carry no information
+(like symbols are language keywords) are defined like this:
 
 ```c
 /* Brackets */
@@ -211,7 +225,8 @@ Tokens that carry a value (like integer literals or identifiers) are defined lik
 %token <string> IDENTIFIER
 ```
 
-Every `%token` declaration essentially corresponds to the constructors of a `token` sum type (which you don't define, but the parser defines it internally):
+Every `%token` declaration essentially corresponds to the constructors of a
+`token` sum type (which you don't define, but the parser defines it internally):
 
 ```ocaml
 type token =
@@ -222,7 +237,8 @@ type token =
   | STRING_CONSTANT of string
 ```
 
-The main part of the lexer is the `token` rule, which associates regular expressions with code that evaluates to a token:
+The main part of the lexer is the `token` rule, which associates regular
+expressions with code that evaluates to a token:
 
 ```ocaml
 rule token = parse
