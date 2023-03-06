@@ -265,65 +265,65 @@ rule token = parse
 
 ## Parsing {#parsing}
 
-- menhir
-- example
-    - production rule
-    - input
-    - example
+Parsing turns a sequence of tokens into a tree, specifically into the concrete syntax tree. The parser is written in Menhir, which is simple to use although the documentation is lacking: you just write a BNF grammar, and tell it how the right-hand side of each production rule should map to a CST instance.
+
+For example: in the `cexpr` type (the CST type for Austral expressions), the constructor for function calls looks like this:
 
 ```ocaml
-/* Module interfaces and bodies */
-
-module_int:
-  | doc=docstringopt imports=import_stmt* MODULE
-    name=module_name IS decls=interface_decl*
-    END MODULE PERIOD EOF
-    { ConcreteModuleInterface (name, doc, imports, decls) }
-  ;
-
-module_body:
-  | doc=docstringopt imports=import_stmt* MODULE BODY
-    name=module_name IS pragmas=pragma* decls=body_decl*
-    END MODULE BODY PERIOD EOF
-    { make_module_body name imports pragmas decls doc }
-  ;
+type cexpr =
+  (* ... *)
+  | CFuncall of span * identifier * concrete_arglist
 ```
+
+That is, it has a code span, the function name, and the argument list, which in turn is defined:
 
 ```ocaml
-atomic_expression:
-  | NIL { CNilConstant (from_loc $loc) }
-  | TRUE { CBoolConstant (from_loc $loc, true) }
-  | FALSE { CBoolConstant (from_loc $loc, false) }
-  | int_constant { $1 }
-  | float_constant { $1 }
-  | string_constant { $1 }
-  | path { $1 }
-  | variable { $1 }
-  | funcall { $1 }
-  | parenthesized_expr { $1 }
-  | intrinsic { $1 }
-  | SIZEOF LPAREN typespec RPAREN { CSizeOf (from_loc $loc, $3) }
-  | BORROW_READ identifier { CBorrowExpr (from_loc $loc, ReadBorrow, $2) }
-  | BORROW_WRITE identifier { CBorrowExpr (from_loc $loc, WriteBorrow, $2) }
-  | DEREF atomic_expression { CDeref (from_loc $loc, $2) }
-  ;
+type concrete_arglist =
+  | ConcretePositionalArgs of cexpr list
+  | ConcreteNamedArgs of (identifier * cexpr) list
 ```
+
+With one case for positional argument lists like `(x,y,z)` and another for named
+argument lists like `(foo => a, bar => b)`.
+
+The parser rule for function calls is:
 
 ```ocaml
 funcall:
   | identifier argument_list { CFuncall (from_loc $loc, $1, $2) }
   ;
+```
 
-parenthesized_expr:
-  | LPAREN expression RPAREN { $2 }
-  ;
+There are two parts to this: the (E)BNF part and and the OCaml code in curly braces. The BNF says the `funcall` non-terminal is an `identifier` followed by an `argument_list`.
 
+When this is encountered, this parser will execute the code in the curly
+braces. This creates a `cexpr` value through the `CFuncall` constructor. `$loc`
+is a special variable that has the parser's current location in the input
+stream, `from_loc` turns this value into a `span`. `$1` and `$2` refer
+respectively to `identifier` and `argument` list (it's also possible to name
+them, when that increases clarity).
+
+The rules for argument lists work the same way:
+
+```
 argument_list:
   | LPAREN positional_arglist RPAREN { ConcretePositionalArgs $2 }
   | LPAREN named_arglist RPAREN { ConcreteNamedArgs $2 }
   | LPAREN RPAREN { ConcretePositionalArgs [] }
   ;
+
+positional_arglist:
+  | separated_list(COMMA, expression) { $1 }
+  ;
+
+named_arglist:
+  | separated_list(COMMA, named_arg) { $1 }
+  ;
 ```
+
+The last two show a useful feature of Menhir: parameterized rules. In this case
+the pattern of rules for parsing comma-separated lists has been abstracted away
+and we can just use `separated_list(COMMA, <rule>)`.
 
 ## Combining Pass {#combining}
 
