@@ -683,4 +683,8 @@ let rec render_unit (CUnit (name, decls)): string =
 
 # Testing {#testing}
 
+- test hierarchy
+- test example
+- test runner
+
 # Future Work {#future}
