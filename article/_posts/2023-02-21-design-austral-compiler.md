@@ -721,4 +721,12 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    but it will allow large programs to be compiled effectively by allowing
    compilation to happen in parallel and to pick up where it left off.
 
+4. **Literate Programming:** I'm not sure whether this is a great idea or a
+   terrible idea, but part of me wants to refactor the compiler into a literate
+   program. This would help onboard more people, but it would also make the
+   compiler's source code into the most useful compilers textbook ever written,
+   since there are so few textbooks that actually focus on the frontend (type
+   checking, diagnostics, etc.) parts of a compiler, and so few that actually
+   show you how to build a production-quality compiler.
+
 [i7]: https://ganelson.github.io/inform-website/
