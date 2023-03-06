@@ -728,6 +728,8 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    idea, of all things, from [Inform 7][i7], which is far from a normal
    programming language but their error output has always been lovely.
 
+[i7]: https://ganelson.github.io/inform-website/
+
 1. **JSON Error Reporting:** this is for the end-to-end tests. Right now, tests
    of programs that are expected to fail to compile just assert that the
    compiler produces a particular message. This is not robust to changes in the
@@ -746,7 +748,5 @@ In addition to many bug fixes, these are some things I plan to do with the compi
    since there are so few textbooks that actually focus on the frontend (type
    checking, diagnostics, etc.) parts of a compiler, and so few that actually
    show you how to build a production-quality compiler.
-
-[i7]: https://ganelson.github.io/inform-website/
 
 # Footnotes
