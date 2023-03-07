@@ -535,8 +535,32 @@ expression-level).
 
 ## The Abstract Syntax Tree {#ast}
 
-- repr
-- differences from cst
+The abstract syntax tree is mostly identical to the CST, with two differences:
+
+First, identifiers are qualified: they carry information about which module
+they're part of, either the local module or some other module they were imported
+from. This is done by import resolution.
+
+Second, the node that represents `let` statements contains a body. So in the CST, the following:
+
+```austral
+let x: T := y;
+foo(x);
+bar(x);
+baz(x);
+```
+
+Is represented as a sequence of nodes, in the AST, the scope where `x` is
+defined gets folded into the `let` node itself, so that if it were represented
+as code, it would look like:
+
+```austral
+let x: T := y in
+    foo(x);
+    bar(x);
+    baz(x);
+end let;
+```
 
 ## Abstraction Pass {#abst}
 
