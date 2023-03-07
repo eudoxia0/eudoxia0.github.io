@@ -527,6 +527,8 @@ The environment in the center of the compiler's universe: it's the database that
 stores all information about user-written code.
 
 - env interface
+  - env type
+  - crud functions
 - env impl
 - ids
 - env manipulation is functional
