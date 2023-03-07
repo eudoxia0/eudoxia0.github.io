@@ -409,21 +409,119 @@ The core is the largest part of the compiler. It contains the environment, where
 declarations are stored, and the type checking, linearity checking, and
 monomorphization passes.
 
-## Type Representation {#type}
-
-- ty adt
-
 ## Errors {#errors}
 
-- structured text
-  - err_text type
-  - console output
-  - html output
-- errors are structured
-  - source location
-  - text
-- exceptions carry errors
-  - adorn functions
+Compiler errors are represented as structured values, that contain information
+about where the error occurred as well as the error message:
+
+
+```ocaml
+(** An Austral compiler error. The module name, span, and source context rarely
+    have to be passed in explicitly: they are added where the error is throw in
+    the context of {!adorn_error_with_span}. *)
+type austral_error = AustralError of {
+      module_name: module_name option;
+      (** The name of the module where the error occurred, if available. *)
+      kind: error_kind;
+      (** The error kind. *)
+      text: err_text;
+      (** The error text. *)
+      span: span option;
+      (** The source span where the error happened, if available. *)
+      source_ctx: source_ctx option;
+      (** The source code where the error happened, if available. *)
+    }
+```
+
+The `error_kind` is something like a "typed title":
+
+```ocaml
+(** Represents a category of errors. *)
+type error_kind =
+  | GenericError
+  (** A generic error. This should be gradually phased out. *)
+  | ParseError
+  (** A parse error. *)
+  | CliError
+  (** An error with the user's command line arguments. *)
+  | TypeError
+  (** A type error. *)
+  | LinearityError
+  (** Signalled when code breaks the linearity rules. *)
+  | DeclarationError
+  (** An error in the structure of a declaration. *)
+  | EntrypointError
+  (** An error with the definition of the program entrypoint. *)
+  | InternalError
+  (** An internal error in the compiler. *)
+```
+
+The error message, too, is structured. This is both to reduce the amount of
+string-fiddling done at error-reporting time, but also to allow me to add HTML
+error reporting in the future:
+
+```ocaml
+(** The contents of an error message. *)
+type err_text = text_elem list
+
+(** An individual error text element. *)
+and text_elem =
+  | Text of string
+  (** Human-readable prose. *)
+  | Code of string
+  (** Austral text, like the name of an identifier or a type. *)
+  | Break
+  (** A paragraph break. *)
+```
+
+While the errors are structured values, OCaml doesn't have monadic error
+handling, so errors are simply carried by exceptions:
+
+```ocaml
+(** The exception that carries Austral errors. *)
+exception Austral_error of austral_error
+```
+
+Thrown by the `austral_raise` function, which takes the error kind and the error
+text and raises an exception:
+
+```ocaml
+let austral_raise (kind: error_kind) (text: err_text): 'a =
+  let error: austral_error =
+    AustralError {
+        module_name = None;
+        kind = kind;
+        text = text;
+        span = None;
+        source_ctx = None;
+      }
+  in
+  raise (Austral_error error)
+```
+
+Why is the metadata empty? Because it's added up the call stack. If we had to
+pass source position/module information everywhere an error is reported, the
+code would become incredibly noisy. So instead we have the `adorn_*` functions:
+
+```ocaml
+
+(** Run the callback, and if it throws an error that doesn't have a module name,
+    put the given module name in the error and rethrow it. *)
+val adorn_error_with_module_name : module_name -> (unit -> 'a) -> 'a
+
+(** Run the callback, and if it throws an error that doesn't have a span, put
+    the given span in the error and rethrow it. *)
+val adorn_error_with_span : span -> (unit -> 'a) -> 'a
+```
+
+These take some metadata and run a callback, and catch any `Austral_error`
+exceptions that are raised. If the error doesn't have a span or a module name,
+it gets added and the exception is re-raised.
+
+Code should use `adorn_error_with_span` whenever it has source position
+information, and in that way, error messages will have the most specific source
+position possible (from declaration-level to statement-level to
+expression-level).
 
 ## The Environment {#env}
 
