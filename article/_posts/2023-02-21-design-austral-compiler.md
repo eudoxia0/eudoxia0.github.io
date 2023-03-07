@@ -585,8 +585,14 @@ end let;
 
 ## Abstraction Pass {#abst}
 
-- import resolution
-- abstraction
+In the abstraction pass, the CST becomes an AST. This isn't terribly involved. Mostly two things happen:
+
+1. `let` reshaping: the scope in which the variable(s) defined in a `let` are
+   live is put inside the `let` statement node, to make future code easier.
+2. Identifiers are qualified: using the import map in the import resolution
+   section, identifiers (which are just strings) get source information added to
+   them, whether they're from this module or imported from elsewhere.
+
 
 ## Extraction Pass {#extract}
 
