@@ -593,7 +593,6 @@ In the abstraction pass, the CST becomes an AST. This isn't terribly involved. M
    section, identifiers (which are just strings) get source information added to
    them, whether they're from this module or imported from elsewhere.
 
-
 ## Extraction Pass {#extract}
 
 The extraction pass takes a combined module, and inserts its declarations into
