@@ -530,8 +530,29 @@ expression-level).
 
 ## Import Resolution {#imports}
 
-- identifiers are qualified
-- rules
+The import resolution pass takes a list of `import` declarations and turns them
+into a map from identifiers to qualified identifiers. That is, given something
+like:
+
+```
+import Foo (a)
+import Bar (b as bb);
+```
+
+We get a map like this:
+
+| Local Name | Source Module | Original Name |
+|------------|---------------|---------------|
+| `a`        | `Foo`         | `a`           |
+| `bb`       | `Bar`         | `b`           |
+
+The "local name" or "nickname" of a declaration is the name used in the
+importing module, while the original name is the name of that declaration in the
+module it is defined in.
+
+Import resolution checks a number of things: it checks that the declarations
+we're importing have public or opaque visibility, and that imports don't collide
+with each other.
 
 ## The Abstract Syntax Tree {#ast}
 
@@ -539,7 +560,7 @@ The abstract syntax tree is mostly identical to the CST, with two differences:
 
 First, identifiers are qualified: they carry information about which module
 they're part of, either the local module or some other module they were imported
-from. This is done by import resolution.
+from.
 
 Second, the node that represents `let` statements contains a body. So in the CST, the following:
 
