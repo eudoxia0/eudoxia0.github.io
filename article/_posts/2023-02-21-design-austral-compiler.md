@@ -503,7 +503,6 @@ pass source position/module information everywhere an error is reported, the
 code would become incredibly noisy. So instead we have the `adorn_*` functions:
 
 ```ocaml
-
 (** Run the callback, and if it throws an error that doesn't have a module name,
     put the given module name in the error and rethrow it. *)
 val adorn_error_with_module_name : module_name -> (unit -> 'a) -> 'a
