@@ -32,17 +32,16 @@ compiler][lessons]. This post is a more detailed walkthrough of the
     3. [Parsing](#parsing)
     4. [Combining Pass](#combining)
 6. [Core](#core)
-    1. [Type Representation](#type)
-    2. [Errors](#errors)
-    3. [The Environment](#env)
-    4. [Import Resolution](#imports)
-    5. [The Abstract Syntax Tree](#ast)
-    6. [Abstraction Pass](#abst)
-    7. [Extraction Pass](#extract)
-    8. [Linked Representation](#linked)
-    9. [Typing Pass](#typing)
-    10. [Linearity Checking](#linearity)
-    11. [Monomorphization](#mono)
+    1. [Errors](#errors)
+    2. [The Environment](#env)
+    3. [Import Resolution](#imports)
+    4. [The Abstract Syntax Tree](#ast)
+    5. [Abstraction Pass](#abst)
+    6. [Extraction Pass](#extract)
+    7. [Linked Representation](#linked)
+    8. [Typing Pass](#typing)
+    9. [Linearity Checking](#linearity)
+    10. [Monomorphization](#mono)
 7. [Backend](#backend)
     1. [C Representation](#crepr)
     2. [Code Generation](#codegen)
@@ -547,11 +546,43 @@ expression-level).
 
 ## Extraction Pass {#extract}
 
-- describe rule checking
+The extraction pass takes a combined module, and inserts its declarations into
+the environment. This is where most of the rules around declarations are checked
+for correctness.
+
+For example, extracting a typeclass instance performs the following checks:
+
+```ocaml
+(* ... *)
+(* Check the argument has the right universe for the typeclass. *)
+let _ = check_instance_argument_has_right_universe universe argument in
+(* Check the argument has the right shape. *)
+let _ = check_instance_argument_has_right_shape typarams argument in
+(* Check that the non of the type parameters in the generic instance
+   collide with the type parameter of the typeclass. *)
+let _ = check_disjoint_typarams typeclass_param_name typarams in
+(* Local uniqueness: does this instance collide with other instances in this module? *)
+let _ =
+  let other_instances: decl list =
+    List.filter (fun decl ->
+        match decl with
+        | Instance { typeclass_id=typeclass_id'; _ } ->
+           equal_decl_id typeclass_id typeclass_id'
+        | _ -> false)
+      (module_instances env mod_id)
+  in
+  check_instance_locally_unique other_instances argument
+in
+(* Global uniqueness: check orphan rules. *)
+let _ = check_instance_orphan_rules env mod_id typeclass_mod_id argument in
+(* ... *)
+```
 
 ## Linked Representation {#linked}
 
-- adt
+The linked representation is essentially the same as the AST, except the
+declarations carry a declaration ID, so subsequent code that easily find the
+corresponding declaration in the environment.
 
 ## Typing Pass {#typing}
 
