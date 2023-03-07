@@ -567,7 +567,8 @@ First, identifiers are qualified: they carry information about which module
 they're part of, either the local module or some other module they were imported
 from.
 
-Second, the node that represents `let` statements contains a body. So in the CST, the following:
+Second, the node that represents `let` statements contains a body. So in the
+CST, the following:
 
 ```austral
 let x: T := y;
@@ -590,7 +591,8 @@ end let;
 
 ## Abstraction Pass {#abst}
 
-In the abstraction pass, the CST becomes an AST. This isn't terribly involved. Mostly two things happen:
+In the abstraction pass, the CST becomes an AST. This isn't terribly
+involved. Mostly two things happen:
 
 1. `let` reshaping: the scope in which the variable(s) defined in a `let` are
    live is put inside the `let` statement node, to make future code easier.
