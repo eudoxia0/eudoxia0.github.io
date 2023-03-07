@@ -761,7 +761,6 @@ let rec gen_exp (mn: module_name) (e: mexpr): c_expr =
      CFuncall (gen_ins_meth_id id, List.map g args)
   | MGenericMethodCall (_, id, args, _) ->
      CFuncall (gen_mono_id id, List.map g args)
-
   ...
 ```
 
