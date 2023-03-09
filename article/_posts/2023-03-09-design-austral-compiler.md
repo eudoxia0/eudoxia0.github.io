@@ -84,7 +84,7 @@ a really outstanding parser generator on par with Java's [ANTLR][antlr].
    highly-optimized production compiler would be premature if you end up having
    to throw out most of it because you changed your mind about some central
    language feature. So the compiler is designed to be hackable and gradually
-   evolvable, at the expensive of semantics-specific optimizations and thus
+   evolvable, at the expense of semantics-specific optimizations and thus
    performance.
 
 1. **Correctness:** the compiler is a reference implementation, so correctness
