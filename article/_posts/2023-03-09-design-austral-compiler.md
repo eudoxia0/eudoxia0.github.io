@@ -690,7 +690,7 @@ For example, extracting a typeclass instance performs the following checks:
 let _ = check_instance_argument_has_right_universe universe argument in
 (* Check the argument has the right shape. *)
 let _ = check_instance_argument_has_right_shape typarams argument in
-(* Check that the non of the type parameters in the generic instance
+(* Check that the none of the type parameters in the generic instance
    collide with the type parameter of the typeclass. *)
 let _ = check_disjoint_typarams typeclass_param_name typarams in
 (* Local uniqueness: does this instance collide with other instances in this module? *)
