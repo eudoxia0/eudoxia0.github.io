@@ -835,10 +835,12 @@ Monomorphization of functions is analogous: starting from the `main` function
 (which has no generic type parameters), recur down the body. If we encounter a
 call to a generic function `f`, look at the concrete type arguments the function
 is being called with. These define a mapping from the function's type parameters
-`{T_0, ..., T_n}` to the type arguments `{t_0, ..., t_n}`. Then, essentially,
-create a new function, and do a search-and-replace of the function's body,
-replacing every `T_i` with its corresponding `t_i`. This process happens
-recursively.
+`{T_0, ..., T_n}` to the type arguments `{t_0, ..., t_n}`. For example, the
+mapping might look like `{T => Int32, U => Box[Bool] }`.
+
+Then, essentially, create a new function, and do a search-and-replace of the
+function's body, replacing every `T_i` with its corresponding `t_i`. This
+process happens recursively.
 
 # Backend {#backend}
 
