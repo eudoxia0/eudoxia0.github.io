@@ -779,7 +779,7 @@ module body Foo is
     function foo(): Unit is
         let b1: Box_Unit := Box_Unit(val => nil);
         let b2: Box_Int32 := Box_Int32(val => 10);
-        let b3: Box_Box_Int32 := Box_Int32_Int32(val => p2);
+        let b3: Box_Box_Int32 := Box_Int32_Int32(val => b2);
         return nil;
     end;
 end module body.
