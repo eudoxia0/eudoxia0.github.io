@@ -571,6 +571,7 @@ The **module table** contains information about user-defined modules:
 
 The columns are:
 
+1. **ID:** the ID of the module.
 1. **I. File:** the ID of the module interface file.
 1. **I. Docstring:** the docstring of the module interface.
 1. **B. File:** the ID of the module body file.
