@@ -754,7 +754,7 @@ module body Foo is
     function foo(): Unit is
         let b1: Box[Unit] := Box(val => nil);
         let b2: Box[Int32] := Box(val => 10);
-        let b3: Box[Box[Int32]] := Box(val => p2);
+        let b3: Box[Box[Int32]] := Box(val => b2);
         return nil;
     end;
 end module body.
