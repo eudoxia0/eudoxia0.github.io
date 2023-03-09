@@ -1,0 +1,40 @@
+digraph G {
+    node[shape=rect style=filled]
+
+    {
+        node[fillcolor=lightskyblue]
+        
+        aui[label="Interface File"]
+        aum[label="Module File"]
+        csti[label="Concrete Syntax Tree"]
+        cstm[label="Concrete Syntax Tree"]
+        com[label="Combined Representation"]
+        ast[label="Abstract Syntax Tree"]
+        linked[label="Linked Representation"]
+        tast[label="Typed AST"]
+        mtast[label="Monomorphic Typed AST"]
+        crepr[label="C Code"]
+    }
+
+    {
+        node[fillcolor=darkolivegreen1]
+
+        parseri[label="Parser"]
+        parserm[label="Parser"]
+        combining[label="Combining Pass"]
+        abst[label="Abstraction Pass"]
+        ext[label="Extraction Pass"]
+        typing[label="Typing Pass"]
+        mono[label="Monomorphization"]
+        codegen[label="Code Generation"]
+    }
+
+    aui -> parseri -> csti -> combining
+    aum -> parserm -> cstm -> combining
+    combining -> com
+    com -> abst -> ast
+    ast -> ext -> linked
+    linked -> typing -> tast
+    tast -> mono -> mtast
+    mtast -> codegen -> crepr
+}
