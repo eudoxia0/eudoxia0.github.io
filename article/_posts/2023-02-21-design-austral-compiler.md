@@ -1,6 +1,7 @@
 ---
 title: Design of the Austral Compiler
 summary: A high-level walkthrough of the Austral bootstrapping compiler.
+card: design-austral-compiler.jpg
 ---
 
 [Austral][austral] is a new systems programming language. It features [linear
