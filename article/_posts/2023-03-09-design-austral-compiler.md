@@ -529,7 +529,7 @@ expression-level).
 
 ## The Environment {#env}
 
-The environment in the center of the compiler's universe: it's the database that
+The environment is the center of the compiler's universe: it's the database that
 stores all information about user-written code.
 
 Externally, the `Env` module exports an `env` type and some functions. The
