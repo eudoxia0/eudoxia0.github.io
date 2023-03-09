@@ -2,6 +2,10 @@
 title: Design of the Austral Compiler
 summary: A high-level walkthrough of the Austral bootstrapping compiler.
 card: design-austral-compiler.jpg
+card_source: |
+    [_Difference Engine No. 1_][link], by B. H. Babbage. From _Passages from the Life of a Philosopher_ by Charles Babbage.
+
+    [link]: https://commons.wikimedia.org/wiki/File:Babbage_difference_engine_drawing.gif
 ---
 
 [Austral][austral] is a new systems programming language. It features [linear
