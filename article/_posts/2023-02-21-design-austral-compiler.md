@@ -526,12 +526,76 @@ expression-level).
 The environment in the center of the compiler's universe: it's the database that
 stores all information about user-written code.
 
-- env interface
-  - env type
-  - crud functions
-- env impl
-- ids
-- env manipulation is functional
+Externally, the `Env` module exports an `env` type and some functions. The
+environment has a simple CRUD API, and environment updates are functional:
+inserting or modifying a record returns a new value of type `env`.
+
+Internally, the environment is a collection of tables, with rows pointing at
+other rows in the same or other tables, kind of like a manual implementation of
+an SQL database. And like a typical SQL database, every object has a unique
+numeric ID that is automatically generated on insertion.
+
+The tables are:
+
+1. The file table.
+2. The module table.
+3. The declaration table.
+4. The method table.
+5. The monomorph table.
+
+The **file table** stores the paths and contents of the source files the compiler
+has read:
+
+| ID | Path         | Contents               |
+|----|--------------|------------------------|
+| 1  | `src/Db.aui` | `module Db is ...`     |
+| 2  | `src/Db.aum` | `module body Db is...` |
+
+This is for error reporting: declarations, statements, and expressions have a
+code span, which is the file ID, start line/column, and end line/column where
+they appear. The error reporter can then retrieve the file record using the file
+ID, print the path, and use the contents string to show the source context the
+error happened in.
+
+The **module table** contains information about user-defined modules:
+
+| ID | Name | I. File | I. Docstring       | B. File | B. Docstring        | Kind    | Imported Instances | Imports From |
+|----|------|---------|--------------------|---------|---------------------|---------|--------------------|--------------|
+| 1  | `Db` | 1       | `"This module..."` | 2       | `"Internally, ..."` | Unsafe. | 2, 43, 93          | 3, 67, 21    |
+
+The columns are:
+
+1. **I. File:** the ID of the module interface file.
+1. **I. Docstring:** the docstring of the module interface.
+1. **B. File:** the ID of the module body file.
+1. **B. Docstring:** the docstring of the module body (typically private implementation documentation).
+1. **Kind**: whether or not the module is unsafe.
+1. **Imported Instances:** the declaration IDs of the typeclass instances the module imports from.
+1. **Imports From:** the module IDs of the modules this module imports declarations from.
+
+The **declarations table** is the most important. This stores every declaration:
+constants, records, unions, functions, typeclasses, and typeclass instances. Every declaration has:
+
+1. Its unique declaration ID,
+2. The ID of the module it is defined in,
+3. Visibility information (public/opaque/private for types, public/private for everything else), and
+4. A docstring for that declaration.
+
+The other fields are declaration-specific. For the purposes of the environment,
+typeclass methods are considered declarations (since they can be exported and
+imported, and their names must not collide with other declaration names in the
+module).
+
+The **methods table** contains the methods of typeclass instances. These are
+stored separately because it's more convenient to have a flat structure, rather
+than a deeply nested one. Every record has a unique instance method ID, as well
+as the ID of the typeclass method it corresponds to.
+
+Finally, the **monomorphs table** stores monomorphs: the result of instantating
+a generic type or function with a given set of (monomorphic) type arguments. For
+example, if you have a declaration of a generic type `Foo[T: Free]: Free`, and
+the code mentions `Foo[Unit]`, `Foo[Int32]`, and `Foo[MyType]`, the monomorphs
+table will have an entry for each of these.
 
 ## Import Resolution {#imports}
 
@@ -663,9 +727,106 @@ Described [here](/article/how-australs-linear-type-checker-works).
 
 ## Monomorphization {#mono}
 
-- mono ty
-- mono expr
-- monomorphization example
+A monomorphic type is a type with no type variables. A monomorphic function is a
+function with no generic type parameters. **Monomorphization** is the process of
+turning Austral code with generics into monomorphic code without.
+
+For example, given some code with a generic type:
+
+```austral
+module body Foo is
+    record Box[A: Free]: Free is
+        val: A;
+    end;
+
+    function foo(): Unit is
+        let b1: Box[Unit] := Box(val => nil);
+        let b2: Box[Int32] := Box(val => 10);
+        let b3: Box[Box[Int32]] := Box(val => p2);
+        return nil;
+    end;
+end module body.
+```
+
+After monomorphization, the code would look something like this:
+
+```austral
+module body Foo is
+    record Box_Unit: Free is
+        val: Unit;
+    end;
+
+    record Box_Int32: Free is
+        val: Int32;
+    end;
+
+    record Box_Box_Int32: Free is
+        val: Box_Int32;
+    end;
+
+    function foo(): Unit is
+        let b1: Box_Unit := Box_Unit(val => nil);
+        let b2: Box_Int32 := Box_Int32(val => 10);
+        let b3: Box_Box_Int32 := Box_Int32_Int32(val => p2);
+        return nil;
+    end;
+end module body.
+```
+
+And the transformation is analogous for generic functions.
+
+Monomorphization of generic types works recursively from the bottom up. To transform a type to a monomorphic type:
+
+1. If encountering a type with no type arguments, leave it alone.
+2. If encountering a generic type with (monomorphic) type arguments applied to
+   it, retrieve or add a monomorph for the given type and arguments, and replace
+   this type with the monomorph.
+
+To see how the algorithm works, consider this hypothetical generic type:
+
+```austral
+Map[String, Pair[Position, List[String]]]
+```
+
+Initially, the table of monomorphs is empty.
+
+Step by step:
+
+1. `String` is left unchanged.
+1. `List[String]` is added to the table of monomorphs:
+
+    | ID | Type   | Arguments |
+    |----|--------|-----------|
+    | 1  | `List` | `String`  |
+
+1. The type is now: `Map[String, Pair[Position, Mono(1)]]`
+1. `Position` is left unchanged.
+1. `Pair[Position, Mono(1)` is added to the table:
+
+    | ID | Type   | Arguments             |
+    |----|--------|-----------------------|
+    | 1  | `List` | `String`              |
+    | 2  | `Pair` | `Position`, `Mono(1)` |
+
+1. The type is now: `Map[String, Mono(2)]`
+1. `Map[String, Mono(2)]` is added to the table:
+
+    | ID | Type   | Arguments             |
+    |----|--------|-----------------------|
+    | 1  | `List` | `String`              |
+    | 2  | `Pair` | `Position`, `Mono(1)` |
+    | 3  | `Map`  | `String`, `Mono(2)`   |
+
+1. The type is now `Mono(3)`.
+
+Monomorphization of functions is analogous: starting from the `main` function
+(which has no generic type parameters), recur down the body. If we encounter a
+call to a generic function `f`, look at the concrete type arguments the function
+is being called with. These define a mapping from the function's type parameters
+`{T_0, ..., T_n}` to the type arguments `{t_0, ..., t_n}`. Then, essentially,
+create a new function, and do a search-and-replace of the function's body,
+replacing every `T_i` with its corresponding `t_i`. This process happens
+recursively.
 
 # Backend {#backend}
 
