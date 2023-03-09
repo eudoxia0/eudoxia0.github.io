@@ -278,7 +278,8 @@ type cexpr =
   | CFuncall of span * identifier * concrete_arglist
 ```
 
-That is, it has a code span, the function name, and the argument list, which in turn is defined:
+That is, it has a code span, the function name, and the argument list, which in
+turn is defined:
 
 ```ocaml
 type concrete_arglist =
@@ -568,17 +569,22 @@ The columns are:
 1. **I. File:** the ID of the module interface file.
 1. **I. Docstring:** the docstring of the module interface.
 1. **B. File:** the ID of the module body file.
-1. **B. Docstring:** the docstring of the module body (typically private implementation documentation).
+1. **B. Docstring:** the docstring of the module body (typically private
+   implementation documentation).
 1. **Kind**: whether or not the module is unsafe.
-1. **Imported Instances:** the declaration IDs of the typeclass instances the module imports from.
-1. **Imports From:** the module IDs of the modules this module imports declarations from.
+1. **Imported Instances:** the declaration IDs of the typeclass instances the
+   module imports from.
+1. **Imports From:** the module IDs of the modules this module imports
+   declarations from.
 
 The **declarations table** is the most important. This stores every declaration:
-constants, records, unions, functions, typeclasses, and typeclass instances. Every declaration has:
+constants, records, unions, functions, typeclasses, and typeclass
+instances. Every declaration has:
 
 1. Its unique declaration ID,
 2. The ID of the module it is defined in,
-3. Visibility information (public/opaque/private for types, public/private for everything else), and
+3. Visibility information (public/opaque/private for types, public/private for
+   everything else), and
 4. A docstring for that declaration.
 
 The other fields are declaration-specific. For the purposes of the environment,
@@ -998,7 +1004,8 @@ monomorph points to, and the type arguments it was called with.
 ## C Rendering {#crender}
 
 And as if the compiler wasn't braindead enough, the last step of code generation
-is literally string concatenation: the C AST gets turned into a string. This process is called rendering.
+is literally string concatenation: the C AST gets turned into a string. This
+process is called rendering.
 
 Ideally the compiled C code should be readable, which means it has to be
 indented. Rather than handle the string padding when rendering the C AST, the
