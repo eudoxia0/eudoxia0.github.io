@@ -198,7 +198,7 @@ Lexing turns a string into a stream of tokens. For example, a code fragment like
 DEC_CONSTANT "0"`.
 
 Tokens are defined, strangely, in the parser. Tokens that carry no information
-(like symbols are language keywords) are defined like this:
+(like symbols and language keywords) are defined like this:
 
 ```c
 /* Brackets */
