@@ -1,0 +1,26 @@
+@startuml
+participant "Entrypoint" as ent
+participant "Compiler" as comp
+participant "Process Module" as mod
+participant "Process Declaration" as decl
+participant "Process Statement" as stmt
+participant "Process Expression" as expr
+participant "... many levels of call stack ..." as etc
+participant "Inner function" as fn
+
+ent -> comp : call
+comp -> mod : call
+mod -> decl : call
+decl -> stmt : call
+stmt -> expr : call
+expr -> etc : call
+etc -> fn : call
+
+fn -[#red]> etc : raise error\n(kind and message)
+etc -[#red]> expr : unwind
+expr -[#red]> stmt : adorn with\nexpr context\nand reraise
+stmt -[#red]> decl : unwind
+decl -[#red]> mod : unwind
+mod -[#red]> comp : adorn with\nmodule name\nand reraise
+comp -[#red]> ent : catch and report
+@enduml

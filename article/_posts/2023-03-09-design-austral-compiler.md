@@ -527,6 +527,14 @@ information, and in that way, error messages will have the most specific source
 position possible (from declaration-level to statement-level to
 expression-level).
 
+Graphically:
+
+[![Diagram of how errors propagate and gain information as the call stack is unwound.](/assets/content/design-austral-compiler/error-stack.svg)](/assets/content/design-austral-compiler/error-stack.svg)
+
+The nodes at the top are call stack frames. The black arrows are function calls,
+the red arrows represent errors going up (left in the diagram) as the call stack
+is unwound.
+
 ## The Environment {#env}
 
 The environment is the center of the compiler's universe: it's the database that
