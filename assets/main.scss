@@ -671,5 +671,17 @@ nav.chapter-nav {
     }
 }
 
+// etc
+
+.border-box {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: $b2;
+    margin-bottom: $b1;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
 // Uncomment the following to draw a grid on the page:
 //body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
