@@ -448,6 +448,12 @@ article {
         list-style-type: decimal;
     }
 
+    ul, ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     ul, ol, dl {
         margin-left: $b2;
     }
