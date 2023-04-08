@@ -325,11 +325,11 @@ Finally, we ask what each axiom means:
     </tr>
     <tr>
       <td>Vector spaces: state: identity of addition</td>
-      <td>$\exists 0 \in v:  v + 0 = v$</td>
+      <td>$\exists 0 \in V:  v + 0 = v$</td>
     </tr>
     <tr>
       <td>Vector spaces: state: inverse of addition</td>
-      <td>$\forall v \in v, \exists -v \in v:  v + (-v) = 0$</td>
+      <td>$\forall v \in V, \exists -v \in V:  v + (-v) = 0$</td>
     </tr>
     <tr>
       <td>Vector spaces: state: identity of scaling</td>
@@ -337,7 +337,7 @@ Finally, we ask what each axiom means:
     </tr>
     <tr>
       <td>Vector spaces: state: distributivity</td>
-      <td>$\forall v \in v, a,b \in \mathbb{f}:  (a+b)v = av + bv$</td>
+      <td>$\forall v \in V, a,b \in \mathbb{F}:  (a+b)v = av + bv$</td>
     </tr>
   </tbody>
 </table>
