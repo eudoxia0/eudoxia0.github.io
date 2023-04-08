@@ -1,0 +1,32 @@
+digraph G {
+    rankdir=TB;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#e0f2fe"]
+
+        a[label="Plate Boundary"]
+        b[label="Where tectonic\nplates meet."]
+        c[label="Convergent\nDivergent\nTransform"]
+        d[label="Plates come together."]
+        e[label="Plates move apart."]
+        f[label="Plates slide\npast each other."]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#0ea5e9" height=0.1]
+
+        q1[label="Definition?"]
+        q2[label="Term?"]
+        q3[label="Types?"]
+        q4[label="Convergent?"]
+        q5[label="Divergent?"]
+        q6[label="Transform?"]
+    }
+
+    a -> q1 -> b
+    b -> q2 -> a
+    a -> q3 -> c
+    c -> q4 -> d
+    c -> q5 -> e
+    c -> q6 -> f
+}

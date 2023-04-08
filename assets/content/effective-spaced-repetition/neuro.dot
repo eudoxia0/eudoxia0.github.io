@@ -1,0 +1,20 @@
+digraph G {
+    node[shape=rect style=filled fillcolor=cadetblue1]
+
+    nsc[label="Nervous System Cells"]
+    ne[label="Neurons"]
+    gl[label="Glia"]
+    micro[label="Microglia"]
+    macro[label="Macroglia"]
+    astro[label="Astrocytes"]
+    oligo[label="Oligodendrocytes"]
+    schwann[label="Schwann Cells"]
+
+    nsc -> ne
+    nsc -> gl
+    gl -> micro
+    gl -> macro
+    macro -> astro
+    macro -> oligo
+    macro -> schwann
+}

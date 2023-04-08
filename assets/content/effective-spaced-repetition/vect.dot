@@ -1,0 +1,48 @@
+digraph G {
+    rankdir=LR;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#e0f2fe"]
+
+        vect[label="Vector Space"]
+        inf[label="A set whose elements,\ncalled vectors,\ncan be added or scaled."]
+        for[label="A vector space over a field F\nis a set V plus two operations:\nvector addition and\nscalar multiplication."]
+        addsig[label="V x V -> V"]
+        mulsig[label="V x F -> V"]
+        axioms[label="Commutativity of Addition\nAssociativity of Addition\nIdentity of Addition\nInverse of Addition\nIdentity of Scaling\nDistributivity"]
+
+        a1[label="u + v = v + u"]
+        a2[label="u + (v + w) = (u + v) + w"]
+        a3[label="v + 0 = 0"]
+        a4[label="v + (-v) = 0"]
+        a5[label="1v = v"]
+        a6[label="(a + b)v = av + bv"]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#0ea5e9" height=0.1]
+        qinf[label="Informal"]
+        qfor[label="Formal"]
+        qaddsig[label="Signature of addition"]
+        qmulsig[label="Signature of scaling"]
+        qaxioms[label="Axioms"]
+        qa1[label="Commutativity of Addition"]
+        qa2[label="Associativity of Addition"]
+        qa3[label="Identity of Addition"]
+        qa4[label="Inverse of Addition"]
+        qa5[label="Identity of Scaling"]
+        qa6[label="Distributivity"]
+    }
+
+    vect -> qinf -> inf
+    vect -> qfor -> for
+    for -> qaddsig -> addsig
+    for -> qmulsig -> mulsig
+    for -> qaxioms -> axioms
+    axioms -> qa1 -> a1
+    axioms -> qa2 -> a2
+    axioms -> qa3 -> a3
+    axioms -> qa4 -> a4
+    axioms -> qa5 -> a5
+    axioms -> qa6 -> a6
+}
