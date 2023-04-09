@@ -510,7 +510,23 @@ TODO
 
 ## Example: Magma Formation {#magma}
 
-TODO
+From my geology notes:
+
+<div class="border-box">
+
+The three magma-forming processes are:
+
+1. **Increasing Temperature:** increasing temperature can melt rock.
+1. **Decreasing Pressure:** when the pressure drops, atoms are more free to move, and rock becomes liquid.
+1. **Addition of Water:** water lowers the melting point of rock, because the water molecules disrupt the crystal bonds.
+
+Magma forms in three places:
+
+1. **Hot spots:** as hot rock rises, pressure decreases and it becomes magma.
+2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because it is less dense) to plug the gap and melts due to decreasing pressure.
+3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The water melts and rises, adding water to the overlying rock, which the melts.
+
+</div>
 
 ## Example: Rational Numbers {#ratnums}
 
