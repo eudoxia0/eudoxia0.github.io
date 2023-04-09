@@ -572,7 +572,21 @@ The four eons, from oldest to most recent, are:
 3. Proterozoic (2.5Gya to 538Mya)
 4. Phanerozoic (538Mya to present)
 
+Let's zoom in on the Archean eon. This is subdivided into four eras:
+
+1. Eoarchean (4Gya to 3.6Gya)
+2. Paleoarchean (3.6Gya to 3.2Gya)
+3. Mesoarchean (3.2Gya to 2.8Gya)
+3. Neoarchean (2.8Gya to 2.5Gya)
+
 </div>
+
+We want to learn the following things:
+
+1. What the geologic time scale is.
+2. How it divides the Earth's history.
+3. The four eons.
+4. The four eras of the Archean eon.
 
 ## Example: Magma Formation {#magma}
 
