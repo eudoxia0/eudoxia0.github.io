@@ -1,0 +1,54 @@
+digraph G {
+    rankdir=TB;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#C14953"]
+
+        mag[label="Magma"]
+        def[label="Liquid rock under\nthe Earth."]
+
+        temp[label="Increasing Temperature"]
+        pres[label="Decreasing Pressure"]
+        wat[label="Addition of Water"]
+
+        preswhy[label="Atoms are more\nfree to move."]
+        watwhy[label="Water interferes\nwith bonds."]
+        
+        hot[label="Hot Spots"]
+        rift[label="Rift Zone"]
+        sub[label="Subduction Zone"]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#F25F5C" height=0.1]
+        qwhat[label="What is it?"]
+        qterm[label="Term?"]
+        qhow[label="How does it form?"]
+        qwhere[label="Where does it form?"]
+        
+        qwhy1[label="Why?"]
+        qwhy2[label="Why?"]
+        
+        qhotproc[label="Process?"]
+        qriftproc[label="Process?"]
+        qsubproc[label="Processes?"]
+        
+    }
+    
+    mag -> qwhat -> def
+    def -> qterm -> mag
+    mag -> qhow -> temp
+    qhow -> pres
+    qhow -> wat
+    pres -> qwhy1 -> preswhy
+    wat -> qwhy2 -> watwhy
+    mag -> qwhere -> hot
+    qwhere -> rift
+    qwhere -> sub
+    
+    hot -> qhotproc -> pres
+    rift -> qriftproc -> pres
+    
+    sub -> qsubproc -> temp
+    qsubproc -> wat
+}

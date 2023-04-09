@@ -565,7 +565,7 @@ Third: where magma is found. Again, we separate the list from the details:
 | - | - |
 | Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
 
-Then we ask for details. For each place where magma forms, we ask both which processes are involved, and what the full causal explanation is:
+Then we ask for details. For each place where magma forms, we ask both which processes are involved, and what the full causal explanation is. We also ask the question backward: which places involve a given process.
 
 | Question | Answer |
 | - | - |
@@ -577,6 +577,10 @@ Then we ask for details. For each place where magma forms, we ask both which pro
 | How does magma form in a hot spot? | As hot mantle rock rises, the decrease in pressure causes it to melt. |
 | How does magma form in a rift zone? | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt. |
 | How does magma form in a subdiction zone? | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
+
+We can visualize the resulting knowledge graph like this:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/magma.svg"/>
 
 ## Example: Rational Numbers {#ratnums}
 
