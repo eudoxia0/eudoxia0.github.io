@@ -820,4 +820,4 @@ it. Let me reiterate the important parts:
 
 # Conclusion {#conclusion}
 
-TODO
+I hope that you will find these rules and examples useful. Now go pick up a textbook and learn something useful.
