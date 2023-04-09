@@ -475,7 +475,19 @@ TODO
 
 ## Example: Rational Numbers {#ratnums}
 
-TODO
+<div class="border-box">
+
+The set of rational numbers, denoted $\mathbb{Q}$, is the set of fractions of integers with a non-zero denominator.
+
+Formally:
+
+$$
+\mathbb{Q} = \left\{\, \frac{p}{q} \,\, \middle| \,\, p, q \in \Z \land q \neq 0 \,\right\}
+$$
+
+The $\mathbb{Q}$ stands for _quotient_.
+
+</div>
 
 ## Example: Regular Expressions {#regex}
 
