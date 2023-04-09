@@ -40,14 +40,15 @@ examples as I could reasonably find.
    1. [Rule: Write Atomic Flashcards](#atomicity)
    1. [Rule: Write Two-Way Questions](#bidirectionality)
    1. [Rule: Ask Questions in Multiple Ways](#poly)
+   1. [Rule: Concept Graphs](#graph)
    1. [Rule: Learning Hierarchies](#hier)
    1. [Rule: Learning Sequences](#seq)
-   1. [Rule: Concept Graphs](#graph)
 1. [Examples](#ex)
    1. [Example: Vector Spaces](#vect)
    1. [Example: Parity Group](#logical-consequence)
    1. [Example: Logical Consequence](#parity)
-   1. [Example: Pharmacology](#pharma)
+   1. [Example: Regular Expressions](#regex)
+   1. [Example: Periodization](#perodization)
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
    1. [Example: Informal and Formal Statements](#informal-theorem)
@@ -210,7 +211,11 @@ Whenever you have a term with a definition, the obvious thing to do is to ask
 
 ## Rule: Ask Questions in Multiple Ways {#poly}
 
+## Rule: Concept Graphs {#graph}
 
+It can help to visualize the concepts you're acquiring as being like a graph,
+where each node represents a discrete concept having certain properties, and the
+edges in the graphs are links between the knowledge.
 
 ## Rule: Learning Hierarchies {#hier}
 
@@ -245,12 +250,6 @@ You might also want:
 
 How thorough you want to be depends on the nature of the information. Most of
 the time I use a cloze card and a test card.
-
-## Rule: Concept Graphs {#graph}
-
-It can help to visualize the concepts you're acquiring as being like a graph,
-where each node represents a discrete concept having certain properties, and the
-edges in the graphs are links between the knowledge.
 
 # Examples {#ex}
 
@@ -423,9 +422,11 @@ Graphically, you can try visualizing the flashcards and their relationships like
 
 ## Example: Parity Group {#parity}
 
-## Example: Pharmacology {#pharma}
-
 ## Example: Logical Consequence {#logical-consequence}
+
+## Example: Periodization {#perodization}
+
+## Example: Pharmacology {#pharma}
 
 ## Example: Regular Expressions {#regex}
 
