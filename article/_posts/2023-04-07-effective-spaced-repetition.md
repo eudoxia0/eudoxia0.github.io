@@ -58,8 +58,6 @@ $$
    1. [Example: Rational Numbers](#ratnums)
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
-   1. [Example: Informal and Formal Statements](#informal-theorem)
-   1. [Example: Proof Sketches](#proof-sketch)
    1. [Example: Isomers](#isomers)
    1. [Example: Neural Cells](#neural)
    1. [Example: Neuron Types](#neurons)
@@ -526,6 +524,32 @@ Semantic consequence is about interpretations, while semantic consequence is abo
 
 </div>
 
+We begin with the most basic question:
+
+| Question                                         | Answer                  |
+|--------------------------------------------------|-------------------------|
+| What are the two notions of logical consequence? | Semantic and syntactic. |
+
+Then we ask questions specifically about semantic consequence:
+
+| Question                                                        | Answer                                                                                                |
+|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| Define semantic consequence                                     | $Q$ is a semantic consequence of $P$ iff in every interpretation where $P$ is true, $Q$ is also true. |
+| What's the notation for "$Q$ is a semantic consequence of $P$"? | $P \models Q$                                                                                         |
+| What does $P \models Q$ mean?                                   | $Q$ is a semantic consequence of $P$                                                                  |
+| Semantic consequence connects sentences by...                   | Iterpretations.                                                                                       |
+| Which notion of logical consequence involves interprerations?   | Semantic consequence.                                                                                 |
+
+And then about syntactic consequence:
+
+| Question                                                         | Answer                                                                      |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| Define syntactic consequence                                     | $Q$ is a syntactic consequence of $P$ iff there is a proof from $P$ to $Q$. |
+| What's the notation for "$Q$ is a syntactic consequence of $P$"? | $P \vdash Q$                                                                |
+| What does $P \vdash Q$ mean?                                     | $Q$ is a syntactic consequence of $P$                                       |
+| Syntactic consequence connects sentences by...                   | Proofs.                                                                     |
+| Which notion of logical consequennce involves proofs?            | Syntactic consequence.                                                      |
+
 ## Example: Periodization {#perodization}
 
 TODO
@@ -697,14 +721,6 @@ In addition to the above, add cards that go from the regex to the concept:
 | What does `\d` match? | A digit 0-9.         |
 
 ## Example: Voltage {#voltage}
-
-TODO
-
-## Example: Informal and Formal Statements {#informal-theorem}
-
-TODO
-
-## Example: Proof Sketches {#proof-sketch}
 
 TODO
 
