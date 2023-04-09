@@ -473,6 +473,8 @@ TODO
 
 ## Example: Regular Expressions {#regex}
 
+This is an example about asking questions in two ways.
+
 These cards go from a concept to a regex:
 
 | Question                                | Answer |
