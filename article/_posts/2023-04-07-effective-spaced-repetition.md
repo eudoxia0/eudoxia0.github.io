@@ -116,6 +116,9 @@ fool can do, another can".
 
 Here are my rules for effective spaced repetition.
 
+The rules are sorted by applicability, with more general ones first, and most
+specific ones last.
+
 ## Rule: Understand First {#understand}
 
 Don't try to memorize what you don't understand. The concepts should be clear in
@@ -177,9 +180,6 @@ There's two reasons for this rule:
 There is one exception to this: you can have big cards if you also have smaller
 cards that add up to the same information. You can think of the larger card as
 testing that you can collate the information from the smaller cards.
-
-The rules are sorted by applicability, with more general ones first, and most
-specific ones last.
 
 ### Example: Vector Spaces
 
