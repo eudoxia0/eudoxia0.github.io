@@ -208,9 +208,29 @@ testing that you can collate the information from the smaller cards.
 
 When possible, ask questions in two directions.
 
-Whenever you have a term with a definition, the obvious thing to do is to ask
-"What is the definition of [term]?". You can also ask: "What is the term for
-[definition]?".
+Whenever you have a term with a definition, the obvious thing to do is to ask for the definition from the term, e.g.:
+
+>Q: What is the order of a group?
+>
+>A: The cardinality of its underlying set.
+
+But you can also ask for the term from the definition, e.g.:
+
+>Q: What is the term for the cardinality of a group?
+>
+>A: The group's order.
+
+When you have some notation, like $\mathbb{R}$ for the real numbers, or $\dim V$ for the dimension of a vector space, the natural thing to ask is what the notation means.
+
+>Q: What does $\mathbb{R}$ stand for?
+>
+>A: The set of real numbers.
+
+You can also ask the question backwards:
+
+>Q: What is the notation for the set of real numbers?
+>
+>A: $\mathbb{R}$
 
 ## Rule: Ask Questions in Multiple Ways {#poly}
 
@@ -799,3 +819,4 @@ it. Let me reiterate the important parts:
 1. Redundancy is good. Do repeat yourself!
 
 # Conclusion {#conclusion}
+
