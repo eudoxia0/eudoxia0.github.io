@@ -1,0 +1,35 @@
+digraph G {
+    rankdir=TB;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#ffe0b2"]
+
+        rat[label="Rational Numbers"]
+        not[label="Q"]
+        inf[label="Set of all fractions\nwith integer p and q"]
+        for[label="{ p/q | p,q in Z, q != 0 }"]
+        quot[label="Quotient"]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#ff9800" height=0.1]
+        qnot[label="Notation?"]
+        qstand[label="Stands for?"]
+        qfor[label="Formal definition?"]
+        qinf[label="Informal informal?"]
+        qterm1[label="Term?"]
+        qterm2[label="Term?"]
+        qstands[label="Stands for?"]
+    }
+    
+    rat -> qnot -> not
+    not -> qstand -> rat
+    
+    rat -> qfor -> for
+    rat -> qinf -> inf
+    
+    for -> qterm1 -> rat
+    inf -> qterm2 -> rat
+    
+    not -> qstands -> quot
+}

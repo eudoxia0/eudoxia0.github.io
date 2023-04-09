@@ -475,9 +475,12 @@ TODO
 
 ## Example: Rational Numbers {#ratnums}
 
+Let's commit this to spaced repetition:
+
 <div class="border-box">
 
-The set of rational numbers, denoted $\mathbb{Q}$, is the set of fractions of integers with a non-zero denominator.
+The set of rational numbers, denoted $\mathbb{Q}$, is the set of fractions with
+integer numerator and denominator, where the denominator is non-zero.
 
 Formally:
 
@@ -488,6 +491,51 @@ $$
 The $\mathbb{Q}$ stands for _quotient_.
 
 </div>
+
+Let's visualize the concept graph as we build up the flashcards. We start with
+the central node, the concept of the rational numbers:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/rats1.svg"/>
+
+Then we add a notation node, linked by two forward and backwards questions:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/rats2.svg"/>
+
+| Question                                              | Answer                       |
+|-------------------------------------------------------|------------------------------|
+| What is the notation for the set of rational numbers? | $\mathbb{Q}$.                |
+| What does $\mathbb{Q}$ stand for?                     | The set of rational numbers. |
+
+Formal as well as informal definitions:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/rats3.svg"/>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Informally, what is the set of rational numbers?</td>
+      <td>The set of fractions with integer numerator and denominator, where the denominator is non-zero.</td>
+    </tr>
+    <tr>
+      <td>Formally, what is the set of rational numbers?</td>
+      <td>$\mathbb{Q} = \left\{\, \frac{p}{q} \,\, \middle| \,\, p, q \in \Z \land q \neq 0 \,\right\}$</td>
+    </tr>
+  </tbody>
+</table>
+
+And a final note on notation: what the $\mathbb{Q}$ stands for:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/rats4.svg"/>
+
+| Question                                               | Answer          |
+|--------------------------------------------------------|-----------------|
+| What are the rational numbers denoted by $\mathbb{Q}$? | Q for quotient. |
 
 ## Example: Regular Expressions {#regex}
 

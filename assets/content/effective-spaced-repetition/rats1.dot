@@ -1,0 +1,13 @@
+digraph G {
+    rankdir=LR;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#ffe0b2"]
+
+        rat[label="Rational Numbers"]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#0ea5e9" height=0.1]
+    }
+}
