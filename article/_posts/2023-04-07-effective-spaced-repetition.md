@@ -50,12 +50,14 @@ examples as I could reasonably find.
    1. [Example: Periodization](#perodization)
    1. [Example: Pharmacology](#pharma)
    1. [Example: Magma Formation](#magma)
+   1. [Example: Rational Numbers](#ratnums)
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
    1. [Example: Informal and Formal Statements](#informal-theorem)
    1. [Example: Proof Sketches](#proof-sketch)
    1. [Example: Isomers](#isomers)
    1. [Example: Neural Cells](#neural)
+   1. [Example: Neuron Types](#neurons)
    1. [Example: Plate Tectonics](#tectonics)
    1. [Example: Random Variables](#random)
    1. [Example: Months of the Year](#months)
@@ -445,6 +447,10 @@ TODO
 
 TODO
 
+## Example: Rational Numbers {#ratnums}
+
+TODO
+
 ## Example: Regular Expressions {#regex}
 
 These cards go from a concept to a regex:
@@ -513,6 +519,8 @@ And the bottom-up questions. We don't ask these when the answers are obvious:
 | Astrocytes are a kind of...       | Macroglia. |
 | Oligodendrocytes are a kind of... | Macroglia. |
 | Schwann cells are a kind of...    | Macroglia. |
+
+## Example: Neuron Types {#neurons}
 
 ## Example: Plate Tectonics {#tectonics}
 
