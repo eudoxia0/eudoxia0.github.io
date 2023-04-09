@@ -465,7 +465,17 @@ If you want to be extra thorough, you can also write the backwards questions:
 
 ## Example: Parity Group {#parity}
 
-TODO
+<div class="border-box">
+
+The _parity group_ is a group that represents the rules for adding even and odd numbers. The underlying set is $\{e, o\}$, with $e$ and $o$ representing even and odd numbers respectively. The composition table is:
+
+|     | $e$ | $o$ |
+| $e$ | $e$ | $o$ |
+| $o$ | $o$ | $e$ |
+
+The identity element is $e$.
+
+</div>
 
 ## Example: Logical Consequence {#logical-consequence}
 
