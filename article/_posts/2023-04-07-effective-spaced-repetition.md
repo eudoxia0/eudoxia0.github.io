@@ -43,6 +43,7 @@ examples as I could reasonably find.
    1. [Rule: Learning Hierarchies](#hier)
    1. [Rule: Learning Sequences](#seq)
    1. [Rule: Concept Graphs](#graph)
+1. [Examples](#ex)
 1. [Software](#software)
 1. [Prior Art](#prior)
 1. [Conclusion](#conclusion)
@@ -672,6 +673,10 @@ where each node represents a discrete concept having certain properties, and the
 edges in the graphs are links between the knowledge.
 
 ### Example: Random Variables
+
+# Examples {#ex}
+
+Because many of the examples involve multiple rules at the same time, I decided to group them separately from the rules.
 
 # Software {#software}
 
