@@ -880,18 +880,18 @@ The element-to-index flashcards:
 
 | Question                                | Answer |
 |-----------------------------------------|--------|
-| January is the ... month of the year.  | 1      |
-| February is the ... month of the year. | 2      |
-| March is the ... month of the year.    | 3      |
-| April is the ... month of the year.    | 4      |
-| May is the ... month of the year.      | 5      |
-| June is the ... month of the year.     | 6      |
-| July is the ... month of the year.     | 7      |
-| August is the ... month of the year.   | 8      |
-| September is the ... month of the year.| 9      |
-| October is the ... month of the year.  | 10     |
-| November is the ... month of the year. | 11     |
-| December is the ... month of the year. | 12     |
+| January is the ... month of the year.   | 1      |
+| February is the ... month of the year.  | 2      |
+| March is the ... month of the year.     | 3      |
+| April is the ... month of the year.     | 4      |
+| May is the ... month of the year.       | 5      |
+| June is the ... month of the year.      | 6      |
+| July is the ... month of the year.      | 7      |
+| August is the ... month of the year.    | 8      |
+| September is the ... month of the year. | 9      |
+| October is the ... month of the year.   | 10     |
+| November is the ... month of the year.  | 11     |
+| December is the ... month of the year.  | 12     |
 
 The successor flashcards:
 
