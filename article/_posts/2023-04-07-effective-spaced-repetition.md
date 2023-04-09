@@ -514,6 +514,8 @@ From my geology notes:
 
 <div class="border-box">
 
+Magma is liquid rock under the Earth's surface.
+
 The three magma-forming processes are:
 
 1. **Increasing Temperature:** increasing temperature can melt rock.
@@ -527,6 +529,54 @@ Magma forms in three places:
 3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The water melts and rises, adding water to the overlying rock, which the melts.
 
 </div>
+
+Let's break this down hieararchically. We want to memorize three things:
+
+1. What magma is.
+2. How it forms.
+3. Where it forms.
+
+First, the definition:
+
+| Question | Answer |
+| - | - |
+| What is magma? | Liquid rock under the Earth's surface. |
+| What is the term for liquid rock under surface of the Earth? | Magma. |
+
+Second, we want to know how magma forms. A common mistake here would be to put the magma-forming processes _and_ their explanations in the same 
+flashcard. Rather, to keep each card as small as possible, we want to separate the list of processes from their definitions.
+
+So we first as for a list of mechanisms:
+
+| Question | Answer |
+| - | - |
+| What are the magma-forming processes? | Increasing temperature, decreasing pressure, addition of water. |
+
+And then we ask for an explanation of each. We don't really need to ask why adding temperature melts rock:
+
+| Question | Answer |
+| - | - |
+| Why does decreasing pressure melt rock? | Because the atoms are more free to move. |
+| Why does adding water lower the melting point of rock? | Because water molecules disrupt the bonds in the rock minerals. |
+
+Third: where magma is found. Again, we separate the list from the details:
+
+| Question | Answer |
+| - | - |
+| Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
+
+Then we ask for details. For each place where magma forms, we ask both which processes are involved, and what the full causal explanation is:
+
+| Question | Answer |
+| - | - |
+| What magma-forming process happens over a hot spot? | Pressure-release melting. |
+| What magma-forming process happens in a rift zone? | Pressure-release melting. |
+| What magma-forming process happens in a subduction zone? | Increasing temperature and addition of water. |
+| Where does magma form due to pressure release? | Hot spots and rift zones. |
+| Where does magma form due to increasing temperature and the addition of water? | Subduction zones. |
+| How does magma form in a hot spot? | As hot mantle rock rises, the decrease in pressure causes it to melt. |
+| How does magma form in a rift zone? | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt. |
+| How does magma form in a subdiction zone? | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
 
 ## Example: Rational Numbers {#ratnums}
 
