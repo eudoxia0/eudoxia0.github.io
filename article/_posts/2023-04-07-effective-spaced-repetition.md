@@ -552,7 +552,9 @@ And then about syntactic consequence:
 
 ## Example: Periodization {#perodization}
 
-Timelines are a great example of how breaking information down hierarchically can help you learn long sequences. Sometimes the breakdown is already done for us.
+Timelines are a great example of how breaking information down hierarchically
+can help you learn long sequences. Sometimes the breakdown is already done for
+us.
 
 <div class="border-box">
 
@@ -587,6 +589,41 @@ We want to learn the following things:
 2. How it divides the Earth's history.
 3. The four eons.
 4. The four eras of the Archean eon.
+
+Let's begin with the simplest flashcards, the definition of the GTS:
+
+| Question                                              | Answer                           |
+|-------------------------------------------------------|----------------------------------|
+| What is the geologic time scale?                      | The timeline of Earth's history. |
+| What is the term for the timeline of Earth's history? | The geologic time scale.         |
+
+The subdivisions form a sequence, from oldest to most recent: eon, era, period, epoch.
+
+We begin with a test card, asking us to recall the entire sequence:
+
+| Question                                                                 | Answer                   |
+|--------------------------------------------------------------------------|--------------------------|
+| What are the units of the geologic time scale, from largest to smallest? | Eon, era, period, epoch. |
+
+Then we ask questions that map the index in the sequence to the element:
+
+| Question                                                    | Answer      |
+|-------------------------------------------------------------|-------------|
+| What is the largest unit in the geologic time scale?        | The eon.    |
+| What is the second-largest unit in the geologic time scale? | The era.    |
+| What is the third-largest unit in the geologic time scale?  | The period. |
+| What is the smallset unit in the geologic time scale?       | The epoch.  |
+
+And the "upward" questions:
+
+| Question           | Answer                                 |
+|--------------------|----------------------------------------|
+| What is an eon?    | A division of the geologic time scale. |
+| What is an era?    | A division of the geologic time scale. |
+| What is an period? | A division of the geologic time scale. |
+| What is an epoch?  | A division of the geologic time scale. |
+
+We also ask how long each unit lasts, forwards and backwards:
 
 ## Example: Magma Formation {#magma}
 
