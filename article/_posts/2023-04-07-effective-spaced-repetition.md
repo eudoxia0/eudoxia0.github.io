@@ -830,7 +830,7 @@ While the backwards cards ask for the exponent from the power:
 | $\log_2 32768$ | $15$   |
 | $\log_2 65536$ | $16$   |
 
-Finally, I have a test card that asks me to recall the entire sequence in order:
+Finally, I have a test card that asks me to recall the entire sequence in order.
 
 # Scripts {#scripts}
 
