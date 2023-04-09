@@ -483,18 +483,18 @@ The identity element is $\text{even}$. The group is Abelian.
 
 We can turn this into the following flashcards:
 
-| Question | Answer |
-| - | - |
-| What is the parity group? | The group that represents the rules for adding even and odd numbers. |
-| What is the order of the parity group? | $2$ |
-| What is the underlying set of the parity group? | $\set{\text{even}, \text{odd}}$ |
-| What is the identity element of the parity group? | $\text{even}$ |
-| What is the operation of the parity group? | Addition of even and odd numbers. |
-| $\text{even} + \text{even} = $ | $\text{even}$ |
-| $\text{even} + \text{odd} = $ | $\text{odd}$ |
-| $\text{odd} + \text{even} = $ | $\text{odd}$ |
-| $\text{odd} + \text{odd} = $ | $\text{even}$ |
-| Is the parity group Abelian? Why or why not? | Yes, because addition commutes. |
+| Question                                          | Answer                                                               |
+|---------------------------------------------------|----------------------------------------------------------------------|
+| What is the parity group?                         | The group that represents the rules for adding even and odd numbers. |
+| What is the order of the parity group?            | $2$                                                                  |
+| What is the underlying set of the parity group?   | $\set{\text{even}, \text{odd}}$                                      |
+| What is the identity element of the parity group? | $\text{even}$                                                        |
+| What is the operation of the parity group?        | Addition of even and odd numbers.                                    |
+| $\text{even} + \text{even} = $                    | $\text{even}$                                                        |
+| $\text{even} + \text{odd} = $                     | $\text{odd}$                                                         |
+| $\text{odd} + \text{even} = $                     | $\text{odd}$                                                         |
+| $\text{odd} + \text{odd} = $                      | $\text{even}$                                                        |
+| Is the parity group Abelian? Why or why not?      | Yes, because addition commutes.                                      |
 
 ## Example: Logical Consequence {#logical-consequence}
 
@@ -538,45 +538,45 @@ Let's break this down hieararchically. We want to memorize three things:
 
 First, the definition:
 
-| Question | Answer |
-| - | - |
-| What is magma? | Liquid rock under the Earth's surface. |
-| What is the term for liquid rock under surface of the Earth? | Magma. |
+| Question                                                     | Answer                                 |
+|--------------------------------------------------------------|----------------------------------------|
+| What is magma?                                               | Liquid rock under the Earth's surface. |
+| What is the term for liquid rock under surface of the Earth? | Magma.                                 |
 
-Second, we want to know how magma forms. A common mistake here would be to put the magma-forming processes _and_ their explanations in the same 
+Second, we want to know how magma forms. A common mistake here would be to put the magma-forming processes _and_ their explanations in the same
 flashcard. Rather, to keep each card as small as possible, we want to separate the list of processes from their definitions.
 
 So we first as for a list of mechanisms:
 
-| Question | Answer |
-| - | - |
+| Question                              | Answer                                                          |
+|---------------------------------------|-----------------------------------------------------------------|
 | What are the magma-forming processes? | Increasing temperature, decreasing pressure, addition of water. |
 
 And then we ask for an explanation of each. We don't really need to ask why adding temperature melts rock:
 
-| Question | Answer |
-| - | - |
-| Why does decreasing pressure melt rock? | Because the atoms are more free to move. |
+| Question                                               | Answer                                                          |
+|--------------------------------------------------------|-----------------------------------------------------------------|
+| Why does decreasing pressure melt rock?                | Because the atoms are more free to move.                        |
 | Why does adding water lower the melting point of rock? | Because water molecules disrupt the bonds in the rock minerals. |
 
 Third: where magma is found. Again, we separate the list from the details:
 
-| Question | Answer |
-| - | - |
+| Question               | Answer                                                  |
+|------------------------|---------------------------------------------------------|
 | Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
 
 Then we ask for details. For each place where magma forms, we ask both which processes are involved, and what the full causal explanation is. We also ask the question backward: which places involve a given process.
 
-| Question | Answer |
-| - | - |
-| What magma-forming process happens over a hot spot? | Pressure-release melting. |
-| What magma-forming process happens in a rift zone? | Pressure-release melting. |
-| What magma-forming process happens in a subduction zone? | Increasing temperature and addition of water. |
-| Where does magma form due to pressure release? | Hot spots and rift zones. |
-| Where does magma form due to increasing temperature and the addition of water? | Subduction zones. |
-| How does magma form in a hot spot? | As hot mantle rock rises, the decrease in pressure causes it to melt. |
-| How does magma form in a rift zone? | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt. |
-| How does magma form in a subdiction zone? | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
+| Question                                                                       | Answer                                                                                                                                  |
+|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| What magma-forming process happens over a hot spot?                            | Pressure-release melting.                                                                                                               |
+| What magma-forming process happens in a rift zone?                             | Pressure-release melting.                                                                                                               |
+| What magma-forming process happens in a subduction zone?                       | Increasing temperature and addition of water.                                                                                           |
+| Where does magma form due to pressure release?                                 | Hot spots and rift zones.                                                                                                               |
+| Where does magma form due to increasing temperature and the addition of water? | Subduction zones.                                                                                                                       |
+| How does magma form in a hot spot?                                             | As hot mantle rock rises, the decrease in pressure causes it to melt.                                                                   |
+| How does magma form in a rift zone?                                            | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt.                      |
+| How does magma form in a subdiction zone?                                      | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
 
 We can visualize the resulting knowledge graph like this:
 
@@ -778,15 +778,15 @@ Let's start by doing this the wrong way, through loading too much information in
 
 Let's first break this down by separating _names_ from _definitions_:
 
-| Question                          | Answer     |
-|-----------------------------------|------------|
-| What are the functional categories of neuron? | Sensory, motor, interneurons. |
-| What are sensory neurons? | Neurons which feed sensory information into the brain. | 
-| What are motor neurons? | Neurons which send motor commands to the muscles. | 
-| What are interneurons? | Neurons which connect within the CNS. | 
-| What are the types of interneuron? | Local, relay. |
-| What are local interneurons? | Interneurons that form circuits with nearby neurons. |
-| What are relay interneurons? | Interneurons have long axons and communicate across brain regions. |
+| Question                                      | Answer                                                             |
+|-----------------------------------------------|--------------------------------------------------------------------|
+| What are the functional categories of neuron? | Sensory, motor, interneurons.                                      |
+| What are sensory neurons?                     | Neurons which feed sensory information into the brain.             |
+| What are motor neurons?                       | Neurons which send motor commands to the muscles.                  |
+| What are interneurons?                        | Neurons which connect within the CNS.                              |
+| What are the types of interneuron?            | Local, relay.                                                      |
+| What are local interneurons?                  | Interneurons that form circuits with nearby neurons.               |
+| What are relay interneurons?                  | Interneurons have long axons and communicate across brain regions. |
 
 ## Example: Plate Tectonics {#tectonics}
 
