@@ -557,7 +557,7 @@ Magma forms in three places:
 
 </div>
 
-Let's break this down hieararchically. We want to memorize three things:
+Let's break this down hierarchically. We want to memorize three things:
 
 1. What magma is.
 2. How it forms.
