@@ -555,6 +555,23 @@ And then about syntactic consequence:
 Timelines are a great example of how breaking information down hierarchically can help you learn long sequences. Sometimes the breakdown is already done for us.
 
 <div class="border-box">
+
+The [geologic time scale][gts] (GTS) divides the geological record of the Earth into four nested time units:
+
+[gts]: https://en.wikipedia.org/wiki/Geologic_time_scale
+
+1. The **eon** is the largest unit. Eons last hundreds of millions of years.
+2. Eons are further divided into **eras**, which last tens to hundreds of millions of years.
+3. Eras are divided into **periods**, which last millions to tens of millions of years.
+4. Finally, periods are divided into **epochs**, which last hundreds of thousands to millions of years.
+
+The four eons, from oldest to most recent, are:
+
+1. Hadean (4.5Gya to 4Gya)
+2. Archean (4Gya to 2.5Gya)
+3. Proterozoic (2.5Gya to 538Mya)
+4. Phanerozoic (538Mya to present)
+
 </div>
 
 ## Example: Magma Formation {#magma}
