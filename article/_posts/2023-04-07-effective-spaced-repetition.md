@@ -728,7 +728,65 @@ And the bottom-up questions. We don't ask these when the answers are obvious:
 
 ## Example: Neuron Types {#neurons}
 
-TODO
+This is a brief example about keeping cards short and using hierarchies to break things down.
+
+From my neuroscience notes:
+
+<div class="border-box">
+
+Neurons can be divided into three categories by their function:
+
+1. **Sensory:** feed sensory information into the brain.
+2. **Motor:** send motor commands to the muscles.
+3. **Interneurons:** connect within the CNS. These are further divided into:
+   1. **Local:** form circuits with nearby neurons.
+   2. **Relay:** have long axons and communicate across brain regions.
+
+</div>
+
+Let's start by doing this the wrong way, through loading too much information into one card.
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What are the functional categories of neuron?</td>
+      <td>
+        <ul>
+          <li><b>Sensory:</b> feed sensory information into the brain.</li>
+          <li><b>Motor:</b> send motor commands to the muscles.</li>
+          <li><b>Interneurons:</b> connect within the CNS.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>What are the different types of interneuron?</td>
+      <td>
+        <ul>
+          <li><b>Local:</b> form circuits with nearby neurons.</li>
+          <li><b>Relay:</b> have long axons and communicate across brain regions.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Let's first break this down by separating _names_ from _definitions_:
+
+| Question                          | Answer     |
+|-----------------------------------|------------|
+| What are the functional categories of neuron? | Sensory, motor, interneurons. |
+| What are sensory neurons? | Neurons which feed sensory information into the brain. | 
+| What are motor neurons? | Neurons which send motor commands to the muscles. | 
+| What are interneurons? | Neurons which connect within the CNS. | 
+| What are the types of interneuron? | Local, relay. |
+| What are local interneurons? | Interneurons that form circuits with nearby neurons. |
+| What are relay interneurons? | Interneurons have long axons and communicate across brain regions. |
 
 ## Example: Plate Tectonics {#tectonics}
 
