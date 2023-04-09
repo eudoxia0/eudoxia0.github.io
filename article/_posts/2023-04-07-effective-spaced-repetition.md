@@ -45,6 +45,23 @@ examples as I could reasonably find.
    1. [Rule: Concept Graphs](#graph)
 1. [Examples](#ex)
    1. [Example: Vector Spaces](#vect)
+   1. [Example: Parity Group](#logical-consequence)
+   1. [Example: Logical Consequence](#parity)
+   1. [Example: Pharmacology](#pharma)
+   1. [Example: Regular Expressions](#regex)
+   1. [Example: Voltage](#voltage)
+   1. [Example: Informal and Formal Statements](#informal-theorem)
+   1. [Example: Proof Sketches](#proof-sketch)
+   1. [Example: Isomers](#isomers)
+   1. [Example: Neural Cells](#neural)
+   1. [Example: Plate Tectonics](#tectonics)
+   1. [Example: Random Variables](#random)
+   1. [Example: Months of the Year](#months)
+   1. [Example: Poetry](#poetry)
+   1. [Example: Powers of Two](#powers)
+1. [Scripts](#scripts)
+   1. [Sequence Script](#seq-script)
+   1. [Poetry Script](#poetry-script)
 1. [Software](#software)
 1. [Prior Art](#prior)
 1. [Conclusion](#conclusion)
@@ -183,9 +200,6 @@ There is one exception to this: you can have big cards if you also have smaller
 cards that add up to the same information. You can think of the larger card as
 testing that you can collate the information from the smaller cards.
 
-### Example: Vector Spaces
-
-
 ## Rule: Write Two-Way Questions {#bidirectionality}
 
 When possible, ask questions in two directions.
@@ -194,33 +208,9 @@ Whenever you have a term with a definition, the obvious thing to do is to ask
 "What is the definition of [term]?". You can also ask: "What is the term for
 [definition]?".
 
-### Example: Pharmacology
-
-### Example: Regular Expressions
-
-These cards go from a concept to a regex:
-
-| Question                                | Answer |
-|-----------------------------------------|--------|
-| What regex matches the start of a line? | `^`    |
-| What regex matches the end of a line?   | `$`    |
-| What regex matches a digit?             | `\d`   |
-
-In addition to the above, add cards that go from the regex to the concept:
-
-| Question              | Answer               |
-|-----------------------|----------------------|
-| What does `^` match?  | The start of a line. |
-| What does `$` match?  | The end of a line.   |
-| What does `\d` match? | A digit 0-9.         |
-
 ## Rule: Ask Questions in Multiple Ways {#poly}
 
-### Example: Definitions of Voltage
 
-### Example: Informal and Formal Theorems
-
-### Example: Proof Sketches
 
 ## Rule: Learning Hierarchies {#hier}
 
@@ -234,88 +224,6 @@ Foo?") and the bottom-up direction ("What is Bar a subclass of?").
 This ties into keeping flashcards atomic. Even when some information is not
 hierarchical, intrinsically, breaking down large flashcards into smaller
 flashcards is fundamentally building a hierarchy of flashcards.
-
-### Example: Isomers
-
-<div class="border-box">
-
-Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers or enantiomers.
-
-</div>
-
-### Example: Neural Cells
-
-Context:
-
->Cells in the nervous system are divided into neurons and glia. Glial cells are
->divided into macroglia and microglia. Macroglia are divided into astrocytes,
->oligodendrocytes, and Schwann cells.
-
-Visually:
-
-<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/neuro.svg"/>
-
-We first write the top-down questions:
-
-| Question                                       | Answer                                           |
-|------------------------------------------------|--------------------------------------------------|
-| What kinds of cell make up the nervous system? | Neurons and glia.                                |
-| What are the kinds of glial cell?              | Microglia and macroglia.                         |
-| What are the kinds of macroglia?               | Astrocytes, oligodendrocytes, and Schwann cells. |
-
-And the bottom-up questions. We don't ask these when the answers are obvious:
-"what are microglia a kind of" has an obvious answer.
-
-| Question                          | Answer     |
-|-----------------------------------|------------|
-| Astrocytes are a kind of...       | Macroglia. |
-| Oligodendrocytes are a kind of... | Macroglia. |
-| Schwann cells are a kind of...    | Macroglia. |
-
-### Example: Plate Tectonics
-
-Here's the information:
-
-<div class="border-box">
-
-The zone where two or more tectonic plates meet is called a _plate
-boundary_. There are three kinds:
-
-1. Convergent boundaries: plates come together.
-2. Divergent boundaries: plates move apart.
-3. Transform boundaries: plates slide past each other.
-
-</div>
-
-Applying the rule that cards should be two-way, we want two flashcards for the term 'plate boundary'.
-
-| Question                                                   | Answer                                |
-|------------------------------------------------------------|---------------------------------------|
-| What is a plate boundary?                                  | The place where tectonic plates meet. |
-| What is the term for the place where tectonic plates meet? | Plate boundary.                       |
-
-For the different types of plate boundary, we only ask the question in the
-top-down direction (we don't need to ask "what kind of thing is a transform
-boundary?", since the name kind of gives it away):
-
-| Question                              | Answer                            |
-|---------------------------------------|-----------------------------------|
-| What are the types of plate boundary? | Convergent, divergent, transform. |
-
-For each kind of plate boundary, we also ask the question in two ways:
-
-| Question                                                 | Answer                                       |
-|----------------------------------------------------------|----------------------------------------------|
-| Definition: convergent boundary.                         | Where tectonic plates come together.         |
-| Definition: divergent boundary.                          | Where tectonic plates move apart.            |
-| Definition: transform boundary.                          | Where tectonic plates slide past each other. |
-| Term: place where tectonic plates come together.         | Convergent boundary.                         |
-| Term: place where tectonic plates move apart.            | Divergent boundary.                          |
-| Term: place where tectonic plates slide past each other. | Transform boundary.                          |
-
-Graphically, here's how the questions link the concepts in the knowledge graph:
-
-<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
 
 ## Rule: Learning Sequences {#seq}
 
@@ -338,180 +246,11 @@ You might also want:
 How thorough you want to be depends on the nature of the information. Most of
 the time I use a cloze card and a test card.
 
-### Using a Script
-
-Writing all of the flashcards by hand is tiresome. So you can use a script.
-
-### Example: Months of the Year
-
-Suppose you want to memorize:
-
-<div class="border-box">
-
-1. January
-2. February
-3. March
-4. April
-5. May
-6. June
-7. July
-8. August
-9. September
-10. October
-11. November
-12. December
-
-</div>
-
-The index-to-element flashcards:
-
-| Question                            | Answer    |
-|-------------------------------------|-----------|
-| What is the 1st month of the year?  | January   |
-| What is the 2nd month of the year?  | February  |
-| What is the 3rd month of the year?  | March     |
-| What is the 4th month of the year?  | April     |
-| What is the 5th month of the year?  | May       |
-| What is the 6th month of the year?  | June      |
-| What is the 7th month of the year?  | July      |
-| What is the 8th month of the year?  | August    |
-| What is the 9th month of the year?  | September |
-| What is the 10th month of the year? | October   |
-| What is the 11th month of the year? | November  |
-| What is the 12th month of the year? | December  |
-
-The element-to-index flashcards:
-
-| Question                                | Answer |
-|-----------------------------------------|--------|
-| January is the ... month of the year.  | 1      |
-| February is the ... month of the year. | 2      |
-| March is the ... month of the year.    | 3      |
-| April is the ... month of the year.    | 4      |
-| May is the ... month of the year.      | 5      |
-| June is the ... month of the year.     | 6      |
-| July is the ... month of the year.     | 7      |
-| August is the ... month of the year.   | 8      |
-| September is the ... month of the year.| 9      |
-| October is the ... month of the year.  | 10     |
-| November is the ... month of the year. | 11     |
-| December is the ... month of the year. | 12     |
-
-The successor flashcards:
-
-| Question                    | Answer    |
-|-----------------------------|-----------|
-| What comes after January?   | February  |
-| What comes after February?  | March     |
-| What comes after March?     | April     |
-| What comes after April?     | May       |
-| What comes after May?       | June      |
-| What comes after June?      | July      |
-| What comes after July?      | August    |
-| What comes after August?    | September |
-| What comes after September? | October   |
-| What comes after October?   | November  |
-| What comes after November?  | December  |
-
-And the predecessor flashcards:
-
-
-
-| Question                     | Answer    |
-|------------------------------|-----------|
-| What comes before February?  | January   |
-| What comes before March?     | February  |
-| What comes before April?     | March     |
-| What comes before May?       | April     |
-| What comes before June?      | May       |
-| What comes before July?      | June      |
-| What comes before August?    | July      |
-| What comes before September? | August    |
-| What comes before October?   | September |
-| What comes before November?  | October   |
-| What comes before December?  | November  |
-
-
-### Example: Poetry
-
-### Example: Powers of Two
-
-Let's memorize the first sixteen powers of two:
-
-<div class="border-box">
-
-
-$$
-\begin{align*}
-2^{2} &= 4\\
-2^{3} &= 8\\
-2^{4} &= 16\\
-2^{5} &= 32\\
-2^{6} &= 64\\
-2^{7} &= 128\\
-2^{8} &= 256\\
-2^{9} &= 512\\
-2^{10} &= 1024\\
-2^{11} &= 2048\\
-2^{12} &= 4096\\
-2^{13} &= 8192\\
-2^{14} &= 16384\\
-2^{15} &= 32768\\
-2^{16} &= 65536
-\end{align*}
-$$
-
-</div>
-
-The forward cards ask for the power:
-
-| Question | Answer  |
-|----------|---------|
-| $2^2$    | $4$     |
-| $2^3$    | $8$     |
-| $2^4$    | $16$    |
-| $2^5$    | $32$    |
-| $2^6$    | $64$    |
-| $2^7$    | $128$   |
-| $2^8$    | $256$   |
-| $2^9$    | $512$   |
-| $2^{10}$ | $1024$  |
-| $2^{11}$ | $2048$  |
-| $2^{12}$ | $4096$  |
-| $2^{13}$ | $8192$  |
-| $2^{14}$ | $16384$ |
-| $2^{15}$ | $32768$ |
-| $2^{16}$ | $65536$ |
-
-While the backwards cards ask for the exponent from the power:
-
-| Question       | Answer |
-|----------------|--------|
-| $\log_2 4$     | $2$    |
-| $\log_2 8$     | $3$    |
-| $\log_2 16$    | $4$    |
-| $\log_2 32$    | $5$    |
-| $\log_2 64$    | $6$    |
-| $\log_2 128$   | $7$    |
-| $\log_2 256$   | $8$    |
-| $\log_2 512$   | $9$    |
-| $\log_2 1024$  | $10$   |
-| $\log_2 2048$  | $11$   |
-| $\log_2 4096$  | $12$   |
-| $\log_2 8192$  | $13$   |
-| $\log_2 16384$ | $14$   |
-| $\log_2 32768$ | $15$   |
-| $\log_2 65536$ | $16$   |
-
-Finally, I have a test card that asks me to recall the entire sequence in order:
-
 ## Rule: Concept Graphs {#graph}
 
 It can help to visualize the concepts you're acquiring as being like a graph,
 where each node represents a discrete concept having certain properties, and the
 edges in the graphs are links between the knowledge.
-
-### Example: Random Variables
 
 # Examples {#ex}
 
@@ -681,6 +420,287 @@ Finally, we ask what each axiom means:
 Graphically, you can try visualizing the flashcards and their relationships like this:
 
 <a href="/assets/content/effective-spaced-repetition/vect.svg"><img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/vect.svg"/></a>
+
+## Example: Parity Group {#parity}
+
+## Example: Pharmacology {#pharma}
+
+## Example: Logical Consequence {#logical-consequence}
+
+## Example: Regular Expressions {#regex}
+
+These cards go from a concept to a regex:
+
+| Question                                | Answer |
+|-----------------------------------------|--------|
+| What regex matches the start of a line? | `^`    |
+| What regex matches the end of a line?   | `$`    |
+| What regex matches a digit?             | `\d`   |
+
+In addition to the above, add cards that go from the regex to the concept:
+
+| Question              | Answer               |
+|-----------------------|----------------------|
+| What does `^` match?  | The start of a line. |
+| What does `$` match?  | The end of a line.   |
+| What does `\d` match? | A digit 0-9.         |
+
+## Example: Voltage {#voltage}
+
+## Example: Informal and Formal Statements {#informal-theorem}
+
+## Example: Proof Sketches {#proof-sketch}
+
+## Example: Isomers {#isomer}
+
+<div class="border-box">
+
+Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers or enantiomers.
+
+</div>
+
+## Example: Neural Cells {#neural}
+
+Context:
+
+>Cells in the nervous system are divided into neurons and glia. Glial cells are
+>divided into macroglia and microglia. Macroglia are divided into astrocytes,
+>oligodendrocytes, and Schwann cells.
+
+Visually:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/neuro.svg"/>
+
+We first write the top-down questions:
+
+| Question                                       | Answer                                           |
+|------------------------------------------------|--------------------------------------------------|
+| What kinds of cell make up the nervous system? | Neurons and glia.                                |
+| What are the kinds of glial cell?              | Microglia and macroglia.                         |
+| What are the kinds of macroglia?               | Astrocytes, oligodendrocytes, and Schwann cells. |
+
+And the bottom-up questions. We don't ask these when the answers are obvious:
+"what are microglia a kind of" has an obvious answer.
+
+| Question                          | Answer     |
+|-----------------------------------|------------|
+| Astrocytes are a kind of...       | Macroglia. |
+| Oligodendrocytes are a kind of... | Macroglia. |
+| Schwann cells are a kind of...    | Macroglia. |
+
+## Example: Plate Tectonics {#tectonics}
+
+Here's the information:
+
+<div class="border-box">
+
+The zone where two or more tectonic plates meet is called a _plate
+boundary_. There are three kinds:
+
+1. Convergent boundaries: plates come together.
+2. Divergent boundaries: plates move apart.
+3. Transform boundaries: plates slide past each other.
+
+</div>
+
+Applying the rule that cards should be two-way, we want two flashcards for the term 'plate boundary'.
+
+| Question                                                   | Answer                                |
+|------------------------------------------------------------|---------------------------------------|
+| What is a plate boundary?                                  | The place where tectonic plates meet. |
+| What is the term for the place where tectonic plates meet? | Plate boundary.                       |
+
+For the different types of plate boundary, we only ask the question in the
+top-down direction (we don't need to ask "what kind of thing is a transform
+boundary?", since the name kind of gives it away):
+
+| Question                              | Answer                            |
+|---------------------------------------|-----------------------------------|
+| What are the types of plate boundary? | Convergent, divergent, transform. |
+
+For each kind of plate boundary, we also ask the question in two ways:
+
+| Question                                                 | Answer                                       |
+|----------------------------------------------------------|----------------------------------------------|
+| Definition: convergent boundary.                         | Where tectonic plates come together.         |
+| Definition: divergent boundary.                          | Where tectonic plates move apart.            |
+| Definition: transform boundary.                          | Where tectonic plates slide past each other. |
+| Term: place where tectonic plates come together.         | Convergent boundary.                         |
+| Term: place where tectonic plates move apart.            | Divergent boundary.                          |
+| Term: place where tectonic plates slide past each other. | Transform boundary.                          |
+
+Graphically, here's how the questions link the concepts in the knowledge graph:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
+
+## Example: Random Variables {#random}
+
+## Example: Months of the Year {#months}
+
+Suppose you want to memorize:
+
+<div class="border-box">
+
+1. January
+2. February
+3. March
+4. April
+5. May
+6. June
+7. July
+8. August
+9. September
+10. October
+11. November
+12. December
+
+</div>
+
+The index-to-element flashcards:
+
+| Question                            | Answer    |
+|-------------------------------------|-----------|
+| What is the 1st month of the year?  | January   |
+| What is the 2nd month of the year?  | February  |
+| What is the 3rd month of the year?  | March     |
+| What is the 4th month of the year?  | April     |
+| What is the 5th month of the year?  | May       |
+| What is the 6th month of the year?  | June      |
+| What is the 7th month of the year?  | July      |
+| What is the 8th month of the year?  | August    |
+| What is the 9th month of the year?  | September |
+| What is the 10th month of the year? | October   |
+| What is the 11th month of the year? | November  |
+| What is the 12th month of the year? | December  |
+
+The element-to-index flashcards:
+
+| Question                                | Answer |
+|-----------------------------------------|--------|
+| January is the ... month of the year.  | 1      |
+| February is the ... month of the year. | 2      |
+| March is the ... month of the year.    | 3      |
+| April is the ... month of the year.    | 4      |
+| May is the ... month of the year.      | 5      |
+| June is the ... month of the year.     | 6      |
+| July is the ... month of the year.     | 7      |
+| August is the ... month of the year.   | 8      |
+| September is the ... month of the year.| 9      |
+| October is the ... month of the year.  | 10     |
+| November is the ... month of the year. | 11     |
+| December is the ... month of the year. | 12     |
+
+The successor flashcards:
+
+| Question                    | Answer    |
+|-----------------------------|-----------|
+| What comes after January?   | February  |
+| What comes after February?  | March     |
+| What comes after March?     | April     |
+| What comes after April?     | May       |
+| What comes after May?       | June      |
+| What comes after June?      | July      |
+| What comes after July?      | August    |
+| What comes after August?    | September |
+| What comes after September? | October   |
+| What comes after October?   | November  |
+| What comes after November?  | December  |
+
+And the predecessor flashcards:
+
+
+
+| Question                     | Answer    |
+|------------------------------|-----------|
+| What comes before February?  | January   |
+| What comes before March?     | February  |
+| What comes before April?     | March     |
+| What comes before May?       | April     |
+| What comes before June?      | May       |
+| What comes before July?      | June      |
+| What comes before August?    | July      |
+| What comes before September? | August    |
+| What comes before October?   | September |
+| What comes before November?  | October   |
+| What comes before December?  | November  |
+
+## Example: Poetry {#poetry}
+
+## Example: Powers of Two {#powers}
+
+Let's memorize the first sixteen powers of two:
+
+<div class="border-box">
+
+$$
+\begin{align*}
+2^{2} &= 4\\
+2^{3} &= 8\\
+2^{4} &= 16\\
+2^{5} &= 32\\
+2^{6} &= 64\\
+2^{7} &= 128\\
+2^{8} &= 256\\
+2^{9} &= 512\\
+2^{10} &= 1024\\
+2^{11} &= 2048\\
+2^{12} &= 4096\\
+2^{13} &= 8192\\
+2^{14} &= 16384\\
+2^{15} &= 32768\\
+2^{16} &= 65536
+\end{align*}
+$$
+
+</div>
+
+The forward cards ask for the power:
+
+| Question | Answer  |
+|----------|---------|
+| $2^2$    | $4$     |
+| $2^3$    | $8$     |
+| $2^4$    | $16$    |
+| $2^5$    | $32$    |
+| $2^6$    | $64$    |
+| $2^7$    | $128$   |
+| $2^8$    | $256$   |
+| $2^9$    | $512$   |
+| $2^{10}$ | $1024$  |
+| $2^{11}$ | $2048$  |
+| $2^{12}$ | $4096$  |
+| $2^{13}$ | $8192$  |
+| $2^{14}$ | $16384$ |
+| $2^{15}$ | $32768$ |
+| $2^{16}$ | $65536$ |
+
+While the backwards cards ask for the exponent from the power:
+
+| Question       | Answer |
+|----------------|--------|
+| $\log_2 4$     | $2$    |
+| $\log_2 8$     | $3$    |
+| $\log_2 16$    | $4$    |
+| $\log_2 32$    | $5$    |
+| $\log_2 64$    | $6$    |
+| $\log_2 128$   | $7$    |
+| $\log_2 256$   | $8$    |
+| $\log_2 512$   | $9$    |
+| $\log_2 1024$  | $10$   |
+| $\log_2 2048$  | $11$   |
+| $\log_2 4096$  | $12$   |
+| $\log_2 8192$  | $13$   |
+| $\log_2 16384$ | $14$   |
+| $\log_2 32768$ | $15$   |
+| $\log_2 65536$ | $16$   |
+
+Finally, I have a test card that asks me to recall the entire sequence in order:
+
+# Scripts {#scripts}
+
+## Sequence Script {#seq-script}
+
+## Poetry Script {#poetry}
 
 # Software {#software}
 
