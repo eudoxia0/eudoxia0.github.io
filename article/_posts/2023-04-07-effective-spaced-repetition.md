@@ -161,17 +161,26 @@ re-organize your scratchpad until you can commit it to flashcards.
 
 ## Rule: Be Honest {#honest}
 
-The software doesn't know whether you recalled something correctly or not. You are only accountable to yourself. If you recalled something wrong, or not quite right, err on the side of caution and mark it forgotten.
+The software doesn't know whether you recalled something correctly or not. You
+are only accountable to yourself. If you recalled something wrong, or not quite
+right, err on the side of caution and mark it forgotten.
 
 ## Rule: Keep It Fun {#fun}
 
-This is _crucial_ to maintaining the habit. If reviewing flashcards feels like a chore, you will become averse to doing it.
+This is _crucial_ to maintaining the habit. If reviewing flashcards feels like a
+chore, you will become averse to doing it.
 
 I used to frequently have this problem. I solved it in a few ways:
 
-1. Having a diverse knowledge base you're drilling helps, so you are not bored by going through the same topic for a long time. Typically, spaced repetition software will shuffle the cards, so that if you're drilling all the cards across all decks, you will be surprised often.
-2. A common source of frustration is cards that are too long to recall quickly, and thus feel like a chore. Break big cards down into smaller cards. It feels good to be able to fly through the cards quickly.
-3. Cards that are difficult to recall are very frustrating. I solved this by applying the rules described in this post.
+1. Having a diverse knowledge base you're drilling helps, so you are not bored
+   by going through the same topic for a long time. Typically, spaced repetition
+   software will shuffle the cards, so that if you're drilling all the cards
+   across all decks, you will be surprised often.
+2. A common source of frustration is cards that are too long to recall quickly,
+   and thus feel like a chore. Break big cards down into smaller cards. It feels
+   good to be able to fly through the cards quickly.
+3. Cards that are difficult to recall are very frustrating. I solved this by
+   applying the rules described in this post.
 
 ## Rule: Repeat Yourself {#repeat}
 
@@ -517,10 +526,14 @@ From my notes on logic:
 
 The two notions of _logical consequence_ are:
 
-1. **Semantic Consequence:** $Q$ is a semantic consequence of $P$ iff, in every interpretation where $P$ is true, $Q$ is also true. This is denoted $P \models Q$.
-1. **Syntactic Consequence:** $Q$ is a syntactic consequence of $P$ iff there exists a proof from $P$ to $Q$. This is denoted $P \vdash Q$.
+1. **Semantic Consequence:** $Q$ is a semantic consequence of $P$ iff, in every
+   interpretation where $P$ is true, $Q$ is also true. This is denoted $P
+   \models Q$.
+1. **Syntactic Consequence:** $Q$ is a syntactic consequence of $P$ iff there
+   exists a proof from $P$ to $Q$. This is denoted $P \vdash Q$.
 
-Semantic consequence is about interpretations, while semantic consequence is about proofs.
+Semantic consequence is about interpretations, while semantic consequence is
+about proofs.
 
 </div>
 
@@ -558,14 +571,18 @@ us.
 
 <div class="border-box">
 
-The [geologic time scale][gts] (GTS) divides the geological record of the Earth into four nested time units:
+The [geologic time scale][gts] (GTS) divides the geological record of the Earth
+into four nested time units:
 
 [gts]: https://en.wikipedia.org/wiki/Geologic_time_scale
 
 1. The **eon** is the largest unit. Eons last hundreds of millions of years.
-2. Eons are further divided into **eras**, which last tens to hundreds of millions of years.
-3. Eras are divided into **periods**, which last millions to tens of millions of years.
-4. Finally, periods are divided into **epochs**, which last hundreds of thousands to millions of years.
+2. Eons are further divided into **eras**, which last tens to hundreds of
+   millions of years.
+3. Eras are divided into **periods**, which last millions to tens of millions of
+   years.
+4. Finally, periods are divided into **epochs**, which last hundreds of
+   thousands to millions of years.
 
 The four eons, from oldest to most recent, are:
 
@@ -597,7 +614,8 @@ Let's begin with the simplest flashcards, the definition of the GTS:
 | What is the geologic time scale?                      | The timeline of Earth's history. |
 | What is the term for the timeline of Earth's history? | The geologic time scale.         |
 
-The subdivisions form a sequence, from oldest to most recent: eon, era, period, epoch.
+The subdivisions form a sequence, from oldest to most recent: eon, era, period,
+epoch.
 
 We begin with a test card, asking us to recall the entire sequence:
 
@@ -636,14 +654,18 @@ Magma is liquid rock under the Earth's surface.
 The three magma-forming processes are:
 
 1. **Increasing Temperature:** increasing temperature can melt rock.
-1. **Decreasing Pressure:** when the pressure drops, atoms are more free to move, and rock becomes liquid.
-1. **Addition of Water:** water lowers the melting point of rock, because the water molecules disrupt the crystal bonds.
+1. **Decreasing Pressure:** when the pressure drops, atoms are more free to
+   move, and rock becomes liquid.
+1. **Addition of Water:** water lowers the melting point of rock, because the
+   water molecules disrupt the crystal bonds.
 
 Magma forms in three places:
 
 1. **Hot spots:** as hot rock rises, pressure decreases and it becomes magma.
-2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because it is less dense) to plug the gap and melts due to decreasing pressure.
-3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The water melts and rises, adding water to the overlying rock, which the melts.
+2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because
+   it is less dense) to plug the gap and melts due to decreasing pressure.
+3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The
+   water melts and rises, adding water to the overlying rock, which the melts.
 
 </div>
 
@@ -660,8 +682,10 @@ First, the definition:
 | What is magma?                                               | Liquid rock under the Earth's surface. |
 | What is the term for liquid rock under surface of the Earth? | Magma.                                 |
 
-Second, we want to know how magma forms. A common mistake here would be to put the magma-forming processes _and_ their explanations in the same
-flashcard. Rather, to keep each card as small as possible, we want to separate the list of processes from their definitions.
+Second, we want to know how magma forms. A common mistake here would be to put
+the magma-forming processes _and_ their explanations in the same
+flashcard. Rather, to keep each card as small as possible, we want to separate
+the list of processes from their definitions.
 
 So we first as for a list of mechanisms:
 
@@ -669,7 +693,8 @@ So we first as for a list of mechanisms:
 |---------------------------------------|-----------------------------------------------------------------|
 | What are the magma-forming processes? | Increasing temperature, decreasing pressure, addition of water. |
 
-And then we ask for an explanation of each. We don't really need to ask why adding temperature melts rock:
+And then we ask for an explanation of each. We don't really need to ask why
+adding temperature melts rock:
 
 | Question                                               | Answer                                                          |
 |--------------------------------------------------------|-----------------------------------------------------------------|
@@ -682,7 +707,9 @@ Third: where magma is found. Again, we separate the list from the details:
 |------------------------|---------------------------------------------------------|
 | Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
 
-Then we ask for details. For each place where magma forms, we ask both which processes are involved, and what the full causal explanation is. We also ask the question backward: which places involve a given process.
+Then we ask for details. For each place where magma forms, we ask both which
+processes are involved, and what the full causal explanation is. We also ask the
+question backward: which places involve a given process.
 
 | Question                                                                       | Answer                                                                                                                                  |
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -867,7 +894,8 @@ Neurons can be divided into three categories by their function:
 
 </div>
 
-Let's start by doing this the wrong way, through loading too much information into one card.
+Let's start by doing this the wrong way, through loading too much information
+into one card.
 
 <table>
   <thead>
