@@ -514,7 +514,18 @@ We can turn this into the following flashcards:
 
 ## Example: Logical Consequence {#logical-consequence}
 
-TODO
+From my notes on logic:
+
+<div class="border-box">
+
+The two notions of _logical consequence_ are:
+
+1. **Semantic Consequence:** $Q$ is a semantic consequence of $P$ iff, in every interpretation where $P$ is true, $Q$ is also true. This is denoted $P \models Q$.
+1. **Syntactic Consequence:** $Q$ is a syntactic consequence of $P$ iff there exists a proof from $P$ to $Q$. This is denoted $P \vdash Q$.
+
+Semantic consequence is about interpretations, while semantic consequence is about proofs.
+
+</div>
 
 ## Example: Periodization {#perodization}
 
