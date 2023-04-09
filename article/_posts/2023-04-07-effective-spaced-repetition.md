@@ -54,7 +54,6 @@ $$
    1. [Example: Parity Group](#parity)
    1. [Example: Logical Consequence](#logical-consequence)
    1. [Example: Periodization](#perodization)
-   1. [Example: Pharmacology](#pharma)
    1. [Example: Magma Formation](#magma)
    1. [Example: Rational Numbers](#ratnums)
    1. [Example: Regular Expressions](#regex)
@@ -528,10 +527,6 @@ Semantic consequence is about interpretations, while semantic consequence is abo
 </div>
 
 ## Example: Periodization {#perodization}
-
-TODO
-
-## Example: Pharmacology {#pharma}
 
 TODO
 
