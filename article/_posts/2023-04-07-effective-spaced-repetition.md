@@ -522,6 +522,8 @@ And the bottom-up questions. We don't ask these when the answers are obvious:
 
 ## Example: Neuron Types {#neurons}
 
+TODO
+
 ## Example: Plate Tectonics {#tectonics}
 
 Here's the information:
