@@ -451,7 +451,17 @@ Graphically, you can try visualizing the flashcards and their relationships like
 
 <a href="/assets/content/effective-spaced-repetition/vect.svg"><img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/vect.svg"/></a>
 
-TODO: REST
+If you want to be extra thorough, you can also write the backwards questions:
+
+| Question                                                                  | Answer                    |
+|---------------------------------------------------------------------------|---------------------------|
+| What is the term for a set whose elements can be added or scaled?         | A vector space.           |
+| Name this axiom: $u + v = v + u$                                          | Commutativity of Addition |
+| Name this axiom: $u + (v + w) = (u + v) + w$                              | Associativity of Addition |
+| Name this axiom: $\exists 0 \in V : v + 0 = v$                            | Identity of Addition      |
+| Name this axiom: $\forall v \in V, \exists -v \in V : v + (-v) = 0$       | Inverse of Addition       |
+| Name this axiom: $1v = v$                                                 | Identity of Scaling       |
+| Name this axiom: $\forall v \in V, a,b \in \mathbb{F} : (a+b)v = av + bv$ | Distributivity            |
 
 ## Example: Parity Group {#parity}
 
