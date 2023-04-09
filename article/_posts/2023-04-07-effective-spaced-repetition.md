@@ -427,13 +427,23 @@ TODO: REST
 
 ## Example: Parity Group {#parity}
 
+TODO
+
 ## Example: Logical Consequence {#logical-consequence}
+
+TODO
 
 ## Example: Periodization {#perodization}
 
+TODO
+
 ## Example: Pharmacology {#pharma}
 
+TODO
+
 ## Example: Magma Formation {#magma}
+
+TODO
 
 ## Example: Regular Expressions {#regex}
 
@@ -455,9 +465,15 @@ In addition to the above, add cards that go from the regex to the concept:
 
 ## Example: Voltage {#voltage}
 
+TODO
+
 ## Example: Informal and Formal Statements {#informal-theorem}
 
+TODO
+
 ## Example: Proof Sketches {#proof-sketch}
+
+TODO
 
 ## Example: Isomers {#isomer}
 
@@ -466,6 +482,8 @@ In addition to the above, add cards that go from the regex to the concept:
 Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers or enantiomers.
 
 </div>
+
+TODO
 
 ## Example: Neural Cells {#neural}
 
@@ -543,6 +561,8 @@ Graphically, here's how the questions link the concepts in the knowledge graph:
 
 ## Example: Random Variables {#random}
 
+TODO
+
 ## Example: Months of the Year {#months}
 
 Suppose you want to memorize:
@@ -616,8 +636,6 @@ The successor flashcards:
 
 And the predecessor flashcards:
 
-
-
 | Question                     | Answer    |
 |------------------------------|-----------|
 | What comes before February?  | January   |
@@ -633,6 +651,8 @@ And the predecessor flashcards:
 | What comes before December?  | November  |
 
 ## Example: Poetry {#poetry}
+
+TODO
 
 ## Example: Powers of Two {#powers}
 
@@ -706,9 +726,15 @@ Finally, I have a test card that asks me to recall the entire sequence in order:
 
 # Scripts {#scripts}
 
+TODO
+
 ## Sequence Script {#seq-script}
 
+TODO
+
 ## Poetry Script {#poetry}
+
+TODO
 
 # Software {#software}
 
