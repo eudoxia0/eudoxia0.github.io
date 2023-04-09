@@ -161,12 +161,6 @@ re-organize your scratchpad until you can commit it to flashcards.
 Memory is frequency times volume. Individual cards should be extremely brief,
 but your deck as a whole can be as repetitive as you want.
 
-Ask questions in multiple ways. Ask for formal and informal definitions of
-terms. Ask for the formal and informal statements of a theorem. Ask questions
-forwards and backwards. Add contextual questions: "what is the intutition for
-[concept]?". Add questions that link different concepts across your knowledge
-graph.
-
 ## Rule:  Organize by Source {#source}
 
 Organize content by source, not topic.
@@ -237,7 +231,13 @@ You can also ask the question backwards:
 
 ## Rule: Ask Questions in Multiple Ways {#poly}
 
-TODO
+Ask questions in multiple ways. Ask for formal and informal definitions of
+terms. Ask for the formal and informal statements of a theorem. Ask questions
+forwards and backwards. Add contextual questions: "what is the intutition for
+[concept]?". Add questions that link different concepts across your knowledge
+graph.
+
+The more inlinked your knowledge graph is, the better.
 
 ## Rule: Concept Graphs {#graph}
 
