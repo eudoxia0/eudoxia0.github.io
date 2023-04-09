@@ -47,8 +47,9 @@ examples as I could reasonably find.
    1. [Example: Vector Spaces](#vect)
    1. [Example: Parity Group](#logical-consequence)
    1. [Example: Logical Consequence](#parity)
-   1. [Example: Regular Expressions](#regex)
    1. [Example: Periodization](#perodization)
+   1. [Example: Pharmacology](#pharma)
+   1. [Example: Magma Formation](#magma)
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
    1. [Example: Informal and Formal Statements](#informal-theorem)
@@ -210,6 +211,8 @@ Whenever you have a term with a definition, the obvious thing to do is to ask
 [definition]?".
 
 ## Rule: Ask Questions in Multiple Ways {#poly}
+
+TODO
 
 ## Rule: Concept Graphs {#graph}
 
@@ -420,6 +423,8 @@ Graphically, you can try visualizing the flashcards and their relationships like
 
 <a href="/assets/content/effective-spaced-repetition/vect.svg"><img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/vect.svg"/></a>
 
+TODO: REST
+
 ## Example: Parity Group {#parity}
 
 ## Example: Logical Consequence {#logical-consequence}
@@ -427,6 +432,8 @@ Graphically, you can try visualizing the flashcards and their relationships like
 ## Example: Periodization {#perodization}
 
 ## Example: Pharmacology {#pharma}
+
+## Example: Magma Formation {#magma}
 
 ## Example: Regular Expressions {#regex}
 
