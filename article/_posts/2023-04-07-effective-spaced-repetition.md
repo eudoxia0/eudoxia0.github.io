@@ -208,7 +208,8 @@ testing that you can collate the information from the smaller cards.
 
 When possible, ask questions in two directions.
 
-Whenever you have a term with a definition, the obvious thing to do is to ask for the definition from the term, e.g.:
+Whenever you have a term with a definition, the obvious thing to do is to ask
+for the definition from the term, e.g.:
 
 >Q: What is the order of a group?
 >
@@ -220,7 +221,9 @@ But you can also ask for the term from the definition, e.g.:
 >
 >A: The group's order.
 
-When you have some notation, like $\mathbb{R}$ for the real numbers, or $\dim V$ for the dimension of a vector space, the natural thing to ask is what the notation means.
+When you have some notation, like $\mathbb{R}$ for the real numbers, or $\dim V$
+for the dimension of a vector space, the natural thing to ask is what the
+notation means.
 
 >Q: What does $\mathbb{R}$ stand for?
 >
@@ -269,7 +272,8 @@ following flashcards for each $i \in [1,n]$:
 
 You might also want:
 
-1. A **test card:** a flashcard asking you to recite the sequence from beginning to end.
+1. A **test card:** a flashcard asking you to recite the sequence from beginning
+   to end.
 2. A **cloze sequence:** flashcard with a cloze deletion for each element in the
    sequence, to fill in the blank given the context.
 
@@ -278,7 +282,8 @@ the time I use a cloze card and a test card.
 
 # Examples {#ex}
 
-Because many of the examples involve multiple rules at the same time, I decided to group them separately from the rules.
+Because many of the examples involve multiple rules at the same time, I decided
+to group them separately from the rules.
 
 ## Example: Vector Spaces {#vect}
 
@@ -289,7 +294,8 @@ Here's what we want to learn:
 A vector space, informally, is a set whose elements---called vectors---can be
 added or scaled.
 
-More formally: a vector space over a field $\mathbb{F}$ is a set $V$ plus two operations:
+More formally: a vector space over a field $\mathbb{F}$ is a set $V$ plus two
+operations:
 
 1. Vector addition: $V \times V \to V$
 1. Scalar multiplication: $V \times \mathbb{F} \to V$
@@ -507,7 +513,8 @@ TODO
 
 <div class="border-box">
 
-Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers or enantiomers.
+Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers
+or enantiomers.
 
 </div>
 
@@ -561,7 +568,8 @@ boundary_. There are three kinds:
 
 </div>
 
-Applying the rule that cards should be two-way, we want two flashcards for the term 'plate boundary'.
+Applying the rule that cards should be two-way, we want two flashcards for the
+term 'plate boundary'.
 
 | Question                                                   | Answer                                |
 |------------------------------------------------------------|---------------------------------------|
@@ -814,7 +822,8 @@ it. Let me reiterate the important parts:
 1. _Understand_ before _memorizing_: the concepts have to be clear in your head
    before you try to commit them to memory. "Clarity" is a fuzzy thing, but what
    I do is dig, expand, clarify until I feel comfortable formulating knowledge.
-1. Cards should be _atomic_, and should refer to the smallest possible conceptual units.
+1. Cards should be _atomic_, and should refer to the smallest possible
+   conceptual units.
 1. Avoid trying to memorize long sequences.
 1. Avoid trying to memorize big unordered sets of things.
 1. Keep the wording simple.
@@ -822,4 +831,5 @@ it. Let me reiterate the important parts:
 
 # Conclusion {#conclusion}
 
-I hope that you will find these rules and examples useful. Now go pick up a textbook and learn something useful.
+I hope that you will find these rules and examples useful. Now go pick up a
+textbook and learn something useful.
