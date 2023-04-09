@@ -749,11 +749,13 @@ TODO
 
 ## Example: Neural Cells {#neural}
 
-Context:
+<div class="border-box">
 
->Cells in the nervous system are divided into neurons and glia. Glial cells are
->divided into macroglia and microglia. Macroglia are divided into astrocytes,
->oligodendrocytes, and Schwann cells.
+Cells in the nervous system are divided into neurons and glia. Glial cells are
+divided into macroglia and microglia. Macroglia are divided into astrocytes,
+oligodendrocytes, and Schwann cells.
+
+</div>
 
 Visually:
 
