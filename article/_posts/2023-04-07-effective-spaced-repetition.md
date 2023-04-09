@@ -44,6 +44,7 @@ examples as I could reasonably find.
    1. [Rule: Learning Sequences](#seq)
    1. [Rule: Concept Graphs](#graph)
 1. [Examples](#ex)
+   1. [Example: Vector Spaces](#vect)
 1. [Software](#software)
 1. [Prior Art](#prior)
 1. [Conclusion](#conclusion)
@@ -184,168 +185,6 @@ testing that you can collate the information from the smaller cards.
 
 ### Example: Vector Spaces
 
-Here's what we want to learn:
-
-<div class="border-box">
-
-A vector space, informally, is a set whose elements---called vectors---can be
-added or scaled.
-
-More formally: a vector space over a field $\mathbb{F}$ is a set $V$ plus two operations:
-
-1. Vector addition: $V \times V \to V$
-1. Scalar multiplication: $V \times \mathbb{F} \to V$
-
-Satisfying the following axioms:
-
-Commutativity of Addition
-:  $u + v = v + u$
-
-Associativity of Addition
-: $u + (v + w) = (u + v) + w$
-
-Identity of Addition
-: $\exists 0 \in V : v + 0 = v$
-
-Inverse of Addition
-: $\forall v \in V, \exists -v \in V : v + (-v) = 0$
-
-Identity of Scaling
-: $1v = v$
-
-Distributivity
-: $\forall v \in V, a,b \in \mathbb{F} : (a+b)v = av + bv$
-
-</div>
-
-We have to break this down. Severely. We will do this step by step.
-
-First, we have to separate the informal (intuitive) and formal definitions:
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Informally: what is a vector space?</td>
-      <td>A set whose elements can be added or scaled.</td>
-    </tr>
-    <tr>
-      <td>Formally: what is a vector space?</td>
-      <td>A vector space over a field $\mathbb{F}$ is a set $V$ plus two operations: vector addition and scalar multiplication.</td>
-    </tr>
-  </tbody>
-</table>
-
-We add one brief question about notation (you may choose to skip this one, it's
-an example):
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>What are the elements of a vector space called?</td>
-      <td>Vectors.</td>
-    </tr>
-  </tbody>
-</table>
-
-Now we ask about the signatures of the operations:
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>What is the signature of vector addition?</td>
-      <td>$V \times V \to V$</td>
-    </tr>
-    <tr>
-      <td>What is the signature of scalar multiplication?</td>
-      <td>$V \times \mathbb{F} \to V$</td>
-    </tr>
-  </tbody>
-</table>
-
-Next, we ask for the axioms:
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>What are the axioms that define a vector space?</td>
-      <td>
-        <ol>
-          <li>Commutativity of Addition</li>
-          <li>Associativity of Addition</li>
-          <li>Identity of Addition</li>
-          <li>Inverse of Addition</li>
-          <li>Identity of Scaling</li>
-          <li>Distributivity</li>
-        </ol>
-     </td>
-    </tr>
-  </tbody>
-</table>
-
-Finally, we ask what each axiom means:
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Vector spaces: state: commutativity of addition</td>
-      <td>$u + v = v + u$</td>
-    </tr>
-    <tr>
-      <td>Vector spaces: state: associativity of addition</td>
-      <td>$u + (v + w) = (u + v) + w$</td>
-    </tr>
-    <tr>
-      <td>Vector spaces: state: identity of addition</td>
-      <td>$\exists 0 \in V:  v + 0 = v$</td>
-    </tr>
-    <tr>
-      <td>Vector spaces: state: inverse of addition</td>
-      <td>$\forall v \in V, \exists -v \in V:  v + (-v) = 0$</td>
-    </tr>
-    <tr>
-      <td>Vector spaces: state: identity of scaling</td>
-      <td>$1v = v$</td>
-    </tr>
-    <tr>
-      <td>Vector spaces: state: distributivity</td>
-      <td>$\forall v \in V, a,b \in \mathbb{F}:  (a+b)v = av + bv$</td>
-    </tr>
-  </tbody>
-</table>
-
-Graphically, you can try visualizing the flashcards and their relationships like this:
-
-<a href="/assets/content/effective-spaced-repetition/vect.svg"><img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/vect.svg"/></a>
 
 ## Rule: Write Two-Way Questions {#bidirectionality}
 
@@ -677,6 +516,171 @@ edges in the graphs are links between the knowledge.
 # Examples {#ex}
 
 Because many of the examples involve multiple rules at the same time, I decided to group them separately from the rules.
+
+## Example: Vector Spaces {#vect}
+
+Here's what we want to learn:
+
+<div class="border-box">
+
+A vector space, informally, is a set whose elements---called vectors---can be
+added or scaled.
+
+More formally: a vector space over a field $\mathbb{F}$ is a set $V$ plus two operations:
+
+1. Vector addition: $V \times V \to V$
+1. Scalar multiplication: $V \times \mathbb{F} \to V$
+
+Satisfying the following axioms:
+
+Commutativity of Addition
+:  $u + v = v + u$
+
+Associativity of Addition
+: $u + (v + w) = (u + v) + w$
+
+Identity of Addition
+: $\exists 0 \in V : v + 0 = v$
+
+Inverse of Addition
+: $\forall v \in V, \exists -v \in V : v + (-v) = 0$
+
+Identity of Scaling
+: $1v = v$
+
+Distributivity
+: $\forall v \in V, a,b \in \mathbb{F} : (a+b)v = av + bv$
+
+</div>
+
+We have to break this down. Severely. We will do this step by step.
+
+First, we have to separate the informal (intuitive) and formal definitions:
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Informally: what is a vector space?</td>
+      <td>A set whose elements can be added or scaled.</td>
+    </tr>
+    <tr>
+      <td>Formally: what is a vector space?</td>
+      <td>A vector space over a field $\mathbb{F}$ is a set $V$ plus two operations: vector addition and scalar multiplication.</td>
+    </tr>
+  </tbody>
+</table>
+
+We add one brief question about notation (you may choose to skip this one, it's
+an example):
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What are the elements of a vector space called?</td>
+      <td>Vectors.</td>
+    </tr>
+  </tbody>
+</table>
+
+Now we ask about the signatures of the operations:
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What is the signature of vector addition?</td>
+      <td>$V \times V \to V$</td>
+    </tr>
+    <tr>
+      <td>What is the signature of scalar multiplication?</td>
+      <td>$V \times \mathbb{F} \to V$</td>
+    </tr>
+  </tbody>
+</table>
+
+Next, we ask for the axioms:
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What are the axioms that define a vector space?</td>
+      <td>
+        <ol>
+          <li>Commutativity of Addition</li>
+          <li>Associativity of Addition</li>
+          <li>Identity of Addition</li>
+          <li>Inverse of Addition</li>
+          <li>Identity of Scaling</li>
+          <li>Distributivity</li>
+        </ol>
+     </td>
+    </tr>
+  </tbody>
+</table>
+
+Finally, we ask what each axiom means:
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Vector spaces: state: commutativity of addition</td>
+      <td>$u + v = v + u$</td>
+    </tr>
+    <tr>
+      <td>Vector spaces: state: associativity of addition</td>
+      <td>$u + (v + w) = (u + v) + w$</td>
+    </tr>
+    <tr>
+      <td>Vector spaces: state: identity of addition</td>
+      <td>$\exists 0 \in V:  v + 0 = v$</td>
+    </tr>
+    <tr>
+      <td>Vector spaces: state: inverse of addition</td>
+      <td>$\forall v \in V, \exists -v \in V:  v + (-v) = 0$</td>
+    </tr>
+    <tr>
+      <td>Vector spaces: state: identity of scaling</td>
+      <td>$1v = v$</td>
+    </tr>
+    <tr>
+      <td>Vector spaces: state: distributivity</td>
+      <td>$\forall v \in V, a,b \in \mathbb{F}:  (a+b)v = av + bv$</td>
+    </tr>
+  </tbody>
+</table>
+
+Graphically, you can try visualizing the flashcards and their relationships like this:
+
+<a href="/assets/content/effective-spaced-repetition/vect.svg"><img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/vect.svg"/></a>
 
 # Software {#software}
 
