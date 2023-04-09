@@ -26,6 +26,10 @@ into a set of flashcards?
 This post describes the rules I use to write effective flashcards, with as many
 examples as I could reasonably find.
 
+$$
+\def\set#1{\{#1\}}
+$$
+
 # Contents
 
 1. [Overview of Spaced Repetition](#overview)
@@ -467,15 +471,30 @@ If you want to be extra thorough, you can also write the backwards questions:
 
 <div class="border-box">
 
-The _parity group_ is a group that represents the rules for adding even and odd numbers. The underlying set is $\{e, o\}$, with $e$ and $o$ representing even and odd numbers respectively. The composition table is:
+The _parity group_ is a group that represents the rules for adding even and odd numbers. The underlying set is $\set{\text{even}, \text{odd}}$, with $\text{even}$ and $\text{odd}$ representing even and odd numbers respectively. The composition table is:
 
-|     | $e$ | $o$ |
-| $e$ | $e$ | $o$ |
-| $o$ | $o$ | $e$ |
+| $+$           | $\text{even}$ | $\text{odd}$  |
+| $\text{even}$ | $\text{even}$ | $\text{odd}$  |
+| $\text{odd}$  | $\text{odd}$  | $\text{even}$ |
 
-The identity element is $e$.
+The identity element is $\text{even}$. The group is Abelian.
 
 </div>
+
+We can turn this into the following flashcards:
+
+| Question | Answer |
+| - | - |
+| What is the parity group? | The group that represents the rules for adding even and odd numbers. |
+| What is the order of the parity group? | $2$ |
+| What is the underlying set of the parity group? | $\set{\text{even}, \text{odd}}$ |
+| What is the identity element of the parity group? | $\text{even}$ |
+| What is the operation of the parity group? | Addition of even and odd numbers. |
+| $\text{even} + \text{even} = $ | $\text{even}$ |
+| $\text{even} + \text{odd} = $ | $\text{odd}$ |
+| $\text{odd} + \text{even} = $ | $\text{odd}$ |
+| $\text{odd} + \text{odd} = $ | $\text{even}$ |
+| Is the parity group Abelian? Why or why not? | Yes, because addition commutes. |
 
 ## Example: Logical Consequence {#logical-consequence}
 
