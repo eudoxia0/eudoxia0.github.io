@@ -1163,7 +1163,7 @@ Finally, I have a test card that asks me to recall the entire sequence in order.
 
 # Scripts {#scripts}
 
-TODO
+A lot of these rules would be impossible to apply if we had to write all the flashcards by hand: it would simply be too tiresome. Fortunately we have automation.
 
 ## Sequence Script {#seq-script}
 
