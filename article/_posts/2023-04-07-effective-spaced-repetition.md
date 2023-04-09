@@ -722,6 +722,18 @@ In addition to the above, add cards that go from the regex to the concept:
 
 ## Example: Voltage {#voltage}
 
+This is an example of asking questions in different ways
+
+<div class="border-box">
+
+The _voltage_ between two points $A$ and $B$ can be defined as either:
+Voltage can be defined as:
+
+1. The difference in electric potential between the two points.
+1. The amount of work done by a $1C$ particle as it travels from $A$ to $B$.
+
+</div>
+
 TODO
 
 ## Example: Isomers {#isomer}
