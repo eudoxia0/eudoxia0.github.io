@@ -526,6 +526,14 @@ Formal as well as informal definitions:
       <td>Formally, what is the set of rational numbers?</td>
       <td>$\mathbb{Q} = \left\{\, \frac{p}{q} \,\, \middle| \,\, p, q \in \Z \land q \neq 0 \,\right\}$</td>
     </tr>
+    <tr>
+      <td>What's the term for the set of integer fractions?</td>
+      <td>The rational numbers.</td>
+    </tr>
+    <tr>
+      <td>What is the name of this set? $\left\{\, \frac{p}{q} \,\, \middle| \,\, p, q \in \Z \land q \neq 0 \,\right\}$</td>
+      <td>The rational numbers.</td>
+    </tr>
   </tbody>
 </table>
 
