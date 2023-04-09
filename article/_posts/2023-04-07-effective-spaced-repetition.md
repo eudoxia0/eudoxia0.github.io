@@ -39,6 +39,8 @@ $$
 1. [Words of Encouragement](#encouragement)
 1. [Rules](#rules)
    1. [Rule: Understand First](#understand)
+   1. [Rule: Be Honest](#honest)
+   1. [Rule: Keep It Fun](#fun)
    1. [Rule: Repeat Yourself](#repeat)
    1. [Rule: Organize by Source](#source)
    1. [Rule: Write Atomic Flashcards](#atomicity)
@@ -159,6 +161,20 @@ the text, because further information can clarify or tie together important
 concepts. It can be useful to keep a scratchpad where you write tentative
 flashcard text as you read a chapter, and at the end you organize and
 re-organize your scratchpad until you can commit it to flashcards.
+
+## Rule: Be Honest {#honest}
+
+The software doesn't know whether you recalled something correctly or not. You are only accountable to yourself. If you recalled something wrong, or not quite right, err on the side of caution and mark it forgotten.
+
+## Rule: Keep It Fun {#fun}
+
+This is _crucial_ to maintaining the habit. If reviewing flashcards feels like a chore, you will become averse to doing it.
+
+I used to frequently have this problem. I solved it in a few ways:
+
+1. Having a diverse knowledge base you're drilling helps, so you are not bored by going through the same topic for a long time. Typically, spaced repetition software will shuffle the cards, so that if you're drilling all the cards across all decks, you will be surprised often.
+2. A common source of frustration is cards that are too long to recall quickly, and thus feel like a chore. Break big cards down into smaller cards. It feels good to be able to fly through the cards quickly.
+3. Cards that are difficult to recall are very frustrating. I solved this by applying the rules described in this post.
 
 ## Rule: Repeat Yourself {#repeat}
 
