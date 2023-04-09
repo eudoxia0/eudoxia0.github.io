@@ -552,7 +552,10 @@ And then about syntactic consequence:
 
 ## Example: Periodization {#perodization}
 
-TODO
+Timelines are a great example of how breaking information down hierarchically can help you learn long sequences. Sometimes the breakdown is already done for us.
+
+<div class="border-box">
+</div>
 
 ## Example: Magma Formation {#magma}
 
