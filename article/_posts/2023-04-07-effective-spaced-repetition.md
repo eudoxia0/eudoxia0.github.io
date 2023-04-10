@@ -488,7 +488,7 @@ We first write the top-down questions:
 | What are the kinds of macroglia?               | Astrocytes, oligodendrocytes, and Schwann cells. |
 
 And the bottom-up questions. We don't ask these when the answers are obvious:
-"what are microglia a kind of" has an obvious answer.
+"what are microglia/macroglia a kind of" has an obvious answer.
 
 | Question                          | Answer     |
 |-----------------------------------|------------|
