@@ -4,10 +4,11 @@ math: yes
 ---
 
 You won't get smarter by drilling IQ tests or playing the violin. Dual n-back
-won't improve your memory. But you can remember anything you choose to with
-[spaced repetition][sr].
+[probably][dnb] won't improve your working memory. But you can remember anything
+you choose to with [spaced repetition][sr].
 
 [sr]: https://gwern.net/spaced-repetition
+[dnb]: https://gwern.net/dnb-faq#personal-reflection-on-results
 
 Spaced repetition is, by far, the most effective cognitive hack I've used. It
 used to be that I'd read a book and afterwards remember almost
