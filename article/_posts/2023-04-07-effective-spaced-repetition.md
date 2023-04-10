@@ -216,7 +216,7 @@ Cards should be short. They should refer to as little information as
 possible. They should be like chemical bonds, linking individual _atoms_ of
 knowledge.
 
-_This is the most important thing._ By far the most common failure mode is to
+_This is the most important thing._ By far the worst failure mode is to
 put too much in a flashcard.
 
 There's two reasons for this rule:
