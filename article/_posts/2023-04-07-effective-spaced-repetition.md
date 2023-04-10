@@ -515,7 +515,7 @@ Neurons can be divided into three categories by their function:
 
 </div>
 
-Let's start by doing this the wrong way, through loading too much information
+Let's start by doing this the wrong way, by loading too much information
 into one card.
 
 <table>
