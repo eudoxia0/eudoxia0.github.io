@@ -310,6 +310,18 @@ You might also want:
 How thorough you want to be depends on the nature of the information. Most of
 the time I use a cloze card and a test card.
 
+Another type of card you might use (I use this to memorize poems) is a card that
+gives you some context (the previous one or two items in the sequence) and asks
+you to fill in the blank. For example, if you wanted to learn the sequence (A,
+B, C, D), you might have these flashcards:
+
+| Question            | Answer |
+|---------------------|--------|
+| _Beginning_, ...    | A      |
+| _Beginning_, A, ... | B      |
+| A, B, ...           | C      |
+| B, C, ...           | D      |
+
 # Examples {#ex}
 
 Many of these examples are overkill: we collect a lot more flashcards than the
