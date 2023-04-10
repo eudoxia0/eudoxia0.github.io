@@ -67,6 +67,7 @@ $$
    1. [Example: Months of the Year](#months)
    1. [Example: Poetry](#poetry)
    1. [Example: Powers of Two](#powers)
+   1. [Example: Rilke](#rilke)
 1. [Scripts](#scripts)
    1. [Sequence Script](#seq-script)
    1. [Poetry Script](#poetry-script)
@@ -1358,6 +1359,39 @@ While the backwards cards ask for the exponent from the power:
 | $\log_2 65536$ | $16$   |
 
 Finally, I have a test card that asks me to recall the entire sequence in order.
+
+## Example: Rilke {#rilke}
+
+Let's memorize this poem:
+
+<div class="border-box">
+
+**Archaic Torso of Apollo**
+
+Rainer Maria Rilke
+
+We cannot know his legendary head<br>
+with eyes like ripening fruit. And yet his torso<br>
+is still suffused with brilliance from inside,<br>
+like a lamp, in which his gaze, now turned to low,
+
+gleams in all its power. Otherwise<br>
+the curved breast could not dazzle you so, nor could<br>
+a smile run through the placid hips and thighs<br>
+to that dark center where procreation flared.
+
+Otherwise this stone would seem defaced<br>
+beneath the translucent cascade of the shoulders<br>
+and would not glisten like a wild beast's fur:
+
+would not, from all the borders of itself,<br>
+burst like a star: for here there is no place<br>
+that does not see you. You must change your life.
+
+</div>
+
+You could run this through the [sequence script](#seq-script), but that seems a
+bit cold and mechanical. We'll use the [poetry script](#poetry) instead:
 
 # Scripts {#scripts}
 
