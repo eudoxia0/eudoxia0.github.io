@@ -146,8 +146,8 @@ fool can do, another can".
 
 Here are my rules for effective spaced repetition.
 
-The rules are sorted by applicability (but not necessarily importance), with the more general ones first, and most
-specific ones last.
+The rules are sorted by applicability (but not necessarily importance), with the
+more general ones first, and most specific ones last.
 
 Because many of the examples involve multiple rules at the same time, I decided
 to list the examples separately from the list of rules.
@@ -871,7 +871,8 @@ Let's begin with the simplest flashcards, the definition of the GTS:
 | What is the term for the timeline of Earth's history? | The geologic time scale.         |
 
 The subdivisions form a sequence, from oldest to most recent: eon, era, period,
-epoch. So let's feed it into the [sequence script](#seq-script). Here's the input:
+epoch. So let's feed it into the [sequence script](#seq-script). Here's the
+input:
 
 ```
 Geologic Time Units
@@ -1127,9 +1128,11 @@ This is an example of a _trans_ isomer:
 
 </div>
 
-This is fairly straightforward: we have to learn a hierarchy of definitions. We'll divide this into two tasks:
+This is fairly straightforward: we have to learn a hierarchy of
+definitions. We'll divide this into two tasks:
 
-1. First, definitions. Ask questions from the term to the definition and from the definition to the term.
+1. First, definitions. Ask questions from the term to the definition and from
+   the definition to the term.
 2. Second, hierarchy: ask about subtypes and supertypes.
 
 So let's begin with the definitions. First we ask the questions in the forward
@@ -1172,7 +1175,8 @@ questions to recall that information:
 | What is a _trans_ isomer?                                                                      | One with both functional groups on the same side of a rigid structure. |
 | What is the term for an isomer with both functional groups on the same side a rigid structure. | A _trans_ isomer.                                                      |
 
-Now we move on to the hierarchy, which connects these concepts. We first ask the questions in the downward direction, from parent to child:
+Now we move on to the hierarchy, which connects these concepts. We first ask the
+questions in the downward direction, from parent to child:
 
 | Question                                          | Answer                                           |
 |---------------------------------------------------|--------------------------------------------------|
@@ -1388,8 +1392,8 @@ that does not see you. You must change your life.
 </div>
 
 You could run this through the [sequence script](#seq-script), but that seems a
-bit cold and mechanical. We'll use the [poetry script](#poetry-script) instead, which
-shows us two lines of context and asks us to complete the next line. The
+bit cold and mechanical. We'll use the [poetry script](#poetry-script) instead,
+which shows us two lines of context and asks us to complete the next line. The
 generated flashcards are:
 
 <table>
@@ -1468,8 +1472,8 @@ I put up the scripts I use in [this repository][srt]. These are largely based on
 
 ## Sequence Script {#seq-script}
 
-The `sequence.py` script generates flashcards for learning a sequence, according to
-the principles in [Rule: Learning Sequences](#seq).
+The `sequence.py` script generates flashcards for learning a sequence, according
+to the principles in [Rule: Learning Sequences](#seq).
 
 Given a file `greek.txt` as input:
 
@@ -1504,7 +1508,9 @@ Plus the cloze card:
 
 ## Poetry Script {#poetry-script}
 
-The `poetry.py` script generates flashcards where you are given two lines of a poem and have to recall the next line. For an example of using this, see [here](#rilke).
+The `poetry.py` script generates flashcards where you are given two lines of a
+poem and have to recall the next line. For an example of using this, see
+[here](#rilke).
 
 # Software {#software}
 
