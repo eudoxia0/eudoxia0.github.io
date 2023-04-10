@@ -499,7 +499,10 @@ If you want to be extra thorough, you can also write the backwards questions:
 
 <div class="border-box">
 
-The _parity group_ is a group that represents the rules for adding even and odd numbers. The underlying set is $\set{\text{even}, \text{odd}}$, with $\text{even}$ and $\text{odd}$ representing even and odd numbers respectively. The composition table is:
+The _parity group_ is a group that represents the rules for adding even and odd
+numbers. The underlying set is $\set{\text{even}, \text{odd}}$, with
+$\text{even}$ and $\text{odd}$ representing even and odd numbers
+respectively. The composition table is:
 
 | $+$           | $\text{even}$ | $\text{odd}$  |
 | $\text{even}$ | $\text{even}$ | $\text{odd}$  |
@@ -623,7 +626,8 @@ Period
 Epoch
 ```
 
-Running `cat units.txt | ./sequence.py > units.csv` and importing `units.csv` into Mochi, we get these flashcards:
+Running `cat units.txt | ./sequence.py > units.csv` and importing `units.csv`
+into Mochi, we get these flashcards:
 
 | Question                                                     | Answer                   |
 |--------------------------------------------------------------|--------------------------|
@@ -643,7 +647,8 @@ Running `cat units.txt | ./sequence.py > units.csv` and importing `units.csv` in
 | **Geologic Time Units:** What comes before Period?           | Era.                     |
 | **Geologic Time Units:** What comes before Epoch?            | Period.                  |
 
-You probably don't need _all_ of these. You can probably get away with just these:
+You probably don't need _all_ of these. You can probably get away with just
+these:
 
 | Question                                                                 | Answer                  |
 |--------------------------------------------------------------------------|-------------------------|
@@ -957,7 +962,8 @@ And the bottom-up questions. We don't ask these when the answers are obvious:
 
 ## Example: Neuron Types {#neurons}
 
-This is a brief example about keeping cards short and using hierarchies to break things down.
+This is a brief example about keeping cards short and using hierarchies to break
+things down.
 
 From my neuroscience notes:
 
@@ -1242,16 +1248,20 @@ Finally, I have a test card that asks me to recall the entire sequence in order.
 
 # Scripts {#scripts}
 
-A lot of these rules would be impossible to apply if we had to write all the flashcards by hand: it would simply be too tiresome. Fortunately we have automation.
+A lot of these rules would be impossible to apply if we had to write all the
+flashcards by hand: it would simply be too tiresome. Fortunately we have
+automation.
 
-I put up the scripts I use in [this repository][srt]. Thes e are largely based on [Gwern's scripts][gwern].
+I put up the scripts I use in [this repository][srt]. Thes e are largely based
+on [Gwern's scripts][gwern].
 
 [srt]: https://github.com/eudoxia0/spaced-repetition-tools
 [gwerns]: https://gwern.net/spaced-repetition#see-also
 
 ## Sequence Script {#seq-script}
 
-The sequence script generates flashcards for learning a sequence, according to the principles in [Rule: Learning Sequences](#seq).
+The sequence script generates flashcards for learning a sequence, according to
+the principles in [Rule: Learning Sequences](#seq).
 
 Given a file `greek.txt` as input:
 
