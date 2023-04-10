@@ -1000,12 +1000,35 @@ questions to recall that information:
 | What is a _trans_ isomer?                                                                      | One with both functional groups on the same side of a rigid structure. |
 | What is the term for an isomer with both functional groups on the same side a rigid structure. | A _trans_ isomer.                                                      |
 
-Now we move on to the hierarchy, which connects these concepts. We first ask the questions in the downward direction:
+Now we move on to the hierarchy, which connects these concepts. We first ask the questions in the downward direction, from parent to child:
 
-| Question                                | Answer                                           |
-|-----------------------------------------|--------------------------------------------------|
-| What are the subtypes of isomers?       | Structural isomers, stereoisomers.               |
-| What are the subtypes of stereoisomers? | Conformational isomers, configurational isomers. |
+| Question                                          | Answer                                           |
+|---------------------------------------------------|--------------------------------------------------|
+| What are the subtypes of isomers?                 | Structural isomers, stereoisomers.               |
+| What are the subtypes of stereoisomers?           | Conformational isomers, configurational isomers. |
+| What are the subtypes of configurational isomers? | Enantiomers, diastereomers.                      |
+| What are the subtypes of diastereomers?           | Cis/trans isomers.                               |
+
+And now in the upward direction:
+
+| Question                                  | Answer                 |
+|-------------------------------------------|------------------------|
+| Structural isomers are a kind of ...      | Isomer                 |
+| Stereoisomers are a kind of ...           | Isomer                 |
+| Conformational isomers are a kind of ...  | Stereoisomer           |
+| Configurational isomers are a kind of ... | Stereoisomer           |
+| Enantiomers are a kind of ...             | Configurational isomer |
+| Diastereomers are a kind of ...           | Configurational isomer |
+| Cis/trans isomers are a kind of ...       | Diastereomer           |
+
+And, finally, the examples:
+
+| Question                                                                                                                                                     | Answer            |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| What kind of isomer is this? <img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/cis.svg"/>   | A _cis_ isomer.   |
+| What kind of isomer is this? <img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/trans.svg"/> | A _trans_ isomer. |
+
+
 
 ## Example: Neural Cells {#neural}
 
