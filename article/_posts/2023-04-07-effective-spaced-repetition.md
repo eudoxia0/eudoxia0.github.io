@@ -1284,11 +1284,7 @@ And the predecessor flashcards:
 | What comes before November?  | October   |
 | What comes before December?  | November  |
 
-## Example: Poetry {#poetry}
-
-TODO
-
-## Example: Powers of Two {#powers}
+2## Example: Powers of Two {#powers}
 
 Let's memorize the first sixteen powers of two:
 
