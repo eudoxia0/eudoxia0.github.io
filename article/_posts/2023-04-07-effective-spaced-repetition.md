@@ -1281,7 +1281,7 @@ Plus the cloze card:
 
 | Cloze                                                                         |
 |-------------------------------------------------------------------------------|
-| **Greek Alphabet:** Elements of the sequence: {{Alpha}}, {{Beta}}, {{Gamma}}. |
+| **Greek Alphabet:** Elements of the sequence: [[Alpha]], [[Beta]], [[Gamma]]. |
 
 ## Poetry Script {#poetry}
 
