@@ -591,13 +591,6 @@ The four eons, from oldest to most recent, are:
 3. Proterozoic (2.5Gya to 538Mya)
 4. Phanerozoic (538Mya to present)
 
-Let's zoom in on the Archean eon. This is subdivided into four eras:
-
-1. Eoarchean (4Gya to 3.6Gya)
-2. Paleoarchean (3.6Gya to 3.2Gya)
-3. Mesoarchean (3.2Gya to 2.8Gya)
-3. Neoarchean (2.8Gya to 2.5Gya)
-
 </div>
 
 We want to learn the following things:
@@ -605,7 +598,6 @@ We want to learn the following things:
 1. What the geologic time scale is.
 2. How it divides the Earth's history.
 3. The four eons.
-4. The four eras of the Archean eon.
 
 Let's begin with the simplest flashcards, the definition of the GTS:
 
@@ -615,24 +607,47 @@ Let's begin with the simplest flashcards, the definition of the GTS:
 | What is the term for the timeline of Earth's history? | The geologic time scale.         |
 
 The subdivisions form a sequence, from oldest to most recent: eon, era, period,
-epoch.
+epoch. So let's feed it into the [sequence script](#seq-script). Here's the input:
 
-We begin with a test card, asking us to recall the entire sequence:
+```
+Geologic Time Units
+Eon
+Era
+Period
+Epoch
+```
 
-| Question                                                                 | Answer                   |
-|--------------------------------------------------------------------------|--------------------------|
-| What are the units of the geologic time scale, from largest to smallest? | Eon, era, period, epoch. |
+Running `cat units.txt | ./sequence.py > units.csv` and importing `units.csv` into Mochi, we get these flashcards:
 
-Then we ask questions that map the index in the sequence to the element:
+| Question                                                     | Answer                   |
+|--------------------------------------------------------------|--------------------------|
+| **Geologic Time Units:** Recall all elements of the sequence | Eon, Era, Period, Epoch. |
+| **Geologic Time Units:** What element has position 1?        | Eon.                     |
+| **Geologic Time Units:** What element has position 2?        | Era.                     |
+| **Geologic Time Units:** What element has position 3?        | Period.                  |
+| **Geologic Time Units:** What element has position 4?        | Epoch.                   |
+| **Geologic Time Units:** What is the position of Eon?        | 1.                       |
+| **Geologic Time Units:** What is the position of Era?        | 2.                       |
+| **Geologic Time Units:** What is the position of Period?     | 3.                       |
+| **Geologic Time Units:** What is the position of Epoch?      | 4.                       |
+| **Geologic Time Units:** What comes after Eon?               | Era.                     |
+| **Geologic Time Units:** What comes after Era?               | Period.                  |
+| **Geologic Time Units:** What comes after Period?            | Epoch.                   |
+| **Geologic Time Units:** What comes before Era?              | Eon.                     |
+| **Geologic Time Units:** What comes before Period?           | Era.                     |
+| **Geologic Time Units:** What comes before Epoch?            | Period.                  |
 
-| Question                                                    | Answer      |
-|-------------------------------------------------------------|-------------|
-| What is the largest unit in the geologic time scale?        | The eon.    |
-| What is the second-largest unit in the geologic time scale? | The era.    |
-| What is the third-largest unit in the geologic time scale?  | The period. |
-| What is the smallset unit in the geologic time scale?       | The epoch.  |
+You probably don't need _all_ of these. You can probably get away with just these:
 
-And the "upward" questions:
+| Question                                                                 | Answer                  |
+|--------------------------------------------------------------------------|-------------------------|
+| What are the units of the geologic time scale, from largest to smallest? | Eon, era period, epoch. |
+| What is the largest unit in the geologic time scale?                     | The eon.                |
+| What is the second-largest unit in the geologic time scale?              | The era.                |
+| What is the third-largest unit in the geologic time scale?               | The period.             |
+| What is the smallset unit in the geologic time scale?                    | The epoch.              |
+
+Now, since this is a concept hierarchy, we also ask the "what is" questions.
 
 | Question           | Answer                                 |
 |--------------------|----------------------------------------|
@@ -641,7 +656,52 @@ And the "upward" questions:
 | What is an period? | A division of the geologic time scale. |
 | What is an epoch?  | A division of the geologic time scale. |
 
-We also ask how long each unit lasts, forwards and backwards:
+And, since units have a duration, we ask what for the duration. We do this
+forwards and backwards:
+
+| Question                                                              | Answer                                      |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| What is the duration of an eon?                                       | Hundreds of millions of years.              |
+| Which geologic unit lasts hundreds of millions of years?              | Eons.                                       |
+| What is the duration of an era?                                       | Tens to hundreds of millions of years.      |
+| Which geologic unit lasts tens to hundreds of millions of years?      | Eras.                                       |
+| What is the duration of a period?                                     | Millions to tens of millions of years.      |
+| Which geologic unit lasts millions to tens of millions of years?      | Periods.                                    |
+| What is the duration of an epoch?                                     | Hundreds of thousands to millions of years. |
+| Which geologic unit lasts hundreds of thousands to millions of years? | Epochs.                                     |
+
+Now, the four eons. These form a sequence, we don't do the whole sequence script
+thing again, since you have probably, again, just use these:
+
+| Question                        | Answer                                     |
+|---------------------------------|--------------------------------------------|
+| List eons from oldest to newest | Hadean, Archean, Proterozoic, Phanerozoic. |
+| What is the first eon?          | Hadean                                     |
+| What is the second eon?         | Archean                                    |
+| What is the third eon?          | Proterozoic                                |
+| What is the fourth eon?         | Phanerozoic                                |
+
+We also ask when each eon began and ended, forwards and backwards:
+
+| Question                        | Answer      |
+|---------------------------------|-------------|
+| When did the Hadean begin?      | 4.5 Gya     |
+| When did the Hadean end?        | 4 Gya       |
+| Which eon began 4.5 Gya?        | Hadean      |
+| Which eon ended 4 Gya?          | Hadean      |
+| When did the Archean begin?     | 4 Gya       |
+| When did the Archean end?       | 2.5 Gya     |
+| Which eon began 4 Gya?          | Archean     |
+| Which eon ended 2.5 Gya?        | Archean     |
+| When did the Proterozoic begin? | 2.5 Gya     |
+| When did the Proterozoic end?   | 538 Mya     |
+| Which eon began 2.5 Gya?        | Proterozoic |
+| Which eon ended 538 Mya?        | Proterozoic |
+| When did the Phanerozoic begin? | 538 Mya     |
+| When did the Phanerozoic end?   | Present     |
+| Which eon began 538 Mya?        | Phanerozoic |
+| Which eon is ongoing?           | Phanerozoic |
+
 
 ## Example: Magma Formation {#magma}
 
