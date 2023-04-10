@@ -1,6 +1,10 @@
 ---
 title: Effective Spaced Repetition
 math: yes
+summary: “To flash conviction on the mind.”
+card: effective-spaced-repetition.jpg
+card_source: |
+    Coloured views of the "tesseracts", Charles Howard Hinton, _The Fourth Dimension_.
 ---
 
 You won't get smarter by drilling IQ tests or playing the violin. Dual n-back
