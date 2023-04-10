@@ -146,7 +146,7 @@ fool can do, another can".
 
 Here are my rules for effective spaced repetition.
 
-The rules are sorted by applicability, with more general ones first, and most
+The rules are sorted by applicability (but not necessarily importance), with the more general ones first, and most
 specific ones last.
 
 Because many of the examples involve multiple rules at the same time, I decided
