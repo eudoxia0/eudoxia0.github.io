@@ -51,11 +51,11 @@ $$
    1. [Rule: Learning Hierarchies](#hier)
    1. [Rule: Learning Sequences](#seq)
 1. [Examples](#ex)
+   1. [Example: Magma Formation](#magma)
    1. [Example: Vector Spaces](#vect)
    1. [Example: Parity Group](#parity)
    1. [Example: Logical Consequence](#logical-consequence)
    1. [Example: Periodization](#perodization)
-   1. [Example: Magma Formation](#magma)
    1. [Example: Rational Numbers](#ratnums)
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
@@ -331,6 +331,89 @@ Many of these examples are overkill: we collect a lot more flashcards than the
 subject deserves. But this is to illustrate the general rules. With experience,
 you can learn how many questions a particular topic requires, and different
 volumes of your knowledge graph will be more or less interlinked.
+
+## Example: Magma Formation {#magma}
+
+From my geology notes:
+
+<div class="border-box">
+
+Magma is liquid rock under the Earth's surface.
+
+The three magma-forming processes are:
+
+1. **Increasing Temperature:** increasing temperature can melt rock.
+1. **Decreasing Pressure:** when the pressure drops, atoms are more free to
+   move, and rock becomes liquid.
+1. **Addition of Water:** water lowers the melting point of rock, because the
+   water molecules disrupt the crystal bonds.
+
+Magma forms in three places:
+
+1. **Hot spots:** as hot rock rises, pressure decreases and it becomes magma.
+2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because
+   it is less dense) to plug the gap and melts due to decreasing pressure.
+3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The
+   water melts and rises, adding water to the overlying rock, which the melts.
+
+</div>
+
+Let's break this down hierarchically. We want to memorize three things:
+
+1. What magma is.
+2. How it forms.
+3. Where it forms.
+
+First, the definition:
+
+| Question                                                     | Answer                                 |
+|--------------------------------------------------------------|----------------------------------------|
+| What is magma?                                               | Liquid rock under the Earth's surface. |
+| What is the term for liquid rock under surface of the Earth? | Magma.                                 |
+
+Second, we want to know how magma forms. A common mistake here would be to put
+the magma-forming processes _and_ their explanations in the same
+flashcard. Rather, to keep each card as small as possible, we want to separate
+the list of processes from their definitions.
+
+So we first as for a list of mechanisms:
+
+| Question                              | Answer                                                          |
+|---------------------------------------|-----------------------------------------------------------------|
+| What are the magma-forming processes? | Increasing temperature, decreasing pressure, addition of water. |
+
+And then we ask for an explanation of each. We don't really need to ask why
+adding temperature melts rock:
+
+| Question                                               | Answer                                                          |
+|--------------------------------------------------------|-----------------------------------------------------------------|
+| Why does decreasing pressure melt rock?                | Because the atoms are more free to move.                        |
+| Why does adding water lower the melting point of rock? | Because water molecules disrupt the bonds in the rock minerals. |
+
+Third: where magma is found. Again, we separate the list from the details:
+
+| Question               | Answer                                                  |
+|------------------------|---------------------------------------------------------|
+| Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
+
+Then we ask for details. For each place where magma forms, we ask both which
+processes are involved, and what the full causal explanation is. We also ask the
+question backward: which places involve a given process.
+
+| Question                                                                       | Answer                                                                                                                                  |
+|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| What magma-forming process happens over a hot spot?                            | Pressure-release melting.                                                                                                               |
+| What magma-forming process happens in a rift zone?                             | Pressure-release melting.                                                                                                               |
+| What magma-forming process happens in a subduction zone?                       | Increasing temperature and addition of water.                                                                                           |
+| Where does magma form due to pressure release?                                 | Hot spots and rift zones.                                                                                                               |
+| Where does magma form due to increasing temperature and the addition of water? | Subduction zones.                                                                                                                       |
+| How does magma form in a hot spot?                                             | As hot mantle rock rises, the decrease in pressure causes it to melt.                                                                   |
+| How does magma form in a rift zone?                                            | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt.                      |
+| How does magma form in a subdiction zone?                                      | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
+
+We can visualize the resulting knowledge graph like this:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/magma.svg"/>
 
 ## Example: Vector Spaces {#vect}
 
@@ -728,89 +811,6 @@ We also ask when each eon began and ended, forwards and backwards:
 | Which eon began 538 Mya?        | Phanerozoic |
 | Which eon is ongoing?           | Phanerozoic |
 
-
-## Example: Magma Formation {#magma}
-
-From my geology notes:
-
-<div class="border-box">
-
-Magma is liquid rock under the Earth's surface.
-
-The three magma-forming processes are:
-
-1. **Increasing Temperature:** increasing temperature can melt rock.
-1. **Decreasing Pressure:** when the pressure drops, atoms are more free to
-   move, and rock becomes liquid.
-1. **Addition of Water:** water lowers the melting point of rock, because the
-   water molecules disrupt the crystal bonds.
-
-Magma forms in three places:
-
-1. **Hot spots:** as hot rock rises, pressure decreases and it becomes magma.
-2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because
-   it is less dense) to plug the gap and melts due to decreasing pressure.
-3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The
-   water melts and rises, adding water to the overlying rock, which the melts.
-
-</div>
-
-Let's break this down hierarchically. We want to memorize three things:
-
-1. What magma is.
-2. How it forms.
-3. Where it forms.
-
-First, the definition:
-
-| Question                                                     | Answer                                 |
-|--------------------------------------------------------------|----------------------------------------|
-| What is magma?                                               | Liquid rock under the Earth's surface. |
-| What is the term for liquid rock under surface of the Earth? | Magma.                                 |
-
-Second, we want to know how magma forms. A common mistake here would be to put
-the magma-forming processes _and_ their explanations in the same
-flashcard. Rather, to keep each card as small as possible, we want to separate
-the list of processes from their definitions.
-
-So we first as for a list of mechanisms:
-
-| Question                              | Answer                                                          |
-|---------------------------------------|-----------------------------------------------------------------|
-| What are the magma-forming processes? | Increasing temperature, decreasing pressure, addition of water. |
-
-And then we ask for an explanation of each. We don't really need to ask why
-adding temperature melts rock:
-
-| Question                                               | Answer                                                          |
-|--------------------------------------------------------|-----------------------------------------------------------------|
-| Why does decreasing pressure melt rock?                | Because the atoms are more free to move.                        |
-| Why does adding water lower the melting point of rock? | Because water molecules disrupt the bonds in the rock minerals. |
-
-Third: where magma is found. Again, we separate the list from the details:
-
-| Question               | Answer                                                  |
-|------------------------|---------------------------------------------------------|
-| Where does magma form? | Over hot spots, in rift zones, and in subduction zones. |
-
-Then we ask for details. For each place where magma forms, we ask both which
-processes are involved, and what the full causal explanation is. We also ask the
-question backward: which places involve a given process.
-
-| Question                                                                       | Answer                                                                                                                                  |
-|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| What magma-forming process happens over a hot spot?                            | Pressure-release melting.                                                                                                               |
-| What magma-forming process happens in a rift zone?                             | Pressure-release melting.                                                                                                               |
-| What magma-forming process happens in a subduction zone?                       | Increasing temperature and addition of water.                                                                                           |
-| Where does magma form due to pressure release?                                 | Hot spots and rift zones.                                                                                                               |
-| Where does magma form due to increasing temperature and the addition of water? | Subduction zones.                                                                                                                       |
-| How does magma form in a hot spot?                                             | As hot mantle rock rises, the decrease in pressure causes it to melt.                                                                   |
-| How does magma form in a rift zone?                                            | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt.                      |
-| How does magma form in a subdiction zone?                                      | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
-
-We can visualize the resulting knowledge graph like this:
-
-<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/magma.svg"/>
 
 ## Example: Rational Numbers {#ratnums}
 
