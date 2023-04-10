@@ -928,12 +928,12 @@ three-dimensional structure differs.
 
 Isomers can be divided into:
 
-1. **Structural Isomers:** the chemical formula is the same but the atoms
-are bonded differe
+1. **Structural Isomers:** the chemical formula is the same but the atoms are
+   bonded differently.
 1. **Stereoisomers:** the chemical formula and the bonds are the same but the
-spatial arrangement is different. These are divided into:
-   1. **Conformational Isomers:** can be intercoverted by rotating about a
-      sigma bond.
+   spatial arrangement is different. These are divided into:
+   1. **Conformational Isomers:** can be intercoverted by rotating about a sigma
+      bond.
    1. **Configurational Isomers:** cannot be interconverted without breaking a
       bond. These are further subdivided into:
       1. **Enantiomers:** non-superposable mirror images. Also called _optical
