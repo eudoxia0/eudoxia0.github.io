@@ -276,7 +276,7 @@ The more interlinked your knowledge graph is, the better.
 
 It can help to visualize the concepts you're acquiring as being like a graph,
 where each node represents a discrete concept having certain properties, and the
-edges in the graphs are links between the knowledge.
+edges in the graphs are questions which get you from one concept to another.
 
 ## Rule: Learning Hierarchies {#hier}
 
