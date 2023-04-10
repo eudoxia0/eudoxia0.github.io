@@ -534,6 +534,7 @@ into one card.
           <li><b>Motor:</b> send motor commands to the muscles.</li>
           <li><b>Interneurons:</b> connect within the CNS.</li>
         </ul>
+        (😩 too long)
       </td>
     </tr>
     <tr>
@@ -543,12 +544,13 @@ into one card.
           <li><b>Local:</b> form circuits with nearby neurons.</li>
           <li><b>Relay:</b> have long axons and communicate across brain regions.</li>
         </ul>
+        (😩 too long)
       </td>
     </tr>
   </tbody>
 </table>
 
-Let's first break this down by separating _names_ from _definitions_:
+Let's first break this down by separating _terms_ from _definitions_:
 
 | Question                                      | Answer                                                             |
 |-----------------------------------------------|--------------------------------------------------------------------|
