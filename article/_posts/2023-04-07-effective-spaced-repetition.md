@@ -64,7 +64,6 @@ $$
    1. [Example: Neuron Types](#neurons)
    1. [Example: Plate Tectonics](#tectonics)
    1. [Example: Months of the Year](#months)
-   1. [Example: Poetry](#poetry)
    1. [Example: Powers of Two](#powers)
    1. [Example: Rilke](#rilke)
 1. [Scripts](#scripts)
@@ -324,7 +323,7 @@ B, C, D), you might have these flashcards:
 | A, B, ...           | C      |
 | B, C, ...           | D      |
 
-The [poetry script](#poetry) can generate these for you.
+The [poetry script](#poetry-script) can generate these for you.
 
 # Examples {#ex}
 
@@ -1390,7 +1389,7 @@ that does not see you. You must change your life.
 </div>
 
 You could run this through the [sequence script](#seq-script), but that seems a
-bit cold and mechanical. We'll use the [poetry script](#poetry) instead, which
+bit cold and mechanical. We'll use the [poetry script](#poetry-script) instead, which
 shows us two lines of context and asks us to complete the next line. The
 generated flashcards are:
 
@@ -1470,7 +1469,7 @@ I put up the scripts I use in [this repository][srt]. These are largely based on
 
 ## Sequence Script {#seq-script}
 
-The sequence script generates flashcards for learning a sequence, according to
+The `sequence.py` script generates flashcards for learning a sequence, according to
 the principles in [Rule: Learning Sequences](#seq).
 
 Given a file `greek.txt` as input:
@@ -1504,9 +1503,8 @@ Plus the cloze card:
 |-------------------------------------------------------------------------------|
 | **Greek Alphabet:** Elements of the sequence: [[Alpha]], [[Beta]], [[Gamma]]. |
 
-## Poetry Script {#poetry}
+## Poetry Script {#poetry-script}
 
-TODO
 
 # Software {#software}
 
