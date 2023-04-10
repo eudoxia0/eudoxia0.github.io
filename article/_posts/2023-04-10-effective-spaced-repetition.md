@@ -556,8 +556,8 @@ Let's first break this down by separating _terms_ from _definitions_:
 | Question                                      | Answer                                                             |
 |-----------------------------------------------|--------------------------------------------------------------------|
 | What are the functional categories of neuron? | Sensory, motor, interneurons.                                      |
-| What are sensory neurons?                     | Neurons which feed sensory information into the brain.             |
-| What are motor neurons?                       | Neurons which send motor commands to the muscles.                  |
+| What are sensory neurons?                     | Neurons which feed information into the brain.                     |
+| What are motor neurons?                       | Neurons which send commands to the muscles.                        |
 | What are interneurons?                        | Neurons which connect within the CNS.                              |
 | What are the types of interneuron?            | Local, relay.                                                      |
 | What are local interneurons?                  | Interneurons that form circuits with nearby neurons.               |
@@ -567,8 +567,8 @@ Now we ask the questions in the backward direction: from the definition to the t
 
 | Question                                                                     | Answer             |
 |------------------------------------------------------------------------------|--------------------|
-| What is the term for a neuron that feeds sensory information into the brain? | Sensory neuron.    |
-| What is the term for a neuron that sends motor commands to the muscles?      | Motor neuron.      |
+| What is the term for a neuron that feeds information into the brain?         | Sensory neuron.    |
+| What is the term for a neuron that sends commands to the muscles?            | Motor neuron.      |
 | What is the term for a neuron that connects within the CNS?                  | Interneuron.       |
 | What is the term for an interneuron that forms circuits with nearby neurons? | Local interneuron. |
 | What is the term for an interneuron that communicates across brain regions?  | Relay interneuron. |
