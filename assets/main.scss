@@ -683,5 +683,16 @@ nav.chapter-nav {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+.job {
+    padding: $b2;
+    border-top: 1px solid black;
+    font-style: italic;
+    text-align: justify;
+
+    a {
+        color: $link-color;
+    }
+}
+
 // Uncomment the following to draw a grid on the page:
 //body { background-image: linear-gradient(#eee 1px, transparent 1px); background-size: 100% 12px; }
