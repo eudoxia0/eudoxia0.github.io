@@ -52,6 +52,7 @@ $$
    1. [Rule: Learning Sequences](#seq)
 1. [Examples](#ex)
    1. [Example: Magma Formation](#magma)
+   1. [Example: Plate Tectonics](#tectonics)
    1. [Example: Vector Spaces](#vect)
    1. [Example: Parity Group](#parity)
    1. [Example: Logical Consequence](#logical-consequence)
@@ -62,7 +63,6 @@ $$
    1. [Example: Isomers](#isomers)
    1. [Example: Neural Cells](#neural)
    1. [Example: Neuron Types](#neurons)
-   1. [Example: Plate Tectonics](#tectonics)
    1. [Example: Months of the Year](#months)
    1. [Example: Powers of Two](#powers)
    1. [Example: Rilke](#rilke)
@@ -414,6 +414,53 @@ question backward: which places involve a given process.
 We can visualize the resulting knowledge graph like this:
 
 <img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/magma.svg"/>
+
+## Example: Plate Tectonics {#tectonics}
+
+Here's the information:
+
+<div class="border-box">
+
+The zone where two or more tectonic plates meet is called a _plate
+boundary_. There are three kinds:
+
+1. Convergent boundaries: plates come together.
+2. Divergent boundaries: plates move apart.
+3. Transform boundaries: plates slide past each other.
+
+</div>
+
+Applying the rule that cards should be two-way, we want two flashcards for the
+term 'plate boundary'.
+
+| Question                                                   | Answer                                |
+|------------------------------------------------------------|---------------------------------------|
+| What is a plate boundary?                                  | The place where tectonic plates meet. |
+| What is the term for the place where tectonic plates meet? | Plate boundary.                       |
+
+For the different types of plate boundary, we only ask the question in the
+top-down direction (we don't need to ask "what kind of thing is a transform
+boundary?", since the name kind of gives it away):
+
+| Question                              | Answer                            |
+|---------------------------------------|-----------------------------------|
+| What are the types of plate boundary? | Convergent, divergent, transform. |
+
+For each kind of plate boundary, we also ask the question in two ways:
+
+| Question                                                 | Answer                                       |
+|----------------------------------------------------------|----------------------------------------------|
+| Definition: convergent boundary.                         | Where tectonic plates come together.         |
+| Definition: divergent boundary.                          | Where tectonic plates move apart.            |
+| Definition: transform boundary.                          | Where tectonic plates slide past each other. |
+| Term: place where tectonic plates come together.         | Convergent boundary.                         |
+| Term: place where tectonic plates move apart.            | Divergent boundary.                          |
+| Term: place where tectonic plates slide past each other. | Transform boundary.                          |
+
+Graphically, here's how the questions link the concepts in the knowledge graph:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
+
 
 ## Example: Vector Spaces {#vect}
 
@@ -1149,53 +1196,6 @@ Now we ask the questions in the backward direction: from the definition to the t
 | What is the term for a neuron that connects within the CNS?                  | Interneuron.       |
 | What is the term for an interneuron that forms circuits with nearby neurons? | Local interneuron. |
 | What is the term for an interneuron that communicates across brain regions?  | Relay interneuron. |
-
-
-## Example: Plate Tectonics {#tectonics}
-
-Here's the information:
-
-<div class="border-box">
-
-The zone where two or more tectonic plates meet is called a _plate
-boundary_. There are three kinds:
-
-1. Convergent boundaries: plates come together.
-2. Divergent boundaries: plates move apart.
-3. Transform boundaries: plates slide past each other.
-
-</div>
-
-Applying the rule that cards should be two-way, we want two flashcards for the
-term 'plate boundary'.
-
-| Question                                                   | Answer                                |
-|------------------------------------------------------------|---------------------------------------|
-| What is a plate boundary?                                  | The place where tectonic plates meet. |
-| What is the term for the place where tectonic plates meet? | Plate boundary.                       |
-
-For the different types of plate boundary, we only ask the question in the
-top-down direction (we don't need to ask "what kind of thing is a transform
-boundary?", since the name kind of gives it away):
-
-| Question                              | Answer                            |
-|---------------------------------------|-----------------------------------|
-| What are the types of plate boundary? | Convergent, divergent, transform. |
-
-For each kind of plate boundary, we also ask the question in two ways:
-
-| Question                                                 | Answer                                       |
-|----------------------------------------------------------|----------------------------------------------|
-| Definition: convergent boundary.                         | Where tectonic plates come together.         |
-| Definition: divergent boundary.                          | Where tectonic plates move apart.            |
-| Definition: transform boundary.                          | Where tectonic plates slide past each other. |
-| Term: place where tectonic plates come together.         | Convergent boundary.                         |
-| Term: place where tectonic plates move apart.            | Divergent boundary.                          |
-| Term: place where tectonic plates slide past each other. | Transform boundary.                          |
-
-Graphically, here's how the questions link the concepts in the knowledge graph:
-
-<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
 
 ## Example: Months of the Year {#months}
 
