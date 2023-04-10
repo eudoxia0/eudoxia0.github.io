@@ -14,7 +14,7 @@ used to be that I'd read a book and afterwards remember almost
 nothing. Sometimes I'd take Kindle highlights, or notes, but never review
 them. And I hoped that though I could not necessarily _name_ what I recalled
 (because whose memory has an index?) that somehow the important information was
-woven into my knowledge, tacitly, somehow. This is mostly a cope.
+woven into my knowledge, tacitly. This is mostly a cope.
 
 I love learning, and spaced repetition has helped me become extremely good at
 it. But it took a long time to become effective at it. There's a lot of advice
