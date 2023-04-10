@@ -684,10 +684,11 @@ nav.chapter-nav {
 }
 
 .job {
+    max-height: 200px;
+    text-align: center;
     padding: $b2;
     border-top: 1px solid black;
     font-style: italic;
-    text-align: justify;
 
     a {
         color: $link-color;
