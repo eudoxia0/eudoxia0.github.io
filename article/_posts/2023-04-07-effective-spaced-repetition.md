@@ -918,12 +918,18 @@ Which gives us the following flashcards:
 | What is the term for the difference in electric potential between two points?         | Voltage.                                              |
 | What is the term for the work done by a 1C particle as it travels between two points? | Voltage.                                              |
 
-## Example: Isomers {#isomer}
+## Example: Isomers {#isomers}
 
 <div class="border-box">
 
-Isomers can be structural or stereoisomers. Stereoisomers can be diastereomers
-or enantiomers.
+Two chemical compounds are said to be **isomers** of each other if they have the
+same chemical formula (same number of atoms of each element) but their
+three-dimensional structure differs.
+
+Isomers can be divided into **structural isomers**, where the chemical formula
+is the same but the atoms are bonded differently; and **stereoisomers**, where
+the chemical formula and the bonds are the same but the spatial arrangement is
+different.
 
 </div>
 
