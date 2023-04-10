@@ -1391,7 +1391,71 @@ that does not see you. You must change your life.
 </div>
 
 You could run this through the [sequence script](#seq-script), but that seems a
-bit cold and mechanical. We'll use the [poetry script](#poetry) instead:
+bit cold and mechanical. We'll use the [poetry script](#poetry) instead, which
+shows us two lines of context and asks us to complete the next line. The
+generated flashcards are:
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <i>Beginning</i><br>
+        ...
+      </td>
+      <td>
+        We cannot know his legendary head
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i>Beginning</i><br>
+        We cannot know his legendary head<br>
+        ...
+      </td>
+      <td>
+         with eyes like ripening fruit. And yet his torso
+      </td>
+    </tr>
+    <tr>
+      <td>
+        We cannot know his legendary head<br>
+        with eyes like ripening fruit. And yet his torso<br>
+        ...
+      </td>
+      <td>
+         is still suffused with brilliance from inside,
+      </td>
+    </tr>
+    <tr>
+      <td>
+        with eyes like ripening fruit. And yet his torso<br>
+         is still suffused with brilliance from inside,<br>
+        ...
+      </td>
+      <td>
+         like a lamp, in which his gaze, now turned to low,
+      </td>
+    </tr>
+    <tr>
+      <td>
+        is still suffused with brilliance from inside,<br>
+        like a lamp, in which his gaze, now turned to low,<br>
+        ...
+      </td>
+      <td>
+        gleams in all its power. Otherwise
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+And so on. You get the pattern.
 
 # Scripts {#scripts}
 
