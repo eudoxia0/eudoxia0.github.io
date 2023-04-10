@@ -1165,6 +1165,11 @@ Finally, I have a test card that asks me to recall the entire sequence in order.
 
 A lot of these rules would be impossible to apply if we had to write all the flashcards by hand: it would simply be too tiresome. Fortunately we have automation.
 
+I put up the scripts I use in [this repository][srt]. Thes e are largely based on [Gwern's scripts][gwern].
+
+[srt]: https://github.com/eudoxia0/spaced-repetition-tools
+[gwerns]: https://gwern.net/spaced-repetition#see-also
+
 ## Sequence Script {#seq-script}
 
 TODO
