@@ -931,6 +931,29 @@ is the same but the atoms are bonded differently; and **stereoisomers**, where
 the chemical formula and the bonds are the same but the spatial arrangement is
 different.
 
+Stereoisomers are further divided into:
+
+1. **Geometric Isomers:** also called _cis/trans_ or _configurational isomers_,
+   occurs when two functional groups can find themselves on the same or opposite
+   sides of a non-rotating structure. When both functional groups are on the
+   same side of the rigid structure, that is a _cis_ isomer; when they are on
+   opposite sides, that is a _trans_ isomer.
+   - If movement across the rigid structure was possible (e.g. over a sigma
+     bond), ordinary thermal noise would cause the isomers to interconvert from
+     one to the other at room temperature many times per second, and for this
+     reason they would not be isomers).
+1. **Optical Isomers:** also known as _enantiomers_. They are called optical
+   because of how they interact with polarized light.
+
+This is an example of a _cis_ isomer:
+
+<img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/cis.svg"/>
+
+This is an example of a _trans_ isomer:
+
+<img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/trans.svg"/>
+
+
 </div>
 
 TODO
