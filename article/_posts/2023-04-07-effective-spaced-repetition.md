@@ -266,7 +266,7 @@ forwards and backwards. Add contextual questions: "what is the intutition for
 [concept]?". Add questions that link different concepts across your knowledge
 graph.
 
-The more inlinked your knowledge graph is, the better.
+The more interlinked your knowledge graph is, the better.
 
 ## Rule: Concept Graphs {#graph}
 
