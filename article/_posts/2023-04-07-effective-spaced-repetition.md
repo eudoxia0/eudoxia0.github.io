@@ -63,7 +63,6 @@ $$
    1. [Example: Neural Cells](#neural)
    1. [Example: Neuron Types](#neurons)
    1. [Example: Plate Tectonics](#tectonics)
-   1. [Example: Random Variables](#random)
    1. [Example: Months of the Year](#months)
    1. [Example: Poetry](#poetry)
    1. [Example: Powers of Two](#powers)
@@ -1198,10 +1197,6 @@ For each kind of plate boundary, we also ask the question in two ways:
 Graphically, here's how the questions link the concepts in the knowledge graph:
 
 <img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
-
-## Example: Random Variables {#random}
-
-TODO
 
 ## Example: Months of the Year {#months}
 
