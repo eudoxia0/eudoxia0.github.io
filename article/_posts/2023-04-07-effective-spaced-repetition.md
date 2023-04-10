@@ -1505,6 +1505,7 @@ Plus the cloze card:
 
 ## Poetry Script {#poetry-script}
 
+The `poetry.py` script generates flashcards where you are given two lines of a poem and have to recall the next line. For an example of using this, see [here](#rilke).
 
 # Software {#software}
 
