@@ -940,10 +940,10 @@ Isomers can be divided into:
          isomers_ because of the way they reflect plane-polarized light.
       1. **Diastereomers:** not enantiomers. One important subtype is:
          1. **Cis/Trans Isomers:** occur when two functional groups can find
-            themselves on the same or opposite sides of a non-rotating
-            structure. When both functional groups are on the same side of the
-            rigid structure, that is a _cis_ isomer; when they are on opposite
-            sides, that is a _trans_ isomer.
+            themselves on the same or opposite sides of a rigid structure. When
+            both functional groups are on the same side of the rigid structure,
+            that is a _cis_ isomer; when they are on opposite sides, that is a
+            _trans_ isomer.
 
 This is an example of a _cis_ isomer:
 
@@ -953,13 +953,59 @@ This is an example of a _trans_ isomer:
 
 <img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/trans.svg"/>
 
-
 </div>
 
-This is fairly straightforward: we have to learn a hierarchy of
-definitions. First, let's ask the questions in the downward direction:
+This is fairly straightforward: we have to learn a hierarchy of definitions. We'll divide this into two tasks:
 
+1. First, definitions. Ask questions from the term to the definition and from the definition to the term.
+2. Second, hierarchy: ask about subtypes and supertypes.
 
+So let's begin with the definitions. First we ask the questions in the forward
+direction:
+
+| Question                          | Answer                                                                                          |
+|-----------------------------------|-------------------------------------------------------------------------------------------------|
+| What is an isomer?                | Two compounds are isomers when they have the same chemical formula but different 3D structures. |
+| What are structural isomers?      | Compounds with the same formula but the atoms have a different bond graph..                     |
+| What are stereoisomers?           | Compounds with the same formula and bond graph but different spatial arrangement.               |
+| What are conformational isomers?  | Isomers that can be interconverted by rotating about a sigma bond.                              |
+| What are configurational isomers? | Isomers that cannot be interconverted without breaking a bond.                                  |
+| What are enantiomers?             | Non-superposable mirror images.                                                                 |
+| What are diastereomers?           | Stereoisomers that are not enantiomers.                                                         |
+| What are cis/trans isomers?       | Isomers where two functional groups are on the same or opposite sides of a rigid structure.     |
+
+And now the definitions, in the backward direction:
+
+| Question                                                                                                         | Answer                 |
+|------------------------------------------------------------------------------------------------------------------|------------------------|
+| What is the term for compounds with the same chemical formula but different 3D structures?                       | Isomer                 |
+| What is the term for isomers with the same formula but a different bond graph?                                   | Structural Isomer      |
+| What is the term for isomers that have the same bond graph different spatial arrangement?                        | Stereoisomer           |
+| What is the term for isomers that can be interconverted by rotating about a sigma bond?                          | Conformational Isomer  |
+| What is the term for isomers that cannot be interconverted without breaking a bond?                              | Configurational Isomer |
+| What is the term for non-superposable mirror images?                                                             | Enantiomer             |
+| What is the term for stereoisomers that are not enantiomers?                                                     | Diastereomer           |
+| What is the term for isomers where two functional groups are on the same or opposite sides of a rigid structure? | Cis/Trans Isomer       |
+
+We left some information out, to keep the cards atomic, now we have to ask
+questions to recall that information:
+
+| Question                                                                                       | Answer                                                                 |
+|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| What is another term for enantiomer?                                                           | Optical isomer.                                                        |
+| Why are enantiomers also called optical isomers?                                               | Because of the way they reflect plane-polarized light.                 |
+| What is an optical isomer?                                                                     | Another term for enantiomer.                                           |
+| What is a _cis_ isomer?                                                                        | One with both functional groups on the same side of a rigid structure. |
+| What is the term for an isomer with both functional groups on the same side a rigid structure. | A _cis_ isomer.                                                        |
+| What is a _trans_ isomer?                                                                      | One with both functional groups on the same side of a rigid structure. |
+| What is the term for an isomer with both functional groups on the same side a rigid structure. | A _trans_ isomer.                                                      |
+
+Now we move on to the hierarchy, which connects these concepts. We first ask the questions in the downward direction:
+
+| Question                                | Answer                                           |
+|-----------------------------------------|--------------------------------------------------|
+| What are the subtypes of isomers?       | Structural isomers, stereoisomers.               |
+| What are the subtypes of stereoisomers? | Conformational isomers, configurational isomers. |
 
 ## Example: Neural Cells {#neural}
 
