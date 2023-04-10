@@ -913,7 +913,7 @@ these:
 | What is the largest unit in the geologic time scale?                     | The eon.                |
 | What is the second-largest unit in the geologic time scale?              | The era.                |
 | What is the third-largest unit in the geologic time scale?               | The period.             |
-| What is the smallset unit in the geologic time scale?                    | The epoch.              |
+| What is the smallest unit in the geologic time scale?                    | The epoch.              |
 
 Now, since this is a concept hierarchy, we also ask the "what is" questions.
 
