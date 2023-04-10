@@ -956,7 +956,10 @@ This is an example of a _trans_ isomer:
 
 </div>
 
-TODO
+This is fairly straightforward: we have to learn a hierarchy of
+definitions. First, let's ask the questions in the downward direction:
+
+
 
 ## Example: Neural Cells {#neural}
 
