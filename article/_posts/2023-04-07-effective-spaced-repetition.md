@@ -1172,7 +1172,38 @@ I put up the scripts I use in [this repository][srt]. Thes e are largely based o
 
 ## Sequence Script {#seq-script}
 
-TODO
+The sequence script generates flashcards for learning a sequence, according to the principles in [Rule: Learning Sequences](#seq).
+
+Given a file `greek.txt` as input:
+
+```
+Greek Alphabet
+Alpha
+Beta
+Gamma
+```
+
+We can run `cat greek.txt | ./sequence.py > cards.csv`, and this will generate the following:
+
+| Question                                                | Answer              |
+|---------------------------------------------------------|---------------------|
+| **Greek Alphabet:** Recall all elements of the sequence | Alpha, Beta, Gamma. |
+| **Greek Alphabet:** What element has position 1?        | Alpha.              |
+| **Greek Alphabet:** What element has position 2?        | Beta.               |
+| **Greek Alphabet:** What element has position 3?        | Gamma.              |
+| **Greek Alphabet:** What is the position of Alpha?      | 1.                  |
+| **Greek Alphabet:** What is the position of Beta?       | 2.                  |
+| **Greek Alphabet:** What is the position of Gamma?      | 3.                  |
+| **Greek Alphabet:** What comes after Alpha?             | Beta.               |
+| **Greek Alphabet:** What comes after Beta?              | Gamma.              |
+| **Greek Alphabet:** What comes before Beta?             | Alpha.              |
+| **Greek Alphabet:** What comes before Gamma?            | Beta.               |
+
+Plus the cloze card:
+
+| Cloze                                                                         |
+|-------------------------------------------------------------------------------|
+| **Greek Alphabet:** Elements of the sequence: {{Alpha}}, {{Beta}}, {{Gamma}}. |
 
 ## Poetry Script {#poetry}
 
