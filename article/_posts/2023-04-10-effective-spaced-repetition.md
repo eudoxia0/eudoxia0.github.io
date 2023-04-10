@@ -358,7 +358,8 @@ Magma forms in three places:
 2. **Rift zones:** as tectonic plates are pulled apart, hot rock rises (because
    it is less dense) to plug the gap and melts due to decreasing pressure.
 3. **Subduction zones:** water-rich ocean lithosphere sinks into the mantle. The
-   water melts and rises, adding water to the overlying rock, which the melts.
+   water heats up and rises, adding water to the overlying rock, which the
+   melts.
 
 </div>
 
