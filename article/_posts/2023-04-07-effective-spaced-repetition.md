@@ -53,6 +53,8 @@ $$
 1. [Examples](#ex)
    1. [Example: Magma Formation](#magma)
    1. [Example: Plate Tectonics](#tectonics)
+   1. [Example: Neural Cells](#neural)
+   1. [Example: Neuron Types](#neurons)
    1. [Example: Vector Spaces](#vect)
    1. [Example: Parity Group](#parity)
    1. [Example: Logical Consequence](#logical-consequence)
@@ -61,8 +63,6 @@ $$
    1. [Example: Regular Expressions](#regex)
    1. [Example: Voltage](#voltage)
    1. [Example: Isomers](#isomers)
-   1. [Example: Neural Cells](#neural)
-   1. [Example: Neuron Types](#neurons)
    1. [Example: Months of the Year](#months)
    1. [Example: Powers of Two](#powers)
    1. [Example: Rilke](#rilke)
@@ -461,6 +461,110 @@ Graphically, here's how the questions link the concepts in the knowledge graph:
 
 <img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/plates.svg"/>
 
+## Example: Neural Cells {#neural}
+
+<div class="border-box">
+
+Cells in the nervous system are divided into neurons and glia. Glial cells are
+divided into macroglia and microglia. Macroglia are divided into astrocytes,
+oligodendrocytes, and Schwann cells.
+
+</div>
+
+Visually:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/neuro.svg"/>
+
+We first write the top-down questions:
+
+| Question                                       | Answer                                           |
+|------------------------------------------------|--------------------------------------------------|
+| What kinds of cell make up the nervous system? | Neurons and glia.                                |
+| What are the kinds of glial cell?              | Microglia and macroglia.                         |
+| What are the kinds of macroglia?               | Astrocytes, oligodendrocytes, and Schwann cells. |
+
+And the bottom-up questions. We don't ask these when the answers are obvious:
+"what are microglia a kind of" has an obvious answer.
+
+| Question                          | Answer     |
+|-----------------------------------|------------|
+| Astrocytes are a kind of...       | Macroglia. |
+| Oligodendrocytes are a kind of... | Macroglia. |
+| Schwann cells are a kind of...    | Macroglia. |
+
+## Example: Neuron Types {#neurons}
+
+This is a brief example about keeping cards short and using hierarchies to break
+things down.
+
+From my neuroscience notes:
+
+<div class="border-box">
+
+Neurons can be divided into three categories by their function:
+
+1. **Sensory:** feed sensory information into the brain.
+2. **Motor:** send motor commands to the muscles.
+3. **Interneurons:** connect within the CNS. These are further divided into:
+   1. **Local:** form circuits with nearby neurons.
+   2. **Relay:** have long axons and communicate across brain regions.
+
+</div>
+
+Let's start by doing this the wrong way, through loading too much information
+into one card.
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What are the functional categories of neuron?</td>
+      <td>
+        <ul>
+          <li><b>Sensory:</b> feed sensory information into the brain.</li>
+          <li><b>Motor:</b> send motor commands to the muscles.</li>
+          <li><b>Interneurons:</b> connect within the CNS.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>What are the different types of interneuron?</td>
+      <td>
+        <ul>
+          <li><b>Local:</b> form circuits with nearby neurons.</li>
+          <li><b>Relay:</b> have long axons and communicate across brain regions.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Let's first break this down by separating _names_ from _definitions_:
+
+| Question                                      | Answer                                                             |
+|-----------------------------------------------|--------------------------------------------------------------------|
+| What are the functional categories of neuron? | Sensory, motor, interneurons.                                      |
+| What are sensory neurons?                     | Neurons which feed sensory information into the brain.             |
+| What are motor neurons?                       | Neurons which send motor commands to the muscles.                  |
+| What are interneurons?                        | Neurons which connect within the CNS.                              |
+| What are the types of interneuron?            | Local, relay.                                                      |
+| What are local interneurons?                  | Interneurons that form circuits with nearby neurons.               |
+| What are relay interneurons?                  | Interneurons have long axons and communicate across brain regions. |
+
+Now we ask the questions in the backward direction: from the definition to the term:
+
+| Question                                                                     | Answer             |
+|------------------------------------------------------------------------------|--------------------|
+| What is the term for a neuron that feeds sensory information into the brain? | Sensory neuron.    |
+| What is the term for a neuron that sends motor commands to the muscles?      | Motor neuron.      |
+| What is the term for a neuron that connects within the CNS?                  | Interneuron.       |
+| What is the term for an interneuron that forms circuits with nearby neurons? | Local interneuron. |
+| What is the term for an interneuron that communicates across brain regions?  | Relay interneuron. |
 
 ## Example: Vector Spaces {#vect}
 
@@ -1089,113 +1193,6 @@ And, finally, the examples:
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | What kind of isomer is this? <img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/cis.svg"/>   | A _cis_ isomer.   |
 | What kind of isomer is this? <img style="margin-left: auto; margin-right: auto; width: 200px;" src="/assets/content/effective-spaced-repetition/trans.svg"/> | A _trans_ isomer. |
-
-
-
-## Example: Neural Cells {#neural}
-
-<div class="border-box">
-
-Cells in the nervous system are divided into neurons and glia. Glial cells are
-divided into macroglia and microglia. Macroglia are divided into astrocytes,
-oligodendrocytes, and Schwann cells.
-
-</div>
-
-Visually:
-
-<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/neuro.svg"/>
-
-We first write the top-down questions:
-
-| Question                                       | Answer                                           |
-|------------------------------------------------|--------------------------------------------------|
-| What kinds of cell make up the nervous system? | Neurons and glia.                                |
-| What are the kinds of glial cell?              | Microglia and macroglia.                         |
-| What are the kinds of macroglia?               | Astrocytes, oligodendrocytes, and Schwann cells. |
-
-And the bottom-up questions. We don't ask these when the answers are obvious:
-"what are microglia a kind of" has an obvious answer.
-
-| Question                          | Answer     |
-|-----------------------------------|------------|
-| Astrocytes are a kind of...       | Macroglia. |
-| Oligodendrocytes are a kind of... | Macroglia. |
-| Schwann cells are a kind of...    | Macroglia. |
-
-## Example: Neuron Types {#neurons}
-
-This is a brief example about keeping cards short and using hierarchies to break
-things down.
-
-From my neuroscience notes:
-
-<div class="border-box">
-
-Neurons can be divided into three categories by their function:
-
-1. **Sensory:** feed sensory information into the brain.
-2. **Motor:** send motor commands to the muscles.
-3. **Interneurons:** connect within the CNS. These are further divided into:
-   1. **Local:** form circuits with nearby neurons.
-   2. **Relay:** have long axons and communicate across brain regions.
-
-</div>
-
-Let's start by doing this the wrong way, through loading too much information
-into one card.
-
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>What are the functional categories of neuron?</td>
-      <td>
-        <ul>
-          <li><b>Sensory:</b> feed sensory information into the brain.</li>
-          <li><b>Motor:</b> send motor commands to the muscles.</li>
-          <li><b>Interneurons:</b> connect within the CNS.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>What are the different types of interneuron?</td>
-      <td>
-        <ul>
-          <li><b>Local:</b> form circuits with nearby neurons.</li>
-          <li><b>Relay:</b> have long axons and communicate across brain regions.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-Let's first break this down by separating _names_ from _definitions_:
-
-| Question                                      | Answer                                                             |
-|-----------------------------------------------|--------------------------------------------------------------------|
-| What are the functional categories of neuron? | Sensory, motor, interneurons.                                      |
-| What are sensory neurons?                     | Neurons which feed sensory information into the brain.             |
-| What are motor neurons?                       | Neurons which send motor commands to the muscles.                  |
-| What are interneurons?                        | Neurons which connect within the CNS.                              |
-| What are the types of interneuron?            | Local, relay.                                                      |
-| What are local interneurons?                  | Interneurons that form circuits with nearby neurons.               |
-| What are relay interneurons?                  | Interneurons have long axons and communicate across brain regions. |
-
-Now we ask the questions in the backward direction: from the definition to the term:
-
-| Question                                                                     | Answer             |
-|------------------------------------------------------------------------------|--------------------|
-| What is the term for a neuron that feeds sensory information into the brain? | Sensory neuron.    |
-| What is the term for a neuron that sends motor commands to the muscles?      | Motor neuron.      |
-| What is the term for a neuron that connects within the CNS?                  | Interneuron.       |
-| What is the term for an interneuron that forms circuits with nearby neurons? | Local interneuron. |
-| What is the term for an interneuron that communicates across brain regions?  | Relay interneuron. |
 
 ## Example: Months of the Year {#months}
 
