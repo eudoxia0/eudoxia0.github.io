@@ -892,7 +892,20 @@ Voltage can be defined as:
 
 </div>
 
-TODO
+The idea here is:
+
+1. We first ask for the definition of voltage in terms of both electric
+   potential and work.
+2. We also ask what is the term for each definition.
+
+Which gives us the following flashcards:
+
+| Question                                                                              | Answer                                                |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------|
+| What is voltage in terms of electric potential?                                       | Difference in electric potential between two points.  |
+| What is voltage in terms of work?                                                     | Work done by a 1C particle as it travels from A to B. |
+| What is the term for the difference in electric potential between two points?         | Voltage.                                              |
+| What is the term for the work done by a 1C particle as it travels between two points? | Voltage.                                              |
 
 ## Example: Isomers {#isomer}
 
