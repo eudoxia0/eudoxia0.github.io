@@ -145,6 +145,9 @@ Here are my rules for effective spaced repetition.
 The rules are sorted by applicability, with more general ones first, and most
 specific ones last.
 
+Because many of the examples involve multiple rules at the same time, I decided
+to list the examples separately from the list of rules.
+
 ## Rule: Understand First {#understand}
 
 Don't try to memorize what you don't understand. The concepts should be clear in
@@ -307,9 +310,6 @@ How thorough you want to be depends on the nature of the information. Most of
 the time I use a cloze card and a test card.
 
 # Examples {#ex}
-
-Because many of the examples involve multiple rules at the same time, I decided
-to group them separately from the rules.
 
 ## Example: Vector Spaces {#vect}
 
