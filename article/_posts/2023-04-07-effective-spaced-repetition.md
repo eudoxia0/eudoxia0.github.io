@@ -308,6 +308,8 @@ You might also want:
 2. A **cloze sequence:** flashcard with a cloze deletion for each element in the
    sequence, to fill in the blank given the context.
 
+The [sequence script](#seq-script) can generate these for you.
+
 How thorough you want to be depends on the nature of the information. Most of
 the time I use a cloze card and a test card.
 
@@ -322,6 +324,8 @@ B, C, D), you might have these flashcards:
 | _Beginning_, A, ... | B      |
 | A, B, ...           | C      |
 | B, C, ...           | D      |
+
+The [poetry script](#poetry) can generate these for you.
 
 # Examples {#ex}
 
