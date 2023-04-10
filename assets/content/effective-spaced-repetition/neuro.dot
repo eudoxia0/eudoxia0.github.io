@@ -1,5 +1,5 @@
 digraph G {
-    node[shape=rect style=filled fillcolor=cadetblue1]
+    node[shape=plaintext style=filled fillcolor="#b2ebf2"]
 
     nsc[label="Nervous System Cells"]
     ne[label="Neurons"]
