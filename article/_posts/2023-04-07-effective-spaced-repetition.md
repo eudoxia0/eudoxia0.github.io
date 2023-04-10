@@ -926,24 +926,24 @@ Two chemical compounds are said to be **isomers** of each other if they have the
 same chemical formula (same number of atoms of each element) but their
 three-dimensional structure differs.
 
-Isomers can be divided into **structural isomers**, where the chemical formula
-is the same but the atoms are bonded differently; and **stereoisomers**, where
-the chemical formula and the bonds are the same but the spatial arrangement is
-different.
+Isomers can be divided into:
 
-Stereoisomers are further divided into:
-
-1. **Geometric Isomers:** also called _cis/trans_ or _configurational isomers_,
-   occurs when two functional groups can find themselves on the same or opposite
-   sides of a non-rotating structure. When both functional groups are on the
-   same side of the rigid structure, that is a _cis_ isomer; when they are on
-   opposite sides, that is a _trans_ isomer.
-   - If movement across the rigid structure was possible (e.g. over a sigma
-     bond), ordinary thermal noise would cause the isomers to interconvert from
-     one to the other at room temperature many times per second, and for this
-     reason they would not be isomers).
-1. **Optical Isomers:** also known as _enantiomers_. They are called optical
-   because of how they interact with polarized light.
+1. **Structural Isomers:** the chemical formula is the same but the atoms
+are bonded differe
+1. **Stereoisomers:** the chemical formula and the bonds are the same but the
+spatial arrangement is different. These are divided into:
+   1. **Conformational Isomers:** can be intercoverted by rotating about a
+      sigma bond.
+   1. **Configurational Isomers:** cannot be interconverted without breaking a
+      bond. These are further subdivided into:
+      1. **Enantiomers:** non-superposable mirror images. Also called _optical
+         isomers_ because of the way they reflect plane-polarized light.
+      1. **Diastereomers:** not enantiomers. One important subtype is:
+         1. **Cis/Trans Isomers:** occur when two functional groups can find
+            themselves on the same or opposite sides of a non-rotating
+            structure. When both functional groups are on the same side of the
+            rigid structure, that is a _cis_ isomer; when they are on opposite
+            sides, that is a _trans_ isomer.
 
 This is an example of a _cis_ isomer:
 
