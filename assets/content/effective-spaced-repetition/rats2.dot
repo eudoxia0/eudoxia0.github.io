@@ -1,0 +1,19 @@
+digraph G {
+    rankdir=LR;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#ffe0b2"]
+
+        rat[label="Rational Numbers"]
+        not[label="Q"]
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#ff9800" height=0.1]
+        qnot[label="Notation?"]
+        qstand[label="Stands for?"]
+    }
+    
+    rat -> qnot -> not
+    not -> qstand -> rat
+}
