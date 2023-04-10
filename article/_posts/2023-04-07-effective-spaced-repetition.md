@@ -311,6 +311,11 @@ the time I use a cloze card and a test card.
 
 # Examples {#ex}
 
+Many of these examples are overkill: we collect a lot more flashcards than the
+subject deserves. But this is to illustrate the general rules. With experience,
+you can learn how many questions a particular topic requires, and different
+volumes of your knowledge graph will be more or less interlinked.
+
 ## Example: Vector Spaces {#vect}
 
 Here's what we want to learn:
