@@ -414,7 +414,7 @@ question backward: which places involve a given process.
 | Where does magma form due to increasing temperature and the addition of water? | Subduction zones.                                                                                                                       |
 | How does magma form in a hot spot?                                             | As hot mantle rock rises, the decrease in pressure causes it to melt.                                                                   |
 | How does magma form in a rift zone?                                            | As the tectonic plates move apart, hot rock rises to fill the gap, and the decrease in pressure causes it to melt.                      |
-| How does magma form in a subdiction zone?                                      | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
+| How does magma form in a subduction zone?                                      | Waterlogged crust dives into the mantle, the water turns to steam and rises, the addition of water to overlying rock causes it to melt. |
 
 We can visualize the resulting knowledge graph like this:
 
