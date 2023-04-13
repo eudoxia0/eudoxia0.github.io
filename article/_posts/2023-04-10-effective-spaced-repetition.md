@@ -815,7 +815,7 @@ Then we ask questions specifically about semantic consequence:
 | Define semantic consequence                                     | $Q$ is a semantic consequence of $P$ iff in every interpretation where $P$ is true, $Q$ is also true. |
 | What's the notation for "$Q$ is a semantic consequence of $P$"? | $P \models Q$                                                                                         |
 | What does $P \models Q$ mean?                                   | $Q$ is a semantic consequence of $P$                                                                  |
-| Semantic consequence connects sentences by...                   | Iterpretations.                                                                                       |
+| Semantic consequence connects sentences by...                   | Interpretations.                                                                                       |
 | Which notion of logical consequence involves interprerations?   | Semantic consequence.                                                                                 |
 
 And then about syntactic consequence:
