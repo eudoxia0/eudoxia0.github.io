@@ -826,7 +826,7 @@ And then about syntactic consequence:
 | What's the notation for "$Q$ is a syntactic consequence of $P$"? | $P \vdash Q$                                                                |
 | What does $P \vdash Q$ mean?                                     | $Q$ is a syntactic consequence of $P$                                       |
 | Syntactic consequence connects sentences by...                   | Proofs.                                                                     |
-| Which notion of logical consequennce involves proofs?            | Syntactic consequence.                                                      |
+| Which notion of logical consequence involves proofs?             | Syntactic consequence.                                                      |
 
 ## Example: Periodization {#perodization}
 
