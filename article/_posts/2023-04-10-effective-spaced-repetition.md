@@ -797,7 +797,7 @@ The two notions of _logical consequence_ are:
 1. **Syntactic Consequence:** $Q$ is a syntactic consequence of $P$ iff there
    exists a proof from $P$ to $Q$. This is denoted $P \vdash Q$.
 
-Semantic consequence is about interpretations, while semantic consequence is
+Semantic consequence is about interpretations, while syntactic consequence is
 about proofs.
 
 </div>
