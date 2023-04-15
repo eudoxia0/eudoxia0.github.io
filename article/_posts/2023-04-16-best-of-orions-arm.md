@@ -140,12 +140,6 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 
 [conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
 
-## Artifacts
-
-- [Ultima Gate][gate]: an alien wormhole, guarded by a heavily armed alien fleet, whose destination is unknown.
-
-[gate]: https://www.orionsarm.com/eg-article/5512b02a06dd9
-
 ## Concepts
 
 - [Artificially Optimised Galaxies][artgal]: distant galaxies that alien species have optimized for long-term habitation, using the stars' own power to starlift hydrogen into gas giants and brown dwarfs, so it can be burned efficiently (in fusion or conversion reactors) and last far longer than stellar fusion.
@@ -161,6 +155,12 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 [maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
 
 - [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
+
+## Artifacts
+
+- [Ultima Gate][gate]: an alien wormhole, guarded by a heavily armed alien fleet, whose destination is unknown.
+
+[gate]: https://www.orionsarm.com/eg-article/5512b02a06dd9
 
 # Footnotes
 
