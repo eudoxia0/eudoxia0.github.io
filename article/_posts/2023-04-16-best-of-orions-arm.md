@@ -144,6 +144,8 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 [topolevel]: https://www.orionsarm.com/eg-article/4b9f2a844034a
 [maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
 
+- [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
+
 # Footnotes
 
 [^tumblr]:
