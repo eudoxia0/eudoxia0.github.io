@@ -1,5 +1,6 @@
 ---
 title: The Best of Orion’s Arm
+summary: Summarizing ten thousand years of future history.
 ---
 
 There are two types of fandom: the creative and the systematizing[^tumblr]. The creatives write fan fiction and draw fan art, the systematizers write the huge wikis, like Star Wars' [Wookiepedia][wookie] or Star Trek's [Memory Alpha][mem], where everything down to the life story of the cobbler who made Han Solo's boots is neatly documented. But the franchise comes first: the books or the movies or TV show form the canon from which the facts are extracted and catalogued.
