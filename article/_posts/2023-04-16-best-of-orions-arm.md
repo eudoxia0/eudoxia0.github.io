@@ -53,9 +53,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
 
-- [Boostbeam][boost]
+- [Boostbeam][boost]: a beam of charged particles that pushes a [magnetic sail][magsail]. A source of propulsion that avoids the tyranny of the rocket equation, since the ships don't have to carry fuel themselves.
 
 [boost]: https://www.orionsarm.com/eg-article/517edaa0de9c7
+[magsail]: https://en.wikipedia.org/wiki/Magnetic_sail
 
 - [Angelnet][angelnet]
 
