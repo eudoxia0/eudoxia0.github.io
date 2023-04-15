@@ -28,22 +28,6 @@ The worldbuilding of [_The Epiphany of Gliese 581_][eog581] was heavily inspired
 
 This article is an index of my favorite topics from the Orion's Arm wiki.
 
-## Places
-
-- [Duxed][duxed]: a moon of a gas giant with an extreme tidal range, with tides reaching two kilometers up.
-
-[duxed]: https://www.orionsarm.com/eg-article/5f01de4e81446
-
-- [Wadai][wadai]: a small ringworld around the white dwarf Eggen-Greenstein 471, built entirely without exotic matter and held together by dynamic compression members.
-
-[wadai]: https://orionsarm.com/eg-article/4910e5c60edcc
-
-- [The Giant Ring of the Archsaur][greatring]: a very large ringworld under construction. 22AU radius, 2.5 million kilometers wide. Built by a civilization of [lazurogened][lazarus] [transapient dinosaurs][dinos].
-
-[greatring]: https://www.orionsarm.com/eg-article/5f25d0ba9c60c
-[lazarus]: https://www.orionsarm.com/eg-article/4823993f36e02
-[dinos]: https://www.orionsarm.com/eg-topic/48f802af4ffcd
-
 ## Technology
 
 - [The Argus Array][argus]: a vast interferometric telescope, made up of thousands of individual telescopes spread out across a thousand light year-wide volume. Each telescope is a supercooled black sphere 20AU across, absorption photons in every frequency, for a combined light gathering area of 10<sup>27</sup> m<sup>2</sup>.
@@ -83,6 +67,22 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
 
 - [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
+
+## Places
+
+- [Duxed][duxed]: a moon of a gas giant with an extreme tidal range, with tides reaching two kilometers up.
+
+[duxed]: https://www.orionsarm.com/eg-article/5f01de4e81446
+
+- [Wadai][wadai]: a small ringworld around the white dwarf Eggen-Greenstein 471, built entirely without exotic matter and held together by dynamic compression members.
+
+[wadai]: https://orionsarm.com/eg-article/4910e5c60edcc
+
+- [The Giant Ring of the Archsaur][greatring]: a very large ringworld under construction. 22AU radius, 2.5 million kilometers wide. Built by a civilization of [lazurogened][lazarus] [transapient dinosaurs][dinos].
+
+[greatring]: https://www.orionsarm.com/eg-article/5f25d0ba9c60c
+[lazarus]: https://www.orionsarm.com/eg-article/4823993f36e02
+[dinos]: https://www.orionsarm.com/eg-topic/48f802af4ffcd
 
 ## Alien Civilizations
 
