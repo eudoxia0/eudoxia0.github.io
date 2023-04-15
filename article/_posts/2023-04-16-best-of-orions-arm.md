@@ -46,6 +46,44 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 ## Technology
 
+- [The Argus Array][argus]: a vast interferometric telescope, made up of thousands of individual telescopes spread out across a thousand light year-wide volume. Each telescope is a supercooled black sphere 20AU across, absorption photons in every frequency, for a combined light gathering area of 10<sup>27</sup> m<sup>2</sup>.
+
+  >... the light emitted from a one metre, sunlit object in Andromeda is sufficient to build an image in the Argus Array over a period of three standard years. Larger objects can be imaged more quickly- at the same distance, a 10km object can be seen by collecting photons over a period of just 10 seconds. This allows large-scale phenomena to be observed on the surfaces of planets, such as weather patterns"
+
+[argus]: https://www.orionsarm.com/eg-article/45f97a51dbf24
+
+- [Mass-Stream Technology][momentum]:
+
+[momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
+
+- [Magnetic Monopoles][mono]
+
+[mono]: https://www.orionsarm.com/eg-article/48572566653b6
+
+- [Magmatter][magmatter]
+
+[magmatter]: https://www.orionsarm.com/eg-article/48630634d2591
+
+- [Conversion Drive][conversion]:
+
+[conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
+
+## Concepts
+
+- [Artificially Optimised Galaxies][artgal]: distant galaxies that alien species have optimized for long-term habitation, using the stars' own power to starlift hydrogen into gas giants and brown dwarfs, so it can be burned efficiently (in fusion or conversion reactors) and last far longer than stellar fusion.
+
+[artgal]: https://www.orionsarm.com/eg-article/552d31f1832b6
+
+- [Toposophy][topos]: the study of posthuman intelligence and enhancement. Also:
+  - [Toposophic Levels and Mental Abilities][topolevel]: description of each toposophic level.
+  - [Ascension Maze][maze]: a series of challenges that requires you to become posthuman in order to surmount them.
+
+[topos]: https://www.orionsarm.com/eg-topic/45b3daabb2329
+[topolevel]: https://www.orionsarm.com/eg-article/4b9f2a844034a
+[maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
+
+- [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
+
 ## Alien Civilizations
 
 Much of this was merged from another world-building project from the early 2000's, the website of the [Hamilton Institute of Exopalentology][hamilton], which was [translated into Orion's Arm][hamiltonoa] ith the name intact.
@@ -115,46 +153,6 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 - [The Iahi Daon Empire][iahi]: an extinct alien civilization, known from the derelict generation ships they sent out before collapsing.
 
 [iahi]: https://www.orionsarm.com/eg-article/48fa48fb5a4ae
-
-## Technology
-
-- [The Argus Array][argus]: a vast interferometric telescope, made up of thousands of individual telescopes spread out across a thousand light year-wide volume. Each telescope is a supercooled black sphere 20AU across, absorption photons in every frequency, for a combined light gathering area of 10<sup>27</sup> m<sup>2</sup>.
-
-  >... the light emitted from a one metre, sunlit object in Andromeda is sufficient to build an image in the Argus Array over a period of three standard years. Larger objects can be imaged more quickly- at the same distance, a 10km object can be seen by collecting photons over a period of just 10 seconds. This allows large-scale phenomena to be observed on the surfaces of planets, such as weather patterns"
-
-[argus]: https://www.orionsarm.com/eg-article/45f97a51dbf24
-
-- [Mass-Stream Technology][momentum]:
-
-[momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
-
-- [Magnetic Monopoles][mono]
-
-[mono]: https://www.orionsarm.com/eg-article/48572566653b6
-
-- [Magmatter][magmatter]
-
-[magmatter]: https://www.orionsarm.com/eg-article/48630634d2591
-
-- [Conversion Drive][conversion]:
-
-[conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
-
-## Concepts
-
-- [Artificially Optimised Galaxies][artgal]: distant galaxies that alien species have optimized for long-term habitation, using the stars' own power to starlift hydrogen into gas giants and brown dwarfs, so it can be burned efficiently (in fusion or conversion reactors) and last far longer than stellar fusion.
-
-[artgal]: https://www.orionsarm.com/eg-article/552d31f1832b6
-
-- [Toposophy][topos]: the study of posthuman intelligence and enhancement. Also:
-  - [Toposophic Levels and Mental Abilities][topolevel]: description of each toposophic level.
-  - [Ascension Maze][maze]: a series of challenges that requires you to become posthuman in order to surmount them.
-
-[topos]: https://www.orionsarm.com/eg-topic/45b3daabb2329
-[topolevel]: https://www.orionsarm.com/eg-article/4b9f2a844034a
-[maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
-
-- [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
 
 ## Artifacts
 
