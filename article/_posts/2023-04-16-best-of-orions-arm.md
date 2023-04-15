@@ -53,6 +53,38 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
 
+- [Boostbeam][boost]
+
+[boost]: https://www.orionsarm.com/eg-article/517edaa0de9c7
+
+- [Angelnet][angelnet]
+
+[angelnet]: https://www.orionsarm.com/eg-article/45f4886ae0d44
+
+- [Star Lifting][starlift]
+
+[starlift]: https://www.orionsarm.com/eg-article/47897e8b1947c
+
+- [Deep Well Industrial Zone][dwiz]
+
+[dwiz]: https://www.orionsarm.com/eg-article/464790d2497de
+
+- [Matrioshka Brain][matbrain]
+
+[matbrain]: https://www.orionsarm.com/eg-article/4847361494ea5
+
+- [Matrioshka Hypernode][mathyper]
+
+[mathyper]: https://www.orionsarm.com/eg-article/484737879bb05
+
+- [Nicoll-Dyson Beams][ndbeam]
+
+[ndbeam]: https://www.orionsarm.com/eg-article/48fe49fe47202
+
+- [Weylforge][weyl]
+
+[weyl]: https://www.orionsarm.com/eg-article/4a5dd245a6820
+
 ## Concepts
 
 - [Artificially Optimised Galaxies][artgal]: distant galaxies that alien species have optimized for long-term habitation, using the stars' own power to starlift hydrogen into gas giants and brown dwarfs, so it can be burned efficiently (in fusion or conversion reactors) and last far longer than stellar fusion.
@@ -68,6 +100,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
 
 - [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
+
+- [The Tranquility Calendar][cal]
+
+[cal]: https://www.orionsarm.com/eg-article/48c6d4c3d54cf
 
 ## Places
 
