@@ -38,6 +38,12 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [wadai]: https://orionsarm.com/eg-article/4910e5c60edcc
 
+- [The Giant Ring of the Archsaur][greatring]: a very large ringworld under construction. 22AU radius, 2.5 million kilometers wide. Built by a civilization of [lazurogened] [transapient dinosaurs][dinos].
+
+[greatring]: https://www.orionsarm.com/eg-article/5f25d0ba9c60c
+[lazarus]: https://www.orionsarm.com/eg-article/4823993f36e02
+[dinos]: https://www.orionsarm.com/eg-topic/48f802af4ffcd
+
 ## Technology
 
 ## Alien Civilizations
