@@ -34,6 +34,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [duxed]: https://www.orionsarm.com/eg-article/5f01de4e81446
 
+- [Wadai][wadai]: a small ringworld around the white dwarf Eggen-Greenstein 471, built entirely without exotic matter and held together by dynamic compression members.
+
+[wadai]: https://orionsarm.com/eg-article/4910e5c60edcc
+
 ## Technology
 
 ## Alien Civilizations
