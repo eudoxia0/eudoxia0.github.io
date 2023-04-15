@@ -101,7 +101,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 - [Lazurogenics][lazarus]: recreation of extinct species from the genetic, fossil, or historical record.
 
-- [The Tranquility Calendar][cal]
+- [The Tranquility Calendar][cal]: the calendar system used in Orion's Arm counts time from the moon landing, from the moment of the transmission: "Houston, Tranquility Base here. The Eagle has landed". Dates are given in AT and BT.
 
 [cal]: https://www.orionsarm.com/eg-article/48c6d4c3d54cf
 
