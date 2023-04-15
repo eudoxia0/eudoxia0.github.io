@@ -70,6 +70,7 @@ $$
    1. [Example: Months of the Year](#months)
    1. [Example: Powers of Two](#powers)
    1. [Example: Rilke](#rilke)
+   1. [Example: Misc. Examples](#misc)
 1. [Scripts](#scripts)
    1. [Sequence Script](#seq-script)
    1. [Poetry Script](#poetry-script)
@@ -1458,6 +1459,30 @@ generated flashcards are:
 </table>
 
 And so on. You get the pattern.
+
+## Example: Misc. Examples {#misc}
+
+Given:
+
+>US Treasury bonds are called treasuries.
+
+You can write the following forward-backward cards:
+
+| Question                              | Answer             |
+|---------------------------------------|--------------------|
+| What are US Treasury bonds nicknamed? | Treasuries.        |
+| What is nicknamed 'treasuries'?       | US Treasury bonds. |
+
+Given:
+
+>The derivative of $\sin x$ is $\cos x$.
+
+You can ask for both the derivative and the antiderivative.
+
+| Question             | Answer   |
+|----------------------|----------|
+| Derivative: `\sin x` | `\cos x` |
+| Integral: `\cos x`   | `\sin x` |
 
 # Scripts {#scripts}
 
