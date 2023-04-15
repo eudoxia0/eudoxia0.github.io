@@ -128,6 +128,18 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 
 [momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
 
+- [Magnetic Monopoles][mono]
+
+[mono]: https://www.orionsarm.com/eg-article/48572566653b6
+
+- [Magmatter][magmatter]
+
+[magmatter]: https://www.orionsarm.com/eg-article/48630634d2591
+
+- [Conversion Drive][conversion]:
+
+[conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
+
 ## Artifacts
 
 - [Ultima Gate][gate]: an alien wormhole, guarded by a heavily armed alien fleet, whose destination is unknown.
