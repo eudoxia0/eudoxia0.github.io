@@ -84,6 +84,14 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [lazarus]: https://www.orionsarm.com/eg-article/4823993f36e02
 [dinos]: https://www.orionsarm.com/eg-topic/48f802af4ffcd
 
+- [Black Acropolis][ba]: an abandoned Dyson swarm built by an extinct alien civilization.
+
+[ba]: https://www.orionsarm.com/eg-article/48000db9a9c2f
+
+- [Oceanus Ultimata][ocean]: ringworld + waterworld. A dense ring of immense water droplets floating around a star, protected from vacuum by membranes of nanotechnology. They bump and merge and come apart and are filled with alien life.
+
+[ocean]: https://www.orionsarm.com/eg-article/490b3010a681a
+
 ## Alien Civilizations
 
 Much of this was merged from another world-building project from the early 2000's, the website of the [Hamilton Institute of Exopalentology][hamilton], which was [translated into Orion's Arm][hamiltonoa] ith the name intact.
@@ -100,10 +108,6 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 - [The Empire of Screaming Skulls][skulls]: this has to be my favorite. An alien species in a galaxy 200 million light years away, known only from remote observations. Their space habitats are shaped like the head of an insect, with four empty eye sockets and mandible-like appendages. They are observed in pairs, orbiting their common barycenter and facing each other.
 
 [skulls]: https://www.orionsarm.com/eg-article/5b6c19138bd87
-
-- [Black Acropolis][ba]: an abandoned Dyson swarm built by an extinct alien civilization.
-
-[ba]: https://www.orionsarm.com/eg-article/48000db9a9c2f
 
 - [SMBH Civilisation][smbh]: an alien civilization, living around the black hole at the center of a galaxy 200 million light years away. Around the black hole are over a million artificial planets, orbiting one after the other in hundrends of distinct orbits, like a Bohr atom, and each moves at 5% of the speed of light.
 
@@ -140,10 +144,6 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 - [Batholith Civilization][bath]: an extinct alien civilization whose planet was irradiated by a gamma ray burst. They took refuge in tunnels in a granite batholith, and gradually died out.
 
 [bath]: https://www.orionsarm.com/eg-article/4f43b87a30aae
-
-- [Oceanus Ultimata][ocean]: ringworld + waterworld. A dense ring of immense water droplets floating around a star, protected from vacuum by membranes of nanotechnology. They bump and merge and come apart and are filled with alien life.
-
-[ocean]: https://www.orionsarm.com/eg-article/490b3010a681a
 
 - [The Trader][trader]: a fleet of six alien spacecraft traveling in close formation, using a [Lorentz force tether][tether] to travel in a circular trajectory around the galaxy.
 
