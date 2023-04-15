@@ -8,10 +8,11 @@ There are two types of fandom: the creative and the systematizing[^tumblr]. The 
 [wookie]: https://starwars.fandom.com/wiki/Main_Page
 [mem]: https://memory-alpha.fandom.com/wiki/Portal:Main
 
-The [Orion's Arm Universe Project][oa] is a wiki without a franchise: it is a vast, sprawling, Borgesian wiki documenting the next ten thousand years of posthuman history. It's been going twenty years, I've been reading it on and off since I was a teenager, since around 2009, and every time I visit the website I'll find some article I've never read, scroll down, and see that it was published in 2001. The ratio of worldbuilding to storytelling is the highest of anything like it other than maybe [SCP][scp]: there are a few stories, here and there, but the overwhelming majority of the content is in the form of wiki entries, describing history, places, technology, factions and science.
+The [Orion's Arm Universe Project][oa] is a wiki without a franchise: it is a vast, sprawling, Borgesian wiki documenting the next ten thousand years of posthuman history. It's been going twenty years, I've been reading it on and off since I was a teenager, since around 2009, and every time I visit the website I'll find some article I've never read, scroll down, and see that it was published in 2001. The ratio of worldbuilding to storytelling is the highest of anything like it other than maybe [SCP][scp]: there are a few [stories][stories], here and there, but the overwhelming majority of the content is in the form of wiki entries, describing history, places, technology, factions and science.
 
 [oa]: https://www.orionsarm.com/
 [scp]: https://scp-wiki.wikidot.com/
+[stories]: https://www.orionsarm.com/xcms.php?r=oa-menu-list&menu=creative-writing
 
 It's mostly---for the first few thousand years, at least---hard science fiction, and it's been a huge influence on how I view the future. The technologies and their consequences to the development of civilization are described so rigorously that it leaves little room for argument. The great thing about hard science fiction is it's basically physics plus repeated application of [_modus ponens_][mp]: two authors, starting with the same knowledge of physical law, and thinking with equal rigour, will reach more or less identical conclusions, because reality overconstrains everything.
 
