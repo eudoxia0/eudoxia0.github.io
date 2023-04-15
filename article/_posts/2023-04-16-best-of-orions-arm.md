@@ -93,6 +93,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [ocean]: https://www.orionsarm.com/eg-article/490b3010a681a
 
+- [Earth][earth]: largely depopulated and under the control of the local deity, bent on restoring and preserving the ecosystem as it was before the Holocene.
+
+[earth]: https://www.orionsarm.com/eg-article/462eae95003f8
+
 ## Alien Civilizations
 
 Much of this was merged from another world-building project from the early 2000's, the website of the [Hamilton Institute of Exopalentology][hamilton], which was [translated into Orion's Arm][hamiltonoa] ith the name intact.
