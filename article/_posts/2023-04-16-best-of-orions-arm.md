@@ -30,6 +30,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 ## Places
 
+- [Duxed][duxed]: a moon of a gas giant with an extreme tidal range, with tides reaching two kilometers up.
+
+[duxed]: https://www.orionsarm.com/eg-article/5f01de4e81446
+
 ## Technology
 
 ## Alien Civilizations
@@ -121,6 +125,14 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 - [Artificially Optimised Galaxies][artgal]: distant galaxies that alien species have optimized for long-term habitation, using the stars' own power to starlift hydrogen into gas giants and brown dwarfs, so it can be burned efficiently (in fusion or conversion reactors) and last far longer than stellar fusion.
 
 [artgal]: https://www.orionsarm.com/eg-article/552d31f1832b6
+
+- [Toposophy][topos]: the study of posthuman intelligence and enhancement. Also:
+  - [Toposophic Levels and Mental Abilities][topolevel]: description of each toposophic level.
+  - [Ascension Maze][maze]: a series of challenges that requires you to become posthuman in order to surmount them.
+
+[topos]: https://www.orionsarm.com/eg-topic/45b3daabb2329
+[topolevel]: https://www.orionsarm.com/eg-article/4b9f2a844034a
+[maze]: https://www.orionsarm.com/eg-article/47fae3883cbbe
 
 # Footnotes
 
