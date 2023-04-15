@@ -22,7 +22,7 @@ The setting of Orion's Arm is a vast, diverse galactic ecology, where baseline h
 [archai]: https://orionsarm.com/eg-topic/492d76d2f173e_Orion%27s_Arm_-_Archailects
 [sphere]: https://www.orionsarm.com/eg-article/4caf0ce9584d0
 
-The worldbuilding of [_The Epiphany of Gliese 581_][eog581] was heavily inspired by the setting of Orion's Arm. In fact, other than when choosing the place names and the names of the characters and the details of culture, I never felt that I was worldbuilding. Most of the tech tree is Orion's Arm-inspired, except for the more speculative stuff like wormholes and reactionless propulsion.
+The worldbuilding of [_The Epiphany of Gliese 581_][eog581] was heavily inspired by the setting of Orion's Arm. In fact, other than when choosing the place names and the names of the characters and the details of culture, I never felt that I was worldbuilding. Most of the tech tree is Orion's Arm-inspired, but the more speculative things from OA (wormholes and reactionless propulsion) left over.
 
 [eog581]: https://borretti.me/fiction/eog581
 
