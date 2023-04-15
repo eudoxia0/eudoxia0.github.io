@@ -124,6 +124,10 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 
 [argus]: https://www.orionsarm.com/eg-article/45f97a51dbf24
 
+- [Mass-Stream Technology][momentum]:
+
+[momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
+
 ## Artifacts
 
 - [Ultima Gate][gate]: an alien wormhole, guarded by a heavily armed alien fleet, whose destination is unknown.
