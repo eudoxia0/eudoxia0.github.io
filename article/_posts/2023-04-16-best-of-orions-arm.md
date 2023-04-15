@@ -77,13 +77,15 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [mathyper]: https://www.orionsarm.com/eg-article/484737879bb05
 
-- [Nicoll-Dyson Beams][ndbeam]
+- [Nicoll-Dyson Beams][ndbeam]: [phased-array][pa] lasers powered by the total power output of a Dyson sphere, capable of destroying objects tens of light years away.
 
 [ndbeam]: https://www.orionsarm.com/eg-article/48fe49fe47202
+[pa]: https://www.orionsarm.com/eg-article/49d2d77d2227b
 
-- [Weylforge][weyl]
+- [Weylforge][weyl]: a godtech [wormhole][wormhole] factory.
 
 [weyl]: https://www.orionsarm.com/eg-article/4a5dd245a6820
+[wormhole]: https://www.orionsarm.com/eg-article/48545a0f6352a
 
 ## Concepts
 
