@@ -48,8 +48,33 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
 
 # Symptoms
 
-- adhd symptoms
-  - doing anything felt like having a hostage negotiation with my brain
+- autism
+  - ASD, 40% of autistic people have ADHD symptoms
+- focus
+  - focus on work meetings
+  - always assumed it was because meetings are pointless
+  - can't meditate
+- underachiever
+  - dropped out of college
+  - grandiose projects
+  - the years pass, the projects remain unfinished
+  - great source of pain
+- productivity
+  - austral
+    - took so many years
+    - start work
+    - run out of steam
+    - ashamed to talk about it
+  - eog581
+  - work in bursts of executive function
+  - unpredictable when i can or cant work on something
+  - take days or weeks to reply
+- physical restlessness
+  - leg restlessness
+  - pacing
+- self-control
+  - sleep
+  - wikipedia
 
 # What Didn't Work
 
