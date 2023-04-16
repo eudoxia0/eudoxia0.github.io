@@ -60,6 +60,20 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   
 # Bupropion
 
+- pharmacology
+  - NDRI
+  - clinical guidelines
+    - increasing effectiveness
+    - decreasing safety
+    - because of how the monoamine system works
+  - extended release forms
+    - Australia only has SR
+    - SR twice daily is more powerful than SR once daily
+    - takes time to reach steady state
+    - the thing though is you have to take them 8h apart
+      - that causes insomnia
+      - in aus unfortunately you only have the SR version
+
 # Effects
 
 - effects
@@ -94,22 +108,6 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
     - dose-dependent
       - sustained and extended release formulations have less risk because the peak of the curve is flatter
       - link to a paper
-
-# Pharmacology
-
-- pharmacology
-  - NDRI
-  - clinical guidelines
-    - increasing effectiveness
-    - decreasing safety
-    - because of how the monoamine system works
-  - extended release forms
-    - Australia only has SR
-    - SR twice daily is more powerful than SR once daily
-    - takes time to reach steady state
-    - the thing though is you have to take them 8h apart
-      - that causes insomnia
-      - in aus unfortunately you only have the SR version
 
 # See Also
 
