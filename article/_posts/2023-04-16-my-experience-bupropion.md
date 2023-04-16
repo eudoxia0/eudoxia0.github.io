@@ -85,8 +85,15 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
     
 - things i did not experience:
   - some people it makes more depressed
+    - two people at least
   - alcohol
+    - lowers seizure threshold
   - on seizure risk
+    - lowers seizure threshold
+    - recount history here
+    - dose-dependent
+      - sustained and extended release formulations have less risk because the peak of the curve is flatter
+      - link to a paper
 
 # Pharmacology
 
