@@ -37,9 +37,11 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [argus]: https://www.orionsarm.com/eg-article/45f97a51dbf24
 
-- [Mass-Stream Technology][momentum]:
+- [Mass-Stream Technology][momentum]: structures far beyond the tensile or compressive strength of any material can be built by having a stream of fast-moving particles traveling in a constant loop, exchaning momentum with the structure when they change direction at either end. Based on [dynamic compression members][dcm] by [Paul Birch][birch].
 
 [momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
+[dcm]: https://www.orionsarm.com/fm_store/DynamicCompressionMembers.pdf
+[birch]: https://en.wikipedia.org/wiki/Paul_Birch_(writer)
 
 - [Magnetic Monopoles][mono]: magnetic monopoles are hypothetical particles predicted by certain classes of [grand unified theories][guts]. In Orion's Arm, magnetic monopoles catalyze baryon decay by the [Callan-Rubakov][crm] mechanism, and therefore they are a source of [energy][convreactor] and [propulsion][conversion].
 
