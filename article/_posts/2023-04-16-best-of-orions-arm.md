@@ -113,6 +113,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [cal]: https://www.orionsarm.com/eg-article/48c6d4c3d54cf
 
+- [Cliotelescopy][cliotel]: the use of high-resolution telescopy to study the past.
+
+[cliotel]: https://www.orionsarm.com/eg-article/5b33b818a0fd3
+
 ## Places
 
 - [Duxed][duxed]: a moon of a gas giant with an extreme tidal range, with tides reaching two kilometers up.
