@@ -1,5 +1,6 @@
 ---
 title: My Experience With Bupropion
+summary: Autism, dopamine, and the striatum.
 card: my-experience-bupropion.jpg
 card_source: |
     “Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's”, DALL-E, June 2022.
@@ -17,10 +18,11 @@ In late 2017 I started taking [fluvoxamine][flv] for anxiety. It helped, but par
 [ari]: https://en.wikipedia.org/wiki/Aripiprazole
 [adj]: https://en.wikipedia.org/wiki/Adjuvant
 
-I had to quit after a week because I had [Parkinsonian tremors][eps] (it turns out that fluvoxamine inhibits the [cytochrome][cyp3a4] that metabolizes aripiprazole so I was getting an effectively higher dose). But that was the most productive week I'd had in ages. Suddenly, after _years_ of burnout, I had the mental energy and motivation to _do things_. I resumed work on my personal projects. I stopped procrastinating. I was studying things that interest me. I felt like the person I am.
+I had to quit after a week because I had [Parkinsonian tremors][eps] (it turns out that fluvoxamine inhibits the [cytochrome][cyp3a4] that metabolizes aripiprazole so I was getting an effectively higher dose). But that was the most productive week I'd had in ages. Suddenly, after _years_ of burnout, I had the mental energy and motivation to _do things_. I resumed work on my [personal projects][gh]. I stopped procrastinating. I was studying things that interest me. I felt like the person I am.
 
 [eps]: https://en.wikipedia.org/wiki/Extrapyramidal_symptoms
 [cyp3a4]: https://en.wikipedia.org/wiki/CYP3A4
+[gh]: https://github.com/eudoxia0
 
 I told this to three psychiatrists but none of them seemed to think it was meaningful. One of them offered to restart me on aripiprazole, but I didn't want to risk [tardive dyskinesia][td]. So I went back to being a lazy bum.
 
