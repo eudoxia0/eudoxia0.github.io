@@ -73,9 +73,10 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [matbrain]: https://www.orionsarm.com/eg-article/4847361494ea5
 
-- [Matrioshka Hypernode][mathyper]
+- [Matrioshka Hypernode][mathyper]: while a Matrioshka brain runs off a star's natural light output, in a Matrioshka hypernode the star is [dismantled][starlift], and the energy comes from burning hydrogen in fusion or [conversion][convreactor] reactors in a controlled manner.
 
 [mathyper]: https://www.orionsarm.com/eg-article/484737879bb05
+[convreactor]: https://www.orionsarm.com/eg-article/4aae287aac903
 
 - [Nicoll-Dyson Beams][ndbeam]: [phased-array][pa] lasers powered by the total power output of a Dyson sphere, capable of destroying objects tens of light years away.
 
