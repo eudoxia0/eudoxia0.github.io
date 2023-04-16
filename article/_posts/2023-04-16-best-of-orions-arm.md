@@ -53,7 +53,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [magmatter]: https://www.orionsarm.com/eg-article/48630634d2591
 
-- [Conversion Drive][conversion]:
+- [Conversion Drive][conversion]: propulsion using monopole-catalyzed matter-to-energy conversion.
 
 [conversion]: https://www.orionsarm.com/eg-article/46411e9d02b29
 
