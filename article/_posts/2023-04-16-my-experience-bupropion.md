@@ -96,3 +96,11 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
       - in aus unfortunately you only have the SR version
   - scott:
     - https://lorienpsych.com/2020/10/25/wellbutrin/
+
+# See Also
+
+[Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article about [his experience with Bupropion][wiblinbup].
+
+[wiblin]: https://www.robwiblin.com/
+[80k]: https://80000hours.org/
+[wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
