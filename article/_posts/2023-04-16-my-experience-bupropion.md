@@ -57,6 +57,8 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - todo lists
   - X effect
   - le exercise
+  
+# Bupropion
 
 # Effects
 
@@ -94,13 +96,13 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
     - the thing though is you have to take them 8h apart
       - that causes insomnia
       - in aus unfortunately you only have the SR version
-  - scott:
-    - https://lorienpsych.com/2020/10/25/wellbutrin/
 
 # See Also
 
-[Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article about [his experience with Bupropion][wiblinbup].
+- [Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article about [his experience with Bupropion][wiblinbup].
+- Scott Alexander's practice website has [a page][lorien] on Bupropion.
 
 [wiblin]: https://www.robwiblin.com/
 [80k]: https://80000hours.org/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
+[lorien]: https://lorienpsych.com/2020/10/25/wellbutrin/
