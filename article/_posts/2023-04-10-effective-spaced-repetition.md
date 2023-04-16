@@ -1477,12 +1477,12 @@ Given:
 
 >The derivative of $\sin x$ is $\cos x$.
 
-You can ask for both the derivative and the antiderivative.
+You can ask for both the derivative and the antiderivative:
 
 | Question             | Answer   |
 |----------------------|----------|
-| Derivative: `\sin x` | `\cos x` |
-| Integral: `\cos x`   | `\sin x` |
+| Derivative: $\sin x$ | $\cos x$ |
+| Integral: $\cos x$   | $\sin x$ |
 
 # Scripts {#scripts}
 
