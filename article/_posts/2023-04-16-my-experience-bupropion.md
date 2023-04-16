@@ -8,7 +8,7 @@ card_source: |
 
 Let me prefix this by saying that none of this is medical advice, I'm just an autistic man with a lot of free time. If you have mental health problems, for the love of God just talk to a psychiatrist. I promise it's not bad. I am extremely pro-psychiatry and I love the pharmaceutical industry. That aside, let's begin.
 
----
+# An Epiphany
 
 I have a funny story of how I realized I have ADHD.
 
@@ -46,14 +46,20 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
 
 [log]: https://github.com/austral/austral/graphs/contributors
 
----
+# Symptoms
+
+- adhd symptoms
+  - doing anything felt like having a hostage negotiation with my brain
+
+# What Didn't Work
 
 - things that didn't work
   - todo lists
   - X effect
   - le exercise
-- adhd symptoms
-  - doing anything felt like having a hostage negotiation with my brain
+
+# Effects
+
 - effects
   - less anxiety
   - less negative intrusive thoughts
@@ -62,6 +68,9 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - anhedonia
   - able to deploy todo lists
   - accomplishments
+
+# Side Effects
+
 - side effects
   - rash
   - appetite
@@ -69,6 +78,9 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - some people it makes more depressed
   - alcohol
 - on seizure risk
+
+# Pharmacology
+
 - pharmacology
   - NDRI
   - clinical guidelines
