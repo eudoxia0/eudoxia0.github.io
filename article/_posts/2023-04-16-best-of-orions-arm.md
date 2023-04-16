@@ -28,7 +28,7 @@ The setting of Orion's Arm is a vast, diverse galactic ecology, where baseline h
 
 The worldbuilding of [_The Epiphany of Gliese 581_][eog581] was heavily inspired by the setting of Orion's Arm. In fact, other than when choosing the place names and the names of the characters and the details of culture, I never felt that I was worldbuilding. Most of the tech tree is Orion's Arm-inspired, but the more speculative things from OA (wormholes and reactionless propulsion) left over.
 
-[eog581]: https://borretti.me/fiction/eog581
+[eog581]: /fiction/eog581
 
 This article is an index of my favorite topics from the Orion's Arm wiki.
 
@@ -213,8 +213,6 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 - [The Iahi Daon Empire][iahi]: an extinct alien civilization, known from the derelict generation ships they sent out before collapsing.
 
 [iahi]: https://www.orionsarm.com/eg-article/48fa48fb5a4ae
-
-## Artifacts
 
 - [Ultima Gate][gate]: an alien wormhole, guarded by a heavily armed alien fleet, whose destination is unknown.
 
