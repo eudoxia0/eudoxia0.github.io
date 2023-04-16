@@ -49,7 +49,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [guts]: https://en.wikipedia.org/wiki/Grand_Unified_Theory
 [crm]: https://lib-extopc.kek.jp/preprints/PDF/1982/8210/8210015.pdf
 
-- [Magmatter][magmatter]
+- [Magmatter][magmatter]: exotic matter made from [magnetic monopoles][mono], having a binding energy comparable to the strong nuclear force.
 
 [magmatter]: https://www.orionsarm.com/eg-article/48630634d2591
 
