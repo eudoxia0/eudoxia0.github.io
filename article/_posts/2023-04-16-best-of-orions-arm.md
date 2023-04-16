@@ -58,7 +58,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [boost]: https://www.orionsarm.com/eg-article/517edaa0de9c7
 [magsail]: https://en.wikipedia.org/wiki/Magnetic_sail
 
-- [Angelnet][angelnet]
+- [Angelnet][angelnet]: a pervasive utility fog surveillance and control system to protect sapients from accidents and violence. "All of the major modern archailect-ruled worlds and capitals are heavily angelnetted."
 
 [angelnet]: https://www.orionsarm.com/eg-article/45f4886ae0d44
 
