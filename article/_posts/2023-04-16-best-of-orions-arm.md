@@ -21,7 +21,7 @@ It's mostly---for the first few thousand years, at least---hard science fiction,
 
 [mp]: https://en.wikipedia.org/wiki/Modus_ponens
 
-The setting of Orion's Arm is a vast, diverse galactic ecology, where baseline humans, transhumans, posthumans, uplifted animals, artificial intelligences all live in distinct ecological niches. A small number of incomprehensibly posthuman intelligences, the [archailects][archai], sit at the evolutionary apex. Terragen (Earth-originated) intelligence has settled a roughly spherical volume [14,000 light years across][sphere], and made the universe into a garden. It's a refreshing change from the misanthropy and catastrophism of most popular science fiction.
+The setting of Orion's Arm is a vast, diverse galactic ecology, where baseline humans, transhumans, posthumans, uplifted animals, artificial intelligences all live in their ecological niches. A small number of incomprehensibly posthuman intelligences, the [archailects][archai], sit at the evolutionary apex. Terragen (Earth-originated) intelligence has settled a roughly spherical volume [14,000 light years across][sphere], and made the universe into a garden. It's a refreshing change from the misanthropy and catastrophism of most popular science fiction.
 
 [archai]: https://orionsarm.com/eg-topic/492d76d2f173e_Orion%27s_Arm_-_Archailects
 [sphere]: https://www.orionsarm.com/eg-article/4caf0ce9584d0
