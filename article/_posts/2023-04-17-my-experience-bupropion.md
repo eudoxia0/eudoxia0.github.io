@@ -115,11 +115,13 @@ I suppose most doctors would prescribe the XL by default for this reason. In Aus
 
 - effects
   - less anxiety
+    - not too much less, but less
   - less negative intrusive thoughts
   - no bad days
   - a bit more productive
+    - productivity bootstrap
+    - able to deploy todo lists
   - anhedonia
-  - able to deploy todo lists
   - accomplishments
     - not immediate
     - but gradual
