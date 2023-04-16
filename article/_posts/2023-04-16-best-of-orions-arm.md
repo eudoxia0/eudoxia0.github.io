@@ -69,11 +69,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [starlift]: https://www.orionsarm.com/eg-article/47897e8b1947c
 [husbandry]: https://www.orionsarm.com/eg-article/47898748c90b2
 
-- [Deep Well Industrial Zone][dwiz]
-
-[dwiz]: https://www.orionsarm.com/eg-article/464790d2497de
-
-- [Matrioshka Brain][matbrain]
+- [Matrioshka Brain][matbrain]: a Dyson swarm dedicated entire to computation, built in concentric layers, each layer running off the waste heat of the more interior one.
 
 [matbrain]: https://www.orionsarm.com/eg-article/4847361494ea5
 
