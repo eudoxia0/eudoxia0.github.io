@@ -93,22 +93,23 @@ My mental model of this is: when your reward function is just $f(x) = 0$, puttin
 
 Bupropion's effects are very muted---it is a _very_ mild stimulant---but it gave me just enough of a bump to my reward function that I was able to start consciously building good habits.
 
-  
 # Bupropion
 
-- pharmacology
-  - NDRI
-  - clinical guidelines
-    - increasing effectiveness
-    - decreasing safety
-    - because of how the monoamine system works
-  - extended release forms
-    - Australia only has SR
-    - SR twice daily is more powerful than SR once daily
-    - takes time to reach steady state
-    - the thing though is you have to take them 8h apart
-      - that causes insomnia
-      - in aus unfortunately you only have the SR version
+Bupropion, also known as Wellbutrin, is an antidepressant. And an aid in quitting smoking. And a treatment for ADHD.
+
+Chemically, it's a substituted amphetamine; in terms of its activity on receptors it's an NDRI, a norepinephrine-dopamine reuptake inhibitor. It binds to NET and DAT, effectively increasing the activity of norepinephine and dopamine. And for this reason, it has a mild stimulant effect.
+
+In most jurisdictions Bupropion is less strictly controlled than stimulants (in Mexico it's OTC), this is because the stimulant effect is very mild, and it's not a euphoriant.
+
+There are three formulations:
+
+1. Immediate release (IR)
+2. Sustained release (SR)
+3. Extended release (XR or XL)
+
+SR is typically two 150mg pills taken eight hours apart, XL is usually one 300mg pill taken once daily. SR is safer than IR and XL is safer than SR, because the more extended the release, the lower the peak concentration, and the effects of Bupropion are proportional to its plasma concentration.
+
+I suppose most doctors would prescribe the XL by default for this reason. In Australia, however, SR is the only version available, so I had to take 300mg twice daily. This isn't great more sleep (more on this later) but 300mg is more effective than 150mg.
 
 # Effects
 
@@ -125,27 +126,17 @@ Bupropion's effects are very muted---it is a _very_ mild stimulant---but it gave
 
 # Side Effects
 
-- things i experienced
-  - rash
-    - discontinued
-    - antihistamine
-  - appetite
-    - anorectic
-  - insomnia
-    - first day, insomnia
-    - twice-daily dosing schedule
-    
-- things i did not experience:
-  - some people it makes more depressed
-    - two people at least
-  - alcohol
-    - lowers seizure threshold
-  - on seizure risk
-    - lowers seizure threshold
-    - recount history here
-    - dose-dependent
-      - sustained and extended release formulations have less risk because the peak of the curve is flatter
-      - link to a paper
+Some side effects I experienced:
+
+- **Rash:** this appears to be a common problem, judging from r/Bupropion search results. Within two weeks of taking Bupropion, I felt itchy and saw the skin around my neck was erythematous. It didn't feel life threatening but it did look consistent with an allergic reaction. So, acting on medical advice, I discontinued Bupropion, took desloratadine for a month, and then tried starting the Bupropion again. The rash didn't come back, so it couldn't have been an allergic reaction.
+- **Appetite:** the first day I took it I forgot to eat until I almost went to bed. This went away within a few days. Bupropion is a known anorectic.
+- **Insomnia:** this was strongest the first few days I took it (150mg once daily) and quickly subsided. But when I moved to taking it twice daily the insomnia became more of a problem. Because the spacing between the doses is so long (8h), I'd often forget to take the second dose on time, so I'd take it later, which means I'd go to sleep later, wake up later, take the next first dose later, and so it's a vicious cycle of sleep schedule drift.
+
+There are known side effects which I did not experience but merit a mention:
+
+- **Seizure:** the headlining risk of Bupropion is seizures. Bupropion lowers the seizure threshold, if you have a history of seizures, this is worth mentioning to the doctor. My read on this is that, early on, Bupropion was prescribed in much higher doses (500 or 600mg) and in immediate release formulations, which led to many instances of seizures. Nowadays dosage stops at 450mg/day, and is typically just 300mg/day, and overwhelmingly in the form of sustained release or extended release formulations, which have lower peak concentrations. So modern formulations and doses are much safer.
+- **Worsening Depression:** some people report that Bupropion worsens their mood. I know at least two people who reported it made them feel more depressed.
+- **Alcohol:** this is a known bad interaction with Bupropion since it further lowers the seizure threshold. I just avoided drnking.
 
 # See Also
 
