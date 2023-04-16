@@ -85,7 +85,7 @@ Here's the things that didn't help with my ADHD: todo lists, the [X effect][xeff
 
 [xeffect]: https://www.reddit.com/r/theXeffect/
 
-Concretely: it was only after I started taking Bupropion that I was able to use a todo list consistently, that I was able to make [spaced repetition][sr] into a daily habit, that I was able to build up productive habits and practices.
+It was only after I started taking Bupropion that I was able to use a todo list consistently, that I was able to make [spaced repetition][sr] into a daily habit, that I was able to build up productive habits and practices.
 
 [sr]: /article/effective-spaced-repetition
 
