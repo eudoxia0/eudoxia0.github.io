@@ -4,6 +4,7 @@ summary: Autism, dopamine, and the striatum.
 card: my-experience-bupropion.jpg
 card_source: |
     “Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's”, DALL-E, June 2022.
+math: yes
 ---
 
 Let me prefix this by saying that none of this is medical advice, I'm just an autistic man with a lot of free time. If you have mental health problems, for the love of God just talk to a psychiatrist. I promise it's not bad. I am extremely pro-psychiatry and I love the pharmaceutical industry. That aside, let's begin.
@@ -78,12 +79,20 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
 
 # What Didn't Work
 
-- things that didn't work
-  - todo lists
-  - X effect
-  - le exercise
-  - in general nothing other than pharmacology works
-  - long-term you have to make cognitive changes
+I resent when people say to stop taking pills because the solution to [insert mental health] problem is exercise. First, because I can outlift everyone who tells me that, and secondly because I feel that it confuses cause and effect. If someone has crippling depression, and they start a rigorous exercise routine, that might just mean they've spontaneously entered remission. So if your anxiety or whatever can be handled by exercise and drinking a mango smoothie: good for you. Please don't tell me about it.
+
+Here's the things that didn't help with my ADHD: todo lists, the [X effect][xeffect], Vipassana meditation, lifting, cardio, methylated vitamin B12, vitamin D, magnesium, zinc, keto, carnivore, vegetarian, generic talk therapy. More generally: pharmacology is the only thing that's even changed anything for me, and the "classical" or non-pharmacological approaches only become useful _with_ pharmacological assistance.
+
+[xeffect]: https://www.reddit.com/r/theXeffect/
+
+Concretely: it was only after I started taking Bupropion that I was able to use a todo list consistently, that I was able to make [spaced repetition][sr] into a daily habit, that I was able to build up productive habits and practices.
+
+[sr]: /article/effective-spaced-repetition
+
+My mental model of this is: when your reward function is just $f(x) = 0$, putting effort on a productive task gives you as much reward as putting no effort at all, or procrastinating on some instant-gratification Skinner box. Habit formation becomes impossible. You might manage to use a todo list consistently for a week, or two weeks, but eventually something happens that breaks that streak, and you find that despite repeated effort, you have not formed a habit. The associations in your brain simply _are not there_.
+
+Bupropion's effects are very muted---it is a _very_ mild stimulant---but it gave me just enough of a bump to my reward function that I was able to start consciously building good habits.
+
   
 # Bupropion
 
