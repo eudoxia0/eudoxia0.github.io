@@ -73,13 +73,20 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
 
 # Side Effects
 
-- side effects
+- things i experienced
   - rash
+    - discontinued
+    - antihistamine
   - appetite
+    - anorectic
   - insomnia
+    - first day, insomnia
+    - twice-daily dosing schedule
+    
+- things i did not experience:
   - some people it makes more depressed
   - alcohol
-- on seizure risk
+  - on seizure risk
 
 # Pharmacology
 
