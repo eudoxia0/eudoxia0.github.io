@@ -82,6 +82,8 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - todo lists
   - X effect
   - le exercise
+  - in general nothing other than pharmacology works
+  - long-term you have to make cognitive changes
   
 # Bupropion
 
