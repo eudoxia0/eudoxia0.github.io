@@ -1,5 +1,8 @@
 ---
 title: My Experience With Bupropion
+card: my-experience-bupropion.jpg
+card_source: |
+    “Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's”, DALL-E, June 2022.
 ---
 
 Let me prefix this by saying that none of this is medical advice, I'm just an autistic man with a lot of free time. If you have mental health problems, for the love of God just talk to a psychiatrist. I promise it's not bad. I am extremely pro-psychiatry and I love the pharmaceutical industry. That aside, let's begin.
