@@ -62,9 +62,12 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [angelnet]: https://www.orionsarm.com/eg-article/45f4886ae0d44
 
-- [Star Lifting][starlift]
+- [Star Lifting][starlift]: stars are inefficient, their light and heat is thrown away into space, and the larger they are, the less efficient they are, the larger stars consuming their store of hydrogen in mere tens of millions of years. Technological civilization can't accept this waste. Star lifting is the removal of matter from a star, either as an exploitable natural resource or to [extend the star's life][husbandry].
+
+  At the limit you get a [matrioshka hypernode][mathyper], where the star is completely disassembled and its fuel is burned, efficiently, in fusion reactors, extending the star's effective life past even the coldest-burning red dwarfs. At the limit of the limit, you get [artificially-optimized galaxies][artgal], where the stars across an entire galaxy are starlifted to prolong their useful life.
 
 [starlift]: https://www.orionsarm.com/eg-article/47897e8b1947c
+[husbandry]: https://www.orionsarm.com/eg-article/47898748c90b2
 
 - [Deep Well Industrial Zone][dwiz]
 
