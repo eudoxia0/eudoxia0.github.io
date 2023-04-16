@@ -41,9 +41,11 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [momentum]: https://www.orionsarm.com/eg-article/47e1bb1fc898c
 
-- [Magnetic Monopoles][mono]
+- [Magnetic Monopoles][mono]: magnetic monopoles are hypothetical particles predicted by certain classes of [grand unified theories][guts]. In Orion's Arm, magnetic monopoles catalyze baryon decay by the [Callan-Rubakov][crm] mechanism, and therefore they are a source of [energy][convreactor] and [propulsion][conversion].
 
 [mono]: https://www.orionsarm.com/eg-article/48572566653b6
+[guts]: https://en.wikipedia.org/wiki/Grand_Unified_Theory
+[crm]: https://lib-extopc.kek.jp/preprints/PDF/1982/8210/8210015.pdf
 
 - [Magmatter][magmatter]
 
