@@ -111,6 +111,8 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - anhedonia
   - able to deploy todo lists
   - accomplishments
+    - not immediate
+    - but gradual
 
 # Side Effects
 
