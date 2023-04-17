@@ -19,7 +19,7 @@ I have a funny story of how I realized I have ADHD.
 
 In late 2017 I started taking [fluvoxamine][flv] for anxiety. It helped, but
 partially, so the psychiatrist added [aripiprazole][ari], an atypical
-antipsychotic which is sometimes used as an [adjuvant][adj] to SSRIs.
+antipsychotic sometimes used as an [adjuvant][adj] to SSRIs.
 
 [flv]: https://en.wikipedia.org/wiki/Fluvoxamine
 [ari]: https://en.wikipedia.org/wiki/Aripiprazole
