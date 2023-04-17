@@ -132,16 +132,16 @@ stretches of inactivity.
    that at a certain point I became embarrassed to bring it up, because I knew
    that when I did, people thought, "oh, yeah, that's Fernando's idée fixe that
    he keeps saying he'll finish". It took so long because I'd start working on
-   it, and run out of steam. And leave it untouched for months and months on
+   it, and run out of steam, and leave it untouched for months and months on
    end.
 
-   [_The Epiphany of Gliese 581_][eog581] is 26k words. It took me a year to
-   finish. I worked on it by accumulating fragments that came to me
-   spontaneously, then growing text around them like geological layers, until
-   the fragments began to touch in time. The idea of sitting down and writing it
-   down, linearly, chapter by chapter and paragraph by paragraph was beyond
-   ridiculous. I could hardly sit down to get three paragraphs out of my head at
-   a time.
+   [_The Epiphany of Gliese 581_][eog581] is barely a novella at 26k words. It
+   took me a year to finish. I worked on it by accumulating fragments that came
+   to me spontaneously, then growing text around them like geological layers,
+   until the fragments began to touch in time. The idea of sitting down and
+   writing it down, linearly, chapter by chapter and paragraph by paragraph was
+   beyond ridiculous. I could hardly sit down to get three paragraphs out of my
+   head at a time.
 
    Sometimes I'd get a burst of executive function, and I'd be able to work on a
    project consistently for a weekend or even a week or two. And I'd rack my
