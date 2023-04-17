@@ -97,9 +97,17 @@ stretches of inactivity.
 
 1. **Low Self-Control:** for years on end, every day I'd tell myself, "today we're going to sleep at a reasonable hour". The alarm would go off, and I'd find some excuse---I have to finish this Wikipedia rabbithole, or finish this video, or read one more paper---to stay up, and go to sleep somewhere between 1 and 5 am. This was a big problem. Unfortunately the Bupropion doesn't exactly help here because the twice-daily dosing schedule gives me a bit of insomnia.
    
-   Wikipedia in particular is like a time machine. I go to the front page, intending to look something up, click on the featured article---and come to forty five minutes later with twenty open tabs, somehow having gone from "[_Enceladus_][wiki1]" to "[_List of Allied bombings raids on Wilhelmshaven in World War II_][wiki1]".
+   Wikipedia in particular is like a time machine. I go to the front page, intending to look something up, click on the featured article---and come to forty five minutes later with twenty open tabs, somehow having gone from "[_Enceladus_][wiki1]" to "[_List of Allied bombings raids on Wilhelmshaven in World War II_][wiki1]". My life is like Memento: I wake up with no recollection of who I am but instead of tattoos I have all these PDFs I'll never read.
    
-1. **Productivity:**
+1. **Productivity:** [Austral][austral] took years to finish. Years. So much so that at a certain point I became embarrassed to bring it up, because I knew that when I did, people thought, "oh, yeah, that's Fernando's idée fixe that he keeps saying he'll finish". It took so long because I'd start working on it, and run out of steam. And leave it untouched for months and months on end.
+
+   [_The Epiphany of Gliese 581_][eog581] is 26k words. It took me a year to finish. I worked on it by accumulating fragments that came to me spontaneously, then growing text around them like geological layers, until the fragments began to touch in time. The idea of sitting down and writing it down, linearly, chapter by chapter and paragraph by paragraph was beyond ridiculous. I could hardly sit down to get three paragraphs out of my head at a time.
+   
+   Sometimes I'd get a burst of executive function, and I'd be able to work on a project consistently for a weekend or even a week or two. And I'd rack my brain to figure out: what did I do differently, and how do I extend this? Is it my diet? Have I accidentally fixed some persistent nutritional deficiency? Is it my caffeine dosing schedule? Should I do 150mg of caffeine in the morning and a cup of tea in the afternoon? What's the clearance rate of sugar-free Monster? Maybe I can supplement [L-tyrosine][tyr] since it's a dopamine precursor. I'd try to twist every knob: caffeine intake, sun exposure, cardio, lifting, etc. And nothing worked consistently.
+   
+   It made it extremely difficult to plan for the future, because I had no idea when or how long I could work on something.
+
+1. **Chronic Underachievement:** I start an ambitious project, and it withers away. I dropped out of college. I start reading a book, put it away and forget it. The years pass, the projects remain unfinished. "I think I want to learn differential equations", I'll think. Three years pass, no progress. This is a great source of pain.
    
 1. **Engineering Methodology:** I suppose this is somewhat self-serving, but the north star of all of my engineering work is complexity. I always insist on simplifying, keeping moving parts to a minimum, ensuring the whole system is small enough that it fits in my head so I can reason about it.
 
@@ -115,24 +123,7 @@ stretches of inactivity.
 [pacing]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6061115/
 [wiki1]: https://en.wikipedia.org/wiki/Enceladus
 [wiki2]: https://en.wikipedia.org/wiki/Bombing_of_Wilhelmshaven_in_World_War_II
-
-
-- underachiever
-  - dropped out of college
-  - grandiose projects
-- productivity
-  - austral
-    - took so many years
-    - start work
-    - run out of steam
-    - ashamed to talk about it
-  - eog581
-  - work in bursts of executive function
-  - unpredictable when i can or cant work on something
-  - take days or weeks to reply
-  - the years pass, the projects remain unfinished
-  - great source of pain
-
+[tyr]: https://en.wikipedia.org/wiki/Tyrosine
 
 # What Didn't Work
 
@@ -226,6 +217,8 @@ Since starting Bupropion I've observed the following positive changes:
    1. Became much better at keeping on top of chores, including keeping the apartment clean.
 
    So it's not superhuman productivity, but I can make progress on projects and stay on top of chores. Doing creative work no longer feels like I'm in a hostage negotiation with my own brain.
+   
+   There are still things I procrastinate on. Correspondence is something I struggle a lot with, I'm ashamed to think of all the emails in my archive where people have reached out to me and I procrastinated on replying to them until it became too embarrassing to even reply apologetically.
    
    Interestingly the effects were not immediate, but gradual, since doubling to 300mg daily I felt like productivity increasing like a gentle ramp-up across weeks and even months. It was like unlocking skills in a video game: I first unlocked the todo list, then the calendar, then the Pomodoro timer, etc.
 
