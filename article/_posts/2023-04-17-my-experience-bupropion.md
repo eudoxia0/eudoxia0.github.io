@@ -99,9 +99,15 @@ Bupropion's effects are very muted---it is a _very_ mild stimulant---but it gave
 
 # Bupropion
 
-Bupropion, also known as Wellbutrin, is an antidepressant. And an aid in quitting smoking. And a treatment for ADHD.
+[Bupropion][bup], also known as Wellbutrin, is an antidepressant. And an aid in quitting smoking. And a treatment for ADHD.
 
-Chemically, it's a substituted amphetamine; in terms of its activity on receptors it's an NDRI, a norepinephrine-dopamine reuptake inhibitor. It binds to NET and DAT, effectively increasing the activity of norepinephine and dopamine. And for this reason, it has a mild stimulant effect.
+[bup]: https://en.wikipedia.org/wiki/Bupropion
+
+Chemically, it's a substituted amphetamine; in terms of its activity on receptors it's an [NDRI][ndri], a norepinephrine-dopamine reuptake inhibitor. It binds to [NET][net] and [DAT][dat], effectively increasing the activity of norepinephine and dopamine. And for this reason, it has a mild stimulant effect.
+
+[ndri]: https://en.wikipedia.org/wiki/Norepinephrine%E2%80%93dopamine_reuptake_inhibitor
+[net]: https://en.wikipedia.org/wiki/Norepinephrine_transporter
+[dat]: https://en.wikipedia.org/wiki/Dopamine_transporter#cite_ref-3
 
 In most jurisdictions Bupropion is less strictly controlled than stimulants (in Mexico it's OTC), this is because the stimulant effect is very mild, and it's not a euphoriant.
 
@@ -146,9 +152,11 @@ There are known side effects which I did not experience but merit a mention:
 
 # See Also
 
+- [Bupropion on MedlinePlus][medline]
 - [Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article about [his experience with Bupropion][wiblinbup].
 - Scott Alexander's practice website has [a page][lorien] on Bupropion.
 
+[medline]: https://medlineplus.gov/druginfo/meds/a695033.html
 [wiblin]: https://www.robwiblin.com/
 [80k]: https://80000hours.org/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
