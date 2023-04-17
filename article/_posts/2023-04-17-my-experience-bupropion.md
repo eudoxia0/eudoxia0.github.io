@@ -79,9 +79,10 @@ a drug?
 
 And I talked about it with friends who have ADHD, and things began falling into
 place. I even showed my psychiatrist the [Austral commit log][log]: tall,
-narrow peaks of hyperfocus separated by long stretches of inactivity.
+narrow peaks of [hyperfocus][hf] separated by long stretches of inactivity.
 
 [log]: https://github.com/austral/austral/graphs/contributors
+[hf]: https://en.wikipedia.org/wiki/Hyperfocus
 
 # Symptoms
 
