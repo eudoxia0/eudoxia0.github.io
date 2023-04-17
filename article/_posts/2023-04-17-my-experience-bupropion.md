@@ -203,9 +203,12 @@ effective than 150mg.
   - a bit more productive
     - productivity bootstrap
     - able to deploy todo lists
+    - time from idea to completion is lower
   - anhedonia
     - can enjoy reading now
   - accomplishments
+    - finished austral
+    - finished eog581
     - not immediate
     - but gradual
 
