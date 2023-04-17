@@ -195,12 +195,16 @@ effective than 150mg.
 - effects
   - less anxiety
     - not too much less, but less
+    - less ruminating on anxiety inducing thoughts
   - less negative intrusive thoughts
+    - negative self talk less
   - no bad days
+    - no melancholy-ridden days of lying around doing nothing
   - a bit more productive
     - productivity bootstrap
     - able to deploy todo lists
   - anhedonia
+    - can enjoy reading now
   - accomplishments
     - not immediate
     - but gradual
