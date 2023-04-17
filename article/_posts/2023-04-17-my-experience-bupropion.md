@@ -85,19 +85,41 @@ stretches of inactivity.
 
 # Symptoms
 
-- autism
-  - ASD, 40% of autistic people have ADHD symptoms
-- focus
-  - focus on work meetings
-  - always assumed it was because meetings are pointless
-  - can't meditate
-  - never thought focus was a problem
-      - because ive structured my life so that i largely don't need it
+1. **Autism:** obviously I have ASD (I told the psychiatrist who diagnosed me it would be more surprising if I didn't) and some 40% of autistic people have ADHD symptoms.
+
+1. **Focus:** I never felt like I was particularly distractible or unfocused, mostly because I've unwittingly structured me life around not having to focus, using various coping skills, mostly centered around text.
+
+   I've always struggled with paying attention during meetings, but I just thought that's because the meetings were pointless. I was very surprised when, after initiating Bupropion, I suddenly realized during a work meeting that I'd been paying attention for _multiple minutes_ on end without having to remember to take notes.
+   
+   I've tried meditation time and time again but I felt unable to make progress with it, because I'd lose focus within seconds. When I looked for advice on how to overcome this, people online would say: "just observe your thoughts". But the whole problem is that the thoughts surface on their own, and carry me away before I can notice them, and it's frustrating to resume meditating when you realize you've spent the past five minutes writing code in your head.
+   
+1. **Physical Restlessness:** my default mode of thinking is to pace the room endlessly, which I'd chalked up to [autistic stimming][pacing][^pacing]. When seated I'll drum my feet, if my legs are crossed I'll often shake the foot that's off the ground.
+
+1. **Low Self-Control:** for years on end, every day I'd tell myself, "today we're going to sleep at a reasonable hour". The alarm would go off, and I'd find some excuse---I have to finish this Wikipedia rabbithole, or finish this video, or read one more paper---to stay up, and go to sleep somewhere between 1 and 5 am. This was a big problem. Unfortunately the Bupropion doesn't exactly help here because the twice-daily dosing schedule gives me a bit of insomnia.
+   
+   Wikipedia in particular is like a time machine. I go to the front page, intending to look something up, click on the featured article---and come to forty five minutes later with twenty open tabs, somehow having gone from "[_Enceladus_][wiki1]" to "[_List of Allied bombings raids on Wilhelmshaven in World War II_][wiki1]".
+   
+1. **Productivity:**
+   
+1. **Engineering Methodology:** I suppose this is somewhat self-serving, but the north star of all of my engineering work is complexity. I always insist on simplifying, keeping moving parts to a minimum, ensuring the whole system is small enough that it fits in my head so I can reason about it.
+
+   I designed [Austral][austral] to be a programming language that I would enjoy using. Now I realize that the _entire_ language is designed as an assistive technology for a programmer with ADHD.
+   
+   The core language principle is simplicity. Everything is as explicit as possible, and implicit behaviour (like type conversions and exception propagation) are thrown out: this helps because everything you need to reason about the code is _right there on the page_. It places minimal demands on working memory. Writing code is, effectively, about serializing your working memory, and reading code is about restoring that serialization. If I get distracted, it doesn't matter, because I can just read the code again to restore context.
+   
+   There is a whole list of [_anti_-features][antifeatures], things I threw away explicitly to reduce cognitive overhead. The linear type system is designed to be based on a small core set of simple rules that [fit on a page][linearrules]. The module system, with the separation of module interfaces and bodies, is designed to minimize how much I have to read and hold in working memory in order to work. The language's features are designed to be overwhelmingly orthogonal. I threw out async because async + linear types is hard to reason about. I threw out exceptions because exceptions are hard to reason about.  
+   
+[austral]: https://github.com/austral/austral
+[antifeatures]: https://austral-lang.org/features
+[linearrules]: https://austral-lang.org/spec/spec.html#linearity
+[pacing]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6061115/
+[wiki1]: https://en.wikipedia.org/wiki/Enceladus
+[wiki2]: https://en.wikipedia.org/wiki/Bombing_of_Wilhelmshaven_in_World_War_II
+
+
 - underachiever
   - dropped out of college
   - grandiose projects
-  - the years pass, the projects remain unfinished
-  - great source of pain
 - productivity
   - austral
     - took so many years
@@ -108,14 +130,9 @@ stretches of inactivity.
   - work in bursts of executive function
   - unpredictable when i can or cant work on something
   - take days or weeks to reply
-- austral
-  - the whole language is designed for adhd
-- physical restlessness
-  - leg restlessness
-  - pacing
-- self-control
-  - sleep
-  - wikipedia
+  - the years pass, the projects remain unfinished
+  - great source of pain
+
 
 # What Didn't Work
 
@@ -275,3 +292,8 @@ There are known side effects which I did not experience but merit a mention:
 
 [^finish]:
     Software projects are only ever asymptotically finished, but I consider that by the time I wrote that blogpost it was at least in a state where I could show it off to others.
+    
+[^pacing]:
+    From the linked paper:
+    
+    >When overwhelmed by strong emotions, including anxiety and boredom, some people with ASD may exhibit repetitive “stimming” behavior such pacing, flapping or verbally repeating a certain word or phrase.
