@@ -1,6 +1,6 @@
 ---
 title: My Experience With Bupropion
-summary: Autism, dopamine, and the striatum.
+summary: Autism, antipsychotics, and the striatum.
 card: my-experience-bupropion.jpg
 card_source: |
     “Diagram of a fission reactor, Paul Klee, 1927, watercolor, auctioned by Christie's”, DALL-E, June 2022.
