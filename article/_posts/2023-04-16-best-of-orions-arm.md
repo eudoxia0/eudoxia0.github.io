@@ -95,7 +95,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 [weyl]: https://www.orionsarm.com/eg-article/4a5dd245a6820
 [wormhole]: https://www.orionsarm.com/eg-article/48545a0f6352a
 
-- [The Lagrange Magshield][magshield]: an artificial magnetosophere to protect [Mars][mars] from the solar wind, built at the Sol-Mars L1 point.
+- [The Lagrange Magshield][magshield]: an artificial magnetosphere to protect [Mars][mars] from the solar wind, built at the Sol-Mars L1 point.
 
 [magshield]: https://www.orionsarm.com/eg-article/4851d85e0791b
 [mars]: https://www.orionsarm.com/eg-article/4851d85e0791b
