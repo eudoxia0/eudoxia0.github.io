@@ -192,29 +192,32 @@ effective than 150mg.
 
 # Effects
 
-- less anxiety
-  - not too much less, but less
-  - less ruminating on anxiety inducing thoughts
-- less negative intrusive thoughts
-  - negative self talk less
-- no bad days
-  - no melancholy-ridden days of lying around doing nothing
-- a bit more productive
-  - productivity bootstrap
-  - able to deploy todo lists
-  - time from idea to completion is lower
-  - effect is muted, maybe 10% to 20%
-  - not wired all day long, but able to start things
-  - starting work on something is no longer like a hostage negotiation with my own brain
-- anhedonia
-  - can enjoy reading now
-  - more optimistic
-- accomplishments
-  - finished austral: a programming language
-  - finished The Epiphany of Gliese 581: a novella that took me a long time to write
-  - effects were not immediate
-  - but gradual
-  - there was an acclimation period
+Since starting Bupropion I've observed the following positive changes:
+
+1. **Anxiety:** it didn't eliminate anxiety, but it did reduce it by about 20%-30%. This is surprising, since for some people Bupropion has the opposite effect and makes them more anxious.
+
+1. **Intrusive Thoughts:** these were _vastly_ reduced, along with negative self-talk.
+
+1. **Low Mood:** before starting Bupropion, I occasionally had days where I was in a very low mood. Since starting Bupropion, I've not had what I would call a bad day, where I feel terrible and just want to stay in bed. This is distinct from anxiety, which I still struggle with despite the Bupropion: I still have moments of blindingly acute anxiety, but not low mood or depression. Overall most of the time I feel optimistic.
+
+1. **Productivity:** Bupropion increased my productivity by about 10%-30%. The effect is fairly muted: I don't _feel_ more energetic, but empirically I can look at my output and see that it has increased. Occasionally, I am able to dedicate an entire day to hyperfocusing on a problem, most of the time, the benefit is I can simply _start_ something and do a few hours of work.
+
+   Bupropion gave me enough executive function to overcome the worst of ADHD and to allow me to"bootstrap" productivity. Since starting Bupropion, I:
+  
+   1. Started using a todo list daily and effectively.
+   1. Became able to consciously form good habits, including doing [spaced repetition][sr] daily.
+   1. Became much better at keeping on top of chores, including keeping the apartment clean.
+
+   So it's not superhuman productivity, but I can make progress on projects and stay on top of chores. Doing creative work no longer feels like I'm in a hostage negotiation with my own brain.
+   
+   Interestingly the effects were not immediate, but gradual, since doubling to 300mg daily I felt like productivity increasing like a gentle ramp-up across weeks and even months. It was like unlocking skills in a video game: I first unlocked the todo list, then the calendar, then the Pomodoro timer, etc.
+
+1. **Anhedonia:** before Bupropion, I could easily experience negative emotion (mostly anxiety) but positive emotion was very muted. My emotional range topped out at "content". Formerly pleasurable activities such as reading, playing videogames, watching movies brought me little to now joy. With Bupropion I can enjoy things a bit more (even though all movies are bad).
+
+1. **Accomplishments:** after years of on-and-off work, I managed to finish [Austral][introaustral][^finish]. After a year of struggling to put a single paragraph down on the page, I finished [_The Epiphany of Gliese 581_][eog581]. It was still difficult, still time consuming, but I had enough help to manage. The work paid off. I felt that I succeeded, that my reward function was non-zero. I want to do more. I want to succeed more. Now I can.
+  
+[introaustral]: /article/introducing-austral
+[eog581]: /fiction/eog581/
 
 # Side Effects
 
@@ -266,3 +269,8 @@ There are known side effects which I did not experience but merit a mention:
 [80k]: https://80000hours.org/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
 [lorien]: https://lorienpsych.com/2020/10/25/wellbutrin/
+
+# Footnotes
+
+[^finish]:
+    Software projects are only ever asymptotically finished, but I consider that by the time I wrote that blogpost it was at least in a state where I could show it off to others.
