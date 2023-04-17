@@ -107,7 +107,7 @@ problems.
 
 But everyone who has undergone successful psychiatric treatment understands: we
 are automata, like the [gears of Babbage][babbage]; we travel in fixed orbits,
-as predictable as the orbits of the planets, and the motion of objects in space.
+as predictable as the orbits of the planets, and the movements of objects in space.
 
 [babbage]: https://en.wikipedia.org/wiki/Analytical_engine
 
