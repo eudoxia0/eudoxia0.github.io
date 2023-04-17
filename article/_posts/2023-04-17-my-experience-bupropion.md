@@ -192,25 +192,29 @@ effective than 150mg.
 
 # Effects
 
-- effects
-  - less anxiety
-    - not too much less, but less
-    - less ruminating on anxiety inducing thoughts
-  - less negative intrusive thoughts
-    - negative self talk less
-  - no bad days
-    - no melancholy-ridden days of lying around doing nothing
-  - a bit more productive
-    - productivity bootstrap
-    - able to deploy todo lists
-    - time from idea to completion is lower
-  - anhedonia
-    - can enjoy reading now
-  - accomplishments
-    - finished austral
-    - finished eog581
-    - not immediate
-    - but gradual
+- less anxiety
+  - not too much less, but less
+  - less ruminating on anxiety inducing thoughts
+- less negative intrusive thoughts
+  - negative self talk less
+- no bad days
+  - no melancholy-ridden days of lying around doing nothing
+- a bit more productive
+  - productivity bootstrap
+  - able to deploy todo lists
+  - time from idea to completion is lower
+  - effect is muted, maybe 10% to 20%
+  - not wired all day long, but able to start things
+  - starting work on something is no longer like a hostage negotiation with my own brain
+- anhedonia
+  - can enjoy reading now
+  - more optimistic
+- accomplishments
+  - finished austral: a programming language
+  - finished The Epiphany of Gliese 581: a novella that took me a long time to write
+  - effects were not immediate
+  - but gradual
+  - there was an acclimation period
 
 # Side Effects
 
