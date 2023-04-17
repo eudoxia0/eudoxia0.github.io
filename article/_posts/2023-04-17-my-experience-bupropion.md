@@ -55,6 +55,8 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - focus on work meetings
   - always assumed it was because meetings are pointless
   - can't meditate
+  - never thought focus was a problem
+      - because ive structured my life so that i largely don't need it
 - underachiever
   - dropped out of college
   - grandiose projects
