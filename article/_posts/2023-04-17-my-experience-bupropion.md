@@ -85,6 +85,27 @@ stretches of inactivity.
 
 # Symptoms
 
+For someone who has 500 tabs of [PubMed][pubmed] open at all times it's
+embarrassing how long it took me to put things together. I think, partly, it's
+because life-long pathologies are hard to notice: we know mental states by
+mutual contrast, if you've never been very focused or effective you might not
+think of yourself as a particularly unfocused or unproductive person.
+
+[pubmed]: https://pubmed.ncbi.nlm.nih.gov/
+
+Partly, also, because everything in the DSM overlaps: someone who is anhedonic
+and has low executive function could be ADHD, or they could also be chronically
+depressed. Chronic decision paralysis is an aspect of ADHD, but also of
+anxiety. And so on.
+
+And partly it's because we make physical and mental deficiencies into moral
+ones. I've spent vastly more time castigating myself for being undisciplined,
+lazy, etc. than I've spent rationally and systematically trying to solve my
+problems.
+
+So a lot of these things only became visible as symptoms of ADHD after the fact,
+after discussing it with friends who have ADHD and with my psychiatrist:
+
 1. **Autism:** obviously I have ASD (I told the psychiatrist who diagnosed me it
    would be more surprising if I didn't) and some 40% of autistic people have
    ADHD symptoms.
