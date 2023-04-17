@@ -73,7 +73,7 @@ successfully used for ADHD.
 [trial]: https://pubmed.ncbi.nlm.nih.gov/18759644/
 
 This was 2022. It took me four years to figure it out (it turns out it's hard to
-solve problems when you keep getting distracted from them). But who can say
+solve problems when you keep getting distracted from them), but who can say
 they've diagnosed themselves from first principles after an unusual reaction to
 a drug?
 
