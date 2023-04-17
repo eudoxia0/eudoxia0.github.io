@@ -25,9 +25,9 @@ antipsychotic sometimes used as an [adjuvant][adj] to SSRIs.
 [ari]: https://en.wikipedia.org/wiki/Aripiprazole
 [adj]: https://en.wikipedia.org/wiki/Adjuvant
 
-I had to quit after a week because I had [Parkinsonian tremors][eps] (it turns
+I had to quit after a week because of [Parkinsonian tremors][eps] (it turns
 out that fluvoxamine inhibits the [cytochrome][cyp3a4] that metabolizes
-aripiprazole so I was getting an effectively higher dose). But that was the most
+aripiprazole, so I was effectively getting a higher dose). But that was the most
 productive week I'd had in ages. Suddenly, after _years_ of burnout, I had the
 mental energy and motivation to _do things_. I resumed work on my [personal
 projects][gh]. I stopped procrastinating. I was studying things that interest
