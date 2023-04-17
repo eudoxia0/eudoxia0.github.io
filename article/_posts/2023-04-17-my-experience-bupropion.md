@@ -393,7 +393,7 @@ There are known side effects which I did not experience but merit a mention:
   mood. I know at least two people who reported it made them feel more
   depressed.
 - **Alcohol:** this is a known bad interaction with Bupropion since it further
-  lowers the seizure threshold. I just avoided drnking.
+  lowers the seizure threshold. I just avoided drinking.
 
 # See Also
 
