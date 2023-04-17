@@ -72,6 +72,8 @@ I talked about it with friends who have ADHD. I showed my psychiatrist the [Aust
   - work in bursts of executive function
   - unpredictable when i can or cant work on something
   - take days or weeks to reply
+- austral
+  - the whole language is designed for adhd
 - physical restlessness
   - leg restlessness
   - pacing
