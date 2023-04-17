@@ -152,7 +152,7 @@ There are known side effects which I did not experience but merit a mention:
 
 # See Also
 
-- [Bupropion on MedlinePlus][medline]
+- [Bupropion on MedlinePlus][medline]. Searching anything medical on Google turns up nothing but spam, I like MedlinePlus because it's accurate and there's no SEO bullshit.
 - [Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article about [his experience with Bupropion][wiblinbup].
 - Scott Alexander's practice website has [a page][lorien] on Bupropion.
 
