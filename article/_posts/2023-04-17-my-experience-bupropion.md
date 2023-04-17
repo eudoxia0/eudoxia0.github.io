@@ -77,9 +77,9 @@ solve problems when you keep getting distracted from them), but who can say
 they've diagnosed themselves from first principles after an unusual reaction to
 a drug?
 
-I talked about it with friends who have ADHD. I showed my psychiatrist the
-[Austral commit log][log]: tall, narrow peaks of hyperfocus separated by long
-stretches of inactivity.
+And I talked about it with friends who have ADHD, and things began falling into
+place. I even showed my psychiatrist the [Austral commit log][log]: tall,
+narrow peaks of hyperfocus separated by long stretches of inactivity.
 
 [log]: https://github.com/austral/austral/graphs/contributors
 
