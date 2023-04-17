@@ -54,10 +54,10 @@ first chapter I read about how [partial agonists][pagonist] work.
 
 Briefly: low dopamine activity makes you ADHD, high dopamine activity makes you
 schizophrenic. That's why stimulants (which increase dopamine) can cause
-psychosis. A partial agonist of dopamine acts as an [agonist][agon] (dopamine ↑) when
-dopamine is low, but acts as an [antagonist][antagon] (dopamine ↓) when dopamine is
-high. In short: partial agonists are [stabilizers][stab]. Aripiprazole is a partial
-agonist of dopamine.
+psychosis. A partial agonist of dopamine acts as an [agonist][agon] (dopamine ↑)
+when dopamine is low, but acts as an [antagonist][antagon] (dopamine ↓) when
+dopamine is high. In short: partial agonists are
+[stabilizers][stab]. Aripiprazole is a partial agonist of dopamine.
 
 [agon]: https://en.wikipedia.org/wiki/Agonist
 [antagon]: https://en.wikipedia.org/wiki/Receptor_antagonist
@@ -96,10 +96,12 @@ think of yourself as a particularly unfocused or unproductive person.
 
 Partly, also, because everything in the DSM overlaps: someone who is anhedonic
 and has low executive function could be ADHD, or they could also be chronically
-depressed. Chronic decision paralysis is an aspect of ADHD, but also of
-anxiety. And so on.
+depressed, or even schizophrenic[^schizo]. Chronic decision paralysis is an
+aspect of ADHD, but also of anxiety. And so on.
 
-Partly because whenever I'd try to tell a psychiatrist about my horrible problems with finishing projects they'd redirect to some other topic they felt was more important.
+Partly because whenever I'd try to tell a psychiatrist about my horrible
+problems with finishing projects they'd redirect to some other topic they felt
+was more important.
 
 And partly it's because we make physical and mental deficiencies into moral
 ones. I've spent vastly more time castigating myself for being undisciplined,
@@ -349,7 +351,8 @@ Since starting Bupropion I've observed the following positive changes:
    Interestingly the effects were not immediate, but gradual, since doubling to
    300mg daily I felt like productivity increasing like a gentle ramp-up across
    weeks and even months. It was like unlocking skills in a video game: I first
-   unlocked the todo list, then the calendar, then the [Pomodoro timer][pomo], etc.
+   unlocked the todo list, then the calendar, then the [Pomodoro timer][pomo],
+   etc.
 
 1. **Anhedonia:** before Bupropion, I could easily experience negative emotion
    (mostly anxiety) but positive emotion was very muted. My emotional range
@@ -423,7 +426,9 @@ There are known side effects which I did not experience but merit a mention:
 # Footnotes
 
 [^finish]:
-    Software projects are only ever asymptotically finished, but I consider that by the time I wrote that blogpost it was at least in a state where I could show it off to others.
+    Software projects are only ever asymptotically finished, but I consider that
+    by the time I wrote that blogpost it was at least in a state where I could
+    show it off to others.
 
 [^pacing]:
     From the linked paper:
@@ -431,3 +436,6 @@ There are known side effects which I did not experience but merit a mention:
     >When overwhelmed by strong emotions, including anxiety and boredom, some
     >people with ASD may exhibit repetitive “stimming” behavior such pacing,
     >flapping or verbally repeating a certain word or phrase.
+
+[^schizo]:
+    Amotivation and anhedonia and among the negative symptoms of schizophrenia
