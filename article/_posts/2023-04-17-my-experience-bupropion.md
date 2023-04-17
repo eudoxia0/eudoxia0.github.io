@@ -136,12 +136,12 @@ stretches of inactivity.
    end.
 
    [_The Epiphany of Gliese 581_][eog581] is barely a novella at 26k words. It
-   took me a year to finish. I worked on it by accumulating fragments that came
-   to me spontaneously, then growing text around them like geological layers,
-   until the fragments began to touch in time. The idea of sitting down and
-   writing it down, linearly, chapter by chapter and paragraph by paragraph was
-   beyond ridiculous. I could hardly sit down to get three paragraphs out of my
-   head at a time.
+   took me a year to finish. I worked on it by accumulating [fragments][frag]
+   that came to me spontaneously, then growing text around them like geological
+   strata, until the fragments began to touch in time. The idea of sitting down
+   and writing it down, linearly, chapter by chapter and paragraph by paragraph
+   was beyond ridiculous. I could hardly sit down to get three paragraphs out of
+   my head at a time.
 
    Sometimes I'd get a burst of executive function, and I'd be able to work on a
    project consistently for a weekend or even a week or two. And I'd rack my
@@ -197,6 +197,7 @@ stretches of inactivity.
 [wiki1]: https://en.wikipedia.org/wiki/Enceladus
 [wiki2]: https://en.wikipedia.org/wiki/Bombing_of_Wilhelmshaven_in_World_War_II
 [tyr]: https://en.wikipedia.org/wiki/Tyrosine
+[frag]: https://twitter.com/search?q=from%3Azetalyrae%20fiction%20fragment&src=typed_query&f=live
 
 # What Didn't Work
 
