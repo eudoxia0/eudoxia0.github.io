@@ -169,7 +169,7 @@ The alien civilizations and artifacts are some of my favorite content from Orion
 
 [skulls]: https://www.orionsarm.com/eg-article/5b6c19138bd87
 
-- [SMBH Civilisation][smbh]: an alien civilization, living around the black hole at the center of a galaxy 200 million light years away. Around the black hole are over a million artificial planets, orbiting one after the other in hundrends of distinct orbits, like a Bohr atom, and each moves at 5% of the speed of light.
+- [SMBH Civilisation][smbh]: an alien civilization, living around the black hole at the center of a galaxy 200 million light years away. Around the black hole are over a million artificial planets, orbiting one after the other in hundreds of distinct orbits, like a Bohr atom, and each moves at 5% of the speed of light.
 
 [smbh]: https://www.orionsarm.com/eg-article/5bab765b00ec3
 
