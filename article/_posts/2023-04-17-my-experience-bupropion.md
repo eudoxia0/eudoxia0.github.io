@@ -54,10 +54,14 @@ first chapter I read about how [partial agonists][pagonist] work.
 
 Briefly: low dopamine activity makes you ADHD, high dopamine activity makes you
 schizophrenic. That's why stimulants (which increase dopamine) can cause
-psychosis. A partial agonist of dopamine acts as an agonist (dopamine ↑) when
-dopamine is low, but acts as an antagonist (dopamine ↓) when dopamine is
-high. In short: partial agonists are stabilizers. Aripiprazole is a partial
+psychosis. A partial agonist of dopamine acts as an [agonist][agon] (dopamine ↑) when
+dopamine is low, but acts as an [antagonist][antagon] (dopamine ↓) when dopamine is
+high. In short: partial agonists are [stabilizers][stab]. Aripiprazole is a partial
 agonist of dopamine.
+
+[agon]: https://en.wikipedia.org/wiki/Agonist
+[antagon]: https://en.wikipedia.org/wiki/Receptor_antagonist
+[stab]: https://pubmed.ncbi.nlm.nih.gov/15982997/
 
 And I had an epiphany. And I looked it up: can Aripiprazole be used to treat
 ADHD? I found a [case report][case] report of a woman with ADHD who was treated
