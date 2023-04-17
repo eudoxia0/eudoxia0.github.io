@@ -165,8 +165,10 @@ _{poem.replace("—", "---")}_
         with open(target_file, "w") as stream:
             stream.write(page_contents)
 
-PREAMBLE: str = f"""% The Epiphany of Gliese 581
-% Fernando Borretti
+PREAMBLE: str = f"""---
+title: The Epiphany of Gliese 581
+author: Fernando Borretti
+---
 
 {EPIGRAPH}
 
@@ -215,7 +217,7 @@ def concatenate():
     # Concatenate to a single Markdown file
     compiled: str = PREAMBLE
     target_file: str = "compiled.md"
-    for idx, chapter in enumerate(CHAPTERS):
+    for idx, chapter in enumerate(CHAPTERS[:-1]):
         idx += 1
         title: str = chapter["title"]
         poem: str = chapter["poem"]
