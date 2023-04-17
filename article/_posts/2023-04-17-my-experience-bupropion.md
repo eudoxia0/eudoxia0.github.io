@@ -204,7 +204,7 @@ Since starting Bupropion I've observed the following positive changes:
 
    Bupropion gave me enough executive function to overcome the worst of ADHD and to allow me to"bootstrap" productivity. Since starting Bupropion, I:
   
-   1. Started using a todo list daily and effectively.
+   1. Started using a [todo list][todoist] daily and effectively.
    1. Became able to consciously form good habits, including doing [spaced repetition][sr] daily.
    1. Became much better at keeping on top of chores, including keeping the apartment clean.
 
@@ -216,6 +216,7 @@ Since starting Bupropion I've observed the following positive changes:
 
 1. **Accomplishments:** after years of on-and-off work, I managed to finish [Austral][introaustral][^finish]. After a year of struggling to put a single paragraph down on the page, I finished [_The Epiphany of Gliese 581_][eog581]. It was still difficult, still time consuming, but I had enough help to manage. The work paid off. I felt that I succeeded, that my reward function was non-zero. I want to do more. I want to succeed more. Now I can.
   
+[todoist]: https://todoist.com/
 [introaustral]: /article/introducing-austral
 [eog581]: /fiction/eog581/
 
