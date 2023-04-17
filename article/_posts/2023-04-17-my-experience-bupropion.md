@@ -280,15 +280,19 @@ quitting smoking. And a treatment for ADHD.
 Chemically, it's a substituted amphetamine; in terms of its activity on
 receptors it's an [NDRI][ndri], a norepinephrine-dopamine reuptake inhibitor. It
 binds to [NET][net] and [DAT][dat], effectively increasing the activity of
-norepinephine and dopamine. And for this reason, it has a mild stimulant effect.
+norepinephine and dopamine. And for this reason, it has a stimulant effect.
 
 [ndri]: https://en.wikipedia.org/wiki/Norepinephrine%E2%80%93dopamine_reuptake_inhibitor
 [net]: https://en.wikipedia.org/wiki/Norepinephrine_transporter
 [dat]: https://en.wikipedia.org/wiki/Dopamine_transporter#cite_ref-3
 
-In most jurisdictions Bupropion is less strictly controlled than stimulants (in
-Mexico it's OTC), this is because the stimulant effect is very mild, and it's
-not a euphoriant.
+In most jurisdictions Bupropion is less strictly controlled than stimulants
+because the stimulant effect is limited (which is why actual stimulants are the
+first choice in ADHD), and it's not a euphoriant. People rarely [try to abuse
+it][abuse], with horrible results, but it's more likely to kill you than get you
+high.
+
+[abuse]: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DA1F5F2146346669684891102EA5141F/S1481803500012203a.pdf/seizures-induced-by-recreational-abuse-of-bupropion-tablets-via-nasal-insufflation.pdf
 
 There are three formulations:
 
@@ -302,16 +306,16 @@ more extended the release, the lower the peak concentration, and the effects of
 Bupropion are proportional to its plasma concentration.
 
 I suppose most doctors would prescribe the XL by default for this reason. In
-Australia, however, SR is the only version available, so I had to take 300mg
-twice daily. This isn't great more sleep (more on this later) but 300mg is more
-effective than 150mg.
+Australia, however, SR is the only version available[^aus], so I had to take
+300mg twice daily. This isn't great more sleep (more on this later) but 300mg is
+more effective than 150mg.
 
 # Effects
 
 Since starting Bupropion I've observed the following positive changes:
 
 1. **Anxiety:** it didn't eliminate anxiety, but it did reduce it by about
-   20%-30%. This is surprising, since for some people Bupropion has the opposite
+   20%. This is surprising, since for some people Bupropion has the opposite
    effect and makes them more anxious.
 
 1. **Intrusive Thoughts:** these were _vastly_ reduced, along with negative
@@ -439,3 +443,11 @@ There are known side effects which I did not experience but merit a mention:
 
 [^schizo]:
     Amotivation and anhedonia and among the negative symptoms of schizophrenia
+
+[^aus]:
+    And strictly speaking any psychiatric use of it is off-label: the only
+    licensed used for Bupropion in Australia is smoking cessation, which is
+    absurd. Despite this, the [RANZCP guidelines for mood disorders][mood]
+    mention Bupropion.
+
+[mood]: https://www.ranzcp.org/files/resources/college_statements/clinician/cpg/mood-disorders-cpg-2020.aspx
