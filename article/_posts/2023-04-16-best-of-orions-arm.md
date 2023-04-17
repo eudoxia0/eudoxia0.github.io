@@ -154,7 +154,7 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 ## Alien Civilizations
 
-Much of this was merged from another world-building project from the early 2000's, the website of the [Hamilton Institute of Exopalentology][hamilton], which was [translated into Orion's Arm][hamiltonoa] ith the name intact.
+Much of this was merged from another world-building project from the early 2000's, the website of the [Hamilton Institute of Exopalentology][hamilton], which was [translated into Orion's Arm][hamiltonoa] with the name intact.
 
 [hamilton]: https://web.archive.org/web/20090730051406/http://geocities.com/Athens/Agora/8088/Exopaleontology.html
 [hamiltonoa]: https://www.orionsarm.com/eg-article/49afd86e67383
