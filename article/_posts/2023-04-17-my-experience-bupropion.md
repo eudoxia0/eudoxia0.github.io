@@ -159,10 +159,12 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    [_The Epiphany of Gliese 581_][eog581] is barely a novella at 26k words. It
    took me a year to finish. I worked on it by accumulating [fragments][frag]
    that came to me spontaneously, then growing text around them like geological
-   strata, until the fragments began to touch in time. The idea of sitting down
-   and writing it down, linearly, chapter by chapter and paragraph by paragraph
-   was beyond ridiculous. I could hardly sit down to get three paragraphs out of
-   my head at a time.
+   strata, until the fragments began to touch in time. And it shows, in the
+   structure: the frequent `<hr>` breaks are simply where I joined too fragments
+   without connecting tissue. The idea of sitting down and writing it down,
+   linearly, chapter by chapter and paragraph by paragraph was beyond
+   ridiculous. I could hardly sit down to get three paragraphs out of my head at
+   a time.
 
    Sometimes I'd get a burst of executive function, and I'd be able to work on a
    project consistently for a weekend or even a week or two. And I'd rack my
