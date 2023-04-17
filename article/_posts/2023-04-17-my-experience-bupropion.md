@@ -103,6 +103,12 @@ ones. I've spent vastly more time castigating myself for being undisciplined,
 lazy, etc. than I've spent rationally and systematically trying to solve my
 problems.
 
+But everyone who has undergone successful psychiatric treatment understands: we
+are automata, like the [gears of Babbage][babbage]; we travel in fixed orbits,
+as predictable as the orbits of the planets, and the motion of objects in space.
+
+[babbage]: https://en.wikipedia.org/wiki/Analytical_engine
+
 So a lot of these things only became visible as symptoms of ADHD after the fact,
 after discussing it with friends who have ADHD and with my psychiatrist:
 
