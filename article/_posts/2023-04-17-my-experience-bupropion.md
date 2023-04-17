@@ -98,6 +98,8 @@ and has low executive function could be ADHD, or they could also be chronically
 depressed. Chronic decision paralysis is an aspect of ADHD, but also of
 anxiety. And so on.
 
+Partly because whenever I'd try to tell a psychiatrist about my horrible problems with finishing projects they'd redirect to some other topic they felt was more important.
+
 And partly it's because we make physical and mental deficiencies into moral
 ones. I've spent vastly more time castigating myself for being undisciplined,
 lazy, etc. than I've spent rationally and systematically trying to solve my
