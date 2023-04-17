@@ -346,7 +346,7 @@ Since starting Bupropion I've observed the following positive changes:
    Interestingly the effects were not immediate, but gradual, since doubling to
    300mg daily I felt like productivity increasing like a gentle ramp-up across
    weeks and even months. It was like unlocking skills in a video game: I first
-   unlocked the todo list, then the calendar, then the Pomodoro timer, etc.
+   unlocked the todo list, then the calendar, then the [Pomodoro timer][pomo], etc.
 
 1. **Anhedonia:** before Bupropion, I could easily experience negative emotion
    (mostly anxiety) but positive emotion was very muted. My emotional range
@@ -364,6 +364,7 @@ Since starting Bupropion I've observed the following positive changes:
 [todoist]: https://todoist.com/
 [introaustral]: /article/introducing-austral
 [eog581]: /fiction/eog581/
+[pomo]: https://pomofocus.io/
 
 # Side Effects
 
