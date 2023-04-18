@@ -392,7 +392,7 @@ Some side effects I experienced:
   results. Within two weeks of taking Bupropion, I felt itchy and saw the skin
   around my neck was erythematous. It didn't feel life threatening but it did
   look consistent with an allergic reaction. So, acting on medical advice, I
-  discontinued Bupropion, took desloratadine for a month, and then tried
+  discontinued Bupropion, took [desloratadine][des] for a month, and then tried
   starting the Bupropion again. The rash didn't come back, so it couldn't have
   been an allergic reaction.
 - **Appetite:** the first day I took it I forgot to eat until I almost went to
@@ -404,6 +404,7 @@ Some side effects I experienced:
   later, which means I'd go to sleep later, wake up later, take the next first
   dose later, and so it's a vicious cycle of sleep schedule drift.
 
+[des]: https://medlineplus.gov/druginfo/meds/a602002.html
 [ano]: https://en.wikipedia.org/wiki/Anorectic
 
 There are known side effects which I did not experience but merit a mention:
