@@ -346,7 +346,8 @@ Since starting Bupropion I've observed the following positive changes:
    There are still things I procrastinate on. Correspondence is something I
    struggle a lot with, I'm ashamed to think of all the emails in my archive
    where people have reached out to me and I procrastinated on replying to them
-   until it became too embarrassing to even reply apologetically.
+   until it became too embarrassing to even reply apologetically. But I now have
+   the tools to at least improve things.
 
    Interestingly the effects were not immediate, but gradual, since doubling to
    300mg daily I felt like productivity increasing like a gentle ramp-up across
