@@ -10,7 +10,7 @@ math: yes
 Let me prefix this by saying that none of this is medical advice, I'm just an
 autistic man with a lot of free time. If you have mental health problems, for
 the love of God just talk to a psychiatrist. I promise it's not bad. I am
-extremely pro-psychiatry and I fully support the pharmaceutical industry.That
+extremely pro-psychiatry and I fully support the pharmaceutical industry. That
 aside, let's begin.
 
 # An Epiphany
