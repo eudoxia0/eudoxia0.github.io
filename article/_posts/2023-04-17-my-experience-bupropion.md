@@ -416,7 +416,8 @@ There are known side effects which I did not experience but merit a mention:
   formulations, which led to many instances of seizures. Nowadays dosage stops
   at 450mg/day, and is typically just 300mg/day, and overwhelmingly in the form
   of sustained release or extended release formulations, which have lower peak
-  concentrations. So modern formulations and doses are much safer.
+  concentrations. So modern formulations and doses are much safer. More on this below. 
+ 
 - **Worsening Depression:** some people report that Bupropion worsens their
   mood. I know at least two people who reported it made them feel more
   depressed.
@@ -433,12 +434,77 @@ There are known side effects which I did not experience but merit a mention:
 - [Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article
   about [his experience with Bupropion][wiblinbup].
 - Scott Alexander's practice website has [a page][lorien] on Bupropion.
+- Zimmerman et. al. 2005, [_Why isn't bupropion the most frequently prescribed antidepressant?_][zimmerman2005].
+- Stahl et. al. 2004, [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004].
 
 [medline]: https://medlineplus.gov/druginfo/meds/a695033.html
 [wiblin]: https://www.robwiblin.com/
 [80k]: https://80000hours.org/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
 [lorien]: https://lorienpsych.com/2020/10/25/wellbutrin/
+[zimmerman2005]: https://pubmed.ncbi.nlm.nih.gov/15889947/
+
+# Appendix: Data on Seizure Risk
+
+From [_15 Years of Clinical Experience With Bupropion HCl: From Bupropion to Bupropion SR to Bupropion XL_][fava2005] by Fava et. al., 2005:
+
+>An important adverse event associated with bupropion use is seizure. With the IR formulation, the rate is 0.4% (4/1000) at doses of 300 to 450 mg/day; however, the rate increases substantially at doses above this level. With the SR formulation, the rate is 0.1% (1/1000) at the target dose of 300 mg/day.4 The incidence of seizure with bupropion XL has not been evaluated. Bupropion is not the only antidepressant associated with seizures. SSRI antidepressants are associated with seizure at a similar rate of approximately 0.1%.4 Certain factors may increase the risk of seizure; therefore, prior to the prescription of bupropion, patients should be screened for the presence of medical comorbidities, clinical situations, or concomitant medications that may lower seizure threshold.
+
+[fava2005]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1163271/
+
+From [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004] by Stahl et. al., 2004:
+
+>An often-debated issue is the incidence of seizure associated with antidepressant therapy. Most antidepressant clinical trials report that the seizure incidence ranges from 0.1% to 0.3% for the newer-generation antidepressants 99–103 and up to 1.1% for the TCAs.104–106 The spontaneous seizure rate reported in the general population is approximately 0.1%.107,108 For bupropion, the incidence of seizure reported in the product information for the older, immediate-release formulation (Wellbutrin) is 0.4% at doses up to 450 mg/day,109 and for Wellbutrin SR and Zyban (also a sustained-release formulation), 0.1% for doses up to 300 mg/day.109 In addition, a recently conducted review8 by the manufacturer of its clinical trials database for the sustained-release formulation of bupropion (N = 15,213) showed an overall seizure incidence of 0.07% at doses up to 400 mg/day. The mechanisms by which antidepressants may lower the seizure threshold are largely unknown.
+
+[stahl2004]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC514842/
+
+From the [FDA][fda]:
+
+[fda]: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/020358s046s047lbl.pdf
+
+>Dose: At doses of WELLBUTRIN SR up to a dose of 300 mg/day, the incidence of seizure
+is approximately 0.1% (1/1,000) and increases to approximately 0.4% (4/1,000) at the
+maximum recommended dose of 400 mg/day.
+>Data for the immediate-release formulation of bupropion revealed a seizure
+incidence of approximately 0.4% (i.e., 13 of 3,200 patients followed prospectively) in
+patients treated at doses in a range of 300 to 450 mg/day. The 450-mg/day upper limit of
+this dose range is close to the currently recommended maximum dose of 400 mg/day for
+WELLBUTRIN SR Tablets. This seizure incidence (0.4%) may exceed that of other
+marketed antidepressants and WELLBUTRIN SR Tablets up to 300 mg/day by as much
+as 4-fold. This relative risk is only an approximate estimate because no direct comparative
+studies have been conducted.
+>Additional data accumulated for the immediate-release formulation of
+bupropion suggested that the estimated seizure incidence increases almost tenfold between
+450 and 600 mg/day, which is twice the usual adult dose and one and one-half the
+maximum recommended daily dose (400 mg) of WELLBUTRIN SR Tablets. This
+disproportionate increase in seizure incidence with dose incrementation calls for caution
+in dosing.
+>Data for WELLBUTRIN SR Tablets revealed a seizure incidence of
+approximately 0.1% (i.e., 3 of 3,100 patients followed prospectively) in patients treated at
+doses in a range of 100 to 300 mg/day. It is not possible to know if the lower seizure
+incidence observed in this study involving the sustained-release formulation of bupropion
+resulted from the different formulation or the lower dose used. However, as noted above,
+the immediate-release and sustained-release formulations are bioequivalent with regard
+to both rate and extent of absorption during steady state (the most pertinent condition to
+estimating seizure incidence), since most observed seizures occur under steady-state
+conditions.
+>Patient factors: Predisposing factors that may increase the risk of seizure with bupropion
+use include history of head trauma or prior seizure, central nervous system (CNS) tumor,
+the presence of severe hepatic cirrhosis, and concomitant medications that lower seizure
+threshold.
+>Clinical situations: Circumstances associated with an increased seizure risk include,
+among others, excessive use of alcohol or sedatives (including benzodiazepines); addiction
+to opiates, cocaine, or stimulants; use of over-the-counter stimulants and anorectics; and
+diabetes treated with oral hypoglycemics or insulin.
+>Concomitant medications: Many medications (e.g., antipsychotics, antidepressants,
+theophylline, systemic steroids) are known to lower seizure threshold.
+>Recommendations for Reducing the Risk of Seizure: Retrospective analysis of
+clinical experience gained during the development of bupropion suggests that the risk of
+seizure may be minimized if
+>- the total daily dose of WELLBUTRIN SR Tablets does not exceed 400 mg,
+>- the daily dose is administered twice daily, and
+>- the rate of incrementation of dose is gradual.
+>- No single dose should exceed 200 mg to avoid high peak concentrations of bupropion and/or its metabolites.
 
 # Footnotes
 
