@@ -396,13 +396,15 @@ Some side effects I experienced:
   starting the Bupropion again. The rash didn't come back, so it couldn't have
   been an allergic reaction.
 - **Appetite:** the first day I took it I forgot to eat until I almost went to
-  bed. This went away within a few days. Bupropion is a known anorectic.
+  bed. This went away within a few days. Bupropion is a known [anorectic][ano].
 - **Insomnia:** this was strongest the first few days I took it (150mg once
   daily) and quickly subsided. But when I moved to taking it twice daily the
   insomnia became more of a problem. Because the spacing between the doses is so
   long (8h), I'd often forget to take the second dose on time, so I'd take it
   later, which means I'd go to sleep later, wake up later, take the next first
   dose later, and so it's a vicious cycle of sleep schedule drift.
+
+[ano]: https://en.wikipedia.org/wiki/Anorectic
 
 There are known side effects which I did not experience but merit a mention:
 
