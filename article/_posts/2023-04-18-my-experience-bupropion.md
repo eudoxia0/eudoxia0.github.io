@@ -266,10 +266,6 @@ consistently for a week, or two weeks, but eventually something happens that
 breaks that streak, and you find that despite repeated effort, you have not
 formed a habit. The associations in your brain simply _are not there_.
 
-Bupropion's effects are very muted---it is a _very_ mild stimulant---but it gave
-me just enough of a bump to my reward function that I was able to start
-consciously building good habits.
-
 # Bupropion
 
 [Bupropion][bup], also known as Wellbutrin, is an antidepressant. And an aid in
@@ -335,7 +331,7 @@ Since starting Bupropion I've observed the following positive changes:
    benefit is I can simply _start_ something and do a few hours of work.
 
    Bupropion gave me enough executive function to overcome the worst of ADHD and
-   to allow me to"bootstrap" productivity. Since starting Bupropion, I:
+   to allow me to "bootstrap" productivity. Since starting Bupropion, I:
 
    1. Started using a [todo list][todoist] daily and effectively.
    1. Became able to consciously form good habits, including doing [spaced
