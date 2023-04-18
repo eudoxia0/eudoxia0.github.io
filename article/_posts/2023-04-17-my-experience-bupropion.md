@@ -432,15 +432,14 @@ There are known side effects which I did not experience but merit a mention:
 - [Bupropion on MedlinePlus][medline]. Searching anything medical on Google
   turns up nothing but spam, I like MedlinePlus because it's accurate and
   there's no SEO bullshit.
-- [Robert Wiblin][wiblin], of the [80k hours podcast][80k], wrote an article
-  about [his experience with Bupropion][wiblinbup].
+- [Robert Wiblin][wiblin]'s account about [his experience with
+  Bupropion][wiblinbup].
 - Scott Alexander's practice website has [a page][lorien] on Bupropion.
 - Zimmerman et. al. 2005, [_Why isn't bupropion the most frequently prescribed antidepressant?_][zimmerman2005].
 - Stahl et. al. 2004, [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004].
 
 [medline]: https://medlineplus.gov/druginfo/meds/a695033.html
 [wiblin]: https://www.robwiblin.com/
-[80k]: https://80000hours.org/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
 [lorien]: https://lorienpsych.com/2020/10/25/wellbutrin/
 [zimmerman2005]: https://pubmed.ncbi.nlm.nih.gov/15889947/
