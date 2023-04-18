@@ -563,8 +563,4 @@ From the [FDA][fda]:
 
 [^aus]:
     And strictly speaking any psychiatric use of it is off-label: the only
-    licensed used for Bupropion in Australia is smoking cessation, which is
-    absurd. Despite this, the [RANZCP guidelines for mood disorders][mood]
-    mention Bupropion.
-
-[mood]: https://www.ranzcp.org/files/resources/college_statements/clinician/cpg/mood-disorders-cpg-2020.aspx
+    licensed used for Bupropion in Australia is smoking cessation.
