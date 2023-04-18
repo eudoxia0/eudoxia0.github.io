@@ -78,11 +78,7 @@ they've diagnosed themselves from first principles after an unusual reaction to
 a drug?
 
 And I talked about it with friends who have ADHD, and things began falling into
-place. I even showed my psychiatrist the [Austral commit log][log]: tall,
-narrow peaks of [hyperfocus][hf] separated by long stretches of inactivity.
-
-[log]: https://github.com/austral/austral/graphs/contributors
-[hf]: https://en.wikipedia.org/wiki/Hyperfocus
+place.
 
 # Symptoms
 
@@ -165,7 +161,8 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    that when I did, people thought, "oh, yeah, that's Fernando's idée fixe that
    he keeps saying he'll finish". It took so long because I'd start working on
    it, and run out of steam, and leave it untouched for months and months on
-   end.
+   end. The [commit log][log] reflects this: tall, narrow peaks of
+   [hyperfocus][hf] separated by long stretches of inactivity.
 
    [_The Epiphany of Gliese 581_][eog581] is barely a novella at 26k words. It
    took me a year to finish. I worked on it by accumulating [fragments][frag]
@@ -232,6 +229,8 @@ after discussing it with friends who have ADHD and with my psychiatrist:
 [wiki2]: https://en.wikipedia.org/wiki/Bombing_of_Wilhelmshaven_in_World_War_II
 [tyr]: https://en.wikipedia.org/wiki/Tyrosine
 [frag]: https://twitter.com/search?q=from%3Azetalyrae%20fiction%20fragment&src=typed_query&f=live
+[log]: https://github.com/austral/austral/graphs/contributors
+[hf]: https://en.wikipedia.org/wiki/Hyperfocus
 
 # What Didn't Work
 
