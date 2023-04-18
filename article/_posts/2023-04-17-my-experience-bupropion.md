@@ -417,6 +417,8 @@ There are known side effects which I did not experience but merit a mention:
 - **Worsening Depression:** some people report that Bupropion worsens their
   mood. I know at least two people who reported it made them feel more
   depressed.
+- **Psychosis:** I don't know the incidence of this but as with stimulants it
+  can happen.
 - **Alcohol:** this is a known bad interaction with Bupropion since it further
   lowers the seizure threshold. I just avoided drinking.
 
