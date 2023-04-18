@@ -44,10 +44,10 @@ to risk [tardive dyskinesia][td]. So I went back to being a lazy bum.
 [td]: https://en.wikipedia.org/wiki/Tardive_dyskinesia
 
 Years later, while going down an autistic special interest rabbithole, I got
-interested in pharmacology. I bought a copy of [_Molecular Neuropharmacology: A
-Foundation for Clinical Neuroscience_][molneuro]. And I didn't read it (because
-I didn't have the executive function) but I did leaf through it. And in the
-first chapter I read about how [partial agonists][pagonist] work.
+interested in pharmacology. I bought a copy of [_Molecular
+Neuropharmacology_][molneuro]. And I didn't read it (because I didn't have the
+executive function) but I did leaf through it. And in the first chapter I read
+about how [partial agonists][pagonist] work.
 
 [molneuro]: https://neurology.mhmedical.com/book.aspx?bookID=2963
 [pagonist]: https://en.wikipedia.org/wiki/Partial_agonist
