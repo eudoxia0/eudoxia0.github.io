@@ -118,8 +118,8 @@ So a lot of these things only became visible as symptoms of ADHD after the fact,
 after discussing it with friends who have ADHD and with my psychiatrist:
 
 1. **Autism:** obviously I have ASD (I told the psychiatrist who diagnosed me it
-   would be more surprising if I didn't) and some 40% of autistic people have
-   ADHD symptoms.
+   would be more surprising if I didn't) and ADHD co-occurs "[in 30–80% of
+   individuals with ASD][lauzhu]".
 
 1. **Focus:** I never felt like I was particularly distractible or unfocused,
    mostly because I've unwittingly structured me life around not having to
@@ -226,6 +226,7 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    types is hard to reason about. I threw out exceptions because exceptions are
    hard to reason about.
 
+[lauzhu]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6331660/
 [austral]: https://github.com/austral/austral
 [antifeatures]: https://austral-lang.org/features
 [linearrules]: https://austral-lang.org/spec/spec.html#linearity
