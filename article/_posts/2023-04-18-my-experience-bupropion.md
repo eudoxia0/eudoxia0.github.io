@@ -1,5 +1,5 @@
 ---
-title: My Experience With Bupropion
+title: My Experience with Bupropion
 summary: Autism, antipsychotics, and the striatum.
 card: my-experience-bupropion.jpg
 card_source: |
