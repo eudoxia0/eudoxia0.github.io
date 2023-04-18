@@ -412,7 +412,7 @@ There are known side effects which I did not experience but merit a mention:
 - **Seizure:** the headlining risk of Bupropion is seizures. Bupropion lowers
   the seizure threshold, if you have a history of seizures, this is worth
   mentioning to the doctor. My read on this is that, early on, Bupropion was
-  prescribed in much higher doses (500 or 600mg) and in immediate release
+  prescribed in much higher doses (500 or 600mg or higher) and in immediate release
   formulations, which led to many instances of seizures. Nowadays dosage stops
   at 450mg/day, and is typically just 300mg/day, and overwhelmingly in the form
   of sustained release or extended release formulations, which have lower peak
