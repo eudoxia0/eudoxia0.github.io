@@ -377,7 +377,8 @@ Since starting Bupropion I've observed the following positive changes:
 
    ![Histogram of posts per year for this blog, showing a marked increase from mid 2022 to Q1 2023](/assets/content/my-experience-bupropion/posts-per-year.png)
 
-   2020 was a bad year. Note that 2023 covers only Q1.
+   2020 was a bad year. Note (if you're from the future) that 2023 covers only
+   Q1.
 
 [todoist]: https://todoist.com/
 [introaustral]: /article/introducing-austral
