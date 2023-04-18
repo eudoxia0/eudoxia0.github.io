@@ -190,9 +190,9 @@ after discussing it with friends who have ADHD and with my psychiatrist:
 
 1. **Chronic Underachievement:** I start an ambitious project, and it withers
    away. I dropped out of college. I start reading a book, put it away and
-   forget it. The years pass, the projects remain unfinished. "I think I want to
-   learn differential equations", I'll think. Three years pass, no
-   progress. This is a great source of pain.
+   forget it. The years pass, the projects remain unfinished. This is a great
+   source of pain, because I'm a creative person, and if I can't create it's
+   painful.
 
 1. **Engineering Methodology:** I suppose this is somewhat self-serving, but the
    north star of all of my engineering work is complexity. I always insist on
