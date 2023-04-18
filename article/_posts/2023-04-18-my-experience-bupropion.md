@@ -160,11 +160,11 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    recollection of who I am but instead of tattoos I have all these PDFs I'll
    never read.
 
-1. **Productivity:** [Austral][austral] took years to finish. Years. So much so
-   that at a certain point I became embarrassed to bring it up, because I knew
-   that when I did, people thought, "oh, yeah, that's Fernando's idée fixe that
-   he keeps saying he'll finish". It took so long because I'd start working on
-   it, and run out of steam, and leave it untouched for months and months on
+1. **Productivity:** [Austral][austral] took years to finish. _Years_. So much
+   so that at a certain point I became embarrassed to bring it up, because I
+   knew that when I did, people thought, "oh, yeah, that's Fernando's idée fixe
+   that he keeps saying he'll finish". It took so long because I'd start working
+   on it, and run out of steam, and leave it untouched for months and months on
    end. The [commit log][log] reflects this: tall, narrow peaks of
    [hyperfocus][hf] separated by long stretches of inactivity.
 
