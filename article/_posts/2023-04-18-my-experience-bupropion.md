@@ -8,7 +8,7 @@ math: yes
 ---
 
 This post is about how I realized I have ADHD, what my symptoms were, and how I
-fixed it with Bupropion.
+managed it with Bupropion.
 
 Let me prefix this by saying that none of this is medical advice: I'm just an
 autistic software engineer with a lot of free time. If you have mental health
