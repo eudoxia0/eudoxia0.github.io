@@ -7,11 +7,15 @@ card_source: |
 math: yes
 ---
 
-Let me prefix this by saying that none of this is medical advice, I'm just an
-autistic man with a lot of free time. If you have mental health problems, for
-the love of God just talk to a psychiatrist. I promise it's not bad. I am
-extremely pro-psychiatry and I fully support the pharmaceutical industry. That
-aside, let's begin.
+This post is about how I realized I have ADHD, what my symptoms were, and how I
+fixed it with Bupropion.
+
+Let me prefix this by saying that none of this is medical advice: I'm just an
+autistic software engineer with a lot of free time. If you have mental health
+problems, for the love of God just talk to a psychiatrist. I promise it's not
+bad. Psychiatry is good, antidepressants aren't happy pills that zombify you,
+and the pharmaceutical industry has saved countless lives. That aside, let's
+begin.
 
 # An Epiphany
 
@@ -412,7 +416,7 @@ There are known side effects which I did not experience but merit a mention:
   mentioning to the doctor. My read on this is that, early on, Bupropion was
   prescribed in much higher doses (500 or 600mg or higher) and in immediate
   release formulations, which led to many instances of seizures. Nowadays dosage
-  stops at 450mg/day, and is typically just 300mg/day, and overwhelmingly in the
+  stops at 400mg/day, and is typically just 300mg/day, and overwhelmingly in the
   form of sustained release or extended release formulations, which have lower
   peak concentrations. So modern formulations and doses are much safer. More on
   this below.
