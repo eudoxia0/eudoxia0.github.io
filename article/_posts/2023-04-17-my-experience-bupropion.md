@@ -368,8 +368,16 @@ Since starting Bupropion I've observed the following positive changes:
    [Austral][introaustral][^finish]. After a year of struggling to put a single
    paragraph down on the page, I finished [_The Epiphany of Gliese
    581_][eog581]. It was still difficult, still time consuming, but I had enough
-   help to manage. The work paid off. I felt that I succeeded, that my reward
-   function was non-zero. I want to do more. I want to succeed more. Now I can.
+   help to manage. The work paid off. I _felt_ that I succeeded: my reward
+   function was non-zero.
+   
+   There's other empirical evidence that my productivity increased. For
+   example: this blog. I asked GPT-4 to write a script to make a histogram of
+   posts per year for this blog:
+   
+   ![Histogram of posts per year for this blog, showing a marked increase from mid 2022 to Q1 2023](/assets/content/my-experience-bupropion/posts-per-year.png)
+   
+   2020 was a bad year. Note that 2023 covers only Q1.
 
 [todoist]: https://todoist.com/
 [introaustral]: /article/introducing-austral
