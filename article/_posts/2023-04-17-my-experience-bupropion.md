@@ -182,7 +182,8 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    morning and a cup of tea in the afternoon? What's the clearance rate of
    sugar-free Monster? Maybe I can supplement [L-tyrosine][tyr] since it's a
    dopamine precursor. I'd try to twist every knob: caffeine intake, sun
-   exposure, cardio, lifting, etc. And nothing worked consistently.
+   exposure, cardio, lifting, micronutrients, etc. And nothing worked
+   consistently.
 
    It made it extremely difficult to plan for the future, because I had no idea
    when or how long I could work on something.
