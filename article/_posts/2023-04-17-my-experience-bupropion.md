@@ -536,10 +536,14 @@ From the [FDA][fda]:
 >clinical experience gained during the development of bupropion suggests that
 >the risk of seizure may be minimized if
 >
->- the total daily dose of WELLBUTRIN SR Tablets does not exceed 400 mg, - the
->  daily dose is administered twice daily, and - the rate of incrementation of
->  dose is gradual.  - No single dose should exceed 200 mg to avoid high peak
->  concentrations of bupropion and/or its metabolites.
+>- the total daily dose of WELLBUTRIN SR Tablets does not exceed 400 mg,
+>
+>- the daily dose is administered twice daily, and
+>
+>- the rate of incrementation of dose is gradual.
+>
+>- No single dose should exceed 200 mg to avoid high peak concentrations of
+>  bupropion and/or its metabolites.
 
 # Footnotes
 
