@@ -195,9 +195,9 @@ after discussing it with friends who have ADHD and with my psychiatrist:
 1. **Chronic Underachievement:** I start an ambitious project, and it withers
    away. I dropped out of college. I start reading a book, put it away and
    forget it. The years pass, the projects remain unfinished. What I have
-   achieved was achieved by white knuckling through it, at a cost in terms of
-   constantly burning out. This is a great source of pain, because I'm a
-   creative person, and it hurts if I can't create.
+   achieved was achieved by white knuckling through it, at the cost of
+   persistent burnout. This is a great source of pain, because I'm a creative
+   person, and it hurts if I can't create.
 
 1. **Engineering Methodology:** I suppose this is somewhat self-serving, but the
    north star of all of my engineering work is complexity. I always insist on
