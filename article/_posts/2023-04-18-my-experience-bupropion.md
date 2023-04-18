@@ -286,9 +286,9 @@ norepinephine and dopamine. And for this reason, it has a stimulant effect.
 [net]: https://en.wikipedia.org/wiki/Norepinephrine_transporter
 [dat]: https://en.wikipedia.org/wiki/Dopamine_transporter#cite_ref-3
 
-In most jurisdictions Bupropion is less strictly controlled than stimulants
-because the stimulant effect is limited (which is why actual stimulants are the
-first choice in ADHD), and it's not a euphoriant. People rarely [try to abuse
+The reason it's classed as an antidepressant rather than a stimulant is the
+stimulant effect is very mild (which is why actual stimulants are the first
+choice in ADHD treatment) and it's not a euphoriant. People rarely [try to abuse
 it][abuse], with horrible results, but it's more likely to kill you than get you
 high.
 
