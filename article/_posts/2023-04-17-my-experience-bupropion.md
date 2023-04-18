@@ -370,13 +370,13 @@ Since starting Bupropion I've observed the following positive changes:
    581_][eog581]. It was still difficult, still time consuming, but I had enough
    help to manage. The work paid off. I _felt_ that I succeeded: my reward
    function was non-zero.
-   
+
    There's other empirical evidence that my productivity increased. For
    example: this blog. I asked GPT-4 to write a script to make a histogram of
    posts per year for this blog:
-   
+
    ![Histogram of posts per year for this blog, showing a marked increase from mid 2022 to Q1 2023](/assets/content/my-experience-bupropion/posts-per-year.png)
-   
+
    2020 was a bad year. Note that 2023 covers only Q1.
 
 [todoist]: https://todoist.com/
@@ -416,8 +416,8 @@ There are known side effects which I did not experience but merit a mention:
   formulations, which led to many instances of seizures. Nowadays dosage stops
   at 450mg/day, and is typically just 300mg/day, and overwhelmingly in the form
   of sustained release or extended release formulations, which have lower peak
-  concentrations. So modern formulations and doses are much safer. More on this below. 
- 
+  concentrations. So modern formulations and doses are much safer. More on this below.
+
 - **Worsening Depression:** some people report that Bupropion worsens their
   mood. I know at least two people who reported it made them feel more
   depressed.
@@ -448,13 +448,35 @@ There are known side effects which I did not experience but merit a mention:
 
 From [_15 Years of Clinical Experience With Bupropion HCl: From Bupropion to Bupropion SR to Bupropion XL_][fava2005] by Fava et. al., 2005:
 
->An important adverse event associated with bupropion use is seizure. With the IR formulation, the rate is 0.4% (4/1000) at doses of 300 to 450 mg/day; however, the rate increases substantially at doses above this level. With the SR formulation, the rate is 0.1% (1/1000) at the target dose of 300 mg/day.4 The incidence of seizure with bupropion XL has not been evaluated. Bupropion is not the only antidepressant associated with seizures. SSRI antidepressants are associated with seizure at a similar rate of approximately 0.1%.4 Certain factors may increase the risk of seizure; therefore, prior to the prescription of bupropion, patients should be screened for the presence of medical comorbidities, clinical situations, or concomitant medications that may lower seizure threshold.
+>An important adverse event associated with bupropion use is seizure. With the
+>IR formulation, the rate is 0.4% (4/1000) at doses of 300 to 450 mg/day;
+>however, the rate increases substantially at doses above this level. With the
+>SR formulation, the rate is 0.1% (1/1000) at the target dose of 300 mg/day.4
+>The incidence of seizure with bupropion XL has not been evaluated. Bupropion is
+>not the only antidepressant associated with seizures. SSRI antidepressants are
+>associated with seizure at a similar rate of approximately 0.1%.4 Certain
+>factors may increase the risk of seizure; therefore, prior to the prescription
+>of bupropion, patients should be screened for the presence of medical
+>comorbidities, clinical situations, or concomitant medications that may lower
+>seizure threshold.
 
 [fava2005]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1163271/
 
 From [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004] by Stahl et. al., 2004:
 
->An often-debated issue is the incidence of seizure associated with antidepressant therapy. Most antidepressant clinical trials report that the seizure incidence ranges from 0.1% to 0.3% for the newer-generation antidepressants 99–103 and up to 1.1% for the TCAs.104–106 The spontaneous seizure rate reported in the general population is approximately 0.1%.107,108 For bupropion, the incidence of seizure reported in the product information for the older, immediate-release formulation (Wellbutrin) is 0.4% at doses up to 450 mg/day,109 and for Wellbutrin SR and Zyban (also a sustained-release formulation), 0.1% for doses up to 300 mg/day.109 In addition, a recently conducted review8 by the manufacturer of its clinical trials database for the sustained-release formulation of bupropion (N = 15,213) showed an overall seizure incidence of 0.07% at doses up to 400 mg/day. The mechanisms by which antidepressants may lower the seizure threshold are largely unknown.
+>An often-debated issue is the incidence of seizure associated with
+>antidepressant therapy. Most antidepressant clinical trials report that the
+>seizure incidence ranges from 0.1% to 0.3% for the newer-generation
+>antidepressants 99–103 and up to 1.1% for the TCAs.104–106 The spontaneous
+>seizure rate reported in the general population is approximately 0.1%.107,108
+>For bupropion, the incidence of seizure reported in the product information for
+>the older, immediate-release formulation (Wellbutrin) is 0.4% at doses up to
+>450 mg/day,109 and for Wellbutrin SR and Zyban (also a sustained-release
+>formulation), 0.1% for doses up to 300 mg/day.109 In addition, a recently
+>conducted review8 by the manufacturer of its clinical trials database for the
+>sustained-release formulation of bupropion (N = 15,213) showed an overall
+>seizure incidence of 0.07% at doses up to 400 mg/day. The mechanisms by which
+>antidepressants may lower the seizure threshold are largely unknown.
 
 [stahl2004]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC514842/
 
