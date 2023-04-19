@@ -164,3 +164,41 @@ Determining whether a formula is satisfiable is not always useful. We often want
 # Simplifying
 
 `simplify` is like a "best-effort `eval`".
+
+```ocaml
+let rec simplify (e: expr): expr =
+  match e with
+  (* T/F and vars can't be simplified further. *)
+  | True -> True
+  | False -> False
+  | Var v -> Var v
+  (* Invert constants *)
+  | Not True -> False
+  | Not False -> True
+  (* ¬¬P = P *)
+  | Not (Not p) ->
+    simplify p
+  (* Base case for negation *)
+  | Not p ->
+    Not (simplify p)
+  (* Conjunction *)
+  | And (p, q) ->
+    let p = simplify p
+    and q = simplify q in
+    (match (p, q) with
+    | (False, _) -> False
+    | (_, False) -> False
+    | (True, r) -> r
+    | (r, True) -> r
+    | (p, q) -> And (p, q))
+  (* Disjunction *)
+  | Or (p, q) ->
+    let p = simplify p
+    and q = simplify q in
+    (match (p, q) with
+    | (True, _) -> True
+    | (_, True) -> True
+    | (False, r) -> r
+    | (r, False) -> r
+    | (p, q) -> Or (p, q))
+```

@@ -89,4 +89,8 @@ Determining whether a formula is satisfiable is not always useful. We often want
 
 # Simplifying
 
-`simplify` is like a "best-effort `eval`".
+`simplify` is like a "best-effort `eval`". It tries to propagate constants upwards as much as possible, in the presence of variables:
+
+```ocaml
+loom:include(simplify)
+```
