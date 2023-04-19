@@ -26,9 +26,26 @@ loom:include(impl)
 loom:include(string_of_expr)
 ```
 
+An _interpretation_ is a function that maps variables to Boolean values. Given an interpretation $I$, we can evaluate a formula:
+
+$$
+\begin{align*}
+e(\top) &= \top \\
+e(\bot) &= \bot \\
+e(v) &= I(v) \\
+e(\neg p) &= \neg e(p) \\
+e(p \land q) &= e(p) \land e(q) \\
+e(p \lor q) &= e(p) \lor e(q)
+\end{align*}
+$$
+
+We'll implement evaluation in two pieces. First, with a function that replaces a specific variable in a formula with a Boolean constant:
+
 ```ocaml
 loom:include(replace)
 ```
+
+And a function `eval` that takes a formula with no variables and evaluates it recursively:
 
 ```ocaml
 loom:include(eval)

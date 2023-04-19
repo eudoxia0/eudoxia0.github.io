@@ -48,6 +48,21 @@ let rec string_of_expr (e: expr): string =
      "(" ^ (string_of_expr p) ^ " ∨ " ^ (string_of_expr q) ^ ")"
 ```
 
+An _interpretation_ is a function that maps variables to Boolean values. Given an interpretation $I$, we can evaluate a formula:
+
+$$
+\begin{align*}
+e(\top) &= \top \\
+e(\bot) &= \bot \\
+e(v) &= I(v) \\
+e(\neg p) &= \neg e(p) \\
+e(p \land q) &= e(p) \land e(q) \\
+e(p \lor q) &= e(p) \lor e(q)
+\end{align*}
+$$
+
+We'll implement evaluation in two pieces. First, with a function that replaces a specific variable in a formula with a Boolean constant:
+
 ```ocaml
 let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with
@@ -65,6 +80,8 @@ let rec replace (e: expr) (name: string) (value: bool): expr =
   | Or (p, q) ->
      Or (replace p name value, replace q name value)
 ```
+
+And a function `eval` that takes a formula with no variables and evaluates it recursively:
 
 ```ocaml
 let rec eval (e: expr): bool =
