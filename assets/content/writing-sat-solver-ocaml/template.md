@@ -12,6 +12,8 @@ TODO
 
 # Propositional Logic
 
+Propositional logic has two components: formulas, and their interpretations (for this post we're leaving out proof).
+
 ```ocaml
 loom:include(expr)
 ```
