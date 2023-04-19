@@ -15,3 +15,7 @@ TODO
 ```ocaml
 loom:include(expr)
 ```
+
+```ocaml
+loom:include(impl)
+```

@@ -1,1 +1,1 @@
-{"expr":"type expr =\n    | Const of bool\n    | Var of string\n    | Not of expr\n    | And of expr * expr\n    | Or of expr * expr"}
+{"impl":"let impl (p: expr) (q: expr): expr =\n  Or (Not p, q)\n  \nlet iff (p: expr) (q: expr): expr =\n  And (impl p q, impl q p)","expr":"type expr =\n    | Const of bool\n    | Var of string\n    | Not of expr\n    | And of expr * expr\n    | Or of expr * expr"}
