@@ -52,4 +52,16 @@ loom:include(any)
 loom:include(bfmodule)
 ```
 
+Let's try it with $P \land (Q \lor \neg R)$:
+
+```ocaml
+loom:include(ex1)
+```
+
+This prints:
+
+```
+loom:include(ex1out)
+```
+
 # Brute Forcing with Assignments

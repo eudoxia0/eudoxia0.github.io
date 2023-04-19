@@ -41,11 +41,11 @@ let rec string_of_expr (e: expr): string =
   | Var v ->
      v
   | Not e ->
-     "¬" ^ (render e)
+     "¬" ^ (string_of_expr e)
   | And (p, q) ->
-     "(" ^ (render p) ^ " ∧ " ^ (render q) ^ ")"
+     "(" ^ (string_of_expr p) ^ " ∧ " ^ (string_of_expr q) ^ ")"
   | Or (p, q) ->
-     "(" ^ (render p) ^ " ∨ " ^ (render q) ^ ")"
+     "(" ^ (string_of_expr p) ^ " ∨ " ^ (string_of_expr q) ^ ")"
 ```
 
 ```ocaml
@@ -117,7 +117,22 @@ module Brute: SAT = struct
       let et: expr = replace e var true
       and ef: expr = replace e var false in
       (satisfiable et) || (satisfiable ef)
-end
+end;;
+```
+
+Let's try it with $P \land (Q \lor \neg R)$:
+
+```ocaml
+let p: expr = And (Var "P", Or (Var "Q", Not (Var "R")));;
+print_endline (string_of_expr p);;
+print_endline (Bool.to_string (Brute.satisfiable p));;
+```
+
+This prints:
+
+```
+(P ∧ (Q ∨ ¬R))
+true
 ```
 
 # Brute Forcing with Assignments
