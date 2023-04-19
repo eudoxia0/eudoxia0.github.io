@@ -135,4 +135,6 @@ This prints:
 true
 ```
 
+![](/assets/content/writing-sat-solver-ocaml/bruteforcing.svg)
+
 # Brute Forcing with Assignments

@@ -1,0 +1,82 @@
+digraph G {
+    node [shape=plaintext, style=filled];
+    edge [fontname=Arial];
+    
+    s0 [label="P ∧ (Q ∨ ¬R)", color=cadetblue1];
+    p1t [label="P → T", color=darkolivegreen1];
+    p1f [label="P → F", color=darkolivegreen1];
+    s1t [label="T ∧ (Q ∨ ¬R)", color=cadetblue1];
+    s1f [label="F ∧ (Q ∨ ¬R)", color=cadetblue1];
+
+    q2t [label="Q → T", color=darkolivegreen1];
+    q2f [label="Q → F", color=darkolivegreen1];
+    s2t [label="T ∧ (T ∨ ¬R)", color=cadetblue1];
+    s2f [label="T ∧ (F ∨ ¬R)", color=cadetblue1];
+
+    q3t [label="Q → T", color=darkolivegreen1];
+    q3f [label="Q → F", color=darkolivegreen1];
+    s3t [label="F ∧ (T ∨ ¬R)", color=cadetblue1];
+    s3f [label="F ∧ (F ∨ ¬R)", color=cadetblue1];
+
+    r4t [label="R → T", color=darkolivegreen1];
+    r4f [label="R → F", color=darkolivegreen1];
+    s4t [label="T ∧ (T ∨ ¬T)", color=cadetblue1];
+    s4f [label="T ∧ (T ∨ ¬F)", color=cadetblue1];
+
+    r5t [label="R → T", color=darkolivegreen1];
+    r5f [label="R → F", color=darkolivegreen1];
+    s5t [label="T ∧ (F ∨ ¬T)", color=cadetblue1];
+    s5f [label="T ∧ (F ∨ ¬F)", color=cadetblue1];
+
+    r6t [label="R → T", color=darkolivegreen1];
+    r6f [label="R → F", color=darkolivegreen1];
+    s6t [label="F ∧ (T ∨ ¬T)", color=cadetblue1];
+    s6f [label="F ∧ (T ∨ ¬F)", color=cadetblue1];
+
+    r7t [label="R → T", color=darkolivegreen1];
+    r7f [label="R → F", color=darkolivegreen1];
+    s7t [label="F ∧ (F ∨ ¬T)", color=cadetblue1];
+    s7f [label="F ∧ (F ∨ ¬F)", color=cadetblue1];
+
+    s0 -> p1t;
+    s0 -> p1f;
+
+    p1t -> s1t;
+    p1f -> s1f;
+
+    s1t -> q2t;
+    s1t -> q2f;
+
+    q2t -> s2t;
+    q2f -> s2f;
+
+    s1f -> q3t;
+    s1f -> q3f;
+
+    q3t -> s3t;
+    q3f -> s3f;
+
+    s2t -> r4t;
+    s2t -> r4f;
+
+    r4t -> s4t;
+    r4f -> s4f;
+
+    s2f -> r5t;
+    s2f -> r5f;
+
+    r5t -> s5t;
+    r5f -> s5f;
+
+    s3t -> r6t;
+    s3t -> r6f;
+
+    r6t -> s6t;
+    r6f -> s6f;
+
+    s3f -> r7t;
+    s3f -> r7f;
+
+    r7t -> s7t;
+    r7f -> s7f;
+}

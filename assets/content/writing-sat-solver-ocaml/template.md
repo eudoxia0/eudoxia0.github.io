@@ -64,4 +64,6 @@ This prints:
 loom:include(ex1out)
 ```
 
+![](/assets/content/writing-sat-solver-ocaml/bruteforcing.svg)
+
 # Brute Forcing with Assignments
