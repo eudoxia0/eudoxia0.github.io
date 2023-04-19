@@ -16,13 +16,13 @@ let iff (p: expr) (q: expr): expr =
 (* loom:end(impl) *)
 
 (* loom:start(replace) *)
-let rec replace (e: expr) (name: string) (value: expr): expr =
+let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with
   | Const b ->
      Const b
   | Var v ->
      if v = name then
-       value
+       Const value
      else
        Var v
   | Not e ->
@@ -73,6 +73,14 @@ let any (e: expr): string option =
 (* loom:start(bfmodule) *)
 module Brute: BRUTE = struct  
   let satisfiable (e: expr): bool =
-    not_done_yet
+    match any e with
+    | None ->
+      (* No free variables. *)
+      eval e
+    | Some var ->
+      (* Replace the variable with T and F and recur. *)
+      let et: expr = replace e var true
+      and ef: expr = replace e var false in
+      (satisfiable et) || (satisfiable ef)
 end
 (* loom:end(bfmodule) *)

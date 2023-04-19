@@ -32,13 +32,13 @@ let iff (p: expr) (q: expr): expr =
 ```
 
 ```ocaml
-let rec replace (e: expr) (name: string) (value: expr): expr =
+let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with
   | Const b ->
      Const b
   | Var v ->
      if v = name then
-       value
+       Const value
      else
        Var v
   | Not e ->
@@ -85,13 +85,21 @@ end
 let any (e: expr): string option =
   match (SS.elements (free e)) with
   | []   -> None
-  | a::_ -> a
+  | a::_ -> Some a
 ```
 
 ```ocaml
 module Brute: BRUTE = struct  
   let satisfiable (e: expr): bool =
-    not_done_yet
+    match any e with
+    | None ->
+      (* No free variables. *)
+      eval e
+    | Some var ->
+      (* Replace the variable with T and F and recur. *)
+      let et: expr = replace e var true
+      and ef: expr = replace e var false in
+      (satisfiable et) || (satisfiable ef)
 end
 ```
 
