@@ -32,6 +32,23 @@ let iff (p: expr) (q: expr): expr =
 ```
 
 ```ocaml
+let rec string_of_expr (e: expr): string =
+  match e with
+  | Const true ->
+     "⊤"
+  | Const false ->
+     "⊥"
+  | Var v ->
+     v
+  | Not e ->
+     "¬" ^ (render e)
+  | And (p, q) ->
+     "(" ^ (render p) ^ " ∧ " ^ (render q) ^ ")"
+  | Or (p, q) ->
+     "(" ^ (render p) ^ " ∨ " ^ (render q) ^ ")"
+```
+
+```ocaml
 let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with
   | Const b ->

@@ -15,6 +15,23 @@ let iff (p: expr) (q: expr): expr =
   And (impl p q, impl q p)
 (* loom:end(impl) *)
 
+(* loom:start(string_of_expr) *)
+let rec string_of_expr (e: expr): string =
+  match e with
+  | Const true ->
+     "⊤"
+  | Const false ->
+     "⊥"
+  | Var v ->
+     v
+  | Not e ->
+     "¬" ^ (render e)
+  | And (p, q) ->
+     "(" ^ (render p) ^ " ∧ " ^ (render q) ^ ")"
+  | Or (p, q) ->
+     "(" ^ (render p) ^ " ∨ " ^ (render q) ^ ")"
+(* loom:end(string_of_expr) *)
+
 (* loom:start(replace) *)
 let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with

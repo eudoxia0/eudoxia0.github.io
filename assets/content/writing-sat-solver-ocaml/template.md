@@ -23,6 +23,10 @@ loom:include(impl)
 ```
 
 ```ocaml
+loom:include(string_of_expr)
+```
+
+```ocaml
 loom:include(replace)
 ```
 
