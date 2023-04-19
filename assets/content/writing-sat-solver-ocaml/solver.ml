@@ -67,7 +67,7 @@ end
 let any (e: expr): string option =
   match (SS.elements (free e)) with
   | []   -> None
-  | a::_ -> a
+  | a::_ -> Some a
 (* loom:end(any) *)
 
 (* loom:start(bfmodule) *)
