@@ -111,3 +111,11 @@ print_endline (Bool.to_string (Brute.satisfiable p));;
 (* loom:end(ex1) *)
 
 print_endline ("loom:" ^ "end(ex1out)");;
+
+(* loom:start(simplify) *)
+let rec simplify (e: expr): expr =
+  match e with
+  (* T/F and vars can't be simplified further. *)
+  | Const b -> Const b
+  | Var v -> v
+(* loom:end(simplify) *)
