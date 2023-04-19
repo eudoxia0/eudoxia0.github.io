@@ -1,6 +1,7 @@
 (* loom:start(expr) *)
 type expr =
-    | Const of bool
+    | True
+    | False
     | Var of string
     | Not of expr
     | And of expr * expr
@@ -18,9 +19,9 @@ let iff (p: expr) (q: expr): expr =
 (* loom:start(string_of_expr) *)
 let rec string_of_expr (e: expr): string =
   match e with
-  | Const true ->
+  | True ->
      "⊤"
-  | Const false ->
+  | False ->
      "⊥"
   | Var v ->
      v
@@ -35,11 +36,11 @@ let rec string_of_expr (e: expr): string =
 (* loom:start(replace) *)
 let rec replace (e: expr) (name: string) (value: bool): expr =
   match e with
-  | Const b ->
-     Const b
+  | True -> True
+  | False -> False
   | Var v ->
      if v = name then
-       Const value
+       if value then True else False
      else
        Var v
   | Not e ->
@@ -53,7 +54,8 @@ let rec replace (e: expr) (name: string) (value: bool): expr =
 (* loom:start(eval) *)
 let rec eval (e: expr): bool =
   match e with
-  | Const b -> b
+  | True -> true
+  | False -> false
   | Var n -> raise (Failure ("eval: the variable " ^ n ^ "has not been replaced."))
   | Not e -> not (eval e)
   | And (p, q) -> (eval p) && (eval q)
@@ -67,7 +69,8 @@ type string_set = SS.t
 
 let rec free (e: expr): string_set =
   match e with
-  | Const _ -> SS.empty
+  | True -> SS.empty
+  | False -> SS.empty
   | Var n -> SS.singleton n
   | Not e -> free e
   | And (p, q) -> SS.union (free p) (free q)
