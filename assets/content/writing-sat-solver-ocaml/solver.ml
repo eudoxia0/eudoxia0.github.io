@@ -42,3 +42,37 @@ let rec eval (e: expr): bool =
   | And (p, q) -> (eval p) && (eval q)
   | Or (p, q) -> (eval p) || (eval q)
 (* loom:end(eval) *)
+
+(* loom:start(free) *)
+module SS = Set.Make(String);;
+
+type string_set = SS.t
+
+let rec free (e: expr): string_set =
+  match e with
+  | Const _ -> SS.empty
+  | Var n -> SS.singleton n
+  | Not e -> free e
+  | And (p, q) -> SS.union (free p) (free q)
+  | Or (p, q) -> SS.union (free p) (free q)
+(* loom:end(free) *)
+
+(* loom:start(bftype) *)
+module type BRUTE = sig
+  val satisfiable : expr -> bool
+end
+(* loom:end(bftype) *)
+
+(* loom:start(any) *)
+let any (e: expr): string option =
+  match (SS.elements (free e)) with
+  | []   -> None
+  | a::_ -> a
+(* loom:end(any) *)
+
+(* loom:start(bfmodule) *)
+module Brute: BRUTE = struct  
+  let satisfiable (e: expr): bool =
+    not_done_yet
+end
+(* loom:end(bfmodule) *)

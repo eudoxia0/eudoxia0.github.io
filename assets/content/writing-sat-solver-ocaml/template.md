@@ -30,6 +30,22 @@ loom:include(replace)
 loom:include(eval)
 ```
 
+```ocaml
+loom:include(free)
+```
+
 # Brute Forcing
+
+```ocaml
+loom:include(bftype)
+```
+
+```ocaml
+loom:include(any)
+```
+
+```ocaml
+loom:include(bfmodule)
+```
 
 # Brute Forcing with Assignments

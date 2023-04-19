@@ -59,6 +59,40 @@ let rec eval (e: expr): bool =
   | Or (p, q) -> (eval p) || (eval q)
 ```
 
+```ocaml
+module SS = Set.Make(String);;
+
+type string_set = SS.t
+
+let rec free (e: expr): string_set =
+  match e with
+  | Const _ -> SS.empty
+  | Var n -> SS.singleton n
+  | Not e -> free e
+  | And (p, q) -> SS.union (free p) (free q)
+  | Or (p, q) -> SS.union (free p) (free q)
+```
+
 # Brute Forcing
+
+```ocaml
+module type BRUTE = sig
+  val satisfiable : expr -> bool
+end
+```
+
+```ocaml
+let any (e: expr): string option =
+  match (SS.elements (free e)) with
+  | []   -> None
+  | a::_ -> a
+```
+
+```ocaml
+module Brute: BRUTE = struct  
+  let satisfiable (e: expr): bool =
+    not_done_yet
+end
+```
 
 # Brute Forcing with Assignments
