@@ -23,3 +23,11 @@ loom:include(impl)
 ```ocaml
 loom:include(replace)
 ```
+
+```ocaml
+loom:include(eval)
+```
+
+# Brute Forcing
+
+# Brute Forcing with Assignments

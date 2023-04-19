@@ -46,3 +46,17 @@ let rec replace (e: expr) (name: string) (value: expr): expr =
   | Or (p, q) ->
      Or (replace p name value, replace q name value)
 ```
+
+```ocaml
+let rec eval (e: expr): bool =
+  match e with
+  | Const b -> b
+  | Var n -> raise (Failure ("eval: the variable " ^ n ^ "has not been replaced."))
+  | Not e -> not (eval e)
+  | And (p, q) -> (eval p) && (eval q)
+  | Or (p, q) -> (eval p) || (eval q)
+```
+
+# Brute Forcing
+
+# Brute Forcing with Assignments
