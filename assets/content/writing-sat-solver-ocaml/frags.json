@@ -1,0 +1,1 @@
+{"expr":"type expr =\n    | Const of bool\n    | Var of string\n    | Not of expr\n    | And of expr * expr\n    | Or of expr * expr"}
