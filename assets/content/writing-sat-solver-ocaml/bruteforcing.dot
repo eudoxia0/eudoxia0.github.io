@@ -3,40 +3,40 @@ digraph G {
     edge [fontname=Arial];
     
     s0 [label="P ∧ (Q ∨ ¬R)", color=cadetblue1];
-    p1t [label="P → T", color=darkolivegreen1];
-    p1f [label="P → F", color=darkolivegreen1];
-    s1t [label="T ∧ (Q ∨ ¬R)", color=cadetblue1];
-    s1f [label="F ∧ (Q ∨ ¬R)", color=cadetblue1];
+    p1t [label="P → ⊤", color=darkolivegreen1];
+    p1f [label="P → ⊥", color=darkolivegreen1];
+    s1t [label="⊤ ∧ (Q ∨ ¬R)", color=cadetblue1];
+    s1f [label="⊥ ∧ (Q ∨ ¬R)", color=cadetblue1];
 
-    q2t [label="Q → T", color=darkolivegreen1];
-    q2f [label="Q → F", color=darkolivegreen1];
-    s2t [label="T ∧ (T ∨ ¬R)", color=cadetblue1];
-    s2f [label="T ∧ (F ∨ ¬R)", color=cadetblue1];
+    q2t [label="Q → ⊤", color=darkolivegreen1];
+    q2f [label="Q → ⊥", color=darkolivegreen1];
+    s2t [label="⊤ ∧ (⊤ ∨ ¬R)", color=cadetblue1];
+    s2f [label="⊤ ∧ (⊥ ∨ ¬R)", color=cadetblue1];
 
-    q3t [label="Q → T", color=darkolivegreen1];
-    q3f [label="Q → F", color=darkolivegreen1];
-    s3t [label="F ∧ (T ∨ ¬R)", color=cadetblue1];
-    s3f [label="F ∧ (F ∨ ¬R)", color=cadetblue1];
+    q3t [label="Q → ⊤", color=darkolivegreen1];
+    q3f [label="Q → ⊥", color=darkolivegreen1];
+    s3t [label="⊥ ∧ (⊤ ∨ ¬R)", color=cadetblue1];
+    s3f [label="⊥ ∧ (⊥ ∨ ¬R)", color=cadetblue1];
 
-    r4t [label="R → T", color=darkolivegreen1];
-    r4f [label="R → F", color=darkolivegreen1];
-    s4t [label="T ∧ (T ∨ ¬T)", color=cadetblue1];
-    s4f [label="T ∧ (T ∨ ¬F)", color=cadetblue1];
+    r4t [label="R → ⊤", color=darkolivegreen1];
+    r4f [label="R → ⊥", color=darkolivegreen1];
+    s4t [label="⊤ ∧ (⊤ ∨ ¬⊤)", color=cadetblue1];
+    s4f [label="⊤ ∧ (⊤ ∨ ¬⊥)", color=cadetblue1];
 
-    r5t [label="R → T", color=darkolivegreen1];
-    r5f [label="R → F", color=darkolivegreen1];
-    s5t [label="T ∧ (F ∨ ¬T)", color=cadetblue1];
-    s5f [label="T ∧ (F ∨ ¬F)", color=cadetblue1];
+    r5t [label="R → ⊤", color=darkolivegreen1];
+    r5f [label="R → ⊥", color=darkolivegreen1];
+    s5t [label="⊤ ∧ (⊥ ∨ ¬⊤)", color=cadetblue1];
+    s5f [label="⊤ ∧ (⊥ ∨ ¬⊥)", color=cadetblue1];
 
-    r6t [label="R → T", color=darkolivegreen1];
-    r6f [label="R → F", color=darkolivegreen1];
-    s6t [label="F ∧ (T ∨ ¬T)", color=cadetblue1];
-    s6f [label="F ∧ (T ∨ ¬F)", color=cadetblue1];
+    r6t [label="R → ⊤", color=darkolivegreen1];
+    r6f [label="R → ⊥", color=darkolivegreen1];
+    s6t [label="⊥ ∧ (⊤ ∨ ¬⊤)", color=cadetblue1];
+    s6f [label="⊥ ∧ (⊤ ∨ ¬⊥)", color=cadetblue1];
 
-    r7t [label="R → T", color=darkolivegreen1];
-    r7f [label="R → F", color=darkolivegreen1];
-    s7t [label="F ∧ (F ∨ ¬T)", color=cadetblue1];
-    s7f [label="F ∧ (F ∨ ¬F)", color=cadetblue1];
+    r7t [label="R → ⊤", color=darkolivegreen1];
+    r7f [label="R → ⊥", color=darkolivegreen1];
+    s7t [label="⊥ ∧ (⊥ ∨ ¬⊤)", color=cadetblue1];
+    s7f [label="⊥ ∧ (⊥ ∨ ¬⊥)", color=cadetblue1];
 
     s0 -> p1t;
     s0 -> p1f;
