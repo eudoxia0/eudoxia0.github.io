@@ -155,3 +155,9 @@ true
 ![](/assets/content/writing-sat-solver-ocaml/bruteforcing.svg)
 
 # Brute Forcing with Assignments
+
+Determining whether a formula is satisfiable is not always useful. We often want the interpretation: a mapping of variables to Booleans that makes the formula true.
+
+# Simplifying
+
+`simplify` is like a "best-effort `eval`".
