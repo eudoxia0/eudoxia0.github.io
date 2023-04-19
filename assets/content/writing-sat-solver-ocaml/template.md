@@ -19,3 +19,7 @@ loom:include(expr)
 ```ocaml
 loom:include(impl)
 ```
+
+```ocaml
+loom:include(replace)
+```
