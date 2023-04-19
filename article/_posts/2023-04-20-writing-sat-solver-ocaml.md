@@ -76,7 +76,7 @@ let rec free (e: expr): string_set =
 # Brute Forcing
 
 ```ocaml
-module type BRUTE = sig
+module type SAT = sig
   val satisfiable : expr -> bool
 end
 ```
@@ -89,8 +89,8 @@ let any (e: expr): string option =
 ```
 
 ```ocaml
-module Brute: BRUTE = struct  
-  let satisfiable (e: expr): bool =
+module Brute: SAT = struct  
+  let rec satisfiable (e: expr): bool =
     match any e with
     | None ->
       (* No free variables. *)

@@ -37,7 +37,7 @@ loom:include(free)
 # Brute Forcing
 
 ```ocaml
-loom:include(bftype)
+loom:include(modtype)
 ```
 
 ```ocaml

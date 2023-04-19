@@ -57,11 +57,11 @@ let rec free (e: expr): string_set =
   | Or (p, q) -> SS.union (free p) (free q)
 (* loom:end(free) *)
 
-(* loom:start(bftype) *)
-module type BRUTE = sig
+(* loom:start(modtype) *)
+module type SAT = sig
   val satisfiable : expr -> bool
 end
-(* loom:end(bftype) *)
+(* loom:end(modtype) *)
 
 (* loom:start(any) *)
 let any (e: expr): string option =
@@ -71,8 +71,8 @@ let any (e: expr): string option =
 (* loom:end(any) *)
 
 (* loom:start(bfmodule) *)
-module Brute: BRUTE = struct  
-  let satisfiable (e: expr): bool =
+module Brute: SAT = struct  
+  let rec satisfiable (e: expr): bool =
     match any e with
     | None ->
       (* No free variables. *)
