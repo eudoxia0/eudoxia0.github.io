@@ -24,7 +24,9 @@ Making spaced repetition into a habit lets me have the best of both worlds: I ca
 
 [si]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4543385/
 
-The next post will be about how I learnt to use spaced repetition effectively.
+The [next post][next] will be about how I learnt to use spaced repetition effectively.
+
+[next]: /article/effective-spaced-repetition
 
 # Footnotes
 
