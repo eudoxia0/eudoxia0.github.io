@@ -2,38 +2,47 @@ CHAPTERS: list[dict[str, str]] = [
     {
         "title": "The Cartesian Theatre",
         "poem": "Gentzen trees — concave ocean — paradise regained",
+        "slug": "the-cartesian-theatre",
     },
     {
         "title": "Wepwawet",
         "poem": "breathed water — K2 — had been human",
+        "slug": "wepwawet",
     },
     {
         "title": "Objects in Space",
         "poem": "Nimrud — travel backwards — what hope?",
+        "slug": "objects-in-space",
     },
     {
         "title": "Without Organs",
         "poem": "drowned — starlings — this is all that you are",
+        "slug": "without-organs",
     },
     {
         "title": "Ring Zero",
         "poem": "fire and light — Wang tiles — Brodmann 39",
+        "slug": "ring-zero",
     },
     {
         "title": "The Book of Days",
         "poem": "Stay — among the gods — before a wing",
+        "slug": "the-book-of-days",
     },
     {
         "title": "The Lunar Surface",
         "poem": "life in amber — nothing left — Rijndael",
+        "slug": "the-lunar-surface",
     },
     {
         "title": "La Sienza Nuova",
         "poem": "That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain",
+        "slug": "la-sienza-nuova",
     },
     {
         "title": "Colophon",
         "poem": "Acknowledgments, things stolen, and astronomical math.",
+        "slug": "colophon",
     },
 ]
 
