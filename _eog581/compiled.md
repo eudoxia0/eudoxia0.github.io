@@ -1885,7 +1885,7 @@ Gliese 581 · Ne plus ultra
 </div>
 
 
-# La Sienza Nuova
+# La Scienza Nuova
 
 <div class="chapter-start">
 

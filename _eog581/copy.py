@@ -2,38 +2,47 @@ CHAPTERS: list[dict[str, str]] = [
     {
         "title": "The Cartesian Theatre",
         "poem": "Gentzen trees — concave ocean — paradise regained",
+        "slug": "the-cartesian-theatre",
     },
     {
         "title": "Wepwawet",
         "poem": "breathed water — K2 — had been human",
+        "slug": "wepwawet",
     },
     {
         "title": "Objects in Space",
         "poem": "Nimrud — travel backwards — what hope?",
+        "slug": "objects-in-space",
     },
     {
         "title": "Without Organs",
         "poem": "drowned — starlings — this is all that you are",
+        "slug": "without-organs",
     },
     {
         "title": "Ring Zero",
         "poem": "fire and light — Wang tiles — Brodmann 39",
+        "slug": "ring-zero",
     },
     {
         "title": "The Book of Days",
         "poem": "Stay — among the gods — before a wing",
+        "slug": "the-book-of-days",
     },
     {
         "title": "The Lunar Surface",
         "poem": "life in amber — nothing left — Rijndael",
+        "slug": "the-lunar-surface",
     },
     {
-        "title": "La Sienza Nuova",
+        "title": "La Scienza Nuova",
         "poem": "That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain",
+        "slug": "la-sienza-nuova",
     },
     {
         "title": "Colophon",
         "poem": "Acknowledgments, things stolen, and astronomical math.",
+        "slug": "colophon",
     },
 ]
 
@@ -53,9 +62,6 @@ EPIGRAPH: str = """<div class="epigraph-group"><div class="epigraph">
 </p>
 </div></div>"""
 
-def slugify(s: str) -> str:
-    return s.lower().replace(" ", "-")
-
 def generate_pages():
     # Generate pages.
     for idx, chapter in enumerate(CHAPTERS):
@@ -63,8 +69,8 @@ def generate_pages():
         # Parse.
         title: str = chapter["title"]
         poem: str = chapter["poem"]
-        # Construct slug, file paths.
-        slug: str = slugify(title)
+        slug: str = chapter["slug"]
+        # Construct file paths.
         source_file: str = f"{idx}-{slug}.md"
         target_file: str = f"../fiction/_posts/eog581/2022-11-15-{slug}.md"
         # Navigation.
@@ -72,16 +78,16 @@ def generate_pages():
         forward: str | None
         if idx == 1:
             backward = None
-            forward = slugify(CHAPTERS[idx]["title"])
+            forward = CHAPTERS[idx]["slug"]
         elif idx == 8:
-            backward = slugify(CHAPTERS[idx-2]["title"])
+            backward = CHAPTERS[idx-2]["slug"]
             forward = "colophon"
         elif idx == 9:
             backward = None
             forward = None
         else:
-            backward = slugify(CHAPTERS[idx-2]["title"])
-            forward = slugify(CHAPTERS[idx]["title"])
+            backward = CHAPTERS[idx-2]["slug"]
+            forward = CHAPTERS[idx]["slug"]
         # Synthesize front matter.
         front_matter: str
         if idx == 9:
@@ -221,7 +227,7 @@ def concatenate():
         idx += 1
         title: str = chapter["title"]
         poem: str = chapter["poem"]
-        slug: str = slugify(title)
+        slug: str = chapter["slug"]
         source_file: str = f"{idx}-{slug}.md"
         body: str
         with open(source_file, "r") as stream:
