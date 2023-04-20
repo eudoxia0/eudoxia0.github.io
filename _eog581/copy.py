@@ -72,8 +72,8 @@ def generate_pages():
         # Parse.
         title: str = chapter["title"]
         poem: str = chapter["poem"]
-        # Construct slug, file paths.
-        slug: str = slugify(title)
+        slug: str = chapter["slug"]
+        # Construct file paths.
         source_file: str = f"{idx}-{slug}.md"
         target_file: str = f"../fiction/_posts/eog581/2022-11-15-{slug}.md"
         # Navigation.
