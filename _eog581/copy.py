@@ -62,9 +62,6 @@ EPIGRAPH: str = """<div class="epigraph-group"><div class="epigraph">
 </p>
 </div></div>"""
 
-def slugify(s: str) -> str:
-    return s.lower().replace(" ", "-")
-
 def generate_pages():
     # Generate pages.
     for idx, chapter in enumerate(CHAPTERS):
@@ -81,16 +78,16 @@ def generate_pages():
         forward: str | None
         if idx == 1:
             backward = None
-            forward = slugify(CHAPTERS[idx]["title"])
+            forward = CHAPTERS[idx]["slug"]
         elif idx == 8:
-            backward = slugify(CHAPTERS[idx-2]["title"])
+            backward = CHAPTERS[idx-2]["slug"]
             forward = "colophon"
         elif idx == 9:
             backward = None
             forward = None
         else:
-            backward = slugify(CHAPTERS[idx-2]["title"])
-            forward = slugify(CHAPTERS[idx]["title"])
+            backward = CHAPTERS[idx-2]["slug"]
+            forward = CHAPTERS[idx]["slug"]
         # Synthesize front matter.
         front_matter: str
         if idx == 9:
@@ -230,7 +227,7 @@ def concatenate():
         idx += 1
         title: str = chapter["title"]
         poem: str = chapter["poem"]
-        slug: str = slugify(title)
+        slug: str = chapter["slug"]
         source_file: str = f"{idx}-{slug}.md"
         body: str
         with open(source_file, "r") as stream:
