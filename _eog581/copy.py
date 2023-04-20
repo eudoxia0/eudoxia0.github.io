@@ -35,7 +35,7 @@ CHAPTERS: list[dict[str, str]] = [
         "slug": "the-lunar-surface",
     },
     {
-        "title": "La Sienza Nuova",
+        "title": "La Scienza Nuova",
         "poem": "That I had wings like a dove — for then I would fly away — and be at rest — I would wander far away — and in the wilderness remain",
         "slug": "la-sienza-nuova",
     },
