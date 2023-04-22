@@ -249,7 +249,10 @@ In this section I'll show you how to build a simple SAT solver in Python. This
 is the simplest possible SAT solver: there is not one optimization and the time
 complexity is exponential. For real-life use, you'll either want to use a
 commercial off-the-shelf solver or optimize this further (there's a great deal
-of literature on how to do this). The point is to de-mistify the process somewhat (SAT solving sounds very ivory tower) and also to provide an actual, working implementation of this post as a software object you can experiment with.
+of literature on how to do this). The point is to de-mistify the process
+somewhat (SAT solving sounds very ivory tower) and also to provide an actual,
+working implementation of this post as a software object you can experiment
+with.
 
 First, some types to represent logic expressions:
 
@@ -275,19 +278,24 @@ The core logic is implemented like this:
 loom:include(solver)
 ```
 
-`any_var` is a function that takes an expression, and returns an arbitrarily-chosen variable. This is implemented by recursively building up the set of free variables, then sorting the variables (for determinism) alphabetically and picking the first one:
+`any_var` is a function that takes an expression, and returns an
+arbitrarily-chosen variable. This is implemented by recursively building up the
+set of free variables, then sorting the variables (for determinism)
+alphabetically and picking the first one:
 
 ```python
 loom:include(free)
 ```
 
-Evaluation is done in the base case of the recursion, when all variables have been replaced:
+Evaluation is done in the base case of the recursion, when all variables have
+been replaced:
 
 ```python
 loom:include(eval)
 ```
 
-Finally, the `replace` function takes an expression, and replaces all instances of the variable with the given name with a Boolean constant:
+Finally, the `replace` function takes an expression, and replaces all instances
+of the variable with the given name with a Boolean constant:
 
 ```python
 loom:include(replace)
@@ -320,7 +328,8 @@ Consider the following package database:
          v2
          v3
 
-We can translate this into a logic formula as follows (using some helper functions):
+We can translate this into a logic formula as follows (using some helper
+functions):
 
 ```python
 loom:include(example)
