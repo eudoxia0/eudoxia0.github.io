@@ -179,42 +179,42 @@ def notboth(a: str, b: str) -> Expr:
 
 
 formulas: list[Expr] = [
-    Var("A1"),
-    dep("A1", ["B2", "B3"]),
-    dep("A1", ["G3"]),
-    dep("B1", ["D1"]),
-    dep("B2", ["D2"]),
-    dep("B3", ["D2", "D3"]),
-    dep("G1", ["D1"]),
-    dep("G2", ["D2"]),
-    dep("G3", ["D3"]),
-    notboth("B1", "B2"),
-    notboth("B2", "B3"),
-    notboth("B3", "B1"),
-    notboth("D1", "D2"),
-    notboth("D2", "D3"),
-    notboth("D3", "D1"),
-    notboth("G1", "G2"),
-    notboth("G2", "G3"),
-    notboth("G3", "G1"),
+    Var("Alpha-v1"),
+    dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
+    dep("Alpha-v1", ["Gamma-v3"]),
+    dep("Beta-v1", ["Delta-v1"]),
+    dep("Beta-v2", ["Delta-v2"]),
+    dep("Beta-v3", ["Delta-v2", "Delta-v3"]),
+    dep("Gamma-v1", ["Delta-v1"]),
+    dep("Gamma-v2", ["Delta-v2"]),
+    dep("Gamma-v3", ["Delta-v3"]),
+    notboth("Beta-v1", "Beta-v2"),
+    notboth("Beta-v2", "Beta-v3"),
+    notboth("Beta-v3", "Beta-v1"),
+    notboth("Delta-v1", "Delta-v2"),
+    notboth("Delta-v2", "Delta-v3"),
+    notboth("Delta-v3", "Delta-v1"),
+    notboth("Gamma-v1", "Gamma-v2"),
+    notboth("Gamma-v2", "Gamma-v3"),
+    notboth("Gamma-v3", "Gamma-v1"),
 ]
 
 formula: Expr = ands(formulas)
 
 
 def string_of_expr(e: Expr) -> str:
-    if isinstance(e, TrueExpr):
-        return "T"
-    elif isinstance(e, FalseExpr):
-        return "F"
+    if isinstance(e, FalseExpr):
+        return r"\mathbf{F}"
+    elif isinstance(e, TrueExpr):
+        return r"\mathbf{T}"
     elif isinstance(e, Var):
-        return e.name
+        return r"\text{" + e.name + "}"
     elif isinstance(e, Not):
-        return "¬" + string_of_expr(e.expr)
+        return r"\neg" + string_of_expr(e.expr)
     elif isinstance(e, And):
-        return "(" + string_of_expr(e.expr1) + " ∧ " + string_of_expr(e.expr2) + ")"
+        return "(" + string_of_expr(e.expr1) + r" \land " + string_of_expr(e.expr2) + ")"
     elif isinstance(e, Or):
-        return "(" + string_of_expr(e.expr1) + " ∨ " + string_of_expr(e.expr2) + ")"
+        return "(" + string_of_expr(e.expr1) + r" \lor " + string_of_expr(e.expr2) + ")"
     else:
         raise TypeError("Invalid expression type")
 
