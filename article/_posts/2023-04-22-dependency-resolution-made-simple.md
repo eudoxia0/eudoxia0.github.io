@@ -241,7 +241,7 @@ according to the following rules:
 1. **The Root of the DAG:** the package we're resolving dependencies for is the
    root of the build DAG. The version of the package we're building must be true
    on all assignments, so we have to $\land$ it together with every other
-   clause.
+   term.
 
 # A Simple SAT Solver
 
