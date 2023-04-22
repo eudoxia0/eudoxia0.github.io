@@ -1,6 +1,11 @@
 ---
 title: Dependency Resolution Made Simple
 summary: Resolving dependencies with a homebrew SAT solver.
+card: dependency-resolution-made-simple.jpg
+card_source: |
+  [_Dimostrazione in grande del capitello di una delle colonne del Tempio di Giunone dentro il Portici d`Ottavia_][link], Giovanni Battista Piranesi, 1784.
+
+  [link]: https://it.wikisource.org/wiki/Le_antichit%C3%A0_Romane_(Piranesi)/4-XLV
 math: yes
 ---
 
@@ -182,7 +187,7 @@ We will translate the set of dependency constraints to a logical expression, acc
   
     Ensures we only have one version of `foo`.
 
-1. **The Root of the DAG:** the package we're resolving dependencies for is the root of the build DAG. The version of the package we're building must be true on all assignments, so we have to `\land` it together with every other clause.
+1. **The Root of the DAG:** the package we're resolving dependencies for is the root of the build DAG. The version of the package we're building must be true on all assignments, so we have to $\land$ it together with every other clause.
 
 # A Simple SAT Solver
 
