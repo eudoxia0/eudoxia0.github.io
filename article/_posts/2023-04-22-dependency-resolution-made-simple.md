@@ -270,14 +270,14 @@ First, we need a way to represent logical expressions:
 $$
 \begin{align*}
 \, &\text{Alpha-v1} \\
-\land \, &(\text{Alpha-v1}\implies(\text{Beta-v2} \lor \text{Beta-v3})) \\
-\land \, &(\text{Alpha-v1}\implies(\text{Gamma-v3})) \\
-\land \, &(\text{Beta-v1}\implies(\text{Delta-v1})) \\
-\land \, &(\text{Beta-v2}\implies(\text{Delta-v2})) \\
-\land \, &(\text{Beta-v3}\implies(\text{Delta-v2} \lor \text{Delta-v3})) \\
-\land \, &(\text{Gamma-v1}\implies(\text{Delta-v1})) \\
-\land \, &(\text{Gamma-v2}\implies(\text{Delta-v2})) \\
-\land \, &(\text{Gamma-v3}\implies(\text{Delta-v3})) \\
+\land \, &(\text{Alpha-v1} \implies (\text{Beta-v2} \lor \text{Beta-v3})) \\
+\land \, &(\text{Alpha-v1} \implies (\text{Gamma-v3})) \\
+\land \, &(\text{Beta-v1} \implies (\text{Delta-v1})) \\
+\land \, &(\text{Beta-v2} \implies (\text{Delta-v2})) \\
+\land \, &(\text{Beta-v3} \implies (\text{Delta-v2} \lor \text{Delta-v3})) \\
+\land \, &(\text{Gamma-v1} \implies (\text{Delta-v1})) \\
+\land \, &(\text{Gamma-v2} \implies (\text{Delta-v2})) \\
+\land \, &(\text{Gamma-v3} \implies (\text{Delta-v3})) \\
 \land \, &\neg(\text{Beta-v1} \land \text{Beta-v2}) \\
 \land \, &\neg(\text{Beta-v2} \land \text{Beta-v3}) \\
 \land \, &\neg(\text{Beta-v3} \land \text{Beta-v1}) \\
