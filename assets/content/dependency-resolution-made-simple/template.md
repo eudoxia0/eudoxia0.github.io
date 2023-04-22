@@ -412,7 +412,6 @@ Or, put another way:
 
 | Package   | Version |
 |-----------|---------|
-| `app`     | 0       |
 | `http`    | 3       |
 | `sql`     | 2       |
 | `stdlib`  | 4       |
@@ -440,7 +439,6 @@ Running the same formula over this new solver yields:
 
 | Package   | Version |
 |-----------|---------|
-| `app`     | 0       |
 | `http`    | 4       |
 | `sql`     | 2       |
 | `stdlib`  | 4       |
