@@ -133,9 +133,9 @@ We can evaluate the expression in a step by step manner like so:
 | $(\neg (\false \lor \true)) \lor (\lnot \false \land \true)$               | $\true \land \false$ is false. |
 | $(\neg \true) \lor (\lnot \false \land \true)$                             | $\false \lor \true$ is true.   |
 | $\false \lor (\lnot \false \land \true)$                                   | $\neg \true$ is false.         |
-| $\false \lor (\true \land \true)$                                          | $\neg \false$ is true.          |
-| $\false \lor \true$                                                        | $\true \land \true$ is true.    |
-| $\true$                                                                    | $\false \lor \true$ is true.    |
+| $\false \lor (\true \land \true)$                                          | $\neg \false$ is true.         |
+| $\false \lor \true$                                                        | $\true \land \true$ is true.   |
+| $\true$                                                                    | $\false \lor \true$ is true.   |
 
 The **Boolean satisfiability problem** is this:
 
@@ -157,13 +157,13 @@ We will translate the set of dependency constraints to a logical expression, acc
     - `1.3`
     - `1.4`
     - `1.5`
-    
+
     Then the versions that satisfy this constraint are (`1.2`, `1.3`, `1.4`). This constrain gets translated into the following logical sentence:
-    
+
     $$
     \text{foo-v1.2} \lor \text{foo-v.1.3} \lor \text{foo-v1.4}
     $$
-    
+
     Arbitrarily complex version range checks can be implemented, by simply treating the check as a predicate that returns either true or false for every version in the package index. Then you make a disjunction of all the versions for which it returned true.
 
 1. **Dependencies are Implications:** `foo-v1` depends on `bar-v2` or `bar-3` means "one of `bar-v2` or `bar-v3` must be used, _conditional on_ `foo-v1` being used". So we translate this as an implication:
@@ -184,7 +184,7 @@ We will translate the set of dependency constraints to a logical expression, acc
       (\neg (\text{foo-v3} & \land \text{foo-v4}))
     \end{align*}
     $$
-  
+
     Ensures we only have one version of `foo`.
 
 1. **The Root of the DAG:** the package we're resolving dependencies for is the root of the build DAG. The version of the package we're building must be true on all assignments, so we have to $\land$ it together with every other clause.
@@ -230,17 +230,17 @@ $$
 $$
 
 | Variable | Value |
-| -------- | ----- |
-| Alpha-v1 | True |
-| Beta-v1 | False |
-| Beta-v2 | False |
-| Beta-v3 | True |
+|----------|-------|
+| Alpha-v1 | True  |
+| Beta-v1  | False |
+| Beta-v2  | False |
+| Beta-v3  | True  |
 | Delta-v1 | False |
 | Delta-v2 | False |
-| Delta-v3 | True |
+| Delta-v3 | True  |
 | Gamma-v1 | False |
 | Gamma-v2 | False |
-| Gamma-v3 | True |
+| Gamma-v3 | True  |
 
 
 # See Also
