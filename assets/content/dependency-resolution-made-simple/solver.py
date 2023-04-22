@@ -159,7 +159,7 @@ def notboth(a: str, b: str) -> Expr:
     return Not(And([Var(a), Var(b)]))
 
 
-formula: Expr = And([
+formula: And = And([
     Var("Alpha-v1"),
     dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
     dep("Alpha-v1", ["Gamma-v3"]),
