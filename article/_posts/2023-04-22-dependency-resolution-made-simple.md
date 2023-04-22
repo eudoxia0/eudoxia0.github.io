@@ -191,6 +191,8 @@ We will translate the set of dependency constraints to a logical expression, acc
 
 # A Simple SAT Solver
 
+In this section I'll show you how to build a simple SAT solver in Python. This is the simplest possible SAT solver: there is not one optimization and the time complexity is exponential. For real-life use, you'll either want to use a commercial off-the-shelf solver or optimize this further (there's a great deal of literature on how to do this).
+
 # Example Run
 
 # See Also
