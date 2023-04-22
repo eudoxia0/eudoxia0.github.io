@@ -39,7 +39,11 @@ In other words, there's a tradeoff:
 1. Less expressive version ranges make things easier for the package manager, while making the user experience hellish and involving a lot of manual work.
 1. More expressive version ranges allow users greater freedom to allow or deny specific package versions, while complicating the work that the package manager has to perform.
 
-Finding an assignment (a map from package names to the package version to use) that satisfies all of your transitive dependencies and that is free of colissions is a hard problem. It is NP-complete, actually. Manifest/lock files are orthogonal to this: manifest files are about making builds reproducible, but to make a manifest file you have to have resolved the dependencies in the first place.
+The **dependency resolution problem** is:
+
+>Given a set of package dependency constraints, find an assignment---a map of package names to specific package versions---that satisfies every constraint without having multiple versions of the same package.
+
+This turns out to be a surprisingly hard problem. NP-complete, actually. Manifest/lock files are orthogonal to this: manifest files are about making builds reproducible, but to make a manifest file you have to have resolved the dependencies in the first place.
 
 The dependency resolution problem is solved, in wildly different ways, by different package managers:
 
@@ -128,10 +132,13 @@ We can evaluate the expression in a step by step manner like so:
 | $\false \lor \true$                                                        | $\true \land \true$ is true.    |
 | $\true$                                                                    | $\false \lor \true$ is true.    |
 
+The **Boolean satisfiability problem** is this:
 
-The Boolean satisfiability problem is this: given an expression in logic, is there some assignment that makes it true? (And, if there is, ideally, we'd like to find at least one of those assignments.)
+>Given a logical expression, find an assignment of variables to truth values that makes it true.
 
-Solutions to this problem have surprisingly many useful applications, including dependency resolution.
+Solutions to this problem have surprisingly many useful applications. You'll notice this is worded similarly to the statement of the dependency resolution problem above.
+
+Boolean satisfiability is pretty thoroughly solved. By translating from one problem to the next, we can profit from decades of work in this area. The next section explains how.
 
 # Translating the Problem
 
