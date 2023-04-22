@@ -249,7 +249,7 @@ In this section I'll show you how to build a simple SAT solver in Python. This
 is the simplest possible SAT solver: there is not one optimization and the time
 complexity is exponential. For real-life use, you'll either want to use a
 commercial off-the-shelf solver or optimize this further (there's a great deal
-of literature on how to do this).
+of literature on how to do this). The point is to de-mistify the process somewhat (SAT solving sounds very ivory tower) and also to provide an actual, working implementation of this post as a software object you can experiment with.
 
 First, some types to represent logic expressions:
 

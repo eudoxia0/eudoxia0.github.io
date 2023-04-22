@@ -133,15 +133,8 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f: Expr = replace(e, free_var, False)
         f_bs: Bindings = dict(bs)
         f_bs[free_var] = False
-        # Solve both branches, and join them.
-        return join(solver(t, t_bs), solver(f, f_bs))
-
-
-def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
-    if a is not None:
-        return a
-    else:
-        return b
+        # Solve both branches, and return the first one that works.
+        return solver(t, t_bs) or solver(f, f_bs)
 # loom:end(solver)
 
 #
@@ -200,16 +193,6 @@ def string_of_expr(e: Expr) -> str:
     else:
         raise TypeError("Invalid expression type")
 
-
-for e in formula.exprs:
-    print(r"\land \, &" + string_of_expr(e) + r" \\")
-
-bs: Bindings | None = solve(formula)
-if bs is not None:
-    print("| Variable | Value |")
-    print("| -------- | ----- |")
-    for k, v in sorted(bs.items(), key=lambda p: p[0]):
-        print(f"| {k} | {v} |")
 
 # loom:start(run)
 bs: Bindings | None = solve(formula)
