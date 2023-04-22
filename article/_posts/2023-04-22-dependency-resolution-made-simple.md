@@ -303,6 +303,43 @@ The basic algorithm (and this is almost too stupid to be considered) is:
     1. If there are no variables, evaluate the expression. If it evaluates to
        $\true$, return the list of variable replacements it took to get here.
 
+This logic is implemented like this:
+
+```python
+Bindings = dict[str, bool]
+
+
+def solve(e: Expr) -> Bindings | None:
+    return solver(e, {})
+
+
+def solver(e: Expr, bs: Bindings) -> Bindings | None:
+    free_var = any_var(e)
+    if free_var is None:
+        if eval_expr(e):
+            return bs
+        else:
+            return None
+    else:
+        # Replace with True.
+        t: Expr = replace(e, free_var, True)
+        t_bs: Bindings = dict(bs)
+        t_bs[free_var] = True
+        # Replace with False.
+        f: Expr = replace(e, free_var, False)
+        f_bs: Bindings = dict(bs)
+        f_bs[free_var] = False
+        # Solve both branches, and join them.
+        return join(solver(t, t_bs), solver(f, f_bs))
+
+
+def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
+    if a is not None:
+        return a
+    else:
+        return b
+```
+
 ```python
 def replace(e: Expr, name: str, value: bool) -> Expr:
     if isinstance(e, FalseExpr):
@@ -371,41 +408,6 @@ def any_var(e: Expr) -> str | None:
         return None
     else:
         return variables[0]
-```
-
-```python
-Bindings = dict[str, bool]
-
-
-def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
-    if a is not None:
-        return a
-    else:
-        return b
-
-
-def solve(e: Expr) -> Bindings | None:
-    return solver(e, {})
-
-
-def solver(e: Expr, bs: Bindings) -> Bindings | None:
-    free_var = any_var(e)
-    if free_var is None:
-        if eval_expr(e):
-            return bs
-        else:
-            return None
-    else:
-        # Replace with True.
-        t: Expr = replace(e, free_var, True)
-        t_bs: Bindings = dict(bs)
-        t_bs[free_var] = True
-        # Replace with False.
-        f: Expr = replace(e, free_var, False)
-        f_bs: Bindings = dict(bs)
-        f_bs[free_var] = False
-        # Solve both branches, and join them.
-        return join(solver(t, t_bs), solver(f, f_bs))
 ```
 
 # Example Run
