@@ -102,7 +102,7 @@ def free(e: Expr) -> set[str]:
         raise TypeError("Invalid expression type")
 
 def any_var(e: Expr) -> str | None:
-    variables: list[str] = list(free(e))
+    variables: list[str] = sorted(list(free(e)))
     if len(variables) == 0:
         return None
     else:

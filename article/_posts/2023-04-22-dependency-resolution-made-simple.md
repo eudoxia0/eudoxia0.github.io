@@ -304,7 +304,7 @@ The basic algorithm (and this is almost too stupid to be considered) is:
     1. If there are no variables, evaluate the expression. If it evaluates to
        $\true$, return the list of variable replacements it took to get here.
 
-This logic is implemented like this:
+The core logic is implemented like this:
 
 ```python
 Bindings = dict[str, bool]
@@ -330,9 +330,60 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f: Expr = replace(e, free_var, False)
         f_bs: Bindings = dict(bs)
         f_bs[free_var] = False
-        # Solve both branches, and join them.
+        # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
 ```
+
+`any_var` is a function that takes an expression, and returns an arbitrarily-chosen variable. This is implemented by recursively building up the set of free variables, then sorting the variables (for determinism) alphabetically and picking the first one:
+
+```python
+def free(e: Expr) -> set[str]:
+    if isinstance(e, FalseExpr) or isinstance(e, TrueExpr):
+        return set()
+    elif isinstance(e, Var):
+        return {e.name}
+    elif isinstance(e, Not):
+        return free(e.expr)
+    elif isinstance(e, And):
+        return set.union(*(free(expr) for expr in e.exprs))
+    elif isinstance(e, Or):
+        return set.union(*(free(expr) for expr in e.exprs))
+    elif isinstance(e, Impl):
+        return free(e.p).union(free(e.q))
+    else:
+        raise TypeError("Invalid expression type")
+
+def any_var(e: Expr) -> str | None:
+    variables: list[str] = sorted(list(free(e)))
+    if len(variables) == 0:
+        return None
+    else:
+        return variables[0]
+```
+
+Evaluation is done in the base case of the recursion, when all variables have been replaced:
+
+```python
+def eval_expr(e: Expr) -> bool:
+    if isinstance(e, FalseExpr):
+        return False
+    elif isinstance(e, TrueExpr):
+        return True
+    elif isinstance(e, Var):
+        raise ValueError(f"eval: the variable {e.name} has not been replaced.")
+    elif isinstance(e, Not):
+        return not eval_expr(e.expr)
+    elif isinstance(e, And):
+        return all(eval_expr(expr) for expr in e.exprs)
+    elif isinstance(e, Or):
+        return any(eval_expr(expr) for expr in e.exprs)
+    elif isinstance(e, Impl):
+        return (not eval_expr(e.p)) or eval_expr(e.q)
+    else:
+        raise TypeError("Invalid expression type")
+```
+
+Finally, the `replace` function takes an expression, and replaces all instances of the variable with the given name with a Boolean constant:
 
 ```python
 def replace(e: Expr, name: str, value: bool) -> Expr:
@@ -355,51 +406,6 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
         return Impl(replace(e.p, name, value), replace(e.q, name, value))
     else:
         raise TypeError("Invalid expression type")
-```
-
-```python
-def eval_expr(e: Expr) -> bool:
-    if isinstance(e, FalseExpr):
-        return False
-    elif isinstance(e, TrueExpr):
-        return True
-    elif isinstance(e, Var):
-        raise ValueError(f"eval: the variable {e.name} has not been replaced.")
-    elif isinstance(e, Not):
-        return not eval_expr(e.expr)
-    elif isinstance(e, And):
-        return all(eval_expr(expr) for expr in e.exprs)
-    elif isinstance(e, Or):
-        return any(eval_expr(expr) for expr in e.exprs)
-    elif isinstance(e, Impl):
-        return (not eval_expr(e.p)) or eval_expr(e.q)
-    else:
-        raise TypeError("Invalid expression type")
-```
-
-```python
-def free(e: Expr) -> set[str]:
-    if isinstance(e, FalseExpr) or isinstance(e, TrueExpr):
-        return set()
-    elif isinstance(e, Var):
-        return {e.name}
-    elif isinstance(e, Not):
-        return free(e.expr)
-    elif isinstance(e, And):
-        return set.union(*(free(expr) for expr in e.exprs))
-    elif isinstance(e, Or):
-        return set.union(*(free(expr) for expr in e.exprs))
-    elif isinstance(e, Impl):
-        return free(e.p).union(free(e.q))
-    else:
-        raise TypeError("Invalid expression type")
-
-def any_var(e: Expr) -> str | None:
-    variables: list[str] = list(free(e))
-    if len(variables) == 0:
-        return None
-    else:
-        return variables[0]
 ```
 
 # Example Run

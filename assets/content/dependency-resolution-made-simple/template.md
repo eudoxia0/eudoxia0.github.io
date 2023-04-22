@@ -269,22 +269,28 @@ The basic algorithm (and this is almost too stupid to be considered) is:
     1. If there are no variables, evaluate the expression. If it evaluates to
        $\true$, return the list of variable replacements it took to get here.
 
-This logic is implemented like this:
+The core logic is implemented like this:
 
 ```python
 loom:include(solver)
 ```
 
+`any_var` is a function that takes an expression, and returns an arbitrarily-chosen variable. This is implemented by recursively building up the set of free variables, then sorting the variables (for determinism) alphabetically and picking the first one:
+
 ```python
-loom:include(replace)
+loom:include(free)
 ```
+
+Evaluation is done in the base case of the recursion, when all variables have been replaced:
 
 ```python
 loom:include(eval)
 ```
 
+Finally, the `replace` function takes an expression, and replaces all instances of the variable with the given name with a Boolean constant:
+
 ```python
-loom:include(free)
+loom:include(replace)
 ```
 
 # Example Run
