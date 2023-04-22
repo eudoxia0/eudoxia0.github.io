@@ -305,28 +305,17 @@ loom:include(replace)
 
 Consider the following package database:
 
-       Alpha
-         v
-           beta=v2 or beta=v3
-           gamma=v3
-       Beta
-         v1
-           delta=v1
-         v2
-           delta=v2
-         v3
-           delta=v2 or delta=v3
-       Gamma
-         v1
-           delta=v1
-         v2
-           delta=v2
-         v3
-           delta=v3
-       Delta
-         v1
-         v2
-         v3
+| Package   | Versions               |
+|-----------|------------------------|
+| `app`     | 0                      |
+| `sql`     | 0, 1, 2, 3             |
+| `threads` | 0, 1, 2                |
+| `http`    | 0, 1, 2, 3, 4, 5, 6, 7 |
+| `stdlib`  | 0, 1, 2, 3, 4, 5, 6    |
+
+We have an application (the root of the build DAG) and four dependencies, one of
+which (`threads`) will be transitive. And we have the following constraints:
+
 
 We can translate this into a logic formula as follows (using some helper
 functions):
@@ -339,26 +328,86 @@ The full formula looks like this:
 
 $$
 \begin{align*}
-~~ &\text{Alpha-v1} \\
-\land ~~ &(\text{Alpha-v1} \implies (\text{Beta-v2} \lor \text{Beta-v3})) \\
-\land ~~ &(\text{Alpha-v1} \implies \text{Gamma-v3}) \\
-\land ~~ &(\text{Beta-v1} \implies \text{Delta-v1}) \\
-\land ~~ &(\text{Beta-v2} \implies \text{Delta-v2}) \\
-\land ~~ &(\text{Beta-v3} \implies (\text{Delta-v2} \lor \text{Delta-v3})) \\
-\land ~~ &(\text{Gamma-v1} \implies \text{Delta-v1}) \\
-\land ~~ &(\text{Gamma-v2} \implies \text{Delta-v2}) \\
-\land ~~ &(\text{Gamma-v3} \implies \text{Delta-v3}) \\
-\land ~~ &\neg(\text{Beta-v1} \land \text{Beta-v2}) \\
-\land ~~ &\neg(\text{Beta-v2} \land \text{Beta-v3}) \\
-\land ~~ &\neg(\text{Beta-v3} \land \text{Beta-v1}) \\
-\land ~~ &\neg(\text{Delta-v1} \land \text{Delta-v2}) \\
-\land ~~ &\neg(\text{Delta-v2} \land \text{Delta-v3}) \\
-\land ~~ &\neg(\text{Delta-v3} \land \text{Delta-v1}) \\
-\land ~~ &\neg(\text{Gamma-v1} \land \text{Gamma-v2}) \\
-\land ~~ &\neg(\text{Gamma-v2} \land \text{Gamma-v3}) \\
-\land ~~ &\neg(\text{Gamma-v3} \land \text{Gamma-v1})
+&\text{Alpha-v0} \\
+\land ~~ &(\text{app-v0}\implies(\text{sql-v2} \lor \text{sql-v3})) \\
+\land ~~ &(\text{app-v0}\implies(\text{csv-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{http-v5} \lor \text{http-v6} \lor \text{http-v7})) \\
+\land ~~ &(\text{app-v0}\implies(\text{stdlib-v6})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{csv-v1})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{csv-v1} \lor \text{csv-v2})) \\
+\land ~~ &(\text{sql-v3}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{sql-v3}\implies(\text{csv-v2})) \\
+\land ~~ &(\text{csv-v0}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{csv-v1}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{csv-v2}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v0}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v1}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v2}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v3}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
+\land ~~ &(\text{http-v4}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v5}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v6}\implies(\text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v7}\implies(\text{stdlib-v6})) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v2}) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v3}) \\
+\land ~~ &\neg(\text{sql-v2} \land \text{sql-v3}) \\
+\land ~~ &\neg(\text{csv-v0} \land \text{csv-v1}) \\
+\land ~~ &\neg(\text{csv-v0} \land \text{csv-v2}) \\
+\land ~~ &\neg(\text{csv-v1} \land \text{csv-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v1}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v5} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v5} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v6} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v1}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v5} \land \text{stdlib-v6})
 \end{align*}
 $$
+
 
 Running the solver on this:
 
@@ -368,8 +417,8 @@ loom:include(run)
 
 Yields the following assignment:
 
-| Variable | Value |
-|----------|-------|
+| Variable | Value    |
+|----------|----------|
 | Alpha-v1 | $\true$  |
 | Beta-v1  | $\false$ |
 | Beta-v2  | $\false$ |

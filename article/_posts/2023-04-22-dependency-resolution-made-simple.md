@@ -249,7 +249,10 @@ In this section I'll show you how to build a simple SAT solver in Python. This
 is the simplest possible SAT solver: there is not one optimization and the time
 complexity is exponential. For real-life use, you'll either want to use a
 commercial off-the-shelf solver or optimize this further (there's a great deal
-of literature on how to do this). The point is to de-mistify the process somewhat (SAT solving sounds very ivory tower) and also to provide an actual, working implementation of this post as a software object you can experiment with.
+of literature on how to do this). The point is to de-mistify the process
+somewhat (SAT solving sounds very ivory tower) and also to provide an actual,
+working implementation of this post as a software object you can experiment
+with.
 
 First, some types to represent logic expressions:
 
@@ -332,9 +335,13 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
+
 ```
 
-`any_var` is a function that takes an expression, and returns an arbitrarily-chosen variable. This is implemented by recursively building up the set of free variables, then sorting the variables (for determinism) alphabetically and picking the first one:
+`any_var` is a function that takes an expression, and returns an
+arbitrarily-chosen variable. This is implemented by recursively building up the
+set of free variables, then sorting the variables (for determinism)
+alphabetically and picking the first one:
 
 ```python
 def free(e: Expr) -> set[str]:
@@ -353,15 +360,18 @@ def free(e: Expr) -> set[str]:
     else:
         raise TypeError("Invalid expression type")
 
+
 def any_var(e: Expr) -> str | None:
     variables: list[str] = sorted(list(free(e)))
     if len(variables) == 0:
         return None
     else:
         return variables[0]
+
 ```
 
-Evaluation is done in the base case of the recursion, when all variables have been replaced:
+Evaluation is done in the base case of the recursion, when all variables have
+been replaced:
 
 ```python
 def eval_expr(e: Expr) -> bool:
@@ -381,9 +391,11 @@ def eval_expr(e: Expr) -> bool:
         return (not eval_expr(e.p)) or eval_expr(e.q)
     else:
         raise TypeError("Invalid expression type")
+
 ```
 
-Finally, the `replace` function takes an expression, and replaces all instances of the variable with the given name with a Boolean constant:
+Finally, the `replace` function takes an expression, and replaces all instances
+of the variable with the given name with a Boolean constant:
 
 ```python
 def replace(e: Expr, name: str, value: bool) -> Expr:
@@ -406,36 +418,27 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
         return Impl(replace(e.p, name, value), replace(e.q, name, value))
     else:
         raise TypeError("Invalid expression type")
+
 ```
 
 # Example Run
 
 Consider the following package database:
 
-       Alpha
-         v
-           beta=v2 or beta=v3
-           gamma=v3
-       Beta
-         v1
-           delta=v1
-         v2
-           delta=v2
-         v3
-           delta=v2 or delta=v3
-       Gamma
-         v1
-           delta=v1
-         v2
-           delta=v2
-         v3
-           delta=v3
-       Delta
-         v1
-         v2
-         v3
+| Package   | Versions               |
+|-----------|------------------------|
+| `app`     | 0                      |
+| `sql`     | 0, 1, 2, 3             |
+| `threads` | 0, 1, 2                |
+| `http`    | 0, 1, 2, 3, 4, 5, 6, 7 |
+| `stdlib`  | 0, 1, 2, 3, 4, 5, 6    |
 
-We can translate this into a logic formula as follows (using some helper functions):
+We have an application (the root of the build DAG) and four dependencies, one of
+which (`threads`) will be transitive. And we have the following constraints:
+
+
+We can translate this into a logic formula as follows (using some helper
+functions):
 
 ```python
 def dep(p: str, deps: list[str]) -> Expr:
@@ -474,26 +477,86 @@ The full formula looks like this:
 
 $$
 \begin{align*}
-~~ &\text{Alpha-v1} \\
-\land ~~ &(\text{Alpha-v1} \implies (\text{Beta-v2} \lor \text{Beta-v3})) \\
-\land ~~ &(\text{Alpha-v1} \implies \text{Gamma-v3}) \\
-\land ~~ &(\text{Beta-v1} \implies \text{Delta-v1}) \\
-\land ~~ &(\text{Beta-v2} \implies \text{Delta-v2}) \\
-\land ~~ &(\text{Beta-v3} \implies (\text{Delta-v2} \lor \text{Delta-v3})) \\
-\land ~~ &(\text{Gamma-v1} \implies \text{Delta-v1}) \\
-\land ~~ &(\text{Gamma-v2} \implies \text{Delta-v2}) \\
-\land ~~ &(\text{Gamma-v3} \implies \text{Delta-v3}) \\
-\land ~~ &\neg(\text{Beta-v1} \land \text{Beta-v2}) \\
-\land ~~ &\neg(\text{Beta-v2} \land \text{Beta-v3}) \\
-\land ~~ &\neg(\text{Beta-v3} \land \text{Beta-v1}) \\
-\land ~~ &\neg(\text{Delta-v1} \land \text{Delta-v2}) \\
-\land ~~ &\neg(\text{Delta-v2} \land \text{Delta-v3}) \\
-\land ~~ &\neg(\text{Delta-v3} \land \text{Delta-v1}) \\
-\land ~~ &\neg(\text{Gamma-v1} \land \text{Gamma-v2}) \\
-\land ~~ &\neg(\text{Gamma-v2} \land \text{Gamma-v3}) \\
-\land ~~ &\neg(\text{Gamma-v3} \land \text{Gamma-v1})
+&\text{Alpha-v0} \\
+\land ~~ &(\text{app-v0}\implies(\text{sql-v2} \lor \text{sql-v3})) \\
+\land ~~ &(\text{app-v0}\implies(\text{csv-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{http-v5} \lor \text{http-v6} \lor \text{http-v7})) \\
+\land ~~ &(\text{app-v0}\implies(\text{stdlib-v6})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{csv-v1})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{csv-v1} \lor \text{csv-v2})) \\
+\land ~~ &(\text{sql-v3}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{sql-v3}\implies(\text{csv-v2})) \\
+\land ~~ &(\text{csv-v0}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{csv-v1}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{csv-v2}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v0}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v1}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v2}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v3}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
+\land ~~ &(\text{http-v4}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v5}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v6}\implies(\text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{http-v7}\implies(\text{stdlib-v6})) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v2}) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v3}) \\
+\land ~~ &\neg(\text{sql-v2} \land \text{sql-v3}) \\
+\land ~~ &\neg(\text{csv-v0} \land \text{csv-v1}) \\
+\land ~~ &\neg(\text{csv-v0} \land \text{csv-v2}) \\
+\land ~~ &\neg(\text{csv-v1} \land \text{csv-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v1}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v5}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v4} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v5} \land \text{http-v6}) \\
+\land ~~ &\neg(\text{http-v5} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{http-v6} \land \text{http-v7}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v1}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v5}) \\
+\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v6}) \\
+\land ~~ &\neg(\text{stdlib-v5} \land \text{stdlib-v6})
 \end{align*}
 $$
+
 
 Running the solver on this:
 
@@ -506,8 +569,8 @@ if bs is not None:
 
 Yields the following assignment:
 
-| Variable | Value |
-|----------|-------|
+| Variable | Value    |
+|----------|----------|
 | Alpha-v1 | $\true$  |
 | Beta-v1  | $\false$ |
 | Beta-v2  | $\false$ |

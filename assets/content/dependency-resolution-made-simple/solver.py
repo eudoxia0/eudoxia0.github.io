@@ -62,6 +62,8 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
         return Impl(replace(e.p, name, value), replace(e.q, name, value))
     else:
         raise TypeError("Invalid expression type")
+
+
 # loom:end(replace)
 
 # loom:start(eval)
@@ -82,6 +84,8 @@ def eval_expr(e: Expr) -> bool:
         return (not eval_expr(e.p)) or eval_expr(e.q)
     else:
         raise TypeError("Invalid expression type")
+
+
 # loom:end(eval)
 
 # loom:start(free)
@@ -93,13 +97,14 @@ def free(e: Expr) -> set[str]:
     elif isinstance(e, Not):
         return free(e.expr)
     elif isinstance(e, And):
-        return set.union(*(free(expr) for expr in e.exprs))
+        return set().union(*[free(expr) for expr in e.exprs])
     elif isinstance(e, Or):
-        return set.union(*(free(expr) for expr in e.exprs))
+        return set().union(*[free(expr) for expr in e.exprs])
     elif isinstance(e, Impl):
         return free(e.p).union(free(e.q))
     else:
         raise TypeError("Invalid expression type")
+
 
 def any_var(e: Expr) -> str | None:
     variables: list[str] = sorted(list(free(e)))
@@ -107,6 +112,8 @@ def any_var(e: Expr) -> str | None:
         return None
     else:
         return variables[0]
+
+
 # loom:end(free)
 
 # loom:start(solver)
@@ -135,6 +142,8 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
+
+
 # loom:end(solver)
 
 #
@@ -200,3 +209,111 @@ if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(k, v)
 # loom:end(run)
+
+#
+# Example
+#
+
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class Dependency:
+    name: str
+    minimum: int
+    maximum: int
+
+@dataclass(frozen=True)
+class Package:
+    name: str
+    version: int
+    depends_on: list[Dependency]
+
+packages: list[Package] = [
+    Package(
+        "app",
+        0,
+        [
+            Dependency("sql", 2, 2),
+            Dependency("csv", 2, 2),
+            Dependency("http", 3, 4),
+            Dependency("stdlib", 4, 4),
+        ],
+    ),
+    Package("sql", 0, []),
+    Package("sql", 1, [Dependency("stdlib", 1, 4), Dependency("csv", 1, 1)]),
+    Package("sql", 2, [Dependency("stdlib", 2, 4), Dependency("csv", 1, 2)]),
+    Package("csv", 0, [Dependency("stdlib", 2, 4)]),
+    Package("csv", 1, [Dependency("stdlib", 2, 4)]),
+    Package("csv", 2, [Dependency("stdlib", 3, 4)]),
+    Package("http", 0, [Dependency("stdlib", 0, 3)]),
+    Package("http", 1, [Dependency("stdlib", 0, 3)]),
+    Package("http", 2, [Dependency("stdlib", 1, 4)]),
+    Package("http", 3, [Dependency("stdlib", 2, 4)]),
+    Package("http", 4, [Dependency("stdlib", 3, 4)]),
+]
+
+from itertools import combinations
+
+def convert(root: str, packages: list[Package]) -> Expr:
+    """
+    Given a package-version to use as the root of the build DAG, and a list of
+    package dependency constraints, convert them into a logical expression.
+    """
+    # First things first: we need the root package to be part of the assignment.
+    terms: list[Expr] = [Var(root)]
+    # Add implications.
+    for p in packages:
+        # Package versions imply their dependencies.
+        for dep in p.depends_on:
+            versions: list[int] = list(range(dep.minimum, dep.maximum + 1))
+            deps: list[Expr] = [package_var(dep.name, v) for v in versions]
+            impl: Impl = Impl(package_var(p.name, p.version), Or(deps))
+            terms.append(impl)
+    # Exclude every pair of versions. We do this by taking the set.of free
+    # variables in the expression built up so far, and for each package depended
+    # upon, we find all the versions mentioned for it and pairwise exclude them.
+    variables: set[str] = free(And(terms))
+    varnames: set[str] = set([var_name(v) for v in variables])
+    for name in varnames:
+        vers: set[int] = {var_version(v) for v in variables if var_name(v) == name}
+        for a, b in all_combinations(vers):
+            terms.append(Not(And([package_var(name, a), package_var(name, b)])))
+    # Finally, return the built up expression as a conjunction.
+    return And(terms)
+
+def package_var(name: str, version: int) -> Var:
+    return Var(f"{name}-v{version}")
+
+def var_name(var: str) -> str:
+    return var.split("-v")[0]
+
+def var_version(var: str) -> int:
+    return int(var.split("-v")[1])
+
+def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
+    return list(combinations(lst, 2))
+
+formula = convert("Alpha-v0", packages)
+
+def pretty_print(expr: And):
+    print("$$")
+    print(r"\begin{align*}")
+    for e in expr.exprs:
+        print(f"\\land ~~ &{string_of_expr(e)} \\\\")
+    print(r"\end{align*}")
+    print("$$")
+
+pretty_print(formula)
+
+bs: Bindings | None = solve(formula)
+if bs is not None:
+    for k, v in sorted(bs.items(), key=lambda p: p[0]):
+        print(k, v)
+
+if bs is not None:
+    print("| Variable | Value |")
+    print("| -------- | ----- |")
+    for k, v in sorted(bs.items(), key=lambda p: p[0]):
+        b: str = r"\true" if v else r"\false"
+        print(f"| {k} | {b}")
