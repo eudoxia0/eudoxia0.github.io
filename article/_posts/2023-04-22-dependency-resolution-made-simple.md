@@ -335,7 +335,6 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
-
 ```
 
 `any_var` is a function that takes an expression, and returns an
@@ -352,9 +351,9 @@ def free(e: Expr) -> set[str]:
     elif isinstance(e, Not):
         return free(e.expr)
     elif isinstance(e, And):
-        return set.union(*(free(expr) for expr in e.exprs))
+        return set().union(*[free(expr) for expr in e.exprs])
     elif isinstance(e, Or):
-        return set.union(*(free(expr) for expr in e.exprs))
+        return set().union(*[free(expr) for expr in e.exprs])
     elif isinstance(e, Impl):
         return free(e.p).union(free(e.q))
     else:
@@ -425,140 +424,159 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
 
 Consider the following package database:
 
-| Package   | Versions               |
-|-----------|------------------------|
-| `app`     | 0                      |
-| `sql`     | 0, 1, 2, 3             |
-| `threads` | 0, 1, 2                |
-| `http`    | 0, 1, 2, 3, 4, 5, 6, 7 |
-| `stdlib`  | 0, 1, 2, 3, 4, 5, 6    |
+| Package   | Versions      |
+|-----------|---------------|
+| `app`     | 0             |
+| `sql`     | 0, 1, 2       |
+| `threads` | 0, 1, 2       |
+| `http`    | 0, 1, 2, 3, 4 |
+| `stdlib`  | 0, 1, 2, 3, 4 |
 
 We have an application (the root of the build DAG) and four dependencies, one of
 which (`threads`) will be transitive. And we have the following constraints:
 
+```python
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class Dependency:
+    name: str
+    minimum: int
+    maximum: int
+
+@dataclass(frozen=True)
+class Package:
+    name: str
+    version: int
+    depends_on: list[Dependency]
+
+packages: list[Package] = [
+    Package(
+        "app",
+        0,
+        [
+            Dependency("sql", 2, 2),
+            Dependency("threads", 2, 2),
+            Dependency("http", 3, 4),
+            Dependency("stdlib", 4, 4),
+        ],
+    ),
+    Package("sql", 0, []),
+    Package("sql", 1, [Dependency("stdlib", 1, 4), Dependency("threads", 1, 1)]),
+    Package("sql", 2, [Dependency("stdlib", 2, 4), Dependency("threads", 1, 2)]),
+    Package("threads", 0, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 1, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 2, [Dependency("stdlib", 3, 4)]),
+    Package("http", 0, [Dependency("stdlib", 0, 3)]),
+    Package("http", 1, [Dependency("stdlib", 0, 3)]),
+    Package("http", 2, [Dependency("stdlib", 1, 4)]),
+    Package("http", 3, [Dependency("stdlib", 2, 4)]),
+    Package("http", 4, [Dependency("stdlib", 3, 4)]),
+]
+```
 
 We can translate this into a logic formula as follows (using some helper
 functions):
 
 ```python
-def dep(p: str, deps: list[str]) -> Expr:
-    return Impl(Var(p), Or([Var(d) for d in deps]))
+from itertools import combinations
 
+def convert(root: str, packages: list[Package]) -> Expr:
+    """
+    Given a package-version to use as the root of the build DAG, and a list of
+    package dependency constraints, convert them into a logical expression.
+    """
+    # First things first: we need the root package to be part of the assignment.
+    terms: list[Expr] = [Var(root)]
+    # Add implications.
+    for p in packages:
+        # Package versions imply their dependencies.
+        for dep in p.depends_on:
+            versions: list[int] = list(range(dep.minimum, dep.maximum + 1))
+            deps: list[Expr] = [package_var(dep.name, v) for v in versions]
+            impl: Impl = Impl(package_var(p.name, p.version), Or(deps))
+            terms.append(impl)
+    # Exclude every pair of versions. We do this by taking the set.of free
+    # variables in the expression built up so far, and for each package depended
+    # upon, we find all the versions mentioned for it and pairwise exclude them.
+    variables: set[str] = free(And(terms))
+    varnames: set[str] = set([var_name(v) for v in variables])
+    for name in varnames:
+        vers: set[int] = {var_version(v) for v in variables if var_name(v) == name}
+        for a, b in all_combinations(vers):
+            terms.append(Not(And([package_var(name, a), package_var(name, b)])))
+    # Finally, return the built up expression as a conjunction.
+    return And(terms)
 
-def notboth(a: str, b: str) -> Expr:
-    return Not(And([Var(a), Var(b)]))
+def package_var(name: str, version: int) -> Var:
+    return Var(f"{name}-v{version}")
 
+def var_name(var: str) -> str:
+    return var.split("-v")[0]
 
-formula: And = And(
-    [
-        Var("Alpha-v1"),
-        dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
-        dep("Alpha-v1", ["Gamma-v3"]),
-        dep("Beta-v1", ["Delta-v1"]),
-        dep("Beta-v2", ["Delta-v2"]),
-        dep("Beta-v3", ["Delta-v2", "Delta-v3"]),
-        dep("Gamma-v1", ["Delta-v1"]),
-        dep("Gamma-v2", ["Delta-v2"]),
-        dep("Gamma-v3", ["Delta-v3"]),
-        notboth("Beta-v1", "Beta-v2"),
-        notboth("Beta-v2", "Beta-v3"),
-        notboth("Beta-v3", "Beta-v1"),
-        notboth("Delta-v1", "Delta-v2"),
-        notboth("Delta-v2", "Delta-v3"),
-        notboth("Delta-v3", "Delta-v1"),
-        notboth("Gamma-v1", "Gamma-v2"),
-        notboth("Gamma-v2", "Gamma-v3"),
-        notboth("Gamma-v3", "Gamma-v1"),
-    ]
-)
+def var_version(var: str) -> int:
+    return int(var.split("-v")[1])
+
+def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
+    return list(combinations(lst, 2))
+```
+
+Converting our dependency constraints into a formula:
+
+```python
+formula: Expr = convert("app-v0", packages)
 ```
 
 The full formula looks like this:
 
 $$
 \begin{align*}
-&\text{Alpha-v0} \\
-\land ~~ &(\text{app-v0}\implies(\text{sql-v2} \lor \text{sql-v3})) \\
-\land ~~ &(\text{app-v0}\implies(\text{csv-v2})) \\
-\land ~~ &(\text{app-v0}\implies(\text{http-v5} \lor \text{http-v6} \lor \text{http-v7})) \\
-\land ~~ &(\text{app-v0}\implies(\text{stdlib-v6})) \\
+\land ~~ &\text{app-v0} \\
+\land ~~ &(\text{app-v0}\implies(\text{sql-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{threads-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{http-v3} \lor \text{http-v4})) \\
+\land ~~ &(\text{app-v0}\implies(\text{stdlib-v4})) \\
 \land ~~ &(\text{sql-v1}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
-\land ~~ &(\text{sql-v1}\implies(\text{csv-v1})) \\
-\land ~~ &(\text{sql-v2}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
-\land ~~ &(\text{sql-v2}\implies(\text{csv-v1} \lor \text{csv-v2})) \\
-\land ~~ &(\text{sql-v3}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
-\land ~~ &(\text{sql-v3}\implies(\text{csv-v2})) \\
-\land ~~ &(\text{csv-v0}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
-\land ~~ &(\text{csv-v1}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
-\land ~~ &(\text{csv-v2}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{threads-v1})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{threads-v1} \lor \text{threads-v2})) \\
+\land ~~ &(\text{threads-v0}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{threads-v1}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{threads-v2}\implies(\text{stdlib-v3} \lor \text{stdlib-v4})) \\
 \land ~~ &(\text{http-v0}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
 \land ~~ &(\text{http-v1}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
 \land ~~ &(\text{http-v2}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
-\land ~~ &(\text{http-v3}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5})) \\
-\land ~~ &(\text{http-v4}\implies(\text{stdlib-v3} \lor \text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
-\land ~~ &(\text{http-v5}\implies(\text{stdlib-v4} \lor \text{stdlib-v5} \lor \text{stdlib-v6})) \\
-\land ~~ &(\text{http-v6}\implies(\text{stdlib-v5} \lor \text{stdlib-v6})) \\
-\land ~~ &(\text{http-v7}\implies(\text{stdlib-v6})) \\
-\land ~~ &\neg(\text{sql-v1} \land \text{sql-v2}) \\
-\land ~~ &\neg(\text{sql-v1} \land \text{sql-v3}) \\
-\land ~~ &\neg(\text{sql-v2} \land \text{sql-v3}) \\
-\land ~~ &\neg(\text{csv-v0} \land \text{csv-v1}) \\
-\land ~~ &\neg(\text{csv-v0} \land \text{csv-v2}) \\
-\land ~~ &\neg(\text{csv-v1} \land \text{csv-v2}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v1}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v2}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v3}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v4}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v5}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v0} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v2}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v3}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v4}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v5}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v1} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v2} \land \text{http-v3}) \\
-\land ~~ &\neg(\text{http-v2} \land \text{http-v4}) \\
-\land ~~ &\neg(\text{http-v2} \land \text{http-v5}) \\
-\land ~~ &\neg(\text{http-v2} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v2} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v3} \land \text{http-v4}) \\
-\land ~~ &\neg(\text{http-v3} \land \text{http-v5}) \\
-\land ~~ &\neg(\text{http-v3} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v3} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v4} \land \text{http-v5}) \\
-\land ~~ &\neg(\text{http-v4} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v4} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v5} \land \text{http-v6}) \\
-\land ~~ &\neg(\text{http-v5} \land \text{http-v7}) \\
-\land ~~ &\neg(\text{http-v6} \land \text{http-v7}) \\
+\land ~~ &(\text{http-v3}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v4}\implies(\text{stdlib-v3} \lor \text{stdlib-v4})) \\
 \land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v1}) \\
 \land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v2}) \\
 \land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v3}) \\
 \land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v4}) \\
-\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v5}) \\
-\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v6}) \\
 \land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v2}) \\
 \land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v3}) \\
 \land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v4}) \\
-\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v5}) \\
-\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v6}) \\
 \land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v3}) \\
 \land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v4}) \\
-\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v5}) \\
-\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v6}) \\
 \land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v4}) \\
-\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v5}) \\
-\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v6}) \\
-\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v5}) \\
-\land ~~ &\neg(\text{stdlib-v4} \land \text{stdlib-v6}) \\
-\land ~~ &\neg(\text{stdlib-v5} \land \text{stdlib-v6})
+\land ~~ &\neg(\text{threads-v0} \land \text{threads-v1}) \\
+\land ~~ &\neg(\text{threads-v0} \land \text{threads-v2}) \\
+\land ~~ &\neg(\text{threads-v1} \land \text{threads-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v1}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v2}) \\
 \end{align*}
 $$
 
-
-Running the solver on this:
+Running the solver on this formula:
 
 ```python
 bs: Bindings | None = solve(formula)
@@ -569,18 +587,24 @@ if bs is not None:
 
 Yields the following assignment:
 
-| Variable | Value    |
-|----------|----------|
-| Alpha-v1 | $\true$  |
-| Beta-v1  | $\false$ |
-| Beta-v2  | $\false$ |
-| Beta-v3  | $\true$  |
-| Delta-v1 | $\false$ |
-| Delta-v2 | $\false$ |
-| Delta-v3 | $\true$  |
-| Gamma-v1 | $\false$ |
-| Gamma-v2 | $\false$ |
-| Gamma-v3 | $\true$  |
+| Variable     | Value    |
+|--------------|----------|
+| `app-v0`     | $\true$  |
+| `http-v0`    | $\false$ |
+| `http-v1`    | $\false$ |
+| `http-v2`    | $\false$ |
+| `http-v3`    | $\true$  |
+| `http-v4`    | $\false$ |
+| `sql-v1`     | $\false$ |
+| `sql-v2`     | $\true$  |
+| `stdlib-v0`  | $\false$ |
+| `stdlib-v1`  | $\false$ |
+| `stdlib-v2`  | $\false$ |
+| `stdlib-v3`  | $\false$ |
+| `stdlib-v4`  | $\true$  |
+| `threads-v0` | $\false$ |
+| `threads-v1` | $\false$ |
+| `threads-v2` | $\true$  |
 
 
 # See Also

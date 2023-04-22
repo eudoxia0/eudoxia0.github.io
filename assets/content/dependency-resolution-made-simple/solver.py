@@ -142,47 +142,7 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
-
-
 # loom:end(solver)
-
-#
-# Frontend
-#
-
-# loom:start(example)
-def dep(p: str, deps: list[str]) -> Expr:
-    return Impl(Var(p), Or([Var(d) for d in deps]))
-
-
-def notboth(a: str, b: str) -> Expr:
-    return Not(And([Var(a), Var(b)]))
-
-
-formula: And = And(
-    [
-        Var("Alpha-v1"),
-        dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
-        dep("Alpha-v1", ["Gamma-v3"]),
-        dep("Beta-v1", ["Delta-v1"]),
-        dep("Beta-v2", ["Delta-v2"]),
-        dep("Beta-v3", ["Delta-v2", "Delta-v3"]),
-        dep("Gamma-v1", ["Delta-v1"]),
-        dep("Gamma-v2", ["Delta-v2"]),
-        dep("Gamma-v3", ["Delta-v3"]),
-        notboth("Beta-v1", "Beta-v2"),
-        notboth("Beta-v2", "Beta-v3"),
-        notboth("Beta-v3", "Beta-v1"),
-        notboth("Delta-v1", "Delta-v2"),
-        notboth("Delta-v2", "Delta-v3"),
-        notboth("Delta-v3", "Delta-v1"),
-        notboth("Gamma-v1", "Gamma-v2"),
-        notboth("Gamma-v2", "Gamma-v3"),
-        notboth("Gamma-v3", "Gamma-v1"),
-    ]
-)
-# loom:end(example)
-
 
 def string_of_expr(e: Expr) -> str:
     if isinstance(e, FalseExpr):
@@ -202,18 +162,11 @@ def string_of_expr(e: Expr) -> str:
     else:
         raise TypeError("Invalid expression type")
 
-
-# loom:start(run)
-bs: Bindings | None = solve(formula)
-if bs is not None:
-    for k, v in sorted(bs.items(), key=lambda p: p[0]):
-        print(k, v)
-# loom:end(run)
-
 #
 # Example
 #
 
+# loom:start(deps)
 from dataclasses import dataclass
 
 
@@ -235,24 +188,26 @@ packages: list[Package] = [
         0,
         [
             Dependency("sql", 2, 2),
-            Dependency("csv", 2, 2),
+            Dependency("threads", 2, 2),
             Dependency("http", 3, 4),
             Dependency("stdlib", 4, 4),
         ],
     ),
     Package("sql", 0, []),
-    Package("sql", 1, [Dependency("stdlib", 1, 4), Dependency("csv", 1, 1)]),
-    Package("sql", 2, [Dependency("stdlib", 2, 4), Dependency("csv", 1, 2)]),
-    Package("csv", 0, [Dependency("stdlib", 2, 4)]),
-    Package("csv", 1, [Dependency("stdlib", 2, 4)]),
-    Package("csv", 2, [Dependency("stdlib", 3, 4)]),
+    Package("sql", 1, [Dependency("stdlib", 1, 4), Dependency("threads", 1, 1)]),
+    Package("sql", 2, [Dependency("stdlib", 2, 4), Dependency("threads", 1, 2)]),
+    Package("threads", 0, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 1, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 2, [Dependency("stdlib", 3, 4)]),
     Package("http", 0, [Dependency("stdlib", 0, 3)]),
     Package("http", 1, [Dependency("stdlib", 0, 3)]),
     Package("http", 2, [Dependency("stdlib", 1, 4)]),
     Package("http", 3, [Dependency("stdlib", 2, 4)]),
     Package("http", 4, [Dependency("stdlib", 3, 4)]),
 ]
+# loom:end(deps)
 
+# loom:start(convert)
 from itertools import combinations
 
 def convert(root: str, packages: list[Package]) -> Expr:
@@ -293,8 +248,11 @@ def var_version(var: str) -> int:
 
 def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
     return list(combinations(lst, 2))
+# loom:end(convert)
 
-formula = convert("Alpha-v0", packages)
+# loom:start(conversion)
+formula: Expr = convert("app-v0", packages)
+# loom:end(conversion)
 
 def pretty_print(expr: And):
     print("$$")
@@ -306,14 +264,16 @@ def pretty_print(expr: And):
 
 pretty_print(formula)
 
+# loom:start(solution)
 bs: Bindings | None = solve(formula)
 if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(k, v)
+# loom:end(solution)
 
 if bs is not None:
     print("| Variable | Value |")
     print("| -------- | ----- |")
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         b: str = r"\true" if v else r"\false"
-        print(f"| {k} | {b}")
+        print(f"| `{k}` | ${b}$ |")
