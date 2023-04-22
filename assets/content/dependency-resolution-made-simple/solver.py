@@ -2,15 +2,16 @@
 A simple SAT solver in Python.
 """
 
+
 class Expr:
     pass
 
 
-class TrueExpr(Expr):
+class FalseExpr(Expr):
     pass
 
 
-class FalseExpr(Expr):
+class TrueExpr(Expr):
     pass
 
 
@@ -143,9 +144,11 @@ def replace_all(e: Expr, bindings: Bindings) -> Expr:
         e = replace(e, name, value)
     return e
 
+
 #
 # Frontend
 #
+
 
 def ors(l: list[str]) -> Expr:
     if len(l) > 1:
@@ -156,6 +159,7 @@ def ors(l: list[str]) -> Expr:
     else:
         raise ValueError("ors")
 
+
 def ands(l: list[Expr]) -> Expr:
     if len(l) > 1:
         first, rest, *rest_ = l
@@ -165,11 +169,14 @@ def ands(l: list[Expr]) -> Expr:
     else:
         raise ValueError("ands")
 
+
 def dep(p: str, deps: list[str]) -> Expr:
     return impl(Var(p), ors(deps))
 
+
 def notboth(a: str, b: str) -> Expr:
     return Not(And(Var(a), Var(b)))
+
 
 formulas: list[Expr] = [
     Var("A1"),
@@ -194,6 +201,7 @@ formulas: list[Expr] = [
 
 formula: Expr = ands(formulas)
 
+
 def string_of_expr(e: Expr) -> str:
     if isinstance(e, TrueExpr):
         return "T"
@@ -209,6 +217,7 @@ def string_of_expr(e: Expr) -> str:
         return "(" + string_of_expr(e.expr1) + " ∨ " + string_of_expr(e.expr2) + ")"
     else:
         raise TypeError("Invalid expression type")
+
 
 print(string_of_expr(formula))
 
