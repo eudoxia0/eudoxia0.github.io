@@ -176,11 +176,11 @@ We will translate the set of dependency constraints to a logical expression, acc
 
     $$
     \begin{align*}
-      (\neg (\text{foo-v1} & \land \text{foo-v2})) \, \land \\\\
-      (\neg (\text{foo-v1} & \land \text{foo-v3})) \, \land \\\\
-      (\neg (\text{foo-v1} & \land \text{foo-v4})) \, \land \\\\
-      (\neg (\text{foo-v2} & \land \text{foo-v3})) \, \land \\\\
-      (\neg (\text{foo-v2} & \land \text{foo-v4})) \, \land \\\\
+      (\neg (\text{foo-v1} & \land \text{foo-v2})) \, \land \\
+      (\neg (\text{foo-v1} & \land \text{foo-v3})) \, \land \\
+      (\neg (\text{foo-v1} & \land \text{foo-v4})) \, \land \\
+      (\neg (\text{foo-v2} & \land \text{foo-v3})) \, \land \\
+      (\neg (\text{foo-v2} & \land \text{foo-v4})) \, \land \\
       (\neg (\text{foo-v3} & \land \text{foo-v4}))
     \end{align*}
     $$
@@ -205,6 +205,43 @@ The basic algorithm (and this is almost too stupid to be considered) is:
 First, we need a way to represent logical expressions:
 
 # Example Run
+
+$$
+\begin{align*}
+\, &\text{Alpha-v1} \\
+\land \, &(\text{Alpha-v1}\implies(\text{Beta-v2} \lor \text{Beta-v3})) \\
+\land \, &(\text{Alpha-v1}\implies(\text{Gamma-v3})) \\
+\land \, &(\text{Beta-v1}\implies(\text{Delta-v1})) \\
+\land \, &(\text{Beta-v2}\implies(\text{Delta-v2})) \\
+\land \, &(\text{Beta-v3}\implies(\text{Delta-v2} \lor \text{Delta-v3})) \\
+\land \, &(\text{Gamma-v1}\implies(\text{Delta-v1})) \\
+\land \, &(\text{Gamma-v2}\implies(\text{Delta-v2})) \\
+\land \, &(\text{Gamma-v3}\implies(\text{Delta-v3})) \\
+\land \, &\neg(\text{Beta-v1} \land \text{Beta-v2}) \\
+\land \, &\neg(\text{Beta-v2} \land \text{Beta-v3}) \\
+\land \, &\neg(\text{Beta-v3} \land \text{Beta-v1}) \\
+\land \, &\neg(\text{Delta-v1} \land \text{Delta-v2}) \\
+\land \, &\neg(\text{Delta-v2} \land \text{Delta-v3}) \\
+\land \, &\neg(\text{Delta-v3} \land \text{Delta-v1}) \\
+\land \, &\neg(\text{Gamma-v1} \land \text{Gamma-v2}) \\
+\land \, &\neg(\text{Gamma-v2} \land \text{Gamma-v3}) \\
+\land \, &\neg(\text{Gamma-v3} \land \text{Gamma-v1})
+\end{align*}
+$$
+
+| Variable | Value |
+| -------- | ----- |
+| Alpha-v1 | True |
+| Beta-v1 | False |
+| Beta-v2 | False |
+| Beta-v3 | True |
+| Delta-v1 | False |
+| Delta-v2 | False |
+| Delta-v3 | True |
+| Gamma-v1 | False |
+| Gamma-v2 | False |
+| Gamma-v3 | True |
+
 
 # See Also
 

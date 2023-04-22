@@ -26,23 +26,22 @@ class Not(Expr):
 
 
 class And(Expr):
-    def __init__(self, expr1: Expr, expr2: Expr):
-        self.expr1 = expr1
-        self.expr2 = expr2
+    def __init__(self, exprs: list[Expr]):
+        self.exprs = exprs
 
 
 class Or(Expr):
-    def __init__(self, expr1: Expr, expr2: Expr):
-        self.expr1 = expr1
-        self.expr2 = expr2
-
-
-def impl(p: Expr, q: Expr) -> Expr:
-    return Or(Not(p), q)
+    def __init__(self, exprs: list[Expr]):
+        self.exprs = exprs
+        
+class Impl(Expr):
+    def __init__(self, p: Expr, q: Expr):
+        self.p = p
+        self.q = q
 
 
 def iff(p: Expr, q: Expr) -> Expr:
-    return And(impl(p, q), impl(q, p))
+    return And([Impl(p, q), Impl(q, p)])
 
 
 def replace(e: Expr, name: str, value: bool) -> Expr:
@@ -58,9 +57,11 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
     elif isinstance(e, Not):
         return Not(replace(e.expr, name, value))
     elif isinstance(e, And):
-        return And(replace(e.expr1, name, value), replace(e.expr2, name, value))
+        return And([replace(expr, name, value) for expr in e.exprs])
     elif isinstance(e, Or):
-        return Or(replace(e.expr1, name, value), replace(e.expr2, name, value))
+        return Or([replace(expr, name, value) for expr in e.exprs])
+    elif isinstance(e, Impl):
+        return Impl(replace(e.p, name, value), replace(e.q, name, value))
     else:
         raise TypeError("Invalid expression type")
 
@@ -75,9 +76,11 @@ def eval_expr(e: Expr) -> bool:
     elif isinstance(e, Not):
         return not eval_expr(e.expr)
     elif isinstance(e, And):
-        return eval_expr(e.expr1) and eval_expr(e.expr2)
+        return all(eval_expr(expr) for expr in e.exprs)
     elif isinstance(e, Or):
-        return eval_expr(e.expr1) or eval_expr(e.expr2)
+        return any(eval_expr(expr) for expr in e.exprs)
+    elif isinstance(e, Impl):
+        return (not eval_expr(e.p)) or eval_expr(e.q)
     else:
         raise TypeError("Invalid expression type")
 
@@ -90,9 +93,11 @@ def free(e: Expr) -> set[str]:
     elif isinstance(e, Not):
         return free(e.expr)
     elif isinstance(e, And):
-        return free(e.expr1).union(free(e.expr2))
+        return set.union(*(free(expr) for expr in e.exprs))
     elif isinstance(e, Or):
-        return free(e.expr1).union(free(e.expr2))
+        return set.union(*(free(expr) for expr in e.exprs))
+    elif isinstance(e, Impl):
+        return free(e.p).union(free(e.q))
     else:
         raise TypeError("Invalid expression type")
 
@@ -150,35 +155,15 @@ def replace_all(e: Expr, bindings: Bindings) -> Expr:
 #
 
 
-def ors(l: list[str]) -> Expr:
-    if len(l) > 1:
-        first, rest, *rest_ = l
-        return Or(Var(first), ors([rest] + rest_))
-    elif len(l) == 1:
-        return Var(l[0])
-    else:
-        raise ValueError("ors")
-
-
-def ands(l: list[Expr]) -> Expr:
-    if len(l) > 1:
-        first, rest, *rest_ = l
-        return And(first, ands([rest] + rest_))
-    elif len(l) == 1:
-        return l[0]
-    else:
-        raise ValueError("ands")
-
-
 def dep(p: str, deps: list[str]) -> Expr:
-    return impl(Var(p), ors(deps))
+    return Impl(Var(p), Or([Var(d) for d in deps]))
 
 
 def notboth(a: str, b: str) -> Expr:
-    return Not(And(Var(a), Var(b)))
+    return Not(And([Var(a), Var(b)]))
 
 
-formulas: list[Expr] = [
+formula: Expr = And([
     Var("Alpha-v1"),
     dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
     dep("Alpha-v1", ["Gamma-v3"]),
@@ -197,9 +182,7 @@ formulas: list[Expr] = [
     notboth("Gamma-v1", "Gamma-v2"),
     notboth("Gamma-v2", "Gamma-v3"),
     notboth("Gamma-v3", "Gamma-v1"),
-]
-
-formula: Expr = ands(formulas)
+])
 
 
 def string_of_expr(e: Expr) -> str:
@@ -212,16 +195,20 @@ def string_of_expr(e: Expr) -> str:
     elif isinstance(e, Not):
         return r"\neg" + string_of_expr(e.expr)
     elif isinstance(e, And):
-        return "(" + string_of_expr(e.expr1) + r" \land " + string_of_expr(e.expr2) + ")"
+        return "(" + r" \land ".join(string_of_expr(expr) for expr in e.exprs) + ")"
     elif isinstance(e, Or):
-        return "(" + string_of_expr(e.expr1) + r" \lor " + string_of_expr(e.expr2) + ")"
+        return "(" + r" \lor ".join(string_of_expr(expr) for expr in e.exprs) + ")"
+    elif isinstance(e, Impl):
+        return "(" + string_of_expr(e.p) + r"\implies" + string_of_expr(e.q) + ")"
     else:
         raise TypeError("Invalid expression type")
 
-
-print(string_of_expr(formula))
+for e in formula.exprs:
+    print(r"\land \, &" + string_of_expr(e) + r" \\")
 
 bs: Bindings | None = solve(formula)
 if bs is not None:
+    print("| Variable | Value |")
+    print("| -------- | ----- |")
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
-        print(k, v)
+        print(f"| {k} | {v} |")
