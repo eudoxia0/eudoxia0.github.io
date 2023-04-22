@@ -39,6 +39,8 @@ class Impl(Expr):
     def __init__(self, p: Expr, q: Expr):
         self.p = p
         self.q = q
+
+
 # loom:end(classes)
 
 # loom:start(replace)
@@ -142,7 +144,10 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
+
+
 # loom:end(solver)
+
 
 def string_of_expr(e: Expr) -> str:
     if isinstance(e, FalseExpr):
@@ -162,6 +167,7 @@ def string_of_expr(e: Expr) -> str:
     else:
         raise TypeError("Invalid expression type")
 
+
 #
 # Example
 #
@@ -176,11 +182,13 @@ class Dependency:
     minimum: int
     maximum: int
 
+
 @dataclass(frozen=True)
 class Package:
     name: str
     version: int
     depends_on: list[Dependency]
+
 
 packages: list[Package] = [
     Package(
@@ -210,6 +218,7 @@ packages: list[Package] = [
 # loom:start(convert)
 from itertools import combinations
 
+
 def convert(root: str, packages: list[Package]) -> Expr:
     """
     Given a package-version to use as the root of the build DAG, and a list of
@@ -237,22 +246,29 @@ def convert(root: str, packages: list[Package]) -> Expr:
     # Finally, return the built up expression as a conjunction.
     return And(terms)
 
+
 def package_var(name: str, version: int) -> Var:
     return Var(f"{name}-v{version}")
+
 
 def var_name(var: str) -> str:
     return var.split("-v")[0]
 
+
 def var_version(var: str) -> int:
     return int(var.split("-v")[1])
 
+
 def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
     return list(combinations(lst, 2))
+
+
 # loom:end(convert)
 
 # loom:start(conversion)
 formula: Expr = convert("app-v0", packages)
 # loom:end(conversion)
+
 
 def pretty_print(expr: And):
     print("$$")
@@ -261,6 +277,7 @@ def pretty_print(expr: And):
         print(f"\\land ~~ &{string_of_expr(e)} \\\\")
     print(r"\end{align*}")
     print("$$")
+
 
 pretty_print(formula)
 
