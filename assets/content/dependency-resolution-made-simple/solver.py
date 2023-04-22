@@ -104,42 +104,27 @@ def any_var(e: Expr) -> str | None:
         return variables[0]
 
 
-from typing import Dict
-
 Bindings = dict[str, bool]
 
 
-class Result:
-    pass
-
-
-class Satisfiable(Result):
-    def __init__(self, bindings: Bindings) -> None:
-        self.bindings = bindings
-
-
-class Unsatisfiable(Result):
-    pass
-
-
-def join(a: Result, b: Result) -> Result:
-    if isinstance(a, Satisfiable):
+def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
+    if a is not None:
         return a
     else:
         return b
 
 
-def solve(e: Expr) -> Result:
+def solve(e: Expr) -> Bindings | None:
     return solver(e, {})
 
 
-def solver(e: Expr, bs: Bindings) -> Result:
+def solver(e: Expr, bs: Bindings) -> Bindings | None:
     free_var = any_var(e)
     if free_var is None:
         if eval_expr(replace_all(e, bs)):
-            return Satisfiable(bs)
+            return bs
         else:
-            return Unsatisfiable()
+            return None
     else:
         # Replace with True.
         t: Expr = replace(e, free_var, True)
@@ -157,6 +142,10 @@ def replace_all(e: Expr, bindings: Bindings) -> Expr:
     for name, value in bindings.items():
         e = replace(e, name, value)
     return e
+
+#
+# Frontend
+#
 
 def ors(l: list[str]) -> Expr:
     if len(l) > 1:
@@ -207,9 +196,9 @@ formula: Expr = ands(formulas)
 
 def string_of_expr(e: Expr) -> str:
     if isinstance(e, TrueExpr):
-        return "⊤"
+        return "T"
     elif isinstance(e, FalseExpr):
-        return "⊥"
+        return "F"
     elif isinstance(e, Var):
         return e.name
     elif isinstance(e, Not):
@@ -223,10 +212,7 @@ def string_of_expr(e: Expr) -> str:
 
 print(string_of_expr(formula))
 
-res: Result = solve(formula)
-if isinstance(res, Satisfiable):
-    bs: Bindings = res.bindings
+bs: Bindings | None = solve(formula)
+if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(k, v)
-else:
-    raise TypeError("Not satisfiable.")
