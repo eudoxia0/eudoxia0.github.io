@@ -2,7 +2,7 @@
 A simple SAT solver in Python.
 """
 
-
+# loom:start(classes)
 class Expr:
     pass
 
@@ -39,8 +39,9 @@ class Impl(Expr):
     def __init__(self, p: Expr, q: Expr):
         self.p = p
         self.q = q
+# loom:end(classes)
 
-
+# loom:start(replace)
 def replace(e: Expr, name: str, value: bool) -> Expr:
     if isinstance(e, FalseExpr):
         return FalseExpr()
@@ -61,8 +62,9 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
         return Impl(replace(e.p, name, value), replace(e.q, name, value))
     else:
         raise TypeError("Invalid expression type")
+# loom:end(replace)
 
-
+# loom:start(eval)
 def eval_expr(e: Expr) -> bool:
     if isinstance(e, FalseExpr):
         return False
@@ -80,8 +82,9 @@ def eval_expr(e: Expr) -> bool:
         return (not eval_expr(e.p)) or eval_expr(e.q)
     else:
         raise TypeError("Invalid expression type")
+# loom:end(eval)
 
-
+# loom:start(free)
 def free(e: Expr) -> set[str]:
     if isinstance(e, FalseExpr) or isinstance(e, TrueExpr):
         return set()
@@ -98,23 +101,16 @@ def free(e: Expr) -> set[str]:
     else:
         raise TypeError("Invalid expression type")
 
-
 def any_var(e: Expr) -> str | None:
     variables: list[str] = list(free(e))
     if len(variables) == 0:
         return None
     else:
         return variables[0]
+# loom:end(free)
 
-
+# loom:start(solver)
 Bindings = dict[str, bool]
-
-
-def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
-    if a is not None:
-        return a
-    else:
-        return b
 
 
 def solve(e: Expr) -> Bindings | None:
@@ -141,11 +137,18 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         return join(solver(t, t_bs), solver(f, f_bs))
 
 
+def join(a: Bindings | None, b: Bindings | None) -> Bindings | None:
+    if a is not None:
+        return a
+    else:
+        return b
+# loom:end(solver)
+
 #
 # Frontend
 #
 
-
+# loom:start(example)
 def dep(p: str, deps: list[str]) -> Expr:
     return Impl(Var(p), Or([Var(d) for d in deps]))
 
@@ -176,6 +179,7 @@ formula: And = And(
         notboth("Gamma-v3", "Gamma-v1"),
     ]
 )
+# loom:end(example)
 
 
 def string_of_expr(e: Expr) -> str:
@@ -206,6 +210,10 @@ if bs is not None:
     print("| -------- | ----- |")
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(f"| {k} | {v} |")
+
+# loom:start(run)
+bs: Bindings | None = solve(formula)
 if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(k, v)
+# loom:end(run)
