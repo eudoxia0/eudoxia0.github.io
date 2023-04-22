@@ -393,11 +393,11 @@ Attila's shoulders drew back, he became stiff, and fell back rigidly on the floo
 
 What Timon saw: Attila inserting the cable in his wrist, and in the next instant collapsing and convulsing.
 
-And all terror left him. The pantheon had won and they were dead. But who can say they have struck back against the gods?
+The gods know the thoughts of men: they are pride, and vanity. Pride had brought them here, it led them down into the depths, and slit their throats. Vanity had buried them. But of what avail reason, against the sight of blinding light, and words spoken in the divine language?
 
-And he thought:
+Terror overcame him, it passed through him---and left. The pantheon had won and they were dead. But who can say they have struck back against the gods?
 
-_I will die killing_.
+And he thought: _I will die killing_.
 
 He touched the diamond wall, felt its Miller index, withdrew a foreleg and struck the wall along a cleavage plane. A hairline crack appeared, not even a millimeter deep.
 
