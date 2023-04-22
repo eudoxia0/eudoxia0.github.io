@@ -410,6 +410,33 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
 
 # Example Run
 
+Consider the following package database:
+
+       Alpha
+         v
+           beta=v2 or beta=v3
+           gamma=v3
+       Beta
+         v1
+           delta=v1
+         v2
+           delta=v2
+         v3
+           delta=v2 or delta=v3
+       Gamma
+         v1
+           delta=v1
+         v2
+           delta=v2
+         v3
+           delta=v3
+       Delta
+         v1
+         v2
+         v3
+
+We can translate this into a logic formula as follows (using some helper functions):
+
 ```python
 def dep(p: str, deps: list[str]) -> Expr:
     return Impl(Var(p), Or([Var(d) for d in deps]))
@@ -443,6 +470,8 @@ formula: And = And(
 )
 ```
 
+The full formula looks like this:
+
 $$
 \begin{align*}
 ~~ &\text{Alpha-v1} \\
@@ -466,6 +495,8 @@ $$
 \end{align*}
 $$
 
+Running the solver on this:
+
 ```python
 bs: Bindings | None = solve(formula)
 if bs is not None:
@@ -473,18 +504,20 @@ if bs is not None:
         print(k, v)
 ```
 
+Yields the following assignment:
+
 | Variable | Value |
 |----------|-------|
-| Alpha-v1 | True  |
-| Beta-v1  | False |
-| Beta-v2  | False |
-| Beta-v3  | True  |
-| Delta-v1 | False |
-| Delta-v2 | False |
-| Delta-v3 | True  |
-| Gamma-v1 | False |
-| Gamma-v2 | False |
-| Gamma-v3 | True  |
+| Alpha-v1 | $\true$  |
+| Beta-v1  | $\false$ |
+| Beta-v2  | $\false$ |
+| Beta-v3  | $\true$  |
+| Delta-v1 | $\false$ |
+| Delta-v2 | $\false$ |
+| Delta-v3 | $\true$  |
+| Gamma-v1 | $\false$ |
+| Gamma-v2 | $\false$ |
+| Gamma-v3 | $\true$  |
 
 
 # See Also
