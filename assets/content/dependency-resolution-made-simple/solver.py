@@ -40,10 +40,6 @@ class Impl(Expr):
         self.q = q
 
 
-def iff(p: Expr, q: Expr) -> Expr:
-    return And([Impl(p, q), Impl(q, p)])
-
-
 def replace(e: Expr, name: str, value: bool) -> Expr:
     if isinstance(e, FalseExpr):
         return FalseExpr()
