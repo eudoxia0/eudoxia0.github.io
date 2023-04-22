@@ -4,6 +4,11 @@ summary: Resolving dependencies with a homebrew SAT solver.
 math: yes
 ---
 
+$$
+\gdef\true{\mathbf{T}}
+\gdef\false{\mathbf{F}}
+$$
+
 Lately, I've been thinking about what the package manager for [Austral][austral] is going to look like. Dependency resolution is a [surprisingly complex problem][np], so I did a deep dive, and this post explains how to solve the problem in a tractable way.
 
 [austral]: https://austral-lang.org/
@@ -42,6 +47,8 @@ The dependency resolution problem is solved, in wildly different ways, by differ
 
 There exists a simple and satisfactory solution that involves translating the problem into logic, applying a [SAT solver][sat] (a mature, well-understood piece of technology), and translating the solution back to the original problem domain. This approach is correct, it is free of ad-hockery, _and_ it benefits from the fact that SAT solvers have been optimized to death.
 
+[sat]: https://en.wikipedia.org/wiki/SAT_solver
+
 # Propositional Logic
 
 [Propositional logic][proplog] is the simplest kind of logic. It has two components:
@@ -53,8 +60,8 @@ There exists a simple and satisfactory solution that involves translating the pr
 
 The syntax of propositional logic is simple: expressions are built up, starting from constants (true/false) and variables, by joining them through logical operators. More formally, an expression in propositional logic can be one of:
 
-1. $\bot$, which stands for false.
-1. $\top$, which stands for true.
+1. $\false$, which stands for false.
+1. $\true$, which stands for true.
 1. A variable (typically $A$, $B$, $C$, etc.) is an expression that can be replaced with true or false. Variables represent the inputs to a problem in logic.
 1. $\neg P$, read "not $P$".
 1. $P \land Q$, read "$P$ and $Q$".
@@ -94,6 +101,37 @@ eval v expr = case expr of
     And p q -> (eval v p) && (eval v q)
     Or p q  -> (eval v p) || (eval v q)
 ```
+
+For example, given:
+
+$$
+((A \land B) \lor C) \rightarrow (\lnot B \land C)
+$$
+
+And an assignment:
+
+1. $A \rightarrow \true$
+2. $B \rightarrow \false$
+3. $C \rightarrow \true$
+
+We can evaluate the expression in a step by step manner like so:
+
+| Expression                                                                 | Step                           |
+|----------------------------------------------------------------------------|--------------------------------|
+| $((A \land B) \lor C) \rightarrow (\lnot B \land C)$                       | Original.                      |
+| $(\neg ((A \land B) \lor C)) \lor (\lnot B \land C)$                       | Simplify implication.          |
+| $(\neg ((\true \land \false) \lor \true)) \lor (\lnot \false \land \true)$ | Replace variables.             |
+| $(\neg (\false \lor \true)) \lor (\lnot \false \land \true)$               | $\true \land \false$ is false. |
+| $(\neg \true) \lor (\lnot \false \land \true)$                             | $\false \lor \true$ is true.   |
+| $\false \lor (\lnot \false \land \true)$                                   | $\neg \true$ is false.         |
+| $\false \lor (\true \land \true)$                                          | $\neg \false$ is true.          |
+| $\false \lor \true$                                                        | $\true \land \true$ is true.    |
+| $\true$                                                                    | $\false \lor \true$ is true.    |
+
+
+The Boolean satisfiability problem is this: given an expression in logic, is there some assignment that makes it true? (And, if there is, ideally, we'd like to find at least one of those assignments.)
+
+Solutions to this problem have surprisingly many useful applications, including dependency resolution.
 
 # Translating the Problem
 
