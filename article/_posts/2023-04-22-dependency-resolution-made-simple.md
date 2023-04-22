@@ -190,6 +190,10 @@ We will translate the set of dependency constraints to a logical expression, acc
 
 # See Also
 
+- [Version SAT](https://research.swtch.com/version-sat)
+- [So you want to write a package manager](https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527)
+- [Documentation on Dart's dependency solver](https://github.com/dart-lang/pub/blob/master/doc/solver.md)
+
 # Footnotes
 
 [^same]:
