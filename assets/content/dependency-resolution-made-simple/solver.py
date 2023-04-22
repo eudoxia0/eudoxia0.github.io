@@ -46,10 +46,10 @@ def iff(p: Expr, q: Expr) -> Expr:
 
 
 def replace(e: Expr, name: str, value: bool) -> Expr:
-    if isinstance(e, TrueExpr):
-        return TrueExpr()
-    elif isinstance(e, FalseExpr):
+    if isinstance(e, FalseExpr):
         return FalseExpr()
+    elif isinstance(e, TrueExpr):
+        return TrueExpr()
     elif isinstance(e, Var):
         if e.name == name:
             return TrueExpr() if value else FalseExpr()
@@ -66,10 +66,10 @@ def replace(e: Expr, name: str, value: bool) -> Expr:
 
 
 def eval_expr(e: Expr) -> bool:
-    if isinstance(e, TrueExpr):
-        return True
-    elif isinstance(e, FalseExpr):
+    if isinstance(e, FalseExpr):
         return False
+    elif isinstance(e, TrueExpr):
+        return True
     elif isinstance(e, Var):
         raise ValueError(f"eval: the variable {e.name} has not been replaced.")
     elif isinstance(e, Not):
@@ -83,7 +83,7 @@ def eval_expr(e: Expr) -> bool:
 
 
 def free(e: Expr) -> set[str]:
-    if isinstance(e, TrueExpr) or isinstance(e, FalseExpr):
+    if isinstance(e, FalseExpr) or isinstance(e, TrueExpr):
         return set()
     elif isinstance(e, Var):
         return {e.name}
