@@ -123,7 +123,7 @@ def solve(e: Expr) -> Bindings | None:
 def solver(e: Expr, bs: Bindings) -> Bindings | None:
     free_var = any_var(e)
     if free_var is None:
-        if eval_expr(replace_all(e, bs)):
+        if eval_expr(e):
             return bs
         else:
             return None
@@ -138,12 +138,6 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and join them.
         return join(solver(t, t_bs), solver(f, f_bs))
-
-
-def replace_all(e: Expr, bindings: Bindings) -> Expr:
-    for name, value in bindings.items():
-        e = replace(e, name, value)
-    return e
 
 
 #
