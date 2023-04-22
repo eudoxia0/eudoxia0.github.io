@@ -1,6 +1,7 @@
 ---
 title: Dependency Resolution Made Simple
 summary: Resolving dependencies with a homebrew SAT solver.
+math: yes
 ---
 
 Lately, I've been thinking about what the package manager for [Austral][austral] is going to look like. Dependency resolution is a [surprisingly complex problem][np], so I did a deep dive, and this post explains how to solve the problem in a tractable way.
@@ -42,6 +43,57 @@ The dependency resolution problem is solved, in wildly different ways, by differ
 There exists a simple and satisfactory solution that involves translating the problem into logic, applying a [SAT solver][sat] (a mature, well-understood piece of technology), and translating the solution back to the original problem domain. This approach is correct, it is free of ad-hockery, _and_ it benefits from the fact that SAT solvers have been optimized to death.
 
 # Propositional Logic
+
+[Propositional logic][proplog] is the simplest kind of logic. It has two components:
+
+[proplog]: https://en.wikipedia.org/wiki/Propositional_calculus
+
+1. **Syntax:** the rules for writing _logical sentences_, which are expression that can be evaluated to one of two values: true and false, just as arithmetic expressions can be evaluated to a number.
+2. **Semantics:** the rules for evaluating logical expressions.
+
+The syntax of propositional logic is simple: expressions are built up, starting from constants (true/false) and variables, by joining them through logical operators. More formally, an expression in propositional logic can be one of:
+
+1. $\bot$, which stands for false.
+1. $\top$, which stands for true.
+1. A variable (typically $A$, $B$, $C$, etc.) is an expression that can be replaced with true or false. Variables represent the inputs to a problem in logic.
+1. $\neg P$, read "not $P$".
+1. $P \land Q$, read "$P$ and $Q$".
+1. $P \lor Q$, read "$P$ and or $Q$".
+1. $P \implies Q$, read "$P$ implies $Q$".
+1. $P \iff Q$, read "$P$ if and only if $Q$".
+
+Or, in Haskell:
+
+```haskell
+data Expr = CFalse
+          | CTrue
+          | Var String
+          | Not Expr
+          | And Expr Expr
+          | Or Expr Expr
+```
+
+Implication and if-and-only-if don't need their own constructors, because they are not primitive:
+
+1. Implication should be thought of as a predicate. $P \implies Q$ means:
+    1. _If_ $P$ is true and $Q$ is true, then $P \implies Q$ is true.
+    2. _If_ $P$ is true, and $Q$ is false, then $P \implies Q$ is false.
+    3. _If_ $P$ is false, the value of $Q$ doesn't matter, and the implication $P \implies Q$ as a whole evaluates to true.
+  If you draw the truth table this is the same as writing $(\neg P) \lor Q$.
+1. $P \iff Q$ is true when $P$ and $Q$ have the same truth value. This is the same as writing $P \iff Q$ is $(P \implies Q) \land (Q \implies P)$.
+
+An _assignment_ is map from variables to truth values. Given an assignment $v$, expressions can be evaluated like so:
+
+```haskell
+eval :: (String -> Bool) -> Expr -> Bool
+eval v expr = case expr of
+    CFalse  -> False
+    CTrue   -> True
+    Var s   -> env s
+    Not p   -> not (eval v p)
+    And p q -> (eval v p) && (eval v q)
+    Or p q  -> (eval v p) || (eval v q)
+```
 
 # Translating the Problem
 
