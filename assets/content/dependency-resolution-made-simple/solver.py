@@ -206,3 +206,6 @@ if bs is not None:
     print("| -------- | ----- |")
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         print(f"| {k} | {v} |")
+if bs is not None:
+    for k, v in sorted(bs.items(), key=lambda p: p[0]):
+        print(k, v)
