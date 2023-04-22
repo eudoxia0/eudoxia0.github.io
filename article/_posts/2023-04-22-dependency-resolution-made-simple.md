@@ -193,6 +193,15 @@ We will translate the set of dependency constraints to a logical expression, acc
 
 In this section I'll show you how to build a simple SAT solver in Python. This is the simplest possible SAT solver: there is not one optimization and the time complexity is exponential. For real-life use, you'll either want to use a commercial off-the-shelf solver or optimize this further (there's a great deal of literature on how to do this).
 
+The basic algorithm (and this is almost too stupid to be considered) is:
+
+1. **Start:** we have a logical expression.
+1. Does it have any variables?
+    1. If so: pick a variable arbitrarily (but not randomly, because we want the algorithm to be deterministic). Then fork:
+        1. In one branch, replace that variable with $\true$, and go to the start.
+        1. In another, replace that variable with $\false$, and go to the start.
+    1. If there are no variables, evaluate the expression. If it evaluates to $\true$, return the list of variable replacements it took to get here.
+
 First, we need a way to represent logical expressions:
 
 # Example Run
