@@ -251,19 +251,7 @@ complexity is exponential. For real-life use, you'll either want to use a
 commercial off-the-shelf solver or optimize this further (there's a great deal
 of literature on how to do this).
 
-The basic algorithm (and this is almost too stupid to be considered) is:
-
-1. **Start:** we have a logical expression.
-1. Does it have any variables?
-    1. If so: pick a variable arbitrarily (but not randomly, because we want the
-       algorithm to be deterministic). Then fork:
-        1. In one branch, replace that variable with $\true$, and go to the
-           start.
-        1. In another, replace that variable with $\false$, and go to the start.
-    1. If there are no variables, evaluate the expression. If it evaluates to
-       $\true$, return the list of variable replacements it took to get here.
-
-First, we need a way to represent logical expressions:
+First, some types to represent logic expressions:
 
 ```python
 class Expr:
@@ -302,6 +290,18 @@ class Impl(Expr):
         self.p = p
         self.q = q
 ```
+
+The basic algorithm (and this is almost too stupid to be considered) is:
+
+1. **Start:** we have a logical expression.
+1. Does it have any variables?
+    1. If so: pick a variable arbitrarily (but not randomly, because we want the
+       algorithm to be deterministic). Then fork:
+        1. In one branch, replace that variable with $\true$, and go to the
+           start.
+        1. In another, replace that variable with $\false$, and go to the start.
+    1. If there are no variables, evaluate the expression. If it evaluates to
+       $\true$, return the list of variable replacements it took to get here.
 
 ```python
 def replace(e: Expr, name: str, value: bool) -> Expr:
