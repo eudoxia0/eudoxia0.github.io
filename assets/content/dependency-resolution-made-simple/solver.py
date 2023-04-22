@@ -294,3 +294,10 @@ if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         b: str = r"\true" if v else r"\false"
         print(f"| `{k}` | ${b}$ |")
+
+if bs is not None:
+    print("| Package | Version |")
+    print("| ------- | ------- |")
+    for k, v in sorted(bs.items(), key=lambda p: p[0]):
+        if v:
+            print(f"| `{var_name(k)}` | {var_version(k)} |")

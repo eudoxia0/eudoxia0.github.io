@@ -408,6 +408,15 @@ Yields the following assignment:
 | `threads-v1` | $\false$ |
 | `threads-v2` | $\true$  |
 
+Or, put another way:
+
+| Package   | Version |
+|-----------|---------|
+| `app`     | 0       |
+| `http`    | 3       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
 
 # See Also
 

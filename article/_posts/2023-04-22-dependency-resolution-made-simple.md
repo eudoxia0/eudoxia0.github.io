@@ -293,6 +293,7 @@ class Impl(Expr):
     def __init__(self, p: Expr, q: Expr):
         self.p = p
         self.q = q
+
 ```
 
 The basic algorithm (and this is almost too stupid to be considered) is:
@@ -335,6 +336,7 @@ def solver(e: Expr, bs: Bindings) -> Bindings | None:
         f_bs[free_var] = False
         # Solve both branches, and return the first one that works.
         return solver(t, t_bs) or solver(f, f_bs)
+
 ```
 
 `any_var` is a function that takes an expression, and returns an
@@ -445,11 +447,13 @@ class Dependency:
     minimum: int
     maximum: int
 
+
 @dataclass(frozen=True)
 class Package:
     name: str
     version: int
     depends_on: list[Dependency]
+
 
 packages: list[Package] = [
     Package(
@@ -482,6 +486,7 @@ functions):
 ```python
 from itertools import combinations
 
+
 def convert(root: str, packages: list[Package]) -> Expr:
     """
     Given a package-version to use as the root of the build DAG, and a list of
@@ -509,17 +514,22 @@ def convert(root: str, packages: list[Package]) -> Expr:
     # Finally, return the built up expression as a conjunction.
     return And(terms)
 
+
 def package_var(name: str, version: int) -> Var:
     return Var(f"{name}-v{version}")
+
 
 def var_name(var: str) -> str:
     return var.split("-v")[0]
 
+
 def var_version(var: str) -> int:
     return int(var.split("-v")[1])
 
+
 def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
     return list(combinations(lst, 2))
+
 ```
 
 Converting our dependency constraints into a formula:
@@ -606,6 +616,15 @@ Yields the following assignment:
 | `threads-v1` | $\false$ |
 | `threads-v2` | $\true$  |
 
+Or, put another way:
+
+| Package   | Version |
+|-----------|---------|
+| `app`     | 0       |
+| `http`    | 3       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
 
 # See Also
 
