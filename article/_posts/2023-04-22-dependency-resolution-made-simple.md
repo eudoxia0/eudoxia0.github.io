@@ -142,6 +142,48 @@ Boolean satisfiability is pretty thoroughly solved. By translating from one prob
 
 # Translating the Problem
 
+We will translate the set of dependency constraints to a logical expression, according to the following rules:
+
+1. **Package Versions are Variables:** a variable "foo-v1.2.0" being assigned $\true$ means all packages in this build DAG will use `v.1.2.0` for `foo`, $\false$ means we're using some other version of `foo`.
+1. **Version Ranges are Disjunctions:** suppose you have a version constraint like `foo >= 1.2 && foo < 1.5`. Then you consult the package index for all known versions of `foo`. Say it looks like this:
+
+    - `1.1`
+    - `1.2`
+    - `1.3`
+    - `1.4`
+    - `1.5`
+    
+    Then the versions that satisfy this constraint are (`1.2`, `1.3`, `1.4`). This constrain gets translated into the following logical sentence:
+    
+    $$
+    \text{foo-v1.2} \lor \text{foo-v.1.3} \lor \text{foo-v1.4}
+    $$
+    
+    Arbitrarily complex version range checks can be implemented, by simply treating the check as a predicate that returns either true or false for every version in the package index. Then you make a disjunction of all the versions for which it returned true.
+
+1. **Dependencies are Implications:** `foo-v1` depends on `bar-v2` or `bar-3` means "one of `bar-v2` or `bar-v3` must be used, _conditional on_ `foo-v1` being used". So we translate this as an implication:
+
+    $$
+    \text{foo-v1} \implies (\text{bar-v1} \lor \text{bar-v2})
+    $$
+
+1. **Consistency:** the constraint that we can't have different versions of the same package is expressed by negating the conjunction (and) of every _pair_ of versions of the same package. So if `foo` has versions `[1,2,3,4]` the expression:
+
+    $$
+    \begin{align*}
+      (\neg (\text{foo-v1} & \land \text{foo-v2})) \, \land \\\\
+      (\neg (\text{foo-v1} & \land \text{foo-v3})) \, \land \\\\
+      (\neg (\text{foo-v1} & \land \text{foo-v4})) \, \land \\\\
+      (\neg (\text{foo-v2} & \land \text{foo-v3})) \, \land \\\\
+      (\neg (\text{foo-v2} & \land \text{foo-v4})) \, \land \\\\
+      (\neg (\text{foo-v3} & \land \text{foo-v4}))
+    \end{align*}
+    $$
+  
+    Ensures we only have one version of `foo`.
+
+1. **The Root of the DAG:** the package we're resolving dependencies for is the root of the build DAG. The version of the package we're building must be true on all assignments, so we have to `\land` it together with every other clause.
+
 # A Simple SAT Solver
 
 # Example Run
