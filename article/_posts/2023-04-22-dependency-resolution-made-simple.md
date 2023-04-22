@@ -96,7 +96,7 @@ Implication and if-and-only-if don't need their own constructors, because they a
     2. _If_ $P$ is true, and $Q$ is false, then $P \implies Q$ is false.
     3. _If_ $P$ is false, the value of $Q$ doesn't matter, and the implication $P \implies Q$ as a whole evaluates to true.
   If you draw the truth table this is the same as writing $(\neg P) \lor Q$.
-1. $P \iff Q$ is true when $P$ and $Q$ have the same truth value. This is the same as writing $P \iff Q$ is $(P \implies Q) \land (Q \implies P)$.
+1. $P \iff Q$ is true when $P$ and $Q$ have the same truth value. This is the same as writing $(P \implies Q) \land (Q \implies P)$.
 
 An _assignment_ is map from variables to truth values. Given an assignment $v$, expressions can be evaluated like so:
 
@@ -192,6 +192,8 @@ We will translate the set of dependency constraints to a logical expression, acc
 # A Simple SAT Solver
 
 In this section I'll show you how to build a simple SAT solver in Python. This is the simplest possible SAT solver: there is not one optimization and the time complexity is exponential. For real-life use, you'll either want to use a commercial off-the-shelf solver or optimize this further (there's a great deal of literature on how to do this).
+
+First, we need a way to represent logical expressions:
 
 # Example Run
 
