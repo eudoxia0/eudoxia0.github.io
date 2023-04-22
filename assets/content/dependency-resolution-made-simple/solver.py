@@ -33,7 +33,8 @@ class And(Expr):
 class Or(Expr):
     def __init__(self, exprs: list[Expr]):
         self.exprs = exprs
-        
+
+
 class Impl(Expr):
     def __init__(self, p: Expr, q: Expr):
         self.p = p
@@ -153,26 +154,28 @@ def notboth(a: str, b: str) -> Expr:
     return Not(And([Var(a), Var(b)]))
 
 
-formula: And = And([
-    Var("Alpha-v1"),
-    dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
-    dep("Alpha-v1", ["Gamma-v3"]),
-    dep("Beta-v1", ["Delta-v1"]),
-    dep("Beta-v2", ["Delta-v2"]),
-    dep("Beta-v3", ["Delta-v2", "Delta-v3"]),
-    dep("Gamma-v1", ["Delta-v1"]),
-    dep("Gamma-v2", ["Delta-v2"]),
-    dep("Gamma-v3", ["Delta-v3"]),
-    notboth("Beta-v1", "Beta-v2"),
-    notboth("Beta-v2", "Beta-v3"),
-    notboth("Beta-v3", "Beta-v1"),
-    notboth("Delta-v1", "Delta-v2"),
-    notboth("Delta-v2", "Delta-v3"),
-    notboth("Delta-v3", "Delta-v1"),
-    notboth("Gamma-v1", "Gamma-v2"),
-    notboth("Gamma-v2", "Gamma-v3"),
-    notboth("Gamma-v3", "Gamma-v1"),
-])
+formula: And = And(
+    [
+        Var("Alpha-v1"),
+        dep("Alpha-v1", ["Beta-v2", "Beta-v3"]),
+        dep("Alpha-v1", ["Gamma-v3"]),
+        dep("Beta-v1", ["Delta-v1"]),
+        dep("Beta-v2", ["Delta-v2"]),
+        dep("Beta-v3", ["Delta-v2", "Delta-v3"]),
+        dep("Gamma-v1", ["Delta-v1"]),
+        dep("Gamma-v2", ["Delta-v2"]),
+        dep("Gamma-v3", ["Delta-v3"]),
+        notboth("Beta-v1", "Beta-v2"),
+        notboth("Beta-v2", "Beta-v3"),
+        notboth("Beta-v3", "Beta-v1"),
+        notboth("Delta-v1", "Delta-v2"),
+        notboth("Delta-v2", "Delta-v3"),
+        notboth("Delta-v3", "Delta-v1"),
+        notboth("Gamma-v1", "Gamma-v2"),
+        notboth("Gamma-v2", "Gamma-v3"),
+        notboth("Gamma-v3", "Gamma-v1"),
+    ]
+)
 
 
 def string_of_expr(e: Expr) -> str:
@@ -192,6 +195,7 @@ def string_of_expr(e: Expr) -> str:
         return "(" + string_of_expr(e.p) + r"\implies" + string_of_expr(e.q) + ")"
     else:
         raise TypeError("Invalid expression type")
+
 
 for e in formula.exprs:
     print(r"\land \, &" + string_of_expr(e) + r" \\")
