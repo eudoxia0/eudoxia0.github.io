@@ -418,6 +418,35 @@ Or, put another way:
 | `stdlib`  | 4       |
 | `threads` | 2       |
 
+# Heuristics
+
+One reason to roll your own SAT solver would be to introduce domain-specific
+heuristics. For example: we'd generally want a package manager to prefer the
+latest version of a package that satisfies the constraints.
+
+We can implement this by redefining the function that chooses a variable, to pick variables representing higher version numbers first:
+
+```python
+loom:include(any_var_latest)
+```
+
+And using this in the resolver:
+
+```python
+loom:include(solver_latest)
+```
+
+Running the same formula over this new solver yields:
+
+| Package   | Version |
+|-----------|---------|
+| `app`     | 0       |
+| `http`    | 4       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
+
+
 # See Also
 
 - [Version SAT](https://research.swtch.com/version-sat)

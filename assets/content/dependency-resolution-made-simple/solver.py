@@ -301,3 +301,51 @@ if bs is not None:
     for k, v in sorted(bs.items(), key=lambda p: p[0]):
         if v:
             print(f"| `{var_name(k)}` | {var_version(k)} |")
+
+# loom:start(any_var_latest)
+def any_var_latest(e: Expr) -> str | None:
+    # Sort variables alphabetically, for determinism.
+    variables: list[str] = sorted(list(free(e)))
+    if len(variables) == 0:
+        return None
+    else:
+        # Return the last one, the highest version number for the
+        # (alphabetically) last package.
+        return variables[-1]
+# loom:end(any_var_latest)
+
+# loom:start(solver_latest)
+Bindings = dict[str, bool]
+
+
+def solve_latest(e: Expr) -> Bindings | None:
+    return solver_latest(e, {})
+
+
+def solver_latest(e: Expr, bs: Bindings) -> Bindings | None:
+    free_var = any_var_latest(e)
+    if free_var is None:
+        if eval_expr(e):
+            return bs
+        else:
+            return None
+    else:
+        # Replace with True.
+        t: Expr = replace(e, free_var, True)
+        t_bs: Bindings = dict(bs)
+        t_bs[free_var] = True
+        # Replace with False.
+        f: Expr = replace(e, free_var, False)
+        f_bs: Bindings = dict(bs)
+        f_bs[free_var] = False
+        # Solve both branches, and return the first one that works.
+        return solver_latest(t, t_bs) or solver_latest(f, f_bs)
+# loom:end(solver_latest)
+
+latest_bs: Bindings | None = solve_latest(formula)
+if latest_bs is not None:
+    print("| Package | Version |")
+    print("| ------- | ------- |")
+    for k, v in sorted(latest_bs.items(), key=lambda p: p[0]):
+        if v:
+            print(f"| `{var_name(k)}` | {var_version(k)} |")

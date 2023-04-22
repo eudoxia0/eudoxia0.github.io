@@ -626,6 +626,67 @@ Or, put another way:
 | `stdlib`  | 4       |
 | `threads` | 2       |
 
+# Heuristics
+
+One reason to roll your own SAT solver would be to introduce domain-specific
+heuristics. For example: we'd generally want a package manager to prefer the
+latest version of a package that satisfies the constraints.
+
+We can implement this by redefining the function that chooses a variable, to pick variables representing higher version numbers first:
+
+```python
+def any_var_latest(e: Expr) -> str | None:
+    # Sort variables alphabetically, for determinism.
+    variables: list[str] = sorted(list(free(e)))
+    if len(variables) == 0:
+        return None
+    else:
+        # Return the last one, the highest version number for the
+        # (alphabetically) last package.
+        return variables[-1]
+```
+
+And using this in the resolver:
+
+```python
+Bindings = dict[str, bool]
+
+
+def solve_latest(e: Expr) -> Bindings | None:
+    return solver_latest(e, {})
+
+
+def solver_latest(e: Expr, bs: Bindings) -> Bindings | None:
+    free_var = any_var_latest(e)
+    if free_var is None:
+        if eval_expr(e):
+            return bs
+        else:
+            return None
+    else:
+        # Replace with True.
+        t: Expr = replace(e, free_var, True)
+        t_bs: Bindings = dict(bs)
+        t_bs[free_var] = True
+        # Replace with False.
+        f: Expr = replace(e, free_var, False)
+        f_bs: Bindings = dict(bs)
+        f_bs[free_var] = False
+        # Solve both branches, and return the first one that works.
+        return solver_latest(t, t_bs) or solver_latest(f, f_bs)
+```
+
+Running the same formula over this new solver yields:
+
+| Package   | Version |
+|-----------|---------|
+| `app`     | 0       |
+| `http`    | 4       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
+
+
 # See Also
 
 - [Version SAT](https://research.swtch.com/version-sat)
