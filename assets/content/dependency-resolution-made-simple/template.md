@@ -95,10 +95,9 @@ components:
 
 [proplog]: https://en.wikipedia.org/wiki/Propositional_calculus
 
-1. **Syntax:** the rules for writing _logical sentences_, which are expression
-   that can be evaluated to one of two values: true and false, just as
-   arithmetic expressions can be evaluated to a number.
-2. **Semantics:** the rules for evaluating logical expressions.
+1. **Syntax:** the rules for writing _logical sentences_.
+2. **Semantics:** the rules for evaluating logical expressions to a truth value---true or false---just as
+   arithmetic expressions can be evaluated to a number
 
 The syntax of propositional logic is simple: expressions are built up, starting
 from constants (true/false) and variables, by joining them through logical
