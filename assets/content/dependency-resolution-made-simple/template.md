@@ -23,7 +23,18 @@ much.
 [austral]: https://austral-lang.org/
 [np]: https://research.swtch.com/version-sat
 
-# The Problem
+# Contents
+
+1. [The Problem](#problem)
+1. [Propositional Logic](#logic)
+1. [Translating the Problem](#translate)
+1. [A Simple SAT Solver](#solver)
+1. [Example Run](#example)
+1. [Heuristics](#heuristics)
+1. [External Solvers](#external)
+1. [See Also](#see-also)
+
+# The Problem {#problem}
 
 If packages specified the exact version of every one of their dependencies,
 there would be no dependency _resolution_ problem. There would however be
@@ -87,7 +98,7 @@ to death over decades.
 
 [sat]: https://en.wikipedia.org/wiki/SAT_solver
 
-# Propositional Logic
+# Propositional Logic {#logic}
 
 [Propositional logic][proplog] is the simplest kind of logic. It has two
 components:
@@ -183,7 +194,7 @@ Boolean satisfiability is pretty thoroughly solved. By translating from one
 problem to the other, we can profit from prior work in this area. The next
 section explains how.
 
-# Translating the Problem
+# Translating the Problem {#translate}
 
 We will translate the set of dependency constraints to a logical expression,
 according to the following rules:
@@ -245,7 +256,7 @@ according to the following rules:
    what "kicks off" the implications that represent the dependencies and gives
    us the assignment we want.
 
-# A Simple SAT Solver
+# A Simple SAT Solver {#solver}
 
 In this section I'll show you how to build a simple SAT solver in Python. This
 is the simplest possible SAT solver: there is not one optimization and the time
@@ -307,7 +318,7 @@ of the variable with the given name with a Boolean constant:
 loom:include(replace)
 ```
 
-# Example Run
+# Example Run {#example}
 
 Consider the following package database:
 
@@ -423,7 +434,7 @@ Or, put another way:
 | `stdlib`  | 4       |
 | `threads` | 2       |
 
-# Heuristics
+# Heuristics {#heuristics}
 
 One reason to roll your own SAT solver would be to introduce domain-specific
 heuristics. For example: we'd generally want a package manager to prefer the
@@ -465,7 +476,7 @@ Other heuristics might include:
    speed up the solver by assigning all variables with the same package name at
    once, assigning one of them to true and all the others to false.
 
-# External Solvers
+# External Solvers {#external}
 
 The solver described in this post can be easily optimized, but implementing
 every last technique in the [_Handbook of Satisfiability_][handbook] is probably
@@ -489,7 +500,7 @@ literature.
 [dpll]: https://en.wikipedia.org/wiki/DPLL_algorithm
 [cdcl]: https://en.wikipedia.org/wiki/Conflict-driven_clause_learning
 
-# See Also
+# See Also {#see-also}
 
 - [Version SAT](https://research.swtch.com/version-sat)
 - [So you want to write a package manager](https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527)
