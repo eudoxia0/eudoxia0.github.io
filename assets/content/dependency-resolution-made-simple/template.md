@@ -179,7 +179,7 @@ notice this is worded similarly to the statement of the dependency resolution
 problem above.
 
 Boolean satisfiability is pretty thoroughly solved. By translating from one
-problem to the next, we can profit from decades of work in this area. The next
+problem to the other, we can profit from prior work in this area. The next
 section explains how.
 
 # Translating the Problem
