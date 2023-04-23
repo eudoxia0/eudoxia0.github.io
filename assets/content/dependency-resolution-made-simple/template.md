@@ -255,6 +255,11 @@ of literature on how to do this). The point is to demystify the process somewhat
 (SAT solving sounds very ivory tower) and also to provide an actual, working
 implementation of this post as a software object you can experiment with.
 
+The interface to the solver will be a function that takes a logical expression
+and returns an assignment of variables to Booleans (if the sentence is
+satisfiable, that is, if there exists a solution), or `None` if the sentence is
+unsatisfiable.
+
 First, some types to represent logic expressions:
 
 ```python
