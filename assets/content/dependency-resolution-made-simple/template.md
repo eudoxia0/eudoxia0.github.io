@@ -84,7 +84,7 @@ There exists a simple and satisfactory solution that involves translating the
 problem into logic, applying a [SAT solver][sat] (a mature, well-understood
 piece of technology), and translating the solution back to the original problem
 domain. This approach is correct, it is free of ad-hockery, _and_ it benefits
-from the fact that SAT solvers have been optimized to death.
+from the fact that SAT solvers have been optimized to death over decades.
 
 [sat]: https://en.wikipedia.org/wiki/SAT_solver
 
