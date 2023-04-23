@@ -155,13 +155,7 @@ For example, given:
 
 $$ ((A \land B) \lor C) \rightarrow (\lnot B \land C) $$
 
-And an assignment:
-
-1. $A \rightarrow \true$
-2. $B \rightarrow \false$
-3. $C \rightarrow \true$
-
-We can evaluate the expression in a step by step manner like so:
+And an assignment $\\{ A \rightarrow \true, B \rightarrow \false, C \rightarrow \true \\}$, we can evaluate the expression in a step by step manner like so:
 
 | Expression                                                                 | Step                           |
 |----------------------------------------------------------------------------|--------------------------------|
