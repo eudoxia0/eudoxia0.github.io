@@ -17,7 +17,7 @@ $$
 Lately, I've been thinking about what the package manager for [Austral][austral]
 is going to look like. Dependency resolution is a [surprisingly complex
 problem][np], so I did a deep dive, and this post explains how to solve the
-problem in a tractable way.
+problem in a way that is tractable and doesn't require reinventing the wheel too much.
 
 [austral]: https://austral-lang.org/
 [np]: https://research.swtch.com/version-sat
