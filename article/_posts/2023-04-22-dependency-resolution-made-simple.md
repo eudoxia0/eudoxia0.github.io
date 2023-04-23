@@ -1,0 +1,757 @@
+---
+title: Dependency Resolution Made Simple
+summary: Resolving dependencies with a homebrew SAT solver.
+card: dependency-resolution-made-simple.jpg
+card_source: |
+  [_Dimostrazione in grande del capitello di una delle colonne del Tempio di Giunone dentro il Portici d`Ottavia_][link], Giovanni Battista Piranesi, 1784.
+
+  [link]: https://it.wikisource.org/wiki/Le_antichit%C3%A0_Romane_(Piranesi)/4-XLV
+math: yes
+---
+
+$$
+\gdef\true{\mathbf{T}}
+\gdef\false{\mathbf{F}}
+$$
+
+Lately, I've been thinking about what the package manager for [Austral][austral]
+is going to look like. Dependency resolution is a [surprisingly complex
+problem][np], so I did a deep dive, and this post explains how to solve the
+problem in a way that is tractable and doesn't require reinventing the wheel too
+much.
+
+[austral]: https://austral-lang.org/
+[np]: https://research.swtch.com/version-sat
+
+# Contents
+
+1. [The Problem](#problem)
+1. [Propositional Logic](#logic)
+1. [Translating the Problem](#translate)
+1. [A Simple SAT Solver](#solver)
+1. [Example Run](#example)
+1. [Heuristics](#heuristics)
+1. [External Solvers](#external)
+1. [See Also](#see-also)
+
+# The Problem {#problem}
+
+If packages specified the exact version of every one of their dependencies,
+there would be no dependency _resolution_ problem. There would however be
+constant dependency _integration_ problems.
+
+You're writing an application that depends on libraries A and B. Library A
+depends on Foo v1.0.2, library B depends on Foo v1.0.3. Now you have a
+dependency conflict[^same]. The brute-force solution is to vendor one of A and B
+and adjust their dependencies. And you may have to do this recursively. Then you
+miss out on improvements, security fixes, etc.
+
+"Fine", you said. "I'll allow depending on _major_ versions. Then A and B can
+just depend on Foo v.1.\*.\*, and the solver picks the latest version."
+
+And this mainly solves the problem, assuming everyone sticks to [semver]. But
+there are two problems:
+
+[semver]: https://semver.org/
+
+1. Packages can hold back from upgrading because a new (minor or patch) version
+   introduces either a bug or a performance regression that affects their usage
+   of that package. The developers of A might want to exclude everything above
+   1.7.\*, while the developers of B are indifferent as long as the major
+   version is 1. So picking e.g. 1.9.0 satisfies B but is bad for A.
+
+2. Sometimes you want to depend on a library across major versions (e.g. the
+   standard library) because you're only using the parts of the code that are
+   highly conserved across major versions.
+
+Even with strict semver enforcement (like [Elm does][elm]), there are observable
+features of libraries that fall outside of what an API spec can describe.
+
+[elm]: https://elm-lang.org/
+
+In other words, there's a tradeoff:
+
+1. Less expressive version ranges make things easier for the package manager,
+   while complicating the user experience and requiring lots of manual work from the user.
+1. More expressive version ranges allow users greater freedom to allow or deny
+   specific package versions, while complicating the work that the package
+   manager has to perform.
+
+The **dependency resolution problem** is:
+
+>Given a set of package dependency constraints, find an assignment---a map of
+>package names to specific package versions---that satisfies every constraint
+>without having multiple versions of the same package.
+
+This turns out to be a surprisingly hard problem. NP-complete,
+actually. Manifest/lock files are orthogonal to this: manifest files are about
+making builds reproducible, but manifest files are a _product_ of dependency
+resolution, not an input to it.
+
+The dependency resolution problem is solved, in wildly different ways, by
+different package managers. There exists a simple and satisfactory solution that
+involves translating the problem into logic, applying a [SAT solver][sat] (a
+mature, well-understood piece of technology), and translating the solution back
+to the original problem domain. This approach is correct, it is free of
+ad-hockery, _and_ it benefits from the fact that SAT solvers have been optimized
+to death over decades.
+
+[sat]: https://en.wikipedia.org/wiki/SAT_solver
+
+# Propositional Logic {#logic}
+
+[Propositional logic][proplog] is the simplest kind of logic. It has two
+components:
+
+[proplog]: https://en.wikipedia.org/wiki/Propositional_calculus
+
+1. **Syntax:** the rules for writing _logical sentences_.
+2. **Semantics:** the rules for evaluating logical expressions to a truth
+   value---true or false---just as arithmetic expressions can be evaluated to a
+   number
+
+The syntax of propositional logic is simple: expressions are built up, starting
+from constants (true/false) and variables, by joining them through logical
+operators. More formally, an expression in propositional logic can be one of:
+
+1. $\false$, which stands for false.
+1. $\true$, which stands for true.
+1. A variable (typically $A$, $B$, $C$, etc.) is an expression that can be
+   replaced with true or false. Variables represent the inputs to a problem in
+   logic.
+1. $\neg P$, read "not $P$".
+1. $P \land Q$, read "$P$ and $Q$".
+1. $P \lor Q$, read "$P$ and or $Q$".
+1. $P \implies Q$, read "$P$ implies $Q$".
+1. $P \iff Q$, read "$P$ if and only if $Q$".
+
+Or, in Haskell:
+
+```haskell
+data Expr = CFalse
+          | CTrue
+          | Var String
+          | Not Expr
+          | And Expr Expr
+          | Or Expr Expr
+```
+
+Implication and if-and-only-if don't need their own constructors, because they
+are not primitive:
+
+1. Implication should be thought of as a predicate. $P \implies Q$ means:
+    1. _If_ $P$ is true and $Q$ is true, then $P \implies Q$ is true.
+    2. _If_ $P$ is true, and $Q$ is false, then $P \implies Q$ is false.
+    3. _If_ $P$ is false, the value of $Q$ doesn't matter, and the implication
+  $P \implies Q$ as a whole evaluates to true.  If you draw the truth table this
+  is the same as writing $(\neg P) \lor Q$.
+1. $P \iff Q$ is true when $P$ and $Q$ have the same truth value. This is the
+   same as writing $(P \implies Q) \land (Q \implies P)$.
+
+An _assignment_ is map from variables to truth values. Given an assignment $v$,
+expressions can be evaluated like so:
+
+```haskell
+eval :: (String -> Bool) -> Expr -> Bool
+eval v expr = case expr of
+    CFalse  -> False
+    CTrue   -> True
+    Var s   -> env s
+    Not p   -> not (eval v p)
+    And p q -> (eval v p) && (eval v q)
+    Or p q  -> (eval v p) || (eval v q)
+```
+
+For example, given:
+
+$$ ((A \land B) \lor C) \rightarrow (\lnot B \land C) $$
+
+And an assignment $\\{ A \rightarrow \true, B \rightarrow \false, C \rightarrow
+\true \\}$, we can evaluate the expression in a step by step manner like so:
+
+| Expression                                                                 | Step                           |
+|----------------------------------------------------------------------------|--------------------------------|
+| $((A \land B) \lor C) \rightarrow (\lnot B \land C)$                       | Original.                      |
+| $(\neg ((A \land B) \lor C)) \lor (\lnot B \land C)$                       | Simplify implication.          |
+| $(\neg ((\true \land \false) \lor \true)) \lor (\lnot \false \land \true)$ | Replace variables.             |
+| $(\neg (\false \lor \true)) \lor (\lnot \false \land \true)$               | $\true \land \false$ is false. |
+| $(\neg \true) \lor (\lnot \false \land \true)$                             | $\false \lor \true$ is true.   |
+| $\false \lor (\lnot \false \land \true)$                                   | $\neg \true$ is false.         |
+| $\false \lor (\true \land \true)$                                          | $\neg \false$ is true.         |
+| $\false \lor \true$                                                        | $\true \land \true$ is true.   |
+| $\true$                                                                    | $\false \lor \true$ is true.   |
+
+The **Boolean satisfiability problem** is this:
+
+>Given a logical expression, find an assignment of variables to truth values
+>that makes it true.
+
+Solutions to this problem have surprisingly many useful applications. You'll
+notice this is worded similarly to the statement of the dependency resolution
+problem above.
+
+Boolean satisfiability is pretty thoroughly solved. By translating from one
+problem to the other, we can profit from prior work in this area. The next
+section explains how.
+
+# Translating the Problem {#translate}
+
+We will translate the set of dependency constraints to a logical expression,
+according to the following rules:
+
+1. **Package Versions are Variables:** a variable "foo-v1.2.0" being assigned
+   $\true$ means all packages in this build DAG will use `v.1.2.0` for `foo`,
+   $\false$ means we're using some other version of `foo`.
+1. **Version Ranges are Disjunctions:** suppose you have a version constraint
+   like `foo >= 1.2 && foo < 1.5`. Then you consult the package index for all
+   known versions of `foo`. Say it looks like this:
+
+    - `1.1`
+    - `1.2`
+    - `1.3`
+    - `1.4`
+    - `1.5`
+
+    Then the versions that satisfy this constraint are (`1.2`, `1.3`,
+    `1.4`). This constrain gets translated into the following logical sentence:
+
+    $$ \text{foo-v1.2} \lor \text{foo-v.1.3} \lor \text{foo-v1.4} $$
+
+    Arbitrarily complex version range checks can be implemented, by simply
+    treating the check as a predicate that returns either true or false for
+    every version in the package index. Then you make a disjunction of all the
+    versions for which it returned true.
+
+1. **Dependencies are Implications:** `foo-v1` depends on `bar-v2` or `bar-3`
+   means "one of `bar-v2` or `bar-v3` must be used, _conditional on_ `foo-v1`
+   being used". So we translate this as an implication:
+
+    $$ \text{foo-v1} \implies (\text{bar-v1} \lor \text{bar-v2}) $$
+
+1. **Consistency:** the constraint that we can't have different versions of the
+   same package is expressed by negating the conjunction (and) of every _pair_
+   of versions of the same package. So if `foo` has versions `[1,2,3,4]` the
+   expression:
+
+    $$ \begin{align*} (\neg (\text{foo-v1} & \land \text{foo-v2})) \, \land \\
+    (\neg (\text{foo-v1} & \land \text{foo-v3})) \, \land \\ (\neg
+    (\text{foo-v1} & \land \text{foo-v4})) \, \land \\ (\neg (\text{foo-v2} &
+    \land \text{foo-v3})) \, \land \\ (\neg (\text{foo-v2} & \land
+    \text{foo-v4})) \, \land \\ (\neg (\text{foo-v3} & \land \text{foo-v4}))
+    \end{align*} $$
+
+    Ensures we only have one version of `foo`.
+
+    The procedure here is to take the set of all [combinations][comb] of length
+    two from the set of all versions of `foo`.
+
+    [comb]: https://en.wikipedia.org/wiki/Combination
+
+1. **The Root of the DAG:** the package version we're resolving dependencies for
+   is the root of the build DAG. The variable corresponding to this package
+   version must be true on all assignments, so we have to $\land$ it together
+   with every other term.
+
+   Intuitively, the reason we have to add this is the variable being true is
+   what "kicks off" the implications that represent the dependencies and gives
+   us the assignment we want.
+
+# A Simple SAT Solver {#solver}
+
+In this section I'll show you how to build a simple SAT solver in Python. This
+is the simplest possible SAT solver: there is not one optimization and the time
+complexity is exponential. For real-life use, you'll either want to use a
+commercial off-the-shelf solver or optimize this further (there's a great deal
+of literature on how to do this). The point is to demystify the process somewhat
+(SAT solving sounds very ivory tower) and also to provide an actual, working
+implementation of this post as a software object you can experiment with.
+
+The interface to the solver will be a function that takes a logical expression
+and returns an assignment of variables to Booleans (if the sentence is
+satisfiable, that is, if there exists a solution), or `None` if the sentence is
+unsatisfiable.
+
+First, some types to represent logic expressions:
+
+```python
+class Expr:
+    pass
+
+
+class FalseExpr(Expr):
+    pass
+
+
+class TrueExpr(Expr):
+    pass
+
+
+class Var(Expr):
+    def __init__(self, name: str):
+        self.name = name
+
+
+class Not(Expr):
+    def __init__(self, expr: Expr):
+        self.expr = expr
+
+
+class And(Expr):
+    def __init__(self, exprs: list[Expr]):
+        self.exprs = exprs
+
+
+class Or(Expr):
+    def __init__(self, exprs: list[Expr]):
+        self.exprs = exprs
+
+
+class Impl(Expr):
+    def __init__(self, p: Expr, q: Expr):
+        self.p = p
+        self.q = q
+
+```
+
+The basic algorithm (and this is almost too stupid to be considered) is:
+
+1. **Start:** we have a logical expression.
+1. Does it have any variables?
+    1. If so: pick a variable arbitrarily (but not randomly, because we want the
+       algorithm to be deterministic). Then fork:
+        1. In one branch, replace that variable with $\true$, and go to the
+           start.
+        1. In another, replace that variable with $\false$, and go to the start.
+    1. If there are no variables, evaluate the expression. If it evaluates to
+       $\true$, return the list of variable replacements it took to get here.
+
+The core logic is implemented like this:
+
+```python
+Bindings = dict[str, bool]
+
+
+def solve(e: Expr) -> Bindings | None:
+    return solver(e, {})
+
+
+def solver(e: Expr, bs: Bindings) -> Bindings | None:
+    free_var = any_var(e)
+    if free_var is None:
+        if eval_expr(e):
+            return bs
+        else:
+            return None
+    else:
+        # Replace with True.
+        t: Expr = replace(e, free_var, True)
+        t_bs: Bindings = dict(bs)
+        t_bs[free_var] = True
+        # Replace with False.
+        f: Expr = replace(e, free_var, False)
+        f_bs: Bindings = dict(bs)
+        f_bs[free_var] = False
+        # Solve both branches, and return the first one that works.
+        return solver(t, t_bs) or solver(f, f_bs)
+
+```
+
+`any_var` is a function that takes an expression, and returns an
+arbitrarily-chosen variable. This is implemented by recursively building up the
+set of free variables, then sorting the variables (for determinism)
+alphabetically and picking the first one:
+
+```python
+def free(e: Expr) -> set[str]:
+    if isinstance(e, FalseExpr) or isinstance(e, TrueExpr):
+        return set()
+    elif isinstance(e, Var):
+        return {e.name}
+    elif isinstance(e, Not):
+        return free(e.expr)
+    elif isinstance(e, And):
+        return set().union(*[free(expr) for expr in e.exprs])
+    elif isinstance(e, Or):
+        return set().union(*[free(expr) for expr in e.exprs])
+    elif isinstance(e, Impl):
+        return free(e.p).union(free(e.q))
+    else:
+        raise TypeError("Invalid expression type")
+
+
+def any_var(e: Expr) -> str | None:
+    variables: list[str] = sorted(list(free(e)))
+    if len(variables) == 0:
+        return None
+    else:
+        return variables[0]
+
+```
+
+Evaluation is done in the base case of the recursion, when all variables have
+been replaced:
+
+```python
+def eval_expr(e: Expr) -> bool:
+    if isinstance(e, FalseExpr):
+        return False
+    elif isinstance(e, TrueExpr):
+        return True
+    elif isinstance(e, Var):
+        raise ValueError(f"eval: the variable {e.name} has not been replaced.")
+    elif isinstance(e, Not):
+        return not eval_expr(e.expr)
+    elif isinstance(e, And):
+        return all(eval_expr(expr) for expr in e.exprs)
+    elif isinstance(e, Or):
+        return any(eval_expr(expr) for expr in e.exprs)
+    elif isinstance(e, Impl):
+        return (not eval_expr(e.p)) or eval_expr(e.q)
+    else:
+        raise TypeError("Invalid expression type")
+
+```
+
+Finally, the `replace` function takes an expression, and replaces all instances
+of the variable with the given name with a Boolean constant:
+
+```python
+def replace(e: Expr, name: str, value: bool) -> Expr:
+    if isinstance(e, FalseExpr):
+        return FalseExpr()
+    elif isinstance(e, TrueExpr):
+        return TrueExpr()
+    elif isinstance(e, Var):
+        if e.name == name:
+            return TrueExpr() if value else FalseExpr()
+        else:
+            return Var(e.name)
+    elif isinstance(e, Not):
+        return Not(replace(e.expr, name, value))
+    elif isinstance(e, And):
+        return And([replace(expr, name, value) for expr in e.exprs])
+    elif isinstance(e, Or):
+        return Or([replace(expr, name, value) for expr in e.exprs])
+    elif isinstance(e, Impl):
+        return Impl(replace(e.p, name, value), replace(e.q, name, value))
+    else:
+        raise TypeError("Invalid expression type")
+
+```
+
+# Example Run {#example}
+
+Consider the following package database:
+
+| Package   | Versions      |
+|-----------|---------------|
+| `app`     | 0             |
+| `sql`     | 0, 1, 2       |
+| `threads` | 0, 1, 2       |
+| `http`    | 0, 1, 2, 3, 4 |
+| `stdlib`  | 0, 1, 2, 3, 4 |
+
+We have an application (the root of the build DAG) and four dependencies, one of
+which (`threads`) will be transitive. And we have the following constraints:
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class Dependency:
+    name: str
+    minimum: int
+    maximum: int
+
+
+@dataclass(frozen=True)
+class Package:
+    name: str
+    version: int
+    depends_on: list[Dependency]
+
+
+packages: list[Package] = [
+    Package(
+        "app",
+        0,
+        [
+            Dependency("sql", 2, 2),
+            Dependency("threads", 2, 2),
+            Dependency("http", 3, 4),
+            Dependency("stdlib", 4, 4),
+        ],
+    ),
+    Package("sql", 0, []),
+    Package("sql", 1, [Dependency("stdlib", 1, 4), Dependency("threads", 1, 1)]),
+    Package("sql", 2, [Dependency("stdlib", 2, 4), Dependency("threads", 1, 2)]),
+    Package("threads", 0, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 1, [Dependency("stdlib", 2, 4)]),
+    Package("threads", 2, [Dependency("stdlib", 3, 4)]),
+    Package("http", 0, [Dependency("stdlib", 0, 3)]),
+    Package("http", 1, [Dependency("stdlib", 0, 3)]),
+    Package("http", 2, [Dependency("stdlib", 1, 4)]),
+    Package("http", 3, [Dependency("stdlib", 2, 4)]),
+    Package("http", 4, [Dependency("stdlib", 3, 4)]),
+]
+```
+
+We can translate this into a logic formula as follows (using some helper
+functions):
+
+```python
+from itertools import combinations
+
+
+def convert(root: str, packages: list[Package]) -> Expr:
+    """
+    Given a package-version to use as the root of the build DAG, and a list of
+    package dependency constraints, convert them into a logical expression.
+    """
+    # First things first: we need the root package to be part of the assignment.
+    terms: list[Expr] = [Var(root)]
+    # Add implications.
+    for p in packages:
+        # Package versions imply their dependencies.
+        for dep in p.depends_on:
+            versions: list[int] = list(range(dep.minimum, dep.maximum + 1))
+            deps: list[Expr] = [package_var(dep.name, v) for v in versions]
+            impl: Impl = Impl(package_var(p.name, p.version), Or(deps))
+            terms.append(impl)
+    # Exclude every pair of versions. We do this by taking the set.of free
+    # variables in the expression built up so far, and for each package depended
+    # upon, we find all the versions mentioned for it and pairwise exclude them.
+    variables: set[str] = free(And(terms))
+    varnames: set[str] = set([var_name(v) for v in variables])
+    for name in varnames:
+        vers: set[int] = {var_version(v) for v in variables if var_name(v) == name}
+        for a, b in all_combinations(vers):
+            terms.append(Not(And([package_var(name, a), package_var(name, b)])))
+    # Finally, return the built up expression as a conjunction.
+    return And(terms)
+
+
+def package_var(name: str, version: int) -> Var:
+    return Var(f"{name}-v{version}")
+
+
+def var_name(var: str) -> str:
+    return var.split("-v")[0]
+
+
+def var_version(var: str) -> int:
+    return int(var.split("-v")[1])
+
+
+def all_combinations(lst: set[int]) -> list[tuple[int, int]]:
+    return list(combinations(lst, 2))
+
+```
+
+Converting our dependency constraints into a formula:
+
+```python
+formula: Expr = convert("app-v0", packages)
+```
+
+The full formula looks like this:
+
+$$
+\begin{align*}
+\land ~~ &\text{app-v0} \\
+\land ~~ &(\text{app-v0}\implies(\text{sql-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{threads-v2})) \\
+\land ~~ &(\text{app-v0}\implies(\text{http-v3} \lor \text{http-v4})) \\
+\land ~~ &(\text{app-v0}\implies(\text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v1}\implies(\text{threads-v1})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{sql-v2}\implies(\text{threads-v1} \lor \text{threads-v2})) \\
+\land ~~ &(\text{threads-v0}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{threads-v1}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{threads-v2}\implies(\text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v0}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v1}\implies(\text{stdlib-v0} \lor \text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3})) \\
+\land ~~ &(\text{http-v2}\implies(\text{stdlib-v1} \lor \text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v3}\implies(\text{stdlib-v2} \lor \text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &(\text{http-v4}\implies(\text{stdlib-v3} \lor \text{stdlib-v4})) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v1}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v0} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v2}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v1} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v3}) \\
+\land ~~ &\neg(\text{stdlib-v2} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{stdlib-v3} \land \text{stdlib-v4}) \\
+\land ~~ &\neg(\text{threads-v0} \land \text{threads-v1}) \\
+\land ~~ &\neg(\text{threads-v0} \land \text{threads-v2}) \\
+\land ~~ &\neg(\text{threads-v1} \land \text{threads-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v1}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v0} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v2}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v1} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v3}) \\
+\land ~~ &\neg(\text{http-v2} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{http-v3} \land \text{http-v4}) \\
+\land ~~ &\neg(\text{sql-v1} \land \text{sql-v2}) \\
+\end{align*}
+$$
+
+Running the solver on this formula:
+
+```python
+bs: Bindings | None = solve(formula)
+if bs is not None:
+    for k, v in sorted(bs.items(), key=lambda p: p[0]):
+        print(k, v)
+```
+
+Yields the following assignment:
+
+| Variable     | Value    |
+|--------------|----------|
+| `app-v0`     | $\true$  |
+| `http-v0`    | $\false$ |
+| `http-v1`    | $\false$ |
+| `http-v2`    | $\false$ |
+| `http-v3`    | $\true$  |
+| `http-v4`    | $\false$ |
+| `sql-v1`     | $\false$ |
+| `sql-v2`     | $\true$  |
+| `stdlib-v0`  | $\false$ |
+| `stdlib-v1`  | $\false$ |
+| `stdlib-v2`  | $\false$ |
+| `stdlib-v3`  | $\false$ |
+| `stdlib-v4`  | $\true$  |
+| `threads-v0` | $\false$ |
+| `threads-v1` | $\false$ |
+| `threads-v2` | $\true$  |
+
+Or, put another way:
+
+| Package   | Version |
+|-----------|---------|
+| `http`    | 3       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
+
+# Heuristics {#heuristics}
+
+One reason to roll your own SAT solver would be to introduce domain-specific
+heuristics. For example: we'd generally want a package manager to prefer the
+latest version of a package that satisfies the constraints.
+
+We can implement this by redefining the function that chooses a variable, to
+pick variables representing higher version numbers first:
+
+```python
+def any_var_latest(e: Expr) -> str | None:
+    # Sort variables alphabetically, for determinism.
+    variables: list[str] = sorted(list(free(e)))
+    if len(variables) == 0:
+        return None
+    else:
+        # Return the last one, the highest version number for the
+        # (alphabetically) last package.
+        return variables[-1]
+```
+
+And using this in the resolver:
+
+```python
+Bindings = dict[str, bool]
+
+
+def solve_latest(e: Expr) -> Bindings | None:
+    return solver_latest(e, {})
+
+
+def solver_latest(e: Expr, bs: Bindings) -> Bindings | None:
+    free_var = any_var_latest(e)
+    if free_var is None:
+        if eval_expr(e):
+            return bs
+        else:
+            return None
+    else:
+        # Replace with True.
+        t: Expr = replace(e, free_var, True)
+        t_bs: Bindings = dict(bs)
+        t_bs[free_var] = True
+        # Replace with False.
+        f: Expr = replace(e, free_var, False)
+        f_bs: Bindings = dict(bs)
+        f_bs[free_var] = False
+        # Solve both branches, and return the first one that works.
+        return solver_latest(t, t_bs) or solver_latest(f, f_bs)
+```
+
+Running the same formula over this new solver yields:
+
+| Package   | Version |
+|-----------|---------|
+| `http`    | 4       |
+| `sql`     | 2       |
+| `stdlib`  | 4       |
+| `threads` | 2       |
+
+Which simply upgrades `http` from version `3` to `4`.
+
+Other heuristics might include:
+
+1. **Package Frequncy:** pick a version of the package name which appears most
+   often in the free variable list. This could mean the package is widely
+   depended-upon (e.g. the standard library). If there is no assignment that
+   satisfies the constraints, trying versions of this package will allow us to
+   get to failure faster.
+2. **Simultaneous Assignment:** since we now, from the nature of the problem,
+   that different versions of the same package are mutually exclusive, we can
+   speed up the solver by assigning all variables with the same package name at
+   once, assigning one of them to true and all the others to false.
+
+# External Solvers {#external}
+
+The solver described in this post can be easily optimized, but implementing
+every last technique in the [_Handbook of Satisfiability_][handbook] is probably
+overkill. Depending on how portable you want to be, you might want to shell out
+to an external SAT solver like [MiniSat][minisat] or [Clasp][clasp]. The [DIMACS
+format][dimacs] provides a standard file format for SAT solver input.
+
+[handbook]: https://www.iospress.com/catalog/books/handbook-of-satisfiability-2
+[minisat]: http://minisat.se/
+[clasp]: https://potassco.org/clasp/
+[dimacs]: https://logic.pdmi.ras.ru/~basolver/dimacs.html
+
+The tradeoff here is that using an external solver means you get optimizations
+like the [DPLL algorithm][dpll] and [CDCL][cdcl] for free, at the cost of losing
+error reporting, because the interface to the SAT solver is very narrow and
+doesn't communicate much except "here's an assignment that works, or solving
+failed". Using a home-spun solver means you get to apply domain-specific
+heuristics and optimizations, but you have to re-implement a lot from the
+literature.
+
+[dpll]: https://en.wikipedia.org/wiki/DPLL_algorithm
+[cdcl]: https://en.wikipedia.org/wiki/Conflict-driven_clause_learning
+
+# See Also {#see-also}
+
+- [Version SAT](https://research.swtch.com/version-sat)
+- [So you want to write a package manager](https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527)
+- [Documentation on Dart's dependency solver](https://github.com/dart-lang/pub/blob/master/doc/solver.md)
+
+# Footnotes
+
+[^same]:
+    This depends on the specifics of the programming language and package
+    manager you're working on. Some languages are perfectly fine with different
+    libraries depending on different versions of the same package. But it's a
+    recipe for subtle bugs. Generally it makes things more tractable if the set
+    of all transitive dependencies for an application has exactly one version
+    for each package.
