@@ -229,11 +229,16 @@ according to the following rules:
     \end{align*} $$
 
     Ensures we only have one version of `foo`.
+    
+    The procedure here is to take the set of all [combinations][comb] of length two from the set of all versions of `foo`.
+    
+    [comb]: https://en.wikipedia.org/wiki/Combination
 
-1. **The Root of the DAG:** the package we're resolving dependencies for is the
-   root of the build DAG. The version of the package we're building must be true
-   on all assignments, so we have to $\land$ it together with every other
+1. **The Root of the DAG:** the package version we're resolving dependencies for is the
+   root of the build DAG. The variable corresponding to this package version must be true on all assignments, so we have to $\land$ it together with every other
    term.
+   
+   Intuitively, the reason we have to add this is the variable being true is what "kicks off" the implications that represent the dependencies and gives us the assignment we want.
 
 # A Simple SAT Solver
 
