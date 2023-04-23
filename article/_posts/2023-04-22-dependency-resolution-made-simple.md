@@ -17,7 +17,8 @@ $$
 Lately, I've been thinking about what the package manager for [Austral][austral]
 is going to look like. Dependency resolution is a [surprisingly complex
 problem][np], so I did a deep dive, and this post explains how to solve the
-problem in a way that is tractable and doesn't require reinventing the wheel too much.
+problem in a way that is tractable and doesn't require reinventing the wheel too
+much.
 
 [austral]: https://austral-lang.org/
 [np]: https://research.swtch.com/version-sat
@@ -73,14 +74,16 @@ The **dependency resolution problem** is:
 
 This turns out to be a surprisingly hard problem. NP-complete,
 actually. Manifest/lock files are orthogonal to this: manifest files are about
-making builds reproducible, but manifest files are a _product_ of dependency resolution, not an input to it.
+making builds reproducible, but manifest files are a _product_ of dependency
+resolution, not an input to it.
 
 The dependency resolution problem is solved, in wildly different ways, by
-different package managers. There exists a simple and satisfactory solution that involves translating the
-problem into logic, applying a [SAT solver][sat] (a mature, well-understood
-piece of technology), and translating the solution back to the original problem
-domain. This approach is correct, it is free of ad-hockery, _and_ it benefits
-from the fact that SAT solvers have been optimized to death over decades.
+different package managers. There exists a simple and satisfactory solution that
+involves translating the problem into logic, applying a [SAT solver][sat] (a
+mature, well-understood piece of technology), and translating the solution back
+to the original problem domain. This approach is correct, it is free of
+ad-hockery, _and_ it benefits from the fact that SAT solvers have been optimized
+to death over decades.
 
 [sat]: https://en.wikipedia.org/wiki/SAT_solver
 
@@ -92,8 +95,9 @@ components:
 [proplog]: https://en.wikipedia.org/wiki/Propositional_calculus
 
 1. **Syntax:** the rules for writing _logical sentences_.
-2. **Semantics:** the rules for evaluating logical expressions to a truth value---true or false---just as
-   arithmetic expressions can be evaluated to a number
+2. **Semantics:** the rules for evaluating logical expressions to a truth
+   value---true or false---just as arithmetic expressions can be evaluated to a
+   number
 
 The syntax of propositional logic is simple: expressions are built up, starting
 from constants (true/false) and variables, by joining them through logical
@@ -151,7 +155,8 @@ For example, given:
 
 $$ ((A \land B) \lor C) \rightarrow (\lnot B \land C) $$
 
-And an assignment $\\{ A \rightarrow \true, B \rightarrow \false, C \rightarrow \true \\}$, we can evaluate the expression in a step by step manner like so:
+And an assignment $\\{ A \rightarrow \true, B \rightarrow \false, C \rightarrow
+\true \\}$, we can evaluate the expression in a step by step manner like so:
 
 | Expression                                                                 | Step                           |
 |----------------------------------------------------------------------------|--------------------------------|
@@ -225,16 +230,20 @@ according to the following rules:
     \end{align*} $$
 
     Ensures we only have one version of `foo`.
-    
-    The procedure here is to take the set of all [combinations][comb] of length two from the set of all versions of `foo`.
-    
+
+    The procedure here is to take the set of all [combinations][comb] of length
+    two from the set of all versions of `foo`.
+
     [comb]: https://en.wikipedia.org/wiki/Combination
 
-1. **The Root of the DAG:** the package version we're resolving dependencies for is the
-   root of the build DAG. The variable corresponding to this package version must be true on all assignments, so we have to $\land$ it together with every other
-   term.
-   
-   Intuitively, the reason we have to add this is the variable being true is what "kicks off" the implications that represent the dependencies and gives us the assignment we want.
+1. **The Root of the DAG:** the package version we're resolving dependencies for
+   is the root of the build DAG. The variable corresponding to this package
+   version must be true on all assignments, so we have to $\land$ it together
+   with every other term.
+
+   Intuitively, the reason we have to add this is the variable being true is
+   what "kicks off" the implications that represent the dependencies and gives
+   us the assignment we want.
 
 # A Simple SAT Solver
 
@@ -624,7 +633,8 @@ One reason to roll your own SAT solver would be to introduce domain-specific
 heuristics. For example: we'd generally want a package manager to prefer the
 latest version of a package that satisfies the constraints.
 
-We can implement this by redefining the function that chooses a variable, to pick variables representing higher version numbers first:
+We can implement this by redefining the function that chooses a variable, to
+pick variables representing higher version numbers first:
 
 ```python
 def any_var_latest(e: Expr) -> str | None:
@@ -677,6 +687,43 @@ Running the same formula over this new solver yields:
 | `stdlib`  | 4       |
 | `threads` | 2       |
 
+Which simply upgrades `http` from version `3` to `4`.
+
+Other heuristics might include:
+
+1. **Package Frequncy:** pick a version of the package name which appears most
+   often in the free variable list. This could mean the package is widely
+   depended-upon (e.g. the standard library). If there is no assignment that
+   satisfies the constraints, trying versions of this package will allow us to
+   get to failure faster.
+2. **Simultaneous Assignment:** since we now, from the nature of the problem,
+   that different versions of the same package are mutually exclusive, we can
+   speed up the solver by assigning all variables with the same package name at
+   once, assigning one of them to true and all the others to false.
+
+# External Solvers
+
+The solver described in this post can be easily optimized, but implementing
+every last technique in the [_Handbook of Satisfiability_][handbook] is probably
+overkill. Depending on how portable you want to be, you might want to shell out
+to an external SAT solver like [MiniSat][minisat] or [Clasp][clasp]. The [DIMACS
+format][dimacs] provides a standard file format for SAT solver input.
+
+[handbook]: https://www.iospress.com/catalog/books/handbook-of-satisfiability-2
+[minisat]: http://minisat.se/
+[clasp]: https://potassco.org/clasp/
+[dimacs]: https://logic.pdmi.ras.ru/~basolver/dimacs.html
+
+The tradeoff here is that using an external solver means you get optimizations
+like the [DPLL algorithm][dpll] and [CDCL][cdcl] for free, at the cost of losing
+error reporting, because the interface to the SAT solver is very narrow and
+doesn't communicate much except "here's an assignment that works, or solving
+failed". Using a home-spun solver means you get to apply domain-specific
+heuristics and optimizations, but you have to re-implement a lot from the
+literature.
+
+[dpll]: https://en.wikipedia.org/wiki/DPLL_algorithm
+[cdcl]: https://en.wikipedia.org/wiki/Conflict-driven_clause_learning
 
 # See Also
 
