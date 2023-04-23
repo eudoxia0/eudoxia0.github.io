@@ -76,11 +76,7 @@ actually. Manifest/lock files are orthogonal to this: manifest files are about
 making builds reproducible, but manifest files are a _product_ of dependency resolution, not an input to it.
 
 The dependency resolution problem is solved, in wildly different ways, by
-different package managers:
-
-1. TODO
-
-There exists a simple and satisfactory solution that involves translating the
+different package managers. There exists a simple and satisfactory solution that involves translating the
 problem into logic, applying a [SAT solver][sat] (a mature, well-understood
 piece of technology), and translating the solution back to the original problem
 domain. This approach is correct, it is free of ad-hockery, _and_ it benefits
