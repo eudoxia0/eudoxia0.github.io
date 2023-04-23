@@ -1,11 +1,11 @@
 CODE := solver.py
 FRAG := frags.json
 TMPL := template.md
-BLOG := ../../../article/_posts/2023-04-22-dependency-resolution-made-simple.md
+BLOG := ../../../article/_posts/2023-04-23-dependency-resolution-made-simple.md
 
 .PHONY: all clean
 all: $(BLOG)
-	
+
 $(FRAG): $(CODE)
 	airloom lift $(CODE) -o $(FRAG)
 
