@@ -60,7 +60,7 @@ features of libraries that fall outside of what an API spec can describe.
 In other words, there's a tradeoff:
 
 1. Less expressive version ranges make things easier for the package manager,
-   while making the user experience hellish and involving a lot of manual work.
+   while complicating the user experience and requiring lots of manual work from the user.
 1. More expressive version ranges allow users greater freedom to allow or deny
    specific package versions, while complicating the work that the package
    manager has to perform.
@@ -73,8 +73,7 @@ The **dependency resolution problem** is:
 
 This turns out to be a surprisingly hard problem. NP-complete,
 actually. Manifest/lock files are orthogonal to this: manifest files are about
-making builds reproducible, but to make a manifest file you have to have
-resolved the dependencies in the first place.
+making builds reproducible, but manifest files are a _product_ of dependency resolution, not an input to it.
 
 The dependency resolution problem is solved, in wildly different ways, by
 different package managers:
