@@ -1628,7 +1628,7 @@ Attila's shoulders drew back, he became stiff, and fell back rigidly on the floo
 
 What Timon saw: Attila inserting the cable in his wrist, and in the next instant collapsing and convulsing.
 
-The gods know the thoughts of men: they are pride, and vanity. Pride had brought them here, it led them down into the depths, and slit their throats. Vanity had buried them. But of what avail reason, against the sight of blinding light, and words spoken in the divine language?
+The gods know the thoughts of men: they are pride, and vanity. Pride had brought them here, it led them down into the depths, and slit their throats. Vanity had buried them. But of what avail reason, against the promise of blinding light, and words spoken in the divine language?
 
 Terror overcame him, it passed through him---and left. The pantheon had won and they were dead. But who can say they have struck back against the gods?
 
