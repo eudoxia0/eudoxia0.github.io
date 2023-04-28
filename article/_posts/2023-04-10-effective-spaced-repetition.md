@@ -52,6 +52,7 @@ $$
    1. [Rule: Write Two-Way Questions](#bidirectionality)
    1. [Rule: Ask Questions in Multiple Ways](#poly)
    1. [Rule: Concept Graphs](#graph)
+   1. [Rule: Cache Your Insights](#caching)
    1. [Rule: Learning Hierarchies](#hier)
    1. [Rule: Learning Sequences](#seq)
 1. [Examples](#ex)
@@ -278,6 +279,10 @@ The more interlinked your knowledge graph is, the better.
 It can help to visualize the concepts you're acquiring as being like a graph,
 where each node represents a discrete concept having certain properties, and the
 edges in the graphs are questions which get you from one concept to another.
+
+## Rule: Cache Your Insights {#caching}
+
+When studying, you will often infer new knowledge that is not explicitly written down in the text by thinking about what you've just read. After verifying that your inference is actually true, it can be helpful to "cache your insight"---to make a flashcard for that new discovered piece of knowledge.
 
 ## Rule: Learning Hierarchies {#hier}
 
