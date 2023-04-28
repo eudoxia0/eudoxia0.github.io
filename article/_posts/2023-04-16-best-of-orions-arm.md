@@ -246,6 +246,13 @@ This article is an index of my favorite topics from the Orion's Arm wiki.
 
 [earth]: https://www.orionsarm.com/eg-article/462eae95003f8
 
+## History
+
+- [The Tragedy of the G995][g995]: a [starwisp][starwisp] carrying uploaded humans is blown off course. The ship coasts for centuries, unseen, and the crew are unable to change the VR environment's clock rate or put their minds in hibernation.
+
+[g995]: https://www.orionsarm.com/eg-article/48114dd419d99
+[starwisp]: https://en.wikipedia.org/wiki/Starwisp
+
 ## Alien Civilizations
 
 Much of this was merged from another world-building project from the early
