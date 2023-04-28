@@ -282,7 +282,10 @@ edges in the graphs are questions which get you from one concept to another.
 
 ## Rule: Cache Your Insights {#caching}
 
-When studying, you will often infer new knowledge that is not explicitly written down in the text by thinking about what you've just read. After verifying that your inference is actually true, it can be helpful to "cache your insight"---to make a flashcard for that new discovered piece of knowledge.
+When studying, you will often infer new knowledge that is not explicitly written
+down in the text by thinking about what you've just read. After verifying that
+your inference is actually true, it can be helpful to "cache your insight"---to
+make a flashcard for that new discovered piece of knowledge.
 
 ## Rule: Learning Hierarchies {#hier}
 
