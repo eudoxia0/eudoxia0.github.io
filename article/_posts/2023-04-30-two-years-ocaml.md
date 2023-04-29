@@ -7,9 +7,36 @@ title: Two Years of OCaml
         - discussed on HN: https://news.ycombinator.com/item?id=35699697
         - and lobsters: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
     - thought i might give my two cents
+        - my experience using ocaml for the past two years
+        - how it compares to standard ml
+        - how it compares to haskell
     - austral compiler was ported from sml to ocaml almost two years ago
 - main points
     - syntax
+        - de gustibus yadda yadda
+            - I am not a partisan about syntax.
+            - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
+        - ML syntax feels like it's "hanging in the air"
+        - declaration order
+            - and chains are bad
+        - currying is bad
+            - You can avoid it with tuples but it makes type annotations harder
+        - awkward comment syntax
+        - type annotation syntax
+        - semicolons work sometimes
+        - nested match statements
+            - which appear everywhere
+            - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
+                - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
+        - vs. haskell
+            - Haskell is better:
+                - separating type annotations
+                - less custom syntax
+                - no declaration order
+                - fine-grained imports
+            - Haskell is worse:
+                - those dreadful infix operators
+                - indentation sensitivity
     - conservative ocaml
         - my ocaml vs. all the ocaml i see in the wild
     - ppx
@@ -28,4 +55,5 @@ title: Two Years of OCaml
         - integer ordering by divisibility
     - perry's comments
     - the attic
+        - all sorts of language features
     - compare returns an int
