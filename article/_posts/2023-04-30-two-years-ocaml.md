@@ -38,6 +38,19 @@ title: Two Years of OCaml
         - you also can't interleave functions and types
         - so you have to put all your types upfront
     - currying is bad
+        - punctuation is good
+        - adjacency is not syntax
+        - it's "cute"
+        - comes at a high cost
+        - every time you
+            - forget an argument
+            - add an argument
+            - mess up argument order
+        - you don't get an error to that effect
+            - rather, you get a type error that is a consequence of your mistake
+        - you learn gradually to pattern-match error messages to actual errors
+            - if you see an error like "something something is a function typoe", you forgot a type
+            - if you see an error like "foo is not a function type", you added an extra type
         - You can avoid it with tuples but it makes type annotations harder
     - awkward comment syntax
     - type annotation syntax
