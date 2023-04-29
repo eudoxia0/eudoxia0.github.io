@@ -1,5 +1,6 @@
 ---
 title: Two Years of OCaml
+summary: My thoughts on OCaml after two years of building a compiler with it.
 ---
 
 - intro
@@ -72,8 +73,10 @@ title: Two Years of OCaml
         - example that works
         - example that doesn't work
         - makes it hard to insert a debugging print somewhere
-    - inconsistency
-        - make everything delimited
+    - weirdnesses
+        - as above: tuple type vs. tuple constructor
+        - tuple is `(a,b,c)` list is `[a;b;c]`
+        - i guess `,` is an infix operator or something
     - nested match statements
         - which appear everywhere
         - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
