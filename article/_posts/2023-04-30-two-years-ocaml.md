@@ -89,9 +89,16 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - docs are useless if i can't find them
 - tooling
     - kinda works sometimes
-- modules: better is worse
-    - what they are
+- Modules: Better is Worse
+    - central feature that makes sml and ocaml attractive
+        - what they are
+        - few languages have modules
+            - ada works like this
     - modules hide too much
+        - example
+        - sml deals with this
+    - coherence
+        - requires special constraint syntax
     - equality is a special case
         - shows things are bad
         - have the courage of your convictions
@@ -100,7 +107,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - ad-hoc or generic
         - unclear when to use generic types and when to specialize
 - perry's comments
-- the attic
+- The Attic
     - all sorts of language features i don't fucking know
 - Minor Complains
     - compare returns an int
