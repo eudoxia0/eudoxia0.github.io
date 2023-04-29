@@ -81,14 +81,17 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - which appear everywhere
         - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
             - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
-- conservative ocaml
-    - my ocaml vs. all the ocaml i see in the wild
 - ppx
-- at least it's not haskell
-- how the fuck do i profile
-- docs are useless if i can't find them
+    - it's kind of necessary
+    - common lisp is the only language that really does macros right
 - tooling
+    - docs are useless if i can't find them
+    - my standard for tooling:
+        - i should be able to run the commands in the current version of the documentation and have them work
+    - set up dune and opam, angrily
+    - haven't used it enough
     - kinda works sometimes
+- how the fuck do i profile
 - Modules: Better is Worse
     - central feature that makes sml and ocaml attractive
         - what they are
@@ -113,7 +116,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - compare returns an int
     - zoo of conversion functions
         - again, have the courage of your convictions
-- Comparison with Haskell:
+- At Least It's Not Haskell:
     - Haskell is better:
         - separating type annotations
         - less custom syntax
@@ -130,6 +133,10 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - purity
             - yeah i guess this has a higher perf ceiling given an arbitrarily smart compiler
             - compilers are not arbitrarily smart
+- My OCaml Style
+    - tweet
+    - conservative ocaml
+    - my ocaml vs. all the ocaml i see in the wild
 - When to use OCaml?
     - ocaml is:
         - statically typed
