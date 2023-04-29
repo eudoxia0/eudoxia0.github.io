@@ -8,3 +8,18 @@ title: Two Years of OCaml
         - and lobsters: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
     - thought i might give my two cents
     - austral compiler was ported from sml to ocaml almost two years ago
+- main points
+    - syntax
+    - conservative ocaml
+        - my ocaml vs. all the ocaml i see in the wild
+    - ppx
+    - at least it's not haskell
+    - how the fuck do i profile
+    - docs are useless if i can't find them
+    - tooling
+        - kinda works sometimes
+    - modules: better is worse
+        - what they are
+        - modules hide too much
+    - the attic
+    - compare returns an int
