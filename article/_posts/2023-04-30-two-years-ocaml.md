@@ -87,6 +87,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - doesn't play well with modules
 - tooling
     - docs are useless if i can't find them
+    - tooling is useless if only experts who have been using the language for years know how to get a good setup going
     - my standard for tooling:
         1. i should be able to run the commands in the current version of the documentation and have them work
         2. there should be a project generator where i type in a name, and it spits out a project skeleton with:
