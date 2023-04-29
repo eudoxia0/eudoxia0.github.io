@@ -53,8 +53,25 @@ title: Two Years of OCaml
             - if you see an error like "foo is not a function type", you added an extra type
         - You can avoid it with tuples but it makes type annotations harder
     - awkward comment syntax
+        - no single-line comment syntax
+        - only block comments
+        - `(* derp *)` is torture to write
+        - comments can be nested, as in Common Lisp, which is good for commenting-out large chunks of code
     - type annotation syntax
+        - inconsistent
+            - tuples
+                - `a * b` is a type
+                - `(a, b)` is a tuple constructor
+                - haskell does this right
+            - generics are kinda weird
+                - `int list` means `list[int]`
+                - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
+                - haskell not much better: `Maybe Int`. For the love of God: give me punctuation.
     - semicolons work sometimes
+        - semicolons are, as you'd expect, for sequencing
+        - example that works
+        - example that doesn't work
+        - makes it hard to insert a debugging print somewhere
     - inconsistency
         - make everything delimited
     - nested match statements
