@@ -81,35 +81,55 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - which appear everywhere
         - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
             - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
-    - vs. haskell
-        - Haskell is better:
-            - separating type annotations
-            - less custom syntax
-            - no declaration order
-            - fine-grained imports
-        - Haskell is worse:
-            - those dreadful infix operators
-            - indentation sensitivity
-    - conservative ocaml
-        - my ocaml vs. all the ocaml i see in the wild
-    - ppx
-    - at least it's not haskell
-    - how the fuck do i profile
-    - docs are useless if i can't find them
-    - tooling
-        - kinda works sometimes
-    - modules: better is worse
-        - what they are
-        - modules hide too much
-        - equality is a special case
-            - shows things are bad
-            - have the courage of your convictions
-        - implicit specialization is good
-        - integer ordering by divisibility
-        - ad-hoc or generic
-            - unclear when to use generic types and when to specialize
-    - perry's comments
-    - the attic
-        - all sorts of language features
+- conservative ocaml
+    - my ocaml vs. all the ocaml i see in the wild
+- ppx
+- at least it's not haskell
+- how the fuck do i profile
+- docs are useless if i can't find them
+- tooling
+    - kinda works sometimes
+- modules: better is worse
+    - what they are
+    - modules hide too much
+    - equality is a special case
+        - shows things are bad
+        - have the courage of your convictions
+    - implicit specialization is good
+    - integer ordering by divisibility
+    - ad-hoc or generic
+        - unclear when to use generic types and when to specialize
+- perry's comments
+- the attic
+    - all sorts of language features i don't fucking know
+- Minor Complains
     - compare returns an int
+    - zoo of conversion functions
+        - again, have the courage of your convictions
+- Comparison with Haskell:
+    - Haskell is better:
+        - separating type annotations
+        - less custom syntax
+        - no declaration order
+        - fine-grained imports
+        - where i've used haskell tooling it kinda feels better
+            - this may be because i haven't used it enough
+    - Haskell is worse:
+        - those dreadful infix operators
+        - indentation sensitivity
+        - lazy evaluation
+        - lazy data structures
+    - Haskell is even:
+        - purity
+            - yeah i guess this has a higher perf ceiling given an arbitrarily smart compiler
+            - compilers are not arbitrarily smart
 - When to use OCaml?
+    - ocaml is:
+        - statically typed
+        - has a solid type system
+            - by which I mean algebraic data types with exhaustiveness checking
+        - compiles to native
+        - good performance
+        - not too galaxy brained
+        - lets you mutate and do IO to your heart's content
+        - has a decent enough ecosystem
