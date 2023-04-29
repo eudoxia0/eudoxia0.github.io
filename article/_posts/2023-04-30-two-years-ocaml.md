@@ -21,5 +21,11 @@ title: Two Years of OCaml
     - modules: better is worse
         - what they are
         - modules hide too much
+        - equality is a special case
+            - shows things are bad
+            - have the courage of your convictions
+        - implicit specialization is good
+        - integer ordering by divisibility
+    - perry's comments
     - the attic
     - compare returns an int
