@@ -3,7 +3,7 @@ title: Two Years of OCaml
 ---
 
 - intro
-    - the other day I saw this post: https://osa1.net/posts/2023-04-24-ocaml-thoughts.html
+    - the other day I saw this post: <https://osa1.net/posts/2023-04-24-ocaml-thoughts.html>
         - discussed on HN: https://news.ycombinator.com/item?id=35699697
         - and lobsters: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
     - thought i might give my two cents
@@ -24,6 +24,8 @@ title: Two Years of OCaml
         - awkward comment syntax
         - type annotation syntax
         - semicolons work sometimes
+        - inconsistency
+            - make everything delimited
         - nested match statements
             - which appear everywhere
             - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
@@ -53,7 +55,10 @@ title: Two Years of OCaml
             - have the courage of your convictions
         - implicit specialization is good
         - integer ordering by divisibility
+        - ad-hoc or generic
+            - unclear when to use generic types and when to specialize
     - perry's comments
     - the attic
         - all sorts of language features
     - compare returns an int
+- When to use OCaml?
