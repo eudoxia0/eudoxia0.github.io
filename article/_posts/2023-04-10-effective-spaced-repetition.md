@@ -71,6 +71,7 @@ $$
    1. [Example: Months of the Year](#months)
    1. [Example: Powers of Two](#powers)
    1. [Example: Rilke](#rilke)
+   1. [Example: Pharmacology](#pharma)
    1. [Example: Misc. Examples](#misc)
 1. [Scripts](#scripts)
    1. [Sequence Script](#seq-script)
@@ -1467,6 +1468,48 @@ generated flashcards are:
 </table>
 
 And so on. You get the pattern.
+
+## Example: Pharmacology {#pharma}
+
+<div class="border-box">
+
+The **dissociation constant** ($K_d$) of a drug is the drug concentration where
+half the binding sites in an assay are occupied.
+
+</div>
+
+This will be an example of [caching your insights](#caching). From this text, we
+can deduce more things:
+
+1. A _high_ value of $K_d$ means the drug has a _low_ affinity for the binding
+   sites, because it takes a higher concentration to reach the same amount of
+   binding.
+2. A _low_ value of $K_d$ means the drug has a _high_ affinity for the binding
+   sites, because it takes a lower concentration to reach the same occupancy.
+
+And from the above two facts we can also conclude:
+
+1. $K_d$ is inversely proportional to binding affinity.
+
+From this, we can start asking the questions:
+
+| Question                                                                               | Answer                                                  |
+|----------------------------------------------------------------------------------------|---------------------------------------------------------|
+| What is the term for the drug concentration where half the binding sites are occupied? | Dissociation constant.                                  |
+| What is the notation for the dissociation constant?                                    | $K_d$                                                   |
+| What does $K_d$ stand for?                                                             | The dissociation constant.                              |
+| What does a low value of $K_d$ mean?                                                   | High binding affinity.                                  |
+| Why does a low value of $K_d$ imply high binding affinity?                             | Fewer molecules are needed to reach the same occupancy. |
+| What does a high value of $K_d$ mean?                                                  | Low binding affinity.                                   |
+| Why does a high value of $K_d$ imply low binding affinity?                             | More molecules are needed to reach the same occupancy.  |
+| If a drug's binding affinity is high, what does that tell us about $K_d$?              | $K_d$ is low.                                           |
+| If a drug's binding affinity is low, what does that tell us about $K_d$?               | $K_d$ is high.                                          |
+| Describe the relationship between $K_d$ and binding affinity.                          | $K_d$ is inversely proportional to binding affinity.    |
+| $K_d$ is ___ proportional to binding affinity.                                         | Inversely.                                              |
+
+Visually:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/effective-spaced-repetition/pharma.svg"/>
 
 ## Example: Misc. Examples {#misc}
 

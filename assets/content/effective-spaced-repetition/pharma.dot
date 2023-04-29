@@ -1,0 +1,44 @@
+digraph G {
+    rankdir=TB;
+
+    subgraph answers {
+        node[shape=plaintext style=filled fillcolor="#81c784"]
+
+        term[label="Dissociation Constant"]
+        not[label="K_d"]
+        def[label="The drug concentration\nat which half of\nthe binding sites\nare occupied."]
+        inv[label="K_d is inversely proportional\nto binding affinity."]
+        low[label="High binding affinity."]
+        lowwhy[label="Because fewer molecules\nare needed to reach\nthe same occupancy."]
+        high[label="Low binding affinity."]
+        highwhy[label="Because more molecules\nare needed to reach\nthe same occupancy."]
+
+    }
+
+    subgraph questions {
+        node[shape=none fontcolor="#1b5e20" height=0.1]
+        qwhat[label="What is it?"]
+        qterm[label="Term?"]
+        qnot[label="Notation?"]
+        qstands[label="Stands for?"]
+        qrel[label="Relationship to\nbinding affinity?"]
+        qhigh[label="High K_d?"]
+        qhighwhy[label="Why?"]
+        qlow[label="Low K_d?"]
+        qlowwhy[label="Why?"]
+    }
+
+    term -> qwhat -> def
+    def -> qterm -> term
+
+    term -> qnot -> not
+    not -> qstands -> term
+
+    term -> qrel -> inv
+
+    term -> qlow -> low -> qlowwhy -> lowwhy
+    term -> qhigh -> high -> qhighwhy -> highwhy
+
+    { rank=same; qwhat; qterm; }
+    { rank=same; qnot; qstands; }
+}
