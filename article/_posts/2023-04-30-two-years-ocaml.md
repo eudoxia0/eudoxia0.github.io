@@ -84,14 +84,42 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - ppx
     - it's kind of necessary
     - common lisp is the only language that really does macros right
+    - doesn't play well with modules
 - tooling
     - docs are useless if i can't find them
     - my standard for tooling:
-        - i should be able to run the commands in the current version of the documentation and have them work
+        1. i should be able to run the commands in the current version of the documentation and have them work
+        2. there should be a project generator where i type in a name, and it spits out a project skeleton with:
+            1. library code
+            2. executable code
+            3. unit tests
+            4. stub documentation generation
+            5. all the relevant commands (build, test, generate docs) should work for the generated skeleton right off the bat
     - set up dune and opam, angrily
     - haven't used it enough
     - kinda works sometimes
 - how the fuck do i profile
+    - seriously
+    - i looked this up
+    - all the information assumes you're running ocamlc manually
+    - like you're building a one-file program with no dependencies
+    - i need to run this at the dune/opam level
+    - cobbled something together with prof that kinda works
+    - but then I forgot what I did to run it
+- testing
+    - some tasks have a higher activation energy---effort to get started---than others
+    - the code that gets written is the code that is easy to write
+    - languages, tooling affect the shape of the activation energy landscape, and channel you in a particular direction
+    - different languages make writing unit tests easier or harder
+        - python makes it easy
+        - write a class with methods that have the right name, everything gets autodiscovered
+        - unit test autodiscovery is a _huge_ boon
+        - it encourages writing tests
+    - languages that require you to write and register your test functions, like OCaml and Haskell, raise the activation energy to do this
+    - maybe there is an OCaml library that does test autodiscovery and makes it easier to write tests
+        - but the existence of better tooling is worthless
+        - the Right Way to do things should be in the project skeleton generator
+    - if i had more time i'd install the ocaml tooling and try to get a simple hello world app with unit tests going and record all the horrors
 - Modules: Better is Worse
     - central feature that makes sml and ocaml attractive
         - what they are
