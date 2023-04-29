@@ -7,38 +7,56 @@ title: Two Years of OCaml
         - discussed on HN: https://news.ycombinator.com/item?id=35699697
         - and lobsters: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
     - thought i might give my two cents
+        - austral compiler was ported from sml to ocaml almost two years ago
         - my experience using ocaml for the past two years
         - how it compares to standard ml
         - how it compares to haskell
-    - austral compiler was ported from sml to ocaml almost two years ago
-- main points
-    - syntax
+- syntax
+    - disclaimers
         - de gustibus yadda yadda
-            - I am not a partisan about syntax.
-            - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
+        - I am not a partisan about syntax.
+        - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
+    - aesthetics
+        - good for math
+        - bad for everything else
         - ML syntax feels like it's "hanging in the air"
-        - declaration order
-            - and chains are bad
-        - currying is bad
-            - You can avoid it with tuples but it makes type annotations harder
-        - awkward comment syntax
-        - type annotation syntax
-        - semicolons work sometimes
-        - inconsistency
-            - make everything delimited
-        - nested match statements
-            - which appear everywhere
-            - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
-                - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
-        - vs. haskell
-            - Haskell is better:
-                - separating type annotations
-                - less custom syntax
-                - no declaration order
-                - fine-grained imports
-            - Haskell is worse:
-                - those dreadful infix operators
-                - indentation sensitivity
+        - expression orientation cuts both ways
+            - pro: simple and general
+            - cons: it's easy to create complicated, arbitrarily nested code
+                - requires discipline to avoid doing this
+                - statement oriented languages force you to flatten things
+    - declaration order
+        - the following code
+            - example
+        - will not compile, you have to rewrite it like this
+            - example
+        - to have the declarations appear in order. alternatively, you can use an and chain
+            - example
+        - same is true for types
+        - and chains let you put declarations in the right order
+        - having an entire module be a `let rec ... and ... and ... and` feels brittle
+        - you also can't interleave functions and types
+        - so you have to put all your types upfront
+    - currying is bad
+        - You can avoid it with tuples but it makes type annotations harder
+    - awkward comment syntax
+    - type annotation syntax
+    - semicolons work sometimes
+    - inconsistency
+        - make everything delimited
+    - nested match statements
+        - which appear everywhere
+        - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
+            - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
+    - vs. haskell
+        - Haskell is better:
+            - separating type annotations
+            - less custom syntax
+            - no declaration order
+            - fine-grained imports
+        - Haskell is worse:
+            - those dreadful infix operators
+            - indentation sensitivity
     - conservative ocaml
         - my ocaml vs. all the ocaml i see in the wild
     - ppx
