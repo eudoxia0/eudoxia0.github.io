@@ -526,6 +526,8 @@ that support them) to see the actual type.
 
 # Pragmatics {#pragmatics}
 
+The stuff outside the spec: the tooling, community etc.
+
 ## PPX {#ppx}
 
 - it's kind of necessary
@@ -584,7 +586,7 @@ that support them) to see the actual type.
 - if i had more time i'd install the ocaml tooling and try to get a simple hello
   world app with unit tests going and record all the horrors
 
-## Minor Complains {#misc-complaint}
+## Minor Complaints {#misc-complaint}
 
 - compare returns an int
     - probably too late to change this but come on
