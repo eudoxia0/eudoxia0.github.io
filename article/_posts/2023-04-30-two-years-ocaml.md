@@ -160,23 +160,6 @@ val baz : unit -> unit
 
 The corresponding `.ml` file _still_ has to have the declarations appear in dependency order.
 
-## Currying is Bad {#currying}
-
-- punctuation is good
-- adjacency is not syntax
-- it's "cute"
-- comes at a high cost
-- every time you
-    - forget an argument
-    - add an argument
-    - mess up argument order
-- you don't get an error to that effect
-    - rather, you get a type error that is a consequence of your mistake
-- you learn gradually to pattern-match error messages to actual errors
-    - if you see an error like "something something is a function typoe", you forgot a type
-    - if you see an error like "foo is not a function type", you added an extra type
-- You can avoid it with tuples but it makes type annotations harder
-
 ## Awkward Comment Syntax {#comments}
 
 OCaml has no single-line comment syntax. Instead, you have block comment syntax, like so:
@@ -350,55 +333,28 @@ So everything gets _slightly_ out of alignment, and when you have a few nested `
 
 You can avoid this by refactoring each match into a separate function, but that has other costs.
 
-# PPX {#ppx}
+# Semantics {#semantics}
 
-- it's kind of necessary
-- common lisp is the only language that really does macros right
-- doesn't play well with modules
+## Currying is Bad {#currying}
 
-# Tooling {#tooling}
+- punctuation is good
+- adjacency is not syntax
+- it's "cute"
+- comes at a high cost
+- every time you
+    - forget an argument
+    - add an argument
+    - mess up argument order
+- you don't get an error to that effect
+    - rather, you get a type error that is a consequence of your mistake
+- you learn gradually to pattern-match error messages to actual errors
+    - if you see an error like "something something is a function typoe", you forgot a type
+    - if you see an error like "foo is not a function type", you added an extra type
+- You can avoid it with tuples but it makes type annotations harder
 
-- docs are useless if i can't find them
-- tooling is useless if only experts who have been using the language for years know how to get a good setup going
-- my standard for tooling:
-    1. i should be able to run the commands in the current version of the documentation and have them work
-    2. there should be a project generator where i type in a name, and it spits out a project skeleton with:
-        1. library code
-        2. executable code
-        3. unit tests
-        4. stub documentation generation
-        5. all the relevant commands (build, test, generate docs) should work for the generated skeleton right off the bat
-- set up dune and opam, angrily
-- haven't used it enough
-- kinda works sometimes
+## Type Inference is Bad {#inference}
 
-# how the fuck do i profile {#profiling}
-
-- seriously
-- i looked this up
-- all the information assumes you're running ocamlc manually
-- like you're building a one-file program with no dependencies
-- i need to run this at the dune/opam level
-- cobbled something together with prof that kinda works
-- but then I forgot what I did to run it
-
-# testing {#testing}
-
-- some tasks have a higher activation energy---effort to get started---than others
-- the code that gets written is the code that is easy to write
-- languages, tooling affect the shape of the activation energy landscape, and channel you in a particular direction
-- different languages make writing unit tests easier or harder
-    - python makes it easy
-    - write a class with methods that have the right name, everything gets autodiscovered
-    - unit test autodiscovery is a _huge_ boon
-    - it encourages writing tests
-- languages that require you to write and register your test functions, like OCaml and Haskell, raise the activation energy to do this
-- maybe there is an OCaml library that does test autodiscovery and makes it easier to write tests
-    - but the existence of better tooling is worthless
-    - the Right Way to do things should be in the project skeleton generator
-- if i had more time i'd install the ocaml tooling and try to get a simple hello world app with unit tests going and record all the horrors
-
-# Modules: Better is Worse {#modules}
+## Modules: Better is Worse {#modules}
 
 - central feature that makes sml and ocaml attractive
     - what they are
@@ -417,7 +373,57 @@ You can avoid this by refactoring each match into a separate function, but that 
 - ad-hoc or generic
     - unclear when to use generic types and when to specialize
 
-# Minor Complains {#misc-complaint}
+# Pragmatics {#pragmatics}
+
+## PPX {#ppx}
+
+- it's kind of necessary
+- common lisp is the only language that really does macros right
+- doesn't play well with modules
+
+## Tooling {#tooling}
+
+- docs are useless if i can't find them
+- tooling is useless if only experts who have been using the language for years know how to get a good setup going
+- my standard for tooling:
+    1. i should be able to run the commands in the current version of the documentation and have them work
+    2. there should be a project generator where i type in a name, and it spits out a project skeleton with:
+        1. library code
+        2. executable code
+        3. unit tests
+        4. stub documentation generation
+        5. all the relevant commands (build, test, generate docs) should work for the generated skeleton right off the bat
+- set up dune and opam, angrily
+- haven't used it enough
+- kinda works sometimes
+
+## how the fuck do i profile {#profiling}
+
+- seriously
+- i looked this up
+- all the information assumes you're running ocamlc manually
+- like you're building a one-file program with no dependencies
+- i need to run this at the dune/opam level
+- cobbled something together with prof that kinda works
+- but then I forgot what I did to run it
+
+## testing {#testing}
+
+- some tasks have a higher activation energy---effort to get started---than others
+- the code that gets written is the code that is easy to write
+- languages, tooling affect the shape of the activation energy landscape, and channel you in a particular direction
+- different languages make writing unit tests easier or harder
+    - python makes it easy
+    - write a class with methods that have the right name, everything gets autodiscovered
+    - unit test autodiscovery is a _huge_ boon
+    - it encourages writing tests
+- languages that require you to write and register your test functions, like OCaml and Haskell, raise the activation energy to do this
+- maybe there is an OCaml library that does test autodiscovery and makes it easier to write tests
+    - but the existence of better tooling is worthless
+    - the Right Way to do things should be in the project skeleton generator
+- if i had more time i'd install the ocaml tooling and try to get a simple hello world app with unit tests going and record all the horrors
+
+## Minor Complains {#misc-complaint}
 
 - compare returns an int
     - probably too late to change this but come on
