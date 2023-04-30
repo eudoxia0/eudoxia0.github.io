@@ -227,14 +227,51 @@ Haskell is not much better: `List Int`. This obsession with terseness is a big p
 - example that doesn't work
 - makes it hard to insert a debugging print somewhere
 
-## Weirdnesses {#weird-syntax}
+## Inconsistencies {#inconsistency}
 
-- as above: tuple type vs. tuple constructor
-- tuple is `(a,b,c)` list is `[a;b;c]`
-- i guess `,` is an infix operator or something
-- `val` vs `let`
-- `module vs struct`
-- `module type vs sig`
+As above: the syntax for tuple and unit types and values is inconsistent.
+
+The syntax for a list literal is `[1; 2; 3]`. This is because the comma is an infix operator, so if you typo this as `[1, 2, 3]` you don't get a syntax error, that's a singleton list with a tuple as its element type.
+
+Types are defined with `type`, both in module interfaces and module bodies:
+
+```ocaml
+module type FOO = sig
+  type t
+end
+
+module Foo: FOO = struct
+  type t
+end
+```
+
+But values are _defined_ with `let` and _declared_ with `val`:
+
+```ocaml
+module type FOO = sig
+  val a: int
+end
+
+module Foo: FOO = struct
+  let a: int = 10
+end
+```
+
+And, as you can see above, the syntax for modules is inconsistent. In Standard ML module interfaces are called _signatures_, and module bodies are called _structures_. In OCaml, these are called _module types_ and _modules_ respectively---but it's like they forgot to fully update the syntax, so `sig` defines a `module type` and `struct` defines a `module`.
+
+In Standard ML you'd write:
+
+```sml
+signature FOO = sig
+  (* ... *)
+end
+
+structure Foo: FOO = struct
+  (* ... *)
+end
+```
+
+Which is at least consistent.
 
 ## nested match statements {#nested-match}
 
