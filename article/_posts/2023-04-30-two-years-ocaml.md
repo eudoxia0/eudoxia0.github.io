@@ -376,11 +376,13 @@ let foo (a: int) (b: float) (c: string): unit =
   let _ = (a, b, c) in ()
 ```
 
-| Error                            | Code                                                                                                                  |
-|----------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| `let res: unit = foo 1 3.1`      | This expression has type `string -> unit` but an expression was expected of type `unit`.                              |
-| `let res: unit = foo 1 3.1 "" 1` | This function has type `int -> float -> string -> unit`. It is applied to too many arguments; maybe you forgot a `;`. |
-| `let res: unit = foo 1 "" 3.1`   | This expression has type `string` but an expression was expected of type `float`.                                     |
+Here's the error message for each kind of mistake:
+
+| Error       | Code             | Message                                                                                                               |
+|-------------|------------------|-----------------------------------------------------------------------------------------------------------------------|
+| **Missing** | `foo 0 1.0`      | This expression has type `string -> unit` but an expression was expected of type `unit`.                              |
+| **Extra**   | `foo 0 1.0 "" 1` | This function has type `int -> float -> string -> unit`. It is applied to too many arguments; maybe you forgot a `;`. |
+| **Swap**    | `foo 1 "" 0.0`   | This expression has type `string` but an expression was expected of type `float`.                                     |
 
 Only in the case where you swap two arguments do you get a reasonable error
 message.
@@ -508,7 +510,7 @@ that support them) to see the actual type.
 - zoo of conversion functions
     - again, have the courage of your convictions
 
-# At Least It's Not Haskell: {#haskell}
+# At Least It's Not Haskell {#haskell}
 
 - Haskell is better:
     - separating type annotations
