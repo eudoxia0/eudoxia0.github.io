@@ -562,23 +562,43 @@ with [functors][derivingfunctor].
 
 ## Tooling {#tooling}
 
-- docs are useless if i can't find them
-- tooling is useless if only experts who have been using the language for years
-  know how to get a good setup going
-- my standard for tooling:
-    1. i should be able to run the commands in the current version of the
-       documentation and have them work
-    2. there should be a project generator where i type in a name, and it spits
-       out a project skeleton with:
-        1. library code
-        2. executable code
-        3. unit tests
-        4. stub documentation generation
-        5. all the relevant commands (build, test, generate docs) should work
-           for the generated skeleton right off the bat
-- set up dune and opam, angrily
-- haven't used it enough
-- kinda works sometimes
+My standard for language tooling:
+
+1. I should be able to run the commands from the docs, in the order in which
+   they appear in the docs, and things should work.
+2. The standard Swiss army knife tool should have a project skeleton generator
+   that gives me a project with:
+
+   1. Library code.
+   2. A basic "Hello, world!" CLI entrypoint.
+   3. Unit tests.
+   4. Stub documentation.
+
+   And all relevant commands (`build`, `test`, `generate-docs`) should work from
+   the project skeleton immediately.  entrypoint, and unit tests.
+
+Surprisingly few languages clear this short bar.
+
+What is OCaml tooling like? There's [`dune`][dune], the build system, and
+[`opam`][opam], the package manager.
+
+They're alright. I managed to get them working, somewhat, for Austral. But I
+haven't touched the configuration since and every time I have to I sigh.
+
+[Merlin][merlin] works with Emacs except when it doesn't. I recently switched to
+NixOS so I might be able to get things working more reliably.
+
+[dune]: https://dune.build/
+[opam]: https://opam.ocaml.org/
+[merlin]: https://ocaml.github.io/merlin/
+
+This is infinitely better than the state of the art for e.g. Python (and the
+difference is even more stark when you consider how much money and time has been
+invested into the Python ecosystem compared to OCaml). The worst I experience
+with OCaml tooling is, oh, `dune` is so tiresome to use, I don't know how to do
+X, I'm lazy; whereas with Python any time you see an error message from `pip`
+you might as well take a blowtorch to your laptop because that's going to be
+easier to repair.
 
 ## How Do I Profile? {#profiling}
 
