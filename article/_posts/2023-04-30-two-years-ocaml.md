@@ -3,16 +3,17 @@ title: Two Years of OCaml
 summary: My thoughts on OCaml after two years of building a compiler with it.
 ---
 
-# Intro
+The other day I this [this post on OCaml][post] discussed in [Hacker News][hn] and [Lobsters][lob].
 
-- the other day I saw this post: <https://osa1.net/posts/2023-04-24-ocaml-thoughts.html>
-    - discussed on HN: https://news.ycombinator.com/item?id=35699697
-    - and lobsters: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
-- thought i might give my two cents
-    - austral compiler was ported from sml to ocaml almost two years ago
-    - my experience using ocaml for the past two years
-    - how it compares to standard ml
-    - how it compares to haskell
+[post]: https://osa1.net/posts/2023-04-24-ocaml-thoughts.html
+[hn]: https://news.ycombinator.com/item?id=35699697
+[lob]: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
+
+Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML][sml] to [OCaml][ocaml], so I thought I'd share my thoughts on OCaml after using it in writing a complex software project, explaining what is good and what is bad and how it compares mainly to Haskell.
+
+[austral]: https://github.com/austral/austral
+[sml]: https://en.wikipedia.org/wiki/Standard_ML
+[ocaml]: https://ocaml.org/
 
 # Syntax {#syntax}
 
