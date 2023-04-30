@@ -613,11 +613,27 @@ with [functors][derivingfunctor].
 
 ## Minor Complaints {#misc-complaint}
 
-- compare returns an int
-    - probably too late to change this but come on
-- all sorts of language features i don't fucking know
-- zoo of conversion functions
-    - again, have the courage of your convictions
+1. [`compare`][comp] returns in an `int`: like in C, `compare a b` returns 0 to
+   indicate `a = b`, a negative integer to indicate `a < b`, and a positive
+   integer to indicate `a > b`. This is so you can implement integer comparison
+   by doing `b - a`.
+
+    And needless to say this is an archaism. It's too late to change, but, for
+    the _n_th time, Haskell does this right: comparison returns a type
+    [`Ordering`][ordering] with constructors `LT`, `EQ`, `GT`.
+
+1. `compare` is a special case: like equality, it's special-cased into the
+   language. The type is `compare: 'a -> 'a -> int` which doesn't make sense.
+
+   This should be implemented by a module analogous to Haskell's [`Ord`][ord]
+   type class.
+
+1. The zoo of conversion functions: `string_of_int`, `bool_of_string`,
+   etc. Again, have the courage of your convictions and make this a module type.
+
+[comp]: https://v2.ocaml.org/api/Stdlib.html#VALcompare
+[ordering]: https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Ord.html#t:Ordering
+[ord]: https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Ord.html
 
 # At Least It's Not Haskell {#haskell}
 
