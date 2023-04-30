@@ -42,7 +42,7 @@ pointing out.
 1. [Pragmatics](#pragmatics)
     1. [PPX](#ppx)
     1. [Tooling](#tooling)
-    1. [how the fuck do i profile](#profiling)
+    1. [How Do I Profile?](#profiling)
     1. [testing](#testing)
     1. [Minor Complains](#misc-complaint)
 1. [At Least It's Not Haskell](#haskell)
@@ -579,15 +579,16 @@ with [functors][derivingfunctor].
 - haven't used it enough
 - kinda works sometimes
 
-## how the fuck do i profile {#profiling}
+## How Do I Profile? {#profiling}
 
-- seriously
-- i looked this up
-- all the information assumes you're running ocamlc manually
-- like you're building a one-file program with no dependencies
-- i need to run this at the dune/opam level
-- cobbled something together with prof that kinda works
-- but then I forgot what I did to run it
+Seriously. I looked this up. All the [documentation][profiling] seems to assume
+you're running `ocamlc` manually, like it's the 1990's and you're building a
+one-file script, not a big application with tens of transitive dependencies. I
+need to know how to do this at the `dune` level.
+
+I managed to cobble together something using `prof` and successfully profiled the Austral compiler, but then I forgot what I did to get that to work.
+
+[profiling]: https://v2.ocaml.org/manual/profil.html
 
 ## testing {#testing}
 
