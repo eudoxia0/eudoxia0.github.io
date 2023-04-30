@@ -15,6 +15,32 @@ Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML
 [sml]: https://en.wikipedia.org/wiki/Standard_ML
 [ocaml]: https://ocaml.org/
 
+# Contents
+
+1. [Syntax](#syntax)
+    1. [Aesthetics](#aesthetics)
+    1. [Declaration Order](#order)
+    1. [Awkward Comment Syntax](#comments)
+    1. [Type Specifier Syntax](#type-annot)
+    1. [Generic Syntax](#generic)
+    1. [Type Annotation Syntax](#annot)
+    1. [Semicolons Work Sometimes](#semicolons)
+    1. [Inconsistencies](#inconsistency)
+    1. [Nested Match Statements](#nested-match)
+1. [Semantics](#semantics)
+    1. [Currying is Bad](#currying)
+    1. [Type Inference is Bad](#inference)
+    1. [Modules: Better is Worse](#modules)
+1. [Pragmatics](#pragmatics)
+    1. [PPX](#ppx)
+    1. [Tooling](#tooling)
+    1. [how the fuck do i profile](#profiling)
+    1. [testing](#testing)
+    1. [Minor Complains](#misc-complaint)
+1. [At Least It's Not Haskell:](#haskell)
+1. [My OCaml Style](#my-style)
+1. [When to use OCaml?](#when-to-use)
+
 # Syntax {#syntax}
 
 Yeah, yeah, _de gustibus_, and people spend [_way_ too much time whining about syntax][wadler] and other superficial issues, rather than focusing on language semantics and pragmatics.
