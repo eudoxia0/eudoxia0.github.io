@@ -36,10 +36,15 @@ many glaring deficiencies stands far above everything else.
     1. [Semicolons Work Sometimes](#semicolons)
     1. [Inconsistencies](#inconsistency)
     1. [Nested Match Expressions](#nested-match)
+1. [Modules: Better is Worse](#modules)
+   1. [Modules Hide Too Much](#hiding)
+   1. [Consistency](#consistency)
+   1. [Equality](#equality)
+   1. [Implicit Specialization](#implicit)
+   1. [Multiple Implementations Are Unnecessary](#multiple-impls)
 1. [Semantics](#semantics)
     1. [Currying is Bad](#currying)
     1. [Type Inference is Bad](#inference)
-    1. [Modules: Better is Worse](#modules)
     1. [Mutation](#mutation)
 1. [Pragmatics](#pragmatics)
     1. [PPX](#ppx)
@@ -428,6 +433,36 @@ close parentheses on the last line.
 You can avoid this by refactoring each match into a separate function, but that
 has other costs.
 
+# Modules: Better is Worse {#modules}
+
+- central feature that makes sml and ocaml attractive
+    - what they are
+    - few languages have modules
+        - ada works like this
+
+## Modules Hide Too Much {#hiding}
+
+- example
+- sml deals with this
+
+## Consistency {#consistency}
+
+- requires special constraint syntax
+
+## Equality {#equality}
+
+- equality is a special case
+    - shows things are bad
+    - have the courage of your convictions
+
+## Implicit Specialization {#implicit}
+
+- implicit specialization is good
+
+## Multiple Implementations Are Unnecessary {#multiple-impls}
+
+- integer ordering by divisibility
+
 # Semantics {#semantics}
 
 Haskellers don't read this.
@@ -506,25 +541,6 @@ but you can always force a type error (or use [typed holes][holes] in languages
 that support them) to see the actual type.
 
 [holes]: https://wiki.haskell.org/GHC/Typed_holes
-
-## Modules: Better is Worse {#modules}
-
-- central feature that makes sml and ocaml attractive
-    - what they are
-    - few languages have modules
-        - ada works like this
-- modules hide too much
-    - example
-    - sml deals with this
-- coherence
-    - requires special constraint syntax
-- equality is a special case
-    - shows things are bad
-    - have the courage of your convictions
-- implicit specialization is good
-- integer ordering by divisibility
-- ad-hoc or generic
-    - unclear when to use generic types and when to specialize
 
 ## Mutation {#mutation}
 
