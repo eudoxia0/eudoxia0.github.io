@@ -220,7 +220,7 @@ Generics are weird. Most modern languages are moving towards `Name[Arg, ..., Arg
 
 Haskell is not much better: `List Int`. This obsession with terseness is a big problem: please give me punctuation.
 
-## semicolons work sometimes {#semicolons}
+## Semicolons Work Sometimes {#semicolons}
 
 Semicolons let you sequence statements. They work inconsistently. This works:
 
@@ -300,11 +300,36 @@ end
 
 Which is at least consistent.
 
-## nested match statements {#nested-match}
+## Nested Match Statements {#nested-match}
 
-- which appear everywhere
-- have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
-    - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
+Again, because `match` statements have no terminating delimiter, you can't nest them in the obvious way:
+
+```ocaml
+let rec safe_eval (e: expr): float option =
+  match e with
+  | Const f -> Some f
+  | Add (a, b) ->
+    match safe_eval a, safe_eval b with
+     | Some a, Some b -> Some (a +. b)
+     | _, _ -> None
+```
+
+This will yield a confusing type (not syntax!) error. Instead, you have to parenthesize:
+
+```ocaml
+let rec safe_eval (e: expr): float option =
+  match e with
+  | Const f -> Some f
+  | Add (e1, e2) ->
+    (match safe_eval e1, safe_eval e2 with
+     | Some f1, Some f2 -> Some (f1 +. f2)
+     | _, _ -> None)
+  (* ... *)
+```
+
+So everything gets _slightly_ out of alignment, and when you have a few nested `match` statements, the code starts to look like Lisp, with a trailing train of close parentheses on the last line.
+
+You can avoid this by refactoring each match into a separate function, but that has other costs.
 
 # PPX {#ppx}
 
