@@ -21,7 +21,8 @@ is bad and how it compares mainly to [Haskell][hs].
 
 If this seems overwhelmingly negative, it's because the things OCaml does right
 are really just uncontroversial. They're _obviously_ right and hardly worth
-pointing out.
+pointing out. It's actually a weirdly optimistic thing: that a language with so
+many glaring deficiencies stands far above everything else.
 
 # Contents
 
