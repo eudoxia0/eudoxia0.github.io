@@ -633,12 +633,19 @@ functorized code that's been PPX'd to death.
 
 # When to use OCaml? {#when-to-use}
 
-- ocaml is:
-    - statically typed
-    - has a solid type system
-        - by which I mean algebraic data types with exhaustiveness checking
-    - compiles to native
-    - good performance
-    - not too galaxy brained
-    - lets you mutate and do IO to your heart's content
-    - has a decent enough ecosystem
+OCaml:
+
+1. Is statically typed.
+1. Has a solid type system, by which I mean algebraic data types with exhaustiveness checking.
+1. Is garbage collected.
+1. Compiles to native.
+1. Has good out of the box performance.
+1. Is not too galaxy brained.
+1. Lets you mutate and perform IO to your heart's content.
+1. Has a decent enough ecosystem.
+
+And surprisingly few languages check these boxes that don't also have significant drawbacks.
+
+If you want a statically and strongly typed garbage-collected language that
+compiles to native and doesn't require you to change the way you work too much,
+you should use OCaml.
