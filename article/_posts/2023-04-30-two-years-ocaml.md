@@ -28,13 +28,13 @@ pointing out.
 1. [Syntax](#syntax)
     1. [Aesthetics](#aesthetics)
     1. [Declaration Order](#order)
-    1. [Awkward Comment Syntax](#comments)
-    1. [Type Specifier Syntax](#type-annot)
-    1. [Generic Syntax](#generic)
-    1. [Type Annotation Syntax](#annot)
+    1. [Comments](#comments)
+    1. [Type Specifiers](#type-annot)
+    1. [Generic Types](#generic)
+    1. [Type Annotations](#annot)
     1. [Semicolons Work Sometimes](#semicolons)
     1. [Inconsistencies](#inconsistency)
-    1. [Nested Match Statements](#nested-match)
+    1. [Nested Match Expressions](#nested-match)
 1. [Semantics](#semantics)
     1. [Currying is Bad](#currying)
     1. [Type Inference is Bad](#inference)
@@ -228,7 +228,7 @@ val baz : unit -> unit
 The corresponding `.ml` file _still_ has to have the declarations appear in
 dependency order.
 
-## Awkward Comment Syntax {#comments}
+## Comments {#comments}
 
 OCaml has no single-line comment syntax. Instead, you have block comment syntax,
 like so:
@@ -249,7 +249,7 @@ Unlike C and other languages, comments can be nested, like in Common Lisp:
 
 This is useful for commenting-out large chunks of code.
 
-## Type Specifier Syntax {#type-annot}
+## Type Specifiers {#type-annot}
 
 The syntax for type specifiers and type annotation is a bit of a pain.
 
@@ -274,7 +274,7 @@ Similarly, the unit type is `unit` but its value is `()`. And, again, Haskell
 gets this right: the unit type is the empty tuple, denoted `()`, and its sole
 value is `()`.
 
-## Generic Syntax {#generic}
+## Generic Types {#generic}
 
 Generics are weird. Most modern languages are moving towards `Name[Arg, ...,
 Arg]` as the syntax for a generic type specifier. So in Swift you'd write
@@ -284,7 +284,7 @@ think the argument is that you can read it like it's English?
 Haskell is not much better: `List Int`. This obsession with terseness is a big
 problem: please give me punctuation.
 
-## Type Annotation Syntax {#annot}
+## Type Annotations {#annot}
 
 Type annotations go in the same line as functions:
 
@@ -390,7 +390,7 @@ end
 
 Which is at least consistent.
 
-## Nested Match Statements {#nested-match}
+## Nested Match Expressions {#nested-match}
 
 Again, because `match` statements have no terminating delimiter, you can't nest
 them in the obvious way:
