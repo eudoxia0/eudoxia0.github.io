@@ -439,6 +439,12 @@ has other costs.
 
 # Modules: Better is Worse {#modules}
 
+<img src="/assets/content/two-years-ocaml/stanford-torus.jpg" alt="A drawing of the interior of a Stanford Torus space habitat, showing a beautiful city in space." width="600px" style="margin-left:auto;margin-right:auto;"/>
+
+<div class="center">
+**Fig 1.** Society if OCaml had type classes instead of modules.
+</div>
+
 The [module system][modsys] is the central feature that sets OCaml and Standard
 ML apart. This is how OCaml does ad-hoc polymorphism with early binding.
 
