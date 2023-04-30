@@ -450,6 +450,12 @@ The module system consists of:
 Few other languages have anything like this. Modula-2 and Ada work kind of like
 this, but they are much lower-level languages than OCaml.
 
+Modules are similar to type classes in Haskell, but they are more general:
+
+1. A module can have multiple types, not just one.
+2. Multiple modules can implement the same iterface, while in Haskell, a type
+   can only implement a type class in one way.
+
 ## Modules Hide Too Much {#hiding}
 
 - example
@@ -461,9 +467,40 @@ this, but they are much lower-level languages than OCaml.
 
 ## Equality {#equality}
 
-- equality is a special case
-    - shows things are bad
-    - have the courage of your convictions
+You'd think equality in OCaml would work like this:
+
+```ocaml
+module type EQUALITY = sig
+  type t
+  val eq : t -> t -> bool
+end
+
+module IntEquality: EQUALITY = struct
+  type t = int
+
+  let eq (a: int) (b: int): bool =
+    a = b
+end
+```
+
+Rather, equality in OCaml is special-cased. You have a [magical function][eq]
+with signature `'a -> 'a -> bool` that the compiler implements for every
+type. Standard ML does the same. Compare this to Haskell, where equality is
+implemented entire in userspace via a type class.
+
+[eq]: https://v2.ocaml.org/api/Stdlib.html#VAL(=)
+
+This should be a sign that modules are not good enough. You should either have
+the courage of your convictions---and make equality into a module type---or you
+should implement some bridging solution like [modular implicits][modimplicit] to
+make modules have the convenience of type classes.
+
+Modular implicits for OCaml were first proposed in 2015. There's an [open pull
+request][pr] from 2019 implementing a prototype. I don't think this is going to
+be merged any time soon.
+
+[modimplicit]: https://arxiv.org/pdf/1512.01895.pdf
+[pr]: https://github.com/ocaml/ocaml/pull/9187
 
 ## Implicit Specialization {#implicit}
 
