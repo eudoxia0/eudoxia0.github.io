@@ -20,70 +20,87 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - de gustibus yadda yadda
     - I am not a partisan about syntax.
     - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
-- aesthetics
-    - good for math
-    - bad for everything else
-    - ML syntax feels like it's "hanging in the air"
-    - expression orientation cuts both ways
-        - pro: simple and general
-        - cons: it's easy to create complicated, arbitrarily nested code
-            - requires discipline to avoid doing this
-            - statement oriented languages force you to flatten things
-- declaration order
-    - the following code
-        - example
-    - will not compile, you have to rewrite it like this
-        - example
-    - to have the declarations appear in order. alternatively, you can use an and chain
-        - example
-    - same is true for types
-    - and chains let you put declarations in the right order
-    - having an entire module be a `let rec ... and ... and ... and` feels brittle
-    - you also can't interleave functions and types
-    - so you have to put all your types upfront
-- currying is bad
-    - punctuation is good
-    - adjacency is not syntax
-    - it's "cute"
-    - comes at a high cost
-    - every time you
-        - forget an argument
-        - add an argument
-        - mess up argument order
-    - you don't get an error to that effect
-        - rather, you get a type error that is a consequence of your mistake
-    - you learn gradually to pattern-match error messages to actual errors
-        - if you see an error like "something something is a function typoe", you forgot a type
-        - if you see an error like "foo is not a function type", you added an extra type
-    - You can avoid it with tuples but it makes type annotations harder
-- awkward comment syntax
-    - no single-line comment syntax
-    - only block comments
-    - `(* derp *)` is torture to write
-    - comments can be nested, as in Common Lisp, which is good for commenting-out large chunks of code
-- type annotation syntax
-    - inconsistent
-        - tuples
-            - `a * b` is a type
-            - `(a, b)` is a tuple constructor
-            - haskell does this right
-        - generics are kinda weird
-            - `int list` means `list[int]`
-            - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
-            - haskell not much better: `Maybe Int`. For the love of God: give me punctuation.
-- semicolons work sometimes
-    - semicolons are, as you'd expect, for sequencing
-    - example that works
-    - example that doesn't work
-    - makes it hard to insert a debugging print somewhere
-- weirdnesses
-    - as above: tuple type vs. tuple constructor
-    - tuple is `(a,b,c)` list is `[a;b;c]`
-    - i guess `,` is an infix operator or something
-- nested match statements
-    - which appear everywhere
-    - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
-        - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
+
+## Aesthetics
+
+- good for math
+    - ml was born a theorem prover
+- bad for everything else
+- ML syntax feels like it's "hanging in the air"
+- expression orientation cuts both ways
+    - pro: simple and general
+    - cons: it's easy to create complicated, arbitrarily nested code
+        - requires discipline to avoid doing this
+        - statement oriented languages force you to flatten things
+
+## declaration order
+
+- the following code
+    - example
+- will not compile, you have to rewrite it like this
+    - example
+- to have the declarations appear in order. alternatively, you can use an and chain
+    - example
+- same is true for types
+- and chains let you put declarations in the right order
+- having an entire module be a `let rec ... and ... and ... and` feels brittle
+- you also can't interleave functions and types
+- so you have to put all your types upfront
+
+## currying is bad
+
+- punctuation is good
+- adjacency is not syntax
+- it's "cute"
+- comes at a high cost
+- every time you
+    - forget an argument
+    - add an argument
+    - mess up argument order
+- you don't get an error to that effect
+    - rather, you get a type error that is a consequence of your mistake
+- you learn gradually to pattern-match error messages to actual errors
+    - if you see an error like "something something is a function typoe", you forgot a type
+    - if you see an error like "foo is not a function type", you added an extra type
+- You can avoid it with tuples but it makes type annotations harder
+
+## awkward comment syntax
+
+- no single-line comment syntax
+- only block comments
+- `(* derp *)` is torture to write
+- comments can be nested, as in Common Lisp, which is good for commenting-out large chunks of code
+
+## type annotation syntax
+
+- inconsistent
+    - tuples
+        - `a * b` is a type
+        - `(a, b)` is a tuple constructor
+        - haskell does this right
+    - generics are kinda weird
+        - `int list` means `list[int]`
+        - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
+        - haskell not much better: `Maybe Int`. For the love of God: give me punctuation.
+
+## semicolons work sometimes
+
+- semicolons are, as you'd expect, for sequencing
+- example that works
+- example that doesn't work
+- makes it hard to insert a debugging print somewhere
+
+## weirdnesses
+
+- as above: tuple type vs. tuple constructor
+- tuple is `(a,b,c)` list is `[a;b;c]`
+- i guess `,` is an infix operator or something
+
+## nested match statements
+
+- which appear everywhere
+- have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
+    - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
 
 # PPX
 
