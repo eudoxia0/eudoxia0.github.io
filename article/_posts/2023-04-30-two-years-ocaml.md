@@ -491,7 +491,16 @@ better is better.
 
 ## Consistency {#consistency}
 
-- requires special constraint syntax
+In Haskell, every class-type pair has at most one implementation. This means you
+always know which implementation you're using. In OCaml, the flexibility of the
+module system means you might encounter subtle bugs where different parts of
+your code are using subtly-different modules for the same type, e.g. in one part
+you're sorting the integers in ascending order and elsewhere in divisibility
+order.
+
+The solution to this requires wrapping your code up in a functor that takes as
+an argument the integer order module, and passing that same module down. But
+functoralizing your entire codebase makes local reasoning harder.
 
 ## Equality {#equality}
 
