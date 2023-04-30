@@ -586,7 +586,8 @@ you're running `ocamlc` manually, like it's the 1990's and you're building a
 one-file script, not a big application with tens of transitive dependencies. I
 need to know how to do this at the `dune` level.
 
-I managed to cobble together something using `prof` and successfully profiled the Austral compiler, but then I forgot what I did to get that to work.
+I managed to cobble together something using `prof` and successfully profiled
+the Austral compiler, but then I forgot what I did to get that to work.
 
 [profiling]: https://v2.ocaml.org/manual/profil.html
 
@@ -678,7 +679,8 @@ functorized code that's been PPX'd to death.
 OCaml:
 
 1. Is statically typed.
-1. Has a solid type system, by which I mean algebraic data types with exhaustiveness checking.
+1. Has a solid type system, by which I mean algebraic data types with
+   exhaustiveness checking.
 1. Is garbage collected.
 1. Compiles to native.
 1. Has good out of the box performance.
@@ -686,7 +688,8 @@ OCaml:
 1. Lets you mutate and perform IO to your heart's content.
 1. Has a decent enough ecosystem.
 
-And surprisingly few languages check these boxes that don't also have significant drawbacks.
+And surprisingly few languages check these boxes that don't also have
+significant drawbacks.
 
 If you want a statically and strongly typed garbage-collected language that
 compiles to native and doesn't require you to change the way you work too much,
