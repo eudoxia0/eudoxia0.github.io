@@ -45,9 +45,9 @@ pointing out.
     1. [how the fuck do i profile](#profiling)
     1. [testing](#testing)
     1. [Minor Complains](#misc-complaint)
-1. [At Least It's Not Haskell:](#haskell)
+1. [At Least It's Not Haskell](#haskell)
 1. [My OCaml Style](#my-style)
-1. [When to use OCaml?](#when-to-use)
+1. [When Should You Use OCaml?](#when-to-use)
 
 # Syntax {#syntax}
 
@@ -631,7 +631,7 @@ hard to avoid, especially when you have large sum types.
 Much of the OCaml I see in the wild is a mess of un-annotated, deeply-nested,
 functorized code that's been PPX'd to death.
 
-# When to use OCaml? {#when-to-use}
+# When Should You Use OCaml? {#when-to-use}
 
 OCaml:
 
