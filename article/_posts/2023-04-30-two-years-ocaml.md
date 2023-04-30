@@ -160,7 +160,7 @@ val baz : unit -> unit
 
 The corresponding `.ml` file _still_ has to have the declarations appear in dependency order.
 
-## currying is bad {#currying}
+## Currying is Bad {#currying}
 
 - punctuation is good
 - adjacency is not syntax
@@ -177,12 +177,23 @@ The corresponding `.ml` file _still_ has to have the declarations appear in depe
     - if you see an error like "foo is not a function type", you added an extra type
 - You can avoid it with tuples but it makes type annotations harder
 
-## awkward comment syntax {#comments}
+## Awkward Comment Syntax {#comments}
 
-- no single-line comment syntax
-- only block comments
-- `(* derp *)` is torture to write
-- comments can be nested, as in Common Lisp, which is good for commenting-out large chunks of code
+OCaml has no single-line comment syntax. Instead, you have block comment syntax, like so:
+
+```ocaml
+(* I'm a comment. *)
+```
+
+The double parenthesis-asterisk pair is torture to write on my fingers. Again, Haskell does this right: single-line comments are a double hyphen. Quick and easy.
+
+Unlike C and other languages, comments can be nested, like in Common Lisp:
+
+```ocaml
+(* I'm a (* nested *) comment. *)
+```
+
+This is useful for commenting-out large chunks of code.
 
 ## type annotation syntax {#type-annot}
 
