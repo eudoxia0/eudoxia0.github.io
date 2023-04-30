@@ -17,10 +17,9 @@ Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML
 
 # Syntax {#syntax}
 
-- disclaimers
-    - de gustibus yadda yadda
-    - I am not a partisan about syntax.
-    - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
+Yeah, yeah, _de gustibus_, and people spend _way_ too much time whining about syntax and other superficial issues, rather than focusing on language semantics and pragmatics.
+
+But I'm not a partisan about syntax. I genuinely think code written in C, Java, Lisp, Pascal, and ML can be beautiful in different ways. Some of these complaints will be personal, others will be more objective.
 
 ## Aesthetics {#aesthetics}
 
