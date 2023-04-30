@@ -58,7 +58,7 @@ many glaring deficiencies stands far above everything else.
     1. [Minor Complaints](#misc-complaint)
 1. [At Least It's Not Haskell](#haskell)
 1. [My OCaml Style](#my-style)
-1. [When Should You Use OCaml?](#when-to-use)
+1. [Should You Use OCaml?](#should)
 
 # Syntax {#syntax}
 
@@ -114,7 +114,7 @@ Then it's simply delightful. It does tend to fall apart for everything else
 however.
 
 OCaml, like Haskell, is [expression-oriented][expr], meaning that there is no
-separationg of statements (control flow, variable assignment) and expressions
+separation of statements (control flow, variable assignment) and expressions
 (evaluate to values) and instead everything is an expression. Most expressions
 in OCaml tend not to have terminating delimiters.
 
@@ -844,7 +844,7 @@ hard to avoid, especially when you have large sum types.
 Much of the OCaml I see in the wild is a mess of un-annotated, deeply-nested,
 functorized code that's been PPX'd to death.
 
-# When Should You Use OCaml? {#when-to-use}
+# Should You Use OCaml? {#should}
 
 While there's a lot that makes me shake my head, there's really nothing in OCaml
 that makes me scream in terror. The language:
