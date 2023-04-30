@@ -462,7 +462,7 @@ The module system consists of:
 Few other languages have anything like this. [Modula-2][m2] and [Ada][ada] work
 kind of like this, but they are much lower-level languages than OCaml.
 
-[ada]: https://en.wikipedia.org/wiki/Ada_(programming_languag)e
+[ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)
 [m2]: https://en.wikipedia.org/wiki/Modula-2
 
 ## Modules Are Better {#better}
