@@ -25,15 +25,69 @@ But I'm not a partisan about syntax. I genuinely think code written in C, Java, 
 
 ## Aesthetics {#aesthetics}
 
-- good for math
-    - ml was born a theorem prover
-- bad for everything else
-- ML syntax feels like it's "hanging in the air"
-- expression orientation cuts both ways
-    - pro: simple and general
-    - cons: it's easy to create complicated, arbitrarily nested code
-        - requires discipline to avoid doing this
-        - statement oriented languages force you to flatten things
+[ML][ml] was born as the implementation language of a [theorem prover][lcf], so naturally the syntax is meant to look like whiteboard math.
+
+[ml]: https://en.wikipedia.org/wiki/ML_(programming_language)
+[lcf]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
+
+And it does look good for math. If you're writing something like a symbolic differentiation engine:
+
+```ocaml
+type expr =
+  | Const of float
+  | Add of expr * expr
+  | Sub of expr * expr
+  | Mul of expr * expr
+  | Div of expr * expr
+
+let rec diff (e: expr): expr =
+  match e with
+  (* c' = 0 *)
+  | Const _ ->
+     Const 0.0
+  (* (f + g)' = f' + g' *)
+  | Add (f, g) ->
+     Add (diff f, diff g)
+  (* (f - g)' = f' - g' *)
+  | Sub (f, g) ->
+     Sub (diff f, diff g)
+  (* (fg)' = f'g + fg' *)
+  | Mul (f, g) ->
+     Add (Mul (diff f, g), Mul (f, diff g))
+  (* (f/g)' = (f'g - g'f)/gg *)
+  | Div (f, g) ->
+     Div (Sub (Mul (diff f, g), Mul (f, diff g)), Mul (g, g))
+```
+
+Then it's simply delightful. It does tend to fall apart for everything else however.
+
+OCaml, like Haskell, is [expression-oriented][expr], meaning that there is no separationg of statements (control flow, variable assignment) and expressions (evaluate to values) and instead everything is an expression. Most expressions in OCaml tend not to have terminating delimiters.
+
+[expr]: https://en.wikipedia.org/wiki/Expression-oriented_programming_language
+
+This is very vague, but ML-family (meaning Standard ML, OCaml, Haskell and derivatives) code often feels like the expressions are "hanging in the air", so to speak. Terminating delimiters (like semicolons in C or `end` in [Wirth-family][wirth] languages) make the code feel more "solid" in a way.
+
+[wirth]: https://wiki.c2.com/?WirthLanguages
+
+And expression orientation (which most modern languages advertise as a feature) cuts both ways. The benefit is simplicity and symmetry: you don't need both an `if` statement and a ternary if expression. You can have a big expression that computes a value and then assigns it to a containing `let`, like so:
+
+```ocaml
+let a: ty =
+  match foo with
+  | Foo a ->
+    (* ... *)
+    let bar =
+      (* ... *)
+      (* imagine deeply nested expressions *)
+in
+(* etc *)
+```
+
+Without having to use an uninitialized variable or refactor your code into too-small functions. However, this generality comes at a cost: you can write arbitrarily deep and complex expressions, where a statement-oriented language would force you to keep your code flatter and break it down into small functions.
+
+It takes discipline to write good code in an expression-oriented language. I often see e.g. Common Lisp code with functions hundreds of lines long. It's almost impossible to track the flow of data in that context. This, by the way, is why [Austral][aus] is statement-oriented, despite every modern language moving towards expression-oriented syntax.
+
+[aus]: https://austral-lang.org/
 
 ## declaration order {#order}
 
