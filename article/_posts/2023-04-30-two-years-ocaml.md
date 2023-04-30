@@ -618,9 +618,18 @@ Where Haskell is worse:
 
 # My OCaml Style {#my-style}
 
-- tweet
-- conservative ocaml
-- my ocaml vs. all the ocaml i see in the wild
+<a href="https://twitter.com/zetalyrae/status/1639474931086901248"><img src="/assets/content/two-years-ocaml/tweet.png" alt="A screenshot of the linked tweet." width="500px" style="margin-left:auto;margin-right:auto;"/></a>
+
+I have a very conservative OCaml style. Types, functions, `let`, `match`,
+`if`. That's it. What else do you need?
+
+I never use polymorphic variants, or named arguments (just define a new record
+type lol). I factor things out and try to keep expression nesting to a
+minimum. I don't like functions that span multiple pages, but sometimes that's
+hard to avoid, especially when you have large sum types.
+
+Much of the OCaml I see in the wild is a mess of un-annotated, deeply-nested,
+functorized code that's been PPX'd to death.
 
 # When to use OCaml? {#when-to-use}
 
