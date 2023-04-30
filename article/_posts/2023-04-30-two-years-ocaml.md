@@ -594,25 +594,35 @@ the Austral compiler, but then I forgot what I did to get that to work.
 
 ## Testing {#testing}
 
-- some tasks have a higher activation energy---effort to get started---than
-  others
-- the code that gets written is the code that is easy to write
-- languages, tooling affect the shape of the activation energy landscape, and
-  channel you in a particular direction
-- different languages make writing unit tests easier or harder
-    - python makes it easy
-    - write a class with methods that have the right name, everything gets
-      autodiscovered
-    - unit test autodiscovery is a _huge_ boon
-    - it encourages writing tests
-- languages that require you to write and register your test functions, like
-  OCaml and Haskell, raise the activation energy to do this
-- maybe there is an OCaml library that does test autodiscovery and makes it
-  easier to write tests
-    - but the existence of better tooling is worthless
-    - the Right Way to do things should be in the project skeleton generator
-- if i had more time i'd install the ocaml tooling and try to get a simple hello
-  world app with unit tests going and record all the horrors
+Different tasks have different activation energy---the amount of effort to
+accomplish them. And in the end, the code that gets written is the code that is
+easy to write.
+
+That's why OCaml programs will have 10x more types than Java programs: because
+in OCaml you can define a type in three lines of code, while in Java defining
+the humblest class requires opening a new file and writing the entire
+declaration out in triplicate.
+
+Languages, tooling, and the community best practices affect the shape of the
+activation energy landscape, and channel you into a particular way of writing
+code.
+
+In particular: the experience of writing unit tests varies markedly by
+language. In Python I tend to write more tests, because Python is very dynamic
+and test frameworks take advantage of that. I just add a class and write a few
+methods with names starting with `test_` and I have my unit tests.
+
+Test autodiscovery is a huge boon. Test frameworks where you have to manually
+register tests make it more tiresome and time-consuming to write tests, and I
+end up writing fewer.
+
+Maybe there's a way to do quick, succint tests in OCaml with autodiscovery. If
+there is, I haven't found it, because setting up even the most basic unit tests
+with `dune` was already a pain.
+
+The _existence_ of tooling is worthless. The Right Way to do things should be
+included in the project skeleton generator, so it's not just experts who know
+how to do it.
 
 ## Minor Complaints {#misc-complaint}
 
