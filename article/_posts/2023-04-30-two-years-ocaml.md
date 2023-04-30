@@ -9,11 +9,15 @@ The other day I this [this post on OCaml][post] discussed in [Hacker News][hn] a
 [hn]: https://news.ycombinator.com/item?id=35699697
 [lob]: https://lobste.rs/s/jvxb8s/my_thoughts_on_ocaml
 
-Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML][sml] to [OCaml][ocaml], so I thought I'd share my thoughts on OCaml after using it in writing a complex software project, explaining what is good and what is bad and how it compares mainly to Haskell.
+Almost two years ago I rewrote the [Austral compiler][austral] from [Standard
+ML][sml] to [OCaml][ocaml], so I thought I'd share my thoughts on OCaml after
+using it in writing a complex software project, explaining what is good and what
+is bad and how it compares mainly to [Haskell][hs].
 
 [austral]: https://github.com/austral/austral
 [sml]: https://en.wikipedia.org/wiki/Standard_ML
 [ocaml]: https://ocaml.org/
+[hs]: https://www.haskell.org/
 
 If this seems overwhelmingly negative, it's because the things OCaml does right
 are really just uncontroversial. They're _obviously_ right and hardly worth
@@ -136,12 +140,13 @@ would force you to keep your code flatter and break it down into small
 functions.
 
 It takes discipline to write good code in an expression-oriented language. I
-often see e.g. Common Lisp code with functions hundreds of lines long. It's
-almost impossible to track the flow of data in that context. This, by the way,
-is why [Austral][aus] is statement-oriented, despite every modern language
-moving towards expression-oriented syntax.
+often see e.g. [Common Lisp][cl] code with functions hundreds of lines
+long. It's almost impossible to track the flow of data in that context. This, by
+the way, is why [Austral][aus] is statement-oriented, despite every modern
+language moving towards expression-oriented syntax.
 
 [aus]: https://austral-lang.org/
+[cl]: https://lisp-lang.org/
 
 ## Declaration Order {#order}
 
