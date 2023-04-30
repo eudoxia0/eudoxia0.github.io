@@ -361,24 +361,75 @@ You can avoid this by refactoring each match into a separate function, but that 
 
 # Semantics {#semantics}
 
+Haskellers don't read this.
+
 ## Currying is Bad {#currying}
 
-- punctuation is good
-- adjacency is not syntax
-- it's "cute"
-- comes at a high cost
-- every time you
-    - forget an argument
-    - add an argument
-    - mess up argument order
-- you don't get an error to that effect
-    - rather, you get a type error that is a consequence of your mistake
-- you learn gradually to pattern-match error messages to actual errors
-    - if you see an error like "something something is a function typoe", you forgot a type
-    - if you see an error like "foo is not a function type", you added an extra type
-- You can avoid it with tuples but it makes type annotations harder
+Currying is bad. Punctuation is good. Adjacency is not punctiation.
+
+It's "cute", I guess, if you like terse math notation, but it comes at huge costs. In a normal language where you write `f(x,y,z)`, if you forget an argument, or add another one, you get an error saying the arity doesn't match. If you swap the order of two arguments of distinct types, you get a type error.
+
+In OCaml, if you make any of these mistakes, you don't get an error to that effect. You get a type error _downstream_ of your typo. Consider:
+
+```ocaml
+let foo (a: int) (b: float) (c: string): unit =
+  let _ = (a, b, c) in ()
+```
+
+| Error                            | Code                                                                                                                  |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `let res: unit = foo 1 3.1`      | This expression has type `string -> unit` but an expression was expected of type `unit`.                              |
+| `let res: unit = foo 1 3.1 "" 1` | This function has type `int -> float -> string -> unit`. It is applied to too many arguments; maybe you forgot a `;`. |
+| `let res: unit = foo 1 "" 3.1`   | This expression has type `string` but an expression was expected of type `float`.                                     |
+
+Only in the case where you swap two arguments do you get a reasonable error
+message.
+
+Gradually you learn, through trial an error, to pattern-match on the error
+messages. When I see something like "this has type `a -> b`" I know I forgot an
+argument. When I see "applied to too many arguments" I know I added an extra
+one.
+
+Partly this is a consequence of type inference, which is why I put this under
+semantics rather than syntax. Also because I've complained enough about syntax.
+
+You can avoid currying with tuples, but it makes function type annotations
+harder to write. And it doesn't play well with much of the standard library.
 
 ## Type Inference is Bad {#inference}
+
+It's bad because the type system doesn't know which type constraints are correct
+and which are the result of errors the programmer made. So when you make a
+mistake, you're still giving constraints to the inference engine. Erroneous type
+inferences propagate in every direction. Error messages appear hundreds of lines
+of code away from their origin.
+
+In the worst cases, you end up adding type annotations, one `let` binding at a
+time, until the error messages start zeroing in on the problem. And so you've
+wrapped back around to writing down the types.
+
+It's bad because types are (part of the) documentation, and so you end up
+annotating the types of function arguments and return types anyways.
+
+It's bad because when reading code, you either have to mentally reconstruct the
+type of each variable binding, or rely on the tooling to tell you the type, and
+the more obscure the language, the less reliable the tooling.
+
+It's bad because there are many circumstances (reading a patch file, a GitHub
+diff, a book, a blog post) where you doin't have access to a language server, so
+you have to mentally reconstruct the types.
+
+It's bad because for any non-trivial type system it's undecidable. It is not
+robust to changes to the type system, and seemingly minor changes will tip you
+over to undecidability.
+
+Finally: type inference is not fundamental to functional programming, contrary
+to popular belief. You can just annotate types. If the type of an expression is
+hard to predict, that's probably a signal that the type system is too complex,
+but you can always force a type error (or use [typed holes][holes] in languages
+that support them) to see the actual type.
+
+[holes]: https://wiki.haskell.org/GHC/Typed_holes
 
 ## Modules: Better is Worse {#modules}
 
