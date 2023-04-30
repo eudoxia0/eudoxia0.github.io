@@ -195,21 +195,30 @@ Unlike C and other languages, comments can be nested, like in Common Lisp:
 
 This is useful for commenting-out large chunks of code.
 
-## type annotation syntax {#type-annot}
+## Type Specifier Syntax {#type-annot}
 
-- inconsistent
-    - tuples
-        - `a * b` is a type
-        - `(a, b)` is a tuple constructor
-        - haskell does this right
-    - `val` vs `let`
-    - `module vs struct`
-    - `module type vs sig`
-    - unit vs `()`
-    - generics are kinda weird
-        - `int list` means `list[int]`
-        - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
-        - haskell not much better: `Maybe Int`. For the love of God: give me punctuation.
+The syntax for type specifiers and type annotation is a bit of a pain.
+
+First, there's inconsistency: `a * b` is the type specifier for a tuple (asterisk as in [product][prod]), but the syntax for constructing a tuple is `(a, b)`:
+
+[prod]: https://en.wikipedia.org/wiki/Product_type
+
+```ocaml
+let derp: int * string = (0, "")
+```
+
+Again, Haskell gets this right:
+
+```haskell
+derp :: (Int, String)
+derp = (0, "")
+```
+
+Similarly, the unit type is `unit` but its value is `()`. And, again, Haskell gets this right: the unit type is the empty tuple, denoted `()`, and its sole value is `()`.
+
+Generics are weird. Most modern languages are moving towards `Name[Arg, ..., Arg]` as the syntax for a generic type specifier. So in Swift you'd write `List[Int]`, but in OCaml you write `int list`. The order is inverted, but I think the argument is that you can read it like it's English?
+
+Haskell is not much better: `List Int`. This obsession with terseness is a big problem: please give me punctuation.
 
 ## semicolons work sometimes {#semicolons}
 
@@ -218,11 +227,14 @@ This is useful for commenting-out large chunks of code.
 - example that doesn't work
 - makes it hard to insert a debugging print somewhere
 
-## weirdnesses {#weird-syntax}
+## Weirdnesses {#weird-syntax}
 
 - as above: tuple type vs. tuple constructor
 - tuple is `(a,b,c)` list is `[a;b;c]`
 - i guess `,` is an infix operator or something
+- `val` vs `let`
+- `module vs struct`
+- `module type vs sig`
 
 ## nested match statements {#nested-match}
 
