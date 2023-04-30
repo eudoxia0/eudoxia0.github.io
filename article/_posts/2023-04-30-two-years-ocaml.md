@@ -846,7 +846,8 @@ functorized code that's been PPX'd to death.
 
 # When Should You Use OCaml? {#when-to-use}
 
-OCaml:
+While there's a lot that makes me shake my head, there's really nothing in OCaml
+that makes me scream in terror. The language:
 
 1. Is statically typed.
 1. Has a solid type system, by which I mean algebraic data types with
@@ -864,3 +865,6 @@ significant drawbacks.
 If you want a statically and strongly typed garbage-collected language that
 compiles to native and doesn't require you to change the way you work too much,
 you should use OCaml.
+
+Particularly if you what you want is "garbage collected Rust that's not Go",
+OCaml is a good choice.
