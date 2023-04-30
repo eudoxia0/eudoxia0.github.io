@@ -14,14 +14,14 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - how it compares to standard ml
     - how it compares to haskell
 
-# Syntax
+# Syntax {#syntax}
 
 - disclaimers
     - de gustibus yadda yadda
     - I am not a partisan about syntax.
     - I genuinely think C, Java, Lisp, Pascal and ML can be beautiful in their own ways.
 
-## Aesthetics
+## Aesthetics {#aesthetics}
 
 - good for math
     - ml was born a theorem prover
@@ -33,7 +33,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - requires discipline to avoid doing this
         - statement oriented languages force you to flatten things
 
-## declaration order
+## declaration order {#order}
 
 - the following code
     - example
@@ -47,7 +47,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - you also can't interleave functions and types
 - so you have to put all your types upfront
 
-## currying is bad
+## currying is bad {#currying}
 
 - punctuation is good
 - adjacency is not syntax
@@ -64,14 +64,14 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - if you see an error like "foo is not a function type", you added an extra type
 - You can avoid it with tuples but it makes type annotations harder
 
-## awkward comment syntax
+## awkward comment syntax {#comments}
 
 - no single-line comment syntax
 - only block comments
 - `(* derp *)` is torture to write
 - comments can be nested, as in Common Lisp, which is good for commenting-out large chunks of code
 
-## type annotation syntax
+## type annotation syntax {#type-annot}
 
 - inconsistent
     - tuples
@@ -83,32 +83,32 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
         - haskell not much better: `Maybe Int`. For the love of God: give me punctuation.
 
-## semicolons work sometimes
+## semicolons work sometimes {#semicolons}
 
 - semicolons are, as you'd expect, for sequencing
 - example that works
 - example that doesn't work
 - makes it hard to insert a debugging print somewhere
 
-## weirdnesses
+## weirdnesses {#weird-syntax}
 
 - as above: tuple type vs. tuple constructor
 - tuple is `(a,b,c)` list is `[a;b;c]`
 - i guess `,` is an infix operator or something
 
-## nested match statements
+## nested match statements {#nested-match}
 
 - which appear everywhere
 - have to be parenthesized, so larger functions end up looking lisp-ish with a chain of close parentheses at the end
     - you can avoid this by refactoring each match into a separate function, but then you get the long and chains
 
-# PPX
+# PPX {#ppx}
 
 - it's kind of necessary
 - common lisp is the only language that really does macros right
 - doesn't play well with modules
 
-# Tooling
+# Tooling {#tooling}
 
 - docs are useless if i can't find them
 - tooling is useless if only experts who have been using the language for years know how to get a good setup going
@@ -124,7 +124,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - haven't used it enough
 - kinda works sometimes
 
-# how the fuck do i profile
+# how the fuck do i profile {#profiling}
 
 - seriously
 - i looked this up
@@ -134,7 +134,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - cobbled something together with prof that kinda works
 - but then I forgot what I did to run it
 
-# testing
+# testing {#testing}
 
 - some tasks have a higher activation energy---effort to get started---than others
 - the code that gets written is the code that is easy to write
@@ -150,7 +150,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
     - the Right Way to do things should be in the project skeleton generator
 - if i had more time i'd install the ocaml tooling and try to get a simple hello world app with unit tests going and record all the horrors
 
-# Modules: Better is Worse
+# Modules: Better is Worse {#modules}
 
 - central feature that makes sml and ocaml attractive
     - what they are
@@ -169,9 +169,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - ad-hoc or generic
     - unclear when to use generic types and when to specialize
 
-# perry's comments
-
-# Minor Complains
+# Minor Complains {#misc-complaint}
 
 - compare returns an int
     - probably too late to change this but come on
@@ -179,7 +177,7 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
 - zoo of conversion functions
     - again, have the courage of your convictions
 
-# At Least It's Not Haskell:
+# At Least It's Not Haskell: {#haskell}
 
 - Haskell is better:
     - separating type annotations
@@ -198,13 +196,13 @@ summary: My thoughts on OCaml after two years of building a compiler with it.
         - yeah i guess this has a higher perf ceiling given an arbitrarily smart compiler
         - compilers are not arbitrarily smart
 
-# My OCaml Style
+# My OCaml Style {#my-style}
 
 - tweet
 - conservative ocaml
 - my ocaml vs. all the ocaml i see in the wild
 
-# When to use OCaml?
+# When to use OCaml? {#when-to-use}
 
 - ocaml is:
     - statically typed
