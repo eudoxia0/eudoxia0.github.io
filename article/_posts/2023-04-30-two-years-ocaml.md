@@ -475,6 +475,15 @@ instantiating the same functor over the same structure, and this duplication may
 not be trivial to erase. In Haskell, the type class database is global and there
 is no duplication.
 
+So modules are more general, more flexible, and more powerful. They are also
+vastly more inconvenient to use, and their added power is more than undone by
+how cumbersome they are to use. Type classes, on the other hand, give you 80% of
+the features, let you implement the remaining 20% without much trouble, and are
+easier to use and to compose.
+
+It's not even fair to say type classes are worse is better: type classes are
+better is better.
+
 ## Modules Hide Too Much {#hiding}
 
 - example
