@@ -40,7 +40,6 @@ many glaring deficiencies stands far above everything else.
    1. [Modules Hide Too Much](#hiding)
    1. [Consistency](#consistency)
    1. [Equality](#equality)
-   1. [Implicit Specialization](#implicit)
    1. [Multiple Implementations Are Unnecessary](#multiple-impls)
 1. [Semantics](#semantics)
     1. [Currying is Bad](#currying)
@@ -456,6 +455,26 @@ Modules are similar to type classes in Haskell, but they are more general:
 2. Multiple modules can implement the same iterface, while in Haskell, a type
    can only implement a type class in one way.
 
+The drawback is you lose implicit specialization. You have to manually
+instantiate modules, and manually refer to them. You can't write `show x`, you
+have to write `FooShow.show x`. This adds a baseline level of line noise to all
+code that uses modules.
+
+It makes composing code harder. In Haskell, you can define a type class and say
+that the type parameters can only accept types that implement other type
+classes. This lets you naturally compose implementations: for example, you can
+make it so that if a type `A` implements the equality type class `Eq`, and a
+type `B` also implements `Eq`, then the tuple `(A, B)` implements `Eq` in the
+obvious way.
+
+In OCaml the only way to do this is with functors, which, again, have to be
+manually instantiated, and the resulting module referred to by name.
+
+And this is also anti-modular, since you can have multiple modules created by
+instantiating the same functor over the same structure, and this duplication may
+not be trivial to erase. In Haskell, the type class database is global and there
+is no duplication.
+
 ## Modules Hide Too Much {#hiding}
 
 - example
@@ -501,10 +520,6 @@ be merged any time soon.
 
 [modimplicit]: https://arxiv.org/pdf/1512.01895.pdf
 [pr]: https://github.com/ocaml/ocaml/pull/9187
-
-## Implicit Specialization {#implicit}
-
-- implicit specialization is good
 
 ## Multiple Implementations Are Unnecessary {#multiple-impls}
 
