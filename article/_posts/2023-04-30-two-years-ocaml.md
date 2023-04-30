@@ -535,7 +535,7 @@ things into.
 
 This is good. In theory purely-functional languages have a higher performance
 ceiling, because computation can be scheduled in parallel. In practice this is
-rarely realized.
+rarely realized because the "sufficiently smart compiler" doesn't exist.
 
 People have been saying, for some 20 years now, that single-core scaling has
 stalled and the von Neumann architecture has no future and we'd better port
