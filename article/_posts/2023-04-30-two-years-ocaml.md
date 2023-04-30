@@ -512,22 +512,23 @@ that support them) to see the actual type.
 
 # At Least It's Not Haskell {#haskell}
 
-- Haskell is better:
-    - separating type annotations
-    - less custom syntax
-    - no declaration order
-    - fine-grained imports
-    - where i've used haskell tooling it kinda feels better
-        - this may be because i haven't used it enough
-- Haskell is worse:
-    - those dreadful infix operators
-    - indentation sensitivity
-    - lazy evaluation
-    - lazy data structures
-- Haskell is even:
-    - purity
-        - yeah i guess this has a higher perf ceiling given an arbitrarily smart compiler
-        - compilers are not arbitrarily smart
+Haskell is the main competitor to OCaml. The areas where Haskell is superior to OCaml are:
+
+1. Consistent syntax.
+1. Declarations can appear in any order.
+1. Better import system.
+1. Tooling might be better (low-confidence, haven't used Haskell in anger much).
+1. Type classes are better than modules.
+1. `do` notation is great for error handling.
+
+Where Haskell is worse:
+
+1. Infix operators are bad. Custom infix operators are worse.
+1. Haskell is very indentation-sensitive, more so than Python. Slight, harmless-looking cosmetic changes can break the parser.
+1. Lazy evaluation is bad.
+1. Lazy data structures are bad.
+1. Is purity worth it? Not really.
+1. Every file starts with declaring thirty language extensions.
 
 # My OCaml Style {#my-style}
 
