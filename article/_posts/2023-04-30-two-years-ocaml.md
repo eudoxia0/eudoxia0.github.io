@@ -1,6 +1,11 @@
 ---
 title: Two Years of OCaml
 summary: My thoughts on OCaml after two years of building a compiler with it.
+card: two-years-ocaml.jpg
+card_source: |
+    [_Prisoners on a Projecting Platform_][link], _Carceri d'invenzione_, Giovanni Battista Piranesi, 1761.
+
+    [link]: https://en.wikipedia.org/wiki/File:Giovanni_Battista_Piranesi_-_Le_Carceri_d%27Invenzione_-_Second_Edition_-_1761_-_10_-_Prisoners_on_a_Projecting_Platform.jpg
 ---
 
 The other day I this [this post on OCaml][post] discussed in [Hacker News][hn] and [Lobsters][lob].
