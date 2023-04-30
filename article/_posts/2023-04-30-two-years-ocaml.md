@@ -15,6 +15,10 @@ Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML
 [sml]: https://en.wikipedia.org/wiki/Standard_ML
 [ocaml]: https://ocaml.org/
 
+If this seems overwhelmingly negative, it's because the things OCaml does right
+are really just uncontroversial. They're _obviously_ right and hardly worth
+pointing out.
+
 # Contents
 
 1. [Syntax](#syntax)
