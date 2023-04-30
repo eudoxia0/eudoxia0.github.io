@@ -37,8 +37,8 @@ many glaring deficiencies stands far above everything else.
     1. [Inconsistencies](#inconsistency)
     1. [Nested Match Expressions](#nested-match)
 1. [Modules: Better is Worse](#modules)
-   1. [Modules Hide Too Much](#hiding)
-   1. [Consistency](#consistency)
+   1. [Modules Are Better](#better)
+   1. [Modules Are Worse](#worse)
    1. [Equality](#equality)
    1. [Multiple Implementations Are Unnecessary](#multiple-impls)
 1. [Semantics](#semantics)
@@ -449,11 +449,15 @@ The module system consists of:
 Few other languages have anything like this. Modula-2 and Ada work kind of like
 this, but they are much lower-level languages than OCaml.
 
+## Modules Are Better {#better}
+
 Modules are similar to type classes in Haskell, but they are more general:
 
 1. A module can have multiple types, not just one.
 2. Multiple modules can implement the same iterface, while in Haskell, a type
    can only implement a type class in one way.
+
+## Modules Are Worse {#worse}
 
 The drawback is you lose implicit specialization. You have to manually
 instantiate modules, and manually refer to them. You can't write `show x`, you
@@ -483,24 +487,6 @@ easier to use and to compose.
 
 It's not even fair to say type classes are worse is better: type classes are
 better is better.
-
-## Modules Hide Too Much {#hiding}
-
-- example
-- sml deals with this
-
-## Consistency {#consistency}
-
-In Haskell, every class-type pair has at most one implementation. This means you
-always know which implementation you're using. In OCaml, the flexibility of the
-module system means you might encounter subtle bugs where different parts of
-your code are using subtly-different modules for the same type, e.g. in one part
-you're sorting the integers in ascending order and elsewhere in divisibility
-order.
-
-The solution to this requires wrapping your code up in a functor that takes as
-an argument the integer order module, and passing that same module down. But
-functoralizing your entire codebase makes local reasoning harder.
 
 ## Equality {#equality}
 
