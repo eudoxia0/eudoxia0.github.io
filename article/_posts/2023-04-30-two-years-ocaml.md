@@ -40,6 +40,7 @@ many glaring deficiencies stands far above everything else.
     1. [Currying is Bad](#currying)
     1. [Type Inference is Bad](#inference)
     1. [Modules: Better is Worse](#modules)
+    1. [Mutation](#mutation)
 1. [Pragmatics](#pragmatics)
     1. [PPX](#ppx)
     1. [Tooling](#tooling)
@@ -524,6 +525,25 @@ that support them) to see the actual type.
 - integer ordering by divisibility
 - ad-hoc or generic
     - unclear when to use generic types and when to specialize
+
+## Mutation {#mutation}
+
+OCaml is impure: you can mutate memory and perform IO anywhere. Unlike Java or
+Python, references are not implicit any time you have an object. Rather, you
+have a (garbage-collected) reference type that you can dereference and store
+things into.
+
+This is good. In theory purely-functional languages have a higher performance
+ceiling, because computation can be scheduled in parallel. In practice this is
+rarely realized.
+
+People have been saying, for some 20 years now, that single-core scaling has
+stalled and the von Neumann architecture has no future and we'd better port
+everything so parallel-by-default functional languages. What will actually
+happen is we'll get better at designing semantics for fundamentally-imperative
+languages with controlled aliasing and side effects, more Rust than Haskell. The
+borrow checker might be hard, but I'll choose that over some trans-dimensional
+monad optics stack that takes six GiB of RAM to print "Hello, world!".
 
 # Pragmatics {#pragmatics}
 
