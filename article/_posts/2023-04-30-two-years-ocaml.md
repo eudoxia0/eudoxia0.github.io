@@ -222,10 +222,37 @@ Haskell is not much better: `List Int`. This obsession with terseness is a big p
 
 ## semicolons work sometimes {#semicolons}
 
-- semicolons are, as you'd expect, for sequencing
-- example that works
-- example that doesn't work
-- makes it hard to insert a debugging print somewhere
+Semicolons let you sequence statements. They work inconsistently. This works:
+
+```ocaml
+let foo _ =
+  print_endline "Hello, world!";
+  true
+```
+
+This doesn't:
+
+```ocaml
+let foo _ =
+  if true then
+    print_endline "Hello, world!";
+    true
+  else
+    false
+```
+
+Which makes it hard to insert debugging `print` statements. You have to transform the above into the more tiresome:
+
+```
+let foo _ =
+  if true then
+    let _ = print_endline "Hello, world!" in
+    true
+  else
+    false
+```
+
+There's an easy way to solve this: add an `end if` delimiter. Again: terseness bites.
 
 ## Inconsistencies {#inconsistency}
 
