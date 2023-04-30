@@ -492,8 +492,10 @@ how cumbersome they are to use. Type classes, on the other hand, give you 80% of
 the features, let you implement the remaining 20% without much trouble, and are
 easier to use and to compose.
 
-It's not even fair to say type classes are worse is better: type classes are
-better is better.
+It's not even fair to say type classes are [worse is better][worse]: type
+classes are better is better.
+
+[worse]: https://en.wikipedia.org/wiki/Worse_is_better
 
 ## Equality {#equality}
 
