@@ -508,7 +508,24 @@ be merged any time soon.
 
 ## Multiple Implementations Are Unnecessary {#multiple-impls}
 
-- integer ordering by divisibility
+In Haskell, typically each type can implement each type class in one obvious
+way. It's rare you need multiple distinct instances.
+
+When you do, you can just use `newtype` wrappers:
+
+```haskell
+newtype IntAsc = IntAsc Int
+  deriving (Eq, Show)
+
+newtype IntDesc = IntDesc Int
+  deriving (Eq, Show)
+
+instance Ord IntAsc where
+  compare (IntAsc a) (IntAsc b) = compare a b
+
+instance Ord IntDesc where
+  compare (IntDesc a) (IntDesc b) = compare b a
+```
 
 # Semantics {#semantics}
 
