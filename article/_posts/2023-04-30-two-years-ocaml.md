@@ -89,19 +89,76 @@ It takes discipline to write good code in an expression-oriented language. I oft
 
 [aus]: https://austral-lang.org/
 
-## declaration order {#order}
+## Declaration Order {#order}
 
-- the following code
-    - example
-- will not compile, you have to rewrite it like this
-    - example
-- to have the declarations appear in order. alternatively, you can use an and chain
-    - example
-- same is true for types
-- and chains let you put declarations in the right order
-- having an entire module be a `let rec ... and ... and ... and` feels brittle
-- you also can't interleave functions and types
-- so you have to put all your types upfront
+In OCaml, like in C, declaration must appear in dependency order. That is, you can't write this:
+
+```ocaml
+let foo _ =
+  bar ()
+
+let bar _ =
+  baz ()
+
+let baz _ =
+  print_endline "muh one-pass compilation"
+```
+
+Instead you must write:
+
+```ocaml
+let baz _ =
+  print_endline "muh one-pass compilation"
+
+let bar _ =
+  baz ()
+
+let foo _ =
+  bar ()
+```
+
+Alternatively, you can use `and` to chain your declarations:
+
+```ocaml
+let rec foo _ =
+  bar ()
+
+and bar _ =
+  baz ()
+
+and baz _ =
+  print_endline "muh one-pass compilation"
+```
+
+And the same thing is true of types:
+
+```ocaml
+type foo = Foo of bar
+
+and bar = Bar of baz
+
+and baz = Baz of unit
+```
+
+_But_, you can't interleave an `and`-chain of functions with one of types. So you have a choice:
+
+1. You can write all of your code backwards, with the utility functions and the leaf-nodes of the call graph up front, and the important code at the bottom.
+
+2. Or, you can write a big `and`-chain of types at the start of the file, followed by a big `and`-chain of functions for the remainder of the file.
+
+Option one makes the code harder to read, and option two feels incredibly brittle.
+
+Haskell gets this right: declaration order is irrelevant. Austral also allows declarations to appear in any order, partly because of my frustration with this aspect of OCaml.
+
+Note that having a module interface doesn't save you here, because interfaces and modules are compiled separately. So if you have a `Foo.mli` file like this:
+
+```ocaml
+val foo : unit -> unit
+val bar : unit -> unit
+val baz : unit -> unit
+```
+
+The corresponding `.ml` file _still_ has to have the declarations appear in dependency order.
 
 ## currying is bad {#currying}
 
@@ -134,6 +191,10 @@ It takes discipline to write good code in an expression-oriented language. I oft
         - `a * b` is a type
         - `(a, b)` is a tuple constructor
         - haskell does this right
+    - `val` vs `let`
+    - `module vs struct`
+    - `module type vs sig`
+    - unit vs `()`
     - generics are kinda weird
         - `int list` means `list[int]`
         - modern languages have converged on a notation like `name[tyarg, ..., tyarg]`.
