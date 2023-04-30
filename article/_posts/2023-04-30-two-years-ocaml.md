@@ -55,7 +55,7 @@ many glaring deficiencies stands far above everything else.
     1. [Tooling](#tooling)
     1. [How Do I Profile?](#profiling)
     1. [Testing](#testing)
-    1. [Minor Complains](#misc-complaint)
+    1. [Minor Complaints](#misc-complaint)
 1. [At Least It's Not Haskell](#haskell)
 1. [My OCaml Style](#my-style)
 1. [When Should You Use OCaml?](#when-to-use)
