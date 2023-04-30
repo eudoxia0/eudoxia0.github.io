@@ -530,9 +530,34 @@ The stuff outside the spec: the tooling, community etc.
 
 ## PPX {#ppx}
 
-- it's kind of necessary
-- common lisp is the only language that really does macros right
-- doesn't play well with modules
+OCaml doesn't have macros built into the language. Instead you use [PPX][ppx],
+which lets you write programs that manipulate OCaml source code at the AST
+level.
+
+Mostly this is used for the equivalent of Haskell's `derive`. So you can write:
+
+```
+type expr =
+  | Const of float
+  | Add of expr * expr
+  | Sub of expr * expr
+  | Mul of expr * expr
+  | Div of expr * expr
+[@@deriving show, eq]
+```
+
+And the `@@deriving` annotation is replaced with the functions:
+
+```ocaml
+show_expr : expr -> string
+equal_expr : expr -> expr -> bool
+```
+
+There's not much to say about this. It's convenient. But it doesn't play well
+with [functors][derivingfunctor].
+
+[ppx]: https://ocaml.org/docs/metaprogramming
+[derivingfunctor]: https://stackoverflow.com/questions/70816473/how-to-apply-deriving-show-to-a-type-from-module-parameter-of-my-functor
 
 ## Tooling {#tooling}
 
