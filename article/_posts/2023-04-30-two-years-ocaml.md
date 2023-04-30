@@ -434,8 +434,10 @@ has other costs.
 
 # Modules: Better is Worse {#modules}
 
-The module system is the central feature that sets OCaml and Standard ML
-apart. This is how OCaml does ad-hoc polymorphism with early binding.
+The [module system][modsys] is the central feature that sets OCaml and Standard
+ML apart. This is how OCaml does ad-hoc polymorphism with early binding.
+
+[modsys]: https://v2.ocaml.org/manual/moduleexamples.html
 
 The module system consists of:
 
@@ -446,20 +448,25 @@ The module system consists of:
 1. **Functors**, which are functions from modules to modules. They take modules
    as arguments and combine them into new modules.
 
-Few other languages have anything like this. Modula-2 and Ada work kind of like
-this, but they are much lower-level languages than OCaml.
+Few other languages have anything like this. [Modula-2][m2] and [Ada][ada] work
+kind of like this, but they are much lower-level languages than OCaml.
+
+[ada]: https://en.wikipedia.org/wiki/Ada_(programming_languag)e
+[m2]: https://en.wikipedia.org/wiki/Modula-2
 
 ## Modules Are Better {#better}
 
-Modules are similar to type classes in Haskell, but they are more general:
+Modules are similar to [type classes][tc] in Haskell, but they are more general:
 
 1. A module can have multiple types, not just one.
 2. Multiple modules can implement the same iterface, while in Haskell, a type
    can only implement a type class in one way.
 
+[tc]: https://serokell.io/blog/haskell-typeclasses
+
 ## Modules Are Worse {#worse}
 
-The drawback is you lose implicit specialization. You have to manually
+The drawback is you lose implicit instantiation. You have to manually
 instantiate modules, and manually refer to them. You can't write `show x`, you
 have to write `FooShow.show x`. This adds a baseline level of line noise to all
 code that uses modules.
