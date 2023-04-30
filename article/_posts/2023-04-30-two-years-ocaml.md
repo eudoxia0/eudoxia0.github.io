@@ -216,9 +216,28 @@ derp = (0, "")
 
 Similarly, the unit type is `unit` but its value is `()`. And, again, Haskell gets this right: the unit type is the empty tuple, denoted `()`, and its sole value is `()`.
 
+## Generic Syntax {#generic}
+
 Generics are weird. Most modern languages are moving towards `Name[Arg, ..., Arg]` as the syntax for a generic type specifier. So in Swift you'd write `List[Int]`, but in OCaml you write `int list`. The order is inverted, but I think the argument is that you can read it like it's English?
 
 Haskell is not much better: `List Int`. This obsession with terseness is a big problem: please give me punctuation.
+
+## Type Annotation Syntax {#annot}
+
+Type annotations go in the same line as functions:
+
+```
+let derp (a: foo) (b: bar option) (c: baz * quux): herp =
+  (* ... *)
+```
+
+Which isn't _bad_, but it's a functional language, so you end up passing more stuff in. Haskell makes this a bit more comfortable:
+
+```haskell
+derp :: Foo -> Maybe Bar -> (Baz, Quux) -> Herp
+derp a b c =
+  -- ...
+```
 
 ## Semicolons Work Sometimes {#semicolons}
 
