@@ -43,7 +43,7 @@ pointing out.
     1. [PPX](#ppx)
     1. [Tooling](#tooling)
     1. [How Do I Profile?](#profiling)
-    1. [testing](#testing)
+    1. [Testing](#testing)
     1. [Minor Complains](#misc-complaint)
 1. [At Least It's Not Haskell](#haskell)
 1. [My OCaml Style](#my-style)
@@ -590,7 +590,7 @@ I managed to cobble together something using `prof` and successfully profiled th
 
 [profiling]: https://v2.ocaml.org/manual/profil.html
 
-## testing {#testing}
+## Testing {#testing}
 
 - some tasks have a higher activation energy---effort to get started---than
   others
