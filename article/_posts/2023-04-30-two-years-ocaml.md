@@ -43,20 +43,26 @@ Almost two years ago I rewrote the [Austral compiler][austral] from [Standard ML
 
 # Syntax {#syntax}
 
-Yeah, yeah, _de gustibus_, and people spend [_way_ too much time whining about syntax][wadler] and other superficial issues, rather than focusing on language semantics and pragmatics.
+Yeah, yeah, _de gustibus_, and people spend [_way_ too much time whining about
+syntax][wadler] and other superficial issues, rather than focusing on language
+semantics and pragmatics.
 
 [wadler]: https://en.wikipedia.org/wiki/Law_of_triviality
 
-But I'm not a partisan about syntax. I genuinely think code written in C, Java, Lisp, Pascal, and ML can be beautiful in different ways. Some of these complaints will be personal, others will be more objective.
+But I'm not a partisan about syntax. I genuinely think code written in C, Java,
+Lisp, Pascal, and ML can be beautiful in different ways. Some of these
+complaints will be personal, others will be more objective.
 
 ## Aesthetics {#aesthetics}
 
-[ML][ml] was born as the implementation language of a [theorem prover][lcf], so naturally the syntax is meant to look like whiteboard math.
+[ML][ml] was born as the implementation language of a [theorem prover][lcf], so
+naturally the syntax is meant to look like whiteboard math.
 
 [ml]: https://en.wikipedia.org/wiki/ML_(programming_language)
 [lcf]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
 
-And it does look good for math. If you're writing something like a symbolic differentiation engine:
+And it does look good for math. If you're writing something like a symbolic
+differentiation engine:
 
 ```ocaml
 type expr =
@@ -85,17 +91,27 @@ let rec diff (e: expr): expr =
      Div (Sub (Mul (diff f, g), Mul (f, diff g)), Mul (g, g))
 ```
 
-Then it's simply delightful. It does tend to fall apart for everything else however.
+Then it's simply delightful. It does tend to fall apart for everything else
+however.
 
-OCaml, like Haskell, is [expression-oriented][expr], meaning that there is no separationg of statements (control flow, variable assignment) and expressions (evaluate to values) and instead everything is an expression. Most expressions in OCaml tend not to have terminating delimiters.
+OCaml, like Haskell, is [expression-oriented][expr], meaning that there is no
+separationg of statements (control flow, variable assignment) and expressions
+(evaluate to values) and instead everything is an expression. Most expressions
+in OCaml tend not to have terminating delimiters.
 
 [expr]: https://en.wikipedia.org/wiki/Expression-oriented_programming_language
 
-This is very vague, but ML-family (meaning Standard ML, OCaml, Haskell and derivatives) code often feels like the expressions are "hanging in the air", so to speak. Terminating delimiters (like semicolons in C or `end` in [Wirth-family][wirth] languages) make the code feel more "solid" in a way.
+This is very vague, but ML-family (meaning Standard ML, OCaml, Haskell and
+derivatives) code often feels like the expressions are "hanging in the air", so
+to speak. Terminating delimiters (like semicolons in C or `end` in
+[Wirth-family][wirth] languages) make the code feel more "solid" in a way.
 
 [wirth]: https://wiki.c2.com/?WirthLanguages
 
-And expression orientation (which most modern languages advertise as a feature) cuts both ways. The benefit is simplicity and symmetry: you don't need both an `if` statement and a ternary if expression. You can have a big expression that computes a value and then assigns it to a containing `let`, like so:
+And expression orientation (which most modern languages advertise as a feature)
+cuts both ways. The benefit is simplicity and symmetry: you don't need both an
+`if` statement and a ternary if expression. You can have a big expression that
+computes a value and then assigns it to a containing `let`, like so:
 
 ```ocaml
 let a: ty =
@@ -109,15 +125,24 @@ in
 (* etc *)
 ```
 
-Without having to use an uninitialized variable or refactor your code into too-small functions. However, this generality comes at a cost: you can write arbitrarily deep and complex expressions, where a statement-oriented language would force you to keep your code flatter and break it down into small functions.
+Without having to use an uninitialized variable or refactor your code into
+too-small functions. However, this generality comes at a cost: you can write
+arbitrarily deep and complex expressions, where a statement-oriented language
+would force you to keep your code flatter and break it down into small
+functions.
 
-It takes discipline to write good code in an expression-oriented language. I often see e.g. Common Lisp code with functions hundreds of lines long. It's almost impossible to track the flow of data in that context. This, by the way, is why [Austral][aus] is statement-oriented, despite every modern language moving towards expression-oriented syntax.
+It takes discipline to write good code in an expression-oriented language. I
+often see e.g. Common Lisp code with functions hundreds of lines long. It's
+almost impossible to track the flow of data in that context. This, by the way,
+is why [Austral][aus] is statement-oriented, despite every modern language
+moving towards expression-oriented syntax.
 
 [aus]: https://austral-lang.org/
 
 ## Declaration Order {#order}
 
-In OCaml, like in C, declaration must appear in dependency order. That is, you can't write this:
+In OCaml, like in C, declaration must appear in dependency order. That is, you
+can't write this:
 
 ```ocaml
 let foo _ =
@@ -166,17 +191,24 @@ and bar = Bar of baz
 and baz = Baz of unit
 ```
 
-_But_, you can't interleave an `and`-chain of functions with one of types. So you have a choice:
+_But_, you can't interleave an `and`-chain of functions with one of types. So
+you have a choice:
 
-1. You can write all of your code backwards, with the utility functions and the leaf-nodes of the call graph up front, and the important code at the bottom.
+1. You can write all of your code backwards, with the utility functions and the
+   leaf-nodes of the call graph up front, and the important code at the bottom.
 
-2. Or, you can write a big `and`-chain of types at the start of the file, followed by a big `and`-chain of functions for the remainder of the file.
+2. Or, you can write a big `and`-chain of types at the start of the file,
+   followed by a big `and`-chain of functions for the remainder of the file.
 
-Option one makes the code harder to read, and option two feels incredibly brittle.
+Option one makes the code harder to read, and option two feels incredibly
+brittle.
 
-Haskell gets this right: declaration order is irrelevant. Austral also allows declarations to appear in any order, partly because of my frustration with this aspect of OCaml.
+Haskell gets this right: declaration order is irrelevant. Austral also allows
+declarations to appear in any order, partly because of my frustration with this
+aspect of OCaml.
 
-Note that having a module interface doesn't save you here, because interfaces and modules are compiled separately. So if you have a `Foo.mli` file like this:
+Note that having a module interface doesn't save you here, because interfaces
+and modules are compiled separately. So if you have a `Foo.mli` file like this:
 
 ```ocaml
 val foo : unit -> unit
@@ -184,17 +216,21 @@ val bar : unit -> unit
 val baz : unit -> unit
 ```
 
-The corresponding `.ml` file _still_ has to have the declarations appear in dependency order.
+The corresponding `.ml` file _still_ has to have the declarations appear in
+dependency order.
 
 ## Awkward Comment Syntax {#comments}
 
-OCaml has no single-line comment syntax. Instead, you have block comment syntax, like so:
+OCaml has no single-line comment syntax. Instead, you have block comment syntax,
+like so:
 
 ```ocaml
 (* I'm a comment. *)
 ```
 
-The double parenthesis-asterisk pair is torture to write on my fingers. Again, Haskell does this right: single-line comments are a double hyphen. Quick and easy.
+The double parenthesis-asterisk pair is torture to write on my fingers. Again,
+Haskell does this right: single-line comments are a double hyphen. Quick and
+easy.
 
 Unlike C and other languages, comments can be nested, like in Common Lisp:
 
@@ -208,7 +244,9 @@ This is useful for commenting-out large chunks of code.
 
 The syntax for type specifiers and type annotation is a bit of a pain.
 
-First, there's inconsistency: `a * b` is the type specifier for a tuple (asterisk as in [product][prod]), but the syntax for constructing a tuple is `(a, b)`:
+First, there's inconsistency: `a * b` is the type specifier for a tuple
+(asterisk as in [product][prod]), but the syntax for constructing a tuple is
+`(a, b)`:
 
 [prod]: https://en.wikipedia.org/wiki/Product_type
 
@@ -223,13 +261,19 @@ derp :: (Int, String)
 derp = (0, "")
 ```
 
-Similarly, the unit type is `unit` but its value is `()`. And, again, Haskell gets this right: the unit type is the empty tuple, denoted `()`, and its sole value is `()`.
+Similarly, the unit type is `unit` but its value is `()`. And, again, Haskell
+gets this right: the unit type is the empty tuple, denoted `()`, and its sole
+value is `()`.
 
 ## Generic Syntax {#generic}
 
-Generics are weird. Most modern languages are moving towards `Name[Arg, ..., Arg]` as the syntax for a generic type specifier. So in Swift you'd write `List[Int]`, but in OCaml you write `int list`. The order is inverted, but I think the argument is that you can read it like it's English?
+Generics are weird. Most modern languages are moving towards `Name[Arg, ...,
+Arg]` as the syntax for a generic type specifier. So in Swift you'd write
+`List[Int]`, but in OCaml you write `int list`. The order is inverted, but I
+think the argument is that you can read it like it's English?
 
-Haskell is not much better: `List Int`. This obsession with terseness is a big problem: please give me punctuation.
+Haskell is not much better: `List Int`. This obsession with terseness is a big
+problem: please give me punctuation.
 
 ## Type Annotation Syntax {#annot}
 
@@ -240,7 +284,8 @@ let derp (a: foo) (b: bar option) (c: baz * quux): herp =
   (* ... *)
 ```
 
-Which isn't _bad_, but it's a functional language, so you end up passing more stuff in. Haskell makes this a bit more comfortable:
+Which isn't _bad_, but it's a functional language, so you end up passing more
+stuff in. Haskell makes this a bit more comfortable:
 
 ```haskell
 derp :: Foo -> Maybe Bar -> (Baz, Quux) -> Herp
@@ -269,7 +314,8 @@ let foo _ =
     false
 ```
 
-Which makes it hard to insert debugging `print` statements. You have to transform the above into the more tiresome:
+Which makes it hard to insert debugging `print` statements. You have to
+transform the above into the more tiresome:
 
 ```
 let foo _ =
@@ -280,13 +326,16 @@ let foo _ =
     false
 ```
 
-There's an easy way to solve this: add an `end if` delimiter. Again: terseness bites.
+There's an easy way to solve this: add an `end if` delimiter. Again: terseness
+bites.
 
 ## Inconsistencies {#inconsistency}
 
 As above: the syntax for tuple and unit types and values is inconsistent.
 
-The syntax for a list literal is `[1; 2; 3]`. This is because the comma is an infix operator, so if you typo this as `[1, 2, 3]` you don't get a syntax error, that's a singleton list with a tuple as its element type.
+The syntax for a list literal is `[1; 2; 3]`. This is because the comma is an
+infix operator, so if you typo this as `[1, 2, 3]` you don't get a syntax error,
+that's a singleton list with a tuple as its element type.
 
 Types are defined with `type`, both in module interfaces and module bodies:
 
@@ -312,7 +361,11 @@ module Foo: FOO = struct
 end
 ```
 
-And, as you can see above, the syntax for modules is inconsistent. In Standard ML module interfaces are called _signatures_, and module bodies are called _structures_. In OCaml, these are called _module types_ and _modules_ respectively---but it's like they forgot to fully update the syntax, so `sig` defines a `module type` and `struct` defines a `module`.
+And, as you can see above, the syntax for modules is inconsistent. In Standard
+ML module interfaces are called _signatures_, and module bodies are called
+_structures_. In OCaml, these are called _module types_ and _modules_
+respectively---but it's like they forgot to fully update the syntax, so `sig`
+defines a `module type` and `struct` defines a `module`.
 
 In Standard ML you'd write:
 
@@ -330,7 +383,8 @@ Which is at least consistent.
 
 ## Nested Match Statements {#nested-match}
 
-Again, because `match` statements have no terminating delimiter, you can't nest them in the obvious way:
+Again, because `match` statements have no terminating delimiter, you can't nest
+them in the obvious way:
 
 ```ocaml
 let rec safe_eval (e: expr): float option =
@@ -342,7 +396,8 @@ let rec safe_eval (e: expr): float option =
      | _, _ -> None
 ```
 
-This will yield a confusing type (not syntax!) error. Instead, you have to parenthesize:
+This will yield a confusing type (not syntax!) error. Instead, you have to
+parenthesize:
 
 ```ocaml
 let rec safe_eval (e: expr): float option =
@@ -355,9 +410,12 @@ let rec safe_eval (e: expr): float option =
   (* ... *)
 ```
 
-So everything gets _slightly_ out of alignment, and when you have a few nested `match` statements, the code starts to look like Lisp, with a trailing train of close parentheses on the last line.
+So everything gets _slightly_ out of alignment, and when you have a few nested
+`match` statements, the code starts to look like Lisp, with a trailing train of
+close parentheses on the last line.
 
-You can avoid this by refactoring each match into a separate function, but that has other costs.
+You can avoid this by refactoring each match into a separate function, but that
+has other costs.
 
 # Semantics {#semantics}
 
@@ -367,9 +425,14 @@ Haskellers don't read this.
 
 Currying is bad. Punctuation is good. Adjacency is not punctiation.
 
-It's "cute", I guess, if you like terse math notation, but it comes at huge costs. In a normal language where you write `f(x,y,z)`, if you forget an argument, or add another one, you get an error saying the arity doesn't match. If you swap the order of two arguments of distinct types, you get a type error.
+It's "cute", I guess, if you like terse math notation, but it comes at huge
+costs. In a normal language where you write `f(x,y,z)`, if you forget an
+argument, or add another one, you get an error saying the arity doesn't
+match. If you swap the order of two arguments of distinct types, you get a type
+error.
 
-In OCaml, if you make any of these mistakes, you don't get an error to that effect. You get a type error _downstream_ of your typo. Consider:
+In OCaml, if you make any of these mistakes, you don't get an error to that
+effect. You get a type error _downstream_ of your typo. Consider:
 
 ```ocaml
 let foo (a: int) (b: float) (c: string): unit =
@@ -463,15 +526,19 @@ that support them) to see the actual type.
 ## Tooling {#tooling}
 
 - docs are useless if i can't find them
-- tooling is useless if only experts who have been using the language for years know how to get a good setup going
+- tooling is useless if only experts who have been using the language for years
+  know how to get a good setup going
 - my standard for tooling:
-    1. i should be able to run the commands in the current version of the documentation and have them work
-    2. there should be a project generator where i type in a name, and it spits out a project skeleton with:
+    1. i should be able to run the commands in the current version of the
+       documentation and have them work
+    2. there should be a project generator where i type in a name, and it spits
+       out a project skeleton with:
         1. library code
         2. executable code
         3. unit tests
         4. stub documentation generation
-        5. all the relevant commands (build, test, generate docs) should work for the generated skeleton right off the bat
+        5. all the relevant commands (build, test, generate docs) should work
+           for the generated skeleton right off the bat
 - set up dune and opam, angrily
 - haven't used it enough
 - kinda works sometimes
@@ -488,19 +555,25 @@ that support them) to see the actual type.
 
 ## testing {#testing}
 
-- some tasks have a higher activation energy---effort to get started---than others
+- some tasks have a higher activation energy---effort to get started---than
+  others
 - the code that gets written is the code that is easy to write
-- languages, tooling affect the shape of the activation energy landscape, and channel you in a particular direction
+- languages, tooling affect the shape of the activation energy landscape, and
+  channel you in a particular direction
 - different languages make writing unit tests easier or harder
     - python makes it easy
-    - write a class with methods that have the right name, everything gets autodiscovered
+    - write a class with methods that have the right name, everything gets
+      autodiscovered
     - unit test autodiscovery is a _huge_ boon
     - it encourages writing tests
-- languages that require you to write and register your test functions, like OCaml and Haskell, raise the activation energy to do this
-- maybe there is an OCaml library that does test autodiscovery and makes it easier to write tests
+- languages that require you to write and register your test functions, like
+  OCaml and Haskell, raise the activation energy to do this
+- maybe there is an OCaml library that does test autodiscovery and makes it
+  easier to write tests
     - but the existence of better tooling is worthless
     - the Right Way to do things should be in the project skeleton generator
-- if i had more time i'd install the ocaml tooling and try to get a simple hello world app with unit tests going and record all the horrors
+- if i had more time i'd install the ocaml tooling and try to get a simple hello
+  world app with unit tests going and record all the horrors
 
 ## Minor Complains {#misc-complaint}
 
@@ -512,7 +585,8 @@ that support them) to see the actual type.
 
 # At Least It's Not Haskell {#haskell}
 
-Haskell is the main competitor to OCaml. The areas where Haskell is superior to OCaml are:
+Haskell is the main competitor to OCaml. The areas where Haskell is superior to
+OCaml are:
 
 1. Consistent syntax.
 1. Declarations can appear in any order.
@@ -524,7 +598,8 @@ Haskell is the main competitor to OCaml. The areas where Haskell is superior to 
 Where Haskell is worse:
 
 1. Infix operators are bad. Custom infix operators are worse.
-1. Haskell is very indentation-sensitive, more so than Python. Slight, harmless-looking cosmetic changes can break the parser.
+1. Haskell is very indentation-sensitive, more so than Python. Slight,
+   harmless-looking cosmetic changes can break the parser.
 1. Lazy evaluation is bad.
 1. Lazy data structures are bad.
 1. Is purity worth it? Not really.
