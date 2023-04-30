@@ -435,10 +435,20 @@ has other costs.
 
 # Modules: Better is Worse {#modules}
 
-- central feature that makes sml and ocaml attractive
-    - what they are
-    - few languages have modules
-        - ada works like this
+The module system is the central feature that sets OCaml and Standard ML
+apart. This is how OCaml does ad-hoc polymorphism with early binding.
+
+The module system consists of:
+
+1. **Module types**, which define the interface of a module. A module type is a
+   collection of types and functions.
+1. **Modules**, which conform to an interface and define its types and
+   functions.
+1. **Functors**, which are functions from modules to modules. They take modules
+   as arguments and combine them into new modules.
+
+Few other languages have anything like this. Modula-2 and Ada work kind of like
+this, but they are much lower-level languages than OCaml.
 
 ## Modules Hide Too Much {#hiding}
 
