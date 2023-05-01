@@ -530,7 +530,7 @@ end
 Rather, equality in OCaml is special-cased. You have a [magical function][eq]
 with signature `'a -> 'a -> bool` that the compiler implements for every
 type. Standard ML does the same. Compare this to Haskell, where equality is
-implemented entire in userspace via a type class.
+implemented entirely in userspace via a type class.
 
 [eq]: https://v2.ocaml.org/api/Stdlib.html#VAL(=)
 
