@@ -8,7 +8,8 @@ card_source: |
     [link]: https://en.wikipedia.org/wiki/File:Giovanni_Battista_Piranesi_-_Le_Carceri_d%27Invenzione_-_Second_Edition_-_1761_-_10_-_Prisoners_on_a_Projecting_Platform.jpg
 ---
 
-The other day I this [this post on OCaml][post] discussed in [Hacker News][hn] and [Lobsters][lob].
+The other day I saw [this post on OCaml][post] discussed in [Hacker News][hn]
+and [Lobsters][lob].
 
 [post]: https://osa1.net/posts/2023-04-24-ocaml-thoughts.html
 [hn]: https://news.ycombinator.com/item?id=35699697
