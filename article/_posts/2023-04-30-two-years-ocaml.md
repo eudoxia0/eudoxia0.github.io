@@ -677,7 +677,7 @@ level.
 
 Mostly this is used for the equivalent of Haskell's `derive`. So you can write:
 
-```
+```ocaml
 type expr =
   | Const of float
   | Add of expr * expr
