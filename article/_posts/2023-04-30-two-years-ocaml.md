@@ -471,7 +471,7 @@ kind of like this, but they are much lower-level languages than OCaml.
 Modules are similar to [type classes][tc] in Haskell, but they are more general:
 
 1. A module can have multiple types, not just one.
-2. Multiple modules can implement the same iterface, while in Haskell, a type
+2. Multiple modules can implement the same interface, while in Haskell, a type
    can only implement a type class in one way.
 
 [tc]: https://serokell.io/blog/haskell-typeclasses
