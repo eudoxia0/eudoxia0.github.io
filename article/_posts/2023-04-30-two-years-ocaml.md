@@ -573,7 +573,7 @@ Haskellers don't read this.
 
 ## Currying is Bad {#currying}
 
-Currying is bad. Punctuation is good. Adjacency is not punctiation.
+Currying is bad. Punctuation is good. Adjacency is not punctuation.
 
 It's "cute", I guess, if you like terse math notation, but it comes at huge
 costs. In a normal language where you write `f(x,y,z)`, if you forget an
