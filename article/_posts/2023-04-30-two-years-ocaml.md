@@ -776,7 +776,7 @@ Test autodiscovery is a huge boon. Test frameworks where you have to manually
 register tests make it more tiresome and time-consuming to write tests, and I
 end up writing fewer.
 
-Maybe there's a way to do quick, succint tests in OCaml with autodiscovery. If
+Maybe there's a way to do quick, succinct tests in OCaml with autodiscovery. If
 there is, I haven't found it, because setting up even the most basic unit tests
 with `dune` was already a pain.
 
