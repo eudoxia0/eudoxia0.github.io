@@ -7,6 +7,8 @@ let
 in pkgs.mkShell {
   buildInputs = [
     python-with-my-packages
+    pkgs.ruff
+    pkgs.graphviz
   ];
   shellHook = ''
     PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
