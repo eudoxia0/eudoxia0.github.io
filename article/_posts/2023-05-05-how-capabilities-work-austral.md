@@ -22,6 +22,7 @@ card_source: |
 - this is called a supply chain attacks
   - the transitive closure of the dependencies of a modern application is huge
   - react hello-world node_modules
+    - 460MiB
 - what is the solution?
   - the graybeard
     - blame the programmer
@@ -48,13 +49,24 @@ card_source: |
 
 # The Solution {#solution}
 
-- capabilities: unforgeable permission slips
-- process-level
+- capabilities
+  - unforgeable permission slips
+  - grant permission to access some resource, like the filesystem or network
+  - ideally arbitrarily granular
+    - filesystem access
+    - directory access
+    - file access
+    - file-read access
+    - file attributes access
+- process-level capabilities widely implemented
   - capscicum
   - pledge
   - etc.
+  - backwards compatible
+  - operating system can evolve independently of applications written in different languages, runtimes, and eras
 - language level
   - harder
+  - E language
   - needs semantics
     - encapsulation
       - in highly-dynamic languages like python you can dynamically find the type of a cap and instantiate it
@@ -64,31 +76,44 @@ card_source: |
 
 # Capabilities in Austral {#austral}
 
-  - not a feature
-    - a consequence of linear types
-    - except for the root capability, more on this later
-  - example
-    - network sockets
-  - capabilities can:
-    - have a value
-      - file
-      - db handle
-      - socket
-    - no value: pure type-level permission slip
-    - no sharp distinction between caps and linear values
-  - capability hierarchy
-  - the root capability
-    - capabilities cannot be obtained from nowhere
-      - you need smth that represents a higher-level capability, conceptually
-      - root cap is the base case of this recursion
-    - cannot be created within the language
-    - exists only at the program entrypoint, which has root cap
-    - root can be surrendered immediately at the start of the program
-      - that program can't do anything
+- austral has capability based security
+  - capabilities are represented as linear types
+  - because they are linear, they are not copyable
+  - they can be surrendered by their owners, but not duplicated
+  - or stored in mutable global state
+- not a feature
+  - a consequence of linear types
+  - except for the root capability, more on this later
+- example
+  - network sockets
+    - interface
+    - usage
+- capabilities can:
+  - have a value
+    - file
+    - db handle
+    - socket
+  - no value: pure type-level permission slip
+  - no sharp distinction between caps and linear values
+- capability hierarchy
+- the root capability
+  - capabilities cannot be obtained from nowhere
+    - you need smth that represents a higher-level capability, conceptually
+    - root cap is the base case of this recursion
+  - cannot be created within the language
+  - exists only at the program entrypoint, which has root cap
+  - root can be surrendered immediately at the start of the program
+    - that program can't do anything
 
 # Limitations {#limitations}
 
 - global uniqueness
+  - e.g. stdio
+  - rootcapability type has no contents
+  - can't "mark" a capability as acquired and not possible to acquire again
+  - two solutions
+    - consume the root capability
+    - have a larger intermediate capability, that the user has to use with discipline
 - ffi is unsafe
   - unsafe ffi is needed
     - every language has a escape hatch
