@@ -11,12 +11,32 @@ card_source: |
 - all code within an address space has uniform permissions
   - to call any other code
   - to FFI
-- supply chain attacks
 - e.g. leftpad
   - can be leftpad and nothing else
   - can hoover up your disk
   - send it to a remote server, etc.
+- more generally, many things can be abused:
+  - filesystem access
+  - network access
   - clock access can be used to do timing attacks
+- this is called a supply chain attacks
+  - the transitive closure of the dependencies of a modern application is huge
+  - react hello-world node_modules
+- what is the solution?
+  - the graybeard
+    - blame the programmer
+    - say we need fewer dependencies
+    - says any competent dev can write a modern web app in vanilla js over a weekend
+  - a differnet type of HN commenter will:
+    - blame the programmer for failing to audit 500 MiB of node_modules
+    - says they should have read the manual^H source
+  - blaming human error isn't good enough
+  - as i wrote in the article introducing austral
+    - human error is inescapable
+  - we need an automated, mechanical solution
+    - just as type systems fix type errors
+    - ownership and borrowing fixes memory errors
+    - capability-based security fixes permission errors
 
 # Contents
 
