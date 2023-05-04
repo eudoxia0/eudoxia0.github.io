@@ -1,5 +1,6 @@
 ---
 title: NixOS for the Impatient
+summary: Using NixOS for a more tractable computing setup.
 card: nixos-for-the-impatient.jpg
 card_source: |
     neofetch output for my laptop.
