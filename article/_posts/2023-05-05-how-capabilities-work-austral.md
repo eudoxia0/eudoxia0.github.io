@@ -1,6 +1,9 @@
 ---
 title: How Capabilities Work in Austral
 summary: A walkthrough of Austral's capability-based security features.
+card: how-capabilities-work-austral.jpg
+card_source: |
+    “Labyrinth, Giovanni Battista Piranesi, 1750, engraving, from the British Museum”, DALL-E, June 2022.
 ---
 
 - the problem
