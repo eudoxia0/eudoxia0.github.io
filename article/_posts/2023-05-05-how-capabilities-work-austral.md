@@ -3,32 +3,44 @@ title: How Capabilities Work in Austral
 summary: A walkthrough of Austral's capability-based security features.
 ---
 
-- problem
-  - code is permissionless by default
-  - all code within an address space has uniform permissions
-    - to call any other code
-    - to FFI
-  - supply chain attacks
-  - e.g. leftpad
-    - can be leftpad and nothing else
-    - can hoover up your disk
-    - send it to a remote server, etc.
-    - clock access can be used to do timing attacks
-- solution
-  - capabilities: unforgeable permission slips
-  - process-level
-    - capscicum
-    - pledge
-    - etc.
-  - language level
-    - harder
-    - needs semantics
-      - encapsulation
-        - in highly-dynamic languages like python you can dynamically find the type of a cap and instantiate it
-      - no type casting
-        - casting `void*` to `foo*` should require a capability
-      - more generally, unsafe operations should require a capability
-- capabilities in austral
+- the problem
+- code is permissionless by default
+- all code within an address space has uniform permissions
+  - to call any other code
+  - to FFI
+- supply chain attacks
+- e.g. leftpad
+  - can be leftpad and nothing else
+  - can hoover up your disk
+  - send it to a remote server, etc.
+  - clock access can be used to do timing attacks
+
+# Contents
+
+1. [The Solution](#solution)
+1. [Capabilities in Austral](#austral)
+1. [Limitations](#limitations)
+1. [Auditing](#audit)
+1. [A Stricter Model](#strict)
+
+# The Solution {#solution}
+
+- capabilities: unforgeable permission slips
+- process-level
+  - capscicum
+  - pledge
+  - etc.
+- language level
+  - harder
+  - needs semantics
+    - encapsulation
+      - in highly-dynamic languages like python you can dynamically find the type of a cap and instantiate it
+    - no type casting
+      - casting `void*` to `foo*` should require a capability
+    - more generally, unsafe operations should require a capability
+
+# Capabilities in Austral {#austral}
+
   - not a feature
     - a consequence of linear types
     - except for the root capability, more on this later
@@ -50,38 +62,44 @@ summary: A walkthrough of Austral's capability-based security features.
     - exists only at the program entrypoint, which has root cap
     - root can be surrendered immediately at the start of the program
       - that program can't do anything
-- limitations
-  - global uniqueness
-  - ffi is unsafe
-    - unsafe ffi is needed
-      - every language has a escape hatch
-      - every time you interact with the outside world you need to do unsafe things
-        - caveat: vale
-      - the question is:
-        - how can you bound the dangers of unsafe code?
-        - how can you provide a safe interface to unsafe internals?\
-    - to use ffi, have to mark module unsafe
-    - it's not about complete safety
-    - it's about minimizing audit surface area
+
+# Limitations {#limitations}
+
+- global uniqueness
+- ffi is unsafe
+  - unsafe ffi is needed
+    - every language has a escape hatch
+    - every time you interact with the outside world you need to do unsafe things
+      - caveat: vale
+    - the question is:
+      - how can you bound the dangers of unsafe code?
+      - how can you provide a safe interface to unsafe internals?\
+  - to use ffi, have to mark module unsafe
+  - it's not about complete safety
+  - it's about minimizing audit surface area
 - not good enough
   - you can have the same supply chain attacks in austral
   - unless you audit all unsafe modules
     - this is more tractable than having to audit all code
     - it's also still hard
-- partial solution: force audit
-  - when building against a version of a package for the first time, audit
-  - the lockfile which specifies exact versions of packages to reproducibly build against also tracks whether smth has been audited
-  - puts a lot of pressure on the user
-  - doable
-- a different model
-  - unsafe capability
-    - built from rootcap
-    - every unsafe operation takes an unsafe cap
-      - allocating
-      - deallocating
-      - pointer arith
-      - pointer casting
-      - dereferencing a pointer
-      - storing to a pointer
-    - data structures that do allocation keep a reference to the allocator
-      - allocator provides the unsafe cap for use
+
+# Auditing {#audit}
+
+- when building against a version of a package for the first time, audit
+- the lockfile which specifies exact versions of packages to reproducibly build against also tracks whether smth has been audited
+- puts a lot of pressure on the user
+- doable
+
+# A Stricter Model {#strict}
+
+- unsafe capability
+  - built from rootcap
+  - every unsafe operation takes an unsafe cap
+    - allocating
+    - deallocating
+    - pointer arith
+    - pointer casting
+    - dereferencing a pointer
+    - storing to a pointer
+  - data structures that do allocation keep a reference to the allocator
+    - allocator provides the unsafe cap for use
