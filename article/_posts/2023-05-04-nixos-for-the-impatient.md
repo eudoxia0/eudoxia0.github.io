@@ -1,5 +1,6 @@
 ---
 title: NixOS for the Impatient
+card: nixos-for-the-impatient.jpg
 ---
 
 - NixOS
