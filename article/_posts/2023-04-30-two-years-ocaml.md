@@ -42,6 +42,7 @@ many glaring deficiencies stands far above everything else.
     1. [Semicolons Work Sometimes](#semicolons)
     1. [Inconsistencies](#inconsistency)
     1. [Nested Match Expressions](#nested-match)
+    1. [Do Notation](#do-notation)
 1. [Modules: Better is Worse](#modules)
    1. [Modules Are Better](#better)
    1. [Modules Are Worse](#worse)
@@ -437,6 +438,31 @@ close parentheses on the last line.
 
 You can avoid this by refactoring each match into a separate function, but that
 has other costs.
+
+## Do Notation {#do-notation}
+
+OCaml would benefit from having this. Putting IO aside, `do` notation is
+fantastic for writing succint error handling in functional, exception-free code,
+and also for doing the "mutation-free mutation" pattern. A lot of the Austral compiler looks like this:
+
+```ocaml
+let rec monomorphize_stmt (env: env) (stmt: tstmt): (mstmt * env) =
+  match stmt with
+  | TSkip _ ->
+     (MSkip, env)
+  | TLet (_, name, ty, value, body) ->
+     let (ty, env) = strip_and_mono env ty in
+     let (value, env) = monomorphize_expr env value in
+     let (body, env) = monomorphize_stmt env body in
+     (MLet (name, ty, value, body), env)
+  | TAssign (_, lvalue, value) ->
+     let (lvalue, env) = monomorphize_lvalue env lvalue in
+     let (value, env) = monomorphize_expr env value in
+     (MAssign (lvalue, value), env)
+  (* ... *)
+```
+
+Which in `do` notation could be written more succinctly.
 
 # Modules: Better is Worse {#modules}
 
