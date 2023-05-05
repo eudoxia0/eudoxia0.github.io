@@ -361,11 +361,14 @@ responsibility when they fail to do this.
 
 ## Summary {#summary}
 
-- not good enough
-  - you can have the same supply chain attacks in austral
-  - unless you audit all unsafe modules
-    - this is more tractable than having to audit all code
-    - it's also still hard
+The model is good---but not good enough. You can still have supply-chain attacks
+in Austral, the only thing that is reduced is the scope of auditing: rather than
+having to audit every line of code, you only have to audit unsafe modules, and
+verify that 1) they don't do anything nasty and 2) they wrap their unsafe
+internals in a safe, capability-secure API.
+
+So the improvement is quantitative and partial, rather than qualitative and
+absolute.
 
 # Future Work {#future}
 
