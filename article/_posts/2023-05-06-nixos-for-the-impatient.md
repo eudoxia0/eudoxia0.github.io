@@ -23,6 +23,7 @@ card_source: |
     - why should you care?
         - because i recently switched to it
         - it's simply delightful
+
 - Previous setup
     - dotfiles repo
         - ten years old
@@ -39,6 +40,11 @@ card_source: |
                 - pros: writing to targets updates source files in the dotfiles repo
                 - cons: brittle
                     - moving the dotfiles dir breaks everything
+
+# Getting Started
+
+## Installation
+
 - installation
     1. Installer is very user-friendly
     1. Separates timezone from locale.
@@ -54,6 +60,10 @@ card_source: |
                 smother your PC. This makes me feel awful.
         1. Dual booting and manual partitioning are a pain. You should unironically
         just buy multiple disks.
+
+
+## Post-Install First Steps
+
 - Changing the Hostname
    1. `sudo nano /etc/nixos/configuration.nix`
    1. `networking.hostName = "nixos";`
@@ -61,22 +71,16 @@ card_source: |
    1. Log out.
       1. Trying to start the terminal after switching hostnames errors.
    1. Hostname has been updated.
+
+## Installing Packages
+
 - Installing Packages
    1. `sudo nano /etc/nixos/configuration.nix`
    1. `users.users.eudoxia`
    1. To install something system-wide, use `environment.systemPackages` instead.
-- Updating.
-   1. NixOS uses channels, analogous to Debian/Ubuntu distributions/sources.
-   1. To find the channel you're using: `sudo nix-channel list | grep nixos`
-   1. To upgrade the current channel: `sudo nixos-rebuild switch --upgrade`
-   1. You can also auto-upgrade:
-      1. `system.autoUpgrade.enable = true;`
-      1. `system.autoUpgrade.allowReboot = true;`
-      1. This will reboot the system.
-- Garbage Collection.
-   1. Nix accumulates garbage.
-   1. You clean it by periodically running `sudo nix-collect-garbage`.
-   1. Naturally this can be automated: https://nixos.org/manual/nixos/stable/index.html#sec-nix-gc
+
+## Configuring Your Dotfiles
+
 - Home Manager.
    1. Go to `/etc/nixos/home.nix`
    1. Copy:
@@ -102,7 +106,26 @@ card_source: |
    1. `the following new units were started: home-manager-eudoxia.service`.
    1. Open `home.nix`.
    1. Home directory config. `home.file` etc.
-- My Current Setup
-    - Security
-    - DNS
-    - Syncthing
+
+# A Single-Device Setup
+
+# My Current Setup
+
+- Security
+- DNS
+- Syncthing
+
+# Misc
+
+- Updating.
+   1. NixOS uses channels, analogous to Debian/Ubuntu distributions/sources.
+   1. To find the channel you're using: `sudo nix-channel list | grep nixos`
+   1. To upgrade the current channel: `sudo nixos-rebuild switch --upgrade`
+   1. You can also auto-upgrade:
+      1. `system.autoUpgrade.enable = true;`
+      1. `system.autoUpgrade.allowReboot = true;`
+      1. This will reboot the system.
+- Garbage Collection.
+   1. Nix accumulates garbage.
+   1. You clean it by periodically running `sudo nix-collect-garbage`.
+   1. Naturally this can be automated: https://nixos.org/manual/nixos/stable/index.html#sec-nix-gc
