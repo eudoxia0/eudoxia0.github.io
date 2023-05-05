@@ -148,19 +148,34 @@ file, run one command, and the system is updated.
 
 # Comparison {#comparison}
 
-- Previous setup
-    - dotfiles repo
-        - ten years old
-    - installing software
-        - bash script to install things
-        - problem: ad-hoc installs
-    - configuring software
-        - bash script to copy things
-            - problem: making changes to targets, and not sources
-            - dotfiles slowly drift
-            - when you run the dotfile install script, you have no way of knowing
-              whether you're gonna overwrite some key part of your live config
-            - GNU Stow
-                - pros: writing to targets updates source files in the dotfiles repo
-                - cons: brittle
-                    - moving the dotfiles dir breaks everything
+My [dotfiles][df] repo is ten years old. Over the years I've tried different
+schemes for managing them. What I settled on for the longest chunk of time was a
+bash script to install software and then copy some source dotfiles to their
+destinations. This works well enough, but for two drawbacks:
+
+[df]: https://github.com/eudoxia0/dotfiles
+
+1. Sometimes I'd install something by hand and forget to add it to the bootstrap script.
+2. Analogously, I'd make a change to a dotfile in its target location, out of
+   expedience, and forget to apply the change to the corresponding file in the
+   dotfiles repo.
+
+And so the live configuration and my dotfiles would slowly drift over time. When
+I ran the bootstrap script, I had no idea whether it would overwrite some key
+part of my config I'd forgotten to copy over to the repo.
+
+I tried [GNU Stow][stow], a "symlink farm" manager, to symlink rather than copy
+my dotfiles. So changes made to the live dotfiles automatically update the
+repo. But symlinks are brittle: moving the dotfiles directory broke everything.
+
+[stow]: https://www.gnu.org/software/stow/
+
+Nix solves both problems:
+
+1. I _can't_ install packages by hand, I can only add them to the Nix
+   configuration.
+2. The dotfiles that `home-manager` creates are write-protected, so I can't
+   change them directly, rather, I have to change them in the dotfiles repo and
+   run the script to apply the changes.
+
+For the first time, I'm entirely satisfied with my system configuration.
