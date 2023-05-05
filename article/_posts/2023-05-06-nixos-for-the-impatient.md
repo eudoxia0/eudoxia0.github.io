@@ -56,8 +56,13 @@ card_source: |
             1. Debian and Ubuntu, by default, give you three tries and then the
                 thing locks up and you have to hold down the power button and
                 smother your PC. This makes me feel awful.
-        1. Dual booting and manual partitioning are a pain. You should unironically
-        just buy multiple disks.
+        1. Dual booting and manual partitioning are a pain. You should
+           unironically just buy multiple disks.
+    1. one troubleshooting note
+       1. when partitioning, make sure the disk says "GPT" rather than "MBR"
+       1. an MBR install is severely degraded
+       1. assuming the disk is empty,
+          1. this is just a matter of opening up gparted and changing the disk's partition table
 
 ## Post-Install {#postinstall}
 
