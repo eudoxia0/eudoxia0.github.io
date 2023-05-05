@@ -626,4 +626,10 @@ to experiment with this to see what works in practice.
 # See Also:
 
 - [RFC: Safer Capabilities](https://github.com/austral/austral/discussions/438)
-- [_Capability-Based Computer Systems_](https://homes.cs.washington.edu/~levy/capabook/)
+- [_Capability-Based Computer Systems_](https://homes.cs.washington.edu/~levy/capabook/) by [Hank Levy][hank].
+- [_Capability Myths Demolished_](https://srl.cs.jhu.edu/pubs/SRL2003-02.pdf) by [Mark S. Miller][mark] et al.
+- [_What Are Capabilities?_](http://habitatchronicles.com/2017/05/what-are-capabilities/) by [Chip Morningstar][chip].
+
+[hank]: https://en.wikipedia.org/wiki/Hank_Levy_(computer_scientist)
+[mark]: https://en.wikipedia.org/wiki/Mark_S._Miller
+[chip]: https://en.wikipedia.org/wiki/Chip_Morningstar
