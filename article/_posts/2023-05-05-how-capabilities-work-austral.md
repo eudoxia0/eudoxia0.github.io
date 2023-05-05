@@ -237,9 +237,9 @@ close(socket);
 
 There isn't a sharp distinction between capabilities and linear types.
 
-Capabilities can have be empty records, holding no values. In that case they are
-pure type-level permission slips. Typically such capabilities are "broad": a
-network capability, or a filesystem capability likely wouldn't have a pointer to
+Capabilities can be empty records, holding no values. In that case they are pure
+type-level permission slips. Typically such capabilities are "broad": a network
+capability, or a filesystem capability likely wouldn't have a pointer to
 anything.
 
 But linear types that have values---like a linear `File` type that wraps an
