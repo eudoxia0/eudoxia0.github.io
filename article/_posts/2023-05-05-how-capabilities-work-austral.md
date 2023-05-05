@@ -159,6 +159,21 @@ model.
 
 ## Irrevocability {#irrevocability}
 
+Capabilites are, by default, irrevocable. Code that owns a capability can
+surrender it (by consuming the linear value), but there's no built-in mechanism
+for the owner of a higher-level capability to revoke it.
+
+This _can_ be implemented, however, using pointers and access control
+lists. E.g. a `File` capability might hold an internal, opaque ID and a
+reference to the `FileSystem` capability that created it. Then all operations
+that use `File` follow that reference and check the `File` ID against an access
+control table in the `FileSystem` capability. This can be implemented and
+_would_ work, but it has to be implemented explicitly, every time you want to do
+this, for each capability type. There is no "automatic revoke".
+
+It also has the drawback that, by holding a reference, the `File` type is now
+tied to the lifetime of the `FileSystem` capability.
+
 ## Global Uniqueness {#unique}
 
 - global uniqueness
