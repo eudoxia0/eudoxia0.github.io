@@ -44,8 +44,12 @@ card_source: |
 1. [The Solution](#solution)
 1. [Capabilities in Austral](#austral)
 1. [Limitations](#limitations)
-1. [Auditing](#audit)
-1. [A Stricter Model](#strict)
+   1. [Global Uniqueness](#unique)
+   1. [Unsafe FFI](#ffi)
+   1. [Summary](#summary)
+1. [Future Work](#future)
+   1. [Auditing](#audit)
+   1. [A Stricter Model](#strict)
 
 # The Solution {#solution}
 
@@ -107,6 +111,11 @@ card_source: |
 
 # Limitations {#limitations}
 
+This section describes the limitations in Austral's current capability security
+model.
+
+## Global Uniqueness {#unique}
+
 - global uniqueness
   - e.g. stdio
   - rootcapability type has no contents
@@ -114,6 +123,9 @@ card_source: |
   - two solutions
     - consume the root capability
     - have a larger intermediate capability, that the user has to use with discipline
+
+## Unsafe FFI {#ffi}
+
 - ffi is unsafe
   - unsafe ffi is needed
     - every language has a escape hatch
@@ -125,20 +137,28 @@ card_source: |
   - to use ffi, have to mark module unsafe
   - it's not about complete safety
   - it's about minimizing audit surface area
+
+## Summary {#summary}
+
 - not good enough
   - you can have the same supply chain attacks in austral
   - unless you audit all unsafe modules
     - this is more tractable than having to audit all code
     - it's also still hard
 
-# Auditing {#audit}
+# Future Work {#future}
+
+This section describes different ways in which Austral's capability-based
+security might evolve to support greater safety.
+
+## Auditing {#audit}
 
 - when building against a version of a package for the first time, audit
 - the lockfile which specifies exact versions of packages to reproducibly build against also tracks whether smth has been audited
 - puts a lot of pressure on the user
 - doable
 
-# A Stricter Model {#strict}
+## A Stricter Model {#strict}
 
 - unsafe capability
   - built from rootcap
