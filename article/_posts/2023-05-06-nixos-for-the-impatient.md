@@ -70,13 +70,38 @@ Head over to [downloads][downloads] and pick a graphical ISO image.
 
 ## Post-Install {#postinstall}
 
-- Changing the Hostname
-   1. `sudo nano /etc/nixos/configuration.nix`
-   1. `networking.hostName = "nixos";`
-   1. `sudo nixos-rebuild switch`
-   1. Log out.
-      1. Trying to start the terminal after switching hostnames errors.
-   1. Hostname has been updated.
+A journey of a thousand lightyears begins with a simple step. Let's take a small
+step: changing the hostname.
+
+By default, NixOS's configuration lives in `/etc/nixos`. Eventually we will move
+this to a more convenient place. There are two files here: `configuration.nix`
+is the main thing we'll use, and `hardware-configuration.nix` is generated for
+you by the installer.
+
+First, open up the main configuration file:
+
+```bash
+$ sudo nano /etc/nixos/configuration.nix
+```
+
+Navigate to `networking.hostName`. The default value is `"nixos"`. Change it to
+something you like:
+
+```nix
+networking.hostName = "sextant"
+```
+
+Apply the configuration with:
+
+```bash
+$ sudo nixos-rebuild switch
+```
+
+Now log out and log back in (trying to start a new terminal window after
+changing hostnames might error, but logging out works). Observe your new hostname.
+
+This is the basic pattern to configuring Nix: you make a change to your config
+file, run one command, and the system is updated.
 
 ## Installing Packages {#packages}
 
