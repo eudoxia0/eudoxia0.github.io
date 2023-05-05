@@ -115,7 +115,7 @@ fall out of a design by logical necessity.
 Capabilities are represented as linear types. For an introduction to linear
 types in Austral, see X or Y.
 
-Because they are linear, they are not copyable. A piece of code in posession of
+Because they are linear, they are not copyable. A piece of code in possession of
 a capability can destroy it, or surrender it to someone else, but not send a
 copy to someone else and keep theirs. And because there is no global mutable
 state, capabilities cannot surreptitiously be stored in a global variable for
