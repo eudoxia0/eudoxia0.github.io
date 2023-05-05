@@ -61,7 +61,6 @@ card_source: |
         1. Dual booting and manual partitioning are a pain. You should unironically
         just buy multiple disks.
 
-
 ## Post-Install First Steps
 
 - Changing the Hostname
@@ -115,17 +114,4 @@ card_source: |
 - DNS
 - Syncthing
 
-# Misc
-
-- Updating.
-   1. NixOS uses channels, analogous to Debian/Ubuntu distributions/sources.
-   1. To find the channel you're using: `sudo nix-channel list | grep nixos`
-   1. To upgrade the current channel: `sudo nixos-rebuild switch --upgrade`
-   1. You can also auto-upgrade:
-      1. `system.autoUpgrade.enable = true;`
-      1. `system.autoUpgrade.allowReboot = true;`
-      1. This will reboot the system.
-- Garbage Collection.
-   1. Nix accumulates garbage.
-   1. You clean it by periodically running `sudo nix-collect-garbage`.
-   1. Naturally this can be automated: https://nixos.org/manual/nixos/stable/index.html#sec-nix-gc
+# Comparison
