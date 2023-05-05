@@ -101,14 +101,24 @@ security.
 
 # Capabilities in Austral {#austral}
 
-- austral has capability based security
-  - capabilities are represented as linear types
-  - because they are linear, they are not copyable
-  - they can be surrendered by their owners, but not duplicated
-  - or stored in mutable global state
-- not a feature
-  - a consequence of linear types
-  - except for the root capability, more on this later
+Austral "supports" capability-based security. Supports in quotes because it is
+not a first-class feature: capability security is simply a consequence of linear
+types. Which makes me proud of the language design, since it's a good sign when
+good things naturally fall out of a design by logical necessity.
+
+Capabilities are represented as linear types. For an introduction to linear
+types in Austral, see X or Y.
+
+Because they are linear, they are not copyable. A piece of code in posession of
+a capability can destroy it, or surrender it to someone else, but not send a
+copy to someone else and keep theirs. And because there is no global mutable
+state, capabilities cannot surreptitiously be stored in a global variable for
+acquisition by other code.
+
+Because of Austral's strict module system and encapsulation, capabilities cannot
+be created _ex nihilo_. To create a capability, you must prove that you have
+access to a higher, more powerful capability. This satisfies all the security
+properties we want.
 
 ## Example {#example}
 - example
