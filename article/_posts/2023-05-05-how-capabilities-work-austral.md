@@ -302,13 +302,48 @@ tied to the lifetime of the `FileSystem` capability.
 
 ## Global Uniqueness {#unique}
 
-- global uniqueness
-  - e.g. stdio
-  - rootcapability type has no contents
-  - can't "mark" a capability as acquired and not possible to acquire again
-  - two solutions
-    - consume the root capability
-    - have a larger intermediate capability, that the user has to use with discipline
+In the above example, you can do this:
+
+```austral
+function main(root: RootCapability): ExitCode is
+    -- Acquire the network capability twice.
+    let netcap1: NetworkCapability := acquireNetwork(&!root);
+    let netcap2: NetworkCapability := acquireNetwork(&!root);
+    -- ...
+```
+
+And this is fine: different subsystems might each require a separate network
+capability, e.g. an HTTP server and a database client.
+
+But what about the terminal? Terminal access should _probably_ be globally
+unique: once you acquire a terminal capability, you shouldn't be able to do so
+again until the original capability has been surrendered.
+
+Otherwise, you could hand a terminal capability to two separate threads, each of
+which logs its work to the terminal, and the output will appear interleaved in a
+non-deterministic way.
+
+In the current model, the only way to implement the global uniqueness of
+capabilities something like this:
+
+```austral
+module Unique is
+    type UniqueCapability: Linear;
+
+    function acquire(root: RootCapability): UniqueCapability;
+
+    function surrender(cap: UniqueCapability): RootCapability;
+end module.
+```
+
+That is: the `UniqueCapability` _contains_ the `RootCapability`, and returns it
+to the client at the end of its existence. And this is inconvenient, because we
+can only have _one_ globally unique resource live at any one time.
+
+So this is an area where, at present, the only solution is programmer
+discipline: the programmer should be informed that some capabilities should only
+be acquired once for the duration of the program, and they take the
+responsibility when they fail to do this.
 
 ## Unsafe FFI {#ffi}
 
