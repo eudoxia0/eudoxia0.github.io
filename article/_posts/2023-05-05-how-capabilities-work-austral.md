@@ -90,7 +90,11 @@ than what you can do with language-level support, but they're easier to
 implement, because you can implement capability security around a completely
 untrusted, unaudited codebase, written in any language, runtime, or era.
 
-Language-level capabilities are harder. The language's semantics have to be designed with capabilities in mind, trying to slap capability-security on a language ex post is like trying to slap a type system on a dynamically-typed language. It might work, but you will have soundness issues, and you will cope and say it "doesn't matter in practice".
+Language-level capabilities are harder. The language's semantics have to be
+designed with capabilities in mind, trying to slap capability-security on a
+language ex post is like trying to slap a type system on a dynamically-typed
+language. It might work, but you will have soundness issues, and you will cope
+and say it "doesn't matter in practice".
 
 The reason it's hard is, you'd typically represent capabilities as types, and
 most programming languages don't give hard guarantees about the provenance of
@@ -126,7 +130,7 @@ properties we want.
 
 The following is the API for a network socket library that is capability-secure:
 
-```
+```austral
 module Network is
     type NetworkCapability: Linear;
 
@@ -150,41 +154,129 @@ module Network is
 end module.
 ```
 
-- explain api
-  - networkcap
-    - acquire
-    - surrender
-  - socket
-    - open
-    -close
+The `Network` module exports a `NetworkCapability` type, and two lifecycle
+functions: `acquire` and `surrender`. The `acquire` function takes a reference
+to the `RootCapability`, which is the equivalent of global God-mode permissions,
+and returns a `NetworkCapability`.
 
-- usage
-  - usage
+The `NetworkCapability` type is _opaque_: it is declared, but not defined, in
+the module API file. Which means it can be imported and mentioned by other
+modules, but it cannot be constructed by code outside the `Network`
+module. Austral is absolutely strict about this. The only way to create a
+`NetworkCapability` outside this module, therefore, is via the `acquire`
+function.
+
+Similarly, `Socket` is a linear value that wraps some internal, unsafe socket
+handle. Since `Socket` is a linear type, you can also think of it as a
+capability: having a value of type `Socket` gives you the capability to read or
+write from that socket or `close` it.
+
+Analogously, `Socket` has two lifecycle functions: `open` takes a reference to
+the network capability, a host and a port and returns a `Socket` (error handling
+is elided for clarity), and `close` takes a `Socket`, closes it, and consumes
+it.
+
+The way you'd use this is:
+
+```austral
+-- Assuming we have a variable `root` holding the RootCapability.
+let netcap: NetworkCapability := acquire(&!root);
+let socket: Socket := open(&!netcap, "example.com", 80);
+-- We can surrender the capability immediately after opening the socket, since
+-- we don't need it for anything else.
+surrender(netcap);
+-- Do something with the socket.
+close(socket);
+```
 
 ## Capabilities vs. Values {#values}
 
-- capabilities can:
-  - have a value
-    - file
-    - db handle
-    - socket
-  - no value: pure type-level permission slip
-  - no sharp distinction between caps and linear values
+There isn't a sharp distinction between capabilities and linear types.
+
+Capabilities can have be empty records, holding no values. In that case they are
+pure type-level permission slips. Typically such capabilities are "broad": a
+network capability, or a filesystem capability likely wouldn't have a pointer to
+anything.
+
+But linear types that have values---like a linear `File` type that wraps an
+unsafe file handle, or a network socket, or a database handle, etc.---can also
+be thought of as capabilities, especially if the API is designed such that those
+types can only be constructed by proving you have a capability to use that API.
 
 ## The Capability Hierarchy {#hierarchy}
 
-- capability hierarchy
+Capabilities form a hierarchy. Again, this hierarchy isn't an inheritance
+hierarchy, and it's not built into the language. It's a hierarchy that is
+implicit in the functions that let you create a capability from another, more
+powerful capability.
+
+For example, in the above code example, the hierarchy looks like this:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/how-capabilities-work-austral/hierarchy.svg"/>
+
+Analogously, a capability-security filesystem API with granular permissions
+might look like this:
+
+<img style="margin-left: auto; margin-right: auto;" src="/assets/content/how-capabilities-work-austral/fs-hierarchy.svg"/>
+
+With each capability type providing functions to constraint it further, until we
+get to the leaf nodes like `FileAttrsRead` (e.g. read a file's modification
+time)
 
 ## The Root Capability {#root}
 
-- the root capability
-  - capabilities cannot be obtained from nowhere
-    - you need smth that represents a higher-level capability, conceptually
-    - root cap is the base case of this recursion
-  - cannot be created within the language
-  - exists only at the program entrypoint, which has root cap
-  - root can be surrendered immediately at the start of the program
-    - that program can't do anything
+The root capability is the only part of Austral's capability-security model that
+is built into the language.
+
+As mentioned above, capabilities cannot be created out of thin air, you have to
+pass a proof (a reference) that you own a broader, more powerful capability. The
+root capability is the base case of the recursion: it represents the highest
+level of permissions.
+
+Values of type `RootCapability` cannot be created in userspace. The root
+capability is only available as the first argument of the entrypoint
+function. Where in C an entrypoint might look like this:
+
+```c
+int main(int argc, char** argv) {
+    printf("Hello, world!\n");
+    return 0;
+}
+```
+
+In Austral the entrypoint function looks like this:
+
+```austral
+function main(root: RootCapability): ExitCode is
+    -- Some code here.
+    surrenderRoot(root);
+    return ExitSuccess();
+end;
+```
+
+The entrypoint is all-powerful. The design pattern here is that the entrypoint
+should acquire the capabilities that it needs (e.g. filesystem access, network
+access), then surrender the root, and call some other function with those
+capabilities:
+
+```
+function main(root: RootCapability): ExitCode is
+    -- Acquire some capabilities.
+    let netcap: NetworkCapability := acquireNetwork(&!root);
+    let fscap: FileSystemCapability := acquireFileSystem(&!root);
+    let termcap: TerminalCapability := acquirTerminale(&!root);
+    -- Surrender the root.
+    surrenderRoot(root);
+    -- Pass our capabilities to some other function.
+    mainInner(netcap, fscap, termcap);
+    -- Finally, exit.
+    return ExitSuccess();
+end;
+```
+
+But also, a program can immediately surrender the root and acquire no
+capabilities. With such an entrypoint, you are guaranteed that the program is
+useless: that it does nothing but warm the CPU and exit.
 
 # Limitations {#limitations}
 
