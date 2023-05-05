@@ -63,6 +63,7 @@ building languages with safer semantics.
    1. [The Capability Hierarchy](#hierarchy)
    1. [The Root Capability](#root)
 1. [Limitations](#limitations)
+   1. [Irrevocability](#irrevocability)
    1. [Global Uniqueness](#unique)
    1. [Unsafe FFI](#ffi)
    1. [Summary](#summary)
@@ -155,6 +156,8 @@ properties we want.
 
 This section describes the limitations in Austral's current capability security
 model.
+
+## Irrevocability {#irrevocability}
 
 ## Global Uniqueness {#unique}
 
