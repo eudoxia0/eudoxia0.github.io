@@ -1,0 +1,27 @@
+digraph G {
+    rankdir=TB;
+    node[fontname="Inconsolata" shape=plaintext style=filled fillcolor=darkolivegreen1]
+    edge[fontname="Inconsolata"]
+
+    root[label="RootCapability"]
+    fs[label="FileSystemCapability"]
+    file[label="File"]
+    dir[label="Directory"]
+    fileread[label="FileRead"]
+    filewrite[label="FileWrite"]
+    fileattrs[label="FileAttrs"]
+    fileattrsr[label="FileAttrsRead"]
+    fileattrsw[label="FileAttrsWrite"]
+
+    root -> fs [label="  acquire"]
+    fs -> file [label="  getFile"]
+    fs -> dir [label=" getDir"]
+    file -> fileread [label="readOnly"]
+    file -> filewrite [label="  writeOnly"]
+    file -> fileattrs [label="  attrsOnly"]
+    fileattrs -> fileattrsr [label="  attrsReadOnly"]
+    fileattrs -> fileattrsw [label="  attrsWriteOnly"]
+
+    dir -> dir [label="  getSubDir"]
+    dir -> file [label=" getDirFile"]
+}
