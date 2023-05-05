@@ -6,23 +6,22 @@ card_source: |
     neofetch output for my laptop.
 ---
 
-- NixOS
-    - what it is
-        - declarative
-            - entire system configured from a single `.nix` file
-        - purely-functional
-            - config is reproducible
-    - if this sounds like bullshit: it's not
-        - it's not a timesink like arch or gentoo
-        - there was a time when i might have enjoyed configuring a system from scratch
-        - that time is past
-            - i dont use distros that don't have a graphicall installer
-            - running `fdisk` is below my dignity
-            - i'm not building my own kernel with paranoid build flags
-        - i want something that just works
-    - why should you care?
-        - because i recently switched to it
-        - it's simply delightful
+NixOS is a Linux distribution configured using Nix. It is declarative, meaning
+that the entire system state can be defined in a single `.nix` file; and
+reproducible, meaning you can have multiple computers set up identically.
+
+If this sounds like a bullshit timesink like Arch or Gentoo: it's not. There was
+a time when the idea of spending an afternoon typing cryptsetup incantations
+into a terminal would have been appealing. That time is past. I don't use
+distros that lack a graphical installer (running `fdisk` is frankly beneath my
+dignity) or that require extensive maintenance. I'm not building my own kernel
+with some bespoke set of paranoid `CFLAGS`. I just want something that works.
+
+NixOS works. It actually works great.
+
+This post is about how I set up NixOS. I don't know Nix best practices and
+haven't the time to learn, what I know is my setup works and is easy to
+understand, and that's good enough at present.
 
 # Contents
 
@@ -37,8 +36,9 @@ card_source: |
 
 # Getting Started {#started}
 
-- download
-    - graphical
+Head over to [downloads][downloads] and pick a graphical ISO image.
+
+[downloads]: https://nixos.org/download.html#nixos-iso
 
 ## Installation {#install}
 
