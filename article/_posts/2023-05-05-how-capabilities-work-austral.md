@@ -133,6 +133,11 @@ class by name and instantiate it anywhere. Unsafe operations---precisely what
 capability-based security is meant to constrain---let you get around that very
 security.
 
+The [E programming language][elang] has capability security built in, but you
+don't hear much about it.
+
+[elang]: https://en.wikipedia.org/wiki/E_(programming_language)
+
 # Capabilities in Austral {#austral}
 
 Austral "[supports][ratcap]" capability-based security. Supports in quotes
