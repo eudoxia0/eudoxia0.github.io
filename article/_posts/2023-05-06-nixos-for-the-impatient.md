@@ -24,26 +24,9 @@ card_source: |
         - because i recently switched to it
         - it's simply delightful
 
-- Previous setup
-    - dotfiles repo
-        - ten years old
-    - installing software
-        - bash script to install things
-        - problem: ad-hoc installs
-    - configuring software
-        - bash script to copy things
-            - problem: making changes to targets, and not sources
-            - dotfiles slowly drift
-            - when you run the dotfile install script, you have no way of knowing
-              whether you're gonna overwrite some key part of your live config
-            - GNU Stow
-                - pros: writing to targets updates source files in the dotfiles repo
-                - cons: brittle
-                    - moving the dotfiles dir breaks everything
+# Getting Started {#started}
 
-# Getting Started
-
-## Installation
+## Installation {#install}
 
 - installation
     1. Installer is very user-friendly
@@ -61,7 +44,7 @@ card_source: |
         1. Dual booting and manual partitioning are a pain. You should unironically
         just buy multiple disks.
 
-## Post-Install First Steps
+## Post-Install First Steps {#postinstall}
 
 - Changing the Hostname
    1. `sudo nano /etc/nixos/configuration.nix`
@@ -71,14 +54,14 @@ card_source: |
       1. Trying to start the terminal after switching hostnames errors.
    1. Hostname has been updated.
 
-## Installing Packages
+## Installing Packages {#packages}
 
 - Installing Packages
    1. `sudo nano /etc/nixos/configuration.nix`
    1. `users.users.eudoxia`
    1. To install something system-wide, use `environment.systemPackages` instead.
 
-## Configuring Your Dotfiles
+## Configuring Your Dotfiles {#dotfiles}
 
 - Home Manager.
    1. Go to `/etc/nixos/home.nix`
@@ -106,12 +89,29 @@ card_source: |
    1. Open `home.nix`.
    1. Home directory config. `home.file` etc.
 
-# A Single-Device Setup
+# A Single-Device Setup {#single}
 
-# My Current Setup
+# My Current Setup {#current}
 
 - Security
 - DNS
 - Syncthing
 
-# Comparison
+# Comparison {#comparison}
+
+- Previous setup
+    - dotfiles repo
+        - ten years old
+    - installing software
+        - bash script to install things
+        - problem: ad-hoc installs
+    - configuring software
+        - bash script to copy things
+            - problem: making changes to targets, and not sources
+            - dotfiles slowly drift
+            - when you run the dotfile install script, you have no way of knowing
+              whether you're gonna overwrite some key part of your live config
+            - GNU Stow
+                - pros: writing to targets updates source files in the dotfiles repo
+                - cons: brittle
+                    - moving the dotfiles dir breaks everything
