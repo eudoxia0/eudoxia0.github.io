@@ -104,8 +104,9 @@ security.
 
 Austral "supports" capability-based security. Supports in quotes because it is
 not a first-class feature: capability security is simply a consequence of linear
-types. Which makes me proud of the language design, since it's a good sign when
-good things naturally fall out of a design by logical necessity.
+types (except for the `RootCapability`---more on this later). Which makes me
+proud of the language design, since it's a good sign when good things naturally
+fall out of a design by logical necessity.
 
 Capabilities are represented as linear types. For an introduction to linear
 types in Austral, see X or Y.
@@ -122,10 +123,43 @@ access to a higher, more powerful capability. This satisfies all the security
 properties we want.
 
 ## Example {#example}
-- example
-  - network sockets
-    - interface
-    - usage
+
+The following is the API for a network socket library that is capability-secure:
+
+```
+module Network is
+    type NetworkCapability: Linear;
+
+    generic [R: Region]
+    function acquire(root: &![RootCapability, R]): NetworkCapability;
+
+    function surrender(netcap: NetworkCapability): Unit;
+
+    type Socket: Linear;
+
+    generic [R: Region]
+    function open(
+        netcap: &![NetworkCapability, R],
+        host: String,
+        port: Nat16
+    ): Socket;
+
+    function close(socket: Socket): Unit);
+
+    -- ... the rest of the socket API ...
+end module.
+```
+
+- explain api
+  - networkcap
+    - acquire
+    - surrender
+  - socket
+    - open
+    -close
+
+- usage
+  - usage
 
 ## Capabilities vs. Values {#values}
 
