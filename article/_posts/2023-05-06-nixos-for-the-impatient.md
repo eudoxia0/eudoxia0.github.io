@@ -24,12 +24,27 @@ card_source: |
         - because i recently switched to it
         - it's simply delightful
 
+# Contents
+
+1. [Getting Started](#started)
+   1. [Installation](#install)
+   1. [Post-Install](#postinstall)
+   1. [Installing Packages](#packages)
+   1. [Dotfiles](#dotfiles)
+1. [A Single-Device Setup](#single)
+1. [My Current Setup](#current)
+1. [Comparison](#comparison)
+
 # Getting Started {#started}
+
+- download
+    - graphical
 
 ## Installation {#install}
 
 - installation
     1. Installer is very user-friendly
+       - based on calamares
     1. Separates timezone from locale.
         1. I can set timezone to AU and locale to en_US.UTF-8 as God intended.
     1. Erase disk.
@@ -44,7 +59,7 @@ card_source: |
         1. Dual booting and manual partitioning are a pain. You should unironically
         just buy multiple disks.
 
-## Post-Install First Steps {#postinstall}
+## Post-Install {#postinstall}
 
 - Changing the Hostname
    1. `sudo nano /etc/nixos/configuration.nix`
@@ -61,7 +76,7 @@ card_source: |
    1. `users.users.eudoxia`
    1. To install something system-wide, use `environment.systemPackages` instead.
 
-## Configuring Your Dotfiles {#dotfiles}
+## Dotfiles {#dotfiles}
 
 - Home Manager.
    1. Go to `/etc/nixos/home.nix`
