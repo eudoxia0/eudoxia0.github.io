@@ -12,28 +12,43 @@ Rather, all code within the same address space runs with _uniform permissions_,
 despite different modules having different degrees of trustworthiness. If you
 download a `left-pad` library, it might implement leftpad, but it might contain
 malware that hoovers up your home directory and sends it to a server
-somewhere. This is called a supply chain attack.
+somewhere. This is called a [supply chain attack][attack].
+
+[attack]: https://en.wikipedia.org/wiki/Supply_chain_attack
 
 And there is nothing in the semantics of most programming languages that lets
-you prevent this. Anything can access the FFI, the filesystem, the network,
-etc. Even clock access is dangerous, since timing information is useful in
-carrying out timing attacks.
+you prevent this. Anything can access the [foreign function interface][ffi]
+(FFI), the filesystem, the network, etc. Even [clock access is
+dangerous][timing], since timing information is useful in carrying out timing
+attacks.
+
+[ffi]: https://en.wikipedia.org/wiki/Foreign_function_interface
+[timing]: https://twitter.com/robotlolita/status/1474351603008389122
 
 The transitive closure of dependencies in modern applications is huge. The
 `node_modules` directory on a humble React app I have on my laptop is 460 MiB,
-and that's just React and ProseMirror. Most applications are a thin layer of
-business logic sitting atop a huge pile of library code, out of sight and out of
-mind. Nobody can audit all of it (though LLMs might make a dent here), and
+and that's just React and [ProseMirror][pm]. Most applications are a thin layer
+of business logic sitting atop a huge pile of library code, out of sight and out
+of mind. Nobody can audit all of it (though LLMs might make a dent here), and
 malware can be hidden in very subtle edge cases of the semantics of a language.
 
+[pm]: https://prosemirror.net/
+
 What's the solution? The graybeard will blame the programmer, say we need fewer
-dependencies and that any competent dev can re-write Figma in vanilla.js over a
-weekend. The HN commenter will blame the programmer for failing to audit the
-quarter-million lines of code in their dependencies.
+dependencies and that any competent dev can re-write Figma in
+[vanilla.js][vanilla] over a weekend. The HN commenter will blame the programmer
+for failing to audit the quarter-million lines of code in their dependencies.
 
-But, as I wrote in the [Austral intro post][intro], blaming the programmer will
-change nothing:
+[vanilla]: http://vanilla-js.com/
 
+But we shouldn't want to give up dependencies. Leveraging dependencies increases
+economic productivity, reinventing the wheel (unless you have a good reason)
+decreases it. Modern programming is [O-ring][oring], not
+[Cobb-Douglas][cobb]. And as I wrote in the [Austral intro post][intro], blaming
+the programmer will change nothing:
+
+[oring]: https://en.wikipedia.org/wiki/O-ring_theory_of_economic_development
+[cobb]: https://en.wikipedia.org/wiki/Cobb%E2%80%93Douglas_production_function
 [intro]: /article/introducing-austral
 
 >If planes were flown like we write code, we’d have daily crashes, of course,
@@ -49,10 +64,13 @@ change nothing:
 >are tired, they are burned out, they have limited focus, limited working
 >memory, they are traumatized by writing executable YAML, etc.
 
-Discipline doesn't fix type errors: type systems do. Discipline doesn't fix
-memory leaks and buffer overflow: ownership types do. Similarly, security
-vulnerabilities will not be fixed by demanding superhuman discipline but by
-building languages with safer semantics.
+Discipline doesn't fix type errors: [type systems do][type]. Discipline doesn't
+fix memory leaks and buffer overflows: [ownership types do][rust]. Similarly,
+security vulnerabilities will not be fixed by demanding superhuman discipline
+but by building languages with safer semantics.
+
+[type]: https://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/milner-type-polymorphism.pdf
+[rust]: https://www.rust-lang.org/
 
 # Contents
 
@@ -73,10 +91,12 @@ building languages with safer semantics.
 
 # The Solution {#solution}
 
-The solution is capability-based security. A capability is an unforgeable token
-that grants access to some permissioned resource, like the filesystem or the
-network or an accurate clock. Anything that should be locked down should require
-a capability to access.
+The solution is [capability-based security][cap]. A capability is an unforgeable
+token that grants access to some permissioned resource, like the filesystem or
+the network or an accurate clock. Anything that should be locked down should
+require a capability to access.
+
+[cap]: https://en.wikipedia.org/wiki/Capability-based_security
 
 And, ideally, capabilities should be arbitrarily granular: requiring a
 capability to access the filesystem as a whole, read and write, removes a good
@@ -85,50 +105,70 @@ access to a directory and its contents, or to a specific file, or to a specific
 file in read-only mode, and so on.
 
 Capabilities at the process and operating system level are widely implemented:
-Capscisum, Fuchsia, pledge, seccomp. These are typically more coarse-grained
-than what you can do with language-level support, but they're easier to
-implement, because you can implement capability security around a completely
-untrusted, unaudited codebase, written in any language, runtime, or era.
+[Capscisum][bsd], [Fuchsia][fuch], [`pledge`][pledge], [`seccomp`][seccomp].
+
+[bsd]: https://en.wikipedia.org/wiki/Capsicum_(Unix)
+[fuch]: https://en.wikipedia.org/wiki/Fuchsia_(operating_system)
+[pledge]: https://man.openbsd.org/pledge.2
+[seccomp]: https://en.wikipedia.org/wiki/Seccomp
+
+These are typically more coarse-grained than what you can do with language-level
+support, but they're easier to implement, because you can implement capability
+security around a completely untrusted, unaudited codebase, written in any
+language, runtime, or era.
 
 Language-level capabilities are harder. The language's semantics have to be
 designed with capabilities in mind, trying to slap capability-security on a
-language ex post is like trying to slap a type system on a dynamically-typed
-language. It might work, but you will have soundness issues, and you will cope
-and say it "doesn't matter in practice".
+language after the fact is like trying to slap a type system on a
+dynamically-typed language. It might work, but you will have [soundness
+issues][ts], and you will cope and say it "doesn't matter in practice".
+
+[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness
 
 The reason it's hard is, you'd typically represent capabilities as types, and
 most programming languages don't give hard guarantees about the provenance of
 types. In C and C++ you can in principle cast anything into anything. In Python
 or Common Lisp or other dynamic languages, you can dynamically search for a
-class by name and instantiate it anywhere. Unsafe operations---precise what
-capability-based security is meant to constraint---let you get around that very
+class by name and instantiate it anywhere. Unsafe operations---precisely what
+capability-based security is meant to constrain---let you get around that very
 security.
 
 # Capabilities in Austral {#austral}
 
-Austral "supports" capability-based security. Supports in quotes because it is
-not a first-class feature: capability security is simply a consequence of linear
-types (except for the `RootCapability`---more on this later). Which makes me
-proud of the language design, since it's a good sign when good things naturally
-fall out of a design by logical necessity.
+Austral "[supports][ratcap]" capability-based security. Supports in quotes
+because it is not a first-class feature: capability security is simply a
+consequence of linear types (except for the `RootCapability`---more on this
+later). Which makes me proud of the language design, since it's a good sign when
+useful things naturally fall out of a design by logical necessity.
+
+[ratcap]: https://austral-lang.org/spec/spec.html#rationale-cap
 
 Capabilities are represented as linear types. For an introduction to linear
-types in Austral, see X or Y.
+types in Austral, see the [introduction to Austral][intro] post, or the post
+where I explain [how the linear type checker works][checker].
 
-Because they are linear, they are not copyable. A piece of code in possession of
-a capability can destroy it, or surrender it to someone else, but not send a
-copy to someone else and keep theirs. And because there is no global mutable
-state, capabilities cannot surreptitiously be stored in a global variable for
-acquisition by other code.
+[checker]: /article/how-australs-linear-type-checker-works
+
+Because capabilities are linear, they are not copyable. A piece of code in
+possession of a capability can destroy it, or give it to someone else, but not
+send a copy to someone else and keep theirs. And because there is no global
+mutable state, capabilities cannot surreptitiously be stored in a global
+variable for another piece of code to acquire them.
 
 Because of Austral's strict module system and encapsulation, capabilities cannot
 be created _ex nihilo_. To create a capability, you must prove that you have
 access to a higher, more powerful capability. This satisfies all the security
 properties we want.
 
+And now if a leftpad dependency wants to read your data and send it to a server,
+it needs a filesystem capability and a network capability. It should be an
+obvious red flag if a string-manipulation library were to ask for those
+dependencies. And this makes it hard to hide malware.
+
 ## Example {#example}
 
-The following is the API for a network socket library that is capability-secure:
+The following is a sketch of an API for a capability-secure network socket
+library:
 
 ```austral
 module Network is
@@ -159,17 +199,16 @@ functions: `acquire` and `surrender`. The `acquire` function takes a reference
 to the `RootCapability`, which is the equivalent of global God-mode permissions,
 and returns a `NetworkCapability`.
 
-The `NetworkCapability` type is _opaque_: it is declared, but not defined, in
-the module API file. Which means it can be imported and mentioned by other
-modules, but it cannot be constructed by code outside the `Network`
-module. Austral is absolutely strict about this. The only way to create a
-`NetworkCapability` outside this module, therefore, is via the `acquire`
-function.
+The `NetworkCapability` type is opaque: it is declared, but not defined, in the
+module API file. Which means it can be imported and mentioned by other modules,
+but it cannot be constructed by code outside the `Network` module. Austral is
+absolutely strict about this. The only way to create a `NetworkCapability`
+instance outside this module is via the `acquire` function.
 
 Similarly, `Socket` is a linear value that wraps some internal, unsafe socket
 handle. Since `Socket` is a linear type, you can also think of it as a
 capability: having a value of type `Socket` gives you the capability to read or
-write from that socket or `close` it.
+write from that socket or close it.
 
 Analogously, `Socket` has two lifecycle functions: `open` takes a reference to
 the network capability, a host and a port and returns a `Socket` (error handling
@@ -221,7 +260,7 @@ might look like this:
 
 With each capability type providing functions to constraint it further, until we
 get to the leaf nodes like `FileAttrsRead` (e.g. read a file's modification
-time)
+time).
 
 ## The Root Capability {#root}
 
@@ -276,7 +315,9 @@ end;
 
 But also, a program can immediately surrender the root and acquire no
 capabilities. With such an entrypoint, you are guaranteed that the program is
-useless: that it does nothing but warm the CPU and exit.
+[useless][useless]: that it does nothing but warm the CPU and exit.
+
+[useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 
 # Limitations {#limitations}
 
@@ -298,7 +339,8 @@ _would_ work, but it has to be implemented explicitly, every time you want to do
 this, for each capability type. There is no "automatic revoke".
 
 It also has the drawback that, by holding a reference, the `File` type is now
-tied to the lifetime of the `FileSystem` capability.
+tied to the lifetime of the `FileSystem` capability. This may, or may not, be a
+feature.
 
 ## Global Uniqueness {#unique}
 
@@ -316,12 +358,13 @@ And this is fine: different subsystems might each require a separate network
 capability, e.g. an HTTP server and a database client.
 
 But what about the terminal? Terminal access should _probably_ be globally
-unique: once you acquire a terminal capability, you shouldn't be able to do so
-again until the original capability has been surrendered.
+unique: otherwise, you could hand a terminal capability to two separate threads,
+each of which logs its work to the terminal, and the output will appear
+interleaved in a non-deterministic way. Once you acquire a terminal capability,
+you shouldn't be able to do so again until the original capability has been
+surrendered.
 
-Otherwise, you could hand a terminal capability to two separate threads, each of
-which logs its work to the terminal, and the output will appear interleaved in a
-non-deterministic way.
+
 
 In the current model, the only way to implement the global uniqueness of
 capabilities something like this:
@@ -349,8 +392,9 @@ responsibility when they fail to do this.
 
 Every programming language needs a escape hatch. When interacting with the
 outside world, you have to do unsafe things. The question is: can you draw a
-boundary around unsafe code, so that is is clearly visible and demarcated, and
-can you help programmers identify and audit the unsafe parts of their code?
+boundary around unsafe code, so that it is clearly visible and demarcated and
+splash damage is minimized, and can you help programmers identify and audit the
+unsafe parts of their code?
 
 Austral's FFI is unsafe. The only limit to using the FFI, calling foreign
 functions, and doing unsafe pointer arithmetic is that any module that does this
@@ -365,8 +409,7 @@ having to audit every line of code, you only have to audit unsafe modules, and
 verify that 1) they don't do anything nasty and 2) they wrap their unsafe
 internals in a safe, capability-secure API.
 
-So the improvement is quantitative and partial, rather than qualitative and
-absolute.
+So the improvement in safety is only partial.
 
 # Future Work {#future}
 
@@ -427,7 +470,7 @@ end module.
 ```
 
 All unsafe operations (pointer arithmetic, pointer casting, calling an FFI
-function) require passing an FFI capability. So, while the `Austral.Memory`
+function) require passing an `Unsafe` capability. So, while the `Austral.Memory`
 module currently looks like this:
 
 ```austral
@@ -470,16 +513,35 @@ module Austral.Memory is
 
 Similarly, every FFI function that is defined has an implicit parameter added to
 at the beginning of its parameter list: it needs to take a reference to the
-`Unsafe` capability.
+`Unsafe` capability. So if you define something like:
+
+```
+function putChar(character: Int32): Int32 is
+    pragma Foreign_Import(External_Name => "putchar");
+end;
+```
+
+To call `putChar` you need to pass a reference to the unsafe capability:
+
+```austral
+putChar('a');           -- Error: wrong number of arguments.
+putChar(&!unsafe, 'a'); -- Good
+```
 
 This has a number of advantages:
 
 1. **Symmetry:** the concept of unsafe modules is no longer needed. So we can
    get rid of the `Unsafe_Module` pragma. The `Austral.Memory` module can be
    imported by any other module, but its functions cannot be used unless the
-   client has an `Unsafe` capability.
+   client passes an `Unsafe` capability, which in turn they must acquire.
 
-1. **Granularity:** the scope of "unsafe" is made a lot more granular: no it is
+1. **Userspace:** unsafe modules are a language-level concept. The `Unsafe`
+   capability is mostly implementable in userspace, with the minor caveat that
+   foreign functions having to take a reference to `Unsafe` is a rule that must
+   be built into the language. It's generally a good thing when we can implement
+   something as a library rather than as a first-class language feature.
+
+1. **Granularity:** the scope of "unsafe" is made a lot more granular: now it is
    no longer that some modules are unsafe, and others are safe, and we have to
    audit the _entirety_ of an unsafe module. Rather: anything that takes an
    `Unsafe` capability is potentially unsafe and becomes an auditing target.
@@ -488,7 +550,9 @@ And some disadvantages:
 
 1. **False Positives:** some foreign functions are side-effect free. Do we have
    to pass an `Unsafe` capability to calculate the `sin` of a number? That's not
-   very convenient.
+   very convenient. Maybe some foreign functions can be whitelisted, with the
+   build system alerting the user about all the whitelisted functions so they
+   can be audited.
 
 1. **Allocation:** any data structure that does memory allocation needs to take
    and hold on to an `Unsafe` capability, or maybe something more specific.
@@ -557,3 +621,4 @@ to experiment with this to see what works in practice.
 # See Also:
 
 - [RFC: Safer Capabilities](https://github.com/austral/austral/discussions/438)
+- [_Capability-Based Computer Systems_](https://homes.cs.washington.edu/~levy/capabook/)
