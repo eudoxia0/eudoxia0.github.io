@@ -185,10 +185,26 @@ security might evolve to support greater safety.
 
 ## Auditing {#audit}
 
-- when building against a version of a package for the first time, audit
-- the lockfile which specifies exact versions of packages to reproducibly build against also tracks whether smth has been audited
-- puts a lot of pressure on the user
-- doable
+One solution is to force the user to audit new packages. When you build your
+project for the first time, the [dependency solver][solver] will create a
+lockfile with the exact version of every package to build against. Initially,
+all of those as marked as unaudited.
+
+[solver]: /article/dependency-resolution-made-simple
+
+Then the build system makes you go through the unsafe modules of each
+dependency, you read the code and accept or reject each module. If you build
+against unaudited packages you get a warning, if everything is audited, you get
+no warnings.
+
+The pro is that this is tractable: it can be implemented using the existing
+capability model, using ordinary technology, and only unsafe modules have to be
+audited for safety, unlike most languages where you'd have to audit every single
+line.
+
+The drawback is that is it still requires a lot of elbow grease from the
+programmer. Maybe a web-of-trust, collective (paid?) auditing solution can
+replace manual auditing by the end user.
 
 ## A Stricter Model {#strict}
 
