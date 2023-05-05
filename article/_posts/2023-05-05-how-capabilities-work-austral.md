@@ -520,7 +520,8 @@ module LibFoo is
 end module.
 ```
 
-Internally, `FooCapability` would be a record that holds on to the `Unsafe` capability:
+Internally, `FooCapability` would be a record that holds on to the `Unsafe`
+capability:
 
 ```austral
 import Austral.Unsafe ( Unsafe );
