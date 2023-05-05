@@ -31,8 +31,23 @@ dependencies and that any competent dev can re-write Figma in vanilla.js over a
 weekend. The HN commenter will blame the programmer for failing to audit the
 quarter-million lines of code in their dependencies.
 
-But, as I wrote in the Austral intro post, blaming the programmer will change
-nothing:
+But, as I wrote in the [Austral intro post][intro], blaming the programmer will
+change nothing:
+
+[intro]: /article/introducing-austral
+
+>If planes were flown like we write code, we’d have daily crashes, of course,
+>but beyond that, the response to every plane crash would be: “only a bad pilot
+>blames their plane! If they’d read subparagraph 71 of section 7.1.5.5 of the
+>C++, er, 737 spec, they’d know that at 13:51 PM on the vernal equinox the wings
+>fall off the plane.”
+>
+>This doesn’t happen in aviation, because in aviation we have decided,
+>correctly, that human error is an intrinsic and inseparable part of human
+>activity. And so we have built concentric layers of mechanical checks and
+>balances around pilots, to take on part of the load of flying. Because humans
+>are tired, they are burned out, they have limited focus, limited working
+>memory, they are traumatized by writing executable YAML, etc.
 
 Discipline doesn't fix type errors: type systems do. Discipline doesn't fix
 memory leaks and buffer overflow: ownership types do. Similarly, security
@@ -57,30 +72,32 @@ building languages with safer semantics.
 
 # The Solution {#solution}
 
-- capabilities
-  - unforgeable permission slips
-  - grant permission to access some resource, like the filesystem or network
-  - ideally arbitrarily granular
-    - filesystem access
-    - directory access
-    - file access
-    - file-read access
-    - file attributes access
-- process-level capabilities widely implemented
-  - capscicum
-  - pledge
-  - etc.
-  - backwards compatible
-  - operating system can evolve independently of applications written in different languages, runtimes, and eras
-- language level
-  - harder
-  - E language
-  - needs semantics
-    - encapsulation
-      - in highly-dynamic languages like python you can dynamically find the type of a cap and instantiate it
-    - no type casting
-      - casting `void*` to `foo*` should require a capability
-    - more generally, unsafe operations should require a capability
+The solution is capability-based security. A capability is an unforgeable token
+that grants access to some permissioned resource, like the filesystem or the
+network or an accurate clock. Anything that should be locked down should require
+a capability to access.
+
+And, ideally, capabilities should be arbitrarily granular: requiring a
+capability to access the filesystem as a whole, read and write, removes a good
+chunk of security vulnerabilities. But we can go further: we can constraint
+access to a directory and its contents, or to a specific file, or to a specific
+file in read-only mode, and so on.
+
+Capabilities at the process and operating system level are widely implemented:
+Capscisum, Fuchsia, pledge, seccomp. These are typically more coarse-grained
+than what you can do with language-level support, but they're easier to
+implement, because you can implement capability security around a completely
+untrusted, unaudited codebase, written in any language, runtime, or era.
+
+Language-level capabilities are harder. The language's semantics have to be designed with capabilities in mind, trying to slap capability-security on a language ex post is like trying to slap a type system on a dynamically-typed language. It might work, but you will have soundness issues, and you will cope and say it "doesn't matter in practice".
+
+The reason it's hard is, you'd typically represent capabilities as types, and
+most programming languages don't give hard guarantees about the provenance of
+types. In C and C++ you can in principle cast anything into anything. In Python
+or Common Lisp or other dynamic languages, you can dynamically search for a
+class by name and instantiate it anywhere. Unsafe operations---precise what
+capability-based security is meant to constraint---let you get around that very
+security.
 
 # Capabilities in Austral {#austral}
 
