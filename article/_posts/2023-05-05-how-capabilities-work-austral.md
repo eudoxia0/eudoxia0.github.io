@@ -6,38 +6,38 @@ card_source: |
     “Labyrinth, Giovanni Battista Piranesi, 1750, engraving, from the British Museum”, DALL-E, June 2022.
 ---
 
-- the problem
-- code is permissionless by default
-- all code within an address space has uniform permissions
-  - to call any other code
-  - to FFI
-- e.g. leftpad
-  - can be leftpad and nothing else
-  - can hoover up your disk
-  - send it to a remote server, etc.
-- more generally, many things can be abused:
-  - filesystem access
-  - network access
-  - clock access can be used to do timing attacks
-- this is called a supply chain attacks
-  - the transitive closure of the dependencies of a modern application is huge
-  - react hello-world node_modules
-    - 460MiB
-- what is the solution?
-  - the graybeard
-    - blame the programmer
-    - say we need fewer dependencies
-    - says any competent dev can write a modern web app in vanilla js over a weekend
-  - a differnet type of HN commenter will:
-    - blame the programmer for failing to audit 500 MiB of node_modules
-    - says they should have read the manual^H source
-  - blaming human error isn't good enough
-  - as i wrote in the article introducing austral
-    - human error is inescapable
-  - we need an automated, mechanical solution
-    - just as type systems fix type errors
-    - ownership and borrowing fixes memory errors
-    - capability-based security fixes permission errors
+Code is permissionless by default.
+
+Rather, all code within the same address space runs with _uniform permissions_,
+despite different modules having different degrees of trustworthiness. If you
+download a `left-pad` library, it might implement leftpad, but it might contain
+malware that hoovers up your home directory and sends it to a server
+somewhere. This is called a supply chain attack.
+
+And there is nothing in the semantics of most programming languages that lets
+you prevent this. Anything can access the FFI, the filesystem, the network,
+etc. Even clock access is dangerous, since timing information is useful in
+carrying out timing attacks.
+
+The transitive closure of dependencies in modern applications is huge. The
+`node_modules` directory on a humble React app I have on my laptop is 460 MiB,
+and that's just React and ProseMirror. Most applications are a thin layer of
+business logic sitting atop a huge pile of library code, out of sight and out of
+mind. Nobody can audit all of it (though LLMs might make a dent here), and
+malware can be hidden in very subtle edge cases of the semantics of a language.
+
+What's the solution? The graybeard will blame the programmer, say we need fewer
+dependencies and that any competent dev can re-write Figma in vanilla.js over a
+weekend. The HN commenter will blame the programmer for failing to audit the
+quarter-million lines of code in their dependencies.
+
+But, as I wrote in the Austral intro post, blaming the programmer will change
+nothing:
+
+Discipline doesn't fix type errors: type systems do. Discipline doesn't fix
+memory leaks and buffer overflow: ownership types do. Similarly, security
+vulnerabilities will not be fixed by demanding superhuman discipline but by
+building languages with safer semantics.
 
 # Contents
 
