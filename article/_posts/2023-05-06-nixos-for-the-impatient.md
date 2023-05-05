@@ -8,7 +8,21 @@ card_source: |
 
 - NixOS
     - what it is
-    - why it is useful
+        - declarative
+            - entire system configured from a single `.nix` file
+        - purely-functional
+            - config is reproducible
+    - if this sounds like bullshit: it's not
+        - it's not a timesink like arch or gentoo
+        - there was a time when i might have enjoyed configuring a system from scratch
+        - that time is past
+            - i dont use distros that don't have a graphicall installer
+            - running `fdisk` is below my dignity
+            - i'm not building my own kernel with paranoid build flags
+        - i want something that just works
+    - why should you care?
+        - because i recently switched to it
+        - it's simply delightful
 - Previous setup
     - dotfiles repo
         - ten years old
