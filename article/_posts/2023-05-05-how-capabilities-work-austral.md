@@ -347,17 +347,15 @@ responsibility when they fail to do this.
 
 ## Unsafe FFI {#ffi}
 
-- ffi is unsafe
-  - unsafe ffi is needed
-    - every language has a escape hatch
-    - every time you interact with the outside world you need to do unsafe things
-      - caveat: vale
-    - the question is:
-      - how can you bound the dangers of unsafe code?
-      - how can you provide a safe interface to unsafe internals?\
-  - to use ffi, have to mark module unsafe
-  - it's not about complete safety
-  - it's about minimizing audit surface area
+Every programming language needs a escape hatch. When interacting with the
+outside world, you have to do unsafe things. The question is: can you draw a
+boundary around unsafe code, so that is is clearly visible and demarcated, and
+can you help programmers identify and audit the unsafe parts of their code?
+
+Austral's FFI is unsafe. The only limit to using the FFI, calling foreign
+functions, and doing unsafe pointer arithmetic is that any module that does this
+must be marked unsafe. The idea is that we can then separate safe and unsafe
+modules and thus reduce the auditing burden on end-users.
 
 ## Summary {#summary}
 
