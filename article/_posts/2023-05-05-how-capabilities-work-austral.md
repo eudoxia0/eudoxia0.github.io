@@ -629,7 +629,9 @@ to experiment with this to see what works in practice.
 - [_Capability-Based Computer Systems_](https://homes.cs.washington.edu/~levy/capabook/) by [Hank Levy][hank].
 - [_Capability Myths Demolished_](https://srl.cs.jhu.edu/pubs/SRL2003-02.pdf) by [Mark S. Miller][mark] et al.
 - [_What Are Capabilities?_](http://habitatchronicles.com/2017/05/what-are-capabilities/) by [Chip Morningstar][chip].
+- [_Capability-Based Security_](https://austral-lang.org/spec/spec.html#rationale-cap) in the [Austral rationale][rationale].
 
 [hank]: https://en.wikipedia.org/wiki/Hank_Levy_(computer_scientist)
 [mark]: https://en.wikipedia.org/wiki/Mark_S._Miller
 [chip]: https://en.wikipedia.org/wiki/Chip_Morningstar
+[rationale]: https://austral-lang.org/spec/spec.html#rationale
