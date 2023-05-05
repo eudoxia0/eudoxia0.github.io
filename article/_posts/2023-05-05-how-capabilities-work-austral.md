@@ -398,14 +398,161 @@ replace manual auditing by the end user.
 
 ## A Stricter Model {#strict}
 
-- unsafe capability
-  - built from rootcap
-  - every unsafe operation takes an unsafe cap
-    - allocating
-    - deallocating
-    - pointer arith
-    - pointer casting
-    - dereferencing a pointer
-    - storing to a pointer
-  - data structures that do allocation keep a reference to the allocator
-    - allocator provides the unsafe cap for use
+The main safety limitation in Austral's current capability security model is the
+FFI.
+
+FFI code is completely unsafe, code that imports `Austral.Memory` is completely
+unsafe. The only safety check is that modules that do this must be marked unsafe
+with `pragma Unsafe_Module;`. But there is no obligation that the programmer
+audit these modules. So there's a faultline here: capabilities are a userspace
+construct, and unsafe modules are a language-level construct.
+
+Maybe we can unify them, and achieve greater safety?
+
+The approach described here is much more tedious to use, but it is safer and
+more precise.
+
+The basic idea is to introduce a new capability called `Unsafe`, that
+is acquired from a root capability:
+
+```austral
+module Austral.Unsafe is
+    type Unsafe: Linear;
+
+    generic [R: Region]
+    function acquire(root: &![RootCapability, R]): Unsafe;
+
+    function surrender(unsafe: Unsafe): Unit;
+end module.
+```
+
+All unsafe operations (pointer arithmetic, pointer casting, calling an FFI
+function) require passing an FFI capability. So, while the `Austral.Memory`
+module currently looks like this:
+
+```austral
+module Austral.Memory is
+    type Address[T: Type]: Free;
+    type Pointer[T: Type]: Free;
+
+    generic [T: Type]
+    function allocate(): Address[T];
+
+    generic [T: Type]
+    function load(pointer: Pointer[T]): T;
+
+    generic [T: Type]
+    function positiveOffset(pointer: Pointer[T], offset: Index): Pointer[T];
+
+    -- ...
+```
+
+Under this model it would look something like:
+
+```austral
+import Austral.Unsafe ( Unsafe );
+
+module Austral.Memory is
+    type Address[T: Type]: Free;
+    type Pointer[T: Type]: Free;
+
+    generic [T: Type, R: Region]
+    function allocate(unsafe: &![Unsafe, R]): Address[T];
+
+    generic [T: Type, R: Region]
+    function load(unsafe: &![Unsafe, R, pointer: Pointer[T]): T;
+
+    generic [T: Type, R: Region]
+    function positiveOffset(unsafe: &![Unsafe, R, pointer: Pointer[T], offset: Index): Pointer[T];
+
+    -- ...
+```
+
+Similarly, every FFI function that is defined has an implicit parameter added to
+at the beginning of its parameter list: it needs to take a reference to the
+`Unsafe` capability.
+
+This has a number of advantages:
+
+1. **Symmetry:** the concept of unsafe modules is no longer needed. So we can
+   get rid of the `Unsafe_Module` pragma. The `Austral.Memory` module can be
+   imported by any other module, but its functions cannot be used unless the
+   client has an `Unsafe` capability.
+
+1. **Granularity:** the scope of "unsafe" is made a lot more granular: no it is
+   no longer that some modules are unsafe, and others are safe, and we have to
+   audit the _entirety_ of an unsafe module. Rather: anything that takes an
+   `Unsafe` capability is potentially unsafe and becomes an auditing target.
+
+And some disadvantages:
+
+1. **False Positives:** some foreign functions are side-effect free. Do we have
+   to pass an `Unsafe` capability to calculate the `sin` of a number? That's not
+   very convenient.
+
+1. **Allocation:** any data structure that does memory allocation needs to take
+   and hold on to an `Unsafe` capability, or maybe something more specific.
+
+   Alternatively, we could have allocator objects that take and hold on to the
+   `Unsafe` capability, and can dispense blocks of memory using it. Then
+   anything that needs memory allocation takes a value that implements the
+   `Allocator` type class or something along those lines.
+
+Since `Unsafe` is very broad it might be sub-capabilities: a `ForeignCapability`
+type to call a foreign function, an `AllocationCapability` type to call the
+`allocate` function in `Austral.Memory`, etc.
+
+So if you're building an API that wraps an unsafe, foreign library, the API
+might look something like this:
+
+```austral
+import Austral.Unsafe ( Unsafe );
+
+module LibFoo is
+    type FooCapability: Linear;
+
+    function acquire(unsafe: Unsafe): FooCapability;
+
+    function surrender(cap: FooCapability): Unsafe;
+
+    -- Other functions that use `FooCapability`.
+    -- ...
+end module.
+```
+
+Internally, `FooCapability` would be a record that holds on to the `Unsafe` capability:
+
+```austral
+import Austral.Unsafe ( Unsafe );
+
+module body LibFoo is
+    record FooCapability: Linear is
+        unsafe: Unsafe;
+    end;
+
+    function acquire(unsafe: Unsafe): FooCapability is
+        return FooCapability(unsafe => unsafe);
+    end;
+
+    function surrender(cap: FooCapability): Unsafe is
+        let { unsafe: Unsafe } := cap;
+        return unsafe;
+    end;
+
+    -- etc.
+end module body.
+```
+
+And the rest of the API would take references to the `FooCapability`
+capability. Internally, each of those functions would then transform that into a
+reference to the inner `Unsafe` value, and pass that to any FFI functions that
+have to be called.
+
+# Conclusion
+
+The current model works, but might benefit from being made stricter. I'll have
+to experiment with this to see what works in practice.
+
+# See Also:
+
+- [RFC: Safer Capabilities](https://github.com/austral/austral/discussions/438)
