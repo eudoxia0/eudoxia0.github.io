@@ -6,9 +6,13 @@ card_source: |
     neofetch output for my laptop.
 ---
 
-NixOS is a Linux distribution configured using Nix. It is declarative, meaning
-that the entire system state can be defined in a single `.nix` file; and
-reproducible, meaning you can have multiple computers set up identically.
+[NixOS][nixos] is a Linux distribution configured using [Nix][nix]. It is
+declarative, meaning that the entire system state can be defined in a single
+`.nix` file; and reproducible, meaning you can have multiple computers set up
+identically.
+
+[nixos]: https://nixos.org/
+[nix]: https://en.wikipedia.org/wiki/Nix_(package_manager)
 
 If this sounds like a bullshit timesink like Arch or Gentoo: it's not. There was
 a time when the idea of spending an afternoon typing cryptsetup incantations
