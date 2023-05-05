@@ -43,6 +43,10 @@ card_source: |
 
 1. [The Solution](#solution)
 1. [Capabilities in Austral](#austral)
+   1. [Example](#example)
+   1. [Capabilities vs. Values](#values)
+   1. [The Capability Hierarchy](#hierarchy)
+   1. [The Root Capability](#root)
 1. [Limitations](#limitations)
    1. [Global Uniqueness](#unique)
    1. [Unsafe FFI](#ffi)
@@ -88,10 +92,15 @@ card_source: |
 - not a feature
   - a consequence of linear types
   - except for the root capability, more on this later
+
+## Example {#example}
 - example
   - network sockets
     - interface
     - usage
+
+## Capabilities vs. Values {#values}
+
 - capabilities can:
   - have a value
     - file
@@ -99,7 +108,13 @@ card_source: |
     - socket
   - no value: pure type-level permission slip
   - no sharp distinction between caps and linear values
+
+## The Capability Hierarchy {#hierarchy}
+
 - capability hierarchy
+
+## The Root Capability {#root}
+
 - the root capability
   - capabilities cannot be obtained from nowhere
     - you need smth that represents a higher-level capability, conceptually
