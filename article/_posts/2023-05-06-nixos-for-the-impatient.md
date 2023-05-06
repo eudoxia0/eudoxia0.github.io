@@ -60,12 +60,15 @@ separated[^timezone]:
 
 <img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix2.jpg"/>
 
-Secondly, something more important: full disk encryption is completely supported
-out of the box. This is crucial: full disk encryption should be the
+Secondly, something more important: [full disk encryption][fde] is completely
+supported out of the box. This is crucial: full disk encryption should be the
 default. Some distros like Ubuntu and Debian also support it in the installer,
 while others treat this as some exotic edge case, and there might be some
 incomplete wiki page that lists the dozens of commands you have to run to set up
-LUKS manually.
+[LUKS][luks] manually.
+
+[fde]: https://en.wikipedia.org/wiki/Disk_encryption
+[luks]: https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup
 
 <img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix3.jpg"/>
 
@@ -78,14 +81,18 @@ with Ubuntu and Debian it was locked at three retries, and I'd regularly fail
 that many times and have to hold down the power button to try again, which feels
 like smothering the poor laptop.
 
-Other minor things: I chose "allow unfree software" and the Pantheon desktop
-since it's like a nicer version of old GNOME 2.
+Other minor things: I chose "allow unfree software" and the [Pantheon
+desktop][pan] since it's like a nicer version of old GNOME 2.
+
+[pan]: https://elementary.io/
 
 **Troubleshooting Note:** when you get to the "Partitions" page, make sure the
 label on the upper-right hand corner reads "GPT" and not "MBR". Installing on an
 MBR system gives you a severely degraded setup. Fixing this is just a matter of
-opening up GParted (which comes with the installer) and changing the partition
-table for the disk, assuming the disk is empty.
+opening up [GParted][gparted] (which comes with the installer) and changing the
+partition table for the disk, assuming the disk is empty.
+
+[gparted]: https://gparted.org/
 
 ## Post-Install {#postinstall}
 
@@ -147,31 +154,63 @@ users.users.eudoxia.packages = with pkgs; [
 
 ## Dotfiles {#dotfiles}
 
-- Home Manager.
-   1. Go to `/etc/nixos/home.nix`
-   1. Copy:
+To manage our dotfiles we need a Nix plugin called [Home Manager][hm]. Go to
+`/etc/nixos`, create a file `home.nix`, and write this in:
 
-     ```
-     { config, pkgs, ... }:
-     let
-       home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-     in
-     {
-       imports = [
-         (import "${home-manager}/nixos")
-       ];
+[hm]: https://github.com/nix-community/home-manager
 
-       home-manager.users.eudoxia = {
-         home.stateVersion = "22.11";
-       };
-     }
-     ```
-   1. Then open `configuration.nix`.
-   1. Add `./home.nix` to `imports`.
-   1. Run `sudo nixos-rebuild switch`.
-   1. `the following new units were started: home-manager-eudoxia.service`.
-   1. Open `home.nix`.
-   1. Home directory config. `home.file` etc.
+```nix
+{ config, pkgs, ... }:
+let
+    home-manager = builtins.fetchTarball {
+        url = "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+        sha256 = "1cp2rpprcfl4mjsrsrpfg6278nf05a0mpl3m0snksvdalfmc5si5";
+    };
+in
+{
+    imports = [
+        (import "${home-manager}/nixos")
+    ];
+
+    home-manager.users.eudoxia = {
+        # This should be the same value as `system.stateVersion` in
+        # your `configuration.nix` file.
+        home.stateVersion = "22.11";
+    };
+}
+```
+
+Now open `configuration.nix` and add `home.nix` to the imports:
+
+```nix
+imports = [
+    ./hardware-configuration.nix
+    ./home.nix
+];
+```
+
+This configuration does nothing but make Home Manager available. Now, the
+simplest possible next step: create a `.foorc` dotfile in the home directory,
+with some contents. Open `home.nix` and under `stateVersion` add this:
+
+```nix
+home-manager.users.eudoxia = {
+    # This should be the same value as `system.stateVersion` in
+    # your `configuration.nix` file.
+    home.stateVersion = "22.11";
+
+    home.file = {
+        ".foorc" = {
+            text = ''
+                Hello, world!
+            '';
+        };
+    };
+};
+```
+
+Running `sudo nixos-rebuild switch` you will find a write-protected `.foorc`
+file in your home directory.
 
 # A Single-Device Setup {#single}
 
