@@ -46,27 +46,46 @@ Head over to [downloads][downloads] and pick a graphical ISO image.
 
 ## Installation {#install}
 
-- installation
-    1. Installer is very user-friendly
-       - based on calamares
-    1. Separates timezone from locale.
-        1. I can set timezone to AU and locale to en_US.UTF-8 as God intended.
-    1. Erase disk.
-        1. With swap, for hibernation.
-        1. Full disk encryption out of the box.
-        1. Just type in the passphrase.
-        1. By default, this is configured to have an infinite number of tries.
-            1. I can't express how good this is.
-            1. Debian and Ubuntu, by default, give you three tries and then the
-                thing locks up and you have to hold down the power button and
-                smother your PC. This makes me feel awful.
-        1. Dual booting and manual partitioning are a pain. You should
-           unironically just buy multiple disks.
-    1. one troubleshooting note
-       1. when partitioning, make sure the disk says "GPT" rather than "MBR"
-       1. an MBR install is severely degraded
-       1. assuming the disk is empty,
-          1. this is just a matter of opening up gparted and changing the disk's partition table
+<img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix1.jpg"/>
+
+The installer is based on [Calamares][cal] and is very user friendly. I want to
+highlight two features in particular.
+
+[cal]: https://calamares.io/
+
+Firstly, a minor thing, timezones are separated from locales. I use
+`en_US.UTF-8` everywhere, but a lot of installers give you some obscure locale
+if your timezone is outside the US. Here they are correctly
+separated[^timezone]:
+
+<img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix2.jpg"/>
+
+Secondly, something more important: full disk encryption is completely supported
+out of the box. This is crucial: full disk encryption should be the
+default. Some distros like Ubuntu and Debian also support it in the installer,
+while others treat this as some exotic edge case, and there might be some
+incomplete wiki page that lists the dozens of commands you have to run to set up
+LUKS manually.
+
+<img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix3.jpg"/>
+
+For my setup I chose to wipe the whole disk (I dual-boot, but have each OS in a
+separate disk, which really is the only tractable way to do it), and chose swap
+plus hibernation so I can suspend the computer. Another plus here is the full
+disk encryption setup, by default, gives you infinite retries if you misspell
+the password. I have a long disk encryption password so this is a lifesaver:
+with Ubuntu and Debian it was locked at three retries, and I'd regularly fail
+that many times and have to hold down the power button to try again, which feels
+like smothering the poor laptop.
+
+Other minor things: I chose "allow unfree software" and the Pantheon desktop
+since it's like a nicer version of old GNOME 2.
+
+**Troubleshooting Note:** when you get to the "Partitions" page, make sure the
+label on the upper-right hand corner reads "GPT" and not "MBR". Installing on an
+MBR system gives you a severely degraded setup. Fixing this is just a matter of
+opening up GParted (which comes with the installer) and changing the partition
+table for the disk, assuming the disk is empty.
 
 ## Post-Install {#postinstall}
 
@@ -183,3 +202,8 @@ Nix solves both problems:
    run the script to apply the changes.
 
 For the first time, I'm entirely satisfied with my system configuration.
+
+# Footnotes
+
+[^footnotes]:
+    A friend etc.
