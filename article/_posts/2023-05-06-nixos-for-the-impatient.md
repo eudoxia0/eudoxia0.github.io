@@ -214,9 +214,72 @@ file in your home directory.
 
 # A Single-Device Setup {#single}
 
-- make folder
-- move files
-- write script
+The above instructions are enough to get going. This section describes how to
+make the setup a bit more tractable. Specifically, we're gonna move the
+configuration to a git repo and move the dotfiles to files outside the `.nix`
+configuration so they're not embedded strings.
+
+The first step is to make a folder for the dotfiles:
+
+```bash
+$ mkdir dotfiles
+$ cd dotfiles
+$ git init
+```
+
+Then, copy your existing configuration:
+
+```bash
+$ cp /etc/nixos/configuration.nix configuration.nix
+$ cp /etc/nixos/home.nix home.nix
+$ cp /etc/nixos/hardware-configuration.nix hardware-configuration.nix
+$ git add .
+```
+
+For simplicity, add a script that lets you quickly reapply the configuration
+without having to remember any Nix-specific commands. I call mine `recrank.sh`:
+
+```bash
+#!/usr/bin/env bash
+
+sudo nixos-rebuild switch -I nixos-config=configuration.nix
+```
+
+The `-I` flag tells `nixos-rebuild` to use the local configuration rather than
+the one in `/etc/nixos`.
+
+Then make a folder for your home directory's dotfiles:
+
+```bash
+$ mkdir sources
+```
+
+And copy anything you might need: `.bashrc`, `git` configuration, X11 resources,
+etc.
+
+Then modify your `home.nix` to load the dotfiles from the `sources/`
+directory. For example:
+
+```nix
+home.file = {
+    ".bashrc".source            = ./sources/bashrc.sh";
+    ".emacs.d/init.el".source   = ./sources/init.el;
+    ".config/git/config".source = ./sources/gitconfig.txt;
+    ".Xresources".source        = ./sources/xresources.txt;
+};
+```
+
+Then run the recrank script, and you'll find your dotfiles in their target locations. If you want to copy a whole directory of files at once, you can do something like this:
+
+```nix
+".local/bin" = {
+    source = ./sources/scripts;
+    recursive = true;
+};
+```
+
+This will create a `~/.local/bin` directory and copy the contents of
+`sources/scripts/` there.
 
 # My Current Setup {#current}
 
