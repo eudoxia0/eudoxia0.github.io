@@ -56,7 +56,7 @@ highlight two features in particular.
 Firstly, a minor thing, timezones are separated from locales. I use
 `en_US.UTF-8` everywhere, but a lot of installers give you some obscure locale
 if your timezone is outside the US. Here they are correctly
-separated[^timezone]:
+separated[^locale]:
 
 <img style="margin-left: auto; margin-right: auto; width: 75%;" src="/assets/content/nixos-for-the-impatient/nix2.jpg"/>
 
@@ -283,9 +283,13 @@ This will create a `~/.local/bin` directory and copy the contents of
 
 # My Current Setup {#current}
 
-- Security
-- DNS
-- Syncthing
+For an example setup, see my [dotfiles][df] repo. This setup is shared across my
+desktop and laptop, using identical configuration except each one has a
+different hostname and hardware configuration. I use [Syncthing][syncthing]
+which automatically syncs my personal files when both computers are on at the
+same time.
+
+[syncthing]: https://syncthing.net/
 
 # Comparison {#comparison}
 
@@ -319,9 +323,14 @@ Nix solves both problems:
    change them directly, rather, I have to change them in the dotfiles repo and
    run the script to apply the changes.
 
-For the first time, I'm entirely satisfied with my system configuration.
+In the past, there'd always been something I wasn't entirely happy about with my
+setup. For the first time, I'm entirely satisfied with my system
+configuration. Using NixOS has been thoroughly enjoyable.
 
 # Footnotes
 
-[^footnotes]:
-    A friend etc.
+[^locale]:
+    A friend is a locale edge case: US keyboard, English as the interface
+    language, ISO `YYYY/MM/DD` dates, Euro currency symbol and commas as the
+    decimal separator. I think Calamares doesn't quite support this level of
+    flexibility just yet but it's better than the Linux status quo.
