@@ -308,7 +308,7 @@ function main(root: RootCapability): ExitCode is
     -- Acquire some capabilities.
     let netcap: NetworkCapability := acquireNetwork(&!root);
     let fscap: FileSystemCapability := acquireFileSystem(&!root);
-    let termcap: TerminalCapability := acquirTerminale(&!root);
+    let termcap: TerminalCapability := acquireTerminal(&!root);
     -- Surrender the root.
     surrenderRoot(root);
     -- Pass our capabilities to some other function.
