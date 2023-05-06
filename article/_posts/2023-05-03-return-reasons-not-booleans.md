@@ -29,16 +29,19 @@ val pred : tree -> result
 
 With the failure case explaining what failed, where, and why.
 
-Why? Because otherwise you will find yourself staring at a Sentry log where some
-process failed, and all you have to go on is a solitary `false` value. And it
-can be hard to debug locally.
+Why? Because otherwise you will find yourself staring at a [Sentry][sentry] log
+where some process failed, and all you have to go on is a solitary `false`
+value. And it can be hard to debug locally.
+
+[sentry]: https://sentry.io/welcome/
 
 **Example:** if you have a function that compares two trees for equality on an
 exact, bit-by-bit basis, then if the trees are potentially deeply nested you
-might want the comparison function to tell you which subtrees don't match. In
-this particular case you don't need to know _why_ the predicate failed (since
-you're doing strict equality), but you want to know where the failure happened
-and what are the values that don't match.
+might want the comparison function to tell you which subtrees don't match and
+where in the tree the mismatch happens. In this particular case you don't need
+to know _why_ the predicate failed (since you're doing strict equality), but you
+want to know where the failure happened and what are the values that don't
+match.
 
 **Example:** sometimes you want to implement something like relaxed
 equality---for example, you might have a data type that represents mathematical
