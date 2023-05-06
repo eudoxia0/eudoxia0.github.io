@@ -116,18 +116,34 @@ Apply the configuration with:
 $ sudo nixos-rebuild switch
 ```
 
-Now log out and log back in (trying to start a new terminal window after
-changing hostnames might error, but logging out works). Observe your new hostname.
+Now, trying to start a new terminal window after changing hostnames might error,
+so you have to log out and log back in to observe your new hostname. For most
+changes, however, they take effect immediately. How much you have to do depends
+on how much you've changed: if you've updated your `.bashrc` you'll have to open
+a new terminal, if you've updated your window manager config you'll have to
+reboot the window manager, etc.
 
 This is the basic pattern to configuring Nix: you make a change to your config
 file, run one command, and the system is updated.
 
 ## Installing Packages {#packages}
 
-- Installing Packages
-   1. `sudo nano /etc/nixos/configuration.nix`
-   1. `users.users.eudoxia`
-   1. To install something system-wide, use `environment.systemPackages` instead.
+There's two ways to install packages: system-wide and user specific. Open the
+`configuration.nix` file again. System-wide packages go in `environmentSystemPackages`:
+
+```nix
+environment.systemPackages = with pkgs; [
+    firefox
+];
+```
+
+User-specific packages go in `users.users.$USER.packages`:
+
+```nix
+users.users.eudoxia.packages = with pkgs; [
+    emacs
+];
+```
 
 ## Dotfiles {#dotfiles}
 
