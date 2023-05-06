@@ -140,6 +140,10 @@ file, run one command, and the system is updated.
 
 # A Single-Device Setup {#single}
 
+- make folder
+- move files
+- write script
+
 # My Current Setup {#current}
 
 - Security
