@@ -269,7 +269,9 @@ home.file = {
 };
 ```
 
-Then run the recrank script, and you'll find your dotfiles in their target locations. If you want to copy a whole directory of files at once, you can do something like this:
+Then run the recrank script, and you'll find your dotfiles in their target
+locations. If you want to copy a whole directory of files at once, you can do
+something like this:
 
 ```nix
 ".local/bin" = {
@@ -300,7 +302,8 @@ destinations. This works well enough, but for two drawbacks:
 
 [df]: https://github.com/eudoxia0/dotfiles
 
-1. Sometimes I'd install something by hand and forget to add it to the bootstrap script.
+1. Sometimes I'd install something by hand and forget to add it to the bootstrap
+   script.
 2. Analogously, I'd make a change to a dotfile in its target location, out of
    expedience, and forget to apply the change to the corresponding file in the
    dotfiles repo.
