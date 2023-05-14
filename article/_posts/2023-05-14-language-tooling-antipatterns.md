@@ -163,7 +163,7 @@ As far as I can tell [`opam`][opam] doesn't have lockfiles. It also doesn't
 install dependencies automatically. So your build might fail tomorrow because
 the package manager is resolving a different transitive dependency. The usual
 advice is to "just use [Nix][nix]", which I think is code for "go fuck
-yourself".
+yourself".[^nix]
 
 [opam]: https://opam.ocaml.org/
 [nix]: https://nixos.org/
@@ -176,3 +176,11 @@ yourself".
     abstraction. Some day your users will have to read the manual (or worse, the
     source code) to find they had to set the `SNOBOLPATH` environment variable
     or something.
+
+[^nix]:
+    I know this is offered as actionable advice, and I know Nix is great, I
+    think this is attacking the problem at the wrong level of abstraction. Nix
+    is very coarse-grained: you can't, for example, pin specific versions of
+    packages, you can only pin a specific revision of the Nix packages
+    store. Language-level package managers are not duplicating Nix's
+    functionality, they're providing a smaller and more specialized subset.
