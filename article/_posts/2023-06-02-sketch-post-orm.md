@@ -21,6 +21,25 @@ generally, but mostly this is a reflection on my experience in industry.
 
 [crane]: https://github.com/eudoxia0/crane
 
+# Contents
+
+1. [Preamble: What is an ORM?](#preamble)
+1. [The State of the Art](#sota)
+    1. [Case: Use Raw SQL](#case1)
+    1. [Case: Use an ORM](#case2)
+    1. [Comparison](#comp)
+1. [The Sketch](#sketch)
+    1. [Migrations First](#mig-first)
+    1. [Declarative Migrations](#mig-decl)
+    1. [Database-Specific](#specific)
+    1. [Portable Across Languages](#portable)
+    1. [Relational](#relational)
+    1. [Post-SQL](#postsql)
+    1. [Sum Types](#sum)
+    1. [Stored Procedures](#stored)
+1. [The Workflow](#workflow)
+1. [Prior Art](#prior)
+
 # Preamble: What is an ORM? {#preamble}
 
 By ORM I mean a tool that lets you write code that looks like this:
@@ -679,7 +698,7 @@ def get_users_in_cohort(
 
 Alongside code to run the migrations, and maybe linting code and such.
 
-# Prior Art
+# Prior Art {#prior}
 
 [PRQL][prql] is the closest thing that exists today to the query language I want
 to use.
