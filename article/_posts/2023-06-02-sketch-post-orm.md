@@ -337,9 +337,10 @@ key-value or blob store for their core With regards to agility.
 
 [lhc]: https://www.mongodb.com/blog/post/holy-large-hadron-collider-batman
 
-ACID guarantees are _extremely_ valuable. Explicit schemas are great. I want
-more of them: I want stricter schemas than Postgres provides. I want strong and
-static types. I want queries I can typecheck statically, before executing them.
+ACID guarantees are _extremely_ valuable. Explicit schemas are great. I don't
+want less schemas, I want more. I want stricter schemas than Postgres
+provides. I want strong and static types. I want queries I can typecheck
+statically, before executing them.
 
 ## Post-SQL
 
