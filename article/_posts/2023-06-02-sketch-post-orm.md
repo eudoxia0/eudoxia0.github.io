@@ -15,12 +15,22 @@ card_source: |
 - state of database access
   - bimodal
     - case 1: use raw sql
+      - "everyone" knows orms are bad
+        - vietnam of computing science etc.
+        - just write raw sql
+        - but in most languages, going from an orm to using raw sql is like
+          going from OCaml to Java: a three-line type def in OCaml becomes four
+          files of Java each tens of lines of code written in quadriplicate and
+          IntelliJ-generated boilerplate
       - pros:
         - can optimize queries endlessly
         - can use the power-user features of your specific rdbms
         - easy to know where queries are happening
-          - can centralize query access in specific modules
-            - which lets you optimize those modules separately, implement pre and post-save features
+          - can centralize query access in specific modules (data access objects)
+            - this has many benefits
+              - which lets you optimize those modules separately
+              - implement pre and post-save features
+              - dual writing
       - cons:
         - it looks like this [pic of java querying example]
         - type checking disappears at the SQL boundary
@@ -59,6 +69,33 @@ card_source: |
           - very hard to statically determine where your database code is
           - this in turn makes it hard to do things like: whenever we update a model X, run this job or whatever.
             - "just use triggers" doesn't solve this because native rdbms features may not play well with the orm!
+  - comparison
+    - you can think of this as fixed vs. marginal cost
+    - raw sql:
+      - fixed cost is high
+        - you have to write a lot!
+      - marginal cost is low:
+        - adding a new query is a small fraction of your existing database code
+        - each query is a function
+          - therefore each query can be separately tested
+          - it's trivial to find where the query is made (find usages)
+          - and where it's tested (again, find usages)
+      - performance ceiling is high
+        - can go as high as you want
+    - orm:
+      - fixed cost is low
+        - hit the ground running
+        - fast
+      - marginal cost is high
+        - years into a project
+        - schema changes rarely
+          - so automigate stuff is less of a boon
+        - performance problems
+        - n+1 queries everywhere
+        - where? i don't fucking know
+        - impossible to find queries statically
+        - have to instrument at runtime, which is rarely done uniformly, which means you just have to put tracing calls everywhere in the codebase until you find your perf problems in the logs
+        - with dynamic languages, often you find that once youve optimized everything, perf is still bad
   - there is a missing middle
     - something more convenient than the jdbc example
     - has less problems than orms
@@ -152,3 +189,4 @@ card_source: |
     - humanity cannot survive this century without sum types
   - maybe we can use stored procedures
 - the complete sketch
+  - walkthrough of how it would work
