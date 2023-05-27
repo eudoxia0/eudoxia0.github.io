@@ -386,31 +386,95 @@ statically, before executing them.
 
 ## Post-SQL
 
-- sql is bad
-  - syntax is highly irregular
-    - hard to parse
-    - hard to learn
-    - hard to remember
-    - select statement grammar has like 7 holes for subexpressions
-    - you can argue back and forth about whether this is or isn't good or beginner-friendly
-    - i'm explicitly ignoring the point of view of beginners programmers or business analysts
-    - my point of view is: programmers who want to access a database
-    - they want type checking and they want a sane, manipulable, decently functional syntax
-    - they want neither anti-intellectal just git er done dynamic typing tarpits or trans-dimensional monad optic stacks
-  - type checking is absent
-    - matters less if youre using the database interactiely, like a business analyst
-    - again, irrelevant: as long as the underlying database is SQL, you can use SQL if you want
-    - but
-    - from the point of view of an _application_, your queries are fixed, it's just the parameters that have different values (but usually fixed types)
-  - i want a query language with
-    - sane syntax
-    - type checking
-    - compiles to Postgres SQL
-  - this is easier said than done
-  - the challenge has three components
-    - design a sane query language with sane syntax and type checking
-    - make it feature-complete to native postgres
-    - make it compile to efficient sql
+SQL is bad, for two reasons:
+
+1. The syntax is bad.
+2. Type checking is absent.
+
+On the first point, here's the grammar for the `SELECT` statement in Postgres:
+
+```
+[ WITH [ RECURSIVE ] with_query [, ...] ]
+SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
+    [ * | expression [ [ AS ] output_name ] [, ...] ]
+    [ FROM from_item [, ...] ]
+    [ WHERE condition ]
+    [ GROUP BY [ ALL | DISTINCT ] grouping_element [, ...] ]
+    [ HAVING condition ]
+    [ WINDOW window_name AS ( window_definition ) [, ...] ]
+    [ { UNION | INTERSECT | EXCEPT } [ ALL | DISTINCT ] select ]
+    [ ORDER BY expression [ ASC | DESC | USING operator ] [ NULLS { FIRST | LAST } ] [, ...] ]
+    [ LIMIT { count | ALL } ]
+    [ OFFSET start [ ROW | ROWS ] ]
+    [ FETCH { FIRST | NEXT } [ count ] { ROW | ROWS } { ONLY | WITH TIES } ]
+    [ FOR { UPDATE | NO KEY UPDATE | SHARE | KEY SHARE } [ OF table_name [, ...] ] [ NOWAIT | SKIP LOCKED ] [...] ]
+
+where from_item can be one of:
+
+    [ ONLY ] table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+                [ TABLESAMPLE sampling_method ( argument [, ...] ) [ REPEATABLE ( seed ) ] ]
+    [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
+    with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+    [ LATERAL ] function_name ( [ argument [, ...] ] )
+                [ WITH ORDINALITY ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+    [ LATERAL ] function_name ( [ argument [, ...] ] ) [ AS ] alias ( column_definition [, ...] )
+    [ LATERAL ] function_name ( [ argument [, ...] ] ) AS ( column_definition [, ...] )
+    [ LATERAL ] ROWS FROM( function_name ( [ argument [, ...] ] ) [ AS ( column_definition [, ...] ) ] [, ...] )
+                [ WITH ORDINALITY ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+    from_item join_type from_item { ON join_condition | USING ( join_column [, ...] ) [ AS join_using_alias ] }
+    from_item NATURAL join_type from_item
+    from_item CROSS JOIN from_item
+
+and grouping_element can be one of:
+
+    ( )
+    expression
+    ( expression [, ...] )
+    ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
+    CUBE ( { expression | ( expression [, ...] ) } [, ...] )
+    GROUPING SETS ( grouping_element [, ...] )
+
+and with_query is:
+
+    with_query_name [ ( column_name [, ...] ) ] AS [ [ NOT ] MATERIALIZED ] ( select | values | insert | update | delete )
+        [ SEARCH { BREADTH | DEPTH } FIRST BY column_name [, ...] SET search_seq_col_name ]
+        [ CYCLE column_name [, ...] SET cycle_mark_col_name [ TO cycle_mark_value DEFAULT cycle_mark_default ] USING cycle_path_col_name ]
+
+TABLE [ ONLY ] table_name [ * ]
+```
+
+It's bad that something so basic has like twenty eight structural variants and
+fifty subexpression holes.
+
+You can imagine syntax on a spectrum of uniformity (I'd normally say regularity
+but this gets confused with regular languages), with Lisp and XML at one end
+representing extreme syntactic uniformity, and SQL at the other end representing
+extreme syntactic specificity. Generally you want a happy medium: where the
+syntax is regular enough to be composable and easily remembered, but specific
+enough you can read code effectively.
+
+SQL being so non-uniform makes it hard to parse, hard to learn, and hard to remember.
+
+You may argue this is "good for beginners and non-programmers", and I would
+dispute that. But I am not beginner and I am not a non-programmer. They can have
+SQL, if they want. I want something better.
+
+On the second point about type checking, this matters less if you're using the
+database interactively, like a DBA or a business analyst, and it matters greatly
+if you're using the database from an application server, where queries are fixed
+and only parameters are different.
+
+I want a better SQL. A better SQL is a language with:
+
+1. Sane, composable syntax.
+2. Static type checking.
+3. That compiles to efficient Postgres SQL.
+
+This is easier said than done. The challenge has three stages:
+
+1. Design a sane query language.
+2. Make it feature-complete to Postgres' SQL.
+3. Compile it to efficient SQL.
 
 ## Sum Types
 
