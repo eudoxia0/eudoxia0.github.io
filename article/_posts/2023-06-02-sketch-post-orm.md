@@ -317,15 +317,18 @@ enabled at my own peril.
 
 ## Portable Across Languages
 
-- not really a hard requirement but an example of what is possible
-- like openapi spec
-- your migrations are json
-- your queries are written in some separate language
-- code generator creates bindings to whatever language you're using to
-  - apply the migrations
-  - run those queries with type checking
-  - a query like [example] gets compiled to code like [example]
-  - a struct is automatically defined for the return type of each query
+This isn't really a hard requirement, but an example of what is possible.
+
+With OpenAPI you define your schema in some declarative language, and a code
+generator spits out client code and server stubs in many languages. Why not the
+same for databases? If the database schema/migrations are defined in a
+declarative format, and the query language is some type-checked compile-to-SQL
+language, the database access tool can easily typecheck the queries separately
+from your codebase, and generate code to:
+
+1. Apply the migrations.
+2. Run the generated SQL queries.
+3. Map the query result set to a type defined from the schema.
 
 ## Relational
 
