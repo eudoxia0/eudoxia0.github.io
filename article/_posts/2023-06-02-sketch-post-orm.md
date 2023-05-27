@@ -26,6 +26,18 @@ card_source:
         - type checking disappears at the SQL boundary
         - SQL has problems (more on this later)
     - case 2: use an orm
+      - orm means object relational mapper
+        - but let's not get caught up by syntax
+        - by orm i mean
+          - a library that takes over database interaction
+          - where you can design "languag-first" rather than sql first
+          - you write classes (or records, depending on the language youre using)
+          - and sprinkle annotations maybe
+          - and you get auto-generated schemas and sql
+          - the thing manages creating and alternating schemas and making queries
+          - typically the goal is to have a succint (if not simple) way to interact with the database
+          - in other words, something is an orm if it lets you write code that looks like this: [example]
+          - no oop needed
       - pros:
         - very quick to write
         - looks like this: [pic of a django orm code]
@@ -50,6 +62,17 @@ card_source:
   - there is a missing middle
     - something more convenient than the jdbc example
     - has less problems than orms
+- background
+  - what license do i have to speak of this?
+  - not much
+  - most of my experience is using the django orm
+  - in a past life i wrote my own orm inspired by the django orm
+    - for common lisp
+    - with automatic migrations using schema diffing
+    - i started a rewrite that I never ended
+  - not a dba
+  - don't know enough about raw sql
+  - but actively working on learning
 - sketch
   - migration-first
     - "just write raw sql lol" isn't practical advice much of the time
@@ -122,4 +145,10 @@ card_source:
         - design a sane query language with sane syntax and type checking
         - make it feature-complete to native postgres
         - make it compile to efficient sql
+  - discriminated records
+    - we need sum types
+    - java has sum types now
+    - the world needs sum types
+    - humanity cannot survive this century without sum types
+  - maybe we can use stored procedures
 - the complete sketch
