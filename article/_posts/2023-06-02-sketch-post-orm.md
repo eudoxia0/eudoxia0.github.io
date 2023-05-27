@@ -223,33 +223,25 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
 
 # The Sketch
 
-- how i want to use databases from code
+This section describes how I want to use databases. In brief:
+
+1. I don't want to write anything uninteresting, i.e. mapping result sets to
+   native language types.
+2. Migrations first, not schema first.
+3. Migrations are specified in a declarative format, not in SQL.
+4. The tool is specific to the database, not portable, and exposes features
+   specific to that database.
+5. The tool can generate database access bindings for multiple programming languages.
+6. I want a query language that's better than SQL. Specifically, it has to be 1)
+   composable, 2) statically typed and with 3) a sane syntax.
+7. I want sum types.
+
 - how i want a database interface to be in the late 2020's
 - sketch in brief
   - i don't want to write anything uninteresting
     - binding paramters to prepared statements
     - pulling stuff from ResultSets into domain objects
   - migrations first
-  - migrations declaratively specified
-    - written in json or something
-    - not in sql
-    - why?
-      - because sql is write-only
-      - it can't be parsed
-      - you can write a parser for ISO SQL, but that's not the language anyone uses
-      - everyone uses their db's dialect
-      - you can't write a parser for Postgres' SQL dialect since that's a moving target
-      - so there's an assymetry:
-        - it's hard to go from SQL to first-class data
-        - but it's _trivial_ to go from a first-class record to SQL
-      - therefore, rather than write SQL migrations and make a Herculean effort
-        to bring them up to the level of first-class objects, you should write
-        migrations using a standard format like JSON with a specific schema, and
-        a limited set of schema-manipulation actions you can take
-      - these may still use postgres (or whatever) specific features
-      - in fact the only way to "parse" a Postgres `ALTER TABLE` is to query the
-        schema from the database, run the statement, query the schema after, and
-        diff the schemas. this isn't great.
   - specific to the database
   - language-portable
     - same interface generates code for
@@ -281,6 +273,29 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
   - then a tool runs those migrations virtually, starting with an empty schema, applying one migration at a time, and dumps the resulting schema to a file where it can be visualized
   - also can generate schema docs
   - this is similar to how code-first graphql libraries let you define your graphql schema as code and them dump a schema.gql file that the frontend can pick up
+
+## Declarative Migrations
+
+- migrations declaratively specified
+  - written in json or something
+  - not in sql
+  - why?
+    - because sql is write-only
+    - it can't be parsed
+    - you can write a parser for ISO SQL, but that's not the language anyone uses
+    - everyone uses their db's dialect
+    - you can't write a parser for Postgres' SQL dialect since that's a moving target
+    - so there's an assymetry:
+      - it's hard to go from SQL to first-class data
+      - but it's _trivial_ to go from a first-class record to SQL
+    - therefore, rather than write SQL migrations and make a Herculean effort
+      to bring them up to the level of first-class objects, you should write
+      migrations using a standard format like JSON with a specific schema, and
+      a limited set of schema-manipulation actions you can take
+    - these may still use postgres (or whatever) specific features
+    - in fact the only way to "parse" a Postgres `ALTER TABLE` is to query the
+      schema from the database, run the statement, query the schema after, and
+      diff the schemas. this isn't great.
 
 ## Database-Specific
 
