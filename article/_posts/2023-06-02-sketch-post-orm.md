@@ -177,6 +177,22 @@ And SQL itself has problems(more on which later).
     - pulling stuff from ResultSets into domain objects
   - migrations first
   - migrations declaratively specified
+    - written in json or something
+    - not in sql
+    - why?
+      - because sql is write-only
+      - it can't be parsed
+      - you can write a parser for ISO SQL, but that's not the language anyone uses
+      - everyone uses their db's dialect
+      - you can't write a parser for Postgres' SQL dialect since that's a moving target
+      - so there's an assymetry:
+        - it's hard to go from SQL to first-class data
+        - but it's _trivial_ to go from a first-class record to SQL
+      - therefore, rather than write SQL migrations and make a Herculean effort
+        to bring them up to the level of first-class objects, you should write
+        migrations using a standard format like JSON with a specific schema, and
+        a limited set of schema-manipulation actions you can take
+      - these may still use postgres (or whatever) specific features
   - specific to the database
   - language-portable
     - same interface generates code for
