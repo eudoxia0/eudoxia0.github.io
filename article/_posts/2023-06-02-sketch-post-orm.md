@@ -238,30 +238,30 @@ This section describes how I want to use databases. In brief:
 
 ## Migrations First
 
-- "just write raw sql lol" isn't practical advice much of the time
-- doesn't solve the problem of migrations
-- you can either
-  - use liquidbase
-  - roll your own migration architecture
-- orms are schema first
-  - write the schema
-  - generate migrations by diffing against the last known good version of the schema
-  - convenient
-    - do what i mean
-    - i give you the schema i want, you figure out how to get there
-  - problem is it underemphasizes migrations
-  - i'm not sure why, i dont think i can argue this rigorously, but i think migrations should come first
-  - you write your migrations
+ORMs are typically schema-first: you write your schema (as Python classes), and the ORM automatically generates a schema. When you modify your classes, the ORM diffs the resulting schema against the previous one and makes a migration.
+
+This is convenient: it does what you mean and is declarative.
+
+The problem is it underemphasizes migrations and makes them into an implementation detail.
+
+I don't think I can argue this very effectively or rigorously, but I think
+migrations should come first. You should write migrations as separate files,
+then the database access tool should run those migrations virtually against an
+empty schema, to recover the current state of the schema. Then it can print this
+schema out as an SQL file or as HTML documentation for the current state of the
+database.
+
+This is similar to code-first GraphQL libraries where you define your GraphQL
+schema in code, and then the library dumps a `schema.gql` file for the frontend
+to pick up.
+
+## Declarative Migrations
+
+ - you write your migrations
     - either as code, or as a declarative format like json
     - but ideally not as SQL
     - the problem with writing raw SQL is it's very hard to bring it up to the level where it can be manipulated programmatically
     - you want to be able to handle migrations as first class objects, which means: parse them, compare them, serialize them, turn them to documentation
-  - then a tool runs those migrations virtually, starting with an empty schema, applying one migration at a time, and dumps the resulting schema to a file where it can be visualized
-  - also can generate schema docs
-  - this is similar to how code-first graphql libraries let you define your graphql schema as code and them dump a schema.gql file that the frontend can pick up
-
-## Declarative Migrations
-
 - migrations declaratively specified
   - written in json or something
   - not in sql
