@@ -8,60 +8,94 @@ card_source: |
     [cm]: https://en.wikipedia.org/wiki/Connection_Machine
 ---
 
-# Intro
+I've been writing a lot of database access code as of late. It's frustrating
+that in 2023, my choices are still to either write all of the boilerplate by
+hand, or hand all database access over to some inscrutable "agile" ORM that will
+become a crippling liability in the 2-3y timescale.
 
-- intro
-  - been doing database work
-  - it's frustrating
-  - surely we should have solved this
-  - this is written from the perspective of
-    - a programmer
-    - writing code that uses a database within an application server
-    - not a dba
-    - not a business analyst
+This post is about how I want to use databases, from the perspective of an
+application server developer---not a DBA or a BI guy or whatever.
 
-# What is an ORM?
+# Preamble: What is an ORM?
 
-- orm means object relational mapper
-  - but let's not get caught up by syntax
-  - by orm i mean
-    - a library that takes over database interaction
-    - where you can design "languag-first" rather than sql first
-    - you write classes (or records, depending on the language youre using)
-    - and sprinkle annotations maybe
-    - and you get auto-generated schemas and sql
-    - the thing manages creating and alternating schemas and making queries
-    - typically the goal is to have a succint (if not simple) way to interact with the database
-    - in other words, something is an orm if it lets you write code that looks like this: [example]
-    - no oop needed
+By ORM I mean a tool that lets you write code that looks like this:
+
+```python
+class User(Model):
+    class Meta:
+        tablename = "users"
+        pk = "id"
+
+    id: BigSerial
+    name: str
+    email: Unique(str)
+    age: Nullable(int)
+    freemium: bool
+
+user: User = User(name="Fernando", age=28).insert()
+
+for user in User.filter(freemium=False).select(["email"]):
+    foo(user)
+```
+
+That is: a tool where you can write your database access code "language-first"
+rather than SQL first, where you define a record type and sprinkle some
+annotations and you can start writing queries using ordinary code. The tool then
+handles creating and altering the schema and converting your method calls to SQL
+dynamically. Typically the goal of an ORM is to have the most succint (or agile,
+if you want) possible way to use the database.
+
+It doesn't actually require that you map classes to tables, or even that your
+language support OOP at all.
 
 # The State of the Art
 
-- state of database access
-  - bimodal
+How do programmers use databases? The state of things is bimodal: you either
+write raw SQL, or you use an ORM.
 
 ## Case: Use Raw SQL
 
-- "everyone" knows orms are bad
-  - vietnam of computing science etc.
-  - just write raw sql
-  - but in most languages, going from an orm to using raw sql is like
-    going from OCaml to Java: a three-line type def in OCaml becomes four
-    files of Java each tens of lines of code written in quadriplicate and
-    IntelliJ-generated boilerplate
-- pros:
-  - can optimize queries endlessly
-  - can use the power-user features of your specific rdbms
-  - easy to know where queries are happening
-    - can centralize query access in specific modules (data access objects)
-      - this has many benefits
-        - which lets you optimize those modules separately
-        - implement pre and post-save features
-        - dual writing
-- cons:
-  - it looks like this [pic of java querying example]
-  - type checking disappears at the SQL boundary
-  - SQL has problems (more on this later)
+"Everyone" knows ORMs are bad, because of the ["object-relational impedance
+mismatch"][impedance] or that they're ["the Vietnam of computer
+science"][vietnam] or whatever. "Everyone" knows you should write raw SQL
+instead.
+
+But in most languages going from an ORM to raw SQL is like going from
+[OCaml][ocaml] top Java: a three-line type definition in OCaml becomes four Java
+files, each of which is tens of lines of code written in quadruplicate, with
+[IntelliJ][ij]-generated boilerplate.
+
+[ocaml]: http://localhost:4000/article/two-years-ocaml
+
+So why do people use raw SQL?
+
+1. Queries written in SQL can be optimized endlessly, you're not upper-bounded
+   by the ORM's query generator.
+2. You can use the power-user features specific to your RDBMS, while many ORMs
+   provide a lowest-common-denominator interface.
+3. It's easy to know where queries are happening, so you can centralize database
+   access to specific modules ([data access objects][dao]). This, in turn, has
+   many benefits: there's a clear separation between the interface to a query
+   and its implementation, which allows it to be optimized separately. You have
+   a central place to add features like pre or post-save checks, or database
+   access logging.
+
+And why wouldn't people write raw SQL? The main problem is it looks like this:
+
+```java
+TODO
+```
+
+The next problem is type-checking disappears at the query boundary. When you
+pull from a database, you get a dynamically-typed [result set][rs]. Parsing that
+into your domain objects is boilerplate. If you change the query, but not the
+code around it, you get errors the compiler won't catch.
+
+Writing raw SQL is like writing bindings to a foreign C library, except the
+types are slightly richer and you're defining said library inline, inside
+untyped string literals.
+
+And SQL itself has problems(more on which later).
 
 ## Case: Use an ORM
 
