@@ -2,6 +2,10 @@
 title: Sketch of a Post-ORM
 summary: A better way to interact with databases.
 card: sketch-post-orm.jpg
+card_source:
+    Screenshot of the [Connection Machine][cm] document retrieval system.
+
+    [cm]: https://en.wikipedia.org/wiki/Connection_Machine
 ---
 
 - intro
