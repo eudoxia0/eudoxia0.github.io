@@ -1,6 +1,6 @@
 ---
 title: Language Pragmatics Engineering
-summary: The code you can write is the code that gets written.
+summary: On best practices and gradient descent.
 ---
 
 Programming languages have syntax, semantics, and pragmatics: how the language
