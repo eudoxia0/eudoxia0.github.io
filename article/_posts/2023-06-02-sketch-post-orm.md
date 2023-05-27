@@ -12,6 +12,11 @@ card_source: |
   - been doing database work
   - it's frustrating
   - surely we should have solved this
+  - this is written from the perspective of
+    - a programmer
+    - writing code that uses a database within an application server
+    - not a dba
+    - not a business analyst
 - orm means object relational mapper
   - but let's not get caught up by syntax
   - by orm i mean
