@@ -21,7 +21,7 @@ generally, but mostly this is a reflection on my experience in industry.
 
 [crane]: https://github.com/eudoxia0/crane
 
-# Preamble: What is an ORM?
+# Preamble: What is an ORM? {#preamble}
 
 By ORM I mean a tool that lets you write code that looks like this:
 
@@ -53,12 +53,12 @@ if you want) possible way to use the database.
 It doesn't actually require that you map classes to tables, or even that your
 language support OOP at all.
 
-# The State of the Art
+# The State of the Art {#sota}
 
 How do programmers use databases? The state of things is bimodal: you either
 write raw SQL, or you use an ORM.
 
-## Case: Use Raw SQL
+## Case: Use Raw SQL {#case1}
 
 "Everyone" knows ORMs are bad, because of the ["object-relational impedance
 mismatch"][impedance] or that they're ["the Vietnam of computer
@@ -142,7 +142,7 @@ untyped string literals.
 
 And SQL itself has problems(more on which later).
 
-## Case: Use an ORM
+## Case: Use an ORM {#case2}
 
 Raw SQL is tedious. So people use ORMs because they're faster and more
 expedient: they let you hit the ground running and keep running for a very long
@@ -196,7 +196,7 @@ The problem with ORMs are:
 
 So we get agility, at the cost of many other things.
 
-## Comparison
+## Comparison {#comp}
 
 When do you choose one over the other? You can think of it as being about fixed
 vs. marginal costs.
@@ -233,7 +233,7 @@ There is a missing middle: something with a bit more convenience and less
 boilerplate than writing all the query boilerplate by hand, but without the
 problems of ORMs that try to reinvent the whole universe and do so poorly.
 
-# The Sketch
+# The Sketch {#sketch}
 
 This section describes how I want to use databases. In brief:
 
@@ -248,7 +248,7 @@ This section describes how I want to use databases. In brief:
    composable, 2) statically typed and with 3) a sane syntax.
 7. I want sum types.
 
-## Migrations First
+## Migrations First {#mig-first}
 
 ORMs are typically schema-first: you write your schema (as Python classes), and the ORM automatically generates a schema. When you modify your classes, the ORM diffs the resulting schema against the previous one and makes a migration.
 
@@ -267,7 +267,7 @@ This is similar to code-first GraphQL libraries where you define your GraphQL
 schema in code, and then the library dumps a `schema.gql` file for the frontend
 to pick up.
 
-## Declarative Migrations
+## Declarative Migrations {#mig-decl}
 
 Migrations should not be written in SQL but in some parseable, declarative
 format like JSON or YAML.
@@ -319,7 +319,7 @@ Therefore, rather than write migrations as SQL and make a Herculean effort to
 parse them, we should simply write some in some declarative format that's easy
 to parse.
 
-## Database-Specific
+## Database-Specific {#specific}
 
 Many ORMs and database access tools advertise portability as a feature. For
 certain tools (e.g. [DBeaver][dbeaver] or Java's `java.sql`) this makes
@@ -354,7 +354,7 @@ want a database access tool, I want a Postgres access tool. I want it to expose
 Postgres' power user features as first-class features, not remote extensions
 enabled at my own peril.
 
-## Portable Across Languages
+## Portable Across Languages {#portable}
 
 This isn't really a hard requirement, but an example of what is possible.
 
@@ -369,7 +369,7 @@ from your codebase, and generate code to:
 2. Run the generated SQL queries.
 3. Map the query result set to a type defined from the schema.
 
-## Relational
+## Relational {#relational}
 
 Ten years ago or so [NoSQL][nosql] took off. The movement promised two things:
 
@@ -400,7 +400,7 @@ want less schemas, I want more. I want stricter schemas than Postgres
 provides. I want strong and static types. I want queries I can typecheck
 statically, before executing them.
 
-## Post-SQL
+## Post-SQL {#postsql}
 
 SQL is bad, for two reasons:
 
@@ -492,7 +492,7 @@ This is easier said than done. The challenge has three stages:
 2. Make it feature-complete to Postgres' SQL.
 3. Compile it to efficient SQL.
 
-## Sum Types
+## Sum Types {#sum}
 
 We need sum types. [Java has sum types now][javasum]. Humanity cannot survive
 this century without sum types in relational databases.
@@ -549,12 +549,12 @@ CREATE TABLE person (
 Which is a hell to do by hand. Also a reason why SQL should have an implication
 logical statement.
 
-## Stored Procedures
+## Stored Procedures {#stored}
 
 Maybe someone can work out a way to do stored procedures that isn't a huge
 liability with regards to migration and deployment.
 
-# The Workflow
+# The Workflow {#workflow}
 
 Here's what using a post-ORM would look like. I've started a new project that
 needs database access, so I `cd` to its directory and run:
