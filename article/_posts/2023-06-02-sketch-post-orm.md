@@ -257,31 +257,55 @@ to pick up.
 
 ## Declarative Migrations
 
- - you write your migrations
-    - either as code, or as a declarative format like json
-    - but ideally not as SQL
-    - the problem with writing raw SQL is it's very hard to bring it up to the level where it can be manipulated programmatically
-    - you want to be able to handle migrations as first class objects, which means: parse them, compare them, serialize them, turn them to documentation
-- migrations declaratively specified
-  - written in json or something
-  - not in sql
-  - why?
-    - because sql is write-only
-    - it can't be parsed
-    - you can write a parser for ISO SQL, but that's not the language anyone uses
-    - everyone uses their db's dialect
-    - you can't write a parser for Postgres' SQL dialect since that's a moving target
-    - so there's an assymetry:
-      - it's hard to go from SQL to first-class data
-      - but it's _trivial_ to go from a first-class record to SQL
-    - therefore, rather than write SQL migrations and make a Herculean effort
-      to bring them up to the level of first-class objects, you should write
-      migrations using a standard format like JSON with a specific schema, and
-      a limited set of schema-manipulation actions you can take
-    - these may still use postgres (or whatever) specific features
-    - in fact the only way to "parse" a Postgres `ALTER TABLE` is to query the
-      schema from the database, run the statement, query the schema after, and
-      diff the schemas. this isn't great.
+Migrations should not be written in SQL but in some parseable, declarative
+format like JSON or YAML.
+
+Why? Because to typecheck queries, you need to know what the schema looks
+like. To know what the schema looks like, you can either query the live database
+(it's arguable whether this is good), or build a virtual model of that schema. I
+prefer static solutions.
+
+If your migrations are a bunch of YAML files like:
+
+```yaml
+comment: Add a `deleted_at` column for the user table.
+actions:
+  - type: add_column
+    table: users
+    column: deleted_at
+    type: "Timestamp"
+  - type: add_constraint
+    table: users
+    name: deleted_at_is_greater_than_joined_at
+    check: "(deleted_at is null) or (deleted_at > joined_at)"
+```
+
+Then you can parse those migrations into objects, and run those migration
+objects against a virtual schema, starting from the empty schema, to see what
+the resulting schema looks like.
+
+The problem with raw SQL is that it's impossible to parse SQL into objects that
+can be manipulated programmatically. SQL is, in a sense, a write-only language.
+
+You can write a parser for ISO SQL, but that's not the language you're
+using. You're using your RDBMS' dialect of SQL. You can write a parser for
+e.g. Postgres' dialect, but that's a moving target. Really the only way to parse
+a Postgres `ALTER TABLE` statement is:
+
+1. Query the schema from the live database.
+2. Run the statement.
+3. Query the schema again.
+4. Diff the old and new versions.
+
+Which is not ideal.
+
+So there's an assymetry, where it's trivial to go from first-class objects to
+SQL, but it's basically impossible to go from textual SQL to a first-class
+object.
+
+Therefore, rather than write migrations as SQL and make a Herculean effort to
+parse them, we should simply write some in some declarative format that's easy
+to parse.
 
 ## Database-Specific
 
