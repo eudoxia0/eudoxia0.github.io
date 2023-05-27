@@ -14,7 +14,10 @@ hand, or hand all database access over to some inscrutable "agile" ORM that will
 become a crippling liability in the 2-3y timescale.
 
 This post is about how I want to use databases, from the perspective of an
-application server developer---not a DBA or a BI guy or whatever.
+application server developer---not a DBA or a BI guy or whatever. In a past life
+I wrote a [Django-inspired ORM for Common Lisp][crane], which taught me a few
+things about the failure modes of ORMs specifically and software engineering
+generally, but mostly this is a reflection on my experience in industry.
 
 # Preamble: What is an ORM?
 
@@ -184,20 +187,6 @@ staring at logs until you find your performance problems.
 There is a missing middle: something with a bit more convenience and less
 boilerplate than writing all the query boilerplate by hand, but without the
 problems of ORMs that try to reinvent the whole universe and do so poorly.
-
-# Background
-
-- background
-  - what license do i have to speak of this?
-  - not much
-  - most of my experience is using the django orm
-  - in a past life i wrote my own orm inspired by the django orm
-    - for common lisp
-    - with automatic migrations using schema diffing
-    - i started a rewrite that I never ended
-  - not a dba
-  - don't know enough about raw sql
-  - but actively working on learning
 
 # The Sketch
 
