@@ -99,59 +99,91 @@ And SQL itself has problems(more on which later).
 
 ## Case: Use an ORM
 
-- pros:
-  - very quick to write
-  - looks like this: [pic of a django orm code]
-  - expedient
-- cons:
-  - queries can be badly optimized
-  - orms often emphasize portability, at the cost of specificity
-  - "just optimize your hot loops lol"
-    - let's be realistic
-    - how many of you are measuring your query performance?
-    - how many of you are actually going to be rewriting your queries to use pgsql prepared statements?
-    - the path of least resistance is to use the orm exclusively, so you have the orm's performance bedrock
-  - knowledge doesn't transfer
-    - knowing how to optimize a django orm query doesn't transfer to optimizing a raw sql query
-  - hard to go from one orm to another
-  - query smearing
-    - shotgun queries: database access is smeared across the application
-    - easy to take a queryset, pass it to another function that then does something else with it (which in turn triggers a query)
-    - very hard to statically determine where your database code is
-    - this in turn makes it hard to do things like: whenever we update a model X, run this job or whatever.
-      - "just use triggers" doesn't solve this because native rdbms features may not play well with the orm!
+Raw SQL is tedious. So people use ORMs because they're faster and more
+expedient: they let you hit the ground running and keep running for a very long
+time.
+
+In fact, for building a throwaway prototype, ORMs are a great choice. The
+problem is that modern software engineering has no discipline around throwing
+away throwaway prototypes, instead insisting on gradually-evolving them into
+production-quality codebases (which never happens).
+
+The problem with ORMs are:
+
+1. **Performance:** the generated SQL is often badly optimized.
+
+2. **Fundamental Performance:** sometimes it's not even badly optimized, it's
+   just that the best queries you can write are intrinsically slow and involve
+   eighteen joins because of the way the ORM has set up the schema. And because
+   you don't see the generated SQL, you don't notice this until it starts
+   showing up in timeouts and production error logs.
+
+   And people will tell you to just optimize the hot loops. But let's be
+   realistic: how many of us are measuring query performance uniformly? Thorough
+   instrumentation is a "nice to have" that doesn't fit neatly into a user
+   stories, so your incompetent PM will kick that down to the bottom of the
+   backlog. The path of least resistance here is to just use the ORM
+   exclusively, and that is what gets done in practice.
+
+3. **Pointless Portability:** ORMs often emphasize portability (across RDBMSs)
+   at the cost of performance and specificity, giving you a portable
+   lowest-common-denominator interface when what you usually want is database
+   access that leverages the RDBMS' feature set.
+
+4. **Knowledge Doesn't Transfer:** knowing how to write good queries in the
+   Django ORM doesn't tell you how to write good SQL by hand.
+
+5. While ORMs make it easier to swap e.g. Postgres for MySQL, which you will
+   never do, they make it hard to swap the ORM itself for something else.
+
+6. **Query Smearing:** ORMs make it easy to access the database. The problem is
+   they make it easy to access the database: queries are smeared across the
+   application. It's very hard to statically determine where, in your codebase,
+   the database access is actually happening, and there is no pressure to
+   centralize database access in a DAO for easy instrumenting and encapsulation.
+
+   Sometimes you want features along the lines of "when saving a model, do X",
+   this is hard to implement with many ORMs since updates could potentially
+   happen anywhere. "Just use database triggers lol" doesn't fix this, because
+   the whole problem with ORMs is they either don't play well with native RDBMS
+   features, or they make it painful to use them.
+
+So we get agility, at the cost of many other things.
 
 ## Comparison
 
-- you can think of this as fixed vs. marginal cost
-- raw sql:
-  - fixed cost is high
-    - you have to write a lot!
-  - marginal cost is low:
-    - adding a new query is a small fraction of your existing database code
-    - each query is a function
-      - therefore each query can be separately tested
-      - it's trivial to find where the query is made (find usages)
-      - and where it's tested (again, find usages)
-  - performance ceiling is high
-    - can go as high as you want
-- orm:
-  - fixed cost is low
-    - hit the ground running
-    - fast
-  - marginal cost is high
-    - years into a project
-    - schema changes rarely
-      - so automigate stuff is less of a boon
-    - performance problems
-    - n+1 queries everywhere
-    - where? i don't fucking know
-    - impossible to find queries statically
-    - have to instrument at runtime, which is rarely done uniformly, which means you just have to put tracing calls everywhere in the codebase until you find your perf problems in the logs
-    - with dynamic languages, often you find that once youve optimized everything, perf is still bad
-- there is a missing middle
-  - something more convenient than the jdbc example
-  - has less problems than orms
+When do you choose one over the other? You can think of it as being about fixed
+vs. marginal costs.
+
+With raw SQL, the fixed cost is high: you have to write a lot! But the actual
+time spent writing boilerplate is not much. It just feels like a lot because
+it's tedious. And it's the kind of tedium that LLMs can handle
+wonderfully. Migrations can also be a problem if you don't have something like
+[Liquibase].
+
+The marginal cost is low. Each new query is an infinitesimal fraction of the
+total database access code. Every query is a function, so it can be tested
+independently. You can easily find where that function is being called, and
+where the tests for it are, by saerching for usages or even simply searching the
+function name. Database access is easy to centralize and instrument.
+
+The performance ceiling can be as high as you want: within the query function
+you can refactor and optimize the query endlessly.
+
+With ORMs the fixed cost is low: you hit the ground running fast. But the
+marginal cost is high.
+
+A few years into the project, in the maintenance phase, the schema changes
+rarely, so the schema management and auto-magic-migration tools are less
+useful. You have omnipresent performance problems. There are n+1 queries
+everywhere, but where specifically? You don't know. It's impossible to
+statically determine where a specific query is happening. You have to instrument
+at runtime, which is rarely done rigorously or uniformly, tracing every call and
+staring at logs until you find your performance problems.
+
+There is a missing middle: something with a bit more convenience and less
+boilerplate than writing all the query boilerplate by hand, but without the
+problems of ORMs that try to reinvent the whole universe and do so poorly.
 
 # Background
 
