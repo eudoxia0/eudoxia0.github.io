@@ -236,20 +236,6 @@ This section describes how I want to use databases. In brief:
    composable, 2) statically typed and with 3) a sane syntax.
 7. I want sum types.
 
-- how i want a database interface to be in the late 2020's
-- sketch in brief
-  - i don't want to write anything uninteresting
-    - binding paramters to prepared statements
-    - pulling stuff from ResultSets into domain objects
-  - migrations first
-  - specific to the database
-  - language-portable
-    - same interface generates code for
-      - a microservice in rust
-      - whatever else
-  - i want a language that's better than sql. specifically, i want a statically typed language with a sane composable syntax
-  - i want sum types
-
 ## Migrations First
 
 - "just write raw sql lol" isn't practical advice much of the time
