@@ -1,0 +1,108 @@
+---
+title: Sketch of a Post-ORM
+---
+
+- intro
+  - been doing database work
+  - it's frustrating
+  - surely we should have solved this
+- state of database access
+  - bimodal
+    - case 1: use raw sql
+      - pros:
+        - can optimize queries endlessly
+        - can use the power-user features of your specific rdbms
+        - easy to know where queries are happening
+          - can centralize query access in specific modules
+            - which lets you optimize those modules separately, implement pre and post-save features
+      - cons:
+        - it looks like this [pic of java querying example]
+        - type checking disappears at the SQL boundary
+        - SQL has problems (more on this later)
+    - case 2: use an orm
+      - pros:
+        - very quick to write
+        - looks like this: [pic of a django orm code]
+        - expedient
+      - cons:
+        - queries can be badly optimized
+        - orms often emphasize portability, at the cost of specificity
+        - "just optimize your hot loops lol"
+          - let's be realistic
+          - how many of you are measuring your query performance?
+          - how many of you are actually going to be rewriting your queries to use pgsql prepared statements?
+          - the path of least resistance is to use the orm exclusively, so you have the orm's performance bedrock
+        - knowledge doesn't transfer
+          - knowing how to optimize a django orm query doesn't transfer to optimizing a raw sql query
+        - hard to go from one orm to another
+        - query smearing
+          - shotgun queries: database access is smeared across the application
+          - easy to take a queryset, pass it to another function that then does something else with it (which in turn triggers a query)
+          - very hard to statically determine where your database code is
+          - this in turn makes it hard to do things like: whenever we update a model X, run this job or whatever.
+            - "just use triggers" doesn't solve this because native rdbms features may not play well with the orm!
+  - there is a missing middle
+    - something more convenient than the jdbc example
+    - has less problems than orms
+- sketch
+  - migration-first
+    - "just write raw sql lol" isn't practical advice much of the time
+    - doesn't solve the problem of migrations
+    - you can either
+      - use liquidbase
+      - roll your own migration architecture
+    - orms are schema first
+      - write the schema
+      - generate migrations by diffing against the last known good version of the schema
+      - convenient
+        - do what i mean
+        - i give you the schema i want, you figure out how to get there
+      - problem is it underemphasizes migrations
+      - i'm not sure why, i dont think i can argue this rigorously, but i think migrations should come first
+      - you write your migrations
+        - either as code, or as a declarative format like json
+        - but ideally not as SQL
+        - the problem with writing raw SQL is it's very hard to bring it up to the level where it can be manipulated programmatically
+        - you want to be able to handle migrations as first class objects, which means: parse them, compare them, serialize them, turn them to documentation
+      - then a tool runs those migrations virtually, starting with an empty schema, applying one migration at a time, and dumps the resulting schema to a file where it can be visualized
+      - also can generate schema docs
+      - this is similar to how code-first graphql libraries let you define your graphql schema as code and them dump a schema.gql file that the frontend can pick up
+  - unportable for databases
+    - just use postgres
+    - shamelessly exploit native features
+    - switching from one db to another rarely happens
+    - sqlite and mysql/postgres are completely different universes
+  - portable across languages
+    - like openapi
+    - your migrations are json
+    - your queries are written in some separate language
+    - code generator creates bindings to whatever language you're using to
+      - apply the migrations
+      - run those queries with type checking
+  - post-sql
+    - sql is bad
+      - syntax is highly irregular
+        - hard to parse
+        - hard to learn
+        - hard to remember
+        - select statement grammar has like 7 holes for subexpressions
+        - you can argue back and forth about whether this is or isn't good or beginner-friendly
+        - i'm explicitly ignoring the point of view of beginners programmers or business analysts
+        - my point of view is: programmers who want to access a database
+        - they want type checking and they want a sane, manipulable, decently functional syntax
+        - they want neither anti-intellectal just git er done dynamic typing tarpits or trans-dimensional monad optic stacks
+      - type checking is absent
+        - matters less if youre using the database interactiely, like a business analyst
+        - again, irrelevant: as long as the underlying database is SQL, you can use SQL if you want
+        - but
+        - from the point of view of an _application_, your queries are fixed, it's just the parameters that have different values (but usually fixed types)
+      - i want a query language with
+        - sane syntax
+        - type checking
+        - compiles to Postgres SQL
+      - this is easier said than done
+      - the challenge has three components
+        - design a sane query language with sane syntax and type checking
+        - make it feature-complete to native postgres
+        - make it compile to efficient sql
+- the complete sketch
