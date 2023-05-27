@@ -9,6 +9,8 @@ in pkgs.mkShell {
     python-with-my-packages
     pkgs.ruff
     pkgs.graphviz
+    pkgs.sass
+    pkgs.pandoc
   ];
   shellHook = ''
     PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
