@@ -1,6 +1,7 @@
 ---
 title: Sketch of a Post-ORM
 summary: A better way to interact with databases.
+card: sketch-post-orm.jpg
 ---
 
 - intro
