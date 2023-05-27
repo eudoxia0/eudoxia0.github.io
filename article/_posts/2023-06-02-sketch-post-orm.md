@@ -1,5 +1,6 @@
 ---
 title: Sketch of a Post-ORM
+summary: A better way to interact with databases.
 ---
 
 - intro
@@ -84,7 +85,7 @@ title: Sketch of a Post-ORM
       - shamelessly exploit native features
       - switching from one db to another rarely happens
   - portable across languages
-    - like openapi
+    - like openapi spec
     - your migrations are json
     - your queries are written in some separate language
     - code generator creates bindings to whatever language you're using to
