@@ -100,7 +100,7 @@ across the entire codebase.
 
 [dao]: https://en.wikipedia.org/wiki/Data_access_object
 
-# Toolingp
+# Tooling
 
 **Summary:** bad tooling goes unused but is hard to displace, lowering economic
 productivity.
