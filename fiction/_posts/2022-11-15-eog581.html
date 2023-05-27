@@ -2,6 +2,32 @@
 title: The Epiphany of Gliese 581
 summary: A linguist, a chemist, and a comparative psychologist search the ruins of a dead superintelligence.
 card: eog581/eog581.png
+acclaim:
+#  - quote: Maybe a bit derivative of Vinge, but I enjoyed it and the references.
+#    name: Gwern
+#    url: "https://twitter.com/gwern/status/1592739931390345217"
+  - quote: strange and new
+    name: whenwerewe
+    url: "https://www.reddit.com/r/printSF/comments/11o81gj/comment/jbzyjt6/?context=999"
+  - quote: startlingly excellent
+    name: Anthony
+  - quote: strong vibes of [Greg Egan], but in the form of more poetry and wistfulness
+    name: Brandon
+  - quote: one of the best scifi novellas I've read in a while
+    name: Matt Parlmer
+    url: "https://twitter.com/mattparlmer/status/1595505438262497283"
+  - quote: This is excellent. The story is beautiful, the world feels real, and your style of prose is scratches an itch I didn't know I had.
+    name: Adam
+    url: "https://twitter.com/adamthesherwood/status/1609216850025381888"
+#  - quote: OA-Borges synthesis
+#    name: eschatonist
+#    url: https://twitter.com/eschatonist/status/1593049611853520896
+  - quote: the best thing I've read in a while
+    name: "@ch1n3du3"
+    url: "https://twitter.com/ch1n3du3/status/1597202910966075394"
+  - quote: I enjoyed this immensely
+    name: "@VitaeKate"
+    url: "https://twitter.com/VitaeKate/status/1611058242330791936"
 ---
 
 <p>
@@ -117,3 +143,20 @@ card: eog581/eog581.png
     </li>
   </ul>
 </nav>
+
+<h1>
+  Acclaim
+</h1>
+
+{% for entry in page.acclaim %}
+
+<p style="text-align: justify;">
+  “{{ entry.quote}}”
+  {% if entry.url %}
+    &mdash; <a href="{{ entry.url }}">{{ entry.name }}</a>
+  {% else %}
+    &mdash; {{ entry.name }}
+  {% endif %}
+</p>
+
+{% endfor %}
