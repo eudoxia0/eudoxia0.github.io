@@ -333,14 +333,63 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
 
 ## Sum Types
 
-- we need sum types
-- java has sum types now
-- the world needs sum types
-- humanity cannot survive this century without sum types
+We need sum types. [Java has sum types now][javasum]. Humanity cannot survive
+this century without sum types in relational databases.
+
+Typically this is implemented in userspace (in SQL), in one of two ways:
+
+1. Having a whole slew of nullable columns, with complicated constraints.
+2. Using multiple tables with foreign keys.
+
+Both of these are a problem. But with a typed query language the latter can be
+implemented very simply. A schema like:
+
+```rust
+enum PersonKind {
+  Student;
+  Teacher;
+}
+
+table Person {
+  key id: BigSerial;
+  name: String;
+  case kind: PersonKind {
+    when Student {
+      grade: String;
+    }
+    when Teacher {
+      subject: String;
+    }
+  };
+};
+```
+
+Can be compiled to:
+
+```sql
+CREATE TYPE person_kind AS ENUM ('Student', 'Teacher');
+
+CREATE TABLE person (
+  id bigserial primary key,
+  name text not null,
+  kind person_kind not null,
+  student__grade text,
+  teacher__subject text,
+
+  -- Student implies grade is non-null, subject is null.
+  CHECK ((kind <> 'student') or ((student__grade <> null) and (teacher__subject = null)));
+  -- Teacher implies grade is null, subject is non-null.
+  CHECK ((kind <> 'teacher') or ((student__grade = null) and (teacher__subject <> null)));
+);
+```
+
+Which is a hell to do by hand. Also a reason why SQL should have an implication
+logical statement.
 
 ## Stored Procedures
 
-- maybe we can use stored procedures
+Maybe someone can work out a way to do stored procedures that isn't a huge
+liability with regards to migration and deployment.
 
 # The Workflow
 
