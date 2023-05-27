@@ -1,6 +1,9 @@
 ---
 title: Language Pragmatics Engineering
 summary: On best practices and gradient descent.
+card: language-pragmatics.jpg
+card_source: |
+    “Mechanism in amber, photograph, 1997, from the British Museum”, DALL-E, June 2022.
 ---
 
 Summary:
@@ -97,7 +100,7 @@ across the entire codebase.
 
 [dao]: https://en.wikipedia.org/wiki/Data_access_object
 
-# Tooling
+# Toolingp
 
 **Summary:** bad tooling goes unused but is hard to displace, lowering economic
 productivity.
