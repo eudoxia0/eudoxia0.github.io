@@ -281,7 +281,7 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
   - a query like [example] gets compiled to code like [example]
   - a struct is automatically defined for the return type of each query
 
-## Post-SQL
+## Relational
 
 - not no-sql but post-sql
   - why nosql?
@@ -295,6 +295,9 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
     - none of these coping morons have data at the scale where le schemaless le column store makes sense
     - "i need a mongodb cluster for my 4TiB postgres database"
     - you need urgent psychiatric help
+
+## Post-SQL
+
 - sql is bad
   - syntax is highly irregular
     - hard to parse
