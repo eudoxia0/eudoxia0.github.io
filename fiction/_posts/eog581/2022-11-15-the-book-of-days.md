@@ -265,7 +265,7 @@ Timon ran down the passage and settled into a rhythm of long, powerful leaps. Th
 
 And he thought this was the first truly physical thing he'd done in the entire expedition, reflecting off the glass floor like light in fibre, he felt that he existed.
 
-He tried to brake, but couldn't find traction with the smooth grand in the low gravity. Past the computer museum he skidded the floor down the passage with the doors, and stopped just before a wall of bulk diamond that had come down at the entrance of the amber room.
+He tried to brake, but couldn't find traction with the smooth ground in the low gravity. Past the computer museum he skidded the floor down the passage with the doors, and stopped just before a wall of bulk diamond that had come down at the entrance of the amber room.
 
 Through it he saw Attila, sitting crosslegged on the floor facing the open panel of the VAX. Attila had stuck an optical cable in a port there, and he held the other end in his hand, his fingers held it reverently. An image of a golden jackal walked circles around him, speaking its aphasic language.
 
