@@ -284,22 +284,36 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
 
 ## Database-Specific
 
-- many orms and db access libraries advertise portability as a feature
-- in reality: sql is never portable
-  - sqlite vs. everything else is completely differnet universes
-  - sqlite aside, within big iron (pg, mysql, microsoft, oracle) the differences are huge
-    - sql has different syntax
-    - different types
-    - differnet features
-    - different perf characteristics
-  - the choice of postgres vs. mysql is not like ext4 vs zfs.
-    - with that choice, there exists a semantic level above which the differences disappear. dd and du work the same.
-    - it's more like choosing between Python and C.
-- abandon the whole concept of database portability
-  - just use postgres/mysql/whatever
-    - build the tool for what you're gonna be using it for
-  - shamelessly exploit native features
-  - switching from one db to another rarely happens
+Many ORMs and database access tools advertise portability as a feature. For
+certain tools (e.g. [DBeaver][dbeaver] or Java's `java.sql`) this makes
+sense. For more involved tools, portability is an anti-feature.
+
+The problem is that SQL, in practice, is never portable.
+
+For example, SQLite vs. everything else is a completely different
+universe. Until a recent version, SQLite's `INSERT` statement didn't support a
+`RETURNING` clause.
+
+But even putting SQLite aside, even within the big iron databases (Postgres,
+MySQL and the various proprietary ones) the differences are immense. The set of
+data types is different. The performance characteristics are different. Even the
+SQL itself has a different syntax.
+
+The choice of database is unlike, say, the choice of filesystem. If your
+computer uses `ext4` or `zfs`, there exists a functional level above which the
+differences disappear. `ls` works the same regardless. `fopen` works the
+same. As long as you're not using the more advanced features, you can swap one
+filesystem for another without caring at all which one it is.
+
+The choice of Postgres vs. MySQL is more like the choice of C and C++: two
+programming languages that are syntactically and semantically kind of similar,
+such that people often write "C/C++", but which are in completely different
+universes.
+
+And the problem with portability is it comes at the cost of specificity. I don't
+want a database access tool, I want a Postgres access tool. I want it to expose
+Postgres' power user features as first-class features, not remote extensions
+enabled at my own peril.
 
 ## Portable Across Languages
 
