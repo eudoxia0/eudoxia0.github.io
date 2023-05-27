@@ -85,8 +85,40 @@ So why do people use raw SQL?
 
 And why wouldn't people write raw SQL? The main problem is it looks like this:
 
-```java
-TODO
+```python
+def get_users_in_group(
+    db: Db,
+    group_id: GroupId,
+    is_active: bool = True,
+    limit: int = 100
+) -> list[User]:
+    query: str = """
+        SELECT
+            id,
+            email,
+            display_name,
+            joined_at,
+            deleted_at
+        FROM
+            users
+        WHERE
+            group_id = $1
+            AND is_active = $2
+        LIMIT $3;
+    """
+    q: Query = db.prepare(query).bind([group_id.to_uuid(), is_active])
+    rs: ResultSet = q.fetch_all()
+    users: list[User] = []
+    for row in rs:
+        user: User = User(
+            id=UserId.from_db(row["id"]),
+            email=Email.from_db(row["email"]),
+            display_name=DisplayName.from_db(row["display_name"]),
+            joined_at=parse_db_datetime_(row["joined_at"]),
+            deleted_at=parse_db_datetime_or_null(row["deleted_at"]),
+        )
+        users.add(user)
+    return users
 ```
 
 The next problem is type-checking disappears at the query boundary. When you
