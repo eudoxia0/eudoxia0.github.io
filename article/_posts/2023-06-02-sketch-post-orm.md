@@ -315,18 +315,31 @@ problems of ORMs that try to reinvent the whole universe and do so poorly.
 
 ## Relational
 
-- not no-sql but post-sql
-  - why nosql?
-    - schemaless for agility
-    - schemaless for performance
-    - there is no such thing as schemaless
-    - there is only an implicit schema
-    - schemas are agile
-    - dynamic types are not
-    - again: slow is fast
-    - none of these coping morons have data at the scale where le schemaless le column store makes sense
-    - "i need a mongodb cluster for my 4TiB postgres database"
-    - you need urgent psychiatric help
+Ten years ago or so [NoSQL][nosql] took off. The movement promised two things:
+
+1. Schemaless databases for agility. See, for example, this article in the
+   MongoDB blog from 2009: [Databases Should be Dynamically Typed][dynamicdb].
+
+2. Schemaless databases for performance.
+
+[dynamicdb]: https://www.mongodb.com/blog/post/databases-should-be-dynamically-typed
+
+Lots of people whose data would fit in SQLite and whose workloads could run off
+an Apple Watch switched to MongoDB and similar.
+
+Gradually reality sets in.
+
+There is no such thing as a schemaless database, only a database with an
+implicit schema, a schema defined piecemeal at a thousand different points in
+the codebase. Types are good. Dynamic typing is bad. Slow is fast. You are not
+Google. Most everyone isn't [the LHC][lhc] and doesn't need a non-relational
+key-value or blob store for their core With regards to agility.
+
+[lhc]: https://www.mongodb.com/blog/post/holy-large-hadron-collider-batman
+
+ACID guarantees are _extremely_ valuable. Explicit schemas are great. I want
+more of them: I want stricter schemas than Postgres provides. I want strong and
+static types. I want queries I can typecheck statically, before executing them.
 
 ## Post-SQL
 
