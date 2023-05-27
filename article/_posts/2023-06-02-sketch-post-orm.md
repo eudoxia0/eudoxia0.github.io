@@ -135,6 +135,22 @@ card_source: |
 
 # The Sketch
 
+- how i want to use databases from code
+- how i want a database interface to be in the late 2020's
+- sketch in brief
+  - i don't want to write anything uninteresting
+    - binding paramters to prepared statements
+    - pulling stuff from ResultSets into domain objects
+  - migrations first
+  - migrations declaratively specified
+  - specific to the database
+  - language-portable
+    - same interface generates code for
+      - a microservice in rust
+      - whatever else
+  - i want a language that's better than sql. specifically, i want a statically typed language with a sane composable syntax
+  - i want sum types
+
 ## Migrations First
 
 - "just write raw sql lol" isn't practical advice much of the time
@@ -230,7 +246,7 @@ card_source: |
     - make it feature-complete to native postgres
     - make it compile to efficient sql
 
-## Union Types
+## Sum Types
 
 - we need sum types
 - java has sum types now
