@@ -146,7 +146,8 @@ card_source: |
         - with that choice, there exists a semantic level above which the differences disappear. dd and du work the same.
         - it's more like choosing between Python and C.
     - abandon the whole concept of database portability
-      - just use postgres
+      - just use postgres/mysql/whatever
+        - build the tool for what you're gonna be using it for
       - shamelessly exploit native features
       - switching from one db to another rarely happens
   - portable across languages
@@ -156,7 +157,10 @@ card_source: |
     - code generator creates bindings to whatever language you're using to
       - apply the migrations
       - run those queries with type checking
+      - a query like [example] gets compiled to code like [example]
+      - a struct is automatically defined for the return type of each query
   - post-sql
+    - not no-sql but post-sql
     - sql is bad
       - syntax is highly irregular
         - hard to parse
@@ -190,3 +194,14 @@ card_source: |
   - maybe we can use stored procedures
 - the complete sketch
   - walkthrough of how it would work
+  - start a project
+  - initial migration
+  - make a table
+  - add some changes
+  - write a query
+  - run the codegen
+    - functions that call the queries
+    - types for the return types
+    - helper function for tests, that initialize a separate database for each test, and run the whole migration history against it
+  - linter
+    - warn: adding a non-null column without a default is a problem
