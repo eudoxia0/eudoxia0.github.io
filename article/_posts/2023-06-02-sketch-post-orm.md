@@ -8,6 +8,8 @@ card_source: |
     [cm]: https://en.wikipedia.org/wiki/Connection_Machine
 ---
 
+# Intro
+
 - intro
   - been doing database work
   - it's frustrating
@@ -17,6 +19,9 @@ card_source: |
     - writing code that uses a database within an application server
     - not a dba
     - not a business analyst
+
+# What is an ORM?
+
 - orm means object relational mapper
   - but let's not get caught up by syntax
   - by orm i mean
@@ -29,6 +34,9 @@ card_source: |
     - typically the goal is to have a succint (if not simple) way to interact with the database
     - in other words, something is an orm if it lets you write code that looks like this: [example]
     - no oop needed
+
+# The State of the Art
+
 - state of database access
   - bimodal
     - case 1: use raw sql
@@ -104,6 +112,9 @@ card_source: |
   - there is a missing middle
     - something more convenient than the jdbc example
     - has less problems than orms
+
+# Background
+
 - background
   - what license do i have to speak of this?
   - not much
@@ -115,6 +126,9 @@ card_source: |
   - not a dba
   - don't know enough about raw sql
   - but actively working on learning
+
+# The Sketch
+
 - sketch
   - migration-first
     - "just write raw sql lol" isn't practical advice much of the time
@@ -166,6 +180,17 @@ card_source: |
       - a struct is automatically defined for the return type of each query
   - post-sql
     - not no-sql but post-sql
+      - why nosql?
+        - schemaless for agility
+        - schemaless for performance
+        - there is no such thing as schemaless
+        - there is only an implicit schema
+        - schemas are agile
+        - dynamic types are not
+        - again: slow is fast
+        - none of these coping morons have data at the scale where le schemaless le column store makes sense
+        - "i need a mongodb cluster for my 4TiB postgres database"
+        - you need urgent psychiatric help
     - sql is bad
       - syntax is highly irregular
         - hard to parse
@@ -197,6 +222,9 @@ card_source: |
     - the world needs sum types
     - humanity cannot survive this century without sum types
   - maybe we can use stored procedures
+
+# The Workflow
+
 - the complete sketch
   - walkthrough of how it would work
   - start a project
