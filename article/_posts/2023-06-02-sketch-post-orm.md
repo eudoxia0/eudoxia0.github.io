@@ -193,6 +193,9 @@ And SQL itself has problems(more on which later).
         migrations using a standard format like JSON with a specific schema, and
         a limited set of schema-manipulation actions you can take
       - these may still use postgres (or whatever) specific features
+      - in fact the only way to "parse" a Postgres `ALTER TABLE` is to query the
+        schema from the database, run the statement, query the schema after, and
+        diff the schemas. this isn't great.
   - specific to the database
   - language-portable
     - same interface generates code for
