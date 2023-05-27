@@ -68,10 +68,21 @@ title: Sketch of a Post-ORM
       - also can generate schema docs
       - this is similar to how code-first graphql libraries let you define your graphql schema as code and them dump a schema.gql file that the frontend can pick up
   - unportable for databases
-    - just use postgres
-    - shamelessly exploit native features
-    - switching from one db to another rarely happens
-    - sqlite and mysql/postgres are completely different universes
+    - many orms and db access libraries advertise portability as a feature
+    - in reality: sql is never portable
+      - sqlite vs. everything else is completely differnet universes
+      - sqlite aside, within big iron (pg, mysql, microsoft, oracle) the differences are huge
+        - sql has different syntax
+        - different types
+        - differnet features
+        - different perf characteristics
+      - the choice of postgres vs. mysql is not like ext4 vs zfs.
+        - with that choice, there exists a semantic level above which the differences disappear. dd and du work the same.
+        - it's more like choosing between Python and C.
+    - abandon the whole concept of database portability
+      - just use postgres
+      - shamelessly exploit native features
+      - switching from one db to another rarely happens
   - portable across languages
     - like openapi
     - your migrations are json
