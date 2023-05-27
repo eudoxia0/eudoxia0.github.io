@@ -19,6 +19,8 @@ I wrote a [Django-inspired ORM for Common Lisp][crane], which taught me a few
 things about the failure modes of ORMs specifically and software engineering
 generally, but mostly this is a reflection on my experience in industry.
 
+[crane]: https://github.com/eudoxia0/crane
+
 # Preamble: What is an ORM?
 
 By ORM I mean a tool that lets you write code that looks like this:
@@ -63,12 +65,16 @@ mismatch"][impedance] or that they're ["the Vietnam of computer
 science"][vietnam] or whatever. "Everyone" knows you should write raw SQL
 instead.
 
+[impedance]: https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch
+[vietnam]: https://www.odbms.org/wp-content/uploads/2013/11/031.01-Neward-The-Vietnam-of-Computer-Science-June-2006.pdf
+
 But in most languages going from an ORM to raw SQL is like going from
 [OCaml][ocaml] top Java: a three-line type definition in OCaml becomes four Java
 files, each of which is tens of lines of code written in quadruplicate, with
 [IntelliJ][ij]-generated boilerplate.
 
 [ocaml]: http://localhost:4000/article/two-years-ocaml
+[ij]: https://www.jetbrains.com/idea/
 
 So why do people use raw SQL?
 
@@ -82,6 +88,8 @@ So why do people use raw SQL?
    and its implementation, which allows it to be optimized separately. You have
    a central place to add features like pre or post-save checks, or database
    access logging.
+
+[dao]: https://en.wikipedia.org/wiki/Data_access_object
 
 And why wouldn't people write raw SQL? The main problem is it looks like this:
 
@@ -125,6 +133,8 @@ The next problem is type-checking disappears at the query boundary. When you
 pull from a database, you get a dynamically-typed [result set][rs]. Parsing that
 into your domain objects is boilerplate. If you change the query, but not the
 code around it, you get errors the compiler won't catch.
+
+[rs]: https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html
 
 Writing raw SQL is like writing bindings to a foreign C library, except the
 types are slightly richer and you're defining said library inline, inside
@@ -195,7 +205,9 @@ With raw SQL, the fixed cost is high: you have to write a lot! But the actual
 time spent writing boilerplate is not much. It just feels like a lot because
 it's tedious. And it's the kind of tedium that LLMs can handle
 wonderfully. Migrations can also be a problem if you don't have something like
-[Liquibase].
+[Liquibase][lq].
+
+[lq]: https://www.liquibase.org/
 
 The marginal cost is low. Each new query is an infinitesimal fraction of the
 total database access code. Every query is a function, so it can be tested
@@ -313,6 +325,8 @@ Many ORMs and database access tools advertise portability as a feature. For
 certain tools (e.g. [DBeaver][dbeaver] or Java's `java.sql`) this makes
 sense. For more involved tools, portability is an anti-feature.
 
+[dbeaver]: https://dbeaver.io/
+
 The problem is that SQL, in practice, is never portable.
 
 For example, SQLite vs. everything else is a completely different
@@ -358,6 +372,8 @@ from your codebase, and generate code to:
 ## Relational
 
 Ten years ago or so [NoSQL][nosql] took off. The movement promised two things:
+
+[nosql]: https://en.wikipedia.org/wiki/NoSQL
 
 1. Schemaless databases for agility. See, for example, this article in the
    MongoDB blog from 2009: [Databases Should be Dynamically Typed][dynamicdb].
@@ -480,6 +496,8 @@ This is easier said than done. The challenge has three stages:
 
 We need sum types. [Java has sum types now][javasum]. Humanity cannot survive
 this century without sum types in relational databases.
+
+[javasum]: https://openjdk.org/jeps/409
 
 Typically this is implemented in userspace (in SQL), in one of two ways:
 
