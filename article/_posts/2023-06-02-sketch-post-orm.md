@@ -136,8 +136,9 @@ The problem with ORMs are:
 4. **Knowledge Doesn't Transfer:** knowing how to write good queries in the
    Django ORM doesn't tell you how to write good SQL by hand.
 
-5. While ORMs make it easier to swap e.g. Postgres for MySQL, which you will
-   never do, they make it hard to swap the ORM itself for something else.
+5. **Sunk Costs:** While ORMs make it easier to swap e.g. Postgres for MySQL,
+   which you will never do, they make it hard to swap the ORM itself for
+   something else.
 
 6. **Query Smearing:** ORMs make it easy to access the database. The problem is
    they make it easy to access the database: queries are smeared across the
