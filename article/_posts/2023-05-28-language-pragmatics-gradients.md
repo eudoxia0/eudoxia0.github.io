@@ -65,3 +65,13 @@ database transaction. There is no requirement that database access be
 centralized---in a [DAO][dao] class, for example---and so because of the
 pressures of expedience database queries spread, one temporary hack at a time,
 across the entire codebase.
+
+# Tooling
+
+In C and C++ there are many build systems and package managers, but none is the
+obvious [focal point][fp] in the way [cargo][cargo] is for [Rust][rust]. So
+people vendor their dependencies, sometimes downloading them by hand. Smaller
+libraries are often advertised as being [header-only][header], i.e. requiring
+less build system overhead to integrate into your projects. This discourages
+dependencies, which is basically the same as discouraging the division of
+labour, with obvious costs.
