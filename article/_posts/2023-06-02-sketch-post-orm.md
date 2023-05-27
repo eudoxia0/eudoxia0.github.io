@@ -681,6 +681,7 @@ Alongside code to run the migrations, and maybe linting code and such.
 
 # Prior Art
 
-[PRQL][prql] is the closest thing that exists today to the query language I want to use.
+[PRQL][prql] is the closest thing that exists today to the query language I want
+to use.
 
 [prql]: https://prql-lang.org/
