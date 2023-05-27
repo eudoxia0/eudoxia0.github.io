@@ -12,6 +12,18 @@ card_source: |
   - been doing database work
   - it's frustrating
   - surely we should have solved this
+- orm means object relational mapper
+  - but let's not get caught up by syntax
+  - by orm i mean
+    - a library that takes over database interaction
+    - where you can design "languag-first" rather than sql first
+    - you write classes (or records, depending on the language youre using)
+    - and sprinkle annotations maybe
+    - and you get auto-generated schemas and sql
+    - the thing manages creating and alternating schemas and making queries
+    - typically the goal is to have a succint (if not simple) way to interact with the database
+    - in other words, something is an orm if it lets you write code that looks like this: [example]
+    - no oop needed
 - state of database access
   - bimodal
     - case 1: use raw sql
@@ -36,18 +48,6 @@ card_source: |
         - type checking disappears at the SQL boundary
         - SQL has problems (more on this later)
     - case 2: use an orm
-      - orm means object relational mapper
-        - but let's not get caught up by syntax
-        - by orm i mean
-          - a library that takes over database interaction
-          - where you can design "languag-first" rather than sql first
-          - you write classes (or records, depending on the language youre using)
-          - and sprinkle annotations maybe
-          - and you get auto-generated schemas and sql
-          - the thing manages creating and alternating schemas and making queries
-          - typically the goal is to have a succint (if not simple) way to interact with the database
-          - in other words, something is an orm if it lets you write code that looks like this: [example]
-          - no oop needed
       - pros:
         - very quick to write
         - looks like this: [pic of a django orm code]
