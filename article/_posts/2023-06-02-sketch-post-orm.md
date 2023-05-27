@@ -474,16 +474,131 @@ liability with regards to migration and deployment.
 
 # The Workflow
 
-- the complete sketch
-  - walkthrough of how it would work
-  - start a project
-  - initial migration
-  - make a table
-  - add some changes
-  - write a query
-  - run the codegen
-    - functions that call the queries
-    - types for the return types
-    - helper function for tests, that initialize a separate database for each test, and run the whole migration history against it
-  - linter
-    - warn: adding a non-null column without a default is a problem
+Here's what using a post-ORM would look like. I've started a new project that
+needs database access, so I `cd` to its directory and run:
+
+```bash
+$ postorm init
+```
+
+And this creates some directories:
+
+```
+postorm/
+    config.json
+    migrations/
+    queries/
+```
+
+Then I create my first migration:
+
+```bash
+$ postorm migrations new
+```
+
+This brings up my editor on a temporary YAML file, and I write:
+
+```yaml
+comment: Initial migration.
+actions:
+  - type: create_table
+    name: users
+    columns:
+      - name: id
+        type: bigserial
+        pk: true
+      - name: email
+        type: string
+        unique: true
+      # etc.
+```
+
+I save the file and quit and this is saved to.
+
+```
+postorm/migrations/2029-01-23-06-51-47-initial.yaml
+```
+
+Migrations (sans comments) are hashed to prevent editing them after the fact. Then:
+
+```bash
+$ postorm queries new getUsersByGroup
+```
+
+This creates a file `postorm/queries/getUsersByGroup.fql` (where `fql` stands
+for "future query language"), and I open it and write:
+
+```
+query findUsersInCohort(cohort_id: Cohort, limit: Nat = 100): Stream[User] =
+  select(users)
+  | filter(active = true)
+  | filter(%.cohort_id = cohort_id)
+  | project id, email, display_name
+  | sort joined_at
+  | reverse
+  | take limit
+```
+
+Which compiles to something along the lines of:
+
+```sql
+SELECT
+    id, email, display_name
+FROM
+    users AS u
+WHERE
+    u.active = true
+    AND u.cohort_id = $1
+ORDER BY
+    joined_at DESC
+LIMIT
+    $2
+```
+
+Then `postorm generate python` generates Python bindings to the above, along the lines of:
+
+```python
+@dataclass(frozen=True)
+class UserIdEmailDisplayName:
+    id: UserId
+    email: Email
+    display_name: DisplayName
+
+def get_users_in_cohort(
+    db: Db,
+    cohort_id: CohortId,
+    limit: int = 100
+) -> Stream[UserIdEmailDisplayName]:
+    query: str = """
+        SELECT
+            id, email, display_name
+        FROM
+            users AS u
+        WHERE
+            u.active = true
+            AND u.cohort_id = $1
+        ORDER BY
+            joined_at DESC
+        LIMIT
+            $2
+    """
+    q: Query = db.prepare(query).bind([cohort_id.to_int(), limit])
+    rs: ResultSet = q.fetch_all()
+
+    def _map_row(row: Row) -> User:
+        return UserIdEmailDisplayName(
+            id=UserId.from_db(row["id"]),
+            email=Email.from_db(row["email"]),
+            display_name=DisplayName.from_db(row["display_name"]),
+        )
+
+    return rs.map(_map_row).stream()
+```
+
+Alongside code to run the migrations, and maybe linting code and such.
+
+# Prior Art
+
+[PRQL][prql] is the closest thing that exists today to the query language I want to use.
+
+[prql]: https://prql-lang.org/
