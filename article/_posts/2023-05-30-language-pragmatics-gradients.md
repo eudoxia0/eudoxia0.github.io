@@ -23,6 +23,8 @@ gradient descent.
 
 # Types
 
+**Summary:** make types easier to define.
+
 One fundamental principle of language pragmatics: the code that gets written is
 the code that's easier to write. Consider Java and Haskell.
 
@@ -57,6 +59,9 @@ this would be called an antipattern.
 [anemia]: https://martinfowler.com/bliki/AnemicDomainModel.html
 
 # Shotgun I/O
+
+**Summary:** ban "quick fixes" at the level of language semantics, or make them
+hard to write.
 
 By analogy to [shotgun parsers][shotgun], shotgun IO is when effectful code is
 smeared all over the codebase.
@@ -93,6 +98,9 @@ across the entire codebase.
 [dao]: https://en.wikipedia.org/wiki/Data_access_object
 
 # Tooling
+
+**Summary:** bad tooling goes unused but is hard to displace, lowering economic
+productivity.
 
 In C and C++ there are many build systems and package managers, but none is the
 obvious [focal point][fp] in the way [cargo][cargo] is for Rust. So people
