@@ -39,6 +39,8 @@ card_source: |
 
 - state of database access
   - bimodal
+
+## Case: Use Raw SQL
     - case 1: use raw sql
       - "everyone" knows orms are bad
         - vietnam of computing science etc.
@@ -60,7 +62,10 @@ card_source: |
         - it looks like this [pic of java querying example]
         - type checking disappears at the SQL boundary
         - SQL has problems (more on this later)
-    - case 2: use an orm
+
+## Case: Use an ORM
+
+- case 2: use an orm
       - pros:
         - very quick to write
         - looks like this: [pic of a django orm code]
@@ -82,7 +87,8 @@ card_source: |
           - very hard to statically determine where your database code is
           - this in turn makes it hard to do things like: whenever we update a model X, run this job or whatever.
             - "just use triggers" doesn't solve this because native rdbms features may not play well with the orm!
-  - comparison
+## Comparison
+
     - you can think of this as fixed vs. marginal cost
     - raw sql:
       - fixed cost is high
@@ -129,7 +135,8 @@ card_source: |
 
 # The Sketch
 
-- sketch
+## Migrations First
+
   - migration-first
     - "just write raw sql lol" isn't practical advice much of the time
     - doesn't solve the problem of migrations
@@ -152,7 +159,10 @@ card_source: |
       - then a tool runs those migrations virtually, starting with an empty schema, applying one migration at a time, and dumps the resulting schema to a file where it can be visualized
       - also can generate schema docs
       - this is similar to how code-first graphql libraries let you define your graphql schema as code and them dump a schema.gql file that the frontend can pick up
-  - unportable for databases
+
+## Database-Specific
+
+- unportable for databases
     - many orms and db access libraries advertise portability as a feature
     - in reality: sql is never portable
       - sqlite vs. everything else is completely differnet universes
@@ -169,7 +179,10 @@ card_source: |
         - build the tool for what you're gonna be using it for
       - shamelessly exploit native features
       - switching from one db to another rarely happens
-  - portable across languages
+
+## Portable Across Languages
+
+- portable across languages
     - like openapi spec
     - your migrations are json
     - your queries are written in some separate language
@@ -178,7 +191,10 @@ card_source: |
       - run those queries with type checking
       - a query like [example] gets compiled to code like [example]
       - a struct is automatically defined for the return type of each query
-  - post-sql
+
+## Post-SQL
+
+- post-sql
     - not no-sql but post-sql
       - why nosql?
         - schemaless for agility
@@ -216,12 +232,18 @@ card_source: |
         - design a sane query language with sane syntax and type checking
         - make it feature-complete to native postgres
         - make it compile to efficient sql
-  - discriminated records
+
+## Union Types
+
+- discriminated records
     - we need sum types
     - java has sum types now
     - the world needs sum types
     - humanity cannot survive this century without sum types
-  - maybe we can use stored procedures
+
+## Stored Procedures
+
+- maybe we can use stored procedures
 
 # The Workflow
 
