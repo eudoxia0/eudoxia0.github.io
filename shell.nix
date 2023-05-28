@@ -12,6 +12,8 @@ in pkgs.mkShell {
     pkgs.sass
     pkgs.pandoc
     pkgs.ruff
+    pkgs.black
+    pkgs.isort
   ];
   shellHook = ''
     PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
