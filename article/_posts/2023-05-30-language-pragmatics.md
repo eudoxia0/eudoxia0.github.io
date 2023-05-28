@@ -148,6 +148,61 @@ opening PRs in every repository under the sun making the necessary
 changes. People could hate the old tooling and it's still costly for them to
 change.
 
+# Tedium
+
+**Summary:** programmers will go to great lengths to avoid writing tedious code,
+to the detriment of other things.
+
+[Erik Naggum][erik] and the [parable of the catapult][parable]:
+
+[erik]: http://www.loper-os.org/?p=165
+[parable]: https://groups.google.com/g/comp.lang.lisp/c/Vn31kjztWpQ#52564cc186195b05
+
+>People use C because it _feels_ faster. Like, if you build a catapult strong
+>enough that it can hurl a bathtub with someone crouching inside it from London
+>to New York, it will feel _very_ fast both on take-off and landing, and
+>probably during the ride, too, while a comfortable seat in business class on a
+>transatlantic airliner would probably take less time (except for getting to and
+>from the actual plane, of course, what with all the "security"¹) but you would
+>not _feel_ the speed nearly as much.
+
+The argument here is there's two kinds of productivity: productivity in the
+small (immediately) and productivity in the large (when you add up the cost of
+testing, bugfixes, refactoring, onboarding etc.). C is productive in the small
+and unproductive in the large.
+
+You observe this with text editing. Moving with the arrow keys, erasing text by
+holding backspace for an eternity _feels_ slow, but it is predictable and
+reliable. Vim or Emacs-style editing, where you fly through the buffer with
+keybindings, feels faster, but a single wrong keypress puts your editor in some
+unpredictable state it can be hard to recover from. Sometimes the midwit with
+Notepad gets to the destination faster because they're not fiddling with their
+psychotically-optimized Emacs `neuralink-mode` bindings.
+
+You observe this with macros. To avoid writing four lines of
+almost-but-not-quite duplicated code programmers will reach for a macro
+system. One-tenth of every OCaml or Rust codebase by mass is `#[attributes()]`
+to tell the macro system to generate e.g. JSON serialization or pretty-printing
+code or database interfaces. I do it too. In the grand scheme of things this
+doesn't save that much time: tedious code is fast to write but it only _feels_
+slow. What is the cost? The cost is the codebase becomes harder and harder to
+understand, because all of the interesting behaviour is _outside the source
+code_.
+
+It's like those photographs of distant quasars: the "photograph" is the output
+of a pipeline of Fortran codes written to interpret the data from six different
+instruments written between 1960 and 2005.
+
+With metaprogramming, your codebase is an input to a vast and unseen system: a
+pipeline of build-time macroexpansion that spits out something that may very
+well be unrecognizable. And for what? To save a minute of typing?  Because we
+are programmers, not typists, and it is below our dignity to type?
+
+Some languages do macros right, like Common Lisp, and you should take advantage
+of them. For essentially every other language, metaprogramming should produce
+outputs you can check into source control. That is: generated code is fine, but
+you must be able to see it.
+
 [asdf]: https://asdf.common-lisp.dev/
 [ql]: https://www.quicklisp.org/beta/
 [clpm]: https://www.clpm.dev/
