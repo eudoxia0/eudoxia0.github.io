@@ -19,7 +19,7 @@ def _compute_word_count(contents: str) -> int:
 
 
 @dataclass(frozen=True, eq=True, order=True)
-class Month:
+class YearMonth:
     """
     A year-month.
     """
@@ -29,6 +29,12 @@ class Month:
 
     def __post_init__(self):
         assert 1 <= self.month <= 12
+
+    def next_month(self) -> "YearMonth":
+        if self.month == 12:
+            return YearMonth(year=self.year + 1, month=1)
+        else:
+            return YearMonth(year=self.year, month=self.month + 1)
 
 
 @dataclass(frozen=True)
@@ -50,21 +56,36 @@ class Post:
             contents = _read_file_contents(file_path)
             word_count = _compute_word_count(contents)
             return cls(
-                file_path, int(year), int(month), int(day), slug, contents, word_count
+                file_path=file_path,
+                year=int(year),
+                month=int(month),
+                day=int(day),
+                slug=slug,
+                contents=contents,
+                word_count=word_count,
             )
         else:
             raise ValueError(f"Invalid file name format: {file_path.name}")
 
-    def month(self) -> Month:
-        return Month(year=self.year, month=self.month)
+    def year_month(self) -> YearMonth:
+        return YearMonth(year=self.year, month=self.month)
 
+def earliest_month(posts: list[Post]) -> YearMonth:
+    return sorted(posts, key=lambda p: p.year_month())[0].year_month()
 
-def earliest_month(posts: list[Post]) -> Month:
-    return sorted(posts, key=lambda p: p.month())[0]
+def latest_month(posts: list[Post]) -> YearMonth:
+    return sorted(posts, key=lambda p: p.year_month())[-1].year_month()
 
-
-def latest_month(posts: list[Post]) -> Month:
-    return sorted(posts, key=lambda p: p.month())[-1]
+def all_months(posts: list[Post]) -> list[YearMonth]:
+    first: YearMonth = earliest_month(posts)
+    last: YearMonth = latest_month(posts)
+    months: list[YearMonth] = []
+    current: YearMonth = first
+    months.append(current)
+    while not (current == last):
+        current = current.next_month()
+        months.append(current)
+    return months
 
 
 def get_posts_from_directory(directory_path: Path) -> list[Post]:
@@ -113,12 +134,12 @@ def plot_words_per_month(posts: list[Post]) -> None:
     # Save the plot as a PNG file
     plt.savefig("words_per_month.png", dpi=300)
 
-
 def main():
     if len(sys.argv) != 2:
         raise ValueError("Must provide at least one argument.")
+
+    posts = get_posts_from_directory(POSTS_DIRECTORY)
     if sys.argv[1] == "words_per_month":
-        posts = get_posts_from_directory(POSTS_DIRECTORY)
         plot_words_per_month(posts)
     else:
         raise ValueError("Unknown command.")
