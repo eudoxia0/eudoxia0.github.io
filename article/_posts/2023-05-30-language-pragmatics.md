@@ -141,6 +141,9 @@ definition files? There's an alternative to Quicklisp, called [CLPM][clpm]. It's
 abandonware. We'll fix Common Lisp tooling the day after [we all move to
 Mastodon][masto].
 
+[asdf]: https://asdf.common-lisp.dev/
+[ql]: https://www.quicklisp.org/beta/
+[clpm]: https://www.clpm.dev/
 [masto]: /article/youre-not-going-anywhere
 
 And somehow Common Lisp tooling is a pleasure to use compared to the tooling for
@@ -218,6 +221,7 @@ of them. For essentially every other language, metaprogramming should produce
 outputs you can check into source control. That is: generated code is fine, but
 you must be able to see it.
 
-[asdf]: https://asdf.common-lisp.dev/
-[ql]: https://www.quicklisp.org/beta/
-[clpm]: https://www.clpm.dev/
+The central, underlying fallacy here is [salience bias][bias]: measuring what is
+seen and not what is unseen.
+
+[bias]: https://en.wikipedia.org/wiki/Salience_(neuroscience)#Salience_bias
