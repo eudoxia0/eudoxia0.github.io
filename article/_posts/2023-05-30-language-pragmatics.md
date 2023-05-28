@@ -188,7 +188,9 @@ You observe this with types. Dynamic types feel faster, at the REPL, when you're
 [coding at 1Hz][hz], because you're not factoring in the (unseen) cost of future
 bugs, the cost of refactors you _won't_ do because you don't have the confidence
 to refactor which static types give you, the cost of legacy software that can't
-be replaced because it can't be understood by anyone.
+be replaced because it can't be understood by anyone, the cost of a Python
+server doing four requests per second while you pay five figures to AWS every
+month.
 
 [hz]: https://medium.com/hackernoon/software-development-at-1-hz-5530bb58fc0e
 
