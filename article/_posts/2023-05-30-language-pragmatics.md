@@ -125,10 +125,11 @@ and the permanence of focal points.
 Consider Common Lisp: [ASDF][asdf] is the standard build system, and
 [Quicklisp][ql] the standard package manager. ASDF doesn't support specifying
 version bounds, and even if it did, Quicklisp doesn't support using them. And
-Quicklisp, despite being 10 years old, is still in beta and feels like alpha
-quality software. So while the rest of the world has moved on to reproducible
-builds and SAT solving for dependency resolution, in the Common Lisp world you
-can't even fix dependency versions.
+Quicklisp, despite being over 10 years old, is still in beta and feels like
+alpha quality software: Quicklisp downloads packages over HTTP, and you are at
+the mercy of God and the feds. So while the rest of the world has moved on to
+reproducible builds, determinism, and SAT solving for dependency resolution, in
+the Common Lisp world you can't even fix dependency versions.
 
 And who's going to replace this? You're going to rewrite everyone's ASDF system
 definition files? There's an alternative to Quicklisp, called [CLPM][clpm]. It's
