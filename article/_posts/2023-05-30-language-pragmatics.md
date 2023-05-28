@@ -184,6 +184,14 @@ unpredictable state it can be hard to recover from. Sometimes the midwit with
 Notepad gets to the destination faster because they're not fiddling with their
 psychotically-optimized Emacs `neuralink-mode` bindings.
 
+You observe this with types. Dynamic types feel faster, at the REPL, when you're
+[coding at 1Hz][hz], because you're not factoring in the (unseen) cost of future
+bugs, the cost of refactors you _won't_ do because you don't have the confidence
+to refactor which static types give you, the cost of legacy software that can't
+be replaced because it can't be understood by anyone.
+
+[hz]: https://medium.com/hackernoon/software-development-at-1-hz-5530bb58fc0e
+
 You observe this with macros. To avoid writing four lines of
 almost-but-not-quite duplicated code programmers will reach for a macro
 system. One-tenth of every OCaml or Rust codebase by mass is `#[attributes()]`
