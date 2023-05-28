@@ -82,7 +82,8 @@ inside otherwise pure data transform code, along with a `FIXME` comment.
 Gradually you go down the slope of pragmatics: I/O is spread across the
 codebase. In Haskell, there is no way out: you have to use the `IO` monad. And
 so if you're mixing IO and pure code, you know it, because it's right there in
-the function signature.
+the function signature, and that knowledge gives you an opposite gradient, you
+know the direction you have to move to make the code cleaner.
 
 Or consider something like the [Django ORM][django]: you can write some database
 access code that returns a [`QuerySet`][qs]. Then you can either read from that
@@ -110,10 +111,42 @@ In C and C++ there are many build systems and package managers, but none is the
 obvious [focal point][fp] in the way [cargo][cargo] is for Rust. So people
 vendor their dependencies, sometimes downloading them by hand. Smaller libraries
 are often made [header-only][header], this is advetised as a feature because
-they requir less build system overhead to integrate into your projects. This
+they require less build system overhead to integrate into your projects. This
 discourages dependencies, which is basically the same as discouraging the
 division of labour, with obvious costs.
 
 [fp]: https://en.wikipedia.org/wiki/Focal_point_(game_theory)
 [cargo]: https://doc.rust-lang.org/cargo/
 [header]: https://en.wikipedia.org/wiki/Header-only
+
+And even bad tooling is hard to replace, again, because of coordination costs
+and the permanence of focal points.
+
+Consider Common Lisp: [ASDF][asdf] is the standard build system, and
+[Quicklisp][ql] the standard package manager. ASDF doesn't support specifying
+version bounds, and even if it did, Quicklisp doesn't support using them. And
+Quicklisp, despite being 10 years old, is still in beta and feels like alpha
+quality software. So while the rest of the world has moved on to reproducible
+builds and SAT solving for dependency resolution, in the Common Lisp world you
+can't even fix dependency versions.
+
+And who's going to replace this? You're going to rewrite everyone's ASDF system
+definition files? There's an alternative to Quicklisp, called [CLPM][clpm]. It's
+abandonware. We'll fix Common Lisp tooling the day after [we all move to
+Mastodon][masto].
+
+[masto]: /article/youre-not-going-anywhere
+
+And somehow Common Lisp tooling is a pleasure to use compared to the tooling for
+Python, a language that has multiple orders of magnitude more headcount and
+investment.
+
+Fixing entrenched tooling requires building an alternative that's 10x better,
+making the transition process as seamless as possible, and then reaching out and
+opening PRs in every repository under the sun making the necessary
+changes. People could hate the old tooling and it's still costly for them to
+change.
+
+[asdf]: https://asdf.common-lisp.dev/
+[ql]: https://www.quicklisp.org/beta/
+[clpm]: https://www.clpm.dev/
