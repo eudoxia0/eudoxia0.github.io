@@ -11,6 +11,7 @@ in pkgs.mkShell {
     pkgs.graphviz
     pkgs.sass
     pkgs.pandoc
+    pkgs.ruff
   ];
   shellHook = ''
     PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
