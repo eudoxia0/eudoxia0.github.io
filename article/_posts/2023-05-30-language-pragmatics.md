@@ -95,8 +95,9 @@ queries on it.
 A consequence of this is that anything that touches a `QuerySet` can kick off
 database access. There is no requirement that database access be
 centralized---in a [DAO][dao] class, for example---and so because of the
-pressures of expedience database queries anneal, one temporary hack at a time,
-across the entire codebase.
+pressures of expedience database queries crawl, hack after hack, like hydrogen
+molecules through the interstitial spaces of a crystal, over the entire
+codebase.
 
 [dao]: https://en.wikipedia.org/wiki/Data_access_object
 
