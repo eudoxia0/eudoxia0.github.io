@@ -13,8 +13,6 @@ Summary:
    fix".
 2. Codebases decay along the gradient of expedient hacks.
 
-# Overview
-
 Programming languages have syntax, semantics, and [pragmatics][pragma]: how the
 language is used in practice. The latter is harder to design for. Language
 pragmatics is tooling, best practices, and the code you see in the
@@ -24,7 +22,14 @@ gradient descent.
 
 [pragma]: https://en.wikipedia.org/wiki/Pragmatics
 
-# Types
+# Contents
+
+1. [Types](#types)
+1. [Shotgun I/O](#shotgun)
+1. [Tooling](#tooling)
+1. [Tedium](#tedium)
+
+# Types {#types}
 
 **Summary:** make types easier to define.
 
@@ -61,7 +66,7 @@ this would be called an antipattern.
 
 [anemia]: https://martinfowler.com/bliki/AnemicDomainModel.html
 
-# Shotgun I/O
+# Shotgun I/O {#shotgun}
 
 **Summary:** ban "quick fixes" at the level of language semantics, or make them
 hard to write.
@@ -102,7 +107,7 @@ codebase.
 
 [dao]: https://en.wikipedia.org/wiki/Data_access_object
 
-# Tooling
+# Tooling {#tooling}
 
 **Summary:** bad tooling goes unused but is hard to displace, lowering economic
 productivity.
@@ -148,7 +153,7 @@ opening PRs in every repository under the sun making the necessary
 changes. People could hate the old tooling and it's still costly for them to
 change.
 
-# Tedium
+# Tedium {#tedium}
 
 **Summary:** programmers will go to great lengths to avoid writing tedious code,
 to the detriment of other things.
