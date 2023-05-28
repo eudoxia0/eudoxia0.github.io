@@ -134,6 +134,47 @@ def plot_words_per_month(posts: list[Post]) -> None:
     # Save the plot as a PNG file
     plt.savefig("words_per_month.png", dpi=300)
 
+def plot_cumulative_words_per_month(posts: list[Post]) -> None:
+    # Initialize a defaultdict with int (default: 0)
+    words_per_month = defaultdict(int)
+    cumulative_words_per_month = defaultdict(int)
+
+    # Iterate through the posts and aggregate the word count by month
+    for post in posts:
+        month_str = f"{post.year}-{post.month:02d}"
+        words_per_month[month_str] += post.word_count
+
+    # Get the earliest and latest months
+    earliest_month = min(words_per_month)
+    latest_month = max(words_per_month)
+
+    # Fill the missing months with 0 word count
+    current_month = earliest_month
+    cumulative_total = 0
+    while current_month <= latest_month:
+        cumulative_total += words_per_month[current_month]
+        cumulative_words_per_month[current_month] = cumulative_total
+        year, month = map(int, current_month.split("-"))
+        month += 1
+        if month > 12:
+            month = 1
+            year += 1
+        current_month = f"{year}-{month:02d}"
+
+    # Sort the months in ascending order
+    sorted_months = sorted(cumulative_words_per_month.keys())
+
+    # Create a bar chart using matplotlib
+    plt.figure(figsize=(12, 6))
+    plt.bar(sorted_months, [cumulative_words_per_month[month] for month in sorted_months])
+    plt.xticks(fontsize=8, rotation=90, ha="right")
+    plt.xlabel("Month")
+    plt.ylabel("Cumulative Words Written")
+    plt.title("Cumulative Words per Month")
+    plt.tight_layout()
+    # Save the plot as a PNG file
+    plt.savefig("cumulative_words_per_month.png", dpi=300)
+
 def main():
     if len(sys.argv) != 2:
         raise ValueError("Must provide at least one argument.")
@@ -141,6 +182,8 @@ def main():
     posts = get_posts_from_directory(POSTS_DIRECTORY)
     if sys.argv[1] == "words_per_month":
         plot_words_per_month(posts)
+    elif sys.argv[1] == "cumulative_words_per_month":
+        plot_cumulative_words_per_month(posts)
     else:
         raise ValueError("Unknown command.")
 
