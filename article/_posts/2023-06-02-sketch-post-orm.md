@@ -704,3 +704,53 @@ Alongside code to run the migrations, and maybe linting code and such.
 to use.
 
 [prql]: https://prql-lang.org/
+
+[SQLx][sqlx] an asynchronous database access library for Rust. It supports typechecking queries. The [FAQ][faq] explains how they implemented this:
+
+[sqlx]: https://github.com/launchbadge/sqlx
+[faq]: https://github.com/launchbadge/sqlx/blob/253d8c9f696a3a2c7aa837b04cc93605a1376694/FAQ.md
+
+> The macros work by talking to the database at compile time. When a(n) SQL client asks to create a prepared statement
+> from a query string, the response from the server typically includes information about the following:
+>
+> * the number of bind parameters, and their expected types if the database is capable of inferring that
+> * the number, names and types of result columns, as well as the original table and columns names before aliasing
+>
+> In MySQL/MariaDB, we also get boolean flag signaling if a column is `NOT NULL`, however
+> in Postgres and SQLite, we need to do a bit more work to determine whether a column can be `NULL` or not.
+>
+> After preparing, the Postgres driver will first look up the result columns in their source table and check if they have
+> a `NOT NULL` constraint. Then, it will execute `EXPLAIN (VERBOSE, FORMAT JSON) <your query>` to determine which columns
+> come from half-open joins (LEFT and RIGHT joins), which makes a normally `NOT NULL` column nullable. Since the
+> `EXPLAIN VERBOSE` format is not stable or completely documented, this inference isn't perfect. However, it does err on
+> the side of producing false-positives (marking a column nullable when it's `NOT NULL`) to avoid errors at runtime.
+>
+> If you do encounter false-positives please feel free to open an issue; make sure to include your query, any relevant
+> schema as well as the output of `EXPLAIN (VERBOSE, FORMAT JSON) <your query>` which will make this easier to debug.
+>
+> The SQLite driver will pull the bytecode of the prepared statement and step through it to find any instructions
+> that produce a null value for any column in the output.
+
+So it works, but it is supremely complicated. The FAQ also has this to say about the difficulty of doing any kind of semantic analysis on SQL:
+
+> **Why can't SQLx just look at my database schema/migrations and parse the SQL itself?**
+>
+> Take a moment and think of the effort that would be required to do that.
+>
+> To implement this for a single database driver, SQLx would need to:
+>
+> - know how to parse SQL, and not just standard SQL but the specific dialect of that particular database
+> - know how to analyze and typecheck SQL queries in the context of the original schema
+> - if inferring schema from migrations it would need to simulate all the schema-changing effects of those migrations
+>
+> This is effectively reimplementing a good chunk of the database server's frontend,
+>
+> and maintaining and ensuring correctness of that reimplementation,
+>
+> including bugs and idiosyncrasies,
+>
+> for the foreseeable future,
+>
+> for every database we intend to support.
+>
+> Even Sisyphus would pity us.
