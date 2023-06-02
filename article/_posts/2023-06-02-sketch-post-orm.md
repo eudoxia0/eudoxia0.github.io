@@ -92,7 +92,7 @@ But in most languages going from an ORM to raw SQL is like going from
 files, each of which is tens of lines of code written in quadruplicate, with
 [IntelliJ][ij]-generated boilerplate.
 
-[ocaml]: http://localhost:4000/article/two-years-ocaml
+[ocaml]: /article/two-years-ocaml
 [ij]: https://www.jetbrains.com/idea/
 
 So why do people use raw SQL?
