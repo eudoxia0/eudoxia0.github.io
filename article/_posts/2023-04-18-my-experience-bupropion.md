@@ -385,7 +385,7 @@ Since starting Bupropion I've observed the following positive changes:
 
 [todoist]: https://todoist.com/
 [introaustral]: /article/introducing-austral
-[eog581]: /fiction/eog581/
+[eog581]: /fiction/eog581
 [pomo]: https://pomofocus.io/
 
 # Side Effects
