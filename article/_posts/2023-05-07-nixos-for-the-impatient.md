@@ -34,6 +34,7 @@ understand, and that's good enough at present.
    1. [Post-Install](#postinstall)
    1. [Installing Packages](#packages)
    1. [Dotfiles](#dotfiles)
+   1. [Upgrading](#upgrading)
 1. [A Single-Device Setup](#single)
 1. [My Current Setup](#current)
 1. [Comparison](#comparison)
@@ -211,6 +212,35 @@ home-manager.users.eudoxia = {
 
 Running `sudo nixos-rebuild switch` you will find a write-protected `.foorc`
 file in your home directory.
+
+## Upgrading {#upgrading}
+
+_Added on 2023-06-03_.
+
+Recently, [23.05][v2305] was released. To upgrade, I first updated my version of Home Manager:
+
+[v2305]: https://nixos.org/blog/announcements.html#nixos-23.05
+
+```patch
+ let
+   home-manager = builtins.fetchTarball {
+-    url = "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+-    sha256 = "1cp2rpprcfl4mjsrsrpfg6278nf05a0mpl3m0snksvdalfmc5si5";
++    url = "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
++    sha256 = "1ixy1bi21nq0dlfzpn72k1gjdm8aq7h84wvl1ysff7lmqc4gi1jf";
+   };
+```
+
+Then I ran:
+
+```bash
+$ sudo nix-channel --add https://nixos.org/channels/nixos-23.05 nixos
+$ sudo nixos-rebuild boot -I nixos-config=path-to-my-config.nix
+```
+
+I had to remove a few files that were bothering Home Manager, but the error
+messages pointed out exactly what to do.
+
 
 # A Single-Device Setup {#single}
 
