@@ -410,7 +410,7 @@ There is no such thing as a schemaless database, only a database with an
 implicit schema, a schema defined piecemeal at a thousand different points in
 the codebase. Types are good. Dynamic typing is bad. Slow is fast. You are not
 Google. Most everyone isn't [the LHC][lhc] and doesn't need a non-relational
-key-value or blob store for their core With regards to agility.
+key-value or blob store for their core database.
 
 [lhc]: https://www.mongodb.com/blog/post/holy-large-hadron-collider-batman
 
