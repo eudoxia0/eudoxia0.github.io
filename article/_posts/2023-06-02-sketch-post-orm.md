@@ -88,7 +88,7 @@ instead.
 [vietnam]: https://www.odbms.org/wp-content/uploads/2013/11/031.01-Neward-The-Vietnam-of-Computer-Science-June-2006.pdf
 
 But in most languages going from an ORM to raw SQL is like going from
-[OCaml][ocaml] top Java: a three-line type definition in OCaml becomes four Java
+[OCaml][ocaml] to Java: a three-line type definition in OCaml becomes four Java
 files, each of which is tens of lines of code written in quadruplicate, with
 [IntelliJ][ij]-generated boilerplate.
 
