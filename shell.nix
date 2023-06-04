@@ -1,12 +1,14 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
-  my-python = pkgs.python310;
+  my-python = pkgs.python311;
   python-with-my-packages = my-python.withPackages
-    (p: with p; [ matplotlib ]);
+    (p: with p; [ matplotlib tkinter ]);
 in pkgs.mkShell {
   buildInputs = [
     python-with-my-packages
+    pkgs.tcl
+    pkgs.tk
     pkgs.ruff
     pkgs.graphviz
     pkgs.sass
@@ -14,8 +16,10 @@ in pkgs.mkShell {
     pkgs.ruff
     pkgs.black
     pkgs.isort
+    pkgs.gnumake
   ];
   shellHook = ''
+    export TK_LIBRARY="${pkgs.tk}/lib/${pkgs.tk.libPrefix}"
     PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
   '';
 }
