@@ -31,7 +31,7 @@ Is used for:
 1. Expressions.
 2. Expressions that would be statements in other languages (i.e. control flow).
 3. Special operators like `if` and `let`.
-4. Declarations.
+4. Declarations, like function or class declarations.
 
 This means that macros apply everywhere. The exact same `defmacro` facility lets
 you write macros that operate on expressions, special operators, and
@@ -75,7 +75,7 @@ You can write macros that operate on declarations, like `deftable` in
   (age :type integer :nullp t :initform 18)
   (description :type text))
 
-;; expands to a whole bunch of things
+;; expands to a whole bunch of ORM stuff
 ```
 
 And macros can be defined succinctly, e.g.:
@@ -190,10 +190,15 @@ where action is one of:
 
 That's half the grammar. I trimmed the second half because the point is made.
 
-SQL syntax isn't composable, the way Lisp is. And you can't write macros for
-SQL. You only options are C-style text-manipulation macros, cleanly staged and
-separated from the SQL itself, or writing a program that parses the SQL into an
-AST (good luck) and transforms it at the AST level.
+SQL syntax isn't composable, the way Lisp is. Composability is about having a
+large number of distinct operators with a small number of expression holes,
+while SQL is all about having a small number of operators with fifty different
+syntactic variants.
+
+And you can't write macros for SQL. You only options are C-style
+text-manipulation macros, cleanly staged and separated from the SQL itself, or
+writing a program that parses the SQL into an AST (good luck) and transforms it
+at the AST level.
 
 # The Mean
 
@@ -216,10 +221,12 @@ like OCaml's [PPX][ppx].
 
 I maintain that Common Lisp is the gold standard of DX for macros, but it works
 only because Common Lisp exists at a _very narrow_ conjunction of tradeoffs. In
-particular, image-based development is a rarity nowadays, a Galápagos island
-feature that is undesirable in many contexts, but it's the thing that makes it
-possible to have Turing-complete macros that are defined in the same place as
-the code, without needing to involve a build system.
+particular, image-based development is a rarity nowadays, a [Galápagos island
+feature][galapagos] that is undesirable in many contexts, but it's the thing
+that makes it possible to have Turing-complete macros that are defined in the
+same place as the code, without needing to involve a build system.
+
+[galapagos]: https://en.wikipedia.org/wiki/Gal%C3%A1pagos_syndrome
 
 And languages that don't share this evolutionary niche should simply do away
 with macros. The complexity-benefit tradeoff is not worth it.
