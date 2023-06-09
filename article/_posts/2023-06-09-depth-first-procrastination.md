@@ -1,6 +1,9 @@
 ---
 title: Depth-First Procrastination
 summary: When subgoals recur infinitely.
+card: depth-first-procrastination.jpg
+card_source: |
+    “Sextant, Paul Klee, watercolor, 1921, auctioned by Christie's”, DALL-E, June 2022.
 ---
 
 >Forsake thy cage,
