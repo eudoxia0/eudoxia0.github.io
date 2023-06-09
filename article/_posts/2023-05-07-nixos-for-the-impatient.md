@@ -235,7 +235,7 @@ Then I ran:
 
 ```bash
 $ sudo nix-channel --add https://nixos.org/channels/nixos-23.05 nixos
-$ sudo nixos-rebuild boot -I nixos-config=path-to-my-config.nix
+$ sudo nixos-rebuild boot -I nixos-config=path-to-my-config.nix --upgrade
 ```
 
 I had to remove a few files that were bothering Home Manager, but the error
