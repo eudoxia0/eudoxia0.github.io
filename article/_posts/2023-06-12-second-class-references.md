@@ -1,10 +1,15 @@
 ---
 title: Second-Class References
 summary: On Graydon's Rust, Val, and mutable value semantics.
+card: second-class-references.jpg
+card_source: |
+    [_American Landscape_][link], Charles Sheeler, 1930.
+
+    [link]: https://www.moma.org/collection/works/79032
 ---
 
-Recently, [Graydon Hoare][gh], the creator of Rust, posted an article: [The Rust
-I Wanted Had No Future][future] ([HN][hn], [Lobsters][lb]). It's an interesting
+[Graydon Hoare][gh], the creator of Rust, posted an article: [The Rust I Wanted
+Had No Future][future] ([HN][hn], [Lobsters][lb]). It's an interesting
 discussion of programming language evolution, the competing pressure of
 expedience and technical perfection, and the social consequences of technical
 decisions. He concludes that the language he would have built, given absolute
