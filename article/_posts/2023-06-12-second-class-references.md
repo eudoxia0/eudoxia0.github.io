@@ -10,7 +10,7 @@ card_source: |
 
 [Graydon Hoare][gh], the creator of Rust, posted an article: [The Rust I Wanted
 Had No Future][future] ([HN][hn], [Lobsters][lb]). It's an interesting
-discussion of programming language evolution, the competing pressure of
+discussion of programming language evolution, the competing pressures of
 expedience and technical perfection, and the social consequences of technical
 decisions. He concludes that the language he would have built, given absolute
 creative control, would not have been as popular as Rust is today.
