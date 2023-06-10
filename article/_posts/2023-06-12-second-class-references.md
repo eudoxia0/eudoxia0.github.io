@@ -208,15 +208,38 @@ The drawbacks are significant.
 
 ## Loss of Generality {#loss}
 
-  - loss of generality
-    - the main place where references are stored in data structures is iterators
-    - it's not clear how you'd do iterators with second-class references
-      - the val language has a discussion page about that: link
-    - graydon's post addresses this, i think, with "exterior iteration"
-    - basically coroutines
-    - it might be that to implement iterators you have to go down the escape hatch and use the unsafe subset of the language
-    - using unsafe code for something as simple as iterators is a big ask
+The main thing we lose is expresive power. While references in Rust are
+overwhelmingly used in a way that would allow them to be degraded into
+second-class references, there are places where we need first-class references.
 
+The main pain point is iterators. In Rust, iterators are (far and above) the
+main place where you find yourself storing a reference in a struct. It's not
+clear to me how you would do iterators with second-class references. The Val
+language has a [discussion page][iter] about this.
+
+[iter]: https://github.com/val-lang/val-lang.github.io/discussions/44
+
+Graydon Hoare's solution is to outright change how iteration happens:
+
+>Exterior iteration. Iteration used to be by stack / non-escaping coroutines,
+>which we also called "interior" iteration, as opposed to "exterior" iteration
+>by pointer-like things that live in variables you advance. Such coroutines are
+>now finally supported by LLVM (they weren't at the time) and are actually a
+>fairly old and reliable mechanism for a linking-friendly,
+>not-having-to-inline-tons-of-library-code abstraction for iteration. They're
+>in, like, BLISS and Modula-2 and such. Really normal thing to have, early Rust
+>had them, and they got ripped out for a bunch of reasons that, again, mostly
+>just form "an argument I lost" rather than anything I disagree with today. I
+>wish Rust still had them. Maybe someday it will!
+
+So if you want Rust or C++ style iterators with second-class references, your choices are:
+
+1. Coroutines.
+2. Typed index values (but without lifetimes, there's no way to tie those
+indices to the collection they index into).
+3. Opening the escape hatch and using unsafe pointers. But using unsafe language
+   features for something as quotidian as iteration is a big degradation in
+   safety.
 
 ## Separation {#sep}
 
