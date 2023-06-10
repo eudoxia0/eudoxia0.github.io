@@ -51,6 +51,8 @@ would bring to the table and how much it would cost.
 1. [Realizability](#realize)
 1. [Benefits](#pros)
 1. [Costs](#cons)
+   1. [Loss of Generality](#loss)
+   1. [Separation](#sep)
 1. [Reference Transforms](#transform)
 1. [Conclusion](#conclusion)
 
@@ -202,7 +204,10 @@ later.
 
 # Costs {#cons}
 
-- cons
+The drawbacks are significant.
+
+## Loss of Generality {#loss}
+
   - loss of generality
     - the main place where references are stored in data structures is iterators
     - it's not clear how you'd do iterators with second-class references
@@ -211,6 +216,10 @@ later.
     - basically coroutines
     - it might be that to implement iterators you have to go down the escape hatch and use the unsafe subset of the language
     - using unsafe code for something as simple as iterators is a big ask
+
+
+## Separation {#sep}
+
   - performance
    - a benefit of references is they're ultimately just pointers
    - getting the thing they point to is just a pointer dereference, a simple instruction
