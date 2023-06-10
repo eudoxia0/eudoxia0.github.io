@@ -313,6 +313,13 @@ an array. You need access to the pool. If you're twenty stack frames deep and
 want to print the contents of a pool index, you need to pass the pool in. This
 is worse when thread are involved.
 
+Again, it's debatable whether this is bad at all. The fact that you have to
+bring in the string pool arguably aids in local reasoning: there's no spooky
+action at a distance, functions must pull in their dependencies. This problem is
+discussed at greater length [here][implicits].
+
+[implicits]: https://matklad.github.io/2023/05/02/implicits-for-mvs.html
+
 # Reference Transforms {#transform}
 
 Sometimes you want to return a reference from a function. Usually this is in the
@@ -326,7 +333,7 @@ You can define a special class of functions---call the _reference
 transforms_---that can take references and return more interior references. In
 turn, reference transforms are restricted:
 
-1. Like reference expressions, reference transforms can only be called as an
+1. Like reference expressions, reference transforms can only appear as an
    argument to a function.
 2. The arguments to a reference transform are either a reference expression or
    another call to a reference transform.
@@ -344,23 +351,49 @@ don't understand Val well enough to explain it in detail.
 
 # Conclusion {#conclusion}
 
-- conclusion
-  - i wrote this article mostly to help myself understand mutable value semantics, and if they might be useful for Austral
-  - key design constraint for Austral is simplicity
-  - a semantics that lets you do away with 99% of the borrow checker obviously caught my attention
-  - but is it worth it?
-    - the benefits is simplicity are great
-    - the loss of generality is also great
-      - unclear how you'd go about implementing iterators
-        - without entirely changing the model to iteration based on coroutines or something
-      - you can't, for example, have Rust's HashMap entry API
-      - if you want to use references to improve performance by using actual pointers (where the underlying value is one CPU instruction away) vs. indirection, you're out of luck, you have to go down to unsafe features
-      - so second-class references put the "unsafe burden" very high, you have to break out unsafe features to do relatively quotidian things
-      - it's a selling point of rust that when you want to use references, and have an intricately-connected data structure, you are free to do so, but you have to use lifetimes
-        - this preserves safety
-    - for austral, the wins are not that clear
-    - austral's linear type system is already very simple
-      - a more restricted version of rust
-      - the linearity checker is ~700 lines of code
-      - dropping down to second-class references simplifies it further
-      - but at the cost of losing a great deal of safety and generality
+This post was an attempt to understand mutable value semantics, organize my
+thoughts about it, and see if they might be useful for Austral. A key design
+constraint in Austral is simplicity, and a semantics that does away with 99% of
+borrow checking obviously caught my attention. I thought: if this is compelling
+enough I'll throw out the existing borrowing model for Austral, and implement
+second-class references.
+
+But is it worth it? Again, the tradeoff is expressivity vs. simplicity. The
+gains in simplicity are great, but the costs---_especially_ around iteration and
+the part-whole conflict---are also great.
+
+A selling point of Rust is, if you want an intricately-connected data structure
+built from references, you can build it. You pay a cost in complexity, _but not
+in loss of safety_. You don't have to break out raw pointers to use references
+in a complex way. In other words, first-class references give you a midpoint
+between raw pointers and second-class references, where you can do things
+second-class references cannot, without losing safety.
+
+If you compare Val and Rust, the simplicity gains are tremendous, because Rust's
+borrow checker is very complex, especially with newer language features like
+async that complicate lifetime analysis.
+
+But if you're comparing Austral and Rust, the benefits are less clear, because
+Austral's linear types and borrowing is already so simple. Austral's equivalent
+of a borrow checker is [~700 lines of OCaml]. The only downside of Austral is
+right now you have to write the lifetimes of the references you pass to
+functions, but I will probably implement lifetime (region) elision. At which
+point, you get most of the ergonomics of second-class references, but the linear
+type system and borrow-checker rules still fit [on a page][ref].
+
+[lincheck]: https://github.com/austral/austral/blob/8568383ed373d0df85cdf69e752130fb259f5949/lib/LinearityCheck.ml
+[ref]: https://austral-lang.org/spec/spec.html#linearity
+
+Another thing I didn't touch on is closures. Val [has closures][closure], and
+they can capture immutable as well as mutable references, but it's not clear to
+me what restrictions Val imposes here to preserve safety. Also, Val has a
+concept of [remote parts][remote], which I think is a way to do references
+without lifetimes.
+
+[closure]: https://tour.val-lang.dev/functions-and-methods#closures
+[remote]: https://github.com/val-lang/val/blob/8d4dadc3ecb3d8f098a4e4f12139eb8bcd3950e4/Docs/RemoteParts.md?plain=1#L1
+
+Second-class references are appealing, but before giving up on first-class
+references in Austral, I'd like to have a better grasp of how patterns like
+iterators and core language features like closures can be carried over without
+loss of generality.
