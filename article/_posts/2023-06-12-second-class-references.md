@@ -96,7 +96,8 @@ The idea is that second-class references:
 
 1. Can't be returned from functions.
 1. Can't be stored in data structures.
-1. Can only be created at function call sites, as a special parameter-passing mode.
+1. Can only be created at function call sites, as a special parameter-passing
+   mode.
 
 "Parameter passing modes" are an obscure concept nowadays. You see them in Ada,
 where a function parameter can be marked [`in out`][inout], which lets you write
@@ -105,7 +106,8 @@ reference.
 
 [inout]: https://stackoverflow.com/questions/3003480/the-use-of-in-out-in-ada
 
-In a language with second-class references, you'd have three parameter passing modes:
+In a language with second-class references, you'd have three parameter passing
+modes:
 
 1. By value, or, in Rust terminology, by move: `f(x: Foo) -> Bar`
 1. By immutable reference: `g(x: &Foo) -> Bar`
@@ -142,26 +144,38 @@ does this under the name ["mutable value semantics"][mvs].
 
 # Realizability {#realize}
 
-Is this doable? Surprisingly, yes. If you grep a large Rust codebase---either libraries or applications---you'll find that the usage pattern of references is:
+Is this doable? Surprisingly, yes. If you grep a large Rust codebase---either
+libraries or applications---you'll find that the usage pattern of references is:
 
 1. The overwhelming majority of references are just arguments to functions.
-2.
+2. Sometimes you see a reference being returned from a function.
+3. Rarely, very rarely, are references stored in structs, and often the lifetime
+   is `'static`.
 
-- doable
-  - surprisingly, yes
-  - if you grep a large rust codebase
-    - either libraries or applications
-  - you find that:
-    - overwhelmingly, references are just arguments to functions
-    - sometimes, rarely, they're returned
-    - sometimes, even more rarely, references are stored inside data structures
-  - this usage pattern is the reason why lifetime elision works
-  - rust has a feature called lifetime elision that allows you to skip writing lifetimes much of the time
-  - like if you have a function that takes references, but doesn't return them, you can write:
-    - example
-  - and the compiler transforms this to
-    - example
-  - where references are used in a way that's more involved (e.g., being stored in data structures) lifetimes usually have to be written
+This usage pattern is why Rust's [lifetime elision][elide] feature works. This
+lets you avoid writing lifetimes in most code. For example, you can write this:
+
+```rust
+fn concatenate_strings(s1: &str, s2: &str, s3: &str) -> String {
+    format!("{}{}{}", s1, s2, s3)
+}
+```
+
+And the compiler will expand it to this:
+
+```rust
+fn concatenate_strings<'a, 'b, 'c>(s1: &'a str, s2: &'b str, s3: &'c str) -> String {
+    format!("{}{}{}", s1, s2, s3)
+}
+```
+
+This simple case doesn't require any sophisticated analysis either (it gets more
+complicated if you're returning a reference).
+
+Where references are used in a way that's more involved, however, you usually
+have to write down the lifetimes, but then you're trading off code complexity
+for whatever gain you expect to get (usually performance and safety) from using
+references.
 
 # Costs {#cons}
 
