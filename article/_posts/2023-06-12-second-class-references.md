@@ -56,52 +56,96 @@ would bring to the table and how much it would cost.
 
 # First-Class References {#first}
 
-- first-class references and explicit lifetimes
-  - references are pointers with a compile-time tag that helps enforce safety guarantees, namely
-    - reference does not dangle
-    - only one writer, or infinitely many readers
-  - in rust, references are first class values
-    - they can be passed to functions
-    - returned from functions
-    - stored in data structures and passed around
-  - reference types are like a generic type with two arguments
-    - the type they reference
-    - and the lifetime
-    - the lifetime is kind of like a singleton type that the compiler generates at compile time to distinguish one reference from another
-  - you can store any pointer value in a pointer-typed variable
-  - you can't store a reference in a variable that has a reference type for another lifetime
-  - the types are not the same
-  - this is scratching the surface
-    - rust has a sophisticated ownership tracking system
-    - can track ownership of, e.g., individual slot fields
-    - non-lexical lifetimes
-  - the benefit of first-class lifetimes is generality
-    - references are just another value
-    - reference types just another type
-  - the cost is the borrow checker is very complex, in rustc, it's 27k lines of code
+In Rust, references are pointers with a compile-time tag called a lifetime that
+helps enforce safety guarantees at compile-time. The safety guarantees are:
+
+1. **No dangling references:** references cannot outlive the lifetime of the
+   thing they reference.
+1. **Exclusivity:** at every point in time, every value has, either one mutable
+   reference XOR one or more immutable references, but not both. This gives you
+   thread-safety, or "fearless concurrency".
+
+Reference types are basically a generic type with two parameters: the pointed-to
+type, and the lifetime. If you want to think of a lifetime as a type, you can
+think of it being like an empty struct type that the compiler generates in order
+to tag the reference and distinguish references that have different lifetimes.
+
+This is scratching the surface. Rust has a sophisticated ownership-tracking
+system that can track e.g. ownership of individual struct fields and has fancy
+ergonomic features like [non-lexical lifetimes][nll].
+
+[nll]: https://rust-lang.github.io/rfcs/2094-nll.html
+
+The benefit of having references be first-class is generality: in Rust,
+references are first-class objects. They can be passed into functions, returned
+from functions, and stored in datastructures. Reference types are types like any
+other, references are values like any other.
+
+The cost is complexity. The borrow checker is hard to understand, and hard to
+implement. People learning Rust struggle with the borrow checker, and even
+professional Rust programmers don't necessarily understand all of the rules,
+rather, they run into borrow-checking errors time and time again and gradually
+develope a kind of intuitive understanding of it.
 
 # Second-Class References {#second}
 
-- second-class references
-  - second class references are a restriction of first-class references
-  - lose expressivity, gain simplicity
-  - in second-class references
-    - references cannot be returned from functions
-    - references cannot be stored in data structures
-    - references can only be created at function call sites
-    - references are a parameter passing mode
-      - parameter passing models are kind of an obscure concept nowadays
-        - you don't see them much
-        - they're in Pascal and Ada, as a feature to reduce the need for explicit pointers
-      - basically you get three parameter passing modes:
-        - by value: parameters are passed by value. in Rust's case, this is by move, ownership is passed to the function.
-        - by reference: &x
-        - by mutable reference
-  - prior art
-    - swift
-    - the val language
+Second-class references are a restriction of first-class references. You lose
+some generality, and gain simplicity.
+
+The idea is that second-class references:
+
+1. Can't be returned from functions.
+1. Can't be stored in data structures.
+1. Can only be created at function call sites, as a special parameter-passing mode.
+
+"Parameter passing modes" are an obscure concept nowadays. You see them in Ada,
+where a function parameter can be marked [`in out`][inout], which lets you write
+to it from the body of the function. Essentially it's an implicit mutable
+reference.
+
+[inout]: https://stackoverflow.com/questions/3003480/the-use-of-in-out-in-ada
+
+In a language with second-class references, you'd have three parameter passing modes:
+
+1. By value, or, in Rust terminology, by move: `f(x: Foo) -> Bar`
+1. By immutable reference: `g(x: &Foo) -> Bar`
+1. By mutable reference: `h(x: &mut Foo) -> Bar`
+
+And dually the call sites would look like this:
+
+```
+f(x);
+g(&x);
+h(&mut x);
+```
+
+Has this been implemented anywhere? Yes, the [Val][val] programming language
+does this under the name ["mutable value semantics"][mvs].
+
+[val]: https://www.val-lang.dev/
+[mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
+
+
+# Benefits {#pros}
+
+- pros
+  - simplicity
+    - because references can only be created at the start of a function, and cannot be returned from functions, or stored in data structures
+    - lifetimes become redundant
+    - you no longer need lifetimes to enforce safety properties
+    - so references go from being a two argument type (pointed to type, lifetime)
+    - to a plain old fashioned "reference to T"
+    - the only check you have to make is, at a call site, where a reference is created
+      - you have to check the variable you're taking a reference to hasn't already been consumed
+        - example
+      - if mutable references are involved, you have to check the references don't overlap
 
 # Realizability {#realize}
+
+Is this doable? Surprisingly, yes. If you grep a large Rust codebase---either libraries or applications---you'll find that the usage pattern of references is:
+
+1. The overwhelming majority of references are just arguments to functions.
+2.
 
 - doable
   - surprisingly, yes
@@ -118,20 +162,6 @@ would bring to the table and how much it would cost.
   - and the compiler transforms this to
     - example
   - where references are used in a way that's more involved (e.g., being stored in data structures) lifetimes usually have to be written
-
-# Benefits {#pros}
-
-- pros
-  - simplicity
-    - because references can only be created at the start of a function, and cannot be returned from functions, or stored in data structures
-    - lifetimes become redundant
-    - you no longer need lifetimes to enforce safety properties
-    - so references go from being a two argument type (pointed to type, lifetime)
-    - to a plain old fashioned "reference to T"
-    - the only check you have to make is, at a call site, where a reference is created
-      - you have to check the variable you're taking a reference to hasn't already been consumed
-        - example
-      - if mutable references are involved, you have to check the references don't overlap
 
 # Costs {#cons}
 
