@@ -53,6 +53,7 @@ would bring to the table and how much it would cost.
 1. [Costs](#cons)
    1. [Loss of Generality](#loss)
    1. [Separation](#sep)
+   1. [Example: String Pools](#pools)
 1. [Reference Transforms](#transform)
 1. [Conclusion](#conclusion)
 
@@ -243,31 +244,74 @@ indices to the collection they index into).
 
 ## Separation {#sep}
 
-  - performance
-   - a benefit of references is they're ultimately just pointers
-   - getting the thing they point to is just a pointer dereference, a simple instruction
-   - a design pattern that is widely used in rust to avoid reference headaches is to replace references with typed ID's, usually wrappers around integer indices into an array
-   - so for example, suppose you have a string pool
-     - a data structure that stores strings
-     - you give it a string and it gives you back a reference to the string
-     - if you give it a string already in the pool, it gives you back a reference to the same old string
-     - this saves memory
-     - you can do this with references
-       - every string reference has to have the lifetime of the pool
-       - the benefit of this approach:
-         - leverage lifetimes to avoid use-after-free or dangling reference issues
-       - the problem with this approach is:
-         - references propagate everywhere
-         - everywhere that uses string references you have to pass the lifetime of the pool
-         - most of the time you're just working with a single string pool
-         - so there's no room for confusion about where to get it from
-     - so instead of returning references, you could return a `StringRef` struct, which is just a wrapper around an `usize` index into an array of strings, for example.
-         - the benefit of this: the string ref is't tied to a lifetime
-         - the problem is we've opened ourselves up to dangling reference issues
-         - but the bigger practical problem is that a `StringRef` _by itself_ is useless. It's just a handle.
-         - to do anything with the string, say, print it, we have to go to the string pool, pass in the `StringRef`, in order to get the actual text.
-         - if you're in some code, twenty functions call, and you want to print a `StringRef`, no luck, you have to have planned to pass the string pool or a reference to it first.
-         - across thread boundaries this gets worse
+One benefit of references is they're ultimately just pointers: getting the data
+they point to is one CPU instruction away.
+
+A design pattern that's widely used in Rust is to replace references with typed
+indices. That is, instead of:
+
+```c
+struct Tree {
+  Tree* left;
+  Tree* right;
+};
+```
+
+You'd have:
+
+```rust
+struct Tree {
+  nodes: Vec<TreeNode>,
+};
+
+type TreeIndex = usize;
+
+struct TreeNode {
+  left:  TreeIndex,
+  right: TreeIndex,
+};
+```
+
+The benefit: this avoids lifetime headaches and lets you implement things
+otherwise inexpressible in safe Rust, like cyclical references or graphs. The
+cost: we're back to dangling-reference bugs, because a `TreeIndex` is just an
+integer, and may outlive the tree it indexes into. Similarly, you can use a
+`TreeIndex` on the wrong `Tree`.
+
+With second-class references you're pretty much forced into this design pattern.
+
+There's an extra cost to this pattern: you can't dereference a `usize`. For
+certain tasks, you can't operate on _parts_ of data structures, you have to
+operate on the _whole_, that is, to do things with trees you need not just the
+`TreeNode` and the `TreeIndex` but the tree itself which holds the pool of
+nodes.
+
+It's debatable whether this is actually a bad thing. I increasingly think that
+shallow data structures with integer indices are infinitely better that
+intricately-connected graphs of pointers.
+
+## Example: String Pools {#pools}
+
+Consider a string pool. A string pool lets you "intern" strings: you give it a
+string, and get back a reference to the string in the pool. If you give it the
+same string multiple times, you get a reference to the same string. This saves
+memory.
+
+A string pool built with lifetimes has the benefit that the string references
+will never dangle (they cannot outlive the lifetime of the pool), and you can't
+use a string reference on the wrong pool because the lifetimes are
+different. The downside is everywhere you use a string reference, you have to
+carry the lifetime of the pool, complicating the code.
+
+A string pool built with typed indices saves you the headache of thinking about
+lifetimes, at the cost of, again, references can dangle and they can be used on
+the wrong pool.
+
+But there's the problem of the part-whole conflict: you can't sort an array of
+pool indices, for example, because they're just integers that denote an index in
+an array. You need access to the pool. If you're twenty stack frames deep and
+want to print the contents of a pool index, you need to pass the pool in. This
+is worse when thread are involved.
 
 # Reference Transforms {#transform}
 
