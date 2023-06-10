@@ -127,20 +127,39 @@ does this under the name ["mutable value semantics"][mvs].
 [val]: https://www.val-lang.dev/
 [mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
-
 # Benefits {#pros}
 
-- pros
-  - simplicity
-    - because references can only be created at the start of a function, and cannot be returned from functions, or stored in data structures
-    - lifetimes become redundant
-    - you no longer need lifetimes to enforce safety properties
-    - so references go from being a two argument type (pointed to type, lifetime)
-    - to a plain old fashioned "reference to T"
-    - the only check you have to make is, at a call site, where a reference is created
-      - you have to check the variable you're taking a reference to hasn't already been consumed
-        - example
-      - if mutable references are involved, you have to check the references don't overlap
+So why would we do this? What's gained from this loss of expressive power?
+
+The main benefit is simplicity: because references can only be created at
+function calls, cannot be stored (leaked) anywhere, and cannot be returned,
+borrow checking becomes trivial.
+
+In fact, lifetimes become redundant: you no longer need lifetime annotations
+_anywhere_ to enforce safety properties. Reference types become just `&T`,
+without the associated lifetime.
+
+All the borrow checker has to ensure is that when you're taking a reference to a variable:
+
+1. The reference expression is an argument to a function.
+1. The variable being referenced is not already dropped.
+1. If mutable references are involved, you have to check the paths don't
+   overlap.
+
+The last point means if you have a function like:
+
+```
+fn store<T>(place: &mut T, value: &T) { ... }
+```
+
+You can't call it like:
+
+```
+store(&mut x, &x);
+```
+
+Because having a mutable reference and an immutable reference at the same time
+breaks exclusivity.
 
 # Realizability {#realize}
 
@@ -176,6 +195,10 @@ Where references are used in a way that's more involved, however, you usually
 have to write down the lifetimes, but then you're trading off code complexity
 for whatever gain you expect to get (usually performance and safety) from using
 references.
+
+The main exception to this is iteration: iterators are the most widely-used Rust
+feature that involves storing a reference in a data structure. More on this
+later.
 
 # Costs {#cons}
 
