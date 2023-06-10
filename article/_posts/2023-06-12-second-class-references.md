@@ -315,20 +315,32 @@ is worse when thread are involved.
 
 # Reference Transforms {#transform}
 
-- reference transforms
-  - sometimes you want to return a reference
-  - usually this is in the context of data structures:
-    - you have a reference to an array, and want a reference to the nth element
-    - you have a reference to a hash map, and want a reference to the value
-    - etc.
-  - with second-class references you can't do that
-  - but you can relax the "no returning references from functions" restriction somewhat
-  - you can create a special class of function---call it a "reference transform"---that takes references and returns references
-  - the only restriction is that, just as references can only be created as arguments to functions, reference transforms can only be called as arguments to functions
-  - they is, they appear "in between" a call to a regular function, and a reference expression
-  - so instead of `f(&x)`, you can have `f(t(&x))`, where `t` is a reference transform
-  - Val has something like this, as far as I've been able to understand, in the form of subscripts, but subscripts are actually coroutines
-  - to be honest I don't understand Val well enough
+Sometimes you want to return a reference from a function. Usually this is in the
+context of data structures: if you have a reference to an array, you want a way
+to get a reference to the _n_-th element and such.
+
+With second class references you can't do that. But there is a simple relaxation
+of the "no returning references from functions" restriction that works.
+
+You can define a special class of functions---call the _reference
+transforms_---that can take references and return more interior references. In
+turn, reference transforms are restricted:
+
+1. Like reference expressions, reference transforms can only be called as an
+   argument to a function.
+2. The arguments to a reference transform are either a reference expression or
+   another call to a reference transform.
+
+In other words: reference transforms can only appear _between_ function calls
+and reference expressions. So if you can write `f(&x)`, you can also write
+`f(t(&x))`, or `f(t(u(v(&x))))`, where `t`, `u`, and `v,` are reference
+transforms.
+
+Val has something like this, as far as I've been able to understand, in the form
+of [subscripts][sub], but subscripts are actually coroutines. To be honest I
+don't understand Val well enough to explain it in detail.
+
+[sub]: https://tour.val-lang.dev/subscripts
 
 # Conclusion {#conclusion}
 
