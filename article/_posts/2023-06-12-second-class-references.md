@@ -387,8 +387,8 @@ type system and borrow-checker rules still fit [on a page][ref].
 Another thing I didn't touch on is closures. Val [has closures][closure], and
 they can capture immutable as well as mutable references, but it's not clear to
 me what restrictions Val imposes here to preserve safety. Also, Val has a
-concept of [remote parts][remote], which I think is a way to do references
-without lifetimes.
+concept of [remote parts][remote], which I think is a way to store references in
+data structures without involving lifetimes.
 
 [closure]: https://tour.val-lang.dev/functions-and-methods#closures
 [remote]: https://github.com/val-lang/val/blob/8d4dadc3ecb3d8f098a4e4f12139eb8bcd3950e4/Docs/RemoteParts.md?plain=1#L1
