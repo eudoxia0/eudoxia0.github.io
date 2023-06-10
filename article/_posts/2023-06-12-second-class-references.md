@@ -44,6 +44,30 @@ Graydon would have dropped from Rust:
 This post is about the idea of doing away with lifetimes in Rust, what that
 would bring to the table and how much it would cost.
 
+# Contents
+
+1. [First-Class References](#first)
+1. [Second-Class References](#second)
+1. [Realizability](#realize)
+1. [Benefits](#pros)
+1. [Costs](#cons)
+1. [Reference Transforms](#transform)
+1. [Conclusion](#conclusion)
+
+# First-Class References {#first}
+
+# Second-Class References {#second}
+
+# Realizability {#realize}
+
+# Benefits {#pros}
+
+# Costs {#cons}
+
+# Reference Transforms {#transform}
+
+# Conclusion {#conclusion}
+
 # Outline
 
 - first-class references and explicit lifetimes
