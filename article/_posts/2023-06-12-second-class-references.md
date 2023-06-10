@@ -56,20 +56,6 @@ would bring to the table and how much it would cost.
 
 # First-Class References {#first}
 
-# Second-Class References {#second}
-
-# Realizability {#realize}
-
-# Benefits {#pros}
-
-# Costs {#cons}
-
-# Reference Transforms {#transform}
-
-# Conclusion {#conclusion}
-
-# Outline
-
 - first-class references and explicit lifetimes
   - references are pointers with a compile-time tag that helps enforce safety guarantees, namely
     - reference does not dangle
@@ -94,6 +80,8 @@ would bring to the table and how much it would cost.
     - reference types just another type
   - the cost is the borrow checker is very complex, in rustc, it's 27k lines of code
 
+# Second-Class References {#second}
+
 - second-class references
   - second class references are a restriction of first-class references
   - lose expressivity, gain simplicity
@@ -113,17 +101,7 @@ would bring to the table and how much it would cost.
     - swift
     - the val language
 
-- pros
-  - simplicity
-    - because references can only be created at the start of a function, and cannot be returned from functions, or stored in data structures
-    - lifetimes become redundant
-    - you no longer need lifetimes to enforce safety properties
-    - so references go from being a two argument type (pointed to type, lifetime)
-    - to a plain old fashioned "reference to T"
-    - the only check you have to make is, at a call site, where a reference is created
-      - you have to check the variable you're taking a reference to hasn't already been consumed
-        - example
-      - if mutable references are involved, you have to check the references don't overlap
+# Realizability {#realize}
 
 - doable
   - surprisingly, yes
@@ -140,6 +118,22 @@ would bring to the table and how much it would cost.
   - and the compiler transforms this to
     - example
   - where references are used in a way that's more involved (e.g., being stored in data structures) lifetimes usually have to be written
+
+# Benefits {#pros}
+
+- pros
+  - simplicity
+    - because references can only be created at the start of a function, and cannot be returned from functions, or stored in data structures
+    - lifetimes become redundant
+    - you no longer need lifetimes to enforce safety properties
+    - so references go from being a two argument type (pointed to type, lifetime)
+    - to a plain old fashioned "reference to T"
+    - the only check you have to make is, at a call site, where a reference is created
+      - you have to check the variable you're taking a reference to hasn't already been consumed
+        - example
+      - if mutable references are involved, you have to check the references don't overlap
+
+# Costs {#cons}
 
 - cons
   - loss of generality
@@ -176,6 +170,8 @@ would bring to the table and how much it would cost.
          - if you're in some code, twenty functions call, and you want to print a `StringRef`, no luck, you have to have planned to pass the string pool or a reference to it first.
          - across thread boundaries this gets worse
 
+# Reference Transforms {#transform}
+
 - reference transforms
   - sometimes you want to return a reference
   - usually this is in the context of data structures:
@@ -190,6 +186,8 @@ would bring to the table and how much it would cost.
   - so instead of `f(&x)`, you can have `f(t(&x))`, where `t` is a reference transform
   - Val has something like this, as far as I've been able to understand, in the form of subscripts, but subscripts are actually coroutines
   - to be honest I don't understand Val well enough
+
+# Conclusion {#conclusion}
 
 - conclusion
   - i wrote this article mostly to help myself understand mutable value semantics, and if they might be useful for Austral
