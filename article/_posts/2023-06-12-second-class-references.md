@@ -8,7 +8,7 @@ card_source: |
     [link]: https://www.moma.org/collection/works/79032
 ---
 
-[Graydon Hoare][gh], the creator of Rust, posted an article: [The Rust I Wanted
+[Graydon Hoare][gh], the creator of Rust, wrote an article: [The Rust I Wanted
 Had No Future][future] ([HN][hn], [Lobsters][lb]). It's an interesting
 discussion of programming language evolution, the competing pressures of
 expedience and technical perfection, and the social consequences of technical
