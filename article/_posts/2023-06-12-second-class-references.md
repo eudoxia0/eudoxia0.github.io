@@ -375,9 +375,9 @@ async that complicate lifetime analysis.
 
 But if you're comparing Austral and Rust, the benefits are less clear, because
 Austral's linear types and borrowing is already so simple. Austral's equivalent
-of a borrow checker is [~700 lines of OCaml]. The only downside of Austral is
-right now you have to write the lifetimes of the references you pass to
-functions, but I will probably implement lifetime (region) elision. At which
+of a borrow checker is [~700 lines of OCaml][lincheck]. The only downside of
+Austral is right now you have to write the lifetimes of the references you pass
+to functions, but I will probably implement lifetime (region) elision. At which
 point, you get most of the ergonomics of second-class references, but the linear
 type system and borrow-checker rules still fit [on a page][ref].
 
