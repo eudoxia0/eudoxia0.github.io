@@ -93,9 +93,7 @@ develope a kind of intuitive understanding of it.
 # Second-Class References {#second}
 
 Second-class references are a restriction of first-class references. You lose
-some generality, and gain simplicity.
-
-The idea is that second-class references:
+some generality, and gain simplicity. The idea is that references:
 
 1. Can't be returned from functions.
 1. Can't be stored in data structures.
