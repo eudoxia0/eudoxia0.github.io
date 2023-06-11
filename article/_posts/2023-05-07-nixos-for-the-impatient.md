@@ -217,7 +217,17 @@ file in your home directory.
 
 _Added on 2023-06-03_.
 
-Recently, [23.05][v2305] was released. To upgrade, I first updated my version of Home Manager:
+To upgrade every package to its latest version, just run:
+
+```bash
+$ sudo nix-channel --update
+```
+
+Then reload the configuration as normal.
+
+Upgrading from one major release to another is different. Recently,
+[23.05][v2305] was released. To upgrade to it, I first updated my version of
+Home Manager:
 
 [v2305]: https://nixos.org/blog/announcements.html#nixos-23.05
 
