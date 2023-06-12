@@ -175,6 +175,8 @@ libraries or applications---you'll find that the usage pattern of references is:
 This usage pattern is why Rust's [lifetime elision][elide] feature works. This
 lets you avoid writing lifetimes in most code. For example, you can write this:
 
+[elide]: https://doc.rust-lang.org/nomicon/lifetime-elision.html
+
 ```rust
 fn concatenate_strings(s1: &str, s2: &str, s3: &str) -> String {
     format!("{}{}{}", s1, s2, s3)
