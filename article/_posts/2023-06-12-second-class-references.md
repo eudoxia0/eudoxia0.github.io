@@ -88,7 +88,7 @@ The cost is complexity. The borrow checker is hard to understand, and hard to
 implement. People learning Rust struggle with the borrow checker, and even
 professional Rust programmers don't necessarily understand all of the rules,
 rather, they run into borrow-checking errors time and time again and gradually
-develope a kind of intuitive understanding of it.
+develop a kind of intuitive understanding of it.
 
 # Second-Class References {#second}
 
