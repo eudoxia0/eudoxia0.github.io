@@ -8,12 +8,17 @@ permalink: /about/
 
 # About Me
 
-I'm a programmer. In my free time, I write [open source code][port], which you
-can find on [my GitHub][gh]. My interests include programming languages,
-compilers, logic, linguistics, and history.
+I'm a software engineer. In my free time I write [open-source code][port],
+[build programming languages][austral], [write fiction][fiction], and [maintain
+a blog][blog].
 
 [port]: /portfolio/
+[austral]: https://github.com/austral/austral
+[blog]: /article/
+[fiction]: /fiction/
 [gh]: https://github.com/eudoxia0
+
+# Contact
 
 - Email address: [`fernando@borretti.me`][mail]
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
