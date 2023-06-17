@@ -31,9 +31,10 @@ compilers, logic, linguistics, and history.
 
 # Colophon
 
-This website is built with [Jekyll][jekyll] and [Sass][sass], a CSS
-preprocessor. Hosting is provided by [GitHub Pages][pages].
+This website is built with [Emacs][emacs], [Jekyll][jekyll], and
+[Sass][sass]. Hosting is provided by [GitHub Pages][pages].
 
+[emacs]: https://www.gnu.org/software/emacs/
 [jekyll]: http://jekyllrb.com/
 [sass]: http://sass-lang.com/
 [pages]: https://pages.github.com/
