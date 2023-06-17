@@ -8,9 +8,9 @@ permalink: /about/
 
 # About Me
 
-I'm a software engineer. In my free time I write [open-source code][port],
-[build programming languages][austral], [write fiction][fiction], and [maintain
-a blog][blog].
+I'm a software engineer. In my free time I write [code][port],
+[fiction][fiction], and a [blog][blog]; and [build a programming
+language][austral].
 
 [port]: /portfolio/
 [austral]: https://github.com/austral/austral
