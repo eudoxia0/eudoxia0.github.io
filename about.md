@@ -51,6 +51,14 @@ If any of this is interesting to you as well, [email me][mail].
 This is a repository for my [projects][port], [blog][blog], and
 [fiction][fiction].
 
+# Best Posts
+
+1. [Effective Spaced Repetition](/article/effective-spaced-repetition)
+1. [Unbundling Tools for Thought](/article/unbundling-tools-for-thought)
+1. [Introducing Austral: A Systems Language with Linear Types and Capabilities](/article/introducing-austral)
+1. [Language Pragmatics Engineering](/article/language-pragmatics)
+1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
+
 # Colophon
 
 This website is built with [Emacs][emacs], [Jekyll][jekyll], and
