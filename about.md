@@ -27,6 +27,8 @@ compilers, logic, linguistics, and history.
 [hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
 
+# About This Site
+
 # Colophon
 
 This website is built with [Jekyll][jekyll] and [Sass][sass], a CSS
