@@ -38,11 +38,10 @@ If this is interesting to you, [send me an email][mail].
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
 - GitHub: [`eudoxia0`][gh]
 - LinkedIn: [fborretti][ln]
-- Hacker News: [profile][hn], [submissions][hnsub], [comments][hncom].
+- Hacker News: [submissions][hnsub], [comments][hncom].
 
 [mail]: mailto:fernando@borretti.me
 [ln]: https://www.linkedin.com/in/fborretti
-[hn]: https://news.ycombinator.com/user?id=zetalyrae
 [hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
 
