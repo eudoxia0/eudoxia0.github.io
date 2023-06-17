@@ -19,16 +19,16 @@ language][austral].
 [gh]: https://github.com/eudoxia0
 
 I have too many interests to list exhaustively, but this is a representative
-sample:
+sample of how I spend my time:
 
 1. Software engineering, theory and practice. Compilers, programming languages,
    type systems, parsers; not abstractly but with the goal of improving
    engineering practices.
-2. Data modeling, ontologies, logic, information management: choosing the right
+1. Data modeling, ontologies, logic, information management: choosing the right
    formalisms to model the world.
-3. The future: what does life look like after biology, and what does the
+1. Self-improvement: autodidactism, lifting, productivity, time-tracking.
+1. The future: what does life look like after biology, and what does the
    universe look like after intelligence?
-4. Self-improvement: autodidactism, lifting, productivity, time-tracking.
 
 If this is interesting to you, [send me an email][mail].
 
