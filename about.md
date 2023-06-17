@@ -18,6 +18,18 @@ a blog][blog].
 [fiction]: /fiction/
 [gh]: https://github.com/eudoxia0
 
+I have too many interests to list, and purse them in the most undisciplined
+manner possible. Empirically, the topics that take up most of my time:
+
+1. Software engineering, theory and practice. Compilers, programming languages,
+   type systems, parsers; not abstractly but with the goal of improving
+   engineering practices.
+2. Data modeling, ontologies, logic, information management: choosing the right
+   formalisms to model the world.
+3. The future: what does life look like after biology, and what does the
+   universe look like after intelligence?
+4. Self-improvement: autodidactism, lifting, productivity, time-tracking.
+
 # Contact
 
 - Email: [`fernando@borretti.me`][mail]
@@ -34,7 +46,8 @@ a blog][blog].
 
 # About This Site
 
-
+This is a repository for my [projects][port], [blog][blog], and
+[fiction][fiction].
 
 # Colophon
 
