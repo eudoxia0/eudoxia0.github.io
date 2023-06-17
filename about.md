@@ -56,6 +56,8 @@ This is a repository for my [projects][port], [blog][blog], and
 1. [Introducing Austral: A Systems Language with Linear Types and Capabilities](/article/introducing-austral)
 1. [Language Pragmatics Engineering](/article/language-pragmatics)
 1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
+1. [Signed Integers are Asymmetrical](/article/signed-integers-asymmetrical)
+
 
 # Blogroll
 
