@@ -30,7 +30,7 @@ sample:
    universe look like after intelligence?
 4. Self-improvement: autodidactism, lifting, productivity, time-tracking.
 
-If any of this is interesting to you as well, [email me][mail].
+If this is interesting to you, [send me an email][mail].
 
 # Contact
 
