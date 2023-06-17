@@ -59,6 +59,12 @@ This is a repository for my [projects][port], [blog][blog], and
 1. [Language Pragmatics Engineering](/article/language-pragmatics)
 1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
 
+# Blogroll
+
+My RSS feeds: [`feedlist.opml`][feeds].
+
+[feeds]: https://raw.githubusercontent.com/eudoxia0/dotfiles/master/sources/feedlist.opml
+
 # Colophon
 
 This website is built with [Emacs][emacs], [Jekyll][jekyll], and
