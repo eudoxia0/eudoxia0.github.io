@@ -8,30 +8,67 @@ permalink: /about/
 
 # About Me
 
-I'm a programmer. In my free time, I write [open source code][port], which you
-can find on [my GitHub][gh]. My interests include programming languages,
-compilers, logic, linguistics, and history.
+I'm a software engineer. In my free time I write [code][port], a [blog][blog],
+[fiction][fiction], and [build a programming language][austral].
 
 [port]: /portfolio/
+[austral]: https://github.com/austral/austral
+[blog]: /article/
+[fiction]: /fiction/
 [gh]: https://github.com/eudoxia0
 
-- Email address: [`fernando@borretti.me`][mail]
+I have too many interests to list exhaustively, but this is a representative
+sample of how I spend my time:
+
+1. Software engineering, theory and practice. Compilers, programming languages,
+   type systems, parsers; not abstractly but with the goal of improving
+   engineering practices.
+1. Data modeling, ontologies, logic, information management: choosing the right
+   formalisms to model the world.
+1. Self-improvement: autodidactism, lifting, productivity, time-tracking.
+1. The future: what does life look like after biology, and what does the
+   universe look like after intelligence?
+
+If this is interesting to you, [send me an email][mail].
+
+# Contact
+
+- Email: [`fernando@borretti.me`][mail]
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
 - GitHub: [`eudoxia0`][gh]
-- [LinkedIn][ln]
-- Hacker News: [profile][hn], [submissions][hnsub], [comments][hncom].
+- LinkedIn: [fborretti][ln]
+- Hacker News: [submissions][hnsub], [comments][hncom].
 
 [mail]: mailto:fernando@borretti.me
 [ln]: https://www.linkedin.com/in/fborretti
-[hn]: https://news.ycombinator.com/user?id=zetalyrae
 [hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
 
+# About This Site
+
+This is a repository for my [projects][port], [blog][blog], and
+[fiction][fiction].
+
+# Best Posts
+
+1. [Effective Spaced Repetition](/article/effective-spaced-repetition)
+1. [Unbundling Tools for Thought](/article/unbundling-tools-for-thought)
+1. [Introducing Austral: A Systems Language with Linear Types and Capabilities](/article/introducing-austral)
+1. [Language Pragmatics Engineering](/article/language-pragmatics)
+1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
+
+# Blogroll
+
+My RSS feeds: [`feedlist.opml`][feeds].
+
+[feeds]: https://raw.githubusercontent.com/eudoxia0/dotfiles/master/sources/feedlist.opml
+
 # Colophon
 
-This website is built with [Jekyll][jekyll] and [Sass][sass], a CSS
-preprocessor. Hosting is provided by [GitHub Pages][pages].
+This website is built with [Emacs][emacs], [Jekyll][jekyll], and
+[Sass][sass]. Hosting is provided by [GitHub Pages][pages].
 
+[emacs]: https://www.gnu.org/software/emacs/
 [jekyll]: http://jekyllrb.com/
 [sass]: http://sass-lang.com/
 [pages]: https://pages.github.com/
