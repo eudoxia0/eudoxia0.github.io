@@ -20,10 +20,10 @@ a blog][blog].
 
 # Contact
 
-- Email address: [`fernando@borretti.me`][mail]
+- Email: [`fernando@borretti.me`][mail]
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
 - GitHub: [`eudoxia0`][gh]
-- [LinkedIn][ln]
+- LinkedIn: [fborretti][ln]
 - Hacker News: [profile][hn], [submissions][hnsub], [comments][hncom].
 
 [mail]: mailto:fernando@borretti.me
@@ -33,6 +33,8 @@ a blog][blog].
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
 
 # About This Site
+
+
 
 # Colophon
 
