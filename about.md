@@ -18,8 +18,8 @@ language][austral].
 [fiction]: /fiction/
 [gh]: https://github.com/eudoxia0
 
-I have too many interests to list, and purse them in the most undisciplined
-manner possible. Empirically, the topics that take up most of my time:
+I have too many interests to list exhaustively, but this is a representative
+sample:
 
 1. Software engineering, theory and practice. Compilers, programming languages,
    type systems, parsers; not abstractly but with the goal of improving
