@@ -30,6 +30,8 @@ manner possible. Empirically, the topics that take up most of my time:
    universe look like after intelligence?
 4. Self-improvement: autodidactism, lifting, productivity, time-tracking.
 
+If any of this is interesting to you as well, [email me][mail].
+
 # Contact
 
 - Email: [`fernando@borretti.me`][mail]
