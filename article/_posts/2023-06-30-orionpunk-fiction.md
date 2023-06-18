@@ -62,6 +62,15 @@ Few of these tick every box, but I call them Orionpunk by approximation.
 
 ## Orion's Arm
 
+A [collaborative worldbuilding project][bestoa] spanning 10,000 years of future
+history. After the first few thousand years, the hard SF drops somewhat: there's
+wormholes and reactionless drives, but the wormholes are [constrained][worm]
+enough that you have a ruleset for the world, as opposed to soft sci fi
+"anything goes". And there's aliens too, but it doesn't detract from the realism
+of the rest of the setting.
+
+[bestoa]: /article/best-of-orions-arm
+[worm]: https://www.orionsarm.com/eg-article/48545a0f6352a
 
 ## A Requiem for Homo Sapiens
 
