@@ -25,6 +25,8 @@ Orionpunk is fiction along the lines of [Orion's Arm][oa]: hard science fiction
 set in a transhuman setting; without FTL, without aliens (except the ones we
 make ourselves into), spanning vast gulfs of time and space.
 
+[oa]: https://www.orionsarm.com/
+
 1. **Hard Science:** out of basic respect for the audience. Because otherwise
    it's fake. And because constraints liberate and liberties constrain, and
    overwhelmingly hard SF is more imaginative than "Golden Age" hyperdrive and
@@ -55,6 +57,8 @@ make ourselves into), spanning vast gulfs of time and space.
    the stars.
 
 # Prior Art
+
+Few of these tick every box, but I call them Orionpunk by approximation.
 
 ## Orion's Arm
 
