@@ -88,9 +88,9 @@ A keypair in GnuPG has a set of capabilities, things you can use it for:
 1. **Authenticate (A):** the key can be used to authenticate the user, for
    example, in SSH.
 
-By default, when GnuPG creates generates new keys, it creates a master keypair
+By default, when GnuPG creates generates new keys, it creates a primary keypair
 with **Sign** and **Certify** capabilities (denoted `[SC]`), and a subkey signed
-by the master with `[E]` capabilities just for encryption.
+by the primary with `[E]` capabilities just for encryption.
 
 ## Primary Keys and Subkeys {#primary}
 
