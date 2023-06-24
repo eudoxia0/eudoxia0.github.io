@@ -66,22 +66,6 @@ parties have to have the same key, which means the key must be exchanged
 securely in some way. Establishing the secure channel is difficult. Public-key
 cryptography removes this problem.
 
-Public-key cryptography is computationally more expensive than symmetric
-cryptography. This gave rise to **hybrid ciphers**, which combine both, using
-public-key cryptography to establish the secure channel for exchanging a
-disposable, one-time-use symmetric key, and using the shared symmetric key for
-subsequent communication.
-
-Using hybrid cryptography, I can send you an encrypted email by:
-
-1. Generating a disposable symmetric key.
-1. Using your public key to encrypt the symmetric key.
-1. Using the symmetric key to encrypt my message.
-1. Then I send you both ciphertexts.
-1. You decrypt the symmetric key, and use it to decrypt the actual message.
-
-Hybrid ciphers are widely used: TLS, SSH, and GnuPG use them.
-
 A key concept in cryptography is **Kerckhoffs's principle**: a cryptosystem must
 be secure if _everything about it is known_ but the private key. Therefore a
 good cryptosystem is one that does not rely on secrecy of the algorithm or
