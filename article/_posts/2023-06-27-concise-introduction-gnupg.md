@@ -182,9 +182,106 @@ After confirming your choices, you will be asked to enter a passphrase to unlock
 the key. Afterwards, the key is generated, and you get an inscrutable block of
 text like this:
 
+```
+[snip]
+```
+
+Let's break this down line by line:
+
+1. `pub` is the key type, it means this is a public key (the private key was
+   also generated, but is not shown).
+  - `ed25519` means we're using Curve 25519 as intended.
+  - `2023-06-24` is when the key was created.
+  - `[SC]` lists the key's capabilities: `S` for Sign means we can sign files,
+    `C` for certify means we can create certificates.
+  - `[expires: 2028-06-22]` is self-explanatory.
+2. The ID on the second line is the **fingerprint** of the public key. This is a
+   hash of the public key itself, and it is represented as 40 hexadecimal
+   characters.
+3. `uid` is short for `USER-ID`, this is your name, comment, and email.
+4. `sub` indicates a subkey, in this case, the subkey is for encryption. This
+   subkey uses `cv25519` as intended, the capabilities are just `[E]` for
+   Encrypt, it expires the same day as the public key.
+
 ## Listing Keys {#list}
 
+To list your public keys, run:
+
+```bash
+$ gpg --list-public-keys --keyid-format=long
+[snip]
+
+```
+
+This is basically the output we get when generating the key, with some differences:
+
+1. `pub   [snip]`
+   - The string `[snip]` is the short key ID of the public key. This
+     is the last 16 characters of the full key ID for the public key.
+1. `[snip]`:
+   - The fingerprint of the public key. Note that the last 16 characters are the
+     same as the short key ID on line one.
+2. `sub [snip]`: this shows `[snip]` is the key ID
+   of the signing subkey.
+   - The short key ID of the signing subkey.
+
+Analogously:
+
+```bash
+$ gpg --list-secret-keys --keyid-format=long
+```
+
+Shows:
+
+```
+[snip]```
+
+The only thing to note here is the fingerprint is the fingerprint of the
+corresponding public key, not of the private key.
+
 ## Exporting Public Keys {#export}
+
+To let people send you messages with a public key, you need to give it to them
+in some way. You do this by exporting the key.
+
+The general form is:
+
+```bash
+$ gpg --export --armor <key fingerprint, key ID, or user ID>
+```
+
+For the key we just created:
+
+```bash
+$ gpg --export --armor [snip]
+[snip]
+```
+
+This key is in "ASCII Armor" format, a way of representing the (binary) key data
+as ASCII text. If you're writing this to a file, the file extension is `.asc`.
+
+The following invocations are all equivalent:
+
+```bash
+gpg --export --armor [snip]
+gpg --export --armor [snip]
+gpg --export --armor [snip]
+gpg --export --armor "Fernando Borretti (Email) <fernando@borretti.me>"
+```
+
+Exporting the private key lets you back it up.
+
+The general form is:
+
+```bash
+$ gpg --export-secret-keys --armor <key fingerprint, key ID, or user ID>
+```
+
+For our example key:
+
+```bash
+$ gpg --export-secret-keys --armor [snip]
+```
 
 ## Importing Public Keys {#import}
 
