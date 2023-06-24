@@ -75,7 +75,91 @@ implementation.
 
 # Key Management {#mgmt}
 
+This section describes the lifecycle of keys: creating them, backing them up,
+sharing them, and revoking them.
+
 ## Generating a Key {#gen}
+
+Run:
+
+```bash
+$ gpg --full-generate-key --expert
+```
+
+You will be prompted for a key type:
+
+```
+Please select what kind of key you want:
+   (1) RSA and RSA
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+   (9) ECC (sign and encrypt) *default*
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (13) Existing key
+  (14) Existing key from card
+Your selection?
+```
+
+The default is correct: ECC is newer and safer than RSA. Select "ECC (sign and
+encrypt)" by entering the number and pressing enter. You will then be prompted
+by a curve:
+
+```
+Please select which elliptic curve you want:
+   (1) Curve 25519 *default*
+   (2) Curve 448
+   (3) NIST P-256
+   (4) NIST P-384
+   (5) NIST P-521
+   (6) Brainpool P-256
+   (7) Brainpool P-384
+   (8) Brainpool P-512
+   (9) secp256k1
+Your selection?
+```
+
+Again, we want the default, "Curve 25519". You will then be prompted for the
+expiry:
+
+```
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+```
+
+I choose `5y` and press enter, and confirm the expiry date:
+
+```
+Key expires at Thu 22 Jun 2028 10:26:58 AM AEST
+Is this correct? (y/N) y
+```
+
+You will then be prompted for your name, email address, and comment. The comment
+field is to disambiguate multiple keys belonging to the same person. For
+example, you might have one key for email correspondence, another for signing
+software releases, and another for signing encrypted backups.
+
+```
+Real name: Fernando Borretti
+Email address: fernando@borretti.me
+Comment: Email
+You selected this USER-ID:
+    "Fernando Borretti (Email) <fernando@borretti.me>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+```
+
+After confirming your choices, you will be asked to enter a passphrase to unlock
+the key. Afterwards, the key is generated, and you get an inscrutable block of
+text like this:
 
 ## Listing Keys {#list}
 
