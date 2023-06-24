@@ -116,3 +116,6 @@ implementation.
 ## Verifying a Message {#verify}
 
 # See Also {#see-also}
+
+- [GnuPG page on the Arch Linux wiki](https://wiki.archlinux.org/title/GnuPG)
+- [GnuPG FAQ](https://www.gnupg.org/faq/gnupg-faq.html)
