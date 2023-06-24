@@ -18,6 +18,7 @@ decided to sit down and learn it, and write down what I learned.
 1. [Key Management](#mgmt)
     1. [Generating a Key](#gen)
     1. [Listing Keys](#list)
+    1. [Primary Keys and Subkeys](#primary)
     1. [Exporting Public Keys](#export)
     1. [Importing Public Keys](#import)
     1. [Backup and Restore](#backup)
@@ -257,6 +258,33 @@ ssb   cv25519/5162AE5D66690953 2023-06-24 [E] [expires: 2028-06-22]
 
 The fingerprints and key IDs are the same, `sec` means "secret key" and `ssb`
 means "secret subkey".
+
+## Primary Keys and Subkeys {#primary}
+
+Most cryptographic keys can be used for encryption, decryption, signing, etc. So
+the natural tendency would be to use one key per person for every purpose. This
+creates a single point of failure: if your one private key is compromised, then
+an attack can unlock everything you do through it: email, encrypted files,
+digital signatures.
+
+GnuPG organizes keys hierarchically into **primary keys** and **subkeys**. A
+primary key is a public/private keypair that is used _exclusively_ to digitally
+sign (that is: to cryptographically attest "I own this") subordinate keys
+(subkeys). The subkeys are then used for specific purposes: encryption, signing
+messages, etc.
+
+The only connection between a primary key and its subkeys is that the primary
+key is used to digitally sign the subkey, that is, to cryptographically mark you
+as the author of the subkey. Otherwise, subkeys can be used completely
+independently: you can use a subkey without having the primary key in the same
+computer. Subkeys can be revoked or made to expire independently of the primary
+key they're a part of.
+
+The idea is: one primary key per identity, one subkey per role. So you might
+have a single primary key pair, but one subkey for email, another for your
+encrypted backups, etc. The primary keypair should be stored in a secure place
+(say, offline storage), while the subkeys can be stored in your regular computer
+for daily use.
 
 ## Exporting Public Keys {#export}
 
