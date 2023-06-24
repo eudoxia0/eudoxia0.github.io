@@ -1,6 +1,9 @@
 ---
 title: Test Autodiscovery is a Silver Bullet
 summary: To encourage good practices, make them frictionless.
+card: test-autodiscovery-silver-bullet.jpg
+card_source: |
+    “Cover for Neuromancer, Paul Klee, 1927, watercolor, from Wikipedia”, DALL-E, June 2022.
 ---
 
 I tend to write a lot more tests in Rust and [OCaml][ocaml]. Why? Not because
