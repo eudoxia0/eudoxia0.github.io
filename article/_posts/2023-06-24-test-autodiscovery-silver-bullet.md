@@ -17,6 +17,11 @@ summary: To encourage good practices, make them frictionless.
     - that's it
     - that's all there is to it
     - cargo will find all tests and run them automatically
+    - every test is automatically run in parallel
+    - every test is a function that starts from nothing and returns nothing
+    - suites? every module is a test suite.
+    - setup, teardown? how about you just call some functions
+    - if you need a more sophisticated test harness, you canm build that yourself
 - compare ocaml
     - when i was setting up tests for the austral compiler, it spent a very long time just to even figure out how to run the most basic `2 + 2 = 4` unit test in using dune
     - to repeat: because the build system won't generate a stub unit test for you, just setting up a test harness is this effortful odyssey of reading old Discourse threads and reddit posts
@@ -24,6 +29,7 @@ summary: To encourage good practices, make them frictionless.
     - to write a test, I have to
         - write the test function
         - wire it up to a test suite
+        - export a function to run the test suite
         - so i have to choose both the test's function name and a string description of it
         - register the module with the `dune` file
         - then, and only then, can I run `dune test`
