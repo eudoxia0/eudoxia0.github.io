@@ -310,3 +310,4 @@ for daily use.
 
 - [GnuPG page on the Arch Linux wiki](https://wiki.archlinux.org/title/GnuPG)
 - [GnuPG FAQ](https://www.gnupg.org/faq/gnupg-faq.html)
+- [Subkeys](https://wiki.debian.org/Subkeys) in the Debian wiki.
