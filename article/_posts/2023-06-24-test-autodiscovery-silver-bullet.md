@@ -2,3 +2,37 @@
 title: Test Autodiscovery is a Silver Bullet
 summary: To encourage good practices, make them frictionless.
 ---
+
+- i write more tests in rust than ocaml
+- why?
+    - because rust needs more tests
+    - no
+    - rust and ocaml are at roughly equivalent levels of safety
+    - it's because of ergonomics
+- the cargo people have done enough work that the entire process of creating a unit test in rust is
+    - open `tests/test.rs`
+    - write a function
+    - annotate it with `#[test]`
+    - run `cargo test`
+    - that's it
+    - that's all there is to it
+    - cargo will find all tests and run them automatically
+- compare ocaml
+    - when i was setting up tests for the austral compiler, it spent a very long time just to even figure out how to run the most basic `2 + 2 = 4` unit test in using dune
+    - to repeat: because the build system won't generate a stub unit test for you, just setting up a test harness is this effortful odyssey of reading old Discourse threads and reddit posts
+    - and what I managed to set up was horribly unergonomic
+    - to write a test, I have to
+        - write the test function
+        - wire it up to a test suite
+        - so i have to choose both the test's function name and a string description of it
+        - register the module with the `dune` file
+        - then, and only then, can I run `dune test`
+        - and then inevitably debug some import visibility issue
+- the result:
+    - in theory, ocaml should be safer than rust, because it's garbage-collected, you can easily write purely functional code etc
+    - in practice, my ocaml code is woefully under-tested, while my rust code is tested very which way
+    - because in ocaml writing test is expensive
+    - but in rust it's easy
+    - and this ties into language pragmatics:
+        - discipline does not scale
+        - if you want people to use good practices, you have to make it ergonomic to do so
