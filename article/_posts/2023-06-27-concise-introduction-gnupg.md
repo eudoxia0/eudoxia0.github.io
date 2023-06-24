@@ -288,48 +288,6 @@ for daily use.
 
 ## Exporting Public Keys {#export}
 
-To let people send you messages with a public key, you need to give it to them
-in some way. You do this by exporting the key.
-
-The general form is:
-
-```bash
-$ gpg --export --armor <key fingerprint, key ID, or user ID>
-```
-
-For the key we just created:
-
-```bash
-$ gpg --export --armor [snip]
-[snip]
-```
-
-This key is in "ASCII Armor" format, a way of representing the (binary) key data
-as ASCII text. If you're writing this to a file, the file extension is `.asc`.
-
-The following invocations are all equivalent:
-
-```bash
-gpg --export --armor [snip]
-gpg --export --armor [snip]
-gpg --export --armor [snip]
-gpg --export --armor "Fernando Borretti (Email) <fernando@borretti.me>"
-```
-
-Exporting the private key lets you back it up.
-
-The general form is:
-
-```bash
-$ gpg --export-secret-keys --armor <key fingerprint, key ID, or user ID>
-```
-
-For our example key:
-
-```bash
-$ gpg --export-secret-keys --armor [snip]
-```
-
 ## Importing Public Keys {#import}
 
 ## Backup and Restore {#backup}
