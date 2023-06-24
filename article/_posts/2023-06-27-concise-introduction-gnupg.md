@@ -14,11 +14,13 @@ decided to sit down and learn it, and write down what I learned.
 # Contents
 
 1. [Concepts and Terminology](#concepts)
+1. [GnuPG Concepts](#gnupg)
+    1. [Key Capabilities](#cap)
+    1. [Primary Keys and Subkeys](#primary)
 1. [Installing GnuPG on Nix](#nix)
 1. [Key Management](#mgmt)
     1. [Generating a Key](#gen)
     1. [Listing Keys](#list)
-    1. [Primary Keys and Subkeys](#primary)
     1. [Exporting Public Keys](#export)
     1. [Importing Public Keys](#import)
     1. [Backup and Restore](#backup)
@@ -71,6 +73,51 @@ A key concept in cryptography is **Kerckhoffs's principle**: a cryptosystem must
 be secure if _everything about it is known_ but the private key. Therefore a
 good cryptosystem is one that does not rely on secrecy of the algorithm or
 implementation.
+
+# GnuPG Concepts {#gnupg}
+
+## Key Capabilities
+
+A keypair in GnuPG has a set of capabilities, things you can use it for:
+
+1. **Encrypt (E):** the public key can be used to encrypt data, and the private
+   key can be used to decrypt it.
+1. **Sign (S):** the private key can digitally sign a message, and the public
+   key can be used to verify it.
+1. **Certify (C):** the private key can digitally sign another key.
+1. **Authenticate (A):** the key can be used to authenticate the user, for
+   example, in SSH.
+
+By default, when GnuPG creates generates new keys, it creates a master keypair
+with **Sign** and **Certify** capabilities (denoted `[SC]`), and a subkey signed
+by the master with `[E]` capabilities just for encryption.
+
+## Primary Keys and Subkeys {#primary}
+
+Most cryptographic keys can be used for encryption, decryption, signing, etc. So
+the natural tendency would be to use one key per person for every purpose. This
+creates a single point of failure: if your one private key is compromised, then
+an attack can unlock everything you do through it: email, encrypted files,
+digital signatures.
+
+GnuPG organizes keys hierarchically into **primary keys** and **subkeys**. A
+primary key is a public/private keypair that is used _exclusively_ to digitally
+sign (that is: to cryptographically attest "I own this") subordinate keys
+(subkeys). The subkeys are then used for specific purposes: encryption, signing
+messages, etc.
+
+The only connection between a primary key and its subkeys is that the primary
+key is used to digitally sign the subkey, that is, to cryptographically mark you
+as the author of the subkey. Otherwise, subkeys can be used completely
+independently: you can use a subkey without having the primary key in the same
+computer. Subkeys can be revoked or made to expire independently of the primary
+key they're a part of.
+
+The idea is: one primary key per identity, one subkey per role. So you might
+have a single primary key pair, but one subkey for email, another for your
+encrypted backups, etc. The primary keypair should be stored in a secure place
+(say, offline storage), while the subkeys can be stored in your regular computer
+for daily use.
 
 # Installing GnuPG on Nix {#nix}
 
@@ -258,33 +305,6 @@ ssb   cv25519/5162AE5D66690953 2023-06-24 [E] [expires: 2028-06-22]
 
 The fingerprints and key IDs are the same, `sec` means "secret key" and `ssb`
 means "secret subkey".
-
-## Primary Keys and Subkeys {#primary}
-
-Most cryptographic keys can be used for encryption, decryption, signing, etc. So
-the natural tendency would be to use one key per person for every purpose. This
-creates a single point of failure: if your one private key is compromised, then
-an attack can unlock everything you do through it: email, encrypted files,
-digital signatures.
-
-GnuPG organizes keys hierarchically into **primary keys** and **subkeys**. A
-primary key is a public/private keypair that is used _exclusively_ to digitally
-sign (that is: to cryptographically attest "I own this") subordinate keys
-(subkeys). The subkeys are then used for specific purposes: encryption, signing
-messages, etc.
-
-The only connection between a primary key and its subkeys is that the primary
-key is used to digitally sign the subkey, that is, to cryptographically mark you
-as the author of the subkey. Otherwise, subkeys can be used completely
-independently: you can use a subkey without having the primary key in the same
-computer. Subkeys can be revoked or made to expire independently of the primary
-key they're a part of.
-
-The idea is: one primary key per identity, one subkey per role. So you might
-have a single primary key pair, but one subkey for email, another for your
-encrypted backups, etc. The primary keypair should be stored in a secure place
-(say, offline storage), while the subkeys can be stored in your regular computer
-for daily use.
 
 ## Exporting Public Keys {#export}
 
