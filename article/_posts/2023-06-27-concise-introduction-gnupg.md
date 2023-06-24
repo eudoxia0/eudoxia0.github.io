@@ -247,12 +247,16 @@ $ gpg --list-secret-keys --keyid-format=long
 Shows:
 
 ```
-[snip]
+/home/eudoxia/.gnupg/pubring.kbx
+--------------------------------
+sec   ed25519/488EEF25DBCF05FA 2023-06-24 [SC] [expires: 2028-06-22]
+      82F39A8DF2911A562ECE77A4488EEF25DBCF05FA
+uid                 [ultimate] Fernando Borretti (Email) <fernando@borretti.me>
+ssb   cv25519/5162AE5D66690953 2023-06-24 [E] [expires: 2028-06-22]
 ```
 
-
-The only thing to note here is the fingerprint is the fingerprint of the
-corresponding public key, not of the private key.
+The fingerprints and key IDs are the same, `sec` means "secret key" and `ssb`
+means "secret subkey".
 
 ## Exporting Public Keys {#export}
 
