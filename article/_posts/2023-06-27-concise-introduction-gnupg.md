@@ -331,3 +331,4 @@ means "secret subkey".
 - [GnuPG page on the Arch Linux wiki](https://wiki.archlinux.org/title/GnuPG)
 - [GnuPG FAQ](https://www.gnupg.org/faq/gnupg-faq.html)
 - [Subkeys](https://wiki.debian.org/Subkeys) in the Debian wiki.
+- [Kernel Maintainer PGP guide](https://www.kernel.org/doc/html/next/process/maintainer-pgp-guide.html)
