@@ -17,7 +17,7 @@ decided to sit down and learn it, and write down what I learned.
 1. [GnuPG Concepts](#gnupg)
     1. [Key Capabilities](#cap)
     1. [Primary Keys and Subkeys](#primary)
-1. [Installing GnuPG on Nix](#nix)
+1. [Installing GnuPG on NixOS](#nix)
 1. [Key Management](#mgmt)
     1. [Generating a Key](#gen)
     1. [Listing Keys](#list)
@@ -119,7 +119,7 @@ encrypted backups, etc. The primary keypair should be stored in a secure place
 (say, offline storage), while the subkeys can be stored in your regular computer
 for daily use.
 
-# Installing GnuPG on Nix {#nix}
+# Installing GnuPG on NixOS {#nix}
 
 If you're using [NixOS][nix], add `gnupg` to the list of packages:
 
