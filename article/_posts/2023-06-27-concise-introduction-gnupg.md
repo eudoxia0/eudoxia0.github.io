@@ -73,6 +73,27 @@ implementation.
 
 # Installing GnuPG on Nix {#nix}
 
+If you're using [NixOS][nix], add `gnupg` to the list of packages:
+
+[nix]: https://nixos.org/
+
+```nix
+users.users.eudoxia.packages = with pkgs; [
+  gnupg
+  # ...
+];
+```
+
+And enable the agent:
+
+```nix
+# GnuPG agent.
+programs.gnupg.agent = {
+   enable = true;
+   pinentryFlavor = "curses"; # or `tty`, `gtk2`
+};
+```
+
 # Key Management {#mgmt}
 
 This section describes the lifecycle of keys: creating them, backing them up,
