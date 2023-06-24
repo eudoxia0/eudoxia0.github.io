@@ -86,3 +86,33 @@ A key concept in cryptography is **Kerckhoffs's principle**: a cryptosystem must
 be secure if _everything about it is known_ but the private key. Therefore a
 good cryptosystem is one that does not rely on secrecy of the algorithm or
 implementation.
+
+# Installing GnuPG on Nix {#nix}
+
+# Key Management {#mgmt}
+
+## Generating a Key {#gen}
+
+## Listing Keys {#list}
+
+## Exporting Public Keys {#export}
+
+## Importing Public Keys {#import}
+
+## Backup and Restore {#backup}
+
+## Key Revocation {#revoke}
+
+# Encryption {#crypt}
+
+## Encrypting a File {#encrypt}
+
+## Decrypting a File {#decrypt}
+
+# Digital Signatures {#signatures}
+
+## Signing a Message {#sign}
+
+## Verifying a Message {#verify}
+
+# See Also {#see-also}
