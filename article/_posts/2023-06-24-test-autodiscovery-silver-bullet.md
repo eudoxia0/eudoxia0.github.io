@@ -6,9 +6,9 @@ card_source: |
     “Cover for Neuromancer, Paul Klee, 1927, watercolor, from Wikipedia”, DALL-E, June 2022.
 ---
 
-I tend to write a lot more tests in Rust and [OCaml][ocaml]. Why? Not because
-Rust is so unsafe it needs more tests. Rust and OCaml are at roughly equivalent
-levels of safety. It's because of ergonomics.
+I tend to write a lot more tests in Rust than in [OCaml][ocaml]. Why? Not
+because Rust is so unsafe it needs more tests. Rust and OCaml are at roughly
+equivalent levels of safety. It's because of ergonomics.
 
 [ocaml]: /article/two-years-ocaml
 
