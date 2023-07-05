@@ -37,7 +37,7 @@ If this is interesting to you, [send me an email][mail].
 - Twitter: [`@zetalyrae`](https://twitter.com/zetalyrae)
 - Bluesky: [`@eudoxia.bsky.social`](https://staging.bsky.app/profile/eudoxia.bsky.social)
 - GitHub: [`eudoxia0`][gh]
-- LinkedIn: [fborretti][ln]
+- LinkedIn: [`fborretti`][ln]
 - Hacker News: [submissions][hnsub], [comments][hncom].
 
 [mail]: mailto:fernando@borretti.me
