@@ -25,7 +25,6 @@ performance and low-level control of languages like C.
         1. [Safety Properties](#linear-safety)
         1. [Problems](#linear-problem)
     1. [Affine Types](#affine)
-    1. [Linear Observers](#obs)
     1. [Borrowing](#borrow)
     1. [First-Class References](#ref1)
     1. [Second-Class References](#ref2)
@@ -286,12 +285,6 @@ Cons:
 - The double-throw problem still exists in Rust: a destructor that fails
   (because e.g. closing the file handle failed, or closing a socket failed) will
   simply abort the program.
-
-## Linear Observers {#obs}
-
-- linear observers are from linearml
-- they are like a wrapper around a linear type, that can be used to read data
-  from it, but they can't be stored in data structures
 
 ## Borrowing {#borrow}
 
