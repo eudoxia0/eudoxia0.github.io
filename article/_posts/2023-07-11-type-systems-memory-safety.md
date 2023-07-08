@@ -64,6 +64,10 @@ Memory safety is a bundle of things:
 1. **Data Race Freedom:** memory can be used by multiple threads without complex
    runtime access checks (locks, mutexes etc.)
 
+Null safety and buffer overflows are solved by quotidian solutions: option types
+and range checks. Use-after-free and leak freedom are harder to enforce, and
+require potentially a lot more compile time machinery.
+
 # Resource Safety {#resource}
 
 - the problems with memory safety generalize to things other than memory
