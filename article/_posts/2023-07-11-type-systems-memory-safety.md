@@ -70,12 +70,14 @@ require potentially a lot more compile time machinery.
 
 # Resource Safety {#resource}
 
-- the problems with memory safety generalize to things other than memory
-- they generalize to _resources_
-  - a resource is something that has a lifetime: it has to be created, used, and disposed in a particular way
-  - bytes and floats and string literals are not resources
-  - heap-allocated memory, file handles, network sockets, database handles, locks, mutexes, etc. are resources
-  - they have a contract: the api has to be used in a particular order and number of times
+Use-after-free and leak freedom generalize beyond memory. Some values are also a
+_resource_: something that has a lifetime and has to be acquired, used, and
+disposed in a particular way.
+
+Bytes and floats are not resources. Heap-allocated memory, file handles, network
+sockets, database handles, locks, mutexes, etc. are resources. They have a
+contract: the API functions have to be used in a particular order, in a
+particular number of times.
 
 # Approaches {#approaches}
 
