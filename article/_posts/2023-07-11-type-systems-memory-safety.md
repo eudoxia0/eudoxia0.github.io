@@ -11,6 +11,7 @@ performance and low-level control of languages like C.
 # Contents
 
 1. [Memory Safety](#safety)
+1. [Resource Safety](#resource)
 1. [Approaches](#approaches)
     1. [Option Types](#option)
     1. [Region-Based Memory Management](#region)
@@ -43,6 +44,8 @@ performance and low-level control of languages like C.
   - everything that is allocated is freed
 - data race freedom
   - memory can safely be manipulated by multiple threads without runtime cost (locks etc)
+
+# Resource Safety {#resource}
 
 # Approaches {#approaches}
 
