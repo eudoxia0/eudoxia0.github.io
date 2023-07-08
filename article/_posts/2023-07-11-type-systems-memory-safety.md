@@ -21,6 +21,9 @@ performance and low-level control of languages like C.
     1. [Option Types](#option)
     1. [Region-Based Memory Management](#region)
     1. [Linear Types](#linear)
+        1. [Rules](#linear-rules)
+        1. [Safety Properties](#linear-safety)
+        1. [Problems](#linear-problem)
     1. [Affine Types](#affine)
     1. [Linear Observers](#obs)
     1. [Borrowing](#borrow)
@@ -118,10 +121,19 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 ## Linear Types {#linear}
 
 - linear types: values of a linear type must be used once, and exactly once
+
+### Rules {#linear-rules}
+
 - let's see what the rules are:
   - etc.
+
+### Safety Properties {#linear-safety}
+
 - let's see how it addresses safety:
   - etc.
+
+### Problems {#linear-problem}
+
 - linear types are incompatible with traditional (C++ or Java-style) exception handling
 - linear types are very onerous to write
   - to make them ergonomic, you have to add rules on top
