@@ -37,7 +37,36 @@ developer experience. So the usual solution to this problem is:
    production.
 2. Mocking.
 
-- the usual approach is mocking
+# Mocking
+
+Mocking is when you write a module or class that provides the same interface as
+the real thing, with different internals. Mocks can be classified by how close
+to reality they are.
+
+A common type of mock is to replace specific operations with hardcoded
+outputs. For example, where you might upload an object to S3, you intercept the
+HTTP request and return a hardcoded JSON output with a fake ID and a successful
+status code. Further down, where you might download the data from S3, you again
+intercept the request and request hardcoded data. You can test the whole
+workflow this way, every time you need access to an external service, you
+hardcode the outputs.
+
+The problem with this approach is it's completely tautological. What are you
+asserting? The tests themselves. Your tests reduce to `assert(true == true)`.
+
+Another problem with fine-grained mocking is the mocked operations are smeared
+across all the tests, rather than being centralized. If you make a mistake in
+the hardcoded output, the mistake is not in one central place where fixing it
+fixes it for all tests, it's smeared everywhere.
+
+Your tests look like integration tests, but in fact what you have are a bunch of
+unit tests jammed into the same file, with a bunch of ad-hoc glue in between.
+
+# Approach: Service Stubs
+
+# Approach: Test Servers
+
+
   - use monkeypatching to intercept http requests, returning the values you expect
   - the problem with mocking is the tests become completely tautological
   - you're sending an http request and then faking the output
@@ -65,3 +94,32 @@ developer experience. So the usual solution to this problem is:
   - when you do ad-hoc mocks, everywhere, everywhere you have mocks you can diverge from reality
   - it's easier to ensure that a tiny, sub-1000 lines Python FastAPI server that provides a fake version of S3 or Twilio or whatever is correct
   - than that a thousand ad-hoc mocks are correct
+
+# Case Study
+
+At my last job we had a cloud dependency: the backend called an external API
+with complex internals. We had an API client class, so access to the API was
+centralized in one place. But the class was instantiated whereever it was
+needed, rather than passed in from the top.
+
+The tests of operations that needed the API would mock individual requests, by
+using [`patch`][patch] to override the HTTP client, intercepting the requests by
+testing against the URL, and returning hardcoded JSON blobs. And the JSON had to
+be finely-tuned to that specific unit tests, so the assertions would work out.
+
+[patch]: https://docs.python.org/3/library/unittest.mock.html#patch
+
+At some point I, or a coworker, factored some of that out into an `AcmeFake`
+class that returned a standard set of fake hardcoded values. I think that at one
+point we had two slightly-different fake classes in different places because of
+import visibility rules.
+
+A better approach would have been to write an API client class that replicated
+the external service, albeit at a lower fidelity, and monkeypatching the
+function that instantiates the client. Or, if we wanted to test we were sending
+correctly-structured JSON requests, and correctly parsing the JSON responses, we
+could have build a fake server in Python and stood it up during the tests, and
+changed the service endpoint.
+
+But _we had the source code of the service_. We could have stoop up the server
+in CI, to test against an instance of the real thing.
