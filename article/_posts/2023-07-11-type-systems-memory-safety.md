@@ -237,6 +237,43 @@ Oh, and you get [capability-based security][cap] for free.
 
 [cap]: /article/how-capabilities-work-austral
 
+The tradeoff is linear types are very onerous to write. For example, consider a
+function that returns the length of a (linear) array. In Rust we might write:
+
+```rust
+fn length<T>(array: Array<T>) -> usize { ... }
+```
+
+But this doesn't work: because calling this function consumes (and ultimately
+deallocates) the array:
+
+```rust
+let len = length(arr);
+do_something_else(arr); // Error: `arr` already consumed
+```
+
+We would have to change the function to instead return the array alongside the
+result:
+
+```rust
+fn length<T>(array: Array<T>) -> (Array<T>, usize) { ... }
+```
+
+And use it like this:
+
+```rust
+let (arr2, len) = length(arr);
+do_something_else(arr2);
+```
+
+Needless to say: this is insane. Nobody wants to write code like this, where the
+logic is buried under repeated threading of use-once variables through function
+calls. Most languages that use linear types add rules on top that improve
+ergonomics while preserving safety. In fact, these relaxations of the linearity
+rules constitute most of the semantics. There's a reason Rust's borrow checker
+is called a borrow checker and not an ownership checker.
+
+
 Pros:
 
 - Simple semantics.
