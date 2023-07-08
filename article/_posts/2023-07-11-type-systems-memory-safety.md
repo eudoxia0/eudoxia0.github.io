@@ -23,22 +23,38 @@ performance and low-level control of languages like C.
 
 # Approaches {#approaches}
 
-- option types
-- region-based memory management
-- linear types
-- affine types
-- linear observers
-- borrowing
-- first-class references
-- second-class references
+## Option Types {#option}
+
+## Region-Based Memory Management {#region}
+
+## Linear Types {#linear}
+
+## Affine Types {#affine}
+
+## Linear Observers {#obs}
+
+## Borrowing {#borrow}
+
+## First-Class References {#ref1}
+
+## Second-Class References {#ref2}
 
 # Languages {#languages}
 
-- cyclone
-- rust
-- austral
-- vault
-- linearml
-- vale
-- val
-- verona
+## Austral {#austral}
+
+## Cyclone {#cyclone}
+
+## LinearML {#linearml}
+
+## Rust {#rust}
+
+## Val {#val}
+
+## Vale {#vale}
+
+## Vault {#vault}
+
+## Verona {#verona}
+
+# Conclusion {#conc}
