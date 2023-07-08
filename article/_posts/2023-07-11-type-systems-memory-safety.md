@@ -339,10 +339,44 @@ A reference is like a pointer in region-based memory management: a generic type
 with two components, the pointed-to type and the lifetime. There's usually two
 kinds of references: read-only (immutable) and read-write (mutable) references.
 
-- safety is preserved by:
-  - law of exclusivity
-  - borrows are scoped, so they end
-  - borrows cannot escape their scope because the types don't match
+In the above example, the function that returns the length of an array would
+instead be written:
+
+```rust
+fn length<T, 'L>(arr: ReadRef<T, L>) -> usize { ... }
+```
+
+(This isn't actual Rust syntax but I'm desugaring things somewhat to make it
+easier to understand.)
+
+Here, `'L` is a lifetime parameter. Lifetimes are analogous to regions, except
+that, unlike in region-based memory management, where regions are both a
+compile-time tag and a runtime storage pool, here lifetimes are just a
+compile-time tag. `ReadRef<T, L>` is a read-only (immutable) reference to a type
+`T` in the generic lifetime `L`. You would call this like so:
+
+```rust
+let arr = make_array(1, 2, 3);
+let len = length(&arr);
+```
+
+Where `&arr` means "take a read-only reference to the variable
+`arr`". Desugaring further for clarity:
+
+```rust
+let arr: Array<int> = make_array(1, 2, 3);
+{
+    // The lifetime `L` is valid only in this scope.
+    let ref0: ReadRef<int, L> = &arr;
+    let len: usize = length(ref0);
+}
+```
+
+Safety is preserved, as in region-based memory management, by the fact that
+references to distinct lifetimes are not compatible with one another. Therefore
+you can't leak references by storing them in data structures or variables that
+outlive the scope in which they are defined.
+
 - law of exclusivity: at all times, a value is either:
   - not borrowed
   - immutably borrowed, with any number of immutable references
