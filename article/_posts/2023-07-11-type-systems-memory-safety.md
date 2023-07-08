@@ -258,14 +258,6 @@ Cons:
 
 [exception]: /article/linear-types-exceptions
 
-### Problems {#linear-problem}
-
-- linear types are incompatible with traditional (C++ or Java-style) exception
-  handling
-- linear types are very onerous to write
-  - to make them ergonomic, you have to add rules on top
-  - these rules make linear types usable, while preserving safety
-
 ## Affine Types {#affine}
 
 - weakening of linear types
