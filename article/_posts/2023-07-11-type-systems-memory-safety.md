@@ -34,9 +34,15 @@ performance and low-level control of languages like C.
 # Memory Safety {#safety}
 
 - null safety
+  - dereferencing a null pointer is bad
 - use-after-free
+  - double free
+  - read memory that has been freed
+  - write memory that has been freed
 - leak freedom
+  - everything that is allocated is freed
 - data race freedom
+  - memory can safely be manipulated by multiple threads without runtime cost (locks etc)
 
 # Approaches {#approaches}
 
