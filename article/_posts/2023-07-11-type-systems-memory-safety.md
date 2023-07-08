@@ -302,17 +302,22 @@ A reference is like a pointer in region-based memory management: a generic type
 with two components, the pointed-to type and the lifetime. There's usually two
 kinds of references: read-only (immutable) and read-write (mutable) references.
 
-[examples]
-
-
-- how safety is preserved:
-- rules:
-  - at all times, a linear/affine variable can be:
-    - not borrowed
-    - borrowed immutable any number of times
-    - borrowed mutable once
-  - the point is that a variable can have multiple readers, but no writers, or,
-    one and only one writer and no readers at the same time
+- safety is preserved by:
+  - law of exclusivity
+  - borrows are scoped, so they end
+  - borrows cannot escape their scope because the types don't match
+- law of exclusivity: at all times, a value is either:
+  - not borrowed
+  - immutably borrowed, with any number of immutable references
+  - mutably borrowed, with one and only one mutable reference
+  - mutable and immutable references are mutually exclusive: they can't both be live at the same time. mutable references are mutually exclusive with other mutable references.
+  - in other words:
+    - at all times a value has either
+      - a single reader-writer (either a linear/affine owner or a mutable reference)
+      - any number of readers
+  - the reason for this is otherwise you get unsoundness
+    - if you have an immutable and mutable reference to a struct
+    - you can take an immutable reference to the struct's contents, and then use the mutable reference to replace the contents, invalidating the previous immutable reference
 
 ## Second-Class References {#ref2}
 
