@@ -3,12 +3,39 @@ title: Test Against Reality
 summary: Against mocking.
 ---
 
-- web apps are getting more complicated
-  - used to be: browser, server, db
-  - then: browser, frontend, backend, db
-  - then: browser, frontend, backend, auth0, s3, db, zipkin, vector, datadog, sendgrid, twilio, stripe, elastic
-- this makes testing hard
-- if you had to spend money every time you ran the unit tests that would be very bad
+When I started working as a software engineer web apps looked like this:
+
+<img src="/assets/content/test-against-reality/first.svg" style="margin-left: auto; margin-right: auto;"/>
+
+Then they looked like this:
+
+<img src="/assets/content/test-against-reality/second.svg" style="margin-left: auto; margin-right: auto;"/>
+
+Now they look more like this:
+
+<img src="/assets/content/test-against-reality/third.svg" style="margin-left: auto; margin-right: auto;"/>
+
+It is common to have API endpoints that look like this:
+
+<img src="/assets/content/test-against-reality/workflow.svg" style="margin-left: auto; margin-right: auto;"/>
+
+That is, workflows where your own code is interleaved with (or often intricately
+intertwined with) external services. Increasingly, web application servers are
+message brokers that do some authentication and string together I/O to databases
+and external cloud services.
+
+Testing has gotten harder. Tests that give you real confidence your code is
+correct are harder to write because your code is dependent on external services
+that have very complex internal rules. To make the tests resemble reality at
+all, you either have to have access to these external services---cloud
+dependencies---at test time, or you need to fake their behaviour perfectly.
+
+If you had to spend money every time you ran unit tests that would be a very bad developer experience. So the usual solution to this problem is:
+
+1. Don't test at all, except by clicking around `staging` before deploying to
+   production.
+2. Mocking.
+
 - the usual approach is mocking
   - use monkeypatching to intercept http requests, returning the values you expect
   - the problem with mocking is the tests become completely tautological
