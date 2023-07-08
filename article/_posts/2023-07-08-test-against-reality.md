@@ -103,8 +103,9 @@ Prefer, in descending order:
    1. Write a **fake server:** test against a fake server that internally
       implements the semantics of the service.
 
-So, if you don't have the source code of the service, you have to reimplement
-it, either in the source code
+So, if you don't have the source code of the service, you still have to
+reimplement its semantics, either in the source code, or as a separate server
+that you stand up in local development and CI.
 
 # Approach: Service Stubs {#stub}
 
