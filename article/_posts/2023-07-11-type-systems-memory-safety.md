@@ -52,11 +52,29 @@ performance and low-level control of languages like C.
 ## Option Types {#option}
 
 - option types solve null safety
+  - option types are largely orthogonal to other approaches
+  - so option types solve null safety, and the rest of the approaches solve the other points
 - can be hardcoded (Dart) or implemented in userspace (Rust)
   - in the latter case, compiler should special-case optionals of pointers
   - `option<pointer<t>>` should be implemented as `t*`, with `null` as the `None` case.
 
 ## Region-Based Memory Management {#region}
+
+- tag pointers with compile-time tags
+- how it works:
+  - declare locally-scoped region
+  - allocation happens in a region
+  - deallocation happens automatically when the region ends
+- how it enforces safety:
+  - use-after-free:
+    - pointers cannot be used outside of the lexical region where their region is defined
+    - pointers can't escape
+      - can't store it outside a region: types don't match
+      - a type that stores a pointer has to shift the region to a generic type parameter
+  - leak freedom
+    - all regions close when their scope ends
+  - data race freedom
+    - not addressed
 
 ## Linear Types {#linear}
 
