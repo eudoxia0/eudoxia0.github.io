@@ -75,6 +75,8 @@ Memory safety is a bundle of things:
 
 # Approaches {#approaches}
 
+This section describes the different approaches to solving memory safety.
+
 ## Option Types {#option}
 
 - option types solve null safety
