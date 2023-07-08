@@ -381,15 +381,54 @@ let arr: Array<int> = make_array(1, 2, 3);
 }
 ```
 
-Borrowing preserves safety in two ways.
+So, rather than write code like this:
 
-Firstly, as in region-based memory management, by the fact that references to
-distinct lifetimes are not compatible with one another. Therefore you can't leak
-references by storing them in data structures or variables that outlive the
-scope in which they are defined.
+```rust
+let foo = make_foo();
+let (foo1, bar) = do_something(foo);
+let (foo2, baz) = do_something_else(foo1);
+let (foo3, quux) = do_whatever(foo2);
+dispose(foo3);
+```
 
-Secondly, references obey the **Law of Exclusivity**: at all times, a value is
-either:
+We can write code like this:
+
+```rust
+let foo = make_foo();
+let bar = do_something(&foo);
+let baz = do_something_else(&mut foo);
+let quux = do_whatever(&foo);
+dipose(foo);
+```
+
+The code is cleaner and easier to read. Another difference is the functions get
+just enough permissions to get by, and no more: in the before example,
+`do_something` took ownership of `foo` and could do anything with it. In the
+after example, `do_something` takes an immutable reference to `foo`, so it can
+only read data from it, or call functions that take an immutable reference to
+the same type. Analogously, `do_something_else` takes a mutable reference to
+`foo`, so it can read or write to `foo` (or, transitively, call functions that
+take an immutable or mutable reference to the type of `foo`) but it can't call
+`dispose` because it doesn't have full ownership.
+
+So, borrowing improves ergonomics and gives us more granular access control. But
+how can we convince ourselves that it preserves the safety properties?
+
+Borrowing preserves safety in three ways:
+
+1. As in region-based memory management, references are lexically scoped and
+   have a lifetime. The compiler ensures the lifetime of the reference does not
+   exceed the lifetime of the value. This means no use-after-free bugs: the
+   reference cannot outlive the thing it points to.
+2. Again as in region-based memory management, the fact that lifetimes are part
+   of the reference means references to different lifetimes are considered
+   different types. This means you can't leak references by storing them in a
+   data structure or variable that is out of the lexical scope where the
+   reference is defined because the lifetimes don't match.
+3. Finally, for references to be sound they must implement the law of
+   exclusivity.
+
+The **Law of Exclusivity** is this: at all times, a value is either:
 
 1. Not borrowed (owned).
 2. Borrowed _immutably_, with any number of immutable references live at the
