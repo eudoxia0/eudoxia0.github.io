@@ -16,6 +16,29 @@ performance and low-level control of languages like C.
 
 # Memory Safety {#safety}
 
+- null safety
+- use-after-free
+- leak freedom
+- data race freedom
+
 # Approaches {#approaches}
 
+- option types
+- region-based memory management
+- linear types
+- affine types
+- linear observers
+- borrowing
+- first-class references
+- second-class references
+
 # Languages {#languages}
+
+- cyclone
+- rust
+- austral
+- vault
+- linearml
+- vale
+- val
+- verona
