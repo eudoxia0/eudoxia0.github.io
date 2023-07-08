@@ -155,6 +155,11 @@ performance and low-level control of languages like C.
 
 ## Second-Class References {#ref2}
 
+- second class references are called second class because
+  - they can't be stored in structures
+  - they can't be returned from functions
+- this massively simplifies borrow checking
+
 # Languages {#languages}
 
 ## Austral {#austral}
