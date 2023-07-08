@@ -3,6 +3,19 @@ title: Test Against Reality
 summary: Against mocking.
 ---
 
+This post is about how to test modern web applications that have complex
+external dependencies.
+
+# Contents
+
+1. [Context](#context)
+1. [Mocking](#mock)
+1. [Test Against Reality](#reality)
+1. [Approach: Service Stubs](#stub)
+1. [Approach: Fake Servers](#fake)
+
+# Context {#context}
+
 When I started working as a software engineer web apps looked like this:
 
 <img src="/assets/content/test-against-reality/first.svg" style="margin-left: auto; margin-right: auto;"/>
@@ -33,11 +46,10 @@ dependencies---at test time, or you need to fake their behaviour perfectly.
 If you had to spend money every time you ran unit tests that would be a very bad
 developer experience. So the usual solution to this problem is:
 
-1. Don't test at all, except by clicking around `staging` before deploying to
-   production.
+1. Don't test at all, except manually against the live services.
 2. Mocking.
 
-# Mocking
+# Mocking {#mock}
 
 Mocking is when you write a module or class that provides the same interface as
 the real thing, with different internals. Mocks can be classified by how close
@@ -75,7 +87,7 @@ Bad mocks are:
 2. Have hardcoded values that have to be coordinated with the unit tests.
 3. Reduce to tautologies.
 
-# Test Against Reality
+# Test Against Reality {#reality}
 
 Prefer, in descending order:
 
@@ -89,7 +101,7 @@ Prefer, in descending order:
 So, if you don't have the source code of the service, you have to reimplement
 it, either in the source code
 
-# Approach: Service Stubs
+# Approach: Service Stubs {#stub}
 
 Define an interface for the service. Write an implementation that hits the real
 thing. Write another implementation that provides the same services. Store data
@@ -110,7 +122,7 @@ The term is from [_Patterns of Enterprise Application Architecture_][peaa].
 
 [peaa]: https://martinfowler.com/eaaCatalog/serviceStub.html
 
-# Approach: Fake Servers
+# Approach: Fake Servers {#fake}
 
 Sometimes, access to the external service is not easily centralized, maybe
 because you have multiple services (in multiple languages) that all access
@@ -123,29 +135,3 @@ It doesn't have to be a complete, or particularly sophisticated implementation:
 a sub-1000 file Python script often works. It's then easier to ensure the fake
 server is correct, than to check the correctness of a thousand ad-hoc mocks
 smeared across the codebase.
-
-# Case Study
-
-At a previous job we had a cloud dependency: the backend called an external API
-with complex internals. We had an API client class, so access to the API was
-centralized in one place. But the class was instantiated whereever it was
-needed, rather than passed in from the top.
-
-The tests of operations that needed the API would mock individual requests, by
-using [`patch`][patch] to override the HTTP client, intercepting the requests by
-testing against the URL, and returning hardcoded JSON blobs. And the JSON had to
-be finely-tuned to that specific unit tests, so the assertions would work out.
-
-[patch]: https://docs.python.org/3/library/unittest.mock.html#patch
-
-At some point I, or a coworker, factored some of that out into an `AcmeFake`
-class that returned a standard set of fake hardcoded values. I think that at one
-point we had two slightly-different fake classes in different places because of
-import visibility rules.
-
-A better approach would have been to write an API client class that replicated
-the external service, albeit at a lower fidelity, and monkeypatching the
-function that instantiates the client. Or, if we wanted to test we were sending
-correctly-structured JSON requests, and correctly parsing the JSON responses, we
-could have build a fake server in Python and stood it up during the tests, and
-changed the service endpoint.
