@@ -85,9 +85,36 @@ performance and low-level control of languages like C.
 
 ## Linear Types {#linear}
 
+- linear types: values of a linear type must be used once, and exactly once
+- let's see what the rules are:
+  - etc.
+- let's see how it addresses safety:
+  - etc.
+- linear types are incompatible with traditional (C++ or Java-style) exception handling
+- linear types are very onerous to write
+  - to make them ergonomic, you have to add rules on top
+  - these rules make linear types usable, while preserving safety
+
 ## Affine Types {#affine}
 
+- weakening of linear types
+- instead of: use once and exactly once
+- it is: use at most once
+- implicit drop
+- to implement this, the compiler needs to know how to drop a value
+- rust uses an affine-like type system
+  - actually a very sophisticated ownership-tracking scheme that is kind of affine if you squint
+  - uses the `Drop` trait to know how to dispose of something
+  - Drop is automatically implemented in the obvious way: by calling drop on all fields in a struct
+- linear types are incompatible with exceptions, but affine types are not,
+  because the compiler knows how to dispose of types, it knows how to insert
+  destructor calls at the end of a scope or when unwinding the stack
+
 ## Linear Observers {#obs}
+
+- linear observers are from linearml
+- they are like a wrapper around a linear type, that can be used to read data
+  from it, but they can't be stored in data structures
 
 ## Borrowing {#borrow}
 
