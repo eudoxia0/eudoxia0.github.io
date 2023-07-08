@@ -286,19 +286,11 @@ Cons:
 
 ## Borrowing {#borrow}
 
-- the core idea of borrowing is to suspend ownership for a duration in time that
-  can be statically determined
-  - usually a lexical scope
-  - there's two ways to do this, and they have significant trade offs
-  - one way is first-class references, how Rust does it
-  - another is second-class references, how Val and C# do it
-- rules:
-  - at all times, a linear/affine variable can be:
-    - not borrowed
-    - borrowed immutable any number of times
-    - borrowed mutable once
-  - the point is that a variable can have multiple readers, but no writers, or,
-    one and only one writer and no readers at the same time
+The core idea of borrowing is to suspend linear/affine type rules for some
+delimited time. It's kind of a combination of region-based memory management
+with linear/affine types.
+
+There's two ways to do this: first-class and second-class references.
 
 ## First-Class References {#ref1}
 
@@ -322,6 +314,13 @@ Cons:
   - similar to region-based memory management, a lifetime is like a region, it
     is a compile-time tag
 - how safety is preserved:
+- rules:
+  - at all times, a linear/affine variable can be:
+    - not borrowed
+    - borrowed immutable any number of times
+    - borrowed mutable once
+  - the point is that a variable can have multiple readers, but no writers, or,
+    one and only one writer and no readers at the same time
 
 ## Second-Class References {#ref2}
 
