@@ -260,20 +260,32 @@ Cons:
 
 ## Affine Types {#affine}
 
-- weakening of linear types
-- instead of: use once and exactly once
-- it is: use at most once
-- implicit drop
-- to implement this, the compiler needs to know how to drop a value
-- rust uses an affine-like type system
-  - actually a very sophisticated ownership-tracking scheme that is kind of
-    affine if you squint
-  - uses the `Drop` trait to know how to dispose of something
-  - Drop is automatically implemented in the obvious way: by calling drop on all
-    fields in a struct
-- linear types are incompatible with exceptions, but affine types are not,
-  because the compiler knows how to dispose of types, it knows how to insert
-  destructor calls at the end of a scope or when unwinding the stack
+Affine types are a slight twist on linear types. Instead of "used exactly once"
+it's "used _at most_ once". That is: values can be silently dropped. When a
+linear value goes out of scope, the compiler inserts calls to the
+destructor. This requires a way to associate a linear type with a destructor
+function.
+
+Rust has a sophisticated ownership-tracking system that resembles affine types
+if you squint. In Rust, the `Drop` trait is used to tie types to their
+destructors. Mostly this is implemented automatically by the compiler, you
+usually implement this yourself when dropping a value involves calling a foreign
+function (e.g. closing a socket).
+
+The main benefit of affine types is they are more compatible with traditional
+exception handling, since the compiler knows how to dispose of values, and
+therefore how to call destructors when unwinding the stack.
+
+Pros:
+- Less code.
+- Exception handling.
+
+Cons:
+- Sometimes you do want the compiler to tell you when you've forgotten a value
+  (in Rust, the `must_use` attribute exists for this).
+- The double-throw problem still exists in Rust: a destructor that fails
+  (because e.g. closing the file handle failed, or closing a socket failed) will
+  simply abort the program.
 
 ## Linear Observers {#obs}
 
