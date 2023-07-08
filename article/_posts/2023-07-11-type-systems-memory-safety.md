@@ -47,6 +47,13 @@ performance and low-level control of languages like C.
 
 # Resource Safety {#resource}
 
+- the problems with memory safety generalize to things other than memory
+- they generalize to _resources_
+  - a resource is something that has a lifetime: it has to be created, used, and disposed in a particular way
+  - bytes and floats and string literals are not resources
+  - heap-allocated memory, file handles, network sockets, database handles, locks, mutexes, etc. are resources
+  - they have a contract: the api has to be used in a particular order and number of times
+
 # Approaches {#approaches}
 
 ## Option Types {#option}
