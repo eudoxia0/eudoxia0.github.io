@@ -99,7 +99,8 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 ## Region-Based Memory Management {#region}
 
 Region-based memory management is like [arena allocation][arena] at compile
-time. It addresses use-after-free errors and memory leaks. Pointers are tagged with a compile-time tag called a _region_, which is lexically scoped, like so:
+time. It addresses use-after-free errors and memory leaks. Pointers are tagged
+with a compile-time tag called a _region_, which is lexically scoped, like so:
 
 [arena]: https://en.wikipedia.org/wiki/Region-based_memory_management
 
