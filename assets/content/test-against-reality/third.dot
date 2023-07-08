@@ -1,0 +1,29 @@
+digraph G {
+    rankdir=LR;
+    node[shape=plaintext style=filled fillcolor="#a7f3d0"];
+
+    user[label="User"];
+    frontend[label="Frontend"];
+    server[label="Server"];
+
+    subgraph cluster_1 {
+        label="Theirs";
+        node[shape=plaintext style=filled fillcolor="#fdba74"];
+
+        twilio[label="Twilio"];
+        s3[label="AWS S3"];
+        stripe[label="Stripe"];
+        mail[label="Mailchimp"];
+        auth[label="AWS Cognito"];
+        rds[label="AWS RDS"];
+    }
+
+    user -> frontend -> server
+
+    server -> twilio
+    server -> mail
+    server -> auth
+    server -> stripe
+    server -> s3
+    server -> rds
+}

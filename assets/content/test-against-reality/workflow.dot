@@ -1,0 +1,42 @@
+digraph G {
+    subgraph cluster_0 {
+        rankdir=LR;
+
+        {
+            node[shape=plaintext style=filled fillcolor="#cbd5e1"]
+
+            begin[label="Begin"]
+            c1[label="Code"]
+            c2[label="Code"]
+            c3[label="Code"]
+            end[label="End"]
+        }
+
+        {
+            node[shape=plaintext style=filled fillcolor="#fde68a"]
+
+            i1[label="I/O"]
+            i2[label="I/O"]
+            i3[label="I/O"]
+        }
+    }
+
+    {
+        node[shape=plaintext style=filled fillcolor="#fdba74"]
+
+        auth[label="Auth Server"]
+        mail[label="Mail Server"]
+        noti[label="Notification Server"]
+    }
+
+    begin -> c1 -> i1 -> c2 -> i2 -> c3 -> i3 -> end
+
+    i1 -> auth
+    auth -> i1
+
+    i2 -> mail
+    mail -> i2
+
+    i3 -> noti
+    noti -> i3
+}

@@ -1,0 +1,10 @@
+digraph G {
+  node[shape=plaintext style=filled fillcolor="#a7f3d0"]
+
+  user[label="User"]
+  frontend[label="Frontend"]
+  server[label="Server"]
+  db[label="Database"]
+
+  user -> frontend -> server -> db
+}
