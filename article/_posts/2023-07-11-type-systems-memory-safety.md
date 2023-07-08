@@ -109,10 +109,12 @@ can increase performance, by reducing the need to defensively check for `NULL`.
   - deallocation happens automatically when the region ends
 - how it enforces safety:
   - use-after-free:
-    - pointers cannot be used outside of the lexical region where their region is defined
+    - pointers cannot be used outside of the lexical region where their region
+      is defined
     - pointers can't escape
       - can't store it outside a region: types don't match
-      - a type that stores a pointer has to shift the region to a generic type parameter
+      - a type that stores a pointer has to shift the region to a generic type
+        parameter
   - leak freedom
     - all regions close when their scope ends
   - data race freedom
@@ -134,7 +136,8 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 
 ### Problems {#linear-problem}
 
-- linear types are incompatible with traditional (C++ or Java-style) exception handling
+- linear types are incompatible with traditional (C++ or Java-style) exception
+  handling
 - linear types are very onerous to write
   - to make them ergonomic, you have to add rules on top
   - these rules make linear types usable, while preserving safety
@@ -147,9 +150,11 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 - implicit drop
 - to implement this, the compiler needs to know how to drop a value
 - rust uses an affine-like type system
-  - actually a very sophisticated ownership-tracking scheme that is kind of affine if you squint
+  - actually a very sophisticated ownership-tracking scheme that is kind of
+    affine if you squint
   - uses the `Drop` trait to know how to dispose of something
-  - Drop is automatically implemented in the obvious way: by calling drop on all fields in a struct
+  - Drop is automatically implemented in the obvious way: by calling drop on all
+    fields in a struct
 - linear types are incompatible with exceptions, but affine types are not,
   because the compiler knows how to dispose of types, it knows how to insert
   destructor calls at the end of a scope or when unwinding the stack
@@ -162,7 +167,8 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 
 ## Borrowing {#borrow}
 
-- the core idea of borrowing is to suspend ownership for a duration in time that can be statically determined
+- the core idea of borrowing is to suspend ownership for a duration in time that
+  can be statically determined
   - usually a lexical scope
   - there's two ways to do this, and they have significant trade offs
   - one way is first-class references, how Rust does it
@@ -192,8 +198,10 @@ can increase performance, by reducing the need to defensively check for `NULL`.
   - lift to borrow statement
   - borrow statement rules:
     - variable cannot be consumed inside the borrow statemnt
-    - varaible cannot be borrowed mutable multiple nested times, because it would create multiple writes
-  - similar to region-based memory management, a lifetime is like a region, it is a compile-time tag
+    - varaible cannot be borrowed mutable multiple nested times, because it
+      would create multiple writes
+  - similar to region-based memory management, a lifetime is like a region, it
+    is a compile-time tag
 - how safety is preserved:
 
 ## Second-Class References {#ref2}
