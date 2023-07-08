@@ -182,6 +182,9 @@ This section describes the different approaches to solving memory safety.
 
 # Languages {#languages}
 
+This section describes how different languages implement memory and resource
+safety.
+
 ## Austral {#austral}
 
 ## Cyclone {#cyclone}
