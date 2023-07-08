@@ -51,6 +51,11 @@ performance and low-level control of languages like C.
 
 ## Option Types {#option}
 
+- option types solve null safety
+- can be hardcoded (Dart) or implemented in userspace (Rust)
+  - in the latter case, compiler should special-case optionals of pointers
+  - `option<pointer<t>>` should be implemented as `t*`, with `null` as the `None` case.
+
 ## Region-Based Memory Management {#region}
 
 ## Linear Types {#linear}
