@@ -12,7 +12,24 @@ performance and low-level control of languages like C.
 
 1. [Memory Safety](#safety)
 1. [Approaches](#approaches)
+    1. [Option Types](#option)
+    1. [Region-Based Memory Management](#region)
+    1. [Linear Types](#linear)
+    1. [Affine Types](#affine)
+    1. [Linear Observers](#obs)
+    1. [Borrowing](#borrow)
+    1. [First-Class References](#ref1)
+    1. [Second-Class References](#ref2)
 1. [Languages](#languages)
+    1. [Austral](#austral)
+    1. [Cyclone](#cyclone)
+    1. [LinearML](#linearml)
+    1. [Rust](#rust)
+    1. [Val](#val)
+    1. [Vale](#vale)
+    1. [Vault](#vault)
+    1. [Verona](#verona)
+1. [Conclusion](#conclusion)
 
 # Memory Safety {#safety}
 
@@ -57,4 +74,4 @@ performance and low-level control of languages like C.
 
 ## Verona {#verona}
 
-# Conclusion {#conc}
+# Conclusion {#conclusion}
