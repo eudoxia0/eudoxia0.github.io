@@ -39,16 +39,30 @@ performance and low-level control of languages like C.
 
 # Memory Safety {#safety}
 
-- null safety
-  - dereferencing a null pointer is bad
-- use-after-free
-  - double free
-  - read memory that has been freed
-  - write memory that has been freed
-- leak freedom
-  - everything that is allocated is freed
-- data race freedom
-  - memory can safely be manipulated by multiple threads without runtime cost (locks etc)
+Memory safety is a bundle of things:
+
+1. **Null Safety:** dereferencing a `NULL` pointer is bad. This causes a
+   segfault or a `NullPointerException` or `undefined is not a function`,
+   depending on your language. This is the easiest one to solve and arguably
+   isn't about memory at all.
+
+1. **Buffer Overflow:** indexing past the end of a contiguous chunk of
+   memory. This is solved by storing the length of arrays and checking it.
+
+1. **No Use-After-Free:** using a chunk of memory after it has been deallocated,
+   e.g.:
+
+    ```c
+    free(ptr);
+    f(ptr);
+    ```
+
+    This is a source of too many security vulnerabilities to count.
+
+1. **Leak Freedom:** all memory that is allocated is freed.
+
+1. **Data Race Freedom:** memory can be used by multiple threads without complex
+   runtime access checks (locks, mutexes etc.)
 
 # Resource Safety {#resource}
 
@@ -156,7 +170,6 @@ performance and low-level control of languages like C.
     - varaible cannot be borrowed mutable multiple nested times, because it would create multiple writes
   - similar to region-based memory management, a lifetime is like a region, it is a compile-time tag
 - how safety is preserved:
-  -
 
 ## Second-Class References {#ref2}
 
