@@ -302,17 +302,9 @@ A reference is like a pointer in region-based memory management: a generic type
 with two components, the pointed-to type and the lifetime. There's usually two
 kinds of references: read-only (immutable) and read-write (mutable) references.
 
+[examples]
 
 
-- references are acquired by `&x`, mutable ones by `&!x`
-- it's easiest to understand by desugaring
-  - lift to borrow statement
-  - borrow statement rules:
-    - variable cannot be consumed inside the borrow statemnt
-    - varaible cannot be borrowed mutable multiple nested times, because it
-      would create multiple writes
-  - similar to region-based memory management, a lifetime is like a region, it
-    is a compile-time tag
 - how safety is preserved:
 - rules:
   - at all times, a linear/affine variable can be:
