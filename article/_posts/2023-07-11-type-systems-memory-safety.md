@@ -273,6 +273,11 @@ ergonomics while preserving safety. In fact, these relaxations of the linearity
 rules constitute most of the semantics. There's a reason Rust's borrow checker
 is called a borrow checker and not an ownership checker.
 
+Furthermore, ownership is equivalent to root permissions on a value, so passing
+a value to a function lets that function do anything. Borrowing can be thought
+of as not just a mechanism for better ergonomics but for graduated permissions:
+immutable references, for example, don't allow you to mutate or deallocate data
+since they don't own that data.
 
 Pros:
 
@@ -336,8 +341,12 @@ else: they can be passed to functions, returned from functions, stored in
 structures etc.
 
 A reference is like a pointer in region-based memory management: a generic type
-with two components, the pointed-to type and the lifetime. There's usually two
-kinds of references: read-only (immutable) and read-write (mutable) references.
+with two components, the pointed-to type and the lifetime. The lifetime is just
+a compile-time tag, references compile down to just plain old fashioned
+pointers.
+
+There's usually two kinds of references: read-only (immutable) and read-write
+(mutable) references.
 
 In the above example, the function that returns the length of an array would
 instead be written:
@@ -372,23 +381,59 @@ let arr: Array<int> = make_array(1, 2, 3);
 }
 ```
 
-Safety is preserved, as in region-based memory management, by the fact that
-references to distinct lifetimes are not compatible with one another. Therefore
-you can't leak references by storing them in data structures or variables that
-outlive the scope in which they are defined.
+Borrowing preserves safety in two ways.
 
-- law of exclusivity: at all times, a value is either:
-  - not borrowed
-  - immutably borrowed, with any number of immutable references
-  - mutably borrowed, with one and only one mutable reference
-  - mutable and immutable references are mutually exclusive: they can't both be live at the same time. mutable references are mutually exclusive with other mutable references.
-  - in other words:
-    - at all times a value has either
-      - a single reader-writer (either a linear/affine owner or a mutable reference)
-      - any number of readers
-  - the reason for this is otherwise you get unsoundness
-    - if you have an immutable and mutable reference to a struct
-    - you can take an immutable reference to the struct's contents, and then use the mutable reference to replace the contents, invalidating the previous immutable reference
+Firstly, as in region-based memory management, by the fact that references to
+distinct lifetimes are not compatible with one another. Therefore you can't leak
+references by storing them in data structures or variables that outlive the
+scope in which they are defined.
+
+Secondly, references obey the **Law of Exclusivity**: at all times, a value is
+either:
+
+1. Not borrowed (owned).
+2. Borrowed _immutably_, with any number of immutable references live at the
+   same time.
+3. Borrowed _mutably_, with one and only one mutable reference.
+
+Mutable and immutable references are mutually exclusive: you can't have an
+immutable and mutable reference to the same value live at the same time. To
+understand why, imagine a type like this:
+
+```
+enum MaybeBox {
+  Empty,
+  Full(Box<String>),
+};
+```
+
+That is: an `EmptyBox` is either a pointer to a string, or nothing. Suppose you
+have both an immutable reference `readref` and a mutable reference `mutref` to
+the box at the same time, and that the box has contents:
+
+<img src="/assets/content/type-systems-memory-safety/box1.svg" style="margin-left: auto; margin-right: auto;"/>
+
+Then you transform the read-reference to the box to a reference to its contents:
+
+<img src="/assets/content/type-systems-memory-safety/box2.svg" style="margin-left: auto; margin-right: auto;"/>
+
+Then you use the mutable reference to empty the box. Now the read reference is dangling:
+
+<img src="/assets/content/type-systems-memory-safety/box3.svg" style="margin-left: auto; margin-right: auto;"/>
+
+And now you have unsoundness: your read reference is invalid. Mutable references
+are mutually exclusive with each other for the same reason.
+
+Pros:
+
+- **Ergonomics:** you can write code that reads data from linear/affine values,
+  without consuming them or having to return them as tuples.
+- **Permissions:** references are like permissions: a read-reference says "you
+  can read, but not mutate or deallocate". A mutable reference says "you can
+  read and mutate, but not deallocate". Linear ownership says "you can do
+  anything".
+- **Safety:** lifetimes soften the linearity rules while preserving safety, due
+  to the law of exclusivity, and the fact that lifetimes are scoped.
 
 ## Second-Class References {#ref2}
 

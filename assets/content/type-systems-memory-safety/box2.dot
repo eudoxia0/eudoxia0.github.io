@@ -1,0 +1,12 @@
+digraph G {
+    node[shape=plaintext style=filled]
+
+    readref[label="readref"]
+    writeref[label="writeref"]
+    box[label="MaybeBox::Full"]
+    str[label="\"Hello, world!\""]
+
+    box -> str
+    writeref -> box
+    readref -> str
+}
