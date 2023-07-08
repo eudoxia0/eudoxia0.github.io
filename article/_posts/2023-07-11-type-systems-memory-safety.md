@@ -85,12 +85,17 @@ This section describes the different approaches to solving memory safety.
 
 ## Option Types {#option}
 
-- option types solve null safety
-  - option types are largely orthogonal to other approaches
-  - so option types solve null safety, and the rest of the approaches solve the other points
-- can be hardcoded (Dart) or implemented in userspace (Rust)
-  - in the latter case, compiler should special-case optionals of pointers
-  - `option<pointer<t>>` should be implemented as `t*`, with `null` as the `None` case.
+Option types solve null safety. These can be hardcoded into the language
+(e.g. Dart, Kotlin) or implemented as a library (OCaml, Haskell, Rust).
+
+Typically, a type `Option<T>` has the size of `T` plus the size of the tag that
+says if it's empty or not. If pointers in the language are required to be
+non-null, then there is an opportunity for an optimization: types like
+`Option<Pointer<T>>` can be the same size as ordinary pointers, because `NULL`
+can represent the empty case.
+
+For this reason, option types do not incur performance penalties. In fact, they
+can increase performance, by reducing the need to defensively check for `NULL`.
 
 ## Region-Based Memory Management {#region}
 
