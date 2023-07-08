@@ -165,17 +165,98 @@ Cons:
 
 ## Linear Types {#linear}
 
-- linear types: values of a linear type must be used once, and exactly once
+Linear types are types whose values must be used once, and exactly once.
 
-### Rules {#linear-rules}
+I've written a lot about this, so in the interest of not repeating myself:
 
-- let's see what the rules are:
-  - etc.
+1. [_Introducing Austral_][auintro] explains linear types from the perspective
+   of a programmer.
+1. [_How Austral’s Linear Type Checker Works_][aucheck] explains linear types
+   from the perspective of a compiler.
 
-### Safety Properties {#linear-safety}
+[auintro]: /article/introducing-austral#linear
+[aucheck]: /article/how-australs-linear-type-checker-works
 
-- let's see how it addresses safety:
-  - etc.
+But the basic idea is what it says on the tin: linear values must be used
+once. Using a linear value is called _consuming_ it. Ensuring that all linear
+values are consumed can be done at compile time.
+
+For example, let `Foo` be some linear type. Then the following doesn't work:
+
+```rust
+let x: Foo = f();
+// Error: x not consumed
+```
+
+And neither does this:
+
+```rust
+let x: Foo = f();
+g(x);
+g(x); // Error: x consumed twice.
+```
+
+But this is just right:
+
+```rust
+let x: Foo = f();
+g(x);
+```
+
+We can't do this, for example:
+
+```rust
+let x: Foo = f();
+if whatever() {
+  g(x);
+} else {
+  // Nothing
+}
+```
+
+Because the variable `x` is consumed inconsistently: it's consumed in one
+branch, but not another. Analogously:
+
+```rust
+let x: Foo = f();
+while whatever () {
+  g(x); // Error: consumed in loop
+}
+```
+
+Here `x` is potentially consumed infinitely many times. The rules are short,
+simple, and easily enforced: the linearity checker in the Austral compiler is
+[~700 lines of OCaml][checker].
+
+[checker]: https://github.com/austral/austral/blob/master/lib/LinearityCheck.ml
+
+Leak freedom is solved, trivially: values must be consumed, which ultimately
+means deallocated. Use-after-free is solved, trivially: you literally can't use
+values twice. And this generalizes to resource safety: linear types need not be
+pointers, but can be file handles, sockets, etc. And since every value can only
+have one owner, concurrency is solved, trivially.
+
+Oh, and you get [capability-based security][cap] for free.
+
+[cap]: /article/how-capabilities-work-austral
+
+Pros:
+
+- Simple semantics.
+- Easy to implement.
+- Solves general resource safety.
+- Improved performance by allowing in-place mutation.
+- Solved data races and concurrency.
+
+Cons:
+
+- Linear types [are incompatible with exception handling][exception], at least
+  the C++ or Java-style of exception handling.
+- Linear types solve resource safety the way a gamma ray burst solves
+  hospital-acquired infections. They are not really usable alone: you need extra
+  rules to soften the restrictions while preserving safety. More on this below.
+
+[exception]: /article/linear-types-exceptions
 
 ### Problems {#linear-problem}
 
