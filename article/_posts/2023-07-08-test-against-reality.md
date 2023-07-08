@@ -97,7 +97,8 @@ in memory. When setting up the tests, pass in the fake implementation.
 
 This has two problems:
 
-1. What if the real implementation is wrong? (e.g.: parses JSON responses incorrectly)
+1. What if the real implementation is wrong? (e.g.: parses JSON responses
+   incorrectly)
 2. What if the fake incorrectly implements the real thing?
 
 To solve both problems, you can write a script that performs operations against
@@ -109,20 +110,19 @@ The term is from [_Patterns of Enterprise Application Architecture_][peaa].
 
 [peaa]: https://martinfowler.com/eaaCatalog/serviceStub.html
 
-# Approach: Test Servers
+# Approach: Fake Servers
 
-- the solution is this
-  - if the service is external, you should build a replica of it
-    - it doesn't have to be sophisticated
-    - it doesn't have to be complete, just the api endpoints you need
-    - it doesn't have to have a database, in-memory hash tables are fine
-  - it just has to be at least realistic
-- the problem is: who tests the test server?
-  - the actual question here is: where do the tests diverge from reality?
-  - when you have a fake server, you only have one place for divergence: the test server.
-  - when you do ad-hoc mocks, everywhere, everywhere you have mocks you can diverge from reality
-  - it's easier to ensure that a tiny, sub-1000 lines Python FastAPI server that provides a fake version of S3 or Twilio or whatever is correct
-  - than that a thousand ad-hoc mocks are correct
+Sometimes, access to the external service is not easily centralized, maybe
+because you have multiple services (in multiple languages) that all access
+it. In that case, rather than faking the interface for each service, you fake
+the whole thing: you write a quick and dirty server that exposes the endpoints
+you need, and implements the semantics of the real service, storing data in
+memory or whatever.
+
+It doesn't have to be a complete, or particularly sophisticated implementation:
+a sub-1000 file Python script often works. It's then easier to ensure the fake
+server is correct, than to check the correctness of a thousand ad-hoc mocks
+smeared across the codebase.
 
 # Case Study
 
