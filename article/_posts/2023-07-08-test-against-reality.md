@@ -1,6 +1,11 @@
 ---
 title: Test Against Reality
 summary: Against mocking.
+card: test-against-reality.jpg
+card_source: |
+    From [_Inspection of Large Synchronous Machines_][link] by Isidor Kerszenbaum.
+
+    [link]: https://ieeexplore.ieee.org/book/5265585
 ---
 
 This post is about how to test modern web applications that have complex
