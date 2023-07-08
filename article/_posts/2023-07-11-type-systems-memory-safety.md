@@ -294,16 +294,16 @@ There's two ways to do this: first-class and second-class references.
 
 ## First-Class References {#ref1}
 
-- first-class references: references are a value like anything else
-  - can be returned from functions
-  - stored in variables
-- type is a generic type, with two components:
-  - the type it points to
-  - the reference lifetime
-- the way austral does it is easy to understand
-- two kinds of references:
-  - immutable: can be used to read data
-  - mutable: can be used to read and write data
+First-class references are "first-class" because they are values like everything
+else: they can be passed to functions, returned from functions, stored in
+structures etc.
+
+A reference is like a pointer in region-based memory management: a generic type
+with two components, the pointed-to type and the lifetime. There's usually two
+kinds of references: read-only (immutable) and read-write (mutable) references.
+
+
+
 - references are acquired by `&x`, mutable ones by `&!x`
 - it's easiest to understand by desugaring
   - lift to borrow statement
