@@ -1,6 +1,11 @@
 ---
 title: "Type Systems for Memory Safety"
 summary: A survey of type systems for memory safety.
+card: type-systems-memory-safety.jpg
+card_source: |
+    [_The Signing of Peace in the Hall of Mirrors_][link], William Orpen, oil on canvas, 1919.
+
+    [link]: https://en.wikipedia.org/wiki/The_Signing_of_Peace_in_the_Hall_of_Mirrors
 ---
 
 Manual memory management and memory safety used to be incompatible. But it is
