@@ -30,7 +30,8 @@ that have very complex internal rules. To make the tests resemble reality at
 all, you either have to have access to these external services---cloud
 dependencies---at test time, or you need to fake their behaviour perfectly.
 
-If you had to spend money every time you ran unit tests that would be a very bad developer experience. So the usual solution to this problem is:
+If you had to spend money every time you ran unit tests that would be a very bad
+developer experience. So the usual solution to this problem is:
 
 1. Don't test at all, except by clicking around `staging` before deploying to
    production.
