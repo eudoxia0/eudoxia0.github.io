@@ -19,10 +19,10 @@ It is common to have API endpoints that look like this:
 
 <img src="/assets/content/test-against-reality/workflow.svg" style="margin-left: auto; margin-right: auto;"/>
 
-That is, workflows where your own code is interleaved with (or often intricately
-intertwined with) external services. Increasingly, web application servers are
-message brokers that do some authentication and string together I/O to databases
-and external cloud services.
+That is, workflows where your own code is interleaved with (and often
+intricately intertwined with) external services. Increasingly, web application
+servers are message brokers that do some authentication and string together I/O
+to databases and external cloud services.
 
 Testing has gotten harder. Tests that give you real confidence your code is
 correct are harder to write because your code is dependent on external services
@@ -52,7 +52,14 @@ workflow this way, every time you need access to an external service, you
 hardcode the outputs.
 
 The problem with this approach is it's completely tautological. What are you
-asserting? The tests themselves. Your tests reduce to `assert(true == true)`.
+asserting? The tests themselves. Your tests reduce to:
+
+```python
+response = "derp"
+assert response == "derp"
+```
+
+But this isn't obvious, because hundreds of lines of boilerplate obscure this.
 
 Another problem with fine-grained mocking is the mocked operations are smeared
 across all the tests, rather than being centralized. If you make a mistake in
@@ -62,27 +69,49 @@ fixes it for all tests, it's smeared everywhere.
 Your tests look like integration tests, but in fact what you have are a bunch of
 unit tests jammed into the same file, with a bunch of ad-hoc glue in between.
 
+Bad mocks are:
+
+1. Too fine-grained.
+2. Have hardcoded values that have to be coordinated with the unit tests.
+3. Reduce to tautologies.
+
+# Test Against Reality
+
+Prefer, in descending order:
+
+1. Test against a local instance of the real service.
+1. Either:
+   1. Write a **service stub:** test against a stub object that internally
+      implements the semantics of the service.
+   1. Write a **fake server:** test against a fake server that internally
+      implements the semantics of the service.
+
+So, if you don't have the source code of the service, you have to reimplement
+it, either in the source code
+
 # Approach: Service Stubs
+
+Define an interface for the service. Write an implementation that hits the real
+thing. Write another implementation that provides the same services. Store data
+in memory. When setting up the tests, pass in the fake implementation.
+
+This has two problems:
+
+1. What if the real implementation is wrong? (e.g.: parses JSON responses incorrectly)
+2. What if the fake incorrectly implements the real thing?
+
+To solve both problems, you can write a script that performs operations against
+both implementations, and checks that their values are either correct or
+compatible. This doesn't have to run along the main unit tests (because it costs
+money), but it can be run occassionally or to debug issues in the service stub.
+
+The term is from [_Patterns of Enterprise Application Architecture_][peaa].
+
+[peaa]: https://martinfowler.com/eaaCatalog/serviceStub.html
 
 # Approach: Test Servers
 
-
-  - use monkeypatching to intercept http requests, returning the values you expect
-  - the problem with mocking is the tests become completely tautological
-  - you're sending an http request and then faking the output
-  - then that's not an integration test
-  - it's just a bunch of unit tests jammed together and with very poor integration
-- at previous job we had a cloud dependency: an external API we had to call from the depths of the backend
-  - the way we tested it is we used patch to incerept http requests
-  - and replace the response with hardcoded json
-  - eventually this became very repetitive, so we have a `ServiceFake` class to simplify and factor out the mocks
-  - for each api endpoint we had a method that returned a fake json blob
-  - and we had a public method that exposed a ready to use monkeypatching interface
-  - this really sucked
 - the solution is this
-  - don't mock
-  - test against reality
-  - if the service is part of your application, you should stand up a copy of it during testing
   - if the service is external, you should build a replica of it
     - it doesn't have to be sophisticated
     - it doesn't have to be complete, just the api endpoints you need
@@ -97,7 +126,7 @@ unit tests jammed into the same file, with a bunch of ad-hoc glue in between.
 
 # Case Study
 
-At my last job we had a cloud dependency: the backend called an external API
+At a previous job we had a cloud dependency: the backend called an external API
 with complex internals. We had an API client class, so access to the API was
 centralized in one place. But the class was instantiated whereever it was
 needed, rather than passed in from the top.
@@ -120,6 +149,3 @@ function that instantiates the client. Or, if we wanted to test we were sending
 correctly-structured JSON requests, and correctly parsing the JSON responses, we
 could have build a fake server in Python and stood it up during the tests, and
 changed the service endpoint.
-
-But _we had the source code of the service_. We could have stoop up the server
-in CI, to test against an instance of the real thing.
