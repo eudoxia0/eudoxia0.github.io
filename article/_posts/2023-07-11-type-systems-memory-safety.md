@@ -118,7 +118,40 @@ performance and low-level control of languages like C.
 
 ## Borrowing {#borrow}
 
+- the core idea of borrowing is to suspend ownership for a duration in time that can be statically determined
+  - usually a lexical scope
+  - there's two ways to do this, and they have significant trade offs
+  - one way is first-class references, how Rust does it
+  - another is second-class references, how Val and C# do it
+- rules:
+  - at all times, a linear/affine variable can be:
+    - not borrowed
+    - borrowed immutable any number of times
+    - borrowed mutable once
+  - the point is that a variable can have multiple readers, but no writers, or,
+    one and only one writer and no readers at the same time
+
 ## First-Class References {#ref1}
+
+- first-class references: references are a value like anything else
+  - can be returned from functions
+  - stored in variables
+- type is a generic type, with two components:
+  - the type it points to
+  - the reference lifetime
+- the way austral does it is easy to understand
+- two kinds of references:
+  - immutable: can be used to read data
+  - mutable: can be used to read and write data
+- references are acquired by `&x`, mutable ones by `&!x`
+- it's easiest to understand by desugaring
+  - lift to borrow statement
+  - borrow statement rules:
+    - variable cannot be consumed inside the borrow statemnt
+    - varaible cannot be borrowed mutable multiple nested times, because it would create multiple writes
+  - similar to region-based memory management, a lifetime is like a region, it is a compile-time tag
+- how safety is preserved:
+  -
 
 ## Second-Class References {#ref2}
 
