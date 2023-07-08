@@ -102,23 +102,66 @@ can increase performance, by reducing the need to defensively check for `NULL`.
 
 ## Region-Based Memory Management {#region}
 
-- tag pointers with compile-time tags
-- how it works:
-  - declare locally-scoped region
-  - allocation happens in a region
-  - deallocation happens automatically when the region ends
-- how it enforces safety:
-  - use-after-free:
-    - pointers cannot be used outside of the lexical region where their region
-      is defined
-    - pointers can't escape
-      - can't store it outside a region: types don't match
-      - a type that stores a pointer has to shift the region to a generic type
-        parameter
-  - leak freedom
-    - all regions close when their scope ends
-  - data race freedom
-    - not addressed
+Region-based memory management is like [arena allocation][arena] at compile
+time. It addresses use-after-free errors and memory leaks. Pointers are tagged with a compile-time tag called a _region_, which is lexically scoped, like so:
+
+[arena]: https://en.wikipedia.org/wiki/Region-based_memory_management
+
+```c
+// Declare a lexically-scoped region `R`.
+region R {
+  // Allocate some data in the region `R`.
+  Pointer<int, R> ptr = allocate(10, R);
+};
+// When the region ends, its memory is deallocated.
+```
+
+Leak freedom is guaranteed because when a region's scope ends, its memory is
+deallocated. When you reach the end of the program's entrypoint, all regions
+have ended and been deallocated.
+
+Use-after-free bugs are solved by the fact that pointers in different regions
+are different types. That is, `Pointer<int, R>` is a different type than
+`Pointer<int, S>`. You can't do this:
+
+```c
+Pointer<int, R> escape;
+region S {
+  Pointer<int, S> foo = ...;
+  escape = foo;
+};
+```
+
+Because the types of `escape` and `foo` are different. Therefore, pointers
+cannot escape the region they are defined in, and therefore their memory cannot
+outlive the region.
+
+Regions are both a compile-time tag and a runtime object. The region object is
+basically a [slab allocator][slab]. This can improve performance, because most
+allocation happens from userspace rather than actually going to `malloc`.
+
+[slab]: https://en.wikipedia.org/wiki/Slab_allocation
+
+Pros:
+
+- Simple to understand.
+- Simple to implement.
+- Can improve performance by minimizing syscalls.
+
+Cons:
+
+- Does not address concurrency and data race freedom.
+- Does not generalize to resource safety.
+- If a type has to hold a pointer, the region has to be moved up to a generic
+  type parameter, e.g.:
+
+    ```c
+    struct<region R> Foo {
+      ptr: Pointer<Bar, R>;
+    };
+    ```
+
+    This is similar to lifetime parameters in Rust.
 
 ## Linear Types {#linear}
 
