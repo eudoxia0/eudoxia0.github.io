@@ -762,24 +762,42 @@ under the name of [Mutable Value Semantics][mvs].
 [val]: https://www.val-lang.dev/
 [mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
-What are the drawbacks?
+What are the drawbacks? Well, the rules themselves:
 
+1. Returning references from functions is a common operation for data
+   structures. For example, if you have a reference to an array, you might want
+   to get a reference to the _n_-th element. If you have a reference to a `Box`,
+   you might want to get a reference to its contents, and so on recursively.
 
-- what are the drawbacks?
-  - iterators
-  - storing references in data structures is rarely done, but when it is done,
-    it is necessary
-  - the good thing about Rust references is they provide a middle ground: when
-    you _need_ code that has deeply-intertwined pointers, you _can_ write that
-    code. it is hard, it can be a complex mess of spaghetti lifetimes. but you
-    _can_ write the code, and you _don't_ lose safety.
-  - second-class references lose a lot of expressive power
-  - so when you do need to write code that uses deeply intertwined pointers, you
-    can't do it, but you have to write unsafe code
-  - so it seems that second-class references are strictly less safe than rust
-  - so there's a tradeoff here where increasing safety assurance means
-    increasing language complexity, and different people can make different
-    calls about where they want to make that tradeoff
+2. Storing references in data structures is rarely done. But when it is needed,
+   Rust gives you the tools to preserve safety via explicit lifetimes. In a
+   language with second class references, you would have to turn those
+   references into unsafe pointers.
+
+   In that sense, Rust provides a nice middleground: most uses of lifetimes can
+   be automatically elided away. But if you want to do something more complex,
+   you don't have to drop down to writing unsafe code. You can preserve safety
+   with lifetime analysis, it's just that the code becomes more complex to
+   write.
+
+3. Not being able to store references in data structures makes it hard to
+   implement iterators.
+
+An example of something second-class references can't implement safely: Rust's
+HashMap has an Entry API. An Entry is a struct has has a reference to a key and
+a reference to a value, this lets you iterate over key/value pairs. And this
+requires both the ability to store references in data structures and the ability
+to return a reference from a function.
+
+So there's a tradeoff here: explicit lifetimes are harder to understand,
+implement, and code with, but they preserve safety; second-class references give
+us a simpler mental model of ownership and borrowing at the cost of expressivity
+and being strictly less safe than Rust.
+
+But just as borrowing softens linear/affine ownership while preserving safety,
+maybe we can soften some of the restrictions of second-class references. The
+goal is to keep the simplicity while increasing safety and expressivity.
+
 - one thing you can't express: Rust's hash map entry API
 - the val language
   - uses subscripts to return references
