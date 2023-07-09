@@ -713,7 +713,8 @@ Cons:
 - perhaps we can soften some of these restrictions, preserving safety and
   simplicity while increasing expressive power
 - reference transforms
-  - a special class of functions that is allowed to return references that they take as arguments
+  - a special class of functions that is allowed to return references that they
+    take as arguments
   - however, they can only be called at function call sites
   - that is:
     - expression that take a reference
@@ -728,8 +729,10 @@ Cons:
   - has the same restrictions as references:
     - cannot be returned from functions (except reference transform functions)
     - cannot be stored in data structures (except other ref structs)
-  - like reference expressions, and reference transforms, ref structs can only be created at function call sites
-  - so if you have a function that needs to take a lot of references as context objects
+  - like reference expressions, and reference transforms, ref structs can only
+    be created at function call sites
+  - so if you have a function that needs to take a lot of references as context
+    objects
   - `f(&a, &b, &c, &mut d, foo)`
   - you can wrap them up in a ref struct
   - `f(Context(&a, &b, &c, &mut d), foo)`
