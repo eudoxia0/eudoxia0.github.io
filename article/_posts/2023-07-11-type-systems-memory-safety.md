@@ -279,6 +279,10 @@ of as not just a mechanism for better ergonomics but for graduated permissions:
 immutable references, for example, don't allow you to mutate or deallocate data
 since they don't own that data.
 
+Another limitation of linear types is they can only represent trees rooted at
+variables: interconnected, graph or DAG-like data structures are not directly
+representable. More on this below.
+
 Pros:
 
 - Simple semantics.
@@ -370,12 +374,13 @@ let len = length(&arr);
 ```
 
 Where `&arr` means "take a read-only reference to the variable
-`arr`". Desugaring further for clarity:
+`arr`". Desugaring further for clarity (again not valid Rust):
 
 ```rust
 let arr: Array<int> = make_array(1, 2, 3);
 {
     // The lifetime `L` is valid only in this scope.
+    letlifetime L;
     let ref0: ReadRef<int, L> = &arr;
     let len: usize = length(ref0);
 }
@@ -398,7 +403,7 @@ let foo = make_foo();
 let bar = do_something(&foo);
 let baz = do_something_else(&mut foo);
 let quux = do_whatever(&foo);
-dipose(foo);
+dispose(foo);
 ```
 
 The code is cleaner and easier to read. Another difference is the functions get
@@ -410,6 +415,52 @@ the same type. Analogously, `do_something_else` takes a mutable reference to
 `foo`, so it can read or write to `foo` (or, transitively, call functions that
 take an immutable or mutable reference to the type of `foo`) but it can't call
 `dispose` because it doesn't have full ownership.
+
+In case this helps understand, let's desugar the code:
+
+```rust
+let foo: Foo = make_foo();
+{
+    letlifetime L0;
+    // `ref0` can't leak because the lifetime `L`
+    // is only valid in this scope.
+    let ref0: ReadRef<Foo, L0> = &foo;
+    let bar = do_something(ref0);
+}
+{
+    letlifetime L1;
+    let ref1: MutRef<Foo, L1> = &mut foo;
+    let baz = do_something_else(ref1);
+}
+{
+    letlifetime L2;
+    let ref2: ReadRef<Foo, L2> = &foo;
+    let quux = do_whatever(ref2);
+}
+dispose(foo);
+```
+
+We can also visually annotate the lifetimes:
+
+```rust
+let foo: Foo = make_foo();                   // ----------\
+{                                            //           |
+    letlifetime L0;                          //  ---\     |
+    let ref0: ReadRef<Foo, L0> = &foo;       //     | L1  |
+    let bar = do_something(ref0);            //  ---/     |
+}                                            //           |
+{                                            //           |
+    letlifetime L1;                          // ---\      |
+    let ref1: MutRef<Foo, L1> = &mut foo;    //    | L2   | Foo
+    let baz = do_something_else(ref1);       // ---/      |
+}                                            //           |
+{                                            //           |
+    letlifetime L2;                          // ---\      |
+    let ref2: ReadRef<Foo, L2> = &foo;       //    | L3   |
+    let quux = do_whatever(ref2);            // ---/      |
+}                                            //           |
+dispose(foo);                                // ----------/
+```
 
 So, borrowing improves ergonomics and gives us more granular access control. But
 how can we convince ourselves that it preserves the safety properties?
@@ -462,6 +513,11 @@ Then you use the mutable reference to empty the box. Now the read reference is d
 
 And now you have unsoundness: your read reference is invalid. Mutable references
 are mutually exclusive with each other for the same reason.
+
+Now references seem like a silver bullet: we get safety and ergonomics. What are
+the problems? Roughly:
+
+1.
 
 Pros:
 
