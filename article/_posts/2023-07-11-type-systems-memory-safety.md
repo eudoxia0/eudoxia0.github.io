@@ -812,9 +812,9 @@ goal is to keep the simplicity while increasing safety and expressivity.
 ### Returning References
 
 A safe way to return references from functions is to have a special class of
-function---call it ia _reference transform_---that is allowed to have a
-reference in its return type. For example, to transform a reference to an array
-into a reference to the _n_-th element, you might have:
+function---call it a _reference transform_---that is allowed to have a reference
+in its return type. For example, to transform a reference to an array into a
+reference to the _n_-th element, you might have:
 
 ```rust
 transform get_nth<T>(arr: &Array<T>, idx: usize) -> &T
