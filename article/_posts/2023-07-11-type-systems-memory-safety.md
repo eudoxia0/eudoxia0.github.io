@@ -809,6 +809,10 @@ But just as borrowing softens linear/affine ownership while preserving safety,
 maybe we can soften some of the restrictions of second-class references. The
 goal is to keep the simplicity while increasing safety and expressivity.
 
+Note that most of the below are just my own made-up musings. As far as I know
+Val is the only languages with second-class references and it solves these
+problems differently.
+
 ### Returning References
 
 A safe way to return references from functions is to have a special class of
@@ -1024,6 +1028,25 @@ fn step(elem: &i32) {
 Note: throughout all of this code, not one lifetime annotation! The only
 drawback here is that iteration requires breaking the code up into small
 functions, since iterators can only be created at call sites.
+
+### Closures
+
+Closures that capture values by reference can be implemented analogously: as
+`ref structs` that can only be create at call sites, cannot be stored except in
+other ref structs, etc.
+
+### Conclusion
+
+Pros:
+
+1. Greatly simplifies borrow checking.
+2. Easier to understand.
+3. Easier to implement.
+
+Cons:
+1. The problem with ref structs is it splits the type system in two: you need a
+   `RefOption` type, a `RefVec`, etc.
+1. Potentially, some of the things Rust can do with lifetimes
 
 # Languages {#languages}
 
