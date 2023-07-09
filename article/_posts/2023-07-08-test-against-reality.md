@@ -138,6 +138,6 @@ you need, and implements the semantics of the real service, storing data in
 memory or whatever.
 
 It doesn't have to be a complete, or particularly sophisticated implementation:
-a sub-1000 file Python script often works. It's then easier to ensure the fake
+a sub-1000 line Python script often works. It's then easier to ensure the fake
 server is correct, than to check the correctness of a thousand ad-hoc mocks
 smeared across the codebase.
