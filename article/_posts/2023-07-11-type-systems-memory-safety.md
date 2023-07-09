@@ -578,7 +578,88 @@ Cons:
    reborrowing for example.
 
 3. **Lifetime Creep:** as in region-based memory management, if you want to
-   store a lifetime in a data structure, you
+   store a lifetime in a data structure, you need to make that lifetime into a
+   generic parameter. That is, if you want to write:
+
+   ```rust
+   struct Foo {
+       bar: &Bar
+   }
+   ```
+
+   You have to write:
+
+   ```rust
+   struct Foo<'L> {
+       bar: &'L Bar,
+   }
+   ```
+
+   And so, any data structure that stores references, the lifetime annotations
+   never disappear. There isn't really a way around this: the compiler needs to
+   know the lifetime to ensure safety.
+
+   And so the usual advice for storing references in data structures in Rust is
+   "don't". In fact, when I read Rust codebases, the main place where I see
+   references stored in structures is with iterators.
+
+   And so there's a tradeoff: you can write code where everything is deeply
+   intertwined with pointers, but keeping the lifetimes straight can be a mess.
+
+4. **Disuse:** because of the difficulty of writing code that uses lifetimes
+   pervasively, many people don't use lifetimes, opting instead to use `Rc` or
+   `Arc`, which lower compile-time complexity by introducing the run-time cost
+   of reference counting.
+
+   Another common pattern in Rust is to use indices into an array where you
+   would otherwise use pointers. For example, if you were writing a binary tree
+   in C, you might use:
+
+   ```c
+   struct Tree {
+       Tree* left;
+       Tree* right;
+   };
+   ```
+
+   In Rust you will frequently see something like this:
+
+   ```
+   struct Tree {
+       nodes: Vec<Node>,
+       root: usize,
+   };
+
+   struct Node {
+       left: usize,
+       right: usize,
+   };
+   ```
+
+   That is: the tree is a vector of nodes, and rather than use pointers or
+   references, each node uses integer indices into the array to make the tree
+   structure.
+
+
+   There are many benefits to this pattern. For one, it is the only way to
+   implement a graph-like data structure. It can improve performance, because
+   allocating a node doesn't necesarilly require `malloc`, the vector acts as a
+   resizable arena allocator. It also improves cache locality, because the nodes
+   are not randomly distributed throughout the heap but kept close together.
+
+   The problem is you lose safety:
+
+   1. There is no guarantee that an index is in bounds.
+   2. There is no guarantee that an index points to the right data. Any change
+      to the node vector has to update the indices in all the nodes.
+   3. There is no way to link indices and trees. If you use an index from one
+      tree into another, you could trigger an index-out-of-bounds error or get
+      wrong data.
+
+  So we go right back to all the problems of memory-unsafe languages, but one
+  level of abstraction up. These problems can be reduced by careful design: you
+  can build a data structure that exposes a more-or-less safe API by having
+  unsafe internals. But you can do the same thing in C or C++.
 
 ## Second-Class References {#ref2}
 
