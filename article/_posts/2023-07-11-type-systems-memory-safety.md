@@ -662,6 +662,15 @@ Cons:
    can build a data structure that exposes a more-or-less safe API by having
    unsafe internals. But you can do the same thing in C or C++.
 
+5. **Closures / Objects:** closures or objects with runtime dispatch are hard,
+   because the whole point of a closure or an object is to hide the type of the
+   things that it closes over. But if a closure captures a value by reference
+   the compiler needs to track its lifetime.
+
+   Rust gets around the limitations of closures in a fairly involved way that
+   nevertheless preserves safety and likely is the best you're going to get in a
+   language with explicit lifetime analysis.
+
 ## Second-Class References {#ref2}
 
 - study rust code
