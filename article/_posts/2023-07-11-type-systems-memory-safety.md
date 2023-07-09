@@ -752,6 +752,17 @@ and, more importantly, it is easier for programmers to learn how to use the
 language. Since there are no lifetimes, there are no complicated lifetime error
 messages to worry about.
 
+References can't be stored in data structures, but they can be stored in variables, but only if they originate as parameters to functions. That is, you can write:
+
+```rust
+fn foo(ref: &int) {
+  let r: &int = ref;
+}
+```
+
+This doesn't break any rules, since the reference is guaranteed to only live
+within the scope of the function call.
+
 Is this realizable? Yes, since, as stated above, most Rust code is already
 written this way. The fact that lifetime elision works at all is due to the fact
 that most references appear as arguments to functions.
@@ -798,21 +809,70 @@ But just as borrowing softens linear/affine ownership while preserving safety,
 maybe we can soften some of the restrictions of second-class references. The
 goal is to keep the simplicity while increasing safety and expressivity.
 
-- one thing you can't express: Rust's hash map entry API
-- the val language
-  - uses subscripts to return references
-- perhaps we can soften some of these restrictions, preserving safety and
-  simplicity while increasing expressive power
-- reference transforms
-  - a special class of functions that is allowed to return references that they
-    take as arguments
-  - however, they can only be called at function call sites
-  - that is:
-    - expression that take a reference
-    - expressions that transform a reference
-    - can only appear at function call sites
-    - so where you write `foo(&x)`, you can also write `foo(bar(&x))`, where
-      `bar` is a reference transform
+### Returning References
+
+A safe way to return references from functions is to have a special class of
+function---call it ia _reference transform_---that is allowed to have a
+reference in its return type. For example, to transform a reference to an array
+into a reference to the _n_-th element, you might have:
+
+```rust
+transform get_nth<T>(arr: &Array<T>, idx: usize) -> &T
+```
+
+Reference transforms can only be called as arguments to other function
+calls. That is, you can do this:
+
+```
+print(get_nth(&arr, n));
+```
+
+But not this:
+
+```
+let nthref = get_nth(&arr, n);
+print(nthref);
+```
+
+In other words: calling a reference transform is like taking a reference to a
+value, it can only appear at a function call site. Or, in yet other words:
+reference transforms can only appear sandwiched between regular function calls,
+and the ampersand expression.
+
+And this applies to l-values too. If you have a function:
+
+```rust
+// Store an int at the location given by a mutable reference.
+fn store_int(ref: &mut int, value: int) {
+  *ref = value;
+}
+```
+
+A reference transform call can also appear in the l-value position, for example:
+
+```
+// Given two references to an integer, return the one that
+// points to the smallest value.
+transform min(a: &mut int, b: &mut int) -> &mut int {
+  if *a < *b {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+fn main() {
+  let mut a = 10;
+  let mut b = 20;
+  // Store `30` in the reference returned by min.
+  min(&mut foo, &mut bar) = 30;
+  // a = 30
+  // b = 20
+}
+```
+
+### Storing References
+
 - we can also soften the restriction of storing references in data structures
   - c# has a concept of "ref structs", which can hold references, but themselves
     inherit the restrictions of references
@@ -829,6 +889,8 @@ goal is to keep the simplicity while increasing safety and expressivity.
   - `f(Context(&a, &b, &c, &mut d), foo)`
   - safety is preserved
 - iterators?
+
+### Closures
 
 # Languages {#languages}
 
