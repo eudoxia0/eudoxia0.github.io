@@ -475,7 +475,8 @@ Borrowing preserves safety in three ways:
    of the reference means references to different lifetimes are considered
    different types. This means you can't leak references by storing them in a
    data structure or variable that is out of the lexical scope where the
-   reference is defined because the lifetimes don't match.
+   reference is defined because the lifetimes don't match (usually however there
+   are subtyping rules between lifetimes, to make things more convenient).
 3. Finally, for references to be sound they must implement the law of
    exclusivity.
 
@@ -514,10 +515,33 @@ Then you use the mutable reference to empty the box. Now the read reference is d
 And now you have unsoundness: your read reference is invalid. Mutable references
 are mutually exclusive with each other for the same reason.
 
-Now references seem like a silver bullet: we get safety and ergonomics. What are
-the problems? Roughly:
+One more point. Functions that take references as parameters must make the
+lifetimes into generic function parameters, like so:
 
-1.
+```rust
+fn concatenate_strings<'a, 'b, 'c>(s1: &'a str, s2: &'b str, s3: &'c str) -> String {
+    format!("{}{}{}", s1, s2, s3)
+}
+```
+
+Rust has a feature called lifetime elision that simplifies writing code like
+this. Because most functions that take references don't return a reference type,
+the compiler lets you write the function signature without lifetime annotations,
+and adds them for you. The following:
+
+```rust
+fn concatenate_strings(s1: &str, s2: &str, s3: &str) -> String {
+    format!("{}{}{}", s1, s2, s3)
+}
+```
+
+Is equivalent to the function above. The compiler simply makes an implicit,
+generic lifetime parameter for each reference type mentioned in the parameter
+list. This is the most general solution: if different arguments have the same
+lifetime it won't be a problem.
+
+However, if you want to enforce that two parameters must come from the same
+lifetime, you need to write the lifetime parameters explicitly.
 
 Pros:
 
@@ -529,6 +553,32 @@ Pros:
   anything".
 - **Safety:** lifetimes soften the linearity rules while preserving safety, due
   to the law of exclusivity, and the fact that lifetimes are scoped.
+
+Now references seem like a silver bullet: we get safety and ergonomics. What are
+the problems?
+
+Cons:
+
+1. **Complexity:** lifetime analysis can be complex. The complexity is more or
+   less proportional to how easy it is to write code that "does what you mean"
+   and have it compile. In other words, ergonomics come at the cost of language
+   complexity.
+
+   To make code easier to write you need all sorts of heuristics and special
+   cases. These complicate the analysis, making the compilers harder to
+   implement, and making the language rules harder to understand.
+
+2. **Learning Curve:** related to the above, the main problem people report with
+   Rust is the learning curve. People often describe learning Rust as fighting
+   the borrow checker until they develop an intuitive sense for how it
+   works. It's hard to write down a small, core set of rules for Rust borrow
+   checking.
+
+   There are many things to understand: non-lexical lifetimes and implicit
+   reborrowing for example.
+
+3. **Lifetime Creep:** as in region-based memory management, if you want to
+   store a lifetime in a data structure, you
 
 ## Second-Class References {#ref2}
 
