@@ -756,7 +756,8 @@ Is this realizable? Yes, since, as stated above, most Rust code is already
 written this way. The fact that lifetime elision works at all is due to the fact
 that most references appear as arguments to functions.
 
-Second-class references are implemented in the [Val programming language][val], under the name of [Mutable Value Semantics][mvs].
+Second-class references are implemented in the [Val programming language][val],
+under the name of [Mutable Value Semantics][mvs].
 
 [val]: https://www.val-lang.dev/
 [mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
