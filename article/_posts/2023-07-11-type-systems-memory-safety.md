@@ -656,17 +656,85 @@ Cons:
       tree into another, you could trigger an index-out-of-bounds error or get
       wrong data.
 
-  So we go right back to all the problems of memory-unsafe languages, but one
-  level of abstraction up. These problems can be reduced by careful design: you
-  can build a data structure that exposes a more-or-less safe API by having
-  unsafe internals. But you can do the same thing in C or C++.
+   So we go right back to all the problems of memory-unsafe languages, but one
+   level of abstraction up. These problems can be reduced by careful design: you
+   can build a data structure that exposes a more-or-less safe API by having
+   unsafe internals. But you can do the same thing in C or C++.
 
 ## Second-Class References {#ref2}
 
+- study rust code
+  - you may notice the way references are used
+  - 99% of the time as function arguments
+  - a few times, returned from functions
+  - a few times, stored in data structures (other than iterators, this is very
+    rare)
 - second class references are called second class because
   - they can't be stored in structures
   - they can't be returned from functions
 - this massively simplifies borrow checking
+  - the properties of region-based memory management you get for free
+    - since they can only be created at function calls, and cannot leave
+      functions, they are scoped for free
+    - can't leak them
+    - can't store them in data structures
+  - borrow checking without lifetimes
+  - the only borrow checking needed is
+    - at function call sites, analyze all the references being passed, and
+      ensure they meet the law of exclusivity
+    - can't have `f(&mut x, &mut x)`
+    - also can't have `f(&x, &mut x)`
+    - that's it
+    - that's _all_ there is to the borrow checker
+- is this realizable?
+  - yes!
+  - as stated above, most rust code is written this way already
+  - also, the fact that lifetime elision works in Rust is due to this
+- graydon hoare, the creator of rust, says lifetimes are a big problem that
+  don't pay for themselves and he'd make them a second-class parameter passing
+  mode
+- what are the drawbacks?
+  - iterators
+  - storing references in data structures is rarely done, but when it is done,
+    it is necessary
+  - the good thing about Rust references is they provide a middle ground: when
+    you _need_ code that has deeply-intertwined pointers, you _can_ write that
+    code. it is hard, it can be a complex mess of spaghetti lifetimes. but you
+    _can_ write the code, and you _don't_ lose safety.
+  - second-class references lose a lot of expressive power
+  - so when you do need to write code that uses deeply intertwined pointers, you
+    can't do it, but you have to write unsafe code
+  - so it seems that second-class references are strictly less safe than rust
+  - so there's a tradeoff here where increasing safety assurance means
+    increasing language complexity, and different people can make different
+    calls about where they want to make that tradeoff
+- the val language
+  - uses subscripts to return references
+- perhaps we can soften some of these restrictions, preserving safety and
+  simplicity while increasing expressive power
+- reference transforms
+  - a special class of functions that is allowed to return references that they take as arguments
+  - however, they can only be called at function call sites
+  - that is:
+    - expression that take a reference
+    - expressions that transform a reference
+    - can only appear at function call sites
+    - so where you write `foo(&x)`, you can also write `foo(bar(&x))`, where
+      `bar` is a reference transform
+- we can also soften the restriction of storing references in data structures
+  - c# has a concept of "ref structs", which can hold references, but themselves
+    inherit the restrictions of references
+  - we can have a special kind of data structure that can hold references
+  - has the same restrictions as references:
+    - cannot be returned from functions (except reference transform functions)
+    - cannot be stored in data structures (except other ref structs)
+  - like reference expressions, and reference transforms, ref structs can only be created at function call sites
+  - so if you have a function that needs to take a lot of references as context objects
+  - `f(&a, &b, &c, &mut d, foo)`
+  - you can wrap them up in a ref struct
+  - `f(Context(&a, &b, &c, &mut d), foo)`
+  - safety is preserved
+- iterators?
 
 # Languages {#languages}
 
