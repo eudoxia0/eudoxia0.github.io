@@ -981,7 +981,7 @@ And the trait implementation (some desugaring to make it simpler):
 
 ```rust
 impl<T> Iterator for VecIterator<T> {
-    transform next(iter: &mut VecIterator<T>) -> Option<&T> {
+    transform next(iter: &mut VecIterator<T>) -> RefOption<&T> {
         if iter.index < iter.vec.len() {
             let result = Some(&self.vec[self.index]);
             self.index += 1;
@@ -993,18 +993,31 @@ impl<T> Iterator for VecIterator<T> {
 }
 ```
 
-The usage looks very similar. Desugaring the while loop:
+(Note that we need a separate option type, `RefOption`, to hold references. This
+would be a `ref enum` rather than a `ref struct`.)
+
+
+A usage like:
 
 ```rust
 fn iter_and_print(mut iterator: VecIterator<i32>) {
-    while let Some(num) = iterator.next() {
-        println!("{}", num);
+    for elem in iterator {
+        println!("{}", elem);
+    }
+}
+```
+
+Would desugar to somthing along the lines of:
+
+```rust
+fn iter_and_print(mut iterator: VecIterator<i32>) {
+    while iterator.can_advance() {
+        step(next(&mut iterator).unwrap());
     }
 }
 
-fn main() {
-    let numbers = vec![1, 2, 3, 4, 5];
-    iter_and_print(make_iter(&numbers));
+fn step(elem: &i32) {
+    println!("{}", elem);
 }
 ```
 
