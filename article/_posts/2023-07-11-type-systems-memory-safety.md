@@ -946,15 +946,71 @@ impl<'a, T> Iterator for VecIterator<'a, T> {
 And you'd use it like this:
 
 ```rust
-fn main() {
-    let numbers = vec![1, 2, 3, 4, 5];
-    let mut iterator = VecIterator::new(&numbers);
-
+fn iter_and_print<'a>(mut iterator: VecIterator<'a, i32>) {
     while let Some(num) = iterator.next() {
         println!("{}", num);
     }
 }
+
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+    iter_and_print(VecIterator::new(&numbers));
+}
 ```
+
+This suggests how we might implement iterators in a version of Rust with
+second-class references. You'd define a ref struct for the iterator:
+
+```rust
+ref struct VecIterator<T> {
+    vec: &Vec<T>,
+    index: usize,
+}
+```
+
+The function that creates a `VecIterator` should be a reference transform, since
+it has to be able to return a `ref struct`:
+
+```rust
+transform make_iter(vec: &Vec<T>) -> VecIterator<T> {
+    VecIterator { vec, index: 0 }
+}
+```
+
+And the trait implementation (some desugaring to make it simpler):
+
+```rust
+impl<T> Iterator for VecIterator<T> {
+    transform next(iter: &mut VecIterator<T>) -> Option<&T> {
+        if iter.index < iter.vec.len() {
+            let result = Some(&self.vec[self.index]);
+            self.index += 1;
+            result
+        } else {
+            None
+        }
+    }
+}
+```
+
+The usage looks very similar. Desugaring the while loop:
+
+```rust
+fn iter_and_print(mut iterator: VecIterator<i32>) {
+    while let Some(num) = iterator.next() {
+        println!("{}", num);
+    }
+}
+
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+    iter_and_print(make_iter(&numbers));
+}
+```
+
+Note: throughout all of this code, not one lifetime annotation! The only
+drawback here is that iteration requires breaking the code up into small
+functions, since iterators can only be created at call sites.
 
 # Languages {#languages}
 
