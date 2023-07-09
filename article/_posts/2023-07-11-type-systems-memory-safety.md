@@ -35,6 +35,7 @@ performance and low-level control of languages like C.
     1. [Vault](#vault)
     1. [Verona](#verona)
 1. [Conclusion](#conclusion)
+1. [See Also](#see)
 
 # Memory Safety {#safety}
 
@@ -708,6 +709,7 @@ Cons:
   - so there's a tradeoff here where increasing safety assurance means
     increasing language complexity, and different people can make different
     calls about where they want to make that tradeoff
+- one thing you can't express: Rust's hash map entry API
 - the val language
   - uses subscripts to return references
 - perhaps we can soften some of these restrictions, preserving safety and
@@ -761,3 +763,12 @@ safety.
 ## Verona {#verona}
 
 # Conclusion {#conclusion}
+
+# See Also {#see}
+
+- Rust:
+  - [Rust for "modern" C++
+    devs](http://venge.net/graydon/talks/RustForModernCPPDevs.pdf): slides from
+    a 2022 talk by Graydon Hoare.
+- Linear Types:
+- Region-Based Memory Management:
