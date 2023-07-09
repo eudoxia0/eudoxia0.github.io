@@ -873,24 +873,88 @@ fn main() {
 
 ### Storing References
 
-- we can also soften the restriction of storing references in data structures
-  - c# has a concept of "ref structs", which can hold references, but themselves
-    inherit the restrictions of references
-  - we can have a special kind of data structure that can hold references
-  - has the same restrictions as references:
-    - cannot be returned from functions (except reference transform functions)
-    - cannot be stored in data structures (except other ref structs)
-  - like reference expressions, and reference transforms, ref structs can only
-    be created at function call sites
-  - so if you have a function that needs to take a lot of references as context
-    objects
-  - `f(&a, &b, &c, &mut d, foo)`
-  - you can wrap them up in a ref struct
-  - `f(Context(&a, &b, &c, &mut d), foo)`
-  - safety is preserved
-- iterators?
+C# has a concept of ["ref structs"][refstruct], data structures that can hold
+references but themselves inherit the limitations of C# reference types.
 
-### Closures
+[refstruct]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/ref-struct
+
+Analogously, a language with second-class references could have a ref struct
+type that can hold references, but:
+
+1. Cannot be returned from functions (except reference transforms).
+2. Cannot be stored in data structures (except other ref structs).
+3. Can only be created at function call sites.
+
+Suppose you have a function that needs a lot of dependencies to work, and you
+pass them as references, like so:
+
+```rust
+f(&a, &b, &c, &mut d, foo);
+```
+
+You could define a ref struct to group them together, and make the code a bit
+cleaner:
+
+```rust
+f(Context(&a, &b, &c, &mut d), foo);
+```
+
+### Iterators
+
+The [`Iterator`][iter] trait in Rust looks like this:
+
+[iter]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
+
+```rust
+pub trait Iterator {
+    type Item;
+
+    fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+An iterator is typically implemented as a struct that holds a reference to the
+collection and an index:
+
+```rust
+pub struct VecIterator<'a, T> {
+    vec: &'a Vec<T>,
+    index: usize,
+}
+
+impl<'a, T> VecIterator<'a, T> {
+    pub fn new(vec: &'a Vec<T>) -> Self {
+        VecIterator { vec, index: 0 }
+    }
+}
+
+impl<'a, T> Iterator for VecIterator<'a, T> {
+    type Item = &'a T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        if self.index < self.vec.len() {
+            let result = Some(&self.vec[self.index]);
+            self.index += 1;
+            result
+        } else {
+            None
+        }
+    }
+}
+```
+
+And you'd use it like this:
+
+```rust
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+    let mut iterator = VecIterator::new(&numbers);
+
+    while let Some(num) = iterator.next() {
+        println!("{}", num);
+    }
+}
+```
 
 # Languages {#languages}
 
