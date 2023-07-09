@@ -673,36 +673,97 @@ Cons:
 
 ## Second-Class References {#ref2}
 
-- study rust code
-  - you may notice the way references are used
-  - 99% of the time as function arguments
-  - a few times, returned from functions
-  - a few times, stored in data structures (other than iterators, this is very
-    rare)
-- second class references are called second class because
-  - they can't be stored in structures
-  - they can't be returned from functions
-- this massively simplifies borrow checking
-  - the properties of region-based memory management you get for free
-    - since they can only be created at function calls, and cannot leave
-      functions, they are scoped for free
-    - can't leak them
-    - can't store them in data structures
-  - borrow checking without lifetimes
-  - the only borrow checking needed is
-    - at function call sites, analyze all the references being passed, and
-      ensure they meet the law of exclusivity
-    - can't have `f(&mut x, &mut x)`
-    - also can't have `f(&x, &mut x)`
-    - that's it
-    - that's _all_ there is to the borrow checker
-- is this realizable?
-  - yes!
-  - as stated above, most rust code is written this way already
-  - also, the fact that lifetime elision works in Rust is due to this
-- graydon hoare, the creator of rust, says lifetimes are a big problem that
-  don't pay for themselves and he'd make them a second-class parameter passing
-  mode
+If you study Rust codebases you may notice references are used in a very skewed
+way:
+
+- ~90% of references are just function arguments.
+- A small number of functions return references.
+- A vanishingly small number of data structures have lifetime annotations.
+- Overwhelmingly, the main place where references are stored in data structures
+  is in the case of iterators.
+
+Graydon Hoare, who built the first versions of Rust and can be called its
+creator, has this to say about lifetimes:
+
+>**First-class &.** I wanted & to be a "second-class" parameter-passing mode,
+>not a first-class type, and I still think this is the sweet spot for the
+>feature. In other words I didn't think you should be able to return & from a
+>function or put it in a structure. I think the cognitive load doesn't cover the
+>benefits. Especially not when it grows to the next part.
+>
+>**Explicit lifetimes.** The second-class & types in early Rust were analyzed
+>for aliasing relationships to ensure single-writer / multi-reader (as today's
+>borrows are) but the analysis was based on type and path disjointness and (if
+>necessary) a user-provided address-comparison disambiguation. It did not reason
+>about lifetime compatibility nor represent lifetimes as variables, and I
+>objected to that feature, and still think it doesn't really pay for
+>itself. They were supposed to all be inferred, and they're not, and "if I were
+>BDFL" I probably would have aborted the experiment once it was obvious they are
+>not in fact all inferred. (Note this is interconnected with previous points:
+>the dominant use-cases have to do with things like exterior iterators and
+>library-provided containers).
+
+In other words: drop lifetimes and simplify the borrow checker. How does this work?
+
+**Second-class references** are called second class because:
+
+1. You can't return them from functions.
+2. You can't store them in data structures.
+3. Can only be created at function call sites, e.g. by writing `f(&x)`.
+
+This massively simplifies borrow checking. Because of these rules, you don't
+have to tag references with a compile-time tag to ensure safety. In other words:
+you don't need lifetime annotations at all.
+
+Since references can only be created at call sites, and cannot escape the
+functions they are passed into, you get lifetime scoping for free: the reference
+is guaranteed to not outlive the function.
+
+Since references cannot be stored in data structures, you can't leak them or
+cause them to outlive the thing they point to.
+
+And so you get borrow checking without lifetimes. The only borrow checking you
+need is, at function call sites, you need to enforce the law of
+exclusivity. That is, a function call like:
+
+```rust
+f(&mut x, &mut x);
+```
+
+Will be rejected by the compiler, because you have two mutable references to the
+same thing live at once. Similarly, a call like:
+
+```rust
+f(&x, &mut x);
+```
+
+Will also be rejected, because you have both an immutable and a mutable
+reference live at once. Borrow checking has to extend into field access
+expressions, so, for example, this is fine:
+
+```rust
+f(&mut pos.x, &mut pos.y);
+```
+
+Because these are mutable references to disjoint values.
+
+And that's pretty much all there is. The borrow checker is simple to implement,
+and, more importantly, it is easier for programmers to learn how to use the
+language. Since there are no lifetimes, there are no complicated lifetime error
+messages to worry about.
+
+Is this realizable? Yes, since, as stated above, most Rust code is already
+written this way. The fact that lifetime elision works at all is due to the fact
+that most references appear as arguments to functions.
+
+Second-class references are implemented in the [Val programming language][val], under the name of [Mutable Value Semantics][mvs].
+
+[val]: https://www.val-lang.dev/
+[mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
+
+What are the drawbacks?
+
+
 - what are the drawbacks?
   - iterators
   - storing references in data structures is rarely done, but when it is done,
