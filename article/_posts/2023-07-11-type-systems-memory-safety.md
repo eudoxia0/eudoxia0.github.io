@@ -1114,6 +1114,19 @@ Ada also has "[limited types][adalim]", which are kind of an eighties approximat
 
 ## Val {#val}
 
+### Links
+
+- [Home page](https://www.val-lang.dev/)
+- [Language tour](https://tour.val-lang.dev/)
+- [Discussions](https://github.com/orgs/val-lang/discussions)
+  - [How do remote parts and closure captures work?](https://github.com/orgs/val-lang/discussions/754), where yours truly tries to suss out the semantics.
+- Papers:
+  - [Implementation Strategies for Mutable Value Semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)
+  - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678.pdf)
+  - [The Val Object Model](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2676r0.pdf)
+- [Value Oriented Programming Needs Implicits?](https://matklad.github.io/2023/05/02/implicits-for-mvs.html#Value-Oriented-Programming-Needs-Implicits)
+  - [Comments on lobste.rs](https://lobste.rs/s/uptebu/value_oriented_programming_needs)
+
 ## Vale {#vale}
 
 ## Vault {#vault}
@@ -1135,14 +1148,3 @@ Ada also has "[limited types][adalim]", which are kind of an eighties approximat
     a 2022 talk by Graydon Hoare.
 - Linear Types:
 - Region-Based Memory Management:
-- Val:
-  - [Home page](https://www.val-lang.dev/)
-  - [Language tour](https://tour.val-lang.dev/)
-  - [Discussions](https://github.com/orgs/val-lang/discussions)
-    - [How do remote parts and closure captures work?](https://github.com/orgs/val-lang/discussions/754), where yours truly tries to suss out the semantics.
-  - Papers:
-    - [Implementation Strategies for Mutable Value Semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)
-    - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678.pdf)
-    - [The Val Object Model](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2676r0.pdf)
-  - [Value Oriented Programming Needs Implicits?](https://matklad.github.io/2023/05/02/implicits-for-mvs.html#Value-Oriented-Programming-Needs-Implicits)
-    - [Comments on lobste.rs](https://lobste.rs/s/uptebu/value_oriented_programming_needs)
