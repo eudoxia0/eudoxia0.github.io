@@ -1092,6 +1092,15 @@ Ada also has "[limited types][adalim]", which are kind of an eighties approximat
 
 [adalim]: https://en.wikibooks.org/wiki/Ada_Programming/Types/limited
 
+Links:
+
+- [Ada 2012 Language Reference Manual](http://www.ada-auth.org/standards/ada12.html)
+- [Rationale for Ada 2012](http://www.ada-auth.org/standards/rationale12.html)
+- Papers:
+  - [Safe and Leakproof Resource Management using Ada83 Limited Types](https://www.plover.com/~mjd/misc/hbaker-archive/LimitedRoots.html)
+  - [How to Steal from a Limited Private Account](https://www.plover.com/~mjd/misc/hbaker-archive/LimitedRobbery.html)
+  - [Structured Programming with Limited Private Types in Ada](https://www.plover.com/~mjd/misc/hbaker-archive/LPprogram.html)
+
 ## Austral {#austral}
 
 - linear types
