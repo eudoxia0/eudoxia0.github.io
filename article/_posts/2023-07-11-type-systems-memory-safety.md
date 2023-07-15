@@ -1110,6 +1110,7 @@ safety.
   - [Home page](https://www.val-lang.dev/)
   - [Language tour](https://tour.val-lang.dev/)
   - [Discussions](https://github.com/orgs/val-lang/discussions)
+    - [How do remote parts and closure captures work?](https://github.com/orgs/val-lang/discussions/754), where yours truly tries to suss out the semantics.
   - Papers:
     - [Implementation Strategies for Mutable Value Semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)
     - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678.pdf)
