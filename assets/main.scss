@@ -135,14 +135,26 @@ body {
     }
 
     > nav.top-nav {
-        padding: $b1;
-
         // We can't know the height of this element ahead of time (because in
         // small screens, the title might spill over multiple lines). Therefore
         // we can't use `box-sizing: border-box;`. Therefore, if we add a
         // border, all subsequent elements will be vertically misaligned by
         // 1px. So we simulate a border using an inset box shadow.
         box-shadow: 0 -1px 0 #000 inset;
+    }
+
+    > nav.bottom-nav {
+        border-top: 1px solid #000;
+        display: flex;
+        flex-direction: row;
+
+        ul {
+            margin: 0 auto;
+        }
+    }
+
+    > nav.top-nav, >nav.bottom-nav {
+        padding: $b1;
 
         ul {
             li {
