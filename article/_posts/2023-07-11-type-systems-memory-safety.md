@@ -1057,6 +1057,12 @@ safety.
 
 ## Ada {#ada}
 
+- four mechanisms
+  - access types
+  - lexically-scoped access types
+  - limited types
+  - private types
+
 ## Austral {#austral}
 
 ## Cyclone {#cyclone}
