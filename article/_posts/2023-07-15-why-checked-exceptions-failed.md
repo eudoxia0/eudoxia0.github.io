@@ -67,8 +67,7 @@ Can I specify that implementations of `foo` can throw no, some, or all
 exceptions? What would it even mean to write something like `throws *`?
 Analogously, if I have a function that takes a method as an argument, like a
 callback, how do I specify what set of exceptions in can throw? Can I have
-generic "exception set parameters"? Can I write a type like "a function that
-takes two ints and returns an int and throws any subclass of `FooException`"?
+generic "exception set parameters"?
 
 It starts with a very simple and laudable goal: let's add extra information to
 the type signature, orthogonal to the types, so we can track exceptions,
