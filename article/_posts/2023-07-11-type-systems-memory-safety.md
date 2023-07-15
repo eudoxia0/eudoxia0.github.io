@@ -1057,11 +1057,40 @@ safety.
 
 ## Ada {#ada}
 
-- four mechanisms
-  - access types
-  - lexically-scoped access types
-  - limited types
-  - private types
+Ada is a lovely language that is unfairly maligned. People deride it as big, bloated, designed-by-committee, the reality is it's been a better C++11 since 1983.
+
+Ada's pointers are called "[access types][adaacc]". They're just pointers. Since Ada 2005 you have `not null access` types, which provide null-safety, but the ergonomics are very poor (you can't, for example, free a `not null` pointer).
+
+[adaacc]: https://en.wikibooks.org/wiki/Ada_Programming/Types/access
+
+Ada has [generics][adagen], but like in [Modula-2][mod2] these require explicit instantiation. It's like the module system in Standard ML or OCaml. Therefore while you can write an `Option` type in Ada, the ergonomics are very poor: when you want to write `Option<Foo>` you have to instantiate the `Option` module with `Foo` as an argument. When programming in the large this leads to horrendous code duplication.
+
+[adagen]: https://en.wikibooks.org/wiki/Ada_Programming/Generics
+[mod2]: https://en.wikipedia.org/wiki/Modula-2
+
+Ada has lexically-scoped types. You can write something like this:
+
+```ada
+procedure Foo is
+  type Integer_Access is access all Integer;
+begin
+  -- etc.
+end Foo;
+```
+
+And the type `Integer_Access` is live only for the lexical scope of `Foo`. Access types are associated with a "storage pool", an allocator. Since the types are different, every pointer of type `Integer_Access` is guaranteed to be in the same storage pool.
+
+I _think_ the idea is that, like in region-based memory management, when a type goes out of scope its storage pool is deallocated, but this doesn't happen unless you specify the maximum size of the storage pool like so:
+
+```ada
+for Integer_Access'Storage_Size use 123;
+```
+
+In discussions of Ada you often hear this strange slogan: that the Ada spec _allows_ but does not _require_ a garbage collector. Which isn't helpful at all.
+
+Ada also has "[limited types][adalim]", which are kind of an eighties approximation of linear types. Limited types disallow assignment, equality, and composition (putting them inside other types). That is, they can only be operated on using the API provided by the module which defines them. By implementing a finalizer procedure you can ensure deallocation (Ada has destructors and automatically inserts calls to those destructors).
+
+[adalim]: https://en.wikibooks.org/wiki/Ada_Programming/Types/limited
 
 ## Austral {#austral}
 
