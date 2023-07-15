@@ -6,8 +6,8 @@ card_source: |
     Diagram of the Joint European Torus. From _Tokamaks_, John Wesson, 2004, Oxford University Press.
 ---
 
-Java has this feature called checked exceptions, why lets you [annotate][spec] a
-method with the set of exceptions it may throw, like so:
+Java has this feature called checked exceptions, which lets you [annotate][spec]
+a method with the set of exceptions it may throw, like so:
 
 [spec]: https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.4.6
 
