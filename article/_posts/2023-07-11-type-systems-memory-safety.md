@@ -1065,9 +1065,21 @@ safety.
 
 ## Austral {#austral}
 
+- linear types
+  - explicit destruction
+- rust-like borrowing
+  - lexical lifetimes
+  - explicit borrow statement that anon references desugar to
+
 ## Cyclone {#cyclone}
 
+- a research language to build a safer version of C
+
 ## LinearML {#linearml}
+
+- a small prototype programming language
+- it's a Standard ML-like language with linear types
+- linear observers provide a weak version of borrowing
 
 ## Rust {#rust}
 
@@ -1077,7 +1089,12 @@ safety.
 
 ## Vault {#vault}
 
+- a reserach programming language from microsoft research
+- it provides memory safety using something a bit like an effect system
+
 ## Verona {#verona}
+
+- a new research programming language from microsoft research
 
 # Conclusion {#conclusion}
 
