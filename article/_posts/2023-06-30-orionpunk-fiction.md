@@ -103,14 +103,21 @@ of the rest of the setting.
 ## Diaspora
 
 
+
 ## Permutation City
+
 
 
 ## Accelerando
 
+- quote:
+  - instructions per second
+- a story of living through the singularity
 
 ## The Epiphany of Gliese 581
 
+- quote:
+  - it spoke a human language
 
 ## The Quantum Thief
 
