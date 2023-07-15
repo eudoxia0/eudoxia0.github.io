@@ -90,6 +90,15 @@ of the rest of the setting.
 
 ## House of Suns
 
+- space opera in a universe without FTL
+- vast spatial and temporal scale
+  - six million years in the future
+  - whole galaxy has been settled slower than light
+  - every planet has been settled, time and time and time again
+  - there's turnover
+  - civilizations rise and collapse
+  - every planet is shot through with the ruins of former glory, forming separate geological layers of civilization
+- galactic ecology of baseline humans, transhumans, and artificial intelligences
 
 ## Diaspora
 
