@@ -80,6 +80,11 @@ effects.
 Concretely, checked exceptions in Java failed because Java lacks "throwingness
 polymorphism", if you will.
 
+Functional error handling, using `Option` and `Result` types, is rapidly
+becoming the standard operating procedure in essentially every language, because
+it relies on nothing but _values_ and _types_. They are more of the same, and so
+they fit right into the existing language machinery.
+
 More broadly: in programming languages, _everything impinges on everything
 else_. Which is why you can't bolt a type system or an ownership system on a
 language after the fact. At least, not without massive holes you will cope about
