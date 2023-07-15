@@ -1,6 +1,9 @@
 ---
 title: Why Checked Exceptions Failed
 summary: Programming language features are never orthogonal.
+card: why-checked-exceptions-failed.jpg
+card_source: |
+    Diagram of the Joint European Torus. From _Tokamaks_, John Wesson, 2004, Oxford University Press.
 ---
 
 Java has this feature called checked exceptions, why lets you [annotate][spec] a
