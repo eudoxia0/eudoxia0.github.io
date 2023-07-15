@@ -1063,7 +1063,7 @@ Ada's pointers are called "[access types][adaacc]". They're just pointers. Since
 
 [adaacc]: https://en.wikibooks.org/wiki/Ada_Programming/Types/access
 
-Ada has [generics][adagen], but like in [Modula-2][mod2] these require explicit instantiation. It's like the module system in Standard ML or OCaml. Therefore while you can write an `Option` type in Ada, the ergonomics are very poor: when you want to write `Option<Foo>` you have to instantiate the `Option` module with `Foo` as an argument. When programming in the large this leads to horrendous code duplication.
+Ada has [generics][adagen], but like in [Modula-2][mod2] these require explicit instantiation. It's like the module system in Standard ML or OCaml. You can write an `Option` type in Ada, but you can't write `Option<Foo>`, rather, you have to instantiate the `Option` module with `Foo` as an argument and get a new type `Option_Foo`. When programming in the large this leads to horrendous code duplication.
 
 [adagen]: https://en.wikibooks.org/wiki/Ada_Programming/Generics
 [mod2]: https://en.wikipedia.org/wiki/Modula-2
