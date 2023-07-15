@@ -74,6 +74,19 @@ of the rest of the setting.
 
 ## A Requiem for Homo Sapiens
 
+- quote:
+  - entity, whole sciences
+- david zindell
+- epic
+- transhumanism
+- spiritual
+- galactic ecology of transhumans and computer gods
+- search for the meaning of life
+- the setting is very Dune-like
+  - low tech mixed with high-tech
+  - people travel among the stars and wear fur anoraks and die of hypothermia
+- there's aliens and faster-than-light travel, but it's part of the
+  transhumanist canon, so it gets included in the list
 
 ## House of Suns
 
