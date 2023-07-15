@@ -26,6 +26,7 @@ performance and low-level control of languages like C.
     1. [First-Class References](#ref1)
     1. [Second-Class References](#ref2)
 1. [Languages](#languages)
+    1. [Ada](#ada)
     1. [Austral](#austral)
     1. [Cyclone](#cyclone)
     1. [LinearML](#linearml)
@@ -1053,6 +1054,8 @@ Cons:
 
 This section describes how different languages implement memory and resource
 safety.
+
+## Ada {#ada}
 
 ## Austral {#austral}
 
