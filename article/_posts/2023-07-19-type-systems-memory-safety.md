@@ -1193,11 +1193,30 @@ observers][linearml-obs], which are like a very lightweight version of reference
 
 ### Non-Lexical Lifetimes
 
+- lexical lifetimes are exactly rectangles in the source text
+- they are convex, don't have hole
+- this is a problem with e.g. conditional code, where a ref is only used in one branch
+
 ### Exception Handling
+
+- rust has panic
+- panic unwinds the stack, and calls destructors
+- the unwinding code is inserted by the compiler
 
 ### Links
 
-- initial
+- [Rust for "modern" C++ devs][rust-slides]: slides from a 2022 talk by Graydon
+  Hoare.
+- [The Rust I Wanted Had No Future][rust-future]: retrospective by Graydon Hoare.
+  - [HN comments][rust-future-hn]
+  - [Lobste.rs comments][rust-future-lb]
+  - [Reddit comments][rust-future-reddit]
+
+[rust-slides]: http://venge.net/graydon/talks/RustForModernCPPDevs.pdf
+[rust-future]: https://graydon2.dreamwidth.org/307291.html
+[rust-future-hn]: https://news.ycombinator.com/item?id=36193326
+[rust-future-lb]: https://lobste.rs/s/47amaq/rust_i_wanted_had_no_future
+[rust-future-reddit]: https://www.reddit.com/r/rust/comments/1415is1/the_rust_i_wanted_had_no_futur/e
 
 ## Val {#val}
 
@@ -1229,9 +1248,5 @@ observers][linearml-obs], which are like a very lightweight version of reference
 
 # See Also {#see}
 
-- Rust:
-  - [Rust for "modern" C++
-    devs](http://venge.net/graydon/talks/RustForModernCPPDevs.pdf): slides from
-    a 2022 talk by Graydon Hoare.
 - Linear Types:
 - Region-Based Memory Management:
