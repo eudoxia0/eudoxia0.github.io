@@ -1285,3 +1285,6 @@ Links:
 # Conclusion {#conclusion}
 
 # See Also {#see}
+
+- Papers:
+  - [Ownership Types for Safe Programming: Preventing Data Racesand DeadlocksPreventing Data Races and Deadlocks](https://www.cse.msu.edu/~cse914/Readings/ownershipTypesForSafeProgramming-oopsla02.pdf)
