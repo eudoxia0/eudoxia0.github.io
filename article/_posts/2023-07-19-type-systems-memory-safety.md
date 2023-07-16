@@ -1159,9 +1159,30 @@ observers][linearml-obs], which are like a very lightweight version of reference
 
 ### Drop
 
-- when things go out of scope, drop is called
-- drop is the destructor
-- drop can be customized to do custom destruction
+When a value goes out of scope, it is said to be _dropped_. Rust inserts calls
+to the appropriate destructor. Dropping can be customized by implementing the
+`Drop` trait, this allows you to do RAII and e.g. close a network socket in the
+destructor:
+
+```rust
+struct Foo {}
+
+impl Drop for Foo {
+    fn drop(&mut self) {
+        println!("drop(Foo)");
+    }
+}
+
+fn main() {
+    let _ = Foo {};
+}
+```
+
+This will print:
+
+```
+drop(Foo)
+```
 
 ### Borrow Checking
 
