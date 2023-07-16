@@ -1247,6 +1247,3 @@ observers][linearml-obs], which are like a very lightweight version of reference
 # Conclusion {#conclusion}
 
 # See Also {#see}
-
-- Linear Types:
-- Region-Based Memory Management:
