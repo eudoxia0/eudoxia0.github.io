@@ -1147,6 +1147,58 @@ observers][linearml-obs], which are like a very lightweight version of reference
 
 ## Rust {#rust}
 
+- the elephant in the room
+- first practical language with ownership types
+- originally was gonna be like a linearly-typed erlang
+- gradually become a safer C++
+- ownership and borrow checking
+
+### Move Semantics
+
+- move is the default
+
+### Drop
+
+- when things go out of scope, drop is called
+- drop is the destructor
+- drop can be customized to do custom destruction
+
+### Borrow Checking
+
+- rust does something very practical
+  - it says what safety properties it will enforce
+  - but it doesn't say how
+  - so the borrow checker is free to evolve, in the direction of accepting more programs over time
+- tradeoff
+  - rust becomes more ergonomic over time
+  - you can use rust while hardly understanding how it works
+    - i use rust professionaly and hardly think about lifetimes
+    - writing rust doesn't feel like a puzzle or a chore of fitting the problem to the language
+    - rather, you just write code, and generally the compiler will accept it
+  - on the other hand, there's no specification of the borrow checker
+    - that means you can't have multiple rust compilers, because the spec of the borrow checker is "whatever rustc does at present"
+    - people say having multiple compilers is bad because it wastes effort
+    - i think there is merit to this argument
+    - but there is value in stability, and in a language being describable by spec rather than implementation
+
+### Lexical Lifetimes
+
+- rust's first lifetimes were lexical
+  - tied to lexical scope
+  - this is the simplest way to implement lifetimes
+- lifetimes stretched to the end of a lexical scope
+- so you couldn't do this
+  - example
+- because the lifetime ofthe reference stretches to the lifetime of the value you're borrowing
+
+### Non-Lexical Lifetimes
+
+### Exception Handling
+
+### Links
+
+- initial
+
 ## Val {#val}
 
 ### Links
