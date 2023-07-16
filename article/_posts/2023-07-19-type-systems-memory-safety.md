@@ -1270,7 +1270,74 @@ Vault was a research programming language from Microsoft Research. There's
 little left on the Internet about it, the best description I found of it was a
 paper titled [_Enforcing High-Level Protocols in Low-Level Software_][hlp]. It
 provides memory safety using an interesting and unique compile-time approach
-that is vaguely similar to region-based memory management.
+that is vaguely similar to region-based memory management. What follows is
+mostly paraphrased straight from the paper.
+
+From the abstract:
+
+>The Vault programming language allows a programmer to describe resource
+>management protocols that the compiler can statically enforce. Such a protocol
+>can specify that operations must be performed in a certain order and that
+>certain operations must be performed before accessing a given data
+>object. Furthermore, Vault enforces statically that resources cannot be
+>leaked. We validate the utility of our approach by enforcing protocols present
+>in the interface between the Windows 2000 kernel and its device drivers.
+
+Vault tracks resources using _keys_, which are compile-time tokens. The compiler
+maintains a _held-key set_. Types can be parameterized by keys to ensure that
+values of those types are only accessed when the given key is in the held-key
+set. In turn, functions can be annotated with an expression with describes how
+calling that function modifies the held-key set, essentially an effect system.
+
+Keys are like linear values in that they cannot be duplicated or discarded, and
+every key represents one distinct resource. Tracked types are types
+parameterized by keys:
+
+```c
+Tracked<Point, K> point = new Point { x = 10, y = 20 };
+```
+
+I've changed the syntax to make this more intelligible. Here we're constructing
+an instance of `Point`, and the `new` operator allocates memory for it and
+stores it on the heap. `Tracked<T, K>` is the type of tracked (keyed) pointers,
+the key is created by the `new` operator and given the name `K`. After this
+call, the held-key set is `{K}`.
+
+For the remainder of the lifetime of `K`, the compiler knows that every type
+`Tracked<Point, K>` refers to the same `Point` object.
+
+Just as `new` adds a key to the held-key set, `free` removes it:
+
+```c
+// Key set: {K}
+free(point);
+// Key set: {}
+```
+
+Functions can be annotated with an effect clause that describes how they change
+the held-key set. For example:
+
+```c
+void fclose(Tracked<File, K> f) [-F];
+```
+
+Here, the effect clause `[-F]` indicates that the function removes `F` from the
+key set.
+
+There's an extra dimension of expressivity in that keys can be in one of some
+number of states, and the effect clause of a function can describe key
+preconditions like "`K` must be in state `S` before call" and postconditions
+like "`K` will be in state `S'` after call". This is a key part of protocol
+enforcement: you can, force example, specify that the key guarding a file
+pointer could be in various states like `unopened`, `opened`, `closed`, and that
+closing a file requires the key be in the `open` state and transition to the
+`closed` state.
+
+The main limitations the authors identify with this approach are the linearity
+of keys, and the fact that keys track scalar resources, creates difficulties
+when dealing with collections. So this is essentially region-based memory
+management with "type-level linear types" to enforce transitions between
+protocol states.
 
 Links:
 
