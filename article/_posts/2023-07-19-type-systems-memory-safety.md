@@ -1241,6 +1241,12 @@ drop(Foo)
 
 ## Val {#val}
 
+### Subscripts
+
+### Remotes
+
+### Closures
+
 ### Links
 
 - [Home page](https://www.val-lang.dev/)
