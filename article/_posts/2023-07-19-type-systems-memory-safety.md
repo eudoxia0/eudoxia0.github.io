@@ -1347,7 +1347,29 @@ Links:
 
 ## Verona {#verona}
 
-- a new research programming language from microsoft research
+[Verona][verona] is a new research programming language from Microsoft
+Research. The main idea seems to be to "lift" linearity from the single-object
+level to the collection level (linear regions) in order to make the language
+safer by compartmentalizing memory.
+
+[verona]: https://en.wikipedia.org/wiki/Project_Verona
+
+Links:
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Project_Verona)
+- [GitHub repository](https://github.com/microsoft/verona)
+- [Microsoft: We're creating a new Rust-like programming language for secure coding](https://www.zdnet.com/article/microsoft-were-creating-a-new-rust-based-programming-language-for-secure-coding/)
+  - "If we want compartments, and to carve up the legacy bits of our code so
+    [attackers'] exploit code can't get out, what do we need in the language
+    design that can help with that?"
+  - "The ownership model in Verona is based on groups of objects, not like in
+    Rust where it's based on a single object. In C++ you get pointers and it's
+    based on objects and it's pretty much per object. But that isn't how I think
+    about data and grammar. I think about a data structure as a collection of
+    objects. And that collection of objects as a lifetime."
+  - "So by taking ownership at the level of ownership of objects, then we get
+    much closer to the level of abstraction that people are using and it gives
+    us the ability to build data structures without going outside of safety."
 
 # Conclusion {#conclusion}
 
