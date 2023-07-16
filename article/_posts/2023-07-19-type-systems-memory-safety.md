@@ -1232,6 +1232,8 @@ drop(Foo)
   - [HN comments][rust-future-hn]
   - [Lobste.rs comments][rust-future-lb]
   - [Reddit comments][rust-future-reddit]
+- Papers:
+  - [RustBelt: Securing the Foundations of the Rust Programming Language](https://dl.acm.org/doi/pdf/10.1145/3158154)
 
 [rust-slides]: http://venge.net/graydon/talks/RustForModernCPPDevs.pdf
 [rust-future]: https://graydon2.dreamwidth.org/307291.html
@@ -1264,8 +1266,17 @@ drop(Foo)
 
 ## Vault {#vault}
 
-- a reserach programming language from microsoft research
-- it provides memory safety using something a bit like an effect system
+Vault was a research programming language from Microsoft Research. There's
+little left on the Internet about it, the best description I found of it was a
+paper titled [_Enforcing High-Level Protocols in Low-Level Software_][hlp]. It
+provides memory safety using an interesting and unique compile-time approach
+that is vaguely similar to region-based memory management.
+
+Links:
+
+- [Enforcing High-Level Protocols in Low-Level Software][hlp]
+
+[hlp]: http://people.eecs.berkeley.edu/~necula/Papers/vault01.pdf
 
 ## Verona {#verona}
 
