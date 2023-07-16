@@ -1138,9 +1138,12 @@ Links:
 
 ## LinearML {#linearml}
 
-- a small prototype programming language
-- it's a Standard ML-like language with linear types
-- linear observers provide a weak version of borrowing
+[LinearML][linearml] is a small prototype programming language, along the lines
+of Standard ML or OCaml, featuring linear types. It also implements [linear
+observers][linearml-obs], which are like a very lightweight version of references.
+
+[linearml]: https://github.com/pikatchu/LinearML
+[linearml-obs]: https://github.com/pikatchu/LinearML/wiki/Tutorial#observed-values
 
 ## Rust {#rust}
 
