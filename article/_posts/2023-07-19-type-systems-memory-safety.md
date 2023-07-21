@@ -1126,11 +1126,13 @@ Links:
 
 ## Austral {#austral}
 
-- linear types
-  - explicit destruction
-- rust-like borrowing
-  - lexical lifetimes
-  - explicit borrow statement that anon references desugar to
+[Austral][austral] is the programming language I designed and implemented. It
+uses plain linear types with explicit destructors for resource safety and
+capability based security, and a simple borrowing model that's essentially just
+a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
+`borrow` construct that the ampersand operator desugars to).
+
+[austral]: https://austral-lang.org/
 
 ## Cyclone {#cyclone}
 
