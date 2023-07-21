@@ -1146,9 +1146,15 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
   - non-null pointers
     - `foo@` is the non-null version of `foo*`
   - fat pointers (pointer + size)
+    - `foo?` is the fat pointer version of `foo*`
+    - so strlen etc. work on `char?` instead of `char*`
   - compile-time region based memory management
-
-TODO
+    - pointers can be tagged with regions
+    - syntax resembles rust
+    - `char?'r` is a fat pointer to the region `r`
+    - regions = lifetimes
+    - `region` statement starts a new named region: `region r { ... ])`
+    - `rmalloc` takes a region and a size and returns a region-tracked pointer
 
 Links:
 
