@@ -1357,6 +1357,11 @@ drop(Foo)
 
 TODO
 
+Links:
+
+- [Vale website](https://vale.dev/)
+  - [Vale's Memory Safety Strategy: Generational References and Regions](https://verdagon.dev/blog/generational-references)
+
 ## Vault {#vault}
 
 Vault was a research programming language from Microsoft Research. There's
