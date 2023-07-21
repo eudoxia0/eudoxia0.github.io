@@ -1136,7 +1136,11 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 
 ## Cyclone {#cyclone}
 
-- a research language to build a safer version of C
+- a research language
+  - safer version of C
+  - type safe
+  - safe memory
+  - null checking
 
 TODO
 
