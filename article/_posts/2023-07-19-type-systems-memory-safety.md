@@ -1276,11 +1276,60 @@ drop(Foo)
 
 ## Val {#val}
 
-TODO
+- new programming language
+- high level systems programming
+- based on mutable value semantics
+- kind of a combination of swift and rust
+  - compiler written in swift
+- val has a semantics that aims to let you write code without thinking about
+  references at all
+  - rather, references are kind of like an optimization that happens under the
+    hood
+  - and instead you can think in higher-level concepts
+- val has an essentially linear type system
+  - all values are trees, rooted at program variables
+- as in essentially all linear type systems, references (borrowing) is
+  introduced to relax some of the rules and improve the ergonomics
+- in val, references are second-class, which means:
+  - they're not quite a type, but more like a second-class parameter passing mode
+- concretely, the (simplified) semantics are:
+  - references can only be created at function calls
+  - references cannot be returned from functions
+  - references cannot be stored in structures
+  - references follow the law of exclusivity
+  - references don't have lifetime annotations
+  - "borrow checking" is just checking that references at call sites are disjoint
+- this is a simplified version, as a starting point. I will elaborate the actual
+  semantics in the following sections
+
+### Local References
+
+- i lied
+- references can be created outside function boundaries
+- `let y = &x`
+- a lightweight analysis pass ensures these are used correctly
+- kind of like a lighter rust
+- so to use references you don't have to split everything up into a thousand
+  tiny functions
+- lifetime annotations are not needed since all the information of lifetimes is
+  in the control flow graph
 
 ### Subscripts
 
+- subscripts are kind of like a special kind of function that is allowed to return references
+- it's not quite returning the reference, rather, it's like a coroutine
+- it takes its inputs, and a callback
+- and "returns" the reference by calling the callback with the reference
+- subscripts are basically used in place of what, in rust, would be a function
+  that takes a reference to an object and returns a reference to an interior
+  value
+
 ### Remotes
+
+- some structures can have "remote parts"
+- this relaxes the restriction on not being able to store references in data
+  structures
+- nevertheless remotes don't have to be annotated
 
 ### Closures
 
