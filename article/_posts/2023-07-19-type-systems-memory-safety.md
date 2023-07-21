@@ -1329,9 +1329,16 @@ drop(Foo)
 - some structures can have "remote parts"
 - this relaxes the restriction on not being able to store references in data
   structures
-- nevertheless remotes don't have to be annotated
+- nevertheless remotes don't have to be annotated with lifetimes
+- soundness is maintained, i think, by the fact that structs with remotes are
+  not `Moveable` or `Copyable`, so the lifetime analysis pass can detect
+  unsoundness without lifetime annotations
+  - im not sure exactly how it works
 
 ### Closures
+
+- closures can capture things by reference
+- a closure works exactly like a struct with a remote part
 
 ### Links
 
