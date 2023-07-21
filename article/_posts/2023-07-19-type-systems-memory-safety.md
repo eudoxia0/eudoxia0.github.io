@@ -1138,6 +1138,21 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 
 - a research language to build a safer version of C
 
+TODO
+
+Links:
+
+- [Cyclone](https://en.wikipedia.org/wiki/Cyclone_(programming_language)) on
+  Wikipedia.
+- [Cyclone home page](https://cyclone.thelanguage.org/)
+  - [Rationale](https://cyclone.thelanguage.org/wiki/Why%20Cyclone/)
+  - [Documentation](https://cyclone.thelanguage.org/wiki/User%20Manual/)
+- Papers:
+  - [Cyclone: A safe dialect of C](http://www.cs.umd.edu/projects/cyclone/papers/cyclone-safety.pdf) (2002)
+  - [Cyclone: A Type-Safe Dialect of C](http://www.cs.umd.edu/~mwh/papers/cyclone-cuj.pdf) (2005)
+  - [Region-Based Memory Management in Cyclone](http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions.pdf)
+  - [Linear Regions Are All You Need](https://www.cs.cornell.edu/people/fluet/research/substruct-regions/ESOP06/esop06.pdf)
+
 ## LinearML {#linearml}
 
 [LinearML][linearml] is a small prototype programming language, along the lines
@@ -1245,6 +1260,8 @@ drop(Foo)
 
 ## Val {#val}
 
+TODO
+
 ### Subscripts
 
 ### Remotes
@@ -1265,6 +1282,8 @@ drop(Foo)
   - [Comments on lobste.rs](https://lobste.rs/s/uptebu/value_oriented_programming_needs)
 
 ## Vale {#vale}
+
+TODO
 
 ## Vault {#vault}
 
