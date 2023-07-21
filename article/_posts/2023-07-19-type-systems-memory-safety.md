@@ -1141,6 +1141,12 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
   - type safe
   - safe memory
   - null checking
+- superficially, cyclone looks like c
+- extends c with new features
+  - non-null pointers
+    - `foo@` is the non-null version of `foo*`
+  - fat pointers (pointer + size)
+  - compile-time region based memory management
 
 TODO
 
