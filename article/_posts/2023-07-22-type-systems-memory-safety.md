@@ -1445,7 +1445,7 @@ patterns as being antipatterns in the context of value semantics.
 
 ### Simplified Semantics
 
-The simplified (lie) version of the semantics ics:
+The simplified (lie) version of the semantics is:
 
 1. Values are linearly-typed.
 1. References are not a first-class type but a second-class parameter passing
