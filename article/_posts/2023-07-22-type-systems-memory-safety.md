@@ -1349,8 +1349,9 @@ drop(Foo)
 
 ### Closures
 
-- closures can capture things by reference
-- a closure works exactly like a struct with a remote part
+Closures can capture variables by immutable or mutable reference. This works
+exactly like a struct with remote parts, and the lifetime analysis ensures the
+closure can't escape the lifetime of the things it holds.
 
 ### Links
 
