@@ -1316,15 +1316,39 @@ drop(Foo)
 
 ### Local References
 
-- i lied
-- references can be created outside function boundaries
-- `let y = &x`
-- a lightweight analysis pass ensures these are used correctly
-- kind of like a lighter rust
-- so to use references you don't have to split everything up into a thousand
-  tiny functions
-- lifetime annotations are not needed since all the information of lifetimes is
-  in the control flow graph
+References can be created outside of function variables by assigning them to a
+variable. The compiler implements an analysis pass rooted at variables rather
+than lifetimes to ensure you can't use a value while a reference variable
+pointing to that value is live.
+
+For example:
+
+```swift
+// foo is an owned value
+let foo = makeFoo();
+// x is an implicit reference to foo
+let x = foo;
+// do things with x, extending its lifetime
+// for the duration of x, we can't use foo
+f(x);
+g(x);
+h(x);
+// x is no longer used, lifetime ends here
+// foo can now be moved or consumed
+```
+
+This is equivalent to the following in Rust:
+
+```rust
+let foo = makeFoo();
+{
+    let x = &foo; // note the ampersand!
+    f(x);
+    g(x);
+    h(x);
+};
+// foo can be used again
+```
 
 ### Subscripts
 
