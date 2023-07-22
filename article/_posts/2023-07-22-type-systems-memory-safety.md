@@ -1537,6 +1537,7 @@ Links:
 
 - [Vale website](https://vale.dev/)
   - [Vale's Memory Safety Strategy: Generational References and Regions](https://verdagon.dev/blog/generational-references)
+  - [Vale's First Prototype for Immutable Region Borrowing](https://verdagon.dev/blog/first-regions-prototype)
 
 ## Vault {#vault}
 
