@@ -1355,7 +1355,19 @@ drop(Foo)
 
 ## Vale {#vale}
 
-TODO
+[Vale][vale] is a new programming language for safe systems programming. It uses
+a combination of compile-time and run-time checks to provide
+safety. Specifically, it provides [generational references][genref] and the
+language semantics allow the compiler to elide many of the runtime checks
+through [region borrowing][regborrow]. I don't have a clear mental model of how
+it works. But one interesting feature is [Fearless FFI][fearlessffi], which uses
+a separate stack to isolate FFI calls and create a language that doesn't need
+unsafe escape hatches to interact with external code.
+
+[vale]: https://vale.dev/
+[genref]: https://verdagon.dev/blog/generational-references
+[regborrow]: https://verdagon.dev/blog/first-regions-prototype
+[fearlessffi]: https://verdagon.dev/blog/fearless-ffi
 
 Links:
 
