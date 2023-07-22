@@ -1328,13 +1328,14 @@ drop(Foo)
 
 ### Subscripts
 
-- subscripts are kind of like a special kind of function that is allowed to return references
-- it's not quite returning the reference, rather, it's like a coroutine
-- it takes its inputs, and a callback
-- and "returns" the reference by calling the callback with the reference
-- subscripts are basically used in place of what, in rust, would be a function
-  that takes a reference to an object and returns a reference to an interior
-  value
+Subscripts are kind of like a special kind of function that is allowed to take a
+reference, transform it, and return it. Conceptually that's what
+happens. Internally it's more like a coroutine: subscripts compile to a function
+that takes a callback, and rather than return the reference, they "return" the
+reference by calling the callback and passing the reference.
+
+Subscripts are use in place of what, in Rust, would be a function that takes a
+reference to an object and returns a reference to an interior value.
 
 ### Remotes
 
