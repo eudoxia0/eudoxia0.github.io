@@ -1249,13 +1249,35 @@ drop(Foo)
 
 ### Lexical Lifetimes
 
-- rust's first lifetimes were lexical
-  - tied to lexical scope
-  - this is the simplest way to implement lifetimes
-- lifetimes stretched to the end of a lexical scope
-- so you couldn't do this
-  - example
-- because the lifetime ofthe reference stretches to the lifetime of the value you're borrowing
+Until 2017 or so Rust's lifetimes were tied to lexical scope. This is simpler to
+implement than the present version, but it means you can't do this:
+
+```rust
+{
+    let x = foo();
+    let r = &x;
+    f(r);
+    dispose(x);
+}
+```
+
+This will complain that you're trying to use `x` while a reference to it, `r`,
+is still live, because the lifetimes of `x` and `r` end at the same
+statement. You could imagine an alternative design where the lifetime of a
+reference-typed variable ends "eagerly" at the last statement that uses it, but
+that's not what was implemented. To make this code work you needed to introduce
+another lexical scope:
+
+```rust
+{
+    let x = foo();
+    {
+        let r = &x;
+        f(r);
+    } // `r` ends here
+    dispose(x);
+}
+```
 
 ### Non-Lexical Lifetimes
 
