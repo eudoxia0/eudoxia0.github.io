@@ -1238,21 +1238,34 @@ drop(Foo)
 
 ### Borrow Checking
 
-- rust does something very practical
-  - it says what safety properties it will enforce
-  - but it doesn't say how
-  - so the borrow checker is free to evolve, in the direction of accepting more programs over time
-- tradeoff
-  - rust becomes more ergonomic over time
-  - you can use rust while hardly understanding how it works
-    - i use rust professionaly and hardly think about lifetimes
-    - writing rust doesn't feel like a puzzle or a chore of fitting the problem to the language
-    - rather, you just write code, and generally the compiler will accept it
-  - on the other hand, there's no specification of the borrow checker
-    - that means you can't have multiple rust compilers, because the spec of the borrow checker is "whatever rustc does at present"
-    - people say having multiple compilers is bad because it wastes effort
-    - i think there is merit to this argument
-    - but there is value in stability, and in a language being describable by spec rather than implementation
+Rust is the [carcinized][crab] elephant in the room. This is the first
+successful, industrial language to use ownership types for memory safety. It is
+widely used (I use it at work to build high-performance asynchronous servers)
+and has great tooling. The ecosystem is large enough that I never find myself
+thinking "I can't do this in Rust because it lacks X library".
+
+[crab]: https://en.wikipedia.org/wiki/Carcinisation
+
+Rust does something very practical: it says what properties it will enforce, but
+doesn't say how. That is, you know references have to uphold the law of
+exclusivity, but how the compiler achieves this is subject to change. So the
+borrow checker is allowed to evolve over time, in the direction of accepting
+more programs and becoming more ergonomic while retaining safety.
+
+The upside is that most of the time you can use Rust without thinking about
+lifetimes or the borrow chchecker. The downside is that the borrow checker is
+hard to spec (it's basically "whatever `rustc` does now") which makes is hard to
+have multiple implementations of Rust. Some people argue that's fine or a good
+thing because multiple implementations waste effort. This argument has merit,
+but I think languages being specification-defined is a good thing from a
+stability perspective. It's what they call a tradeoff.
+
+My own experience of using Rust is that it hardly ever feels like a puzzle or a
+chore of having to fit my program into the language. Most of the time it just
+works. `cargo` specially is a joy to use and every language community should aim
+to have something like it. The only parts that are occassionally frustrating are
+the obscure error messages produced by misusing closures and/or async, and the
+still-unfinished parts of the language (some obscure corners of async).
 
 ### Lexical Lifetimes
 
