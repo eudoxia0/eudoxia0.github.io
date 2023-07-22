@@ -1,0 +1,12 @@
+digraph G {
+    node[shape=plaintext style=filled]
+
+    readref[label="readref"]
+    writeref[label="writeref"]
+    box[label="MaybeBox::Empty"]
+    garbage[label="DEALLOCATED"]
+
+    box
+    writeref -> box
+    readref -> garbage
+}
