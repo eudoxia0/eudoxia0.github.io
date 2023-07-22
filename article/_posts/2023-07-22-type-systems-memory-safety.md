@@ -1302,6 +1302,9 @@ drop(Foo)
   - all values are trees, rooted at program variables
 - as in essentially all linear type systems, references (borrowing) is
   introduced to relax some of the rules and improve the ergonomics
+
+### Simplified Semantics
+
 - in val, references are second-class, which means:
   - they're not quite a type, but more like a second-class parameter passing mode
 - concretely, the (simplified) semantics are:
