@@ -1199,15 +1199,27 @@ observers][linearml-obs], which are like a very lightweight version of reference
 
 ## Rust {#rust}
 
-- the elephant in the room
-- first practical language with ownership types
-- originally was gonna be like a linearly-typed erlang
-- gradually become a safer C++
-- ownership and borrow checking
+Rust is the [carcinized][crab] elephant in the room. This is the first
+successful, industrial language to use ownership types for memory safety. It is
+widely used (I use it at work to build high-performance asynchronous servers)
+and has great tooling. The ecosystem is large enough that I never find myself
+thinking "I can't do this in Rust because it lacks X library".
+
+[crab]: https://en.wikipedia.org/wiki/Carcinisation
+
+My own experience of using Rust is that it hardly ever feels like a puzzle or a
+chore of having to fit my program into the language. Most of the time it just
+works. `cargo` specially is a joy to use and every language community should aim
+to have something like it. The only parts that are occassionally frustrating are
+the obscure error messages produced by misusing closures and/or async, and the
+still-unfinished parts of the language (some obscure corners of async).
 
 ### Move Semantics
 
-- move is the default
+Rust has a kind-of-affine type system. Every value is a tree rooted at program
+variables, every value is owned and affine. The `Drop` trait tells the compiler
+how to destroy values and any associated resources they have. Assignment like `a
+= b` moves the data in `b` into `a` and prevents further use of `b`.
 
 ### Drop
 
@@ -1238,14 +1250,6 @@ drop(Foo)
 
 ### Borrow Checking
 
-Rust is the [carcinized][crab] elephant in the room. This is the first
-successful, industrial language to use ownership types for memory safety. It is
-widely used (I use it at work to build high-performance asynchronous servers)
-and has great tooling. The ecosystem is large enough that I never find myself
-thinking "I can't do this in Rust because it lacks X library".
-
-[crab]: https://en.wikipedia.org/wiki/Carcinisation
-
 Rust does something very practical: it says what properties it will enforce, but
 doesn't say how. That is, you know references have to uphold the law of
 exclusivity, but how the compiler achieves this is subject to change. So the
@@ -1259,13 +1263,6 @@ have multiple implementations of Rust. Some people argue that's fine or a good
 thing because multiple implementations waste effort. This argument has merit,
 but I think languages being specification-defined is a good thing from a
 stability perspective. It's what they call a tradeoff.
-
-My own experience of using Rust is that it hardly ever feels like a puzzle or a
-chore of having to fit my program into the language. Most of the time it just
-works. `cargo` specially is a joy to use and every language community should aim
-to have something like it. The only parts that are occassionally frustrating are
-the obscure error messages produced by misusing closures and/or async, and the
-still-unfinished parts of the language (some obscure corners of async).
 
 ### Lexical Lifetimes
 
