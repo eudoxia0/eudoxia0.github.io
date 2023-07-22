@@ -1141,6 +1141,18 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 
 [austral]: https://austral-lang.org/
 
+Austral's main selling point is simplicity: the linearity and borrow checking
+rules are designed [fit on a page][au-linearity]) and the [linearity
+checker][au-check] is less than a thousand lines of heavily-commented
+OCaml. Additionally, Austral was built from the ground up to support
+[capability-based security][capsec] by leveraging linear types. The goal is to
+build a small, simple, secure language for building robust and maintainable
+software objects.
+
+[au-linearity]: https://austral-lang.org/spec/spec.html#linearity
+[au-check]: https://github.com/austral/austral/blob/725b4d119f187b647a21a38e697bf2f1b1f6b1a2/lib/LinearityCheck.ml
+[capsec]: /article/how-capabilities-work-austral
+
 Links:
 
 - [GitHub repository](https://github.com/austral/austral)
