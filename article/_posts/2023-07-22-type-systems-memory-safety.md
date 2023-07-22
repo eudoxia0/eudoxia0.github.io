@@ -1649,3 +1649,7 @@ Links:
 
 - [Ownership Types for Safe Programming: Preventing Data Races and Deadlocks](https://www.cse.msu.edu/~cse914/Readings/ownershipTypesForSafeProgramming-oopsla02.pdf)
 - [Linear types can change the world!](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.5439&rep=rep1&type=pdf)
+- [Henry Baker's Archive of Research Papers](https://www.plover.com/~mjd/misc/hbaker-archive/home.html)
+  - [Linear Logic and Permutation Stacks--The Forth Shall Be First](https://www.plover.com/~mjd/misc/hbaker-archive/ForthStack.html)
+  - [Lively Linear Lisp -- 'Look Ma, No Garbage!'](https://www.plover.com/~mjd/misc/hbaker-archive/LinearLisp.html)
+  - ['Use-Once' Variables and Linear Objects -- Storage Management, Reflection and Multi-Threading](https://www.plover.com/~mjd/misc/hbaker-archive/Use1Var.html)
