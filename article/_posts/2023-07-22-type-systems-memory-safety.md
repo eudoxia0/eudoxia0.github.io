@@ -1305,17 +1305,20 @@ drop(Foo)
 
 ### Simplified Semantics
 
-- in val, references are second-class, which means:
-  - they're not quite a type, but more like a second-class parameter passing mode
-- concretely, the (simplified) semantics are:
-  - references can only be created at function calls
-  - references cannot be returned from functions
-  - references cannot be stored in structures
-  - references follow the law of exclusivity
-  - references don't have lifetime annotations
-  - "borrow checking" is just checking that references at call sites are disjoint
-- this is a simplified version, as a starting point. I will elaborate the actual
-  semantics in the following sections
+The simplified (lie) version of the semantics ics:
+
+1. References are not a first-class type but a second-class parameter passing
+   mode (this is mostly true).
+1. References are created at function calls.
+1. References can't be returned from functions.
+1. References can't be stored in data structures.
+1. References respect the law of exclusivity.
+
+So "borrow checking" is just looking at function calls and ensuring that any
+borrows at function calls are disjoint if they involve a mutable borrow.
+
+This is a simplified version, as a starting point. I will elaborate the actual
+semantics in the following sections
 
 ### Local References
 
