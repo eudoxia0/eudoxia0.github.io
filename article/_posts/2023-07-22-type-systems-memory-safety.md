@@ -1288,25 +1288,27 @@ drop(Foo)
 
 ## Val {#val}
 
-- new programming language
-- high level systems programming
-- based on mutable value semantics
-- kind of a combination of swift and rust
-  - compiler written in swift
-- val has a semantics that aims to let you write code without thinking about
-  references at all
-  - rather, references are kind of like an optimization that happens under the
-    hood
-  - and instead you can think in higher-level concepts
-- val has an essentially linear type system
-  - all values are trees, rooted at program variables
-- as in essentially all linear type systems, references (borrowing) is
-  introduced to relax some of the rules and improve the ergonomics
+[Val][val] is a new high-level systems programming language based on [mutable
+value semantics][mvs]. It is essentially a mixture of the Swift and Rust
+ownership models. Val has a model that aims to let you write code without
+thinking about references at all: rather, you just think in terms of values with
+single ownership (i.e. all values are trees rooted at program variables) and the
+language semantics allow the compiler to insert references in many places as an
+optimization to reduce copying.
+
+Unlike Rust, which aims to let you port many design patterns from C++ while
+preserving safety, Val aims to introduce a new way to think about systems
+programming that requires some adaptation and explicitly rejects certain
+patterns as being antipatterns in the context of value semantics.
+
+[val]: https://www.val-lang.dev/
+[mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
 ### Simplified Semantics
 
 The simplified (lie) version of the semantics ics:
 
+1. Values are linearly-typed.
 1. References are not a first-class type but a second-class parameter passing
    mode (this is mostly true).
 1. References are created at function calls.
