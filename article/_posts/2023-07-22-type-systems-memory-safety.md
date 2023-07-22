@@ -331,6 +331,13 @@ Cons:
 - The double-throw problem still exists in Rust: a destructor that fails
   (because e.g. closing the file handle failed, or closing a socket failed) will
   simply abort the program.
+- The `Drop` trait (or equivalent) is a minimum-common denominator interface. It
+  doesn't support error handling. For example, in Rust, errors when closing a
+  file handle in the `Drop` implementation are simply ignored. You have to use
+  an explicit method to get those errors. But the types being affine means the
+  language won't remind you when you've forgotten to call that method, it can't
+  tell "I forgot to use this variable" apart from "I'm not using this variable
+  anymore", so it will just deallocate the file object for you/
 
 ## Borrowing {#borrow}
 
