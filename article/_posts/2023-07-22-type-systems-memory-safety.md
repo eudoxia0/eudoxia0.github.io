@@ -1136,25 +1136,35 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 
 ## Cyclone {#cyclone}
 
-- a research language
-  - safer version of C
-  - type safe
-  - safe memory
-  - null checking
-- superficially, cyclone looks like c
-- extends c with new features
-  - non-null pointers
-    - `foo@` is the non-null version of `foo*`
-  - fat pointers (pointer + size)
-    - `foo?` is the fat pointer version of `foo*`
-    - so strlen etc. work on `char?` instead of `char*`
-  - compile-time region based memory management
-    - pointers can be tagged with regions
-    - syntax resembles rust
-    - `char?'r` is a fat pointer to the region `r`
-    - regions = lifetimes
-    - `region` statement starts a new named region: `region r { ... ])`
-    - `rmalloc` takes a region and a size and returns a region-tracked pointer
+[Cyclone][cyclone] was a research programming language to build a type-safe and
+memory-safe version of C. It features an early version of Rust's
+ownership-and-borrowing scheme.
+
+Superficially, Cyclone looks like C. It has extra syntax and semantics for new
+safety features. The basic features are stricter semantics for raw pointers, and
+new safer pointer types:
+
+1. **Null Checking:** Cyclone defensively checks pointers for `NULL` before
+   accessing them.
+1. **Non-Null Pointers:** the language supports non-null pointers, denoted by
+   the at sign. A type `foo_t@` is the never-null version of `foo_t*`.
+1. **Fat Pointers:** a pointer plus the size of the buffer it points to, denoted
+   by the question mark. A type `foo_t?` is the fat pointer version of
+   `foo_t*`. So code that works on byte buffers uses `char?` rather than `char*`
+   parameter.
+
+Additionally, Cyclone has compile-time region-based memory management. You can
+declare a lexically scoped region and allocate pointers in it, like so:
+
+```c
+region r {
+    char?'r foo = rmalloc(r, sizeof(char));
+};
+```
+
+The syntax should be familiar: this is a lot like Rust's lifetime annotations,
+`char?'r` is "a fat pointer to a `char` in the region `r`", just as `&'l T` in
+Rust means "a reference to `T` with lifetime `l`".
 
 Links:
 
