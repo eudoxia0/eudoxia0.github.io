@@ -35,7 +35,6 @@ performance and low-level control of languages like C.
     1. [Vale](#vale)
     1. [Vault](#vault)
     1. [Verona](#verona)
-1. [Conclusion](#conclusion)
 1. [See Also](#see)
 
 # Memory Safety {#safety}
@@ -1645,8 +1644,6 @@ Links:
   - "So by taking ownership at the level of ownership of objects, then we get
     much closer to the level of abstraction that people are using and it gives
     us the ability to build data structures without going outside of safety."
-
-# Conclusion {#conclusion}
 
 # See Also {#see}
 
