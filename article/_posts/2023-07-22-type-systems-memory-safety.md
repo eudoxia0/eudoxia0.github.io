@@ -1339,14 +1339,14 @@ reference to an object and returns a reference to an interior value.
 
 ### Remotes
 
-- some structures can have "remote parts"
-- this relaxes the restriction on not being able to store references in data
-  structures
-- nevertheless remotes don't have to be annotated with lifetimes
-- soundness is maintained, i think, by the fact that structs with remotes are
-  not `Moveable` or `Copyable`, so the lifetime analysis pass can detect
-  unsoundness without lifetime annotations
-  - im not sure exactly how it works
+Structures can have "remote parts": this is to get around on the restriction on
+not being able to store references in data structures. Nevertheless, because of
+how the semantics are set up, you don't need lifetime annotations.
+
+I don't fully understand this, but I think soundness is maintained by the fact
+that structs with remote parts are not `Moveable` or `Copyable`, i.e., they can
+only live on the stack. So the lifetime analysis pass can detect unsoundness
+without lifetime annotations by just looking at the variables using SSA.
 
 ### Closures
 
