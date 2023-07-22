@@ -1140,6 +1140,8 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 memory-safe version of C. It features an early version of Rust's
 ownership-and-borrowing scheme.
 
+[cyclone]: https://cyclone.thelanguage.org
+
 Superficially, Cyclone looks like C. It has extra syntax and semantics for new
 safety features. The basic features are stricter semantics for raw pointers, and
 new safer pointer types:
