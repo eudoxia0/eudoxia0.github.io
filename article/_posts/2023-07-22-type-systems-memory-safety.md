@@ -1144,13 +1144,34 @@ Austral's main selling point is simplicity: the linearity and borrow checking
 rules are designed [fit on a page][au-linearity]) and the [linearity
 checker][au-check] is less than a thousand lines of heavily-commented
 OCaml. Additionally, Austral was built from the ground up to support
-[capability-based security][capsec] by leveraging linear types. The goal is to
-build a small, simple, secure language for building robust and maintainable
-software objects.
+[capability-based security][capsec] by leveraging linear types.
 
 [au-linearity]: https://austral-lang.org/spec/spec.html#linearity
 [au-check]: https://github.com/austral/austral/blob/725b4d119f187b647a21a38e697bf2f1b1f6b1a2/lib/LinearityCheck.ml
 [capsec]: /article/how-capabilities-work-austral
+
+In addition to simplicity, another design goal is strictness, andmany small
+footguns that are endemic to most programming languages are eliminated:
+
+- Arithmetic is always checked for overflow.
+- Binary (arithmetic, logical, etc.) expressions deeper than one level of
+  nesting require parentheses.
+- There's no variable shadowing.
+- No implicit destructors.
+- No implicit function calls of any kind.
+- No exceptions.
+- No implicit control flow of any kind: what you see on the code is what you
+  get.
+- No implicit type conversions or coercions.
+- No implicit copies.
+- No subtyping.
+- No macros.
+- No permissionless code: capability-based security is used throughout the
+  standard library to make it evident when code accesses the filesystem,
+  network, high-frequency clock etc.
+
+The goal is to build a small, simple, secure language for building robust,
+performant, and maintainable software objects.
 
 Links:
 
