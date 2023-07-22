@@ -1141,6 +1141,18 @@ a simplified version of Rust's borrow checker (lexical lifetimes and an explicit
 
 [austral]: https://austral-lang.org/
 
+Links:
+
+- [GitHub repository](https://github.com/austral/austral)
+- [Website][austral]
+  - [Introduction to Linear Types](https://austral-lang.org/linear-types)
+  - [Specification](https://austral-lang.org/spec/spec.html)
+- Blog posts:
+  - [Introducing Austral: A Systems Language with Linear Types and Capabilities](/article/introducing-austral)
+  - [How Austral’s Linear Type Checker Works](/article/how-australs-linear-type-checker-works)
+  - [Design of the Austral Compiler](/article/design-austral-compiler)
+  - [How Capabilities Work in Austral](/article/how-capabilities-work-austral)
+
 ## Cyclone {#cyclone}
 
 [Cyclone][cyclone] was a research programming language to build a type-safe and
