@@ -1520,13 +1520,19 @@ closure can't escape the lifetime of the things it holds.
 ## Vale {#vale}
 
 [Vale][vale] is a new programming language for safe systems programming. It uses
-a combination of compile-time and run-time checks to provide
-safety. Specifically, it provides [generational references][genref] and the
-language semantics allow the compiler to elide many of the runtime checks
-through [region borrowing][regborrow]. I don't have a clear mental model of how
-it works. But one interesting feature is [Fearless FFI][fearlessffi], which uses
-a separate stack to isolate FFI calls and create a language that doesn't need
-unsafe escape hatches to interact with external code.
+a combination of compile-time and run-time checks to provide safety.
+
+Specifically, Vale provides linear types and move semantics as the
+foundation. Borrowing works using [generational references][genref], a run-time
+technique similar to reference counting but with less time and space
+overhead. This lets you have borrowing without lifetime annotations by shifting
+the burden to the runtime. [Region borrowing][regborrow] is gradually being
+implemented to elide the runtime checks associated with generational references.
+
+I don't have a clear mental model of how it works, but I think that's the
+general outline. But one interesting feature is [Fearless FFI][fearlessffi],
+which uses a separate stack to isolate FFI calls and create a language that
+doesn't need unsafe escape hatches to interact with external code.
 
 [vale]: https://vale.dev/
 [genref]: https://verdagon.dev/blog/generational-references
