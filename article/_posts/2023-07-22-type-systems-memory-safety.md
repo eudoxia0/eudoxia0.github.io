@@ -506,7 +506,7 @@ enum MaybeBox {
 };
 ```
 
-That is: an `EmptyBox` is either a pointer to a string, or nothing. Suppose you
+That is: a `MaybeBox` is either a pointer to a string, or nothing. Suppose you
 have both an immutable reference `readref` and a mutable reference `mutref` to
 the box at the same time, and that the box has contents:
 
