@@ -175,9 +175,11 @@ I've written a lot about this, so in the interest of not repeating myself:
 [auintro]: /article/introducing-austral#linear
 [aucheck]: /article/how-australs-linear-type-checker-works
 
-But the basic idea is what it says on the tin: linear values must be used
-once. Using a linear value is called _consuming_ it. Ensuring that all linear
-values are consumed can be done at compile time.
+But the basic idea is: linear values must be used once. Using a linear value is
+called _consuming_ it. Ensuring that all linear values are consumed can be done
+at compile time. In languages with unrestricted pointers, data forms a graph
+across the heap and stack. In a linearly-typed language, all objects are trees
+rooted at program variables.
 
 For example, let `Foo` be some linear type. Then the following doesn't work:
 
@@ -280,8 +282,8 @@ of as not just a mechanism for better ergonomics but for graduated permissions:
 immutable references, for example, don't allow you to mutate or deallocate data
 since they don't own that data.
 
-Another limitation of linear types is they can only represent trees rooted at
-variables: interconnected, graph or DAG-like data structures are not directly
+Another limitation of linear types is they can only represent trees:
+interconnected, graph or DAG-like data structures are not directly
 representable. More on this below.
 
 Pros:
