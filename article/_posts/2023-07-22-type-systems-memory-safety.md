@@ -178,8 +178,8 @@ I've written a lot about this, so in the interest of not repeating myself:
 But the basic idea is: linear values must be used once. Using a linear value is
 called _consuming_ it. Ensuring that all linear values are consumed can be done
 at compile time. In languages with unrestricted pointers, data forms a graph
-across the heap and stack. In a linearly-typed language, all objects are trees
-rooted at program variables.
+across the heap and stack. In a linearly-typed language, all objects are trees,
+and all variables point to disjoint objects.
 
 For example, let `Foo` be some linear type. Then the following doesn't work:
 
