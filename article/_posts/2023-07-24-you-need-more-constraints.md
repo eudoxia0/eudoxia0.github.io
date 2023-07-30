@@ -83,6 +83,8 @@ consider when designing a schema.
     - a 500 error is better than bad data
         - the former is transient
         - the latter is a thorn on the side, one of the tiny papercuts that lead to the death by a thousand cuts
+- database is special
+  - last line of defense against bad data and invariant violations
 
 # Checklist: Scalar Constraints {#scalar}
 
