@@ -370,13 +370,42 @@ This section describes how to enforce constraints on row update using triggers.
 
 ## Immutable Columns {#imm}
 
-- if a field should be immutable, add a trigger to make it so
-- if old.foo <> new.foo: error
+Most columns arguably should be immutable, but SQL makes this hard to
+enforce.
+
+However, you can do it with triggers. For example:
+
+```sql
+create table user (
+    user_id uuid primary key
+);
+```
+
+To ensure user IDs are immutable:
+
+```sql
+create or replace function user_immutable_columns()
+returns trigger as $$
+begin
+  if new.user_id <> old.user_id then
+    raise exception 'user.user_id update is not allowed';
+  end if;
+
+  -- Check columns here.
+
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger user_immutable_columns_trigger
+before update
+on users
+for each row execute function prevent_email_update();
+```
 
 ## State Transitions {#state-trans}
 
-- if you have a state column, you should have a trigger that checks that the column can't be changed
-- if old.state = foo and new.state = bar: error
+If you have a state column, you can enforce that state transitions happen in the correct direction through a trigger.
 
 ## Numeric Changes {#numeric-change}
 
