@@ -31,27 +31,31 @@ consider when designing a schema.
 
 # Invariants {#inv}
 
-- every data model has invariants
-  - statements that must always be true
-- most invariants are implicit
-    - things that people expect but wouldn't be able to list off the top of their head
-    - good design is making invariants explicit rather than implicit
-- for example: usernames
-  - stored as strings
-  - but what's a string?
-  - anything from the empty strings to the complete works of william shakespeare
-  - when you focus on it, usernames are a very small subset of strings
-  - properties:
-    - non-empty
-    - short, some reasonable length, say, less than 100 characters
-    - not including newlines
-    - usually limited to some alphabet like alphanumeric characters plus underscores
-      - no spaces, or, at least, not starting or ending with spaces
-      - no weird symbols
-      - no weird unicode homoglyph attacks
-    - but where are such invariants enforced?
-      - most are not enforced
-      - some are enforced in various scattershot ways
+Every data model has invariants: statements about the data which must always be true.
+
+Most invariants are implicit: things that people reasonably expect but wouldn't list off the top of their head.
+
+Good design is about making invariants explicit rather than explicit.
+
+This is related to [Primitive Obsession][prim]: you should use domain-specific types like `Email`, `Username`, rather than generic types like `String`.
+
+For example: usernames as stored as strings. But what is a string? Anything from the empty string to the complete works of William Shakespeare and beyond. But when you focus on it, usernames are an infinitesimal subset of all strings. Usernames usually have the following properties:
+
+1. First and foremost they are non-empty.
+1. Usernames are globally unique, often with the added constraint of being
+   unique in a case-insensitive way.
+1. A single line of text: newlines are not permitted.
+1. Usually limited to some alphabet (e.g. alphanumeric characters and
+   underscores, usually in ASCII).
+1. No spaces allowed.
+1. Obscure characters like non-printable characters, non-breaking spaces, and
+   weird Unicode characters (see homoglyph attack) should not be allowed
+   (_display names_ are a different matter than _usernames_. It would be
+   impermissible to prevent users from writing their name in their own script.)
+
+But most of these invariants are never enforced. The ones that are enforced are
+usually enforced in ad-hoc places.
+
 - invariants can be ranked by how hard they are to enforce
     - at the bottom you have scalar invariants: that apply to a single column in a row.
         - they are the easiest to enforce.
