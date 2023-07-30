@@ -49,12 +49,12 @@ beyond[^fn1]. But when you focus on it, usernames are an infinitesimal subset of
 all strings. Usernames usually have the following properties:
 
 1. First and foremost they are non-empty.
-1. Usernames are globally unique, often with the added constraint of being
+1. They are globally unique, often with the added constraint of being
    unique in a case-insensitive way.
-1. A single line of text: newlines are not permitted.
-1. Usually limited to some alphabet (e.g. alphanumeric characters and
+1. They are a single line of text: newlines are not permitted.
+1. They are limited to some alphabet (e.g. alphanumeric characters and
    underscores, usually in ASCII).
-1. No spaces allowed.
+1. No spacesare are allowed.
 1. Obscure characters like non-printable characters, non-breaking spaces, and
    weird Unicode characters (see homoglyph attack) should not be allowed
    (_display names_ are a different matter than _usernames_. It would be
