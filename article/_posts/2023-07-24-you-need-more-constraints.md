@@ -366,6 +366,8 @@ check (started_at < ended_at);
 
 # Checklist: Before/After Constraints {#before}
 
+This section describes how to enforce constraints on row update using triggers.
+
 ## Immutable Columns {#imm}
 
 - if a field should be immutable, add a trigger to make it so
