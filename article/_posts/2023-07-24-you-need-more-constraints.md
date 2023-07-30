@@ -32,9 +32,26 @@ consider when designing a schema.
 # Invariants {#inv}
 
 - every data model has invariants
+  - statements that must always be true
 - most invariants are implicit
     - things that people expect but wouldn't be able to list off the top of their head
     - good design is making invariants explicit rather than implicit
+- for example: usernames
+  - stored as strings
+  - but what's a string?
+  - anything from the empty strings to the complete works of william shakespeare
+  - when you focus on it, usernames are a very small subset of strings
+  - properties:
+    - non-empty
+    - short, some reasonable length, say, less than 100 characters
+    - not including newlines
+    - usually limited to some alphabet like alphanumeric characters plus underscores
+      - no spaces, or, at least, not starting or ending with spaces
+      - no weird symbols
+      - no weird unicode homoglyph attacks
+    - but where are such invariants enforced?
+      - most are not enforced
+      - some are enforced in various scattershot ways
 - invariants can be ranked by how hard they are to enforce
     - at the bottom you have scalar invariants: that apply to a single column in a row.
         - they are the easiest to enforce.
