@@ -122,14 +122,24 @@ violated. A database constraint violation is a sign of a bug in the code.
 
 # Checklist: Scalar Constraints {#scalar}
 
+This section lists useful scalar constraints: these are constraints applying to
+a single column in a database row.
+
 ## Non-Null {#null}
 
-- almost everything should be non-null
-- if you have a null field that's iniitally null, you might consider having a different table instead
-- one reason to avoid null is that null is two things
-    - a way to make fields optional
-    - a three-valued logic that propagates across the language
-    - sql becomes harder to predict where nulls are involved
+This goes without saying. Most things should be non-null.
+
+The best reason to avoid null values is that in SQL, null is two things:
+
+1. The `None` case of an `Option` type.
+1. A three valued logic that propagates across the entire language.
+
+SQL becomes harder to reason about where nulls are involved.
+
+If you have columns that are initially null, but become non-null after some
+transformation, you should consider having another table for those values and a
+foreign key. Then the nulls move from the column to the join, where they are
+more expected. Alternatively, you should enforce constraints, see below.
 
 ## Non-Empty Strings {#string}
 
