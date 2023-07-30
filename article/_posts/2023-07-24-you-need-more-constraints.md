@@ -14,9 +14,9 @@ consider when designing a schema.
 1. [Defense in Depth](#depth)
 1. [Checklist: Scalar Constraints](#scalar)
     1. [Non-Null](#null)
+    1. [Uniqueness](#unique)
     1. [Non-Empty Strings](#string)
     1. [String Normalization](#string-norm)
-    1. [Uniqueness](#unique)
     1. [Numeric Ranges](#numeric)
     1. [Allowed Values](#enums)
 1. [Checklist: Multi-Column Constraints](#multi)
@@ -128,6 +128,11 @@ transformation, you should consider having another table for those values and a
 foreign key. Then the nulls move from the column to the join, where they are
 more expected. Alternatively, you should enforce constraints, see below.
 
+## Uniqueness {#unique}
+
+When making a column, always ask yourself: should this be unique? Especially
+with foreign keys. This too should go without saying.
+
 ## Non-Empty Strings {#string}
 
 Almost everywhere you use a string, you _almost certainly_ want a non-empty
@@ -187,11 +192,6 @@ addresses:
 --------+
 true    |
 ```
-
-## Uniqueness {#unique}
-
-When making a column, always ask yourself: should this be unique? Especially
-with foreign keys.
 
 ## Numeric Ranges {#numeric}
 
