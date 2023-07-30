@@ -29,6 +29,7 @@ consider when designing a schema.
     1. [Immutable Columns](#imm)
     1. [State Transitions](#state-trans)
     1. [Numeric Changes](#numeric-change)
+1. [Conclusion](#conclusion)
 
 # Invariants {#inv}
 
@@ -158,10 +159,16 @@ If a string is nullable, consider making it non-null and using the empty string
 as the null value. That way you avoid both the pitfalls of nulls and the problem
 of having two distinct values to represent the empty case.
 
-You should also have server-side types to represent non-empty strings:
+You should also have server-side types to represent non-empty strings, e.g.:
 
 ```python
-example
+@dataclass(frozen=True)
+class NonEmptyString:
+    value: str
+
+    def __post_init__(self):
+        if not self.value:
+            raise ValueError("String must be non-empty.")
 ```
 
 ## String Normalization {#string-norm}
@@ -439,3 +446,10 @@ $$ language plpgsql;
 Analogously to the above, you can enforce that numeric columns change in certain
 ways: that integers increase monotonically, for example, or that some values
 only go up or down.
+
+# Conclusion {#conclusion}
+
+Every data model has invariants: the only difference is whether you enforce them
+or not. Postgres has powerful tools for enforcing invariants. You should use
+them. For a tiny cost in development effort, you buy a solid baseline of
+reliablity.
