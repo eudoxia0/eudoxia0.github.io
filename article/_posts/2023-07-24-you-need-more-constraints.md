@@ -156,11 +156,37 @@ class NonEmptyString:
 
 ## String Normalization {#string-norm}
 
-- emails should be unique
-    - goes without saying
-- emails should be lowercase
-    - you dont want to debug the case where multiple users have john@doe and
-      John@doe.
+Consider email addresses. What are the constraints?
+
+1. Non-empty.
+2. Lowercase (you don't want to deal with the bugs when you have
+   `john.doe@example.com` and `John.Doe@example.com` as distinct rows in the
+   database.
+3. Satisfying some reasonable regex[^fn2].
+
+In Postgres, we can enforce all of these constraints:
+
+```
+-- Emails are non-empty.
+check (length(email) > 0)
+
+-- Emails are lowercase.
+check (email = lowercase(email))
+
+-- Emails must satisfy a regex.
+check (email ~ '^[\w\.\-\+]+@[\w\.\-\+]+$')
+```
+
+You can interactively test that your regex accepts a tractable set of email
+addresses:
+
+```sql
+> select 'john.doe+spam@mail-server.foo.bar.baz' ~ '^[\w\.\-\+]+@[\w\.\-\+]+$'
+
+?column?|
+--------+
+true    |
+```
 
 ## Uniqueness {#unique}
 
@@ -441,8 +467,12 @@ reliablity.
 # Footnotes
 
 [^fn1]:
-    This is related to [Primitive Obsession][prim]: you should use
+    This is related to [Primitive
+    Obsession](https://wiki.c2.com/?PrimitiveObsession): you should use
     domain-specific types like `Email`, `Username`, rather than generic types
     like `String`.
 
-    [prim]: https://wiki.c2.com/?PrimitiveObsession
+[^fn2]:
+    Ultimately the only way to properly "validate" an email address is to send
+    an email to it. But it is perfectly reasonable to reject insane email
+    addresses using a regex, in the interest of keeping things tractable.
