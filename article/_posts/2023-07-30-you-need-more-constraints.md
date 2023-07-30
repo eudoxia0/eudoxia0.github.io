@@ -141,8 +141,7 @@ with foreign keys. This too should go without saying.
 ## Non-Empty Strings {#string}
 
 Almost everywhere you use a string, you _almost certainly_ want a non-empty
-string. This is hardly ever enforced, but it is easy to enforce: It is easy to
-add a constraint to enforce non-empty values:
+string. This is hardly ever enforced, but it's easy to add a constraint:
 
 ```sql
 alter table foo add constraint username_non_empty check (length(username) > 0);
