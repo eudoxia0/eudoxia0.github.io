@@ -1,6 +1,7 @@
 ---
 title: You Need More Constraints
 summary: A checklist of useful SQL constraints.
+math: yes
 ---
 
 If you use a relational database, you are almost certainly underusing
@@ -236,19 +237,128 @@ And naturally the position should have a range check:
 constraint position_is_natural check (position >= 0);
 ```
 
+## Conditional Nulls {#cond}
+
+Consider this schema:
+
+```sql
+create table user (
+    user_id uuid primary key,
+    is_verified boolean not null,
+    verified_at timestamp
+);
+```
+
+There is an implicit relationship between `is_verified` and `verified_at` here:
+
+1. If `is_verified` is true, `verified_at` must be non-null.
+1. If `is_verified` is false, `verified_at` must be null.
+
+And dually:
+
+1. If `verified_at` is non-null, `is_verified` must be true.
+1. If `verified_at` is null, `is_verified` must be false.
+
+Constraints like these are hardly ever explicitly enforced, but should be. And
+they can be enforced very simply:
+
+```sql
+check (
+    (is_verified = true and verified_at is not null) or
+    (is_verified = false and verified_at is null)
+)
+```
+
+This is a bad example because the `is_verified` field is wholly redundant, but a
+more common example is when you have multiple foreign keys are some are
+conditionally null. For example:
+
+```sql
+-- Users are either students or teachers.
+create table user (
+  user_id uuid primary key,
+  user_type string not null,
+  student_id uuid references student(student_id),
+  teacher_id uuid references teacher(teacher_id),
+
+  constraint user_type_allowed_values check (user_type in ('student', 'teacher'));
+);
+```
+
+The constraints here are:
+
+1. User type is `student` iff `student_id` is non-null and `teacher_id` is null.
+1. User type is `teacher` iff `student_id` is null and `teacher_id` is non-null.
+
+We can enforce them like this:
+
+```sql
+check (
+    (user_type = 'student' and student_id is not null and teacher_id is null)
+    or
+    (user_type = 'teacher' and student_id is null and teacher_id is not null)
+);
+```
+
 ## Implication {#impl}
 
-- you can implement if-then constraints
+Many constraints have the form "if _condition_ then _something_". SQL doesn't
+have native support for writing if-then constraints, but you can exploit logic
+to do this: an implication $P \implies Q$ is equivalent to $\neg P \lor Q$, and
+this you can write in SQL.
+
+For example:
+
+```sql
+-- state = finished implies finished_at is non-null
+check ((state <> finished) or (finished_at is not null))
+```
+
+Note that, when you write down all the constraints, you usually find that most
+implication relationships are usually bi-directional, and enforcing them as
+if-then constraints creates a combinatorial explosion of constraints. Therefore,
+for things that are logically related, you should try to write one constraint
+with one big logical expression. That way, when evolving your data model, you
+only have to change one constraint rather than an implicitly-connected group of
+constraints.
 
 ## Multiple Boolean Columns {#bool}
 
-- if you have multiple boolean toggles in a table, think about the relationship between them: are some of them mutually exclusive? does one toggle imply the other?
-- enforce those relationships
-- think about instead using a state field
+A common anti-pattern is to have multiple boolean toggles in the same row, with
+some implicit exclusion relationship between them. Ideally you should replace
+these with an enum field of some kind, as an interim solution, you can add
+constraints about which values are allowed at the same time.
+
+For example:
+
+```
+create table user (
+    user_id uuid primary key,
+    is_admin boolean not null,
+    is_teacher boolean not null,
+    is_student boolean not null
+);
+```
+
+We can enforce that all of these are mutually exclusive:
+
+```sql
+check (
+    (is_admin and (not is_teacher) and (not is_student))
+    or
+    ((not is_admin) and is_teacher and (not is_student))
+    or
+    ((not is_admin) and (not is_teacher) and is_student)
+)
+```
 
 ## Timestamp Relationships {#timestamp}
 
-- started at < ended at
+These are usually missed, but if you have columns like `started_at`, `ended_at` and such, you should enforce their temporal relationship:
+
+```
+check (started_at < ended_at);
+```
 
 ## State Fields and Nulls {#state}
 
