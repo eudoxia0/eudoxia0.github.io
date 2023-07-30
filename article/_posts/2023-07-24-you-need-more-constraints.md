@@ -384,30 +384,55 @@ create table user (
 To ensure user IDs are immutable:
 
 ```sql
-create or replace function user_immutable_columns()
-returns trigger as $$
+create or replace function user_immutable_columns() returns trigger as $$
 begin
-  if new.user_id <> old.user_id then
-    raise exception 'user.user_id update is not allowed';
-  end if;
+    if new.user_id <> old.user_id then
+        raise exception 'user.user_id update is not allowed';
+    end if;
 
-  -- Check columns here.
-
-  return new;
+    return new;
 end;
 $$ language plpgsql;
 
 create trigger user_immutable_columns_trigger
-before update
-on users
-for each row execute function prevent_email_update();
+    before update
+    on users
+    for each row execute function prevent_email_update();
 ```
 
 ## State Transitions {#state-trans}
 
-If you have a state column, you can enforce that state transitions happen in the correct direction through a trigger.
+If you have a state column, you can enforce that state transitions happen in the correct direction through a trigger. For example:
+
+```sql
+create table job (
+    job_id uuid primary key,
+    state string not null,
+
+    constraint allowed_states (state in ('not_started', 'started', 'finished')
+);
+```
+
+Implicitly, updates to this table can only go from `not_started` to `started` and from `started` to `finished`. We can enforce this with a trigger:
+
+```sql
+create or replace function user_immutable_columns() returns trigger as $$
+begin
+    if new.state = 'started' and old.state <> 'not_started' then
+        raise exception 'Invalid state transition.';
+    end if;
+
+    if new.state = 'finished' and old.state <> 'started' then
+        raise exception 'Invalid state transition.';
+    end if;
+
+    return new;
+end;
+$$ language plpgsql;
+```
 
 ## Numeric Changes {#numeric-change}
 
-- rule: non-decreasing fields
-- rule: monotonically increasing fields
+Analogously to the above, you can enforce that numeric columns change in certain
+ways: that integers increase monotonically, for example, or that some values
+only go up or down.
