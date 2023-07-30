@@ -24,7 +24,6 @@ consider when designing a schema.
     1. [Implication](#impl)
     1. [Multiple Boolean Columns](#bool)
     1. [Timestamp Relationships](#timestamp)
-    1. [State Fields and Nulls](#state)
 1. [Checklist: Before/After Constraints](#before)
     1. [Immutable Columns](#imm)
     1. [State Transitions](#state-trans)
@@ -154,7 +153,9 @@ It is easy to add a constraint to enforce non-empty values:
 alter table foo add constraint username_non_empty check (length(username) > 0);
 ```
 
-If a string is nullable, consider making it non-null and using the empty string as the null value. That way you avoid both the pitfalls of nulls and the problem of having two distinct values to represent the empty case.
+If a string is nullable, consider making it non-null and using the empty string
+as the null value. That way you avoid both the pitfalls of nulls and the problem
+of having two distinct values to represent the empty case.
 
 You should also have server-side types to represent non-empty strings:
 
@@ -167,11 +168,13 @@ example
 - emails should be unique
     - goes without saying
 - emails should be lowercase
-    - you dont want to debug the case where multiple users have john@doe and John@doe.
+    - you dont want to debug the case where multiple users have john@doe and
+      John@doe.
 
 ## Uniqueness {#unique}
 
-When making a column, always ask yourself: should this be unique? Especially with foreign keys.
+When making a column, always ask yourself: should this be unique? Especially
+with foreign keys.
 
 ## Numeric Ranges {#numeric}
 
@@ -354,17 +357,12 @@ check (
 
 ## Timestamp Relationships {#timestamp}
 
-These are usually missed, but if you have columns like `started_at`, `ended_at` and such, you should enforce their temporal relationship:
+These are usually missed, but if you have columns like `started_at`, `ended_at`
+and such, you should enforce their temporal relationship:
 
 ```
 check (started_at < ended_at);
 ```
-
-## State Fields and Nulls {#state}
-
-- if state = foo, then column is non-null
-- if state = bar, then column is null
-- if x is null, then the other must be non-null
 
 # Checklist: Before/After Constraints {#before}
 
