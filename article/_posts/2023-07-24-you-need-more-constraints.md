@@ -115,9 +115,8 @@ a single column in a database row.
 
 ## Non-Null {#null}
 
-This goes without saying. Most things should be non-null.
-
-The best reason to avoid null values is that in SQL, null is two things:
+This goes without saying. Most things should be non-null. The best reason to
+avoid null values is that in SQL, null is two things:
 
 1. The `None` case of an `Option` type.
 1. A three valued logic that propagates across the entire language.
@@ -131,11 +130,9 @@ more expected. Alternatively, you should enforce constraints, see below.
 
 ## Non-Empty Strings {#string}
 
-Almost everywhere you use a string, you _almost certainly_ want a non-empty string.
-
-This is hardly ever enforced.
-
-It is easy to add a constraint to enforce non-empty values:
+Almost everywhere you use a string, you _almost certainly_ want a non-empty
+string. This is hardly ever enforced, but it is easy to enforce: It is easy to
+add a constraint to enforce non-empty values:
 
 ```sql
 alter table foo add constraint username_non_empty check (length(username) > 0);
@@ -187,11 +184,12 @@ constraint percentage_in_range check ((percentage >= 0.0) and (percentage <= 1.0
 
 ## Allowed Values {#enums}
 
-Columns that represent enumerations should have constraints on their allowed values.
+Columns that represent enumerations should have constraints on their allowed
+values. Postgres has native support for [enum types][pgenum] and you should
+default to that, but if you're using a string column, you should add a check
+constraint.
 
-Postgres has native support for enum types, with some limitations.
-
-Alternatively you can have strings and a check constraint:
+[pgenum]: https://www.postgresql.org/docs/15/datatype-enum.html
 
 ```sql
 constraint allowed_states is check (state in ('not_started', 'started', 'finished'));
