@@ -143,12 +143,23 @@ more expected. Alternatively, you should enforce constraints, see below.
 
 ## Non-Empty Strings {#string}
 
-- almost all strings we use in databases are intended to be non-empty strings
-- this is hardly ever enforced
-- add a constraint to make the string non-empty
-- if a string is nullable, consider make it non-null and using the mpty string as the empty case
-- you might want to have server-side types to represent non-empty strings
-- you might also want to enforce the string is whitespace trimmed
+Almost everywhere you use a string, you _almost certainly_ want a non-empty string.
+
+This is hardly ever enforced.
+
+It is easy to add a constraint to enforce non-empty values:
+
+```sql
+alter table foo add constraint username_non_empty check (length(username) > 0);
+```
+
+If a string is nullable, consider making it non-null and using the empty string as the null value. That way you avoid both the pitfalls of nulls and the problem of having two distinct values to represent the empty case.
+
+You should also have server-side types to represent non-empty strings:
+
+```python
+example
+```
 
 ## String Normalization {#string-norm}
 
