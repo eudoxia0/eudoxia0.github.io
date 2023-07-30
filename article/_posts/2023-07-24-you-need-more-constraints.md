@@ -21,6 +21,7 @@ consider when designing a schema.
     1. [Allowed Values](#enums)
 1. [Checklist: Multi-Column Constraints](#multi)
     1. [Unique Together](#together)
+    1. [Conditional Nulls](#cond)
     1. [Implication](#impl)
     1. [Multiple Boolean Columns](#bool)
     1. [Timestamp Relationships](#timestamp)
@@ -402,7 +403,8 @@ create trigger user_immutable_columns_trigger
 
 ## State Transitions {#state-trans}
 
-If you have a state column, you can enforce that state transitions happen in the correct direction through a trigger. For example:
+If you have a state column, you can enforce that state transitions happen in the
+correct direction through a trigger. For example:
 
 ```sql
 create table job (
@@ -413,7 +415,8 @@ create table job (
 );
 ```
 
-Implicitly, updates to this table can only go from `not_started` to `started` and from `started` to `finished`. We can enforce this with a trigger:
+Implicitly, updates to this table can only go from `not_started` to `started`
+and from `started` to `finished`. We can enforce this with a trigger:
 
 ```sql
 create or replace function user_immutable_columns() returns trigger as $$
