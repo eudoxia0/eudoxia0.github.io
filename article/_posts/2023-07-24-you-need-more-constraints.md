@@ -71,28 +71,21 @@ Invariants can be ranked by how hard they are to enforce:
    converting the results of an SQL query involving joins into an object in the
    programming language of the API server.
 
-In general you should enforce every invariant you can tractably enforce.
+In general you should enforce every invariant you can tractably enforce. Most of
+these you can come up with while designing the database, and ollowing a
+checklist (such as this post) can help. Some of them you will only come up with
+after the fact, looking at the data, and often wonder why you didn't think of
+them.
 
-Most of these you can come up with while designing the database.
+In either case, adding a constraint is not too time consuming, it's just a
+matter of creating a migration and writing the DDL. The only tedious part is the
+verbosity of SQL, but GitHub Copilot is really good at this. You can write a
+comment explaining what you want and it usually gets the constraint right.
 
-Following a checklist (such as this post) can help.
-
-Some of them you will only come up with after the fact, looking at the data, and
-often wonder why you didn't think of them.
-
-In either case, adding a constraint is not terribly time consuming.
-
-It's just a matter of creating a migration and writing the DDL.
-
-The only tedious part is the verbosity of SQL, but GitHub
-Copilot is really good at this. You can write a comment explaining what you want
-and it usually gets the constraint right.
-
-You should start with the strictest possible data model.
-
-Because it's trivial to go from strict to lax: you just drop the
-constraints. But it is very, very hard to go from lax to strict, often it
-involves days or weeks or months of planning and data migrations.
+You should start with the strictest possible data model, because it's trivial to
+go from strict to lax: you just drop the constraints. But it is very, very hard
+to go from lax to strict, often it involves days or weeks or months of planning
+and schema migrations and data migrations.
 
 # Defense in Depth {#depth}
 
@@ -103,9 +96,8 @@ Where should invariants be enforced?
 3. In the backend models?
 4. In the database?
 
-The answer is: at least in the API and the database. Ideally everywhere.
-
-In practice you will miss some.
+The answer is: at least in the API and the database. Ideally everywhere. Because
+in practice you will miss some.
 
 So practice defense in depth: if you forget enforcement in one layer, you get
 enforcement in the next layer. A 500 error is better than bad data: one is
