@@ -170,33 +170,71 @@ example
 
 ## Uniqueness {#unique}
 
-- rule: unique
-    - when making a column, always briefly ask yourself: should this be unique?
-    - should this foreign key be unique?
+When making a column, always ask yourself: should this be unique? Especially with foreign keys.
 
 ## Numeric Ranges {#numeric}
 
-- rule: numeric ranges
-    - think about your numbers
-    - are your numbers:
-        - integers?
-        - naturals?
-        - positive?
-    - check constraint: column > 0
-    - check constraint: column > min and column < max
+Most numeric columns should usually be constrained to some range:
+
+```sql
+-- Login count is at least zero.
+constraint login_count_is_natural check (login_count >= 0);
+
+-- Weight must be greater than zero.
+constraint weight_is_positive check (weight > 0);
+
+-- Percentages are between 0.0 and 1.0.
+constraint percentage_in_range check ((percentage >= 0.0) and (percentage <= 1.0));
+```
 
 ## Allowed Values {#enums}
 
-- rule: enum allowed values
+Columns that represent enumerations should have constraints on their allowed values.
+
+Postgres has native support for enum types, with some limitations.
+
+Alternatively you can have strings and a check constraint:
+
+```sql
+constraint allowed_states is check (state in ('not_started', 'started', 'finished'));
+```
 
 # Checklist: Multi-Column Constraints {#multi}
 
+This section describes constraints involving multiple values within the same
+row.
+
 ## Unique Together {#together}
 
-- when designing a table, always ask yourself: are there any pairs of fields that should be unique together?
-- examples:
-    - two foreign keys
-    - a foreign key and a position/order field
+When designing a table, always ask yourself: is there some pair of columns that
+should be unique together? This is often a pair of foreign keys, or a pair of a
+foreign key and some other value, like for example position in a list.
+
+In this schema:
+
+```sql
+create table book (
+  book_id uuid primary key
+);
+
+create table chapter (
+  chapter_id uuid primary key,
+  book_id uuid not null references book(book_id),
+  position integer not null
+);
+```
+
+The `(book_id, position)` pair should be unique together:
+
+```sql
+constraint unique_book_and_position unique (book_id, position);
+```
+
+And naturally the position should have a range check:
+
+```
+constraint position_is_natural check (position >= 0);
+```
 
 ## Implication {#impl}
 
