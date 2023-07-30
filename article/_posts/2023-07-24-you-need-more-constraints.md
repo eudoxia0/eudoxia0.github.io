@@ -100,18 +100,25 @@ involves days or weeks or months of planning and data migrations.
 
 # Defense in Depth {#depth}
 
-- where is this constraint enforced?
-    - in the frontend?
-    - in the backend?
-    - in the database?
-- answer: all of them
-    - defense in depth
-    - you will miss one
-    - a 500 error is better than bad data
-        - the former is transient
-        - the latter is a thorn on the side, one of the tiny papercuts that lead to the death by a thousand cuts
-- database is special
-  - last line of defense against bad data and invariant violations
+Where should invariants be enforced?
+
+1. In the frontend?
+2. In the API?
+3. In the backend models?
+4. In the database?
+
+The answer is: at least in the API and the database. Ideally everywhere.
+
+In practice you will miss some.
+
+So practice defense in depth: if you forget enforcement in one layer, you get
+enforcement in the next layer. A 500 error is better than bad data: one is
+transient, the other is a thorn on the side of your data model that eventually
+leads to the death by a thousand cuts.
+
+The database is special: it's the last line of defense. Ideally, all of your
+invariants are enforced at higher layers, and database constraints are never
+violated. A database constraint violation is a sign of a bug in the code.
 
 # Checklist: Scalar Constraints {#scalar}
 
