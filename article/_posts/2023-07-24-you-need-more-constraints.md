@@ -31,15 +31,21 @@ consider when designing a schema.
 
 # Invariants {#inv}
 
-Every data model has invariants: statements about the data which must always be true.
+Every data model has invariants: statements about the data which must always be
+true.
 
-Most invariants are implicit: things that people reasonably expect but wouldn't list off the top of their head.
+Most invariants are implicit: things that people reasonably expect but wouldn't
+list off the top of their head.
 
 Good design is about making invariants explicit rather than explicit.
 
-This is related to [Primitive Obsession][prim]: you should use domain-specific types like `Email`, `Username`, rather than generic types like `String`.
+This is related to [Primitive Obsession][prim]: you should use domain-specific
+types like `Email`, `Username`, rather than generic types like `String`.
 
-For example: usernames as stored as strings. But what is a string? Anything from the empty string to the complete works of William Shakespeare and beyond. But when you focus on it, usernames are an infinitesimal subset of all strings. Usernames usually have the following properties:
+For example: usernames as stored as strings. But what is a string? Anything from
+the empty string to the complete works of William Shakespeare and beyond. But
+when you focus on it, usernames are an infinitesimal subset of all
+strings. Usernames usually have the following properties:
 
 1. First and foremost they are non-empty.
 1. Usernames are globally unique, often with the added constraint of being
@@ -56,24 +62,41 @@ For example: usernames as stored as strings. But what is a string? Anything from
 But most of these invariants are never enforced. The ones that are enforced are
 usually enforced in ad-hoc places.
 
-- invariants can be ranked by how hard they are to enforce
-    - at the bottom you have scalar invariants: that apply to a single column in a row.
-        - they are the easiest to enforce.
-    - then you have invariants that involve relations between two columns in the same row.
-        - these are again easy to enforce.
-    - then you have invariants that are about changes to a row:
-        - relations between the pre-update and post-update (old and new) versions of the row
-        - these are a bit harder to enforce: they require triggers.
-    - larger-scale constraints are much harder to enforce
-        - constraints that span multiple tables
-        - i generally don't enforce these, because i don't know how
-    - you should saturate all constraints that are easy to enforce
-    - many of these you can come up with while designing the database, it's a matter of going through a checklist
-    - some of these you'll only come up with after the fact, looking at the data, and wonder why you didn't think of them
-    - when you run into that case, you should add those to your checklist
-    - you should start with the strictest possible data model
-    - it's easy, brutally easy, to go from strict to lax
-    - it is very hard, often involving days or weeks of planning and work, to go from lax to strict
+Invariants can be ranked by how hard they are to enforce:
+
+1. *Scalar* invariants involve a single value, and are easy to enforce both in a
+   database and in a programming language.
+1. *Multi-column* invariants, involving a relationship between values in a
+   single row are also easy to enforce.
+1. *Before/after* invariants between the pre-update and post-update values of a
+   row are harder to enforce, but are still enforceable in SQL using triggers.
+1. *Relational* invariants spanning multiple database tables are very hard to
+   enforce in SQL. They have to be enforced at the app level, usually when
+   converting the results of an SQL query involving joins into an object in the
+   programming language of the API server.
+
+In general you should enforce every invariant you can tractably enforce.
+
+Most of these you can come up with while designing the database.
+
+Following a checklist (such as this post) can help.
+
+Some of them you will only come up with after the fact, looking at the data, and
+often wonder why you didn't think of them.
+
+In either case, adding a constraint is not terribly time consuming.
+
+It's just a matter of creating a migration and writing the DDL.
+
+The only tedious part is the verbosity of SQL, but GitHub
+Copilot is really good at this. You can write a comment explaining what you want
+and it usually gets the constraint right.
+
+You should start with the strictest possible data model.
+
+Because it's trivial to go from strict to lax: you just drop the
+constraints. But it is very, very hard to go from lax to strict, often it
+involves days or weeks or months of planning and data migrations.
 
 # Defense in Depth {#depth}
 
