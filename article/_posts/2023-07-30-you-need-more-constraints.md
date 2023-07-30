@@ -54,7 +54,7 @@ all strings. Usernames usually have the following properties:
 1. They are a single line of text: newlines are not permitted.
 1. They are limited to some alphabet (e.g. alphanumeric characters and
    underscores, usually in ASCII).
-1. No spacesare are allowed.
+1. No spaces are are allowed.
 1. Obscure characters like non-printable characters, non-breaking spaces, and
    weird Unicode characters (see homoglyph attack) should not be allowed
    (_display names_ are a different matter than _usernames_. It would be
@@ -77,7 +77,7 @@ Invariants can be ranked by how hard they are to enforce:
    programming language of the API server.
 
 In general you should enforce every invariant you can tractably enforce. Most of
-these you can come up with while designing the database, and ollowing a
+these you can come up with while designing the database, and following a
 checklist (such as this post) can help. Some of them you will only come up with
 after the fact, looking at the data, and often wonder why you didn't think of
 them.
