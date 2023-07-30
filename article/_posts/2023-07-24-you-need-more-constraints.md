@@ -2,6 +2,11 @@
 title: You Need More Constraints
 summary: A checklist of useful SQL constraints.
 math: yes
+card: you-need-more-constraints.jpg
+card_source: |
+    [_Parisian Cafe_][link], Ilya Repin, oil on canvas, 1875.
+
+    [link]: https://commons.wikimedia.org/wiki/File:Parisian_Cafe_by_Repin.jpg
 ---
 
 If you use a relational database, you are almost certainly underusing
