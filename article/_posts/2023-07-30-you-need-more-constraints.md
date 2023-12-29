@@ -41,7 +41,7 @@ consider when designing a schema.
 Every data model has invariants: statements about the data which must always be
 true. Most invariants are implicit: things that people reasonably expect but
 wouldn't list off the top of their head. Good design is about making invariants
-explicit rather than explicit.
+explicit rather than implicit.
 
 For example: usernames as stored as strings. But what is a string? Anything from
 the empty string to the complete works of William Shakespeare and
