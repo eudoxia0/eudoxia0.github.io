@@ -57,16 +57,20 @@ work in principle, then understanding how to make them work is crucial.
 
 One factor is that LLM agents are born of necessity. If you have the skills and
 resources ($$$) to pretrain an LLM, you're not building agents, you're building
-something like Yann LeCun's differentiable neural architecture, where the model
-architecture _is_ the agent, or, at the very least, you're pretraining an LLM
-where the shape of the training data tells it is's going to be a submodule of a
-larger mind.
+something like Yann LeCun's [differentiable neural architecture][lecun], where
+the model architecture _is_ the agent, or, at the very least, you're pretraining
+an LLM where the shape of the training data tells it is's going to be a
+submodule of a larger mind.
+
+[lecun]: https://openreview.net/pdf?id=BZ5a1r-kVsf
 
 If you're just a simple country programmer with an OpenAI API key, you can't
-innovate at the model layer, you have to innovate at the API key. So you build a
-cognitive architecture with the LLM as the central executive. The innovation is
-the architecture: the flow of information and the processes that build up the
-prompt, while the LLM itself remains a COTS black box.
+innovate at the model layer, you have to innovate at the API layer. So you build
+a cognitive architecture with the LLM as the [central executive][exec]. The
+innovation is the architecture: the flow of information and the processes that
+build up the prompt, while the LLM itself remains a COTS black box.
+
+[exec]: https://en.wikipedia.org/wiki/Baddeley%27s_model_of_working_memory
 
 # Generality
 
