@@ -3,12 +3,18 @@ title: Thoughts on LLM Agents
 summary: Entropy, criticality, and complexity classes of cellular automata.
 ---
 
-LLMs are the closest we've come to AGI and the most important invention since
-the Internet. In terms of economic productivity, the best LLM products are
-ChatGPT and GitHub Copilot, respectively a freeform AI chatbot and code
-autocomplete. But they can't carry out complex tasks: very soon you run up
-against the limits of the context window. LLMs are like a tireless 120 IQ
-polymath with anterograde amnesia who forgets everything after ~10m of activity.
+[LLMs][llm] are the closest we've come to AGI and the most important invention
+since the Internet. In terms of economic productivity, the most useful LLM
+products are [ChatGPT][cgpt] and [GitHub Copilot][copilot], respectively a
+freeform AI chatbot and code autocomplete. But they can't carry out complex
+tasks: very soon you run up against the limits of the context window. LLMs are
+like a tireless 120 IQ polymath with [anterograde amnesia][hm] who forgets
+everything after ~10m of activity.
+
+[llm]: https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/
+[cgpt]: https://openai.com/blog/chatgpt
+[copilot]: https://github.com/features/copilot
+[hm]: https://en.wikipedia.org/wiki/Henry_Molaison
 
 Agents are an attempt to get around this: they are software systems that string
 together LLM calls to accomplish complex tasks. In the same way a patient with
