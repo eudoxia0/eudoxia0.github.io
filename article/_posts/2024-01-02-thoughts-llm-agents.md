@@ -39,9 +39,13 @@ field's existence.
 
 And yet they don't really work. There isn't a software development agent that
 you can download, point it at a repo and give it a high level description of a
-change, and come back and hour later to a ready pull request. There's AutoGPT,
-BabyAgi, GPT-Engineer, and I've yet to hear of any of these doing anything
-impressive.
+change, and come back and hour later to a ready pull request. There's
+[AutoGPT][autogpt], [babyagi][babyagi], [gpt-engineer][gpt-engineer] and I've
+yet to hear of any of these doing anything impressive.
+
+[autogpt]: https://github.com/Significant-Gravitas/AutoGPT
+[babyagi]: https://github.com/yoheinakajima/babyagi
+[gpt-engineer]: https://github.com/gpt-engineer-org/gpt-engineer
 
 And I wonder why. If AI is going to increase human productivity, it has to be
 able to solve complex tasks. Copilot is great, but it's just a faster horse: I
