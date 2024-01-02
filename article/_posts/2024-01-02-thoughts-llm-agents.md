@@ -123,8 +123,8 @@ one of three things:
 
 1. The agent starts going in circles, visiting the same goals.
 2. The agent gets "lazy", takes a high-level goal and splits it into a subgoal
-   like "actually do the work", and when it gets to that subgoal it does it
-   again, in an infinite recursion of procrastination.
+   that's just "actually do the work", and when it gets to that subgoal it does
+   it again, in an infinite recursion of procrastination.
 3. The goals or actions are vague and meandering, and rather than looping, the
    agent that wanders around talking to itself, accomplishing nothing.
 
