@@ -16,17 +16,26 @@ everything after ~10m of activity.
 [copilot]: https://github.com/features/copilot
 [hm]: https://en.wikipedia.org/wiki/Henry_Molaison
 
-Agents are an attempt to get around this: they are software systems that string
-together LLM calls to accomplish complex tasks. In the same way a patient with
-anterograde amnesia might use software tools to compensate for their deficit in
-working memory, LLM agents use "classical" software to augment the abilities of
-LLMs.
+[Agents][agent] are an attempt to get around this: they are software systems
+that string together LLM calls to accomplish complex tasks. In the same way a
+patient with anterograde amnesia might use software tools to compensate for
+their deficit in working memory, agents use "classical" software to orchestrate
+LLMs to accomplish complex tasks across multiple completions.
 
-A lot of agent architecture resemble cognitive architures in the style of Soar
-and ACT-R: they have an agenda of tasks, a long-term memory (often using a
-vector database) with RAG, and other components. It's actually very interesting
-how programmers have basically reinvented cognitive architectures from scratch,
-often knowing nothing of the field's existence.
+[agent]: https://lilianweng.github.io/posts/2023-06-23-agent/
+
+A lot of agent architecture resemble [cognitive architures][cogarch] in the
+style of [Soar][soar] and [ACT-R][actr]: they have an agenda of tasks, a
+long-term memory (often using a [vector database][vdb]) with [RAG][rag], and
+other components. It's actually very interesting how programmers have basically
+reinvented cognitive architectures from scratch, often knowing nothing of the
+field's existence.
+
+[cogarch]: https://en.wikipedia.org/wiki/Cognitive_architecture
+[soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
+[actr]: http://act-r.psy.cmu.edu/
+[vdb]: https://en.wikipedia.org/wiki/Vector_database
+[rag]: https://www.pinecone.io/learn/retrieval-augmented-generation/
 
 And yet they don't really work. There isn't a software development agent that
 you can download, point it at a repo and give it a high level description of a
