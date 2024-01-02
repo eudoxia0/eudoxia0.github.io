@@ -128,22 +128,24 @@ one of three things:
 3. The goals or actions are vague and meandering, and rather than looping, the
    agent wanders around talking to itself, accomplishing nothing.
 
-And these failures remind me of Stephen Wolfram's complexity classes of cellular
-automata.
+And these failures remind me of Stephen Wolfram's [complexity classes of
+cellular automata][complexity]:
 
+1. **Class I:** the CA converges on a homogeneous state (e.g. all cells die
+   out).
+1. **Class II:** the CA converges on a repeating/periodic state
+   (e.g. [blinkers][blinker] in [Life][gol]).
+1. **Class III:** the CA diverges, chaotic behaviour.
+1. **Class IV:** complex structures that persist over time.
 
+[complexity]: https://content.wolfram.com/sw-publications/2020/07/universality-complexity-cellular-automata.pdf
+[blinker]: https://conwaylife.com/wiki/Blinker
+[gol]: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
-- failure modes
-  - looping
-  - infinite recursion
-  - lights analogy
-  - cellular automata
-  - humans are class iv intelligences
-  - we can go on creating forever
-  - llms, within a single completion, seem to be weakly class iv
-  - llms, within a cognitive architecture, occupy classes stage iii and stage ii
-  - why does it happen?
-    - not enough entropy for "criticality"
+Within a single completion (i.e.: on a simple task), LLMs have human-equivalent
+performance. Strung together into an agent, most agents, on most tasks, are
+Class I to Class III: they do nothing, or do the same things over and over
+again, or do random things. Something is missing to reach criticality.
 
 # Conclusion
 
@@ -168,3 +170,4 @@ I don't have one. There's a number of possibilities that fit the evidence:
 
 1. [RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and
    Generation](https://arxiv.org/pdf/2303.12570.pdf)
+1. [Studying artificial life with cellular automata](https://gwern.net/doc/cs/cellular-automaton/1986-langton.pdf)
