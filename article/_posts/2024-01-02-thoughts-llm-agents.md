@@ -168,6 +168,8 @@ I don't have one. There's a number of possibilities that fit the evidence:
 
 # Bibliography
 
+1. [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf)
 1. [RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and
    Generation](https://arxiv.org/pdf/2303.12570.pdf)
 1. [Studying artificial life with cellular automata](https://gwern.net/doc/cs/cellular-automaton/1986-langton.pdf)
+1. [Integrated Models of Cognitive Systems](https://academic.oup.com/book/37037)
