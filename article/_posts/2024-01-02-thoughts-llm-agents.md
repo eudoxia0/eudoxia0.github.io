@@ -104,15 +104,17 @@ but writing a single function.
 
 # Entropy
 
-A compelling analogy for why LLMs seem to be unable to accomplish complex tasks:
-if you have a lamp running at 90°C, then you can have a thousand such lamps
-pointing at an object, and it will never reach 100°C.
+A [compelling analogy][analogy] for why LLMs seem to be unable to accomplish
+complex tasks: if you have a lamp running at 90°C, then you can have a thousand
+such lamps pointing at an object, and it will never reach 100°C.
+
+[analogy]: https://twitter.com/raffareis/status/1731172265222443333
 
 It is well known that LLM-written text has lower entropy than human-written
 text. So maybe there's something analogous to a thermodynamic limit, where the
 complexity of the LLM completion and the complexity provided by the architecture
-taken together are insufficient to reach a kind of criticality and get
-self-sustaining output.
+taken together are insufficient to reach criticality and get self-sustaining
+output.
 
 # Complexity Classes
 
