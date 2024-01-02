@@ -74,7 +74,11 @@ build up the prompt, while the LLM itself remains a COTS black box.
 
 # Generality
 
-This was prompted by this tweet from JD Pressman.
+This was prompted by [this tweet][jdptw] from [J. D. Pressman][jdp] (whom you should
+follow).
+
+[jdptw]: https://twitter.com/jd_pressman/status/1732959020800221691
+[jdp]: https://twitter.com/jd_pressman
 
 People use ChatGPT and see that a single LLM completion can be incredibly
 general: in a single message, ChatGPT can write poetry, it can write code, it
@@ -82,17 +86,17 @@ can explain a complex topic, extract LaTeX from a photograph, etc.
 
 And so people think: I want to build an agent that is equally general,
 therefore, I should build a general architecture. And they go on to build an
-architecture that looks like every diagram from a cognitive science paper:
-there's a long term memory, a short term memory, a central executive, sensors,
-effectors (function calls). It's very general, very abstract, and very
-underconstrained.
+architecture that looks like every diagram from a cognitive science paper: there
+is a small number of very large, very general components. There is a long term
+memory, a short term memory, a central executive, sensors, effectors (function
+calls). It's very general, very abstract, and very underconstrained.
 
 These architectures never work. Compare Copilot: there's a huge software layer
 that converts file context and repository context into a prompt, to generate a
 completion. It's not general, it doesn't have a general-purpose vector database
-for RAG, or a tree of recursively broken-down subtasks. It's _specific_ and
-_overconstrained_. It can't write free verse, but it improves my programming
-productivity by like 40%.
+for RAG, or a tree of recursively broken-down, priority-weighted subtasks. It's
+_specific_ and _overconstrained_. It can't write free verse, but it improves my
+programming productivity by like 40%. Because it does _the one thing_.
 
 Maybe LLMs work best as "magic functions calls": performing some narrow,
 concrete, specific, overconstrained, supervisable task. Not writing a program
@@ -157,3 +161,8 @@ I don't have one. There's a number of possibilities that fit the evidence:
 1. The LLM-classical software boundary is where things break down. Agents need
    to be pretrained in an agent context, with the agent as a whole being a
    single end-to-end differentiable system.
+
+# Bibliography
+
+1. [RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and
+   Generation](https://arxiv.org/pdf/2303.12570.pdf)
