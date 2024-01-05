@@ -68,7 +68,9 @@ If you're just a simple country programmer with an OpenAI API key, you can't
 innovate at the model layer, you have to innovate at the API layer. So you build
 a cognitive architecture with the LLM as the [central executive][exec]. The
 innovation is the architecture: the flow of information and the processes that
-build up the prompt, while the LLM itself remains a COTS black box.
+build up the prompt, while the LLM itself remains a COTS black box. And so the
+people most qualified to build effective agents are working further up the value
+chain.
 
 [exec]: https://en.wikipedia.org/wiki/Baddeley%27s_model_of_working_memory
 
