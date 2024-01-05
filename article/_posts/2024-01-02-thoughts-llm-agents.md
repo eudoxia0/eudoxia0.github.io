@@ -1,6 +1,9 @@
 ---
 title: Thoughts on LLM Agents
 summary: Entropy, criticality, and complexity classes of cellular automata.
+card: thoughts-llm-agents.webp
+card_source: |
+    Architecture diagram, from _The Soar Cognitive Architecture_ by John E. Laird, p. 281.
 ---
 
 [LLMs][llm] are the closest we've come to AGI and the most important invention
