@@ -272,7 +272,7 @@ None of them had ever seen death. They, who could expect to live for hundreds of
 
 "No," _Parandé_ agreed. "It is much too old. And the way the bodies are packed---"
 
-It was a settlement ship, they agreed, they had gone to Gliese 581 to settle the third planet, which _Parandé_ said had once been potentially habitable. And when they arrived the system was already occupied by the Entity. The wondered whether the Entity had fired at the ship, or if, in desperation, the crew had themselves pulled the control rods.
+It was a settlement ship, they agreed, they had gone to Gliese 581 to settle the third planet, which _Parandé_ said had once been potentially habitable. And when they arrived the system was already occupied by the Entity. They wondered whether the Entity had fired at the ship, or if, in desperation, the crew had themselves pulled the control rods.
 
 Not knowing what to do, they left the bodies intact, in place, and hoped that a later visitor might know how to inhume or incinerate them decently.
 
