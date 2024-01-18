@@ -399,7 +399,7 @@ None of them had ever seen death. They, who could expect to live for hundreds of
 
 "No," _Parandé_ agreed. "It is much too old. And the way the bodies are packed---"
 
-It was a settlement ship, they agreed, they had gone to Gliese 581 to settle the third planet, which _Parandé_ said had once been potentially habitable. And when they arrived the system was already occupied by the Entity. The wondered whether the Entity had fired at the ship, or if, in desperation, the crew had themselves pulled the control rods.
+It was a settlement ship, they agreed, they had gone to Gliese 581 to settle the third planet, which _Parandé_ said had once been potentially habitable. And when they arrived the system was already occupied by the Entity. They wondered whether the Entity had fired at the ship, or if, in desperation, the crew had themselves pulled the control rods.
 
 Not knowing what to do, they left the bodies intact, in place, and hoped that a later visitor might know how to inhume or incinerate them decently.
 
@@ -926,7 +926,7 @@ It spoke a human language, with phonemes made of birdsong.
 
 Attila took a step back. Timon whispered over packet radio: “Say nothing. Say _nothing_.”
 
-Attila turned around, so as to no see it, and said over the radio: "It didn't die."
+Attila turned around, so as to not see it, and said over the radio: "It didn't die."
 
 The projection was meant for human eyes, where Attila saw a jackal, Timon saw a canid shape, surrounded by concentric rings of diffracted light.
 
