@@ -1,7 +1,7 @@
 EPUB := ../assets/content/eog581/The\ Epiphany\ of\ Gliese\ 581.epub
 
 .PHONY: all
-all: epiphany.html $(EPUB)
+all: style.css epiphany.html $(EPUB)
 
 style.css: style.scss
 	scss style.scss > style.css
