@@ -66,4 +66,5 @@ is smaller with types.
 
 So it makes sense to use the types (simple, terse, constrained) to generate the
 code (big, unconstrained, longer to write, bug-prone). Inferring types from code
-is like building a complex machine without plans, and then using an X-ray diffractometer to extract plans from the physical object.
+is like building a complex machine without plans, and then using an X-ray
+diffractometer to extract plans from the physical object.
