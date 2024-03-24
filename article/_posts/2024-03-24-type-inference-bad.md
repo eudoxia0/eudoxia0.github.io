@@ -1,0 +1,67 @@
+---
+title: Type Inference is Bad
+summary: On type inference as an academic computer science lab leak.
+---
+
+Type inference is bad. It makes code harder to read, and languages that use it
+too much are harder to write. It's a false economy whereby you save unobservable
+milliseconds of typing today and make everything else worse.
+
+# Type Inference Makes Code Less Readable
+
+- type inference makes code less readable
+- in an ide with a working lsp, you can hover over variables to see their
+  types, or in vscode have an overlay
+  - the ghosts of departed types
+- but there's many contexts where you don't have that
+- like reading a book
+- or reading a github diff
+- or editing code in a limited environment (e.g. ssh'ing somewhere)
+- or a blog post
+
+# In Ocaml, Type Inference is a Footgun
+
+- in ocaml you dont need annotations of function arguments or return types
+- the type inference is a lot more global
+- you can annotate the types, but you don't have to
+  - and as we know people are lazy on things that rae not required of them
+  - link to blog post
+- but hte compiler doesnt know where the code you;re giving it is correct or
+  not
+- it just takes the code you give it as input to the type inference algorithm
+- so sometimes you make a mistake, but the mistake is not "immediate", so it
+  propagates up, until eventually you get an error elsewhere
+- so you get an error message from a totally different function, with types
+  that don't remotely make sense, and it's impossible to make sense of it
+- so what do you do
+- you start going through each function in the module, adding types to the
+  function arguments and the return types
+- and sometimes this is not good enough, if the error is propagating within a
+  sngle function body
+- so what then?
+- then you start adding annotations to variables, until you run into something
+  that doesn't compile, and then you find the bug.
+- if i was required to write the types at all times, this wouldn't happen
+
+# Type Inference Wastes Academic Effort
+
+- so many papers introduce a new type system for solvign x or y problem
+- and then they spend pages and pages introducing a type reconstruction
+  algorithm for it
+- there's this pervasive idea that if a type system can't be inferred, or you
+  don't try to make an inference algorithm for it, it's less legitimate, like
+  you haven't done your homework
+- but it's wasting precious resources (academic paper page count) on solving a
+  fake problem, the supposed lack of ergonomics of explicit typing
+- instead of explaining the applications of the type system, or showing
+  example programs to help understand it through examples, you get pages and
+  pages of inscrutable inference rules in Gentzen notation that are just
+  pointless
+
+# The Whole Idea is Backwards
+
+- i dont want to infer types from code
+- rather, i'd like to infer code from types
+- because the types are the smaller thing, the spec
+- the code is the bigger thing that takes longer to write
+- and there is greater leverage in going from the small spec to the code
