@@ -1,102 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kilosecond Timer</title>
-  </head>
-  <body>
-    <div class="box">
-      <p id="timer">1000</p>
-      <button id="controlButton" onclick="toggleTimer()">Start</button>
-    </div>
-    <script>
-      let interval;
-      let timeLeft = 1000;
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kilosecond Timer</title>
+    </head>
+    <body>
+        <div class="box">
+            <p id="timer">1000</p>
+            <button id="controlButton" onclick="toggleTimer()">Start</button>
+        </div>
+        <script>
+            let interval;
+            let timeLeft = 1000;
 
-      function toggleTimer() {
-          const timerElement = document.getElementById('timer');
-          const buttonElement = document.getElementById('controlButton');
+            function toggleTimer() {
+                const timerElement = document.getElementById("timer");
+                const buttonElement = document.getElementById("controlButton");
 
-          if (interval) {
-              // Resetting the timer
-              clearInterval(interval);
-              interval = null;
-              timeLeft = 1000;
-              timerElement.textContent = timeLeft.toString();
-              buttonElement.textContent = 'Start';
-          } else {
-              // Starting the timer
-              buttonElement.textContent = 'Reset';
+                if (interval) {
+                    // Resetting the timer
+                    clearInterval(interval);
+                    interval = null;
+                    timeLeft = 1000;
+                    timerElement.textContent = timeLeft.toString();
+                    buttonElement.textContent = "Start";
+                } else {
+                    // Starting the timer
+                    buttonElement.textContent = "Reset";
 
-              interval = setInterval(() => {
-                  timeLeft--;
-                  timerElement.textContent = timeLeft.toString();
+                    interval = setInterval(() => {
+                        timeLeft--;
+                        timerElement.textContent = timeLeft.toString();
 
-                  if (timeLeft <= 0) {
-                      clearInterval(interval);
-                      interval = null;
-                      buttonElement.textContent = 'Start';
-                  }
-              }, 1000);
-          }
-      }
-    </script>
-    <style>
-      html {
-          height: 100vh;
-          width: 100vw;
-          margin: 0;
-          padding: 0;
-          font-family: "B612", serif;
-      }
+                        if (timeLeft <= 0) {
+                            clearInterval(interval);
+                            interval = null;
+                            buttonElement.textContent = "Start";
+                        }
+                    }, 1000);
+                }
+            }
+        </script>
+        <style>
+            html {
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                font-family: "B612", serif;
+            }
 
-      body {
-          height: 100%;
-          width: 100%;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: #f5f5f5;
-          font-size: 16px;
-      }
+            body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #f5f5f5;
+                font-size: 16px;
+            }
 
-      .box {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-      }
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
-      #timer {
-          font-size: 20em;
-          text-align: center;
-          width: 100%;
-          margin: 0;
-      }
+            #timer {
+                font-size: 20em;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+            }
 
-      #controlButton {
-          font-family: 'B612';
-          padding: 10px 20px;
-          font-size: 1.5em;
-          background-color: transparent;
-          color: #333;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-      }
+            #controlButton {
+                font-family: "B612";
+                padding: 10px 20px;
+                font-size: 1.5em;
+                background-color: transparent;
+                color: #333;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
 
-      #controlButton:hover {
-          background-color: #0056b3;
-      }
+            #controlButton:hover {
+                background-color: #0056b3;
+            }
 
-      #controlButton:focus {
-          outline: none;
-      }
-    </style>
-  </body>
+            #controlButton:focus {
+                outline: none;
+            }
+        </style>
+    </body>
 </html>
