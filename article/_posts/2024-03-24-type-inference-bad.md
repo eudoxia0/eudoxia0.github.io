@@ -9,15 +9,14 @@ milliseconds of typing today and make everything else worse.
 
 # Type Inference Makes Code Less Readable
 
-- type inference makes code less readable
-- in an ide with a working lsp, you can hover over variables to see their
-  types, or in vscode have an overlay
-  - the ghosts of departed types
-- but there's many contexts where you don't have that
-- like reading a book
-- or reading a github diff
-- or editing code in a limited environment (e.g. ssh'ing somewhere)
-- or a blog post
+If you have an IDE with a working LSP, you can hover over variables to see their
+types. In VSCode with rust-analyzer I can see the type annotations as grayed-out
+overlays---the ghosts of departed types.
+
+But there are many other contexts where I read code: a book, a blog post, a Git
+diff. When editing code in a limited environment, e.g. stock `vim` in a VM.
+
+In all of those contexts, the code becomes less clear.
 
 # In Ocaml, Type Inference is a Footgun
 
