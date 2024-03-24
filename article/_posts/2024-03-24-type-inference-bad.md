@@ -20,27 +20,35 @@ In all of those contexts, the code becomes less clear.
 
 # In Ocaml, Type Inference is a Footgun
 
-- in ocaml you dont need annotations of function arguments or return types
-- the type inference is a lot more global
-- you can annotate the types, but you don't have to
-  - and as we know people are lazy on things that rae not required of them
-  - link to blog post
-- but hte compiler doesnt know where the code you;re giving it is correct or
-  not
-- it just takes the code you give it as input to the type inference algorithm
-- so sometimes you make a mistake, but the mistake is not "immediate", so it
-  propagates up, until eventually you get an error elsewhere
-- so you get an error message from a totally different function, with types
-  that don't remotely make sense, and it's impossible to make sense of it
-- so what do you do
-- you start going through each function in the module, adding types to the
-  function arguments and the return types
-- and sometimes this is not good enough, if the error is propagating within a
-  sngle function body
-- so what then?
-- then you start adding annotations to variables, until you run into something
-  that doesn't compile, and then you find the bug.
-- if i was required to write the types at all times, this wouldn't happen
+In Rust and Haskell you have to at least annotate the parameter types and return
+type of functions. Type inference is only for variable bindings inside the
+function body. This is a lot more tractable.
+
+In OCaml type inference is a lot more powerful: you don't have to annotate
+function signatures. And, since you're not required to, [you don't do it][post].
+
+[post]: /article/language-pragmatics
+
+The problem is the type inference engine doesn't know whether the code you've
+written is correct or has a bug. It just takes what you give it and does
+constraint solving on it.
+
+So when I wrote OCaml I'd frequently make a mistake, but the compiler would
+happily propagate it up, and I'd get an inscrutable error that's very far from
+the actual location of the error in the code and involves types I can't figure
+out.
+
+So then you have to corner the bug by iteratively adding type annotations to
+function signatures in the module and compiling again, and gradually the error
+message moves closer and closer to the code that has the actual error. And if
+it's a really bad one you have to annotate the types of individual varible
+bindings. And then you find the error and it's something like, an extra argument
+to a curried function, but because type inference is about propagating
+constraints the error message---the point where inference gives up---can be
+thrown arbitrarily far away from the actual mistake in the coe.
+
+So you end up writing the types anyways, just in a much more frustrating and
+flow-breaking way.
 
 # Type Inference Wastes Academic Effort
 
@@ -59,6 +67,8 @@ explaining the applications of the type system, or showing code examples that
 help to understand how the type system works. Instead we get pages and pages
 of inscrutable inference rules in whatever ad-hoc variant of Gentzen notation
 the paper chooses to use.
+
+# You Will Write The Types Anyways
 
 # The Whole Idea is Backwards
 
