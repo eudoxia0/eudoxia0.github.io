@@ -59,8 +59,11 @@ In all of those contexts, the code becomes less clear.
 
 # The Whole Idea is Backwards
 
-- i dont want to infer types from code
-- rather, i'd like to infer code from types
-- because the types are the smaller thing, the spec
-- the code is the bigger thing that takes longer to write
-- and there is greater leverage in going from the small spec to the code
+I don't want to infer types from my code. I'd rather infer the code from the
+types. Types are the spec, they are small and low in expressiveness, code is
+big and has infinitely more degrees of freedom than types. The bug surface area
+is smaller with types.
+
+So it makes sense to use the types (simple, terse, constrained) to generate the
+code (big, unconstrained, longer to write, bug-prone). Inferring types from code
+is like building a complex machine without plans, and then using an X-ray diffractometer to extract plans from the physical object.
