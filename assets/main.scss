@@ -85,7 +85,7 @@ $link-color: #B1002E;
 //
 
 // Font sizes.
-$fs: $f * (1 / $s);
+$fs: $f * calc(1 / $s);
 $f1: $f;
 $f2: $f * $s;
 $f3: $f * $s * $s * $s;
