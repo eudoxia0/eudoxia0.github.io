@@ -213,7 +213,7 @@ potentially be useful somewhere else, I'll factor it out.
 I've written a lot of [Common Lisp][lisp] libraries. Other than libraries, I
 mostly write compilers or small utilities.
 
-[libs]: https://gist.github.com/substack/5075355
+[libs]: https://web.archive.org/web/20210619105355/https://gist.github.com/substack/5075355
 [lisp]: https://lisp-lang.org/
 
 # Austral
