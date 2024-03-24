@@ -68,8 +68,6 @@ help to understand how the type system works. Instead we get pages and pages
 of inscrutable inference rules in whatever ad-hoc variant of Gentzen notation
 the paper chooses to use.
 
-# You Will Write The Types Anyways
-
 # The Whole Idea is Backwards
 
 I don't want to infer types from my code. I'd rather infer the code from the
