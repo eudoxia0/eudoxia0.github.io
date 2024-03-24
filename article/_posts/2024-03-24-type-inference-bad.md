@@ -44,18 +44,21 @@ In all of those contexts, the code becomes less clear.
 
 # Type Inference Wastes Academic Effort
 
-- so many papers introduce a new type system for solvign x or y problem
-- and then they spend pages and pages introducing a type reconstruction
-  algorithm for it
-- there's this pervasive idea that if a type system can't be inferred, or you
-  don't try to make an inference algorithm for it, it's less legitimate, like
-  you haven't done your homework
-- but it's wasting precious resources (academic paper page count) on solving a
-  fake problem, the supposed lack of ergonomics of explicit typing
-- instead of explaining the applications of the type system, or showing
-  example programs to help understand it through examples, you get pages and
-  pages of inscrutable inference rules in Gentzen notation that are just
-  pointless
+I'll occasionally read a paper introducing a new type system. Usually there's
+less than one page of motivation---why should I care about this?---followed by
+the inference rules, and then pages and pages describing the type reconstruction
+algorithm for the type system.
+
+I think there's a pervasive view that if you don't have a type inference
+algorithm (or a proof you can't have one), it's like not doing your homework,
+and the paper is considered less legitimate.
+
+This wastes a precious resource (academic paper page count) on solving the fake
+problem of having to annotate types, a resource that would be better spent on
+explaining the applications of the type system, or showing code examples that
+help to understand how the type system works. Instead we get pages and pages
+of inscrutable inference rules in whatever ad-hoc variant of Gentzen notation
+the paper chooses to use.
 
 # The Whole Idea is Backwards
 
