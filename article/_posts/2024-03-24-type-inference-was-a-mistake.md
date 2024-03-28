@@ -1,7 +1,7 @@
 ---
-title: Type Inference is Bad
+title: Type Inference Was a Mistake
 summary: On type inference as an academic computer science lab leak.
-card: type-inference-is-bad.webp
+card: type-inference-was-a-mistake.webp
 card_source: |
   Inference rules from [_Capabilities for Uniqueness and Borrowing_][link].
 
