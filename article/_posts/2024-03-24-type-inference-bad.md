@@ -1,6 +1,11 @@
 ---
 title: Type Inference is Bad
 summary: On type inference as an academic computer science lab leak.
+card: type-inference-is-bad.webp
+card_source: |
+  Inference rules from [_Capabilities for Uniqueness and Borrowing_][link].
+
+  [link]: https://link.springer.com/chapter/10.1007/978-3-642-14107-2_17
 ---
 
 Type inference is bad. It makes code harder to read, and languages that use it
