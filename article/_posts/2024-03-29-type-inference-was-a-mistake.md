@@ -46,11 +46,11 @@ out.
 So then you have to corner the bug by iteratively adding type annotations to
 function signatures in the module and compiling again, and gradually the error
 message moves closer and closer to the code that has the actual error. And if
-it's a really bad one you have to annotate the types of individual varible
+it's a really bad one you have to annotate the types of individual variable
 bindings. And then you find the error and it's something like, an extra argument
 to a curried function, but because type inference is about propagating
 constraints the error message---the point where inference gives up---can be
-thrown arbitrarily far away from the actual mistake in the coe.
+thrown arbitrarily far away from the actual mistake in the code.
 
 So you end up writing the types anyways, just in a much more frustrating and
 flow-breaking way.
