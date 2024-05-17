@@ -11,12 +11,30 @@ summary: etc.
   - plain text with links
     - plain text
     - but with specific markup for links
+  - formatted text
+    - simple formatting: bold, lists, etc.
+  - rich text with metadata
+    - example: notion
+    - typed properties aside from the text
+    - "main text" remains a privileged own thing
+  - typed properties
+    - "main text" no longer a privileged thing
+    - an object is a map of property names to values
+    - some values may be rich text
   - mixin: fixed-length content
     - to simulate the limitations of paper
     - content may be limited to some fixed length
     - examples: none that i know of
 - identifiers
-
+  - unreadable identifiers
+    - uuids
+    - make it possible to rename things in a consequence free fashion
+    - usually have to be hidden, requires WYSIWYG editing and a database
+    - examples: notion
+  - unique title
+    - the object title is globally unique
+    - this makes it easy to reference objects in a plain-text wiki: you just write the name
+    - examples: wikipedia
 - storage
   - files
     - plain-text files in a folder
@@ -34,7 +52,7 @@ summary: etc.
         - with git, changes can apply to multiple files
           - this is unique to git
     - cons
-- database
+  - database
 
 - links
   - none
