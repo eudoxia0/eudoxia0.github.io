@@ -1,12 +1,12 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
-  my-python = pkgs.python311;
-  python-with-my-packages = my-python.withPackages
+  base-python = pkgs.python311;
+  python = base-python.withPackages
     (p: with p; [ matplotlib tkinter ]);
 in pkgs.mkShell {
   buildInputs = [
-    python-with-my-packages
+    python
     pkgs.tcl
     pkgs.tk
     pkgs.ruff
