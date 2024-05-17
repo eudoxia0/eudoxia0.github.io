@@ -7,6 +7,7 @@ let
 in pkgs.mkShell {
   buildInputs = [
     python
+    pkgs.jekyll
     pkgs.tcl
     pkgs.tk
     pkgs.ruff
