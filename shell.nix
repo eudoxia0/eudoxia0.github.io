@@ -20,6 +20,6 @@ in pkgs.mkShell {
   ];
   shellHook = ''
     export TK_LIBRARY="${pkgs.tk}/lib/${pkgs.tk.libPrefix}"
-    PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
+    PYTHONPATH=${python}/${python.sitePackages}
   '';
 }
