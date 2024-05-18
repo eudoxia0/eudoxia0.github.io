@@ -32,7 +32,6 @@ summary: etc.
    1. [Mixin: Red Links](#mixin-red-links)
    1. [Mixin: Link Integrity](#mixin-link-integrity)
 1. [Organization](#organization)
-   1. [Search](#search)
    1. [Boxes](#boxes)
    1. [Singleton Folder](#singleton-folder)
    1. [Hierarchical Folders](#folders)
@@ -206,11 +205,6 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 # Organization {#organization}
 
 - how are objects organized?
-
-## Search {#search}
-
-- objects exist in the aether
-- can be found by searching, or linking to other objects
 
 ## Singleton Folder {#singleton-folder}
 
