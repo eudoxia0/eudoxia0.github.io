@@ -272,11 +272,20 @@ each of which contains a list of objects.
 
 ## Spatial Organization {#spatial}
 
-- objects exist on a canvas you can pan or scroll
-- pros:
-  - appeals to the human spatial intuition
-- cons:
-  - infinite zoom in/out is non-physical
+Objects exist on a canvas that you can pan or scroll.
+
+**Pros:**
+
+- Leverages human spatial intuition: you can remember where things are.
+
+**Cons:**
+
+- Infinite zoom/scroll is non-physical.
+
+**Examples:**
+
+- [Obsidian Canvas](https://obsidian.md/canvas)
+- [Napkin](https://napkin.one/)
 
 ## Organization by Type {#organize-by-type}
 
