@@ -345,8 +345,8 @@ summary: etc.
     - cons:
       - need a separate app to write (e.g. forces plain text files)
       - compiled content can drift
-  - read-only
-    - examples: most ssgs have a search command
+  - read-only client
+    - examples: most ssgs have a serve command
     - pros:
       - live: the server can listen to changes in the filesystem, and dynamically update the compiled output
       - search: you can possibly implement search with the server
@@ -355,7 +355,11 @@ summary: etc.
       - need a separate app to write
   - read-write client:
     - examples: most software
-    - pros: you only need one app
+    - pros:
+      - you only need one app
+      - can do validation at interaction time
+      - compatible with a database, don't need plain-text storage
+      - can have a complex wysiwyg editor
     - cons: you lose the benefits of static compilation to HTML
 - links
   - none
