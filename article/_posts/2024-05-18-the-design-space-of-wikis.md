@@ -334,25 +334,22 @@ summary: etc.
 
 - client
   - how does the user interact with the wiki?
-  - static
+  - read-only client:
+    - the software reads the database, and either compiles to static HTML or serves a static, read only view of the app. most ssgs have a `serve` command that listens on the filesystem and updates the live view.
     - examples: most ssgs
     - pros:
-      - fast
-      - don't need the app to read
+      - fast:
+        - reading compiled HTML files from disk is very fast
+      - portable:
         - one time i built a wiki compiler and then i lost the source code in my giant folder of semi-finished projects
         - but i was able to read the pages i wrote because i saved the compiled output from the last time I ran the compile step
       - publishing: publishing to a website is trivial
     - cons:
-      - need a separate app to write (e.g. forces plain text files)
+      - two app problem
       - compiled content can drift
-  - read-only client
-    - examples: most ssgs have a serve command
-    - pros:
-      - live: the server can listen to changes in the filesystem, and dynamically update the compiled output
-      - search: you can possibly implement search with the server
-      - compiled: if the app is read only you can save the compiled output for offline reading
-    - cons:
-      - need a separate app to write
+      - search is hard for SSGs
+        - you can compile a search index which gets loaded (like a JSON) file and do search the frontend
+        - alternatively, you can just do search in the live view and not in the compiled view
   - read-write client:
     - examples: most software
     - pros:
