@@ -239,7 +239,9 @@ Folders contain objects and other folders.
 **Cons:**
 
 - The problem with every hierarchical taxonomy is the edge cases: what do I do about things that are, conceptually, in two places in the taxonomy?
-- Folders are just containers and don't have data. If you want an "index page" for a folder, you have to make a page _within_ the folder.
+- Folders are just containers and don't have data.
+  You can't add a description to a folder.
+  You can't associate a folder with an "index page" as an atlas of its contents.
 
 **Examples:**
 
@@ -254,6 +256,10 @@ Folders contain objects and other folders.
 - in obsidian i'm often bothered by the fact that i'd like to have something like an "index" page for a folder
 - that can act as the atlas, or description, of the folder's contents
 - notion lets you have that
+
+**Examples:**
+
+- [Notion](https://www.notion.so)
 
 ## Tags {#tags}
 
