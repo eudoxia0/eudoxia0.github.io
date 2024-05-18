@@ -8,7 +8,6 @@ summary: etc.
   - sections are axes in design space: they correspond to design questions, "how should we do X?"
   - sub-sections are points or intervals along that axis: they are design choices, "we do X this way"
   - sections titled "mixin" are design choices that can be applied to multiple other choices
-  - the axes are not entirely orthogonal
 - object structure
   - what kinds of data do objects hold?
   - plain text
@@ -334,7 +333,7 @@ summary: etc.
 
 - client
   - how does the user interact with the wiki?
-  - read-only client:
+  - wiki compiler:
     - the software reads the database, and either compiles to static HTML or serves a static, read only view of the app. most ssgs have a `serve` command that listens on the filesystem and updates the live view.
     - examples: most ssgs
     - pros:
@@ -350,14 +349,24 @@ summary: etc.
       - search is hard for SSGs
         - you can compile a search index which gets loaded (like a JSON) file and do search the frontend
         - alternatively, you can just do search in the live view and not in the compiled view
-  - read-write client:
+      - forces plain-text files
+        - if the app is read-only, there must be a way to modify the wiki
+        - typically that means bring your own editor
+        - and BYOE often means you need a lightweight markup language like markdown
+  - wiki application:
     - examples: most software
     - pros:
       - you only need one app
       - can do validation at interaction time
-      - compatible with a database, don't need plain-text storage
-      - can have a complex wysiwyg editor
-    - cons: you lose the benefits of static compilation to HTML
+      - compatible with any kind of storage
+        - can be plain text
+        - can also be a database
+          - most commonly a database
+      - compatible with any kind of markup
+        - can have a complex WYSIWYG editor
+        - can also just do lightweight markup or XML
+    - cons
+      - publishing: harder
 - links
   - none
     - no links
