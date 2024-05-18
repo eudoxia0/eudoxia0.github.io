@@ -39,6 +39,26 @@ summary: etc.
     - can rename the title, without affecting anything
     - linking has to include the filename rather than the more human readable page name
     - reorganizing the folder structure breaks the link structure
+- organization
+  - how are objects organized?
+  - none
+    - objects exist in the aether
+    - can be found by searching, or linking to other objects
+  - boxes
+    - examples:
+      - xerox notecards
+      - reality
+    - there's a list of fileboxes, and objects exist in the filebox
+  - list
+    - objects exist in an ordered list
+    - example: card files
+  - folders
+    - very common
+    - examples: obsidian
+    - objects exist in hierarchically-structured folders
+    - folders and objects are distinct
+  - spatially
+    - objects exist on a canvas you can pan or scroll
 - storage
   - files
     - plain-text files in a folder
