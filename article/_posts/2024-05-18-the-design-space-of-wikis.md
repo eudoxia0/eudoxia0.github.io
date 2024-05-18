@@ -51,7 +51,15 @@ summary: etc.
       - multi-file changes
         - with git, changes can apply to multiple files
           - this is unique to git
+      - file generation
+        - can do cool things with makefiles
+        - e.g. generate pages from some source of truth data
+        - transclusion
+        - compilation into different formats
     - cons
+      - visibility
+        - auth for git repos is repo-wide
+        - you can either view the entire repo, or none of it
   - database
 - markup
 
