@@ -353,7 +353,7 @@ summary: etc.
       - compiled: if the app is read only you can save the compiled output for offline reading
     - cons:
       - need a separate app to write
-  - read-write:
+  - read-write client:
     - examples: most software
     - pros: you only need one app
     - cons: you lose the benefits of static compilation to HTML
