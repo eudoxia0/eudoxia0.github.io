@@ -68,6 +68,63 @@ What kinds of data do objects hold?
 - linking has to include the filename rather than the more human readable page name
 - reorganizing the folder structure breaks the link structure
 
+# Links
+
+How are objects connected?
+
+## No Links
+
+No links. The wiki is just a collection of objects. Objects can only be referred to by an unlinked name.
+
+**Examples:** reality, [Cardfile][cardfile].
+
+[cardfile]: https://en.wikipedia.org/wiki/Cardfile
+
+## One-Way
+
+Links are one-way. Objects don't know which other objects have linked to them.
+
+**Examples:** HTML, since one-way links are pretty much the only way to do it in a decentralized setup.
+
+## Two-Way
+
+The original grand vision of hypertext: objects know which other objects have linked to them. There's usually a tab or pane to view the "backlinks" in a given page.
+
+**Examples:**
+
+- Surprisingly, [MediaWiki](/article/roam-twenty-years-before-roam).
+- Anything post-[Roam][roam].
+
+[roam]: https://en.wikipedia.org/wiki/Roam_(software)
+
+## Typed Links
+
+Links have metadata associated with them, e.g. you can write something like:
+
+```markdown
+_Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
+```
+
+**Examples:**
+
+- [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
+- Notion at the level of [database properties](https://www.notion.so/help/database-properties).
+
+## Mixin: Red Links
+
+Some wikis let you create links to pages that don't yet exist. Clicking the link takes you to the interface to create a page with that title. Ideally you also have a way to find all red links in the database.
+
+**Examples:**
+
+- Obsidian
+- MediaWiki
+
+## Mixin: Link Integrity
+
+Deleting a page that is linked-to by another triggers an error. This ensures all internal links are unbroken. Especially useful if you have e.g. links to a particular section of a page, and so renaming/removing a heading will also trigger an error.
+
+**Examples:** none that I know of.
+
 # Organization
 
 - how are objects organized?
@@ -435,60 +492,3 @@ How does the user interact with the wiki?
     - can also just do lightweight markup or XML
 - cons
   - publishing: harder
-
-# Links
-
-How are objects connected?
-
-## No Links
-
-No links. The wiki is just a collection of objects. Objects can only be referred to by an unlinked name.
-
-**Examples:** reality, [Cardfile][cardfile].
-
-[cardfile]: https://en.wikipedia.org/wiki/Cardfile
-
-## One-Way
-
-Links are one-way. Objects don't know which other objects have linked to them.
-
-**Examples:** HTML, since one-way links are pretty much the only way to do it in a decentralized setup.
-
-## Two-Way
-
-The original grand vision of hypertext: objects know which other objects have linked to them. There's usually a tab or pane to view the "backlinks" in a given page.
-
-**Examples:**
-
-- Surprisingly, [MediaWiki](/article/roam-twenty-years-before-roam).
-- Anything post-[Roam][roam].
-
-[roam]: https://en.wikipedia.org/wiki/Roam_(software)
-
-## Typed Links
-
-Links have metadata associated with them, e.g. you can write something like:
-
-```markdown
-_Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
-```
-
-**Examples:**
-
-- [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
-- Notion at the level of [database properties](https://www.notion.so/help/database-properties).
-
-## Mixin: Red Links
-
-Some wikis let you create links to pages that don't yet exist. Clicking the link takes you to the interface to create a page with that title. Ideally you also have a way to find all red links in the database.
-
-**Examples:**
-
-- Obsidian
-- MediaWiki
-
-## Mixin: Link Integrity
-
-Deleting a page that is linked-to by another triggers an error. This ensures all internal links are unbroken. Especially useful if you have e.g. links to a particular section of a page, and so renaming/removing a heading will also trigger an error.
-
-**Examples:** none that I know of.
