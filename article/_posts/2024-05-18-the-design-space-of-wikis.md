@@ -142,6 +142,9 @@ summary: etc.
           - this might interact poorly with e.g. version control
       - sync is harder
         - using the thing from e.g. your phone is harder, you need git and the filesystem
+      - visibility of changes
+        - changes are stuck in the git history
+        - may not be easy to make them visible to the application
   - database
     - objects are stored in a database
     - manipulation is through a client application
@@ -150,9 +153,17 @@ summary: etc.
       - hostable:
         - if there's a database and a server, the app can be hosted somewhere and accessed over the internet
         - can use from multiple devices, from your phone etc.
-      - visibility:
+      - security:
         - for teams, custom permissions and visibility rules can be implemented by the server
         - examples: notion
+      - renaming:
+        - objects can be given database IDs and referred to by those IDs
+        - renaming can be done transparently, without breaking anything
+      - free structure:
+        - files in a git repo, the folder structure has to make it easy to browse, so that files can be found for editing
+        - it's natural that the folder structure should be visible in the client application (how obsidian works)
+        - in a database, the storage system does not have to dictate how pages are organized
+        - can have any kind of organization at the application layer
     - cons:
       - portability:
         - plain-text markdown files are more readable than a database schema
