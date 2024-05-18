@@ -74,6 +74,26 @@ summary: etc.
         - showing deltas on rendered HTML is very hard
         - as a consequence, easy to mess something up and not see it
   - Markdown
+    - examples: obsidian
+    - pros
+      - constrained
+        - constraints liberate and liberties constrain
+        - a lot of the things you can't do in markup you probably shouldn't do
+        - forces you to keep it simple
+      - well-known
+      - widely implemented
+        - markdown parsing isn't as easy as throwing a grammar at a parser generator
+        - still, markdown parsers are widely available
+      - covers most of what you need
+      - change preview is easy
+        - viewing a markdown diff, it's easy to mentally render what the changes would be
+    - cons
+      - not extensible
+        - wikilinks require hacking the parser
+        - or abusing link syntax
+      - the UX for plain-text editing of markdown varies widely
+        - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
+        - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
   - XML
   - MDX
 - links
