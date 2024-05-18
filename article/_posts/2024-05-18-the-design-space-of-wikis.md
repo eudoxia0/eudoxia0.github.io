@@ -177,6 +177,10 @@ summary: etc.
         - plain text files are gonna last longer than some proprietary format
         - can be read from and written to with standard tools
     - cons
+      - forces lightweight markup
+        - if the idea is that you can bring your own editor
+        - you pretty much need something like markdown
+        - this may be a pro
       - visibility
         - auth for git repos is repo-wide
         - you can either view the entire repo, or none of it
