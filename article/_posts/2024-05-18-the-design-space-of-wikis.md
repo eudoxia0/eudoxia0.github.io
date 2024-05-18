@@ -108,6 +108,10 @@ summary: etc.
     - relational databases work this way: a database has a list of tables, and tables have rows.
       - all other structure is "one level up" through foreign keys
       - and must be revealed by querying
+    - this is also how real life works:
+      - your bookshelf has books
+      - your CD shelf has CDs
+      - etc
   - mixin: constrained folders
     - examples: johnny decimal
     - one feature of reality is:
