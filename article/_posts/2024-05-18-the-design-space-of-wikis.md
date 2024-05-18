@@ -10,69 +10,71 @@ summary: etc.
   - sections titled "mixin" are design choices that can be applied to multiple other choices
   - axes are not entirely orthogonal: there are incompatible regions of space
 
-# Objects
+# Objects {#objects}
 
 What kinds of data can objects hold?
 
-## Plain Text
+## Plain Text {#plain-text-content}
 
 - an object's contents are plain, unformatted text
 - plain text conventions are used for "formatting"
 - links are just text
 
-## Plain Text + Links
+## Plain Text + Links {#plain-text-links}
 
 - plain text
 - but with specific markup for links
 
-## Rich Text
+## Rich Text {#rich-text}
 
 - simple formatting: bold, lists, etc.
 
-## Rich Text + Metadata
+## Rich Text + Metadata {#rich-text-meta}
 
 - example: notion
 - typed properties aside from the text
 - "main text" remains a privileged own thing
 
-## Typed Properties
+## Typed Properties {#typed-properties}
 
 - "main text" no longer a privileged thing
 - an object is a map of property names to values
 - some values may be rich text
 
-## Mixin: Fixed-Length Content
+## Mixin: Fixed-Length Content {#mixin-fixed-length-content}
 
 - to simulate the limitations of paper
 - content may be limited to some fixed length
 - examples: none that i know of
 
-# Identifiers
+# Identifiers {#ident}
 
-## Unreadable Identifiers
+How are objects identified?
+
+## Unreadable Identifiers {#uuid}
 
 - uuids
 - make it possible to rename things in a consequence free fashion
 - usually have to be hidden, requires WYSIWYG editing and a database
 - examples: notion
 
-## Unique Title
+## Unique Title {#title}
 
 - the object title is globally unique
 - this makes it easy to reference objects in a plain-text wiki: you just write the name
 - examples: wikipedia
 
-## File Path
+## File Path {#path}
 
 - can rename the title, without affecting anything
 - linking has to include the filename rather than the more human readable page name
 - reorganizing the folder structure breaks the link structure
 
-# Links
+# Links {#links}
 
 How are objects connected?
 
-## No Links
+## No Links {#no-links}
 
 No links. The wiki is just a collection of objects. Objects can only be referred to by an unlinked name.
 
@@ -80,13 +82,13 @@ No links. The wiki is just a collection of objects. Objects can only be referred
 
 [cardfile]: https://en.wikipedia.org/wiki/Cardfile
 
-## One-Way
+## One-Way {#one-way}
 
 Links are one-way. Objects don't know which other objects have linked to them.
 
 **Examples:** HTML, since one-way links are pretty much the only way to do it in a decentralized setup.
 
-## Two-Way
+## Two-Way {#two-way}
 
 The original grand vision of hypertext: objects know which other objects have linked to them. There's usually a tab or pane to view the "backlinks" in a given page.
 
@@ -97,7 +99,7 @@ The original grand vision of hypertext: objects know which other objects have li
 
 [roam]: https://en.wikipedia.org/wiki/Roam_(software)
 
-## Typed Links
+## Typed Links {#typed-links}
 
 Links have metadata associated with them, e.g. you can write something like:
 
@@ -110,7 +112,7 @@ _Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
 - [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
 - Notion at the level of [database properties](https://www.notion.so/help/database-properties).
 
-## Mixin: Red Links
+## Mixin: Red Links {#mixin-red-links}
 
 Some wikis let you create links to pages that don't yet exist. Clicking the link takes you to the interface to create a page with that title. Ideally you also have a way to find all red links in the database.
 
@@ -119,34 +121,34 @@ Some wikis let you create links to pages that don't yet exist. Clicking the link
 - Obsidian
 - MediaWiki
 
-## Mixin: Link Integrity
+## Mixin: Link Integrity {#mixin-link-integrity}
 
 Deleting a page that is linked-to by another triggers an error. This ensures all internal links are unbroken. Especially useful if you have e.g. links to a particular section of a page, and so renaming/removing a heading will also trigger an error.
 
 **Examples:** none that I know of.
 
-# Organization
+# Organization {#organization}
 
 - how are objects organized?
 
-## Search
+## Search {#search}
 
 - objects exist in the aether
 - can be found by searching, or linking to other objects
 
-## Boxes
+## Boxes {#boxes}
 
 - examples:
   - xerox notecards
   - reality
 - there's a list of fileboxes, and objects exist in the filebox
 
-## Singleton Folder
+## Singleton Folder {#singleton-folder}
 
 - objects exist in an ordered list
 - example: card files
 
-## Folders
+## Folders {#folders}
 
 - very common
 - examples: obsidian
@@ -159,7 +161,7 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
   - hierarchy has limitations
     - things can be in multiple places
 
-## Unified Folders and Pages
+## Unified Folders and Pages {#}
 
 - examples: notion
 - this is a really useful feature that for some reason is rarely implemented
@@ -169,12 +171,12 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 - that can act as the atlas, or description, of the folder's contents
 - notion lets you have that
 
-## Tags
+## Tags {#tags}
 
 - give up the hierarchy
 - information can be tagged and found through boolean operations on tags
 
-## Pure Hypertext
+## Pure Hypertext {#hypertext}
 
 - examples: roam
 - give up the hierarchy
@@ -191,7 +193,7 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
     - and which list their contents
     - which is like a folder but it has to be maintained manually
 
-## Spatial Organization
+## Spatial Organization {#spatial}
 
 - objects exist on a canvas you can pan or scroll
 - pros:
@@ -199,7 +201,7 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 - cons:
   - infinite zoom in/out is non-physical
 
-## Organization by Type
+## Organization by Type {#organize-by-type}
 
 - example:
   - relational databases
@@ -218,7 +220,7 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
   - your CD shelf has CDs
   - etc
 
-## Mixin: Constrained Folders
+## Mixin: Constrained Folders {#mixin-constrained-folders}
 
 - examples: johnny decimal
 - one feature of reality is:
@@ -243,11 +245,11 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 - cons:
   - a strict ontology may be too limited
 
-# Storage
+# Storage {#storage}
 
 How is data stored?
 
-## Plain Text Files
+## Plain Text Files {#storage-plain}
 
 - plain-text files in a folder
 - edited with your choice of editor
@@ -314,7 +316,7 @@ How is data stored?
   - changes are stuck in the git history
   - may not be easy to make them visible to the application
 
-## Database
+## Database {#storage-db}
 
 - objects are stored in a database
 - manipulation is through a client application
@@ -356,11 +358,11 @@ How is data stored?
   - version control
     - needs to be reimplemented
 
-# Markup
+# Markup {#markup}
 
 How is text represented and interacted with?
 
-## WYSIWYG
+## WYSIWYG {#wysiwyg}
 
 - examples: notion
 - pros
@@ -381,7 +383,7 @@ How is text represented and interacted with?
     - showing deltas on rendered HTML is very hard
     - as a consequence, easy to mess something up and not see it
 
-## Markdown
+## Markdown {#md}
 
 - examples: obsidian
 - pros
@@ -405,7 +407,7 @@ How is text represented and interacted with?
     - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
     - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
 
-## XML
+## XML {#xml}
 
 - pros:
   - extensible
@@ -432,7 +434,7 @@ How is text represented and interacted with?
     - something as simple as "complete the closing node when I type `</`" is usually not implemented
     - simple stuff like indenting the nodes so that the text is on a different line than the markup, like so (example), is very hard
 
-## MDX
+## MDX {#mdx}
 
 - what if we could have the simplicity of markdown for common use cases, and the generality of XML for complex use cases?
 - it exists: it's called MDX
@@ -444,18 +446,18 @@ How is text represented and interacted with?
   - not widely implemented
   - javascript
 
-## Other Markup
+## Other Markup {#other-markup}
 
 - asciidoc
 - textile
 - creole
 - Mediawiki markup
 
-# Client
+# Client {#client}
 
 How does the user interact with the wiki?
 
-## Wiki Compiler
+## Wiki Compiler {#wiki-compiler}
 
 - the software reads the database, and either compiles to static HTML or serves a static, read only view of the app. most ssgs have a `serve` command that listens on the filesystem and updates the live view.
 - examples: most ssgs
@@ -477,7 +479,7 @@ How does the user interact with the wiki?
     - typically that means bring your own editor
     - and BYOE often means you need a lightweight markup language like markdown
 
-## Wiki Server
+## Wiki Server {#wiki-server}
 
 - examples: most software
 - pros:
