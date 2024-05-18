@@ -250,8 +250,18 @@ each of which contains a list of objects.
 
 ## Tags {#tags}
 
-- give up the hierarchy
-- information can be tagged and found through boolean operations on tags
+Give up on hierarchy:
+objects can be given a list of tags,
+clicking on a tag shows all objects with the tag,
+boolean operation on tags (`a and (b or c)`) can be used to search.
+
+**Pros:**
+
+- Handles the fact that objects can live in multiple places.
+
+**Cons:**
+
+- Tags are themselves flat.
 
 ## Pure Hypertext {#hypertext}
 
