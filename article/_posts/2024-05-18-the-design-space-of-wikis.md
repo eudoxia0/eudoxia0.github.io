@@ -221,8 +221,12 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 
 ## Singleton Folder {#singleton-folder}
 
-- objects exist in an ordered list
-- example: card files
+All objects in the wiki exist in a single set or ordered list.
+
+**Examples:**
+
+- [The Archive](https://zettelkasten.de/the-archive/)
+- [Cardfile](https://en.wikipedia.org/wiki/Cardfile)
 
 ## Folders {#folders}
 
