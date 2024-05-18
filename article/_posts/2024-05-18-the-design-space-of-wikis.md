@@ -94,6 +94,11 @@ summary: etc.
       - jekyll and any ssg
       - ikiwiki
       - gitit
+    - there's two ways to do this:
+      - the client "owns" the git repo, and makes commits
+        - e.g. gitit, ikiwiki
+      - the client just reads from, and writes to, the repo, but does not make commits
+        - e.g. obsidian
     - pros
       - version control for free
         - can track changes in git
@@ -107,6 +112,13 @@ summary: etc.
         - e.g. generate pages from some source of truth data
         - transclusion
         - compilation into different formats
+        - e.g. say you have some corporate policies
+          - you can have the markdown files in the wiki be the source of truth
+          - and a makefile to transclude them and compile them to a PDF
+          - to upload e.g. to a compliance management platform
+        - dually, you can turn files from the filesystem into database pages
+          - you can have a CSV file with your reading list
+          - and a makefile to compile that into like one page per entry
       - bring your own tools
         - can edit in emacs or vim or zed or vscode or whatever editor you want
       - durable
@@ -148,6 +160,15 @@ summary: etc.
           - install the sqlite client
           - figure out the database schema
           - figure out queries to get/insert the information you want
+      - custom client:
+        - unlike plain text files, you can't edit this with e.g Emacs
+        - need a custom client software
+      - cant interact with files
+        - data is stuck in the database
+        - extracting data into files is hard
+        - importing data from files is hard
+      - version control
+        - needs to be reimplemented
 - markup
 
   - WYSIWYG
