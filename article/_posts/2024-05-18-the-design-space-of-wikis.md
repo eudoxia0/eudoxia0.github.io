@@ -57,8 +57,31 @@ summary: etc.
     - examples: obsidian
     - objects exist in hierarchically-structured folders
     - folders and objects are distinct
+  - folder-page unification
+    - examples: notion
+    - this is a really useful feature that for some reason is rarely implemented
+    - a page can have sub-pages
+    - there is no special category of "folder"
+    - in obsidian i'm often bothered by the fact that i'd like to have something like an "index" page for a folder
+    - that can act as the atlas, or description, of the folder's contents
+    - notion lets you have that
+  - tags
+    - give up the hierarchy
+    - information can be tagged and found through boolean operations on tags
+  - pure hypertext
+    - examples: roam
+    - give up the hierarchy
+    - only way to find things is clicking a link, or search
+    - pros:
+      - strictly more general than hierarchy
+    - cons:
+      - does not appeal to spatial intuition
   - spatially
     - objects exist on a canvas you can pan or scroll
+    - pros:
+      - appeals to the human intuition
+    - cons:
+      - infinite zoom in/out is non-physical
 - storage
   - files
     - plain-text files in a folder
