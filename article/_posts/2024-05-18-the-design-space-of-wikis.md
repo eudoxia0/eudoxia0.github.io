@@ -101,5 +101,9 @@ summary: etc.
   - one way
   - two-way
   - typed links
-  - mixin: dead links
+  - mixin: red links
+    - let you create links to non-existent pages
+    - examples: wikipedia, notion
+    - clicking on the link creates the page
+    - ideally, have a way to find all red links in the database
   - mixin: link integrity
