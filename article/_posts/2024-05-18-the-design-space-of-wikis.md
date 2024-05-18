@@ -60,24 +60,36 @@ What kinds of data can objects hold?
 
 ## Plain Text {#plain-text-content}
 
-- an object's contents are plain, unformatted text
-- plain text conventions are used for "formatting"
-- links are just text
+Objects contain plain, unformatted text.
+Plain-text conventions are used for formatting.
+Links don't exist as first-class objects.
+
+**Examples:** mostly older ones.
 
 ## Plain Text + Links {#plain-text-links}
 
-- plain text
-- but with specific markup for links
+Plain text, but the only formatting construct is the link.
+
+**Examples:**
+
+- [denote](https://protesilaos.com/emacs/denote)
+- [howm](https://kaorahi.github.io/howm/).
 
 ## Rich Text {#rich-text}
 
-- simple formatting: bold, lists, etc.
+Bold text, bulleted list, tables, code blocks.
+Essentially everything you can do with Markdown.
+
+**Examples:** essentially all.
 
 ## Rich Text + Metadata {#rich-text-meta}
 
-- example: notion
-- typed properties aside from the text
-- "main text" remains a privileged own thing
+An object has body text, but also a mapping of properties to values.
+
+**Examples:**
+
+- [Notion databases](https://www.notion.so/help/intro-to-databases) are probably the most prominent example.
+- Tools like Obsidian or org-mode let you add properties to pages.
 
 ## Typed Properties {#typed-properties}
 
