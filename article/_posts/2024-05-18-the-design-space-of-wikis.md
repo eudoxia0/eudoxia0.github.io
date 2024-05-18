@@ -53,7 +53,11 @@ summary: etc.
           - this is unique to git
     - cons
   - database
-
+- markup
+  - WYSIWY
+  - Markdown
+  - XML
+  - MDX
 - links
   - none
   - one way
