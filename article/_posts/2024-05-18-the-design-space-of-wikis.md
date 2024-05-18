@@ -35,7 +35,7 @@ summary: etc.
    1. [Search](#search)
    1. [Boxes](#boxes)
    1. [Singleton Folder](#singleton-folder)
-   1. [Folders](#folders)
+   1. [Hierarchical Folders](#folders)
    1. [Unified Folders and Pages](#)
    1. [Tags](#tags)
    1. [Pure Hypertext](#hypertext)
@@ -231,7 +231,7 @@ each of which contains a list of objects.
 
 - [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards)
 
-## Folders {#folders}
+## Hierarchical Folders {#folders}
 
 - very common
 - examples: obsidian
