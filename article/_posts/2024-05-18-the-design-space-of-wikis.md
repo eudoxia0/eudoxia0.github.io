@@ -227,16 +227,23 @@ each of which contains a list of objects.
 
 ## Hierarchical Folders {#folders}
 
-- very common
-- examples: obsidian
-- objects exist in hierarchically-structured folders
-- folders and objects are distinct
-- pros:
-  - well known
-  - appeals to spatial intuition: everything is in one place
-- cons:
-  - hierarchy has limitations
-    - things can be in multiple places
+Like a hierarchical filesystem.
+Folders contain objects and other folders.
+
+**Pros:**
+
+- Well-known.
+- Appeals to spatial intuition: everything is in exactly one place, which makes it easier to find things.
+- Easily maps to [plain-text storage](#storage-plain).
+
+**Cons:**
+
+- The problem with every hierarchical taxonomy is the edge cases: what do I do about things that are, conceptually, in two places in the taxonomy?
+- Folders are just containers and don't have data. If you want an "index page" for a folder, you have to make a page _within_ the folder.
+
+**Examples:**
+
+- [Obsidian](https://obsidian.md/)
 
 ## Unified Folders and Pages {#}
 
