@@ -442,11 +442,11 @@ How are objects connected?
 
 ## No Links
 
-- no links
-- the wiki is just a collection of documents
-- examples:
-  - cardfile from the late 80s windows
-  - reality
+No links. The wiki is just a collection of objects. Objects can only be referred to by an unlinked name.
+
+**Examples:** reality, [Cardfile][cardfile].
+
+[cardfile]: https://en.wikipedia.org/wiki/Cardfile
 
 ## One-Way
 
