@@ -166,6 +166,9 @@ summary: etc.
         - can have any kind of organization at the application layer
       - VC is built in
         - version control does not have to involve a separate app
+      - single client
+        - there is one way to interact with the wiki's contents
+        - don't need a text editor and a viewer as separate apps
     - cons:
       - portability:
         - plain-text markdown files are more readable than a database schema
