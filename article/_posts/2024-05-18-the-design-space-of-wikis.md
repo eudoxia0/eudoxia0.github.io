@@ -437,56 +437,56 @@ How is data stored?
 - the client just reads from, and writes to, the repo, but does not make commits
   - e.g. obsidian
 - pros
-- version control for free
-  - can track changes in git
-- change review
-  - for collaborative wikis, changes can be proposed in PRs
-- multi-file changes
-  - with git, changes can apply to multiple files
-    - this is unique to git
-- file generation
-  - can do cool things with makefiles
-  - e.g. generate pages from some source of truth data
-  - transclusion
-  - compilation into different formats
-  - e.g. say you have some corporate policies
-    - you can have the markdown files in the wiki be the source of truth
-    - and a makefile to transclude them and compile them to a PDF
-    - to upload e.g. to a compliance management platform
-  - dually, you can turn files from the filesystem into database pages
-    - you can have a CSV file with your reading list
-    - and a makefile to compile that into like one page per entry
-- bring your own tools
-  - can edit in emacs or vim or zed or vscode or whatever editor you want
-- durable
-  - plain text files are gonna last longer than some proprietary format
-  - can be read from and written to with standard tools
+  - version control for free
+    - can track changes in git
+  - change review
+    - for collaborative wikis, changes can be proposed in PRs
+  - multi-file changes
+    - with git, changes can apply to multiple files
+      - this is unique to git
+  - file generation
+    - can do cool things with makefiles
+    - e.g. generate pages from some source of truth data
+    - transclusion
+    - compilation into different formats
+    - e.g. say you have some corporate policies
+      - you can have the markdown files in the wiki be the source of truth
+      - and a makefile to transclude them and compile them to a PDF
+      - to upload e.g. to a compliance management platform
+    - dually, you can turn files from the filesystem into database pages
+      - you can have a CSV file with your reading list
+      - and a makefile to compile that into like one page per entry
+  - bring your own tools
+    - can edit in emacs or vim or zed or vscode or whatever editor you want
+  - durable
+    - plain text files are gonna last longer than some proprietary format
+    - can be read from and written to with standard tools
 - cons
-- forces lightweight markup
-  - if the idea is that you can bring your own editor
-  - you pretty much need something like markdown
-  - this may be a pro
-- visibility
-  - auth for git repos is repo-wide
-  - you can either view the entire repo, or none of it
-- two-app failure modes:
-  - if one app is used to write, and another to view, the latter tends to be ignored
-  - the reason is if you are editing files through e.g. a text editor, you have to be able to find that file by browsing
-  - therefore the editor can browse, read, edit, and search the files
-  - what does the viewer do?
-  - it provides a cute interface, maybe higher-level search, it renders tex math, and maybe it can do things like queries over the database (liek notion views)
-  - in my experience of using jekyll as a person wiki, i only actually launched the wiki when I wanted to view rendered tex math
-  - otherwise I'd just use Zed or Emacs to read and write
-  - it helps that markdown is very readable like that
-  - obsidian doesn't have this because the viewer is also a very convenient editor
-    - it never occurs to me to edit an obsidian vault with Emacs
-    - this might interact poorly with e.g. version control
-- sync is harder
-  - using the thing from e.g. your phone is harder, you need git and the filesystem
-- visibility of changes
-  - changes are stuck in the git history
-  - may not be easy to make them visible to the application
-- file upload is harder
+  - forces lightweight markup
+    - if the idea is that you can bring your own editor
+    - you pretty much need something like markdown
+    - this may be a pro
+  - visibility
+    - auth for git repos is repo-wide
+    - you can either view the entire repo, or none of it
+  - two-app failure modes:
+    - if one app is used to write, and another to view, the latter tends to be ignored
+    - the reason is if you are editing files through e.g. a text editor, you have to be able to find that file by browsing
+    - therefore the editor can browse, read, edit, and search the files
+    - what does the viewer do?
+    - it provides a cute interface, maybe higher-level search, it renders tex math, and maybe it can do things like queries over the database (liek notion views)
+    - in my experience of using jekyll as a person wiki, i only actually launched the wiki when I wanted to view rendered tex math
+    - otherwise I'd just use Zed or Emacs to read and write
+    - it helps that markdown is very readable like that
+    - obsidian doesn't have this because the viewer is also a very convenient editor
+      - it never occurs to me to edit an obsidian vault with Emacs
+      - this might interact poorly with e.g. version control
+  - sync is harder
+    - using the thing from e.g. your phone is harder, you need git and the filesystem
+  - visibility of changes
+    - changes are stuck in the git history
+    - may not be easy to make them visible to the application
+  - file upload is harder
 
 ## Database {#storage-db}
 
