@@ -100,11 +100,50 @@ summary: etc.
       - not extensible
         - wikilinks require hacking the parser
         - or abusing link syntax
+        - you can try embedding HTML, but you can't have markdown inside the HTML
       - the UX for plain-text editing of markdown varies widely
         - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
         - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
   - XML
+    - pros:
+      - extensible
+        - wikilinks, shortcodes, etc, are just a new element type
+        - graphviz? new node type
+        - embedded plantuml? new node type
+        - embedded gnuplot? new node type
+      - widely implemented
+      - complex markup is trivial
+        - things that are impossible with markdown are trivial in XML
+        - for example, tables as complex as what you can do in HTML are trivial to do in XML
+        - can have deep structure e.g. TEI or standard ebooks markup
+    - cons:
+      - verbose
+        - this is the thing that killed xml in addition to people trying to use it for data
+        - something as simple as a bulleted list in Markdown requires endless typing in XML
+        - paragraphs have to be explicitly demarcated, which really, really fucks with the flow of writing
+        - links are tedious to write: instead of `[[Foo]]` you have to write `<link to="Foo" />`
+        - instead of `[[Foo|link text]]` you have to write `<link to="Foo">link text</link>`
+        - no good!
+      - bad editing experience
+        - most text editors have an XML mode
+        - but it is very much neglected
+        - something as simple as "complete the closing node when I type `</`" is usually not implemented
+        - simple stuff like indenting the nodes so that the text is on a different line than the markup, like so (example), is very hard
   - MDX
+    - what if we could have the simplicity of markdown for common use cases, and the generality of XML for complex use cases?
+    - it exists: it's called MDX
+    - pros
+      - does exactly what I want
+      - common things are quick
+      - complex things are possible
+    - cons:
+      - not widely implemented
+      - javascript
+  - other formats
+    - asciidoc
+    - textile
+    - creole
+    - Mediawiki markup
 
 - links
   - none
