@@ -466,6 +466,9 @@ How is data stored?
 - pros
   - version control for free
     - can track changes in git
+    - vcs are a lot more sophisticated than built-in vc
+      - for example: most version control in wikis that have it is per-object
+      - that means reverting a version can introduce links to objects that don't exist, breaking link integrity
   - change review
     - for collaborative wikis, changes can be proposed in PRs
   - multi-file changes
