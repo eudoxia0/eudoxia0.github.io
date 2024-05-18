@@ -420,7 +420,7 @@ summary: etc.
     - typically that means bring your own editor
     - and BYOE often means you need a lightweight markup language like markdown
 
-# Wiki Server
+## Wiki Server
 
 - examples: most software
 - pros:
@@ -440,7 +440,7 @@ summary: etc.
 
 How are objects connected?
 
-## None
+## No Links
 
 - no links
 - the wiki is just a collection of documents
