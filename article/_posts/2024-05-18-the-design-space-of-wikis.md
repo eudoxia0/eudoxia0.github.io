@@ -247,19 +247,16 @@ Folders contain objects and other folders.
 
 - [Obsidian](https://obsidian.md/)
 
-## Unified Folders and Pages {#}
+## Unified Folders and Pages {#unified-folders}
 
-- examples: notion
-- this is a really useful feature that for some reason is rarely implemented
-- a page can have sub-pages
-- there is no special category of "folder"
-- in obsidian i'm often bothered by the fact that i'd like to have something like an "index" page for a folder
-- that can act as the atlas, or description, of the folder's contents
-- notion lets you have that
+Pages and folders are unified: pages can have contain subpages.
+Or, from a more SQL perspective: pages can have parent pointers.
 
 **Examples:**
 
 - [Notion](https://www.notion.so)
+- [MediaWiki](https://www.mediawiki.org/wiki/Help:Subpages)
+- For some reason this incredibly useful feature is not more widely implemented.
 
 ## Tags {#tags}
 
