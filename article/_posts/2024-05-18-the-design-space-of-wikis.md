@@ -358,24 +358,31 @@ How is text represented and interacted with?
 
 ## WYSIWYG {#wysiwyg}
 
-- examples: notion
-- pros
-  - low friction
-  - drag and drop image upload is easy
-- cons
-  - a lot more code to implement
-  - every WYSIWYG editor is janky in some sui generis, hard to describe way
-    - Markdown shortcuts that don't work
-    - backspacing into formatting applies the formatting to new text you write
-    - indenting/dedenting lists can be a pain
-  - more complex stuff is often catastrophically hard to implement
-    - e.g. the full power of HTML tables (with colspan, rowspan) requires essentially a full-blown spreadsheet engine to implement
-    - in XML it just requires... parsing
-  - change preview is harder
-    - diffing markdown is 1) easy and 2) meaningful
-    - diffing a JSON blob of a ProseMirror AST is not
-    - showing deltas on rendered HTML is very hard
-    - as a consequence, easy to mess something up and not see it
+The user edits text using a WYSIWYG editor.
+
+**Pros:**
+
+- Minimizes friction for editing text.
+- Drag-and-drop image upload lowers the friction of adding files to the wiki.
+- Complex markup (e.g. tables) can be implemented without breaking out an XML parser.
+
+**Cons:**
+
+- Vastly harder to implement than plain-text markup.
+- Every single WYSIWYG editor is janky in some sui generis, hard to describe way,
+  e.g.: Markdown shortcuts don't work,
+  backspacing into formatting applies the formatting to new text you write,
+  indenting/dedenting lists can be a pain,
+  simple text editing operations can have unpredictable results.
+- Complex markup can be exponentially harder to implement:
+  e.g. the full power of HTML tables (with `colspan` and `rowspan`) requires essentially a full-blown spreadsheet engine to implement,
+  whereas in XML the same thing only requires parsing.
+- Change preview is harder. Diffing Markdown or XML is easy, and it's very clear from looking at a diff what the output is going to be. Diffing the JSON blob of a ProseMirror AST is not meaningful, and showing deltas on the rendered HTML is very hard. It's easy to mess something up and not see it in the diff.
+
+**Examples:**
+
+- [Notion](https://www.notion.so)
+- [Obsidian](https://obsidian.md/)
 
 ## Markdown {#md}
 
