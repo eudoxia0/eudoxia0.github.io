@@ -4,6 +4,7 @@ summary: etc.
 ---
 
 - object structure
+  - what kinds of data do objects hold?
   - plain text
     - an object's contents are plain, unformatted text
     - plain text conventions are used for "formatting"
@@ -85,6 +86,9 @@ summary: etc.
 - storage
   - files
     - plain-text files in a folder
+      - edited with your choice of editor
+      - the UI can be read-write (obsidian, gitit)
+      - or read-only, e.g. serving HTML or even compiling to static HTML, like any static site generator
     - examples:
       - obsidian
       - jekyll and any ssg
@@ -103,11 +107,47 @@ summary: etc.
         - e.g. generate pages from some source of truth data
         - transclusion
         - compilation into different formats
+      - bring your own tools
+        - can edit in emacs or vim or zed or vscode or whatever editor you want
+      - durable
+        - plain text files are gonna last longer than some proprietary format
+        - can be read from and written to with standard tools
     - cons
       - visibility
         - auth for git repos is repo-wide
         - you can either view the entire repo, or none of it
+      - two-app failure modes:
+        - if one app is used to write, and another to view, the latter tends to be ignored
+        - the reason is if you are editing files through e.g. a text editor, you have to be able to find that file by browsing
+        - therefore the editor can browse, read, edit, and search the files
+        - what does the viewer do?
+        - it provides a cute interface, maybe higher-level search, it renders tex math, and maybe it can do things like queries over the database (liek notion views)
+        - in my experience of using jekyll as a person wiki, i only actually launched the wiki when I wanted to view rendered tex math
+        - otherwise I'd just use Zed or Emacs to read and write
+        - it helps that markdown is very readable like that
+        - obsidian doesn't have this because the viewer is also a very convenient editor
+          - it never occurs to me to edit an obsidian vault with Emacs
+          - this might interact poorly with e.g. version control
+      - sync is harder
+        - using the thing from e.g. your phone is harder, you need git and the filesystem
   - database
+    - objects are stored in a database
+    - manipulation is through a client application
+    - object histories are kept in the database, if any
+    - pros:
+      - hostable:
+        - if there's a database and a server, the app can be hosted somewhere and accessed over the internet
+        - can use from multiple devices, from your phone etc.
+      - visibility:
+        - for teams, custom permissions and visibility rules can be implemented by the server
+        - examples: notion
+    - cons:
+      - portability:
+        - plain-text markdown files are more readable than a database schema
+        - sqlite is portable enough but there's extra layers of friction
+          - install the sqlite client
+          - figure out the database schema
+          - figure out queries to get/insert the information you want
 - markup
 
   - WYSIWYG
