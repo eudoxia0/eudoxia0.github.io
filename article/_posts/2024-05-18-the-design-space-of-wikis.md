@@ -10,9 +10,9 @@ summary: etc.
   - sections titled "mixin" are design choices that can be applied to multiple other choices
   - axes are not entirely orthogonal: there are incompatible regions of space
 
-# Object Structure
+# Objects
 
-What kinds of data do objects hold?
+What kinds of data can objects hold?
 
 ## Plain Text
 
