@@ -309,22 +309,19 @@ Objects exist on a canvas that you can pan or scroll.
 
 ## Organization by Type {#organize-by-type}
 
-- example:
-  - relational databases
-  - notion (kind of)
-  - real life
-- instead of organizing by topic, or in folders in a hierarchy, you can organize information by type
-- for example in notion you can have a database, which contains records that all have the same properties
-- so you can have a database of books, a database of journal entries, etc, a database of index cards for ideas
-- and this may be all the organization you need
-- relational databases work this way: a database has a list of tables, and tables have rows.
-  - all other structure is "one level up" through foreign keys
-  - and must be revealed by querying
-- this is also how real life works:
+Hierarchies collapse on contact with the first counter-example.
+Tags are too flat.
+Hypertext leads to a tangled mess.
 
-  - your bookshelf has books
-  - your CD shelf has CDs
-  - etc
+Another way to organize information is by type:
+all objects which have the same properties are grouped together.
+All journal entries in one folder, all rolodex entries in another, all book reviews in another, etc.
+
+**Examples:**
+
+- [Notion databases](https://www.notion.so/help/intro-to-databases)
+- Relational databases work like this: a database is a list of tables, and tables have rows.
+- Real life also works like this, somewhat: your bookshelves have books, your CD shelf has CDs, etc.
 
 ## Mixin: Constrained Folders {#mixin-constrained-folders}
 
