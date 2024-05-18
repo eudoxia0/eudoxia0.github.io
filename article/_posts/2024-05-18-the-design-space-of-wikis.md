@@ -125,15 +125,26 @@ These make is easy to rename objects without breaking links, but generally have 
 
 ## Unique Title {#title}
 
-- the object title is globally unique
-- this makes it easy to reference objects in a plain-text wiki: you just write the name
-- examples: wikipedia
+The object title is globally unique.
+This makes it easy to reference objects when using plain-text markup:
+you just write the title in `[[wikilinks]]`.
+
+**Examples:** MediaWiki
 
 ## File Path {#path}
 
-- can rename the title, without affecting anything
-- linking has to include the filename rather than the more human readable page name
-- reorganizing the folder structure breaks the link structure
+With [plain-text wikis](#storage-plain),
+the path to a file is a globally unique identifier by definition.
+
+Pros:
+
+- Object titles need not be unique.
+- Can rename objects without breaking anything.
+
+Cons:
+
+- Linking is more verbose (have to include the filename rather the more human-readable title)
+- Reorganizing the folder structure will break the link structure, benefits from [link integrity](#mixin-link-integrity).
 
 # Links {#links}
 
