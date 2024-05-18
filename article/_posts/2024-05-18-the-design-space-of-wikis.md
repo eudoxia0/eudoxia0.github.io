@@ -74,7 +74,7 @@ Plain text, but the only formatting construct is the link.
 **Examples:**
 
 - [denote](https://protesilaos.com/emacs/denote)
-- [howm](https://kaorahi.github.io/howm/).
+- [howm](https://kaorahi.github.io/howm/)
 
 ## Rich Text {#rich-text}
 
@@ -117,10 +117,11 @@ How are objects identified?
 
 ## Unreadable Identifiers {#uuid}
 
-- uuids
-- make it possible to rename things in a consequence free fashion
-- usually have to be hidden, requires WYSIWYG editing and a database
-- examples: notion
+Like serial IDs or UUIDs.
+These make is easy to rename objects without breaking links, but generally have to be hidden from the user
+(e.g.: requires a [WYSIWYG](#wysiwyg) editor and a [database](#storage-db)).
+
+**Examples:** Notion
 
 ## Unique Title {#title}
 
