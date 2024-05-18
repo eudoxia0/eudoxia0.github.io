@@ -128,6 +128,7 @@ summary: etc.
       - folders have have a _fixed_ number of folders they _must_ have
     - pros:
       - constrained
+      - balanced
     - cons:
       - a strict ontology may be too limited
 - storage
