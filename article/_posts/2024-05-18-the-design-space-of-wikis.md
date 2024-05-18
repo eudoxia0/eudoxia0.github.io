@@ -107,3 +107,5 @@ summary: etc.
     - clicking on the link creates the page
     - ideally, have a way to find all red links in the database
   - mixin: link integrity
+    - examples: none that i know of
+    - deleting a page will fail if it would break existing links
