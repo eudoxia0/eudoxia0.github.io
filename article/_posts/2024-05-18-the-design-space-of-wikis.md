@@ -486,6 +486,7 @@ How is data stored?
 - visibility of changes
   - changes are stuck in the git history
   - may not be easy to make them visible to the application
+- file upload is harder
 
 ## Database {#storage-db}
 
@@ -568,5 +569,6 @@ How does the user interact with the wiki?
   - compatible with any kind of markup
     - can have a complex WYSIWYG editor
     - can also just do lightweight markup or XML
+  - file upload is easier
 - cons
   - publishing: harder
