@@ -54,7 +54,25 @@ summary: etc.
     - cons
   - database
 - markup
-  - WYSIWY
+  - WYSIWYG
+    - examples: notion
+    - pros
+      - low friction
+      - drag and drop image upload is easy
+    - cons
+      - a lot more code to implement
+      - every WYSIWYG editor is janky in some sui generis, hard to describe way
+        - Markdown shortcuts that don't work
+        - backspacing into formatting applies the formatting to new text you write
+        - indenting/dedenting lists can be a pain
+      - more complex stuff is often catastrophically hard to implement
+        - e.g. the full power of HTML tables (with colspan, rowspan) requires essentially a full-blown spreadsheet engine to implement
+        - in XML it just requires... parsing
+      - change preview is harder
+        - diffing markdown is 1) easy and 2) meaningful
+        - diffing a JSON blob of a ProseMirror AST is not
+        - showing deltas on rendered HTML is very hard
+        - as a consequence, easy to mess something up and not see it
   - Markdown
   - XML
   - MDX
