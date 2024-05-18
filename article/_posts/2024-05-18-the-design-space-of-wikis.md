@@ -450,32 +450,48 @@ No links. The wiki is just a collection of objects. Objects can only be referred
 
 ## One-Way
 
-- links are unidirectional
-- examples: html
+Links are one-way. Objects don't know which other objects have linked to them.
+
+**Examples:** HTML, since one-way links are pretty much the only way to do it in a decentralized setup.
 
 ## Two-Way
 
-- pages know which pages link to them
-- examples:
-  - wikipedia, surprisingly (link to blog post)
-  - anything post-Roam
+The original grand vision of hypertext: objects know which other objects have linked to them. There's usually a tab or pane to view the "backlinks" in a given page.
+
+**Examples:**
+
+- Surprisingly, [MediaWiki](/article/roam-twenty-years-before-roam).
+- Anything post-[Roam][roam].
+
+[roam]: https://en.wikipedia.org/wiki/Roam_(software)
 
 ## Typed Links
 
-- links have metadata
-- examples:
-  - obsidian dataview: <https://blacksmithgu.github.io/obsidian-dataview/>
-  - notion, at the property level
-- e.g. `The book was written by [[Vladimir Nabokov]]{type=author}`.
+Links have metadata associated with them, e.g. you can write something like:
+
+```markdown
+_Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
+```
+
+**Examples:**
+
+- [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
+- Notion at the level of [database properties](https://www.notion.so/help/database-properties).
 
 ## Mixin: Red Links
 
-- let you create links to non-existent pages
-- examples: wikipedia, obsidian
-- clicking on the link creates the page
-- ideally, have a way to find all red links in the database
+Some wikis let you create links to pages that don't yet exist. Clicking the link takes you to the interface to create a page with that title. Ideally you also have a way to find all red links in the database.
+
+**Examples:**
+
+- Obsidian
+- MediaWiki
 
 ## Mixin: Link Integrity
 
 - examples: none that i know of
 - deleting a page will fail if it would break existing links
+
+```
+
+```
