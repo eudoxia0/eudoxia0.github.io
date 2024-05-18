@@ -45,6 +45,7 @@ summary: etc.
    1. [WYSIWYG](#wysiwyg)
    1. [Markdown](#md)
    1. [XML](#xml)
+   1. [Djot](#djot)
    1. [MDX](#mdx)
    1. [Other Markup](#other-markup)
 1. [Storage](#storage)
@@ -461,12 +462,29 @@ Before you close this tab in disgust, please read this [brief apologia](/article
 
   Is also usually absent. So all the indentation has to be done by hand, which is very painful.
 
-## MDX {#mdx}
+## Djot {#djot}
 
 What if we could have the simplicity of Markdown for common use cases,
 and the generality of XML for complex use cases?
-This exists, sort of: it's called [MDX][mdx].
-If you ignore the embedded JavaScript bit it's basically just Markdown that you can embed XML---pardon me, JSX---into.
+
+[Djot](https://djot.net/) is a new markup language from the creator of [Pandoc](https://pandoc.org/).
+It is designed to be easier to parse than Markdown, and to have a broader feature set than CommonMark. But the key feature is that it has:
+
+> generic containers for text, inline content, and block-level content, to which arbitrary attributes can be applied. This allows for extensibility using AST transformations.
+
+**Pros:**
+
+- Simple documents are easy to write.
+- Complex documents are possible to write.
+
+**Cons:**
+
+- Not widely implemented, yet.
+- Very new, not battle tested.
+
+## MDX {#mdx}
+
+[MDX][mdx] is Markdown that you can embed JavaScript and XML---pardon me, JSX---into.
 
 [mdx]: https://mdxjs.com/
 
@@ -481,10 +499,9 @@ If you ignore the embedded JavaScript bit it's basically just Markdown that you 
 
 ## Other Markup {#other-markup}
 
-- asciidoc
-- textile
-- creole
-- Mediawiki markup
+[AsciiDoc](https://en.wikipedia.org/wiki/AsciiDoc) is like Markdown for [DocBook](https://en.wikipedia.org/wiki/DocBook). It is not widely implemented.
+
+[Wikitext](https://www.mediawiki.org/wiki/Wikitext) is the markup language used by [MediaWiki](https://en.wikipedia.org/wiki/MediaWiki). It can be extended through template syntax. There are a number of parsers outside of core MediaWiki.
 
 # Storage {#storage}
 
