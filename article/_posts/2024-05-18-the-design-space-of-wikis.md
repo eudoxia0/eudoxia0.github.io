@@ -182,6 +182,7 @@ summary: etc.
         - needs to be reimplemented
 - markup
 
+  - how is text represented and interacted with?
   - WYSIWYG
     - examples: notion
     - pros
