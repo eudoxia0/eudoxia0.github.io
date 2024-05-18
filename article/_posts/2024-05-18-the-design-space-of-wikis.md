@@ -3,6 +3,12 @@ title: The Design Space of Wikis
 summary: etc.
 ---
 
+- intro
+  - this post describes the design space of wikis
+  - sections are axes in design space: they correspond to design questions, "how should we do X?"
+  - sub-sections are points or intervals along that axis: they are design choices, "we do X this way"
+  - sections titled "mixin" are design choices that can be applied to multiple other choices
+  - the axes are not entirely orthogonal
 - object structure
   - what kinds of data do objects hold?
   - plain text
