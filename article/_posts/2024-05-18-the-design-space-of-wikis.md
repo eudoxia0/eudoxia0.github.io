@@ -54,6 +54,7 @@ summary: etc.
     - cons
   - database
 - markup
+
   - WYSIWYG
     - examples: notion
     - pros
@@ -96,11 +97,28 @@ summary: etc.
         - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
   - XML
   - MDX
+
 - links
   - none
+    - no links
+    - the wiki is just a collection of documents
+    - examples:
+      - cardfile from the late 80s windows
+      - reality
   - one way
+    - links are unidirectional
+    - examples: html
   - two-way
+    - pages know which pages link to them
+    - examples:
+      - wikipedia, surprisingly (link to blog post)
+      - anything post-Roam
   - typed links
+    - links have metadata
+    - examples:
+      - obsidian dataview: <https://blacksmithgu.github.io/obsidian-dataview/>
+      - notion, at the property level
+    - e.g. `The book was written by [[Vladimir Nabokov]]{type=author}`.
   - mixin: red links
     - let you create links to non-existent pages
     - examples: wikipedia, notion
