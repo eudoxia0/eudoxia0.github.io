@@ -471,7 +471,7 @@ How are objects connected?
 ## Mixin: Red Links
 
 - let you create links to non-existent pages
-- examples: wikipedia, notion
+- examples: wikipedia, obsidian
 - clicking on the link creates the page
 - ideally, have a way to find all red links in the database
 
