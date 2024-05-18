@@ -35,6 +35,10 @@ summary: etc.
     - the object title is globally unique
     - this makes it easy to reference objects in a plain-text wiki: you just write the name
     - examples: wikipedia
+  - file path
+    - can rename the title, without affecting anything
+    - linking has to include the filename rather than the more human readable page name
+    - reorganizing the folder structure breaks the link structure
 - storage
   - files
     - plain-text files in a folder
@@ -139,11 +143,8 @@ summary: etc.
     - cons:
       - not widely implemented
       - javascript
-  - other formats
-    - asciidoc
-    - textile
-    - creole
-    - Mediawiki markup
+  - other formats - asciidoc - textile - creole - Mediawiki markup
+    ¡
 
 - links
   - none
