@@ -386,27 +386,26 @@ The user edits text using a WYSIWYG editor.
 
 ## Markdown {#md}
 
-- examples: obsidian
-- pros
-  - constrained
-    - constraints liberate and liberties constrain
-    - a lot of the things you can't do in markup you probably shouldn't do
-    - forces you to keep it simple
-  - well-known
-  - widely implemented
-    - markdown parsing isn't as easy as throwing a grammar at a parser generator
-    - still, markdown parsers are widely available
-  - covers most of what you need
-  - change preview is easy
-    - viewing a markdown diff, it's easy to mentally render what the changes would be
-- cons
-  - not extensible
-    - wikilinks require hacking the parser
-    - or abusing link syntax
-    - you can try embedding HTML, but you can't have markdown inside the HTML
-  - the UX for plain-text editing of markdown varies widely
-    - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
-    - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
+The user writes plain-text in [Markdown](https://en.wikipedia.org/wiki/Markdown).
+
+**Pros:**
+
+- Constrained. There's a lot you can't represent in Markdown, but that may be a blessing, because it forces you to keep texts simple.
+- Well-known.
+- Widely available: Markdown parsing isn't as easy as throwing a grammar at ANTLR but Markdown parsers are implemented for most widely-used languages/
+- Covers most of the markup and formatting needs you might have.
+- Change preview is easy: a Markdown diff is easily interpreted.
+
+**Cons:**
+
+- Not extensible: you can't add new formatting elements easily.
+- No Wiki Link Syntax: adding `[[wikilinks]]` requires either hacking the parser, adding a second layer of parsing on text contents, or abusing standard link syntax.
+- The UX for Markdown editing varies widely. Some editors have a Markdown mode that knows how to do simple things like indent lists. Emacs has the `fill-paragraph` command and `markdown-mode` has `C-d` for indenting tables, both of which are really useful quality of life features, but only exist within Emacs.
+
+**Examples:**
+
+- [Obsidian](https://obsidian.md/)
+- Most other apps.
 
 ## XML {#xml}
 
