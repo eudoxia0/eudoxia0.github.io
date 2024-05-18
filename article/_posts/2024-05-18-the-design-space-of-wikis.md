@@ -398,7 +398,7 @@ The user writes plain-text in [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 **Cons:**
 
-- Not extensible: you can't add new formatting elements easily.
+- Not extensible: you can't add new formatting elements easily. You can try to get around this by embedding HTML into Markdown, but the HTML is not parsed into a DOM tree, but left as an inline string. Additionally, you can't have Markdown _inside_ embedded HTML.
 - No Wiki Link Syntax: adding `[[wikilinks]]` requires either hacking the parser, adding a second layer of parsing on text contents, or abusing standard link syntax.
 - The UX for Markdown editing varies widely. Some editors have a Markdown mode that knows how to do simple things like indent lists. Emacs has the `fill-paragraph` command and `markdown-mode` has `C-d` for indenting tables, both of which are really useful quality of life features, but only exist within Emacs.
 
@@ -409,42 +409,75 @@ The user writes plain-text in [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## XML {#xml}
 
-- pros:
-  - extensible
-    - wikilinks, shortcodes, etc, are just a new element type
-    - graphviz? new node type
-    - embedded plantuml? new node type
-    - embedded gnuplot? new node type
-  - widely implemented
-  - complex markup is trivial
-    - things that are impossible with markdown are trivial in XML
-    - for example, tables as complex as what you can do in HTML are trivial to do in XML
-    - can have deep structure e.g. TEI or standard ebooks markup
-- cons:
-  - verbose
-    - this is the thing that killed xml in addition to people trying to use it for data
-    - something as simple as a bulleted list in Markdown requires endless typing in XML
-    - paragraphs have to be explicitly demarcated, which really, really fucks with the flow of writing
-    - links are tedious to write: instead of `[[Foo]]` you have to write `<link to="Foo" />`
-    - instead of `[[Foo|link text]]` you have to write `<link to="Foo">link text</link>`
-    - no good!
-  - bad editing experience
-    - most text editors have an XML mode
-    - but it is very much neglected
-    - something as simple as "complete the closing node when I type `</`" is usually not implemented
-    - simple stuff like indenting the nodes so that the text is on a different line than the markup, like so (example), is very hard
+The extensible markup language is exactly what it says on the tin.
+Before you close this tab in disgust, please read this [brief apologia](/article/brief-defense-of-xml).
+
+**Pros:**
+
+- Extensible. It's in the name. Wikilinks, shortcodes, macros, are just a new element type. Want to embed graphviz, plantuml, gnuplot? Just add a new element.
+- Widely implemented: there are XML parsers in most widely-used languages.
+- Complex markup is trivial: if you want to have e.g. tables as powerful as HTML tables, you essentially just copy the HTML table model into your schema.
+
+**Cons:**
+
+- Verbose: this, and people trying to use it everywhere, is what killed XML.
+  Something as simple as a bulleted list requires endless typing. While in Markdown you can write:
+
+  ```markdown
+  - Foo
+  - Bar
+  - Baz
+  ```
+
+  In XML the best-case scenario is:
+
+  ```xml
+  <ul>
+    <li>Foo</li>
+    <li>Bar</li>
+    <li>Baz</li>
+  </ul>
+  ```
+
+  Links, too, are tedious: instead of `[[Foo]]` you have to write `<link to="Foo" />`,
+  instead of `[[Foo|link text]]` you have to write `<link to="Foo">link text</link>`.
+
+  Finally, each paragraph has to be individually demarcated with a `<p>` element.
+
+  It's death by a thousand cuts.
+
+  For complex documents, there is no alterative, but wikis have to span a very, very broad range of texts: from very quick, low-friction notes to deeply-structured documents. XML is very good at the latter, but imposes too much friction for the former.
+
+- Editing: most editors have an XML mode,
+  but it is often very much neglected.
+  Something as simple as "complete the closing tag when I type `</` is rarely implemented.
+  Indenting the nodes automatically, so that block nodes have text on a separate line from the tags, like so:
+
+  ```xml
+  <p>
+    Foo.
+  </p>
+  ```
+
+  Is also usually absent. So all the indentation has to be done by hand, which is very painful.
 
 ## MDX {#mdx}
 
-- what if we could have the simplicity of markdown for common use cases, and the generality of XML for complex use cases?
-- it exists: it's called MDX
-- pros
-  - does exactly what I want
-  - common things are quick
-  - complex things are possible
-- cons:
-  - not widely implemented
-  - javascript
+What if we could have the simplicity of Markdown for common use cases,
+and the generality of XML for complex use cases?
+This exists, sort of: it's called [MDX][mdx].
+If you ignore the embedded JavaScript bit it's basically just Markdown that you can embed XML---pardon me, JSX---into.
+
+[mdx]: https://mdxjs.com/
+
+**Pros:**
+
+- Satisfies both ends of the spectrum: simple documents are easy, complex documents are possible.
+
+**Cons:**
+
+- Not widely implemented.
+- Embedding JavaScript is unwelcome.
 
 ## Other Markup {#other-markup}
 
