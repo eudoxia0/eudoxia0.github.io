@@ -332,6 +332,31 @@ summary: etc.
     - creole
     - Mediawiki markup
 
+- client
+  - how does the user interact with the wiki?
+  - static
+    - examples: most ssgs
+    - pros:
+      - fast
+      - don't need the app to read
+        - one time i built a wiki compiler and then i lost the source code in my giant folder of semi-finished projects
+        - but i was able to read the pages i wrote because i saved the compiled output from the last time I ran the compile step
+      - publishing: publishing to a website is trivial
+    - cons:
+      - need a separate app to write (e.g. forces plain text files)
+      - compiled content can drift
+  - read-only
+    - examples: most ssgs have a search command
+    - pros:
+      - live: the server can listen to changes in the filesystem, and dynamically update the compiled output
+      - search: you can possibly implement search with the server
+      - compiled: if the app is read only you can save the compiled output for offline reading
+    - cons:
+      - need a separate app to write
+  - read-write:
+    - examples: most software
+    - pros: you only need one app
+    - cons: you lose the benefits of static compilation to HTML
 - links
   - none
     - no links
