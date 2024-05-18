@@ -9,6 +9,7 @@ summary: etc.
   - sub-sections are points or intervals along that axis: they are design choices, "we do X this way"
   - sections titled "mixin" are design choices that can be applied to multiple other choices
   - axes are not entirely orthogonal: there are incompatible regions of space
+  - "wiki" here is meant as a shorthand for the broad space of things called: note-taking apps, document management systems, wikis, tools for thought, zettelkasten.
 
 # Contents
 
