@@ -58,6 +58,12 @@ summary: etc.
     - examples: obsidian
     - objects exist in hierarchically-structured folders
     - folders and objects are distinct
+    - pros:
+      - well known
+      - appeals to spatial intuition: everything is in one place
+    - cons:
+      - hierarchy has limitations
+        - things can be in multiple places
   - folder-page unification
     - examples: notion
     - this is a really useful feature that for some reason is rarely implemented
@@ -77,12 +83,53 @@ summary: etc.
       - strictly more general than hierarchy
     - cons:
       - does not appeal to spatial intuition
+        - this are not in any one place
+        - they are floating in the aether
+      - can become tangled mess
+      - folders are invented "one level up"
+        - you have pages that act as folders
+        - and which list their contents
+        - which is like a folder but it has to be maintained manually
   - spatially
     - objects exist on a canvas you can pan or scroll
     - pros:
-      - appeals to the human intuition
+      - appeals to the human spatial intuition
     - cons:
       - infinite zoom in/out is non-physical
+  - organize by type:
+    - example:
+      - relational databases
+      - notion (kind of)
+      - real life
+    - instead of organizing by topic, or in folders in a hierarchy, you can organize information by type
+    - for example in notion you can have a database, which contains records that all have the same properties
+    - so you can have a database of books, a database of journal entries, etc, a database of index cards for ideas
+    - and this may be all the organization you need
+    - relational databases work this way: a database has a list of tables, and tables have rows.
+      - all other structure is "one level up" through foreign keys
+      - and must be revealed by querying
+  - mixin: constrained folders
+    - examples: johnny decimal
+    - one feature of reality is:
+      - containers are finite
+      - all containers of the same size have the same capacity
+    - computers are not like this
+    - you can have two folders on your desktop
+      - one has a few kilobytes
+      - one has tens of gigabytes
+      - there is no indication that they are unbalanced
+      - the "weight" of folders is not visible
+    - a constrained system can appeal more to human intutition
+    - there can be limits to nesting:
+      - you can only have objects _up to_ two or three levels deep
+      - or a fixed level: objects _must_ be three levels deep, not above, not below (this is how johnny decimal works)
+    - there may be limits to arity:
+      - folders may have an upper bound on how many subfolders they can have
+      - folders have have a _fixed_ number of folders they _must_ have
+    - pros:
+      - constrained
+    - cons:
+      - a strict ontology may be too limited
 - storage
   - files
     - plain-text files in a folder
