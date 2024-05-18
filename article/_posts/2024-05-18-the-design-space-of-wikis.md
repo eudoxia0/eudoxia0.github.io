@@ -93,15 +93,22 @@ An object has body text, but also a mapping of properties to values.
 
 ## Typed Properties {#typed-properties}
 
-- "main text" no longer a privileged thing
-- an object is a map of property names to values
-- some values may be rich text
+An object is just a mapping of properties to values, and some of those values may be rich text.
+Body text is no longer a privileged, separate thing.
+
+The main advantage of this is:
+you can have multiple different blocks of body text.
+
+**Examples:** relational databases.
 
 ## Mixin: Fixed-Length Content {#mixin-fixed-length-content}
 
-- to simulate the limitations of paper
-- content may be limited to some fixed length
-- examples: none that i know of
+To simulate the limitations of physical paper (e.g. [index cards][idx] or A6 paper),
+content may be limited to some fixed length.
+
+[idx]: https://en.wikipedia.org/wiki/Index_card
+
+**Examples:** none that I know of.
 
 # Identifiers {#ident}
 
