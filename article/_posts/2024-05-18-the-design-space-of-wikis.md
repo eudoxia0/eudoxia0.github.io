@@ -212,13 +212,6 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 - objects exist in the aether
 - can be found by searching, or linking to other objects
 
-## Boxes {#boxes}
-
-- examples:
-  - xerox notecards
-  - reality
-- there's a list of fileboxes, and objects exist in the filebox
-
 ## Singleton Folder {#singleton-folder}
 
 All objects in the wiki exist in a single set or ordered list.
@@ -227,6 +220,16 @@ All objects in the wiki exist in a single set or ordered list.
 
 - [The Archive](https://zettelkasten.de/the-archive/)
 - [Cardfile](https://en.wikipedia.org/wiki/Cardfile)
+
+## Boxes {#boxes}
+
+The wiki has a two level hierarchy:
+there's a list of boxes,
+each of which contains a list of objects.
+
+**Examples:**
+
+- [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards)
 
 ## Folders {#folders}
 
