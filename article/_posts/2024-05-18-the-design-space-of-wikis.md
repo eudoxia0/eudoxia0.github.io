@@ -164,6 +164,8 @@ summary: etc.
         - it's natural that the folder structure should be visible in the client application (how obsidian works)
         - in a database, the storage system does not have to dictate how pages are organized
         - can have any kind of organization at the application layer
+      - VC is built in
+        - version control does not have to involve a separate app
     - cons:
       - portability:
         - plain-text markdown files are more readable than a database schema
