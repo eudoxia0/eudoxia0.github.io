@@ -275,20 +275,21 @@ boolean operation on tags (`a and (b or c)`) can be used to search.
 
 ## Pure Hypertext {#hypertext}
 
-- examples: roam
-- give up the hierarchy
-- only way to find things is clicking a link, or search
-- pros:
-  - strictly more general than hierarchy
-- cons:
-  - does not appeal to spatial intuition
-    - this are not in any one place
-    - they are floating in the aether
-  - can become tangled mess
-  - folders are invented "one level up"
-    - you have pages that act as folders
-    - and which list their contents
-    - which is like a folder but it has to be maintained manually
+Give up on hierarchy. Just links.
+
+**Pros:**
+
+- Strictly more general than a hierarchy because it's a graph rather than a tree.
+
+**Cons:**
+
+- Does not appeal to spatial intuition: objects are not in "one place", they are floating in the aether.
+- The graph can become a tangled mess.
+- Folders are inevitably reinvented "one level up": you have pages that act as atlases for some subgraph, and those link to other atlas pages.
+
+**Examples:**
+
+- [Roam](https://roamresearch.com/)
 
 ## Spatial Organization {#spatial}
 
