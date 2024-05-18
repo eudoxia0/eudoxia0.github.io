@@ -489,9 +489,6 @@ Some wikis let you create links to pages that don't yet exist. Clicking the link
 
 ## Mixin: Link Integrity
 
-- examples: none that i know of
-- deleting a page will fail if it would break existing links
+Deleting a page that is linked-to by another triggers an error. This ensures all internal links are unbroken. Especially useful if you have e.g. links to a particular section of a page, and so renaming/removing a heading will also trigger an error.
 
-```
-
-```
+**Examples:** none that I know of.
