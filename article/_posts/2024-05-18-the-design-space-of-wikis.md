@@ -258,8 +258,11 @@ summary: etc.
     - cons:
       - not widely implemented
       - javascript
-  - other formats - asciidoc - textile - creole - Mediawiki markup
-    ¡
+  - other formats
+    - asciidoc
+    - textile
+    - creole
+    - Mediawiki markup
 
 - links
   - none
