@@ -41,15 +41,15 @@ summary: etc.
    1. [Spatial Organization](#spatial)
    1. [Organization by Type](#organize-by-type)
    1. [Mixin: Constrained Folders](#mixin-constrained-folders)
-1. [Storage](#storage)
-   1. [Plain Text Files](#storage-plain)
-   1. [Database](#storage-db)
 1. [Markup](#markup)
    1. [WYSIWYG](#wysiwyg)
    1. [Markdown](#md)
    1. [XML](#xml)
    1. [MDX](#mdx)
    1. [Other Markup](#other-markup)
+1. [Storage](#storage)
+   1. [Plain Text Files](#storage-plain)
+   1. [Database](#storage-db)
 1. [Client](#client)
    1. [Wiki Compiler](#wiki-compiler)
    1. [Wiki Server](#wiki-server)
@@ -289,6 +289,101 @@ Deleting a page that is linked-to by another triggers an error. This ensures all
 - cons:
   - a strict ontology may be too limited
 
+# Markup {#markup}
+
+How is text represented and interacted with?
+
+## WYSIWYG {#wysiwyg}
+
+- examples: notion
+- pros
+  - low friction
+  - drag and drop image upload is easy
+- cons
+  - a lot more code to implement
+  - every WYSIWYG editor is janky in some sui generis, hard to describe way
+    - Markdown shortcuts that don't work
+    - backspacing into formatting applies the formatting to new text you write
+    - indenting/dedenting lists can be a pain
+  - more complex stuff is often catastrophically hard to implement
+    - e.g. the full power of HTML tables (with colspan, rowspan) requires essentially a full-blown spreadsheet engine to implement
+    - in XML it just requires... parsing
+  - change preview is harder
+    - diffing markdown is 1) easy and 2) meaningful
+    - diffing a JSON blob of a ProseMirror AST is not
+    - showing deltas on rendered HTML is very hard
+    - as a consequence, easy to mess something up and not see it
+
+## Markdown {#md}
+
+- examples: obsidian
+- pros
+  - constrained
+    - constraints liberate and liberties constrain
+    - a lot of the things you can't do in markup you probably shouldn't do
+    - forces you to keep it simple
+  - well-known
+  - widely implemented
+    - markdown parsing isn't as easy as throwing a grammar at a parser generator
+    - still, markdown parsers are widely available
+  - covers most of what you need
+  - change preview is easy
+    - viewing a markdown diff, it's easy to mentally render what the changes would be
+- cons
+  - not extensible
+    - wikilinks require hacking the parser
+    - or abusing link syntax
+    - you can try embedding HTML, but you can't have markdown inside the HTML
+  - the UX for plain-text editing of markdown varies widely
+    - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
+    - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
+
+## XML {#xml}
+
+- pros:
+  - extensible
+    - wikilinks, shortcodes, etc, are just a new element type
+    - graphviz? new node type
+    - embedded plantuml? new node type
+    - embedded gnuplot? new node type
+  - widely implemented
+  - complex markup is trivial
+    - things that are impossible with markdown are trivial in XML
+    - for example, tables as complex as what you can do in HTML are trivial to do in XML
+    - can have deep structure e.g. TEI or standard ebooks markup
+- cons:
+  - verbose
+    - this is the thing that killed xml in addition to people trying to use it for data
+    - something as simple as a bulleted list in Markdown requires endless typing in XML
+    - paragraphs have to be explicitly demarcated, which really, really fucks with the flow of writing
+    - links are tedious to write: instead of `[[Foo]]` you have to write `<link to="Foo" />`
+    - instead of `[[Foo|link text]]` you have to write `<link to="Foo">link text</link>`
+    - no good!
+  - bad editing experience
+    - most text editors have an XML mode
+    - but it is very much neglected
+    - something as simple as "complete the closing node when I type `</`" is usually not implemented
+    - simple stuff like indenting the nodes so that the text is on a different line than the markup, like so (example), is very hard
+
+## MDX {#mdx}
+
+- what if we could have the simplicity of markdown for common use cases, and the generality of XML for complex use cases?
+- it exists: it's called MDX
+- pros
+  - does exactly what I want
+  - common things are quick
+  - complex things are possible
+- cons:
+  - not widely implemented
+  - javascript
+
+## Other Markup {#other-markup}
+
+- asciidoc
+- textile
+- creole
+- Mediawiki markup
+
 # Storage {#storage}
 
 How is data stored?
@@ -401,101 +496,6 @@ How is data stored?
     - importing data from files is hard
   - version control
     - needs to be reimplemented
-
-# Markup {#markup}
-
-How is text represented and interacted with?
-
-## WYSIWYG {#wysiwyg}
-
-- examples: notion
-- pros
-  - low friction
-  - drag and drop image upload is easy
-- cons
-  - a lot more code to implement
-  - every WYSIWYG editor is janky in some sui generis, hard to describe way
-    - Markdown shortcuts that don't work
-    - backspacing into formatting applies the formatting to new text you write
-    - indenting/dedenting lists can be a pain
-  - more complex stuff is often catastrophically hard to implement
-    - e.g. the full power of HTML tables (with colspan, rowspan) requires essentially a full-blown spreadsheet engine to implement
-    - in XML it just requires... parsing
-  - change preview is harder
-    - diffing markdown is 1) easy and 2) meaningful
-    - diffing a JSON blob of a ProseMirror AST is not
-    - showing deltas on rendered HTML is very hard
-    - as a consequence, easy to mess something up and not see it
-
-## Markdown {#md}
-
-- examples: obsidian
-- pros
-  - constrained
-    - constraints liberate and liberties constrain
-    - a lot of the things you can't do in markup you probably shouldn't do
-    - forces you to keep it simple
-  - well-known
-  - widely implemented
-    - markdown parsing isn't as easy as throwing a grammar at a parser generator
-    - still, markdown parsers are widely available
-  - covers most of what you need
-  - change preview is easy
-    - viewing a markdown diff, it's easy to mentally render what the changes would be
-- cons
-  - not extensible
-    - wikilinks require hacking the parser
-    - or abusing link syntax
-    - you can try embedding HTML, but you can't have markdown inside the HTML
-  - the UX for plain-text editing of markdown varies widely
-    - some editors have a Markdown mode that understands the syntax so it knows e.g. how to indent lists
-    - Emacs has `fill-paragraph` that makes the resulting documents far more readable.
-
-## XML {#xml}
-
-- pros:
-  - extensible
-    - wikilinks, shortcodes, etc, are just a new element type
-    - graphviz? new node type
-    - embedded plantuml? new node type
-    - embedded gnuplot? new node type
-  - widely implemented
-  - complex markup is trivial
-    - things that are impossible with markdown are trivial in XML
-    - for example, tables as complex as what you can do in HTML are trivial to do in XML
-    - can have deep structure e.g. TEI or standard ebooks markup
-- cons:
-  - verbose
-    - this is the thing that killed xml in addition to people trying to use it for data
-    - something as simple as a bulleted list in Markdown requires endless typing in XML
-    - paragraphs have to be explicitly demarcated, which really, really fucks with the flow of writing
-    - links are tedious to write: instead of `[[Foo]]` you have to write `<link to="Foo" />`
-    - instead of `[[Foo|link text]]` you have to write `<link to="Foo">link text</link>`
-    - no good!
-  - bad editing experience
-    - most text editors have an XML mode
-    - but it is very much neglected
-    - something as simple as "complete the closing node when I type `</`" is usually not implemented
-    - simple stuff like indenting the nodes so that the text is on a different line than the markup, like so (example), is very hard
-
-## MDX {#mdx}
-
-- what if we could have the simplicity of markdown for common use cases, and the generality of XML for complex use cases?
-- it exists: it's called MDX
-- pros
-  - does exactly what I want
-  - common things are quick
-  - complex things are possible
-- cons:
-  - not widely implemented
-  - javascript
-
-## Other Markup {#other-markup}
-
-- asciidoc
-- textile
-- creole
-- Mediawiki markup
 
 # Client {#client}
 
