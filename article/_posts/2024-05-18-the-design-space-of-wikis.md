@@ -12,7 +12,7 @@ summary: etc.
 
 # Object Structure
 
-- what kinds of data do objects hold?
+What kinds of data do objects hold?
 
 ## Plain Text
 
@@ -188,6 +188,8 @@ summary: etc.
 
 # Storage
 
+How is data stored?
+
 ## Plain Text Files
 
 - plain-text files in a folder
@@ -301,7 +303,7 @@ summary: etc.
 
 # Markup
 
-- how is text represented and interacted with?
+How is text represented and interacted with?
 
 ## WYSIWYG
 
@@ -396,7 +398,7 @@ summary: etc.
 
 # Client
 
-- how does the user interact with the wiki?
+How does the user interact with the wiki?
 
 ## Wiki Compiler
 
