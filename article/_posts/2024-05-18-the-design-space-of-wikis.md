@@ -326,28 +326,31 @@ All journal entries in one folder, all rolodex entries in another, all book revi
 
 ## Mixin: Constrained Folders {#mixin-constrained-folders}
 
-- examples: johnny decimal
-- one feature of reality is:
-  - containers are finite
-  - all containers of the same size have the same capacity
-- computers are not like this
-- you can have two folders on your desktop
-  - one has a few kilobytes
-  - one has tens of gigabytes
-  - there is no indication that they are unbalanced
-  - the "weight" of folders is not visible
-- a constrained system can appeal more to human intutition
-- there can be limits to nesting:
-  - you can only have objects _up to_ two or three levels deep
-  - or a fixed level: objects _must_ be three levels deep, not above, not below (this is how johnny decimal works)
-- there may be limits to arity:
-  - folders may have an upper bound on how many subfolders they can have
-  - folders have have a _fixed_ number of folders they _must_ have
-- pros:
-  - constrained
-  - balanced
-- cons:
-  - a strict ontology may be too limited
+One important feature of reality:
+
+1. All containers are finite.
+2. All containers of the same kind have the same capacity.
+
+Looking at a shelf, you can get an immediate overview of how much stuff there is: only so many books fit in the shelf, only so many envelopes fit in a shoebox.
+
+Computers are not like this! You can have two folders on your desktop, one is 300KiB and another 300GiB, and there is no indication that they are unbalanced. The "weight" of folders is not easily visible. And folders can nest infinitely. And folders at the same level need not have the same number of children.
+
+A constrained system can be more tractable to deal with.
+You may have an upper bound on nesting, where folders can only be two or three levels deep.
+You may have a _fixed_ level of nesting, where every object _must be_ inside a second or third-level folder.
+Analogously, you may have limits on arity, where folders have an upper bound on how many folders they have.
+
+**Pros:**
+
+- A constrained system can be more tractable to deal with.
+
+**Cons:**
+
+- The more strict the ontology, the harder it is to adhere to it.
+
+**Examples:**
+
+- [Johnny.Decimal](https://johnnydecimal.com/)
 
 # Markup {#markup}
 
