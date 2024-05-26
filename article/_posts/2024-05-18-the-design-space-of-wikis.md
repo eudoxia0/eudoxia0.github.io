@@ -643,6 +643,11 @@ bring your own editor.
 - **Change Visibility:** if changes are stored in Git, rather than in a
   database, it is harder to surface them to the app level.
 
+- **Hosting:** hosting the wiki on the Internet, where it can be read and edited
+  collaboratively, is harder. Compiling a static wiki and serving that is easy,
+  but for editing, you either need a web frontend that makes Git commits (like
+  Gitit) or a Git client (which is harder on mobile).
+
 - two-app failure modes:
   - if one app is used to write, and another to view, the latter tends to be
     ignored
