@@ -577,16 +577,9 @@ How is data stored?
 
 ## Plain Text Files {#storage-plain}
 
-- plain-text files in a folder
-- edited with your choice of editor
-- the UI can be read-write (obsidian, gitit)
-- or read-only, e.g. serving HTML or even compiling to static HTML, like any
-  static site generator
-- examples:
-- obsidian
-- jekyll and any ssg
-- ikiwiki
-- gitit
+Data is stored as plain-text files in a directory structure. Editing is BYOE:
+bring your own editor.
+
 - there's two ways to do this:
 - the client "owns" the git repo, and makes commits
   - e.g. gitit, ikiwiki
@@ -654,6 +647,15 @@ How is data stored?
     - changes are stuck in the git history
     - may not be easy to make them visible to the application
   - file upload is harder
+
+**Examples:**
+
+- [Obsidian](https://obsidian.md/): while Obsidian's client provides browsing,
+  reading, and editing, the contents of a vault are stored in Markdown files in
+  a directory, so they can be edited with anything.
+- Most static site generators work like this.
+- [Ikiwiki](https://ikiwiki.info/)
+- [Gitit](https://github.com/jgm/gitit)
 
 ## Database {#storage-db}
 
