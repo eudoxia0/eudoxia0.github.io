@@ -648,27 +648,6 @@ bring your own editor.
   but for editing, you either need a web frontend that makes Git commits (like
   Gitit) or a Git client (which is harder on mobile).
 
-- **Two-App Failure Mode:** if you have one app to write, and another to view,
-  the latter tends to be ignored for the former. For example, if you edit the
-  wiki using Emacs and compile to HTML using a static site generator, you will
-  tend to mostly use Emacs for everything and only view the compiled output
-  occasionally.
-
-  The reason is that the editor has to be able to browse and read files in order
-  to edit them. So already most of the functions of the wiki (browsing, reading,
-  writing) can be done in the editor itself. What does the rendered output
-  provide? Search, following links, a cute interface, maybe it renders TeX math
-  which is useful.
-
-  In my experience of using Jekyll as a personal wiki, I found that I really
-  only looked at the rendered output when writing math notes, to ensure the TeX
-  was correct. Otherwise I'd just use Zed or Emacs for everything.
-
-  Obsidian doesn't have this failure mode because the same app provides viewing
-  and editing, it _just happens_ to be backed by plain text rather than a
-  database. But if it was backed by a database, the UI would be basically
-  indistinguishable.
-
 **Compatibility:**
 
 - If the goal is BYOE, you pretty much need [lightweight markup](#markup) like
@@ -747,17 +726,38 @@ filesystem and minimally updates the compiled output.
 
 **Cons:**
 
-- two app problem
-- compiled content can drift
-- search is hard for SSGs
-  - you can compile a search index which gets loaded (like a JSON) file and do
-    search the frontend
-  - alternatively, you can just do search in the live view and not in the
-    compiled view
-- forces plain-text files
-  - if the app is read-only, there must be a way to modify the wiki
-  - typically that means bring your own editor
-  - and BYOE often means you need a lightweight markup language like markdown
+- **Two-App Failure Mode:** if you have one app to write, and another to view,
+  the latter tends to be ignored for the former. For example, if you edit the
+  wiki using Emacs and compile to HTML using a static site generator, you will
+  tend to mostly use Emacs for everything and only view the compiled output
+  occasionally.
+
+  The reason is that the editor has to be able to browse and read files in order
+  to edit them. So already most of the functions of the wiki (browsing, reading,
+  writing) can be done in the editor itself. What does the rendered output
+  provide? Search, following links, a cute interface, maybe it renders TeX math
+  which is useful.
+
+  In my experience of using Jekyll as a personal wiki, I found that I really
+  only looked at the rendered output when writing math notes, to ensure the TeX
+  was correct. Otherwise I'd just use Zed or Emacs for everything.
+
+  Obsidian doesn't have this failure mode because the same app provides viewing
+  and editing, it _just happens_ to be backed by plain text rather than a
+  database. But if it was backed by a database, the UI would be basically
+  indistinguishable.
+
+- **Drift:** compiled content can drift if it's not automatically updated.
+
+- **Search:** search is harder for static site generators. One way to implement
+  it is to compile a search index at build time into a JSON file, and implement
+  search in the frontend using JavaScript.
+
+
+**Compatibility:**
+
+- Requires [plain-text file storage](#storage-plain), since the build output is
+  ready-only.
 
 **Examples:**
 
