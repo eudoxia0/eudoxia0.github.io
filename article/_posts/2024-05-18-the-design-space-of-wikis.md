@@ -726,10 +726,10 @@ How does the user interact with the wiki?
 
 ## Wiki Compiler {#wiki-compiler}
 
-- the software reads the database, and either compiles to static HTML or serves
-  a static, read only view of the app. most ssgs have a `serve` command that
-  listens on the filesystem and updates the live view.
-- examples: most ssgs
+A wiki compiler reads the wiki contents (usually, plain text files in the
+filesystem) and compiles them to static HTML. Most static site generators work
+like this. Usually there is a `serve` command that listens for changes in the
+filesystem and minimally updates the compiled output.
 
 **Pros:**
 
@@ -758,6 +758,11 @@ How does the user interact with the wiki?
   - if the app is read-only, there must be a way to modify the wiki
   - typically that means bring your own editor
   - and BYOE often means you need a lightweight markup language like markdown
+
+**Examples:**
+
+- Most static site generators
+- Ikiwiki
 
 ## Wiki Server {#wiki-server}
 
