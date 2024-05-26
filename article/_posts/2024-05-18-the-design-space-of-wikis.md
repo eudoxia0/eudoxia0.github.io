@@ -637,9 +637,9 @@ bring your own editor.
 
 **Cons:**
 
-- visibility
-  - auth for git repos is repo-wide
-  - you can either view the entire repo, or none of it
+- **Visibility:** auth for Git repos is generally repo-wide, so the
+  finer-grained visibility policies of apps like Notion are harder to implement.
+
 - two-app failure modes:
   - if one app is used to write, and another to view, the latter tends to be
     ignored
