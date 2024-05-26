@@ -578,7 +578,7 @@ How is data stored?
 ## Plain Text Files {#storage-plain}
 
 Data is stored as plain-text files in a directory structure. Editing is BYOE:
-bring your own EDITOR.
+bring your own editor.
 
 **Pros:**
 
