@@ -688,47 +688,50 @@ bring your own editor.
 Objects are stored in a database. Viewing and editing is done through a client
 application, and object histories are stored in the database.
 
-- pros:
-  - hostable:
-    - if there's a database and a server, the app can be hosted somewhere and
-      accessed over the internet
-    - can use from multiple devices, from your phone etc.
-  - security:
-    - for teams, custom permissions and visibility rules can be implemented by
-      the server
-    - examples: notion
-  - renaming:
-    - objects can be given database IDs and referred to by those IDs
-    - renaming can be done transparently, without breaking anything
-  - free structure:
-    - files in a git repo, the folder structure has to make it easy to browse,
-      so that files can be found for editing
-    - it's natural that the folder structure should be visible in the client
-      application (how obsidian works)
-    - in a database, the storage system does not have to dictate how pages are
-      organized
-    - can have any kind of organization at the application layer
-  - VC is built in
-    - version control does not have to involve a separate app
-  - single client
-    - there is one way to interact with the wiki's contents
-    - don't need a text editor and a viewer as separate apps
-- cons:
-  - portability:
-    - plain-text markdown files are more readable than a database schema
-    - sqlite is portable enough but there's extra layers of friction
-      - install the sqlite client
-      - figure out the database schema
-      - figure out queries to get/insert the information you want
-  - custom client:
-    - unlike plain text files, you can't edit this with e.g Emacs
-    - need a custom client software
-  - cant interact with files
-    - data is stuck in the database
-    - extracting data into files is hard
-    - importing data from files is hard
-  - version control
-    - needs to be reimplemented
+**Pros:**
+
+- hostable:
+  - if there's a database and a server, the app can be hosted somewhere and
+    accessed over the internet
+  - can use from multiple devices, from your phone etc.
+- security:
+  - for teams, custom permissions and visibility rules can be implemented by
+    the server
+  - examples: notion
+- renaming:
+  - objects can be given database IDs and referred to by those IDs
+  - renaming can be done transparently, without breaking anything
+- free structure:
+  - files in a git repo, the folder structure has to make it easy to browse,
+    so that files can be found for editing
+  - it's natural that the folder structure should be visible in the client
+    application (how obsidian works)
+  - in a database, the storage system does not have to dictate how pages are
+    organized
+  - can have any kind of organization at the application layer
+- VC is built in
+  - version control does not have to involve a separate app
+- single client
+  - there is one way to interact with the wiki's contents
+  - don't need a text editor and a viewer as separate apps
+
+**Cons:**
+
+- portability:
+  - plain-text markdown files are more readable than a database schema
+  - sqlite is portable enough but there's extra layers of friction
+    - install the sqlite client
+    - figure out the database schema
+    - figure out queries to get/insert the information you want
+- custom client:
+  - unlike plain text files, you can't edit this with e.g Emacs
+  - need a custom client software
+- cant interact with files
+  - data is stuck in the database
+  - extracting data into files is hard
+  - importing data from files is hard
+- version control
+  - needs to be reimplemented
 
 # Client {#client}
 
