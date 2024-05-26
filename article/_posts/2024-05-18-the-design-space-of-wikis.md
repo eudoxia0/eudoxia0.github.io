@@ -66,9 +66,8 @@ What kinds of data can objects hold?
 
 ## Plain Text {#plain-text-content}
 
-Objects contain plain, unformatted text.
-Plain-text conventions are used for formatting.
-Links don't exist as first-class objects.
+Objects contain plain, unformatted text. Plain-text conventions are used for
+formatting. Links don't exist as first-class objects.
 
 **Examples:** mostly older ones.
 
