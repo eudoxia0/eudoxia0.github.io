@@ -128,7 +128,7 @@ Like serial IDs or UUIDs.  These make is easy to rename objects without breaking
 links, but generally have to be hidden from the user (e.g.: requires a
 [WYSIWYG](#wysiwyg) editor and a [database](#storage-db)).
 
-**Examples:** Notion
+**Examples:** [Notion][notion]
 
 ## Unique Title {#title}
 
@@ -199,7 +199,7 @@ _Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
 **Examples:**
 
 - [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
-- Notion at the level of [database
+- [Notion][notion] at the level of [database
   properties](https://www.notion.so/help/database-properties).
 
 ## Mixin: Red Links {#mixin-red-links}
@@ -276,7 +276,7 @@ Or, from a more SQL perspective: pages can have parent pointers.
 
 **Examples:**
 
-- [Notion](https://www.notion.so)
+- [Notion][notion]
 - [MediaWiki](https://www.mediawiki.org/wiki/Help:Subpages)
 - For some reason this incredibly useful feature is not more widely implemented.
 
@@ -419,7 +419,7 @@ The user edits text using a WYSIWYG editor.
 
 **Examples:**
 
-- [Notion](https://www.notion.so)
+- [Notion][notion]
 - [Obsidian][obsidian]
 
 ## Markdown {#md}
@@ -640,7 +640,8 @@ bring your own editor.
 **Cons:**
 
 - **Permissions:** auth for Git repos is generally repo-wide, so the
-  finer-grained visibility policies of apps like Notion are harder to implement.
+  finer-grained visibility policies of apps like [Notion][notion] are harder to
+  implement.
 
 - **Change Visibility:** if changes are stored in Git, rather than in a
   database, it is harder to surface them to the app level.
@@ -791,7 +792,7 @@ An application provides features to browse, read, and edit the wiki.
 
 - [Obsidian][obsidian]
 - MediaWiki
-- Notion
+- [Notion][notion]
 
 [obsidian]: https://obsidian.md/
 [notion]: https://www.notion.so
