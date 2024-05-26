@@ -136,7 +136,7 @@ The object title is globally unique.
 This makes it easy to reference objects when using plain-text markup:
 you just write the title in `[[wikilinks]]`.
 
-**Examples:** MediaWiki
+**Examples:** [MediaWiki][mediawiki]
 
 ## File Path {#path}
 
@@ -211,7 +211,7 @@ have a way to find all red links in the database.
 **Examples:**
 
 - [Obsidian][obsidian]
-- MediaWiki
+- [MediaWiki][mediawiki]
 
 ## Mixin: Link Integrity {#mixin-link-integrity}
 
@@ -569,9 +569,8 @@ JSX---into.
 [DocBook](https://en.wikipedia.org/wiki/DocBook). It is not widely implemented.
 
 [Wikitext](https://www.mediawiki.org/wiki/Wikitext) is the markup language used
-by [MediaWiki](https://en.wikipedia.org/wiki/MediaWiki). It can be extended
-through template syntax. There are a number of parsers outside of core
-MediaWiki.
+by [MediaWiki][mediawiki]. It can be extended through template syntax. There are
+a number of parsers outside of core MediaWiki.
 
 # Storage {#storage}
 
@@ -791,7 +790,7 @@ An application provides features to browse, read, and edit the wiki.
 **Examples:**
 
 - [Obsidian][obsidian]
-- MediaWiki
+- [MediaWiki][mediawiki]
 - [Notion][notion]
 
 [obsidian]: https://obsidian.md/
