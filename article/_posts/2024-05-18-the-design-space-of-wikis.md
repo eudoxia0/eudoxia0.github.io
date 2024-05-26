@@ -401,8 +401,10 @@ The user edits text using a WYSIWYG editor.
   requires parsing.
 - Change preview is harder. Diffing Markdown or XML is easy, and it's very clear
   from looking at a diff what the output is going to be. Diffing the JSON blob
-  of a ProseMirror AST is not meaningful, and showing deltas on the rendered
+  of a [ProseMirror] AST is not meaningful, and showing deltas on the rendered
   HTML is very hard. It's easy to mess something up and not see it in the diff.
+
+[ProseMirror]: https://prosemirror.net/
 
 **Examples:** [Notion][notion], [Obsidian][obsidian].
 
