@@ -79,10 +79,10 @@ formatting. Links don't exist as first-class objects.
 
 Plain text, but the only formatting construct is the link.
 
-**Examples:**
+**Examples:** [denote], [howm].
 
-- [denote](https://protesilaos.com/emacs/denote)
-- [howm](https://kaorahi.github.io/howm/)
+[denote]: https://protesilaos.com/emacs/denote
+[howm]: https://kaorahi.github.io/howm/
 
 ## Rich Text {#rich-text}
 
@@ -95,13 +95,11 @@ with Markdown.
 
 An object has body text, but also a mapping of properties to values.
 
-**Examples:**
+**Examples:** [Notion databases][notiondb] are probably the most prominent
+  example. Tools like [Obsidian][obsidian] or [org-mode][org] let you add
+  properties to pages.
 
-- [Notion databases](https://www.notion.so/help/intro-to-databases) are probably
-  the most prominent example.
-- Tools like [Obsidian][obsidian] or [org-mode][org] let you add properties to
-  pages.
-
+[notiondb]: https://www.notion.so/help/intro-to-databases
 [org]: https://orgmode.org/
 
 ## Typed Properties {#typed-properties}
@@ -190,11 +188,10 @@ usually a tab or pane to view the "backlinks" in a given page.
 [bidi]: https://www.w3.org/DesignIssues/Topology.html
 [vision]: https://en.wikipedia.org/wiki/Project_Xanadu
 
-**Examples:**
+**Examples:** surprisingly, [MediaWiki][mediawiki-bidi]. Anything
+post-[Roam][roam].
 
-- Surprisingly, [MediaWiki](/article/roam-twenty-years-before-roam).
-- Anything post-[Roam][roam].
-
+[mediawiki-bidi]: /article/roam-twenty-years-before-roam
 [roam]: https://en.wikipedia.org/wiki/Roam_(software)
 
 ## Typed Links {#typed-links}
@@ -205,11 +202,11 @@ Links have metadata associated with them, e.g. you can write something like:
 _Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
 ```
 
-**Examples:**
+**Examples:** [Obsidian Dataview][dataview], [Notion][notion] at the level of
+[database properties][notion-prop].
 
-- [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
-- [Notion][notion] at the level of [database
-  properties](https://www.notion.so/help/database-properties).
+[dataview]: https://blacksmithgu.github.io/obsidian-dataview/
+[notion-prop]: https://www.notion.so/help/database-properties
 
 ## Mixin: Red Links {#mixin-red-links}
 
@@ -217,10 +214,7 @@ Some wikis let you create links to pages that don't yet exist. Clicking the link
 takes you to the interface to create a page with that title. Ideally you also
 have a way to find all red links in the database.
 
-**Examples:**
-
-- [Obsidian][obsidian]
-- [MediaWiki][mediawiki]
+**Examples:** [Obsidian][obsidian], [MediaWiki][mediawiki].
 
 ## Mixin: Link Integrity {#mixin-link-integrity}
 
@@ -239,19 +233,17 @@ How are objects organized?
 
 All objects in the wiki exist in a single set or ordered list.
 
-**Examples:**
+**Examples:** [The Archive], [Cardfile].
 
-- [The Archive](https://zettelkasten.de/the-archive/)
-- [Cardfile](https://en.wikipedia.org/wiki/Cardfile)
+[The Archive]: https://zettelkasten.de/the-archive/
+[Cardfile]: https://en.wikipedia.org/wiki/Cardfile
 
 ## Boxes {#boxes}
 
 The wiki has a two level hierarchy: there's a list of boxes, each of which
 contains a list of objects.
 
-**Examples:**
-
-- [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards)
+**Examples:** [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards)
 
 ## Hierarchical Folders {#folders}
 
@@ -275,20 +267,16 @@ Like a hierarchical filesystem. Folders contain objects and other folders.
 
 [hfs]: https://www.nayuki.io/page/designing-better-file-organization-around-tags-not-hierarchies
 
-**Examples:**
-
-- [Obsidian][obsidian]
+**Examples:** [Obsidian][obsidian]
 
 ## Unified Folders and Pages {#unified-folders}
 
 Pages and folders are unified: pages can have contain subpages.
 Or, from a more SQL perspective: pages can have parent pointers.
 
-**Examples:**
-
-- [Notion][notion]
-- [MediaWiki](https://www.mediawiki.org/wiki/Help:Subpages)
-- For some reason this incredibly useful feature is not more widely implemented.
+**Examples:** [Notion][notion],
+[MediaWiki](https://www.mediawiki.org/wiki/Help:Subpages). For some reason this
+incredibly useful feature is not more widely implemented.
 
 ## Tags {#tags}
 
@@ -321,9 +309,7 @@ Give up on hierarchy. Just links.
 - Folders are inevitably reinvented "one level up": you have pages that act as
   atlases for some subgraph, and those link to other atlas pages.
 
-**Examples:**
-
-- [Roam](https://roamresearch.com/)
+**Examples:** [Roam][roam]
 
 ## Spatial Organization {#spatial}
 
@@ -337,10 +323,7 @@ Objects exist on a canvas that you can pan or scroll.
 
 - Infinite zoom/scroll is non-physical.
 
-**Examples:**
-
-- [Obsidian Canvas](https://obsidian.md/canvas)
-- [Napkin](https://napkin.one/)
+**Examples:** [Obsidian Canvas](https://obsidian.md/canvas), [Napkin](https://napkin.one/).
 
 ## Organization by Type {#organize-by-type}
 
@@ -353,13 +336,9 @@ all objects which have the same properties are grouped together.  All journal
 entries in one folder, all rolodex entries in another, all book reviews in
 another, etc.
 
-**Examples:**
-
-- [Notion databases](https://www.notion.so/help/intro-to-databases)
-- Relational databases work like this: a database is a list of tables, and
-  tables have rows.
-- Real life also works like this, somewhat: your bookshelves have books, your CD
-  shelf has CDs, etc.
+**Examples:** [Notion databases][notiondb]. Relational databases work like this:
+a database is a list of tables, and tables have rows. Real life also works like
+this, somewhat: your bookshelves have books, your CD shelf has CDs, etc.
 
 ## Mixin: Constrained Folders {#mixin-constrained-folders}
 
@@ -392,9 +371,7 @@ have an upper bound on how many folders they have.
 
 - The more strict the ontology, the harder it is to adhere to it.
 
-**Examples:**
-
-- [Johnny.Decimal](https://johnnydecimal.com/)
+**Examples:** [Johnny.Decimal](https://johnnydecimal.com/)
 
 # Markup {#markup}
 
@@ -427,10 +404,7 @@ The user edits text using a WYSIWYG editor.
   of a ProseMirror AST is not meaningful, and showing deltas on the rendered
   HTML is very hard. It's easy to mess something up and not see it in the diff.
 
-**Examples:**
-
-- [Notion][notion]
-- [Obsidian][obsidian]
+**Examples:** [Notion][notion], [Obsidian][obsidian].
 
 ## Markdown {#md}
 
@@ -462,10 +436,7 @@ The user writes plain-text in
   both of which are really useful quality of life features, but only exist
   within Emacs.
 
-**Examples:**
-
-- [Obsidian][obsidian]
-- Most other apps.
+**Examples:** [Obsidian][obsidian], most others.
 
 ## XML {#xml}
 
@@ -662,14 +633,11 @@ bring your own editor.
 - If the goal is BYOE, you pretty much need [lightweight markup](#markup) like
   Markdown for the text representation.
 
-**Examples:**
+**Examples:** [Obsidian][obsidian], [Ikiwiki], [Gitit], most static site
+generators.
 
-- [Obsidian][obsidian]: while Obsidian's client provides browsing, reading, and
-  editing, the contents of a vault are stored in Markdown files in a directory,
-  so they can be edited with anything.
-- Most static site generators work like this.
-- [Ikiwiki](https://ikiwiki.info/)
-- [Gitit](https://github.com/jgm/gitit)
+[Ikiwiki]: https://ikiwiki.info/
+[Gitit]: https://github.com/jgm/gitit
 
 ## Database {#storage-db}
 
@@ -756,10 +724,7 @@ filesystem and minimally updates the compiled output.
 - Requires [plain-text file storage](#storage-plain), since the build output is
   ready-only.
 
-**Examples:**
-
-- Most static site generators
-- Ikiwiki
+**Examples:** [Ikiwiki], most static site generators.
 
 ## Wiki Server {#wiki-server}
 
@@ -785,11 +750,7 @@ An application provides features to browse, read, and edit the wiki.
 - Storage: compatible with either databases or plain-text storage.
 - Markup: compatible with any kind of [markup](#markup) or text representation.
 
-**Examples:**
-
-- [Obsidian][obsidian]
-- [MediaWiki][mediawiki]
-- [Notion][notion]
+**Examples:** [Obsidian][obsidian], [MediaWiki][mediawiki], [Notion][notion].
 
 [obsidian]: https://obsidian.md/
 [notion]: https://www.notion.so
