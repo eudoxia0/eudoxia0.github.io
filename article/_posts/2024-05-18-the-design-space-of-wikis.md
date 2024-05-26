@@ -650,10 +650,8 @@ bring your own editor.
 
 - Authorization for Git repos is generally repo-wide, so the finer-grained
   visibility policies of apps like [Notion][notion] are harder to implement.
-
 - If changes are stored in Git, rather than in a database, it is harder to
   surface them to the app level.
-
 - Hosting the wiki on the Internet, where it can be read and edited
   collaboratively, is harder. Compiling a static wiki and serving that is easy,
   but for editing, you either need a web frontend that makes Git commits (like
@@ -719,15 +717,11 @@ filesystem and minimally updates the compiled output.
 **Pros:**
 
 - Performance is excellent. Serving compiled HTML files from disk is very fast.
-
 - The compiled HTML is portable: it can be read without the wiki software used
-  to build it.
-
-  One time I built a wiki compiler and then lost the source code in my giant
-  folder of semi-finished projects, but I was still able to read the pages I
-  wrote because I kept the `build` directory with the compiled output from the
-  last time I ran the compile step.
-
+  to build it. One time I built a wiki compiler and then lost the source code in
+  my giant folder of semi-finished projects, but I was still able to read the
+  pages I wrote because I kept the `build` directory with the compiled output
+  from the last time I ran the compile step.
 - Publishing the compiled HTML to the web is trivial.
 
 **Cons:**
@@ -752,9 +746,7 @@ filesystem and minimally updates the compiled output.
   provides viewing and editing, it _just happens_ to be backed by plain text
   rather than a database. But if it was backed by a database, the UI would be
   basically indistinguishable.
-
 - Compiled content can drift if it's not automatically updated.
-
 - Search is harder for static site generators. One way to implement
   it is to compile a search index at build time into a JSON file, and implement
   search in the frontend using JavaScript.
@@ -777,13 +769,10 @@ An application provides features to browse, read, and edit the wiki.
 
 - A single app provides for editing and reading, there is no need for a separate
   text editor.
-
 - If there's a database and a server, the app can be hosted and accessed over
   the Internet, and from multiple devices.
-
 - Validation (e.g.: link integrity) can be done at interaction time, rather than
   at build time).
-
 - Objects can be renamed without breaking links, because the server can
   transparently update all backlinks when an object is edited.
 
