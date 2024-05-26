@@ -583,8 +583,8 @@ bring your own editor.
 
 **Pros:**
 
-- **Version Control:** you get version control for free, because the files can
-  be comitted to a Git repo.
+- Version control comes for free, because the files can be comitted to a Git
+  repo.
 
   What's more, VCS software is always more sophisticated than in-app version
   control: changesets can apply to multiple files, for example, and you can time
@@ -596,27 +596,25 @@ bring your own editor.
   is that the app "owns" the repository and can make commits on behalf of the
   user by providing a web interface.
 
-- **Change Review:** for collaborative wikis, changes can be proposed in PRs,
-  discussed, edited, and finally merged.
+- Change review is easier. For collaborative wikis, changes can be proposed in
+  PRs, discussed, edited, and finally merged.
 
-- **Export:** having the wiki's contents be files in the filesystem makes it
-  easier to export the data and do other things with it.
+- Exporting data from the wiki is easy.
 
   For example, you can have a script that scrapes your journal entries for
   metadata (e.g. `gym=yes, bed_on_time=no`), and compiles a habit-tracking
   spreadsheet.
 
-  Consider a corporate wiki, where your corporate policies are
-  described in separate wiki pages. Then at some point you need to make a big
-  PDF of all your corporate policies, e.g. to give to investors or auditors. If
-  the wiki is stored in the filesystem, it is easy to write a script that takes
-  the text from the wiki pages, and compiles it into a single document (with
-  nothing more complex than `awk` and `cat`) and then uses `pandoc` to compile
-  it to a PDF. A CI script can even ensure this happens automatically whenever
-  policy pages are updated.
+  Consider a corporate wiki, where your corporate policies are described in
+  separate wiki pages. Then at some point you need to make a big PDF of all your
+  corporate policies, e.g. to give to investors or auditors. If the wiki is
+  stored in the filesystem, it is easy to write a script that takes the text
+  from the wiki pages, and compiles it into a single document (with nothing more
+  complex than `awk` and `cat`) and then uses `pandoc` to compile it to a PDF. A
+  CI script can even ensure this happens automatically whenever policy pages are
+  updated.
 
-- **Import:** analogously, storing the wiki's contents in the filesystem makes
-  it easier to bring external data into the wiki.
+- Importing external data into the wiki is similarly easy.
 
   For example: you can use CLI-based tools (like [gnuplot][gp], [graphviz][gv],
   or [PlantUML][puml]) to compile diagrams-as-code into images to embed in the
@@ -628,24 +626,23 @@ bring your own editor.
   [gv]: https://graphviz.org/
   [puml]: https://plantuml.com/
 
-- **Bring Your Own Tools:** you can edit in Emacs or Vim or Zed or VSCode or
-  whatever it is you want. So if e.g. you've configured Emacs to have the best
-  Markdown editing experience in the world, you don't have to give that up for a
-  web editor.
+- You can bring your own tools, i.e. you can edit in Emacs or Vim or Zed or
+  VSCode or whatever it is you want. So if e.g. you've configured Emacs to have
+  the best Markdown editing experience in the world, you don't have to give that
+  up for a web editor.
 
-- **Durable:** plain text files will last longer than any proprietary
-  database. They can be read from, written to, and searched with standard tools.
+- Plain text files will last longer than any proprietary database. They can be
+  read from, written to, and searched with standard tools.
 
 **Cons:**
 
-- **Permissions:** auth for Git repos is generally repo-wide, so the
-  finer-grained visibility policies of apps like [Notion][notion] are harder to
-  implement.
+- Authorization for Git repos is generally repo-wide, so the finer-grained
+  visibility policies of apps like [Notion][notion] are harder to implement.
 
-- **Change Visibility:** if changes are stored in Git, rather than in a
-  database, it is harder to surface them to the app level.
+- If changes are stored in Git, rather than in a database, it is harder to
+  surface them to the app level.
 
-- **Hosting:** hosting the wiki on the Internet, where it can be read and edited
+- Hosting the wiki on the Internet, where it can be read and edited
   collaboratively, is harder. Compiling a static wiki and serving that is easy,
   but for editing, you either need a web frontend that makes Git commits (like
   Gitit) or a Git client (which is harder on mobile).
@@ -671,29 +668,30 @@ application, and object histories are stored in the database.
 
 **Pros:**
 
-- **Permissions:** for collaboratibe wikis, custom permissions and visibility
-  rules can be implemented on top of the database, unlike in Git.
-- **Free Structure:** with plain text storage, a directory structure has to be
-  used to make it easy to browse large wikis. It's natural to make the folder
-  structure correspond to the hierarchy by which pages are organized (e.g. how
-  [Obsidian][obsidian] works). With a database there is a lot for freedom in how
-  to organize pages, and the limitations of the filesystem do not apply.
-- **Built-in VC:** version control does not require an external app (e.g. Git).
+- For collaboratibe wikis, custom permissions and visibility rules can be
+  implemented on top of the database, unlike in Git.
+- Databases are more freeform. With plain text storage, a directory structure
+  has to be used to make it easy to browse large wikis. It's natural to make the
+  folder structure correspond to the hierarchy by which pages are organized
+  (e.g. how [Obsidian][obsidian] works). With a database there is a lot for
+  freedom in how to organize pages, and the limitations of the filesystem do not
+  apply.
+- Version control does not require an external app (e.g. Git).
 
 **Cons:**
 
-- **Portability:** plain-text Markdown files are more easily read than a
-  database, especially if the database schema is such that complex queries have
-  to be made to reconstruct an object.
-- **Custom Client:** plain-text wikis can save a lot of code because off the
-  shelf editing software can do much of the work. With a database, custom client
-  software has to be written to query and mutate the database.
-- **Silo:** data in a database is more siloed than files in a filesystem. If you
-  want e.g. diagrams-as-code you have to either compile the diagram externally
-  and manually import the resulting image into the database, or implement a
-  plugin that lets you write the diagram code as markup, and compiles it
-  transparently.
-- **Version Control:** VC needs to be reimplemented from scratch.
+- Data in a database is less portable than plain-text files in the filesystem,
+  especially if the database schema is such that complex queries have to be made
+  to reconstruct an object.
+- A custom client must be implemented. Plain-text wikis can save a lot of code
+  because off the shelf editing software can do much of the work. With a
+  database, custom client software has to be written to query and mutate the
+  database.
+- Data in a database is more siloed than files in a filesystem. If you want
+  e.g. diagrams-as-code you have to either compile the diagram externally and
+  manually import the resulting image into the database, or implement a plugin
+  that lets you write the diagram code as markup, and compiles it transparently.
+- Version control needs to be reimplemented from scratch.
 
 # Client {#client}
 
@@ -708,25 +706,25 @@ filesystem and minimally updates the compiled output.
 
 **Pros:**
 
-- **Fast:** reading compiled HTML files from disk is very fast.
+- Performance is excellent. Serving compiled HTML files from disk is very fast.
 
-- **Portable:** the compiled HTML can be read without the wiki software used to
-  build it.
+- The compiled HTML is portable: it can be read without the wiki software used
+  to build it.
 
   One time I built a wiki compiler and then lost the source code in my giant
   folder of semi-finished projects, but I was still able to read the pages I
   wrote because I kept the `build` directory with the compiled output from the
   last time I ran the compile step.
 
-- **Publishable:** publishing the compiled HTML to the web is trivial.
+- Publishing the compiled HTML to the web is trivial.
 
 **Cons:**
 
-- **Two-App Failure Mode:** if you have one app to write, and another to view,
-  the latter tends to be ignored for the former. For example, if you edit the
-  wiki using Emacs and compile to HTML using a static site generator, you will
-  tend to mostly use Emacs for everything and only view the compiled output
-  occasionally.
+- The main problem is what I call the two-app failure mode. If you have one app
+  to write, and another to view, the latter tends to be ignored for the
+  former. For example, if you edit the wiki using Emacs and compile to HTML
+  using a static site generator, you will tend to mostly use Emacs for
+  everything and only view the compiled output occasionally.
 
   The reason is that the editor has to be able to browse and read files in order
   to edit them. So already most of the functions of the wiki (browsing, reading,
@@ -743,9 +741,9 @@ filesystem and minimally updates the compiled output.
   rather than a database. But if it was backed by a database, the UI would be
   basically indistinguishable.
 
-- **Drift:** compiled content can drift if it's not automatically updated.
+- Compiled content can drift if it's not automatically updated.
 
-- **Search:** search is harder for static site generators. One way to implement
+- Search is harder for static site generators. One way to implement
   it is to compile a search index at build time into a JSON file, and implement
   search in the frontend using JavaScript.
 
@@ -765,22 +763,21 @@ An application provides features to browse, read, and edit the wiki.
 
 **Pros:**
 
-- **Single Client:** a single app provides for editing and reading, there is no
-  need for a separate text editor.
+- A single app provides for editing and reading, there is no need for a separate
+  text editor.
 
-- **Hosting:** if there's a database and a server, the app can be hosted and
-  accessed over the Internet, and from multiple devices.
+- If there's a database and a server, the app can be hosted and accessed over
+  the Internet, and from multiple devices.
 
-- **Validation:** validation (e.g.: link integrity) can be done at interaction
-  time, rather than at build time).
+- Validation (e.g.: link integrity) can be done at interaction time, rather than
+  at build time).
 
-- **Renaming:** objects can be renamed without breaking links, because the
-  server can transparently update all backlinks when an object is edited.
+- Objects can be renamed without breaking links, because the server can
+  transparently update all backlinks when an object is edited.
 
 **Cons:**
 
-- **Publishing:** publishing the wiki as static HTML is harder, if that is
-  desirable.
+- Publishing the wiki as static HTML is harder, if that is desirable.
 
 **Compatibility:**
 
