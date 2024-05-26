@@ -241,7 +241,7 @@ All objects in the wiki exist in a single set or ordered list.
 The wiki has a two level hierarchy: there's a list of boxes, each of which
 contains a list of objects.
 
-**Examples:** [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards)
+**Examples:** [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards).
 
 ## Hierarchical Folders {#folders}
 
@@ -265,7 +265,7 @@ Like a hierarchical filesystem. Folders contain objects and other folders.
 
 [hfs]: https://www.nayuki.io/page/designing-better-file-organization-around-tags-not-hierarchies
 
-**Examples:** [Obsidian][obsidian]
+**Examples:** [Obsidian][obsidian].
 
 ## Unified Folders and Pages {#unified-folders}
 
@@ -289,6 +289,8 @@ be used to search.
 **Cons:**
 
 - Tags are themselves flat.
+
+**Examples:** [Obsidian][obsidian].
 
 ## Pure Hypertext {#hypertext}
 
