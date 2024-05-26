@@ -770,6 +770,8 @@ An application provides features to browse, read, and edit the wiki.
 
 **Pros:**
 
+- **Single Client:** a single app provides for editing and reading.
+
 - you only need one app
 - can do validation at interaction time
 - compatible with any kind of storage
