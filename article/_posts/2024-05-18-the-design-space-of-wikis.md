@@ -309,7 +309,7 @@ Give up on hierarchy. Just links.
 - Folders are inevitably reinvented "one level up": you have pages that act as
   atlases for some subgraph, and those link to other atlas pages.
 
-**Examples:** [Roam][roam]
+**Examples:** [Roam][roam].
 
 ## Spatial Organization {#spatial}
 
@@ -384,7 +384,6 @@ The user edits text using a WYSIWYG editor.
 **Pros:**
 
 - Minimizes friction for editing text.
-- Drag-and-drop image upload lowers the friction of adding files to the wiki.
 - Complex markup (e.g. tables) can be implemented without breaking out an XML
   parser.
 
