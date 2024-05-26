@@ -749,8 +749,8 @@ An application provides features to browse, read, and edit the wiki.
 
 **Compatibility:**
 
-- Storage: compatible with either databases or plain-text storage.
-- Markup: compatible with any kind of [markup](#markup) or text representation.
+- [Storage](#storage): compatible with either databases or plain-text storage.
+- [Markup](#markup): compatible with any kind of [markup](#markup) or text representation.
 
 **Examples:** [Obsidian][obsidian], [MediaWiki][mediawiki], [Notion][notion].
 
