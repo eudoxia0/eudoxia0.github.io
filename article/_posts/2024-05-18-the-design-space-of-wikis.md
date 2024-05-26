@@ -1,6 +1,6 @@
 ---
 title: The Design Space of Wikis
-summary: etc.
+summary: An exploration of the design space of wikis.
 ---
 
 This post describes the design space of wikis. Sections are axes in the design
