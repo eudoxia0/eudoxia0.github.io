@@ -251,8 +251,7 @@ contains a list of objects.
 
 ## Hierarchical Folders {#folders}
 
-Like a hierarchical filesystem.
-Folders contain objects and other folders.
+Like a hierarchical filesystem. Folders contain objects and other folders.
 
 **Pros:**
 
