@@ -743,41 +743,49 @@ How does the user interact with the wiki?
   a static, read only view of the app. most ssgs have a `serve` command that
   listens on the filesystem and updates the live view.
 - examples: most ssgs
-- pros:
-  - fast:
-    - reading compiled HTML files from disk is very fast
-  - portable:
-    - one time i built a wiki compiler and then i lost the source code in my
-      giant folder of semi-finished projects
-    - but i was able to read the pages i wrote because i saved the compiled
-      output from the last time I ran the compile step
-  - publishing: publishing to a website is trivial
-- cons:
-  - two app problem
-  - compiled content can drift
-  - search is hard for SSGs
-    - you can compile a search index which gets loaded (like a JSON) file and do
-      search the frontend
-    - alternatively, you can just do search in the live view and not in the
-      compiled view
-  - forces plain-text files
-    - if the app is read-only, there must be a way to modify the wiki
-    - typically that means bring your own editor
-    - and BYOE often means you need a lightweight markup language like markdown
+
+**Pros:**
+
+- fast:
+  - reading compiled HTML files from disk is very fast
+- portable:
+  - one time i built a wiki compiler and then i lost the source code in my
+    giant folder of semi-finished projects
+  - but i was able to read the pages i wrote because i saved the compiled
+    output from the last time I ran the compile step
+- publishing: publishing to a website is trivial
+
+**Cons:**
+
+- two app problem
+- compiled content can drift
+- search is hard for SSGs
+  - you can compile a search index which gets loaded (like a JSON) file and do
+    search the frontend
+  - alternatively, you can just do search in the live view and not in the
+    compiled view
+- forces plain-text files
+  - if the app is read-only, there must be a way to modify the wiki
+  - typically that means bring your own editor
+  - and BYOE often means you need a lightweight markup language like markdown
 
 ## Wiki Server {#wiki-server}
 
 - examples: most software
-- pros:
-  - you only need one app
-  - can do validation at interaction time
-  - compatible with any kind of storage
-    - can be plain text
-    - can also be a database
-      - most commonly a database
-  - compatible with any kind of markup
-    - can have a complex WYSIWYG editor
-    - can also just do lightweight markup or XML
-  - file upload is easier
-- cons
-  - publishing: harder
+
+**Pros:**
+
+- you only need one app
+- can do validation at interaction time
+- compatible with any kind of storage
+  - can be plain text
+  - can also be a database
+    - most commonly a database
+- compatible with any kind of markup
+  - can have a complex WYSIWYG editor
+  - can also just do lightweight markup or XML
+- file upload is easier
+
+**Cons:**
+
+- publishing: harder
