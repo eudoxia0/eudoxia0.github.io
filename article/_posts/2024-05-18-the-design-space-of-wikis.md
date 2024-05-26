@@ -196,7 +196,8 @@ _Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
 **Examples:**
 
 - [Obsidian Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
-- Notion at the level of [database properties](https://www.notion.so/help/database-properties).
+- Notion at the level of [database
+  properties](https://www.notion.so/help/database-properties).
 
 ## Mixin: Red Links {#mixin-red-links}
 
