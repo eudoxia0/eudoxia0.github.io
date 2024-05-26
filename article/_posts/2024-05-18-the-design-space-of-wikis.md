@@ -1,6 +1,10 @@
 ---
 title: The Design Space of Wikis
 summary: An exploration of the design space of wikis.
+card: the-design-space-of-wikis.jpg
+card_source: |
+    “Set design for The One Thousand and One Nights, Gustave Moreau, 1876, oil
+    on canvas, auctioned by Christie's”, DALL-E, June 2022.
 ---
 
 This post describes the design space of wikis. Sections are axes in the design
