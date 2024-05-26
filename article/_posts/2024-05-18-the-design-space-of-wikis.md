@@ -94,7 +94,10 @@ An object has body text, but also a mapping of properties to values.
 
 - [Notion databases](https://www.notion.so/help/intro-to-databases) are probably
   the most prominent example.
-- Tools like Obsidian or org-mode let you add properties to pages.
+- Tools like [Obsidian][obsidian] or [org-mode][org] let you add properties to
+  pages.
+
+[org]: https://orgmode.org/
 
 ## Typed Properties {#typed-properties}
 
@@ -207,7 +210,7 @@ have a way to find all red links in the database.
 
 **Examples:**
 
-- Obsidian
+- [Obsidian][obsidian]
 - MediaWiki
 
 ## Mixin: Link Integrity {#mixin-link-integrity}
@@ -264,7 +267,7 @@ Folders contain objects and other folders.
 
 **Examples:**
 
-- [Obsidian](https://obsidian.md/)
+- [Obsidian][obsidian]
 
 ## Unified Folders and Pages {#unified-folders}
 
@@ -417,7 +420,7 @@ The user edits text using a WYSIWYG editor.
 **Examples:**
 
 - [Notion](https://www.notion.so)
-- [Obsidian](https://obsidian.md/)
+- [Obsidian][obsidian]
 
 ## Markdown {#md}
 
@@ -451,7 +454,7 @@ The user writes plain-text in
 
 **Examples:**
 
-- [Obsidian](https://obsidian.md/)
+- [Obsidian][obsidian]
 - Most other apps.
 
 ## XML {#xml}
@@ -588,11 +591,11 @@ bring your own editor.
   control: changesets can apply to multiple files, for example, and you can time
   travel to view the state of the repo at a given point in time.
 
-  There's typically two ways to do this. The Obsidian way is the app just reads
-  from, and writes to, the files, and it's up to the user to manage the Git side
-  of things. The other approach, implemneted by Ikiwiki and Gitit, is that the
-  app "owns" the repository and can make commits on behalf of the user by
-  providing a web interface.
+  There's typically two ways to do this. The [Obsidian][obsidian] way is the app
+  just reads from, and writes to, the files, and it's up to the user to manage
+  the Git side of things. The other approach, implemneted by Ikiwiki and Gitit,
+  is that the app "owns" the repository and can make commits on behalf of the
+  user by providing a web interface.
 
 - **Change Review:** for collaborative wikis, changes can be proposed in PRs,
   discussed, edited, and finally merged.
@@ -654,9 +657,9 @@ bring your own editor.
 
 **Examples:**
 
-- [Obsidian](https://obsidian.md/): while Obsidian's client provides browsing,
-  reading, and editing, the contents of a vault are stored in Markdown files in
-  a directory, so they can be edited with anything.
+- [Obsidian][obsidian]: while Obsidian's client provides browsing, reading, and
+  editing, the contents of a vault are stored in Markdown files in a directory,
+  so they can be edited with anything.
 - Most static site generators work like this.
 - [Ikiwiki](https://ikiwiki.info/)
 - [Gitit](https://github.com/jgm/gitit)
@@ -673,8 +676,8 @@ application, and object histories are stored in the database.
 - **Free Structure:** with plain text storage, a directory structure has to be
   used to make it easy to browse large wikis. It's natural to make the folder
   structure correspond to the hierarchy by which pages are organized (e.g. how
-  Obsidian works). With a database there is a lot for freedom in how to
-  organize pages, and the limitations of the filesystem do not apply.
+  [Obsidian][obsidian] works). With a database there is a lot for freedom in how
+  to organize pages, and the limitations of the filesystem do not apply.
 - **Built-in VC:** version control does not require an external app (e.g. Git).
 
 **Cons:**
@@ -735,10 +738,10 @@ filesystem and minimally updates the compiled output.
   only looked at the rendered output when writing math notes, to ensure the TeX
   was correct. Otherwise I'd just use Zed or Emacs for everything.
 
-  Obsidian doesn't have this failure mode because the same app provides viewing
-  and editing, it _just happens_ to be backed by plain text rather than a
-  database. But if it was backed by a database, the UI would be basically
-  indistinguishable.
+  [Obsidian][obsidian] doesn't have this failure mode because the same app
+  provides viewing and editing, it _just happens_ to be backed by plain text
+  rather than a database. But if it was backed by a database, the UI would be
+  basically indistinguishable.
 
 - **Drift:** compiled content can drift if it's not automatically updated.
 
@@ -786,6 +789,10 @@ An application provides features to browse, read, and edit the wiki.
 
 **Examples:**
 
-- Obsidian
+- [Obsidian][obsidian]
 - MediaWiki
 - Notion
+
+[obsidian]: https://obsidian.md/
+[notion]: https://www.notion.so
+[mediawiki]: https://en.wikipedia.org/wiki/MediaWiki
