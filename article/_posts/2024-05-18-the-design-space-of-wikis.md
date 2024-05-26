@@ -267,6 +267,9 @@ Like a hierarchical filesystem. Folders contain objects and other folders.
 - Folders are just containers and don't have data.  You can't add a description
   to a folder.  You can't associate a folder with an "index page" as an atlas of
   its contents.
+- Inherits all the [problems of hierarchical filesystems][hfs].
+
+[hfs]: https://www.nayuki.io/page/designing-better-file-organization-around-tags-not-hierarchies
 
 **Examples:**
 
