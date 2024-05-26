@@ -676,8 +676,6 @@ application, and object histories are stored in the database.
   Obsidian works). With a database there is a lot for freedom in how to
   organize pages, and the limitations of the filesystem do not apply.
 - **Built-in VC:** version control does not require an external app (e.g. Git).
-- **Single Client:** the same client software can browse, read, and edit the
-  wiki, there is no need to have a separate text editor.
 
 **Cons:**
 
@@ -765,7 +763,8 @@ An application provides features to browse, read, and edit the wiki.
 
 **Pros:**
 
-- **Single Client:** a single app provides for editing and reading.
+- **Single Client:** a single app provides for editing and reading, there is no
+  need for a separate text editor.
 
 - **Hosting:** if there's a database and a server, the app can be hosted and
   accessed over the Internet, and from multiple devices.
