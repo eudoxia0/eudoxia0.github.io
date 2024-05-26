@@ -746,7 +746,6 @@ filesystem and minimally updates the compiled output.
   it is to compile a search index at build time into a JSON file, and implement
   search in the frontend using JavaScript.
 
-
 **Compatibility:**
 
 - Requires [plain-text file storage](#storage-plain), since the build output is
