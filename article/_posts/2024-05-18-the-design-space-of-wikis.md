@@ -668,8 +668,6 @@ application, and object histories are stored in the database.
 
 **Pros:**
 
-- **Hostable:** if there's a database and a server, the app can be hosted and
-  accessed over the Internet, and from multiple devices.
 - **Permissions:** for collaboratibe wikis, custom permissions and visibility
   rules can be implemented on top of the database, unlike in Git.
 - **Renaming:** objects can be given database IDs, and so they can be renamed
@@ -770,6 +768,10 @@ An application provides features to browse, read, and edit the wiki.
 **Pros:**
 
 - **Single Client:** a single app provides for editing and reading.
+
+- **Hosting:** if there's a database and a server, the app can be hosted and
+  accessed over the Internet, and from multiple devices.
+
 - **Validation:** validation (e.g.: link integrity) can be done at interaction
   time, rather than at build time).
 
