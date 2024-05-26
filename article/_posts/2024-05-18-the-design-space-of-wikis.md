@@ -187,7 +187,7 @@ usually a tab or pane to view the "backlinks" in a given page.
 [vision]: https://en.wikipedia.org/wiki/Project_Xanadu
 
 **Examples:** surprisingly, [MediaWiki][mediawiki-bidi]. Anything
-post-[Roam][roam].
+post-[Roam][roam], including [Obsidian][obsidian] and [Notion][notion].
 
 [mediawiki-bidi]: /article/roam-twenty-years-before-roam
 [roam]: https://en.wikipedia.org/wiki/Roam_(software)
