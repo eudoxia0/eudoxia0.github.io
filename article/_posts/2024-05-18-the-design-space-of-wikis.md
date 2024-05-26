@@ -242,9 +242,8 @@ All objects in the wiki exist in a single set or ordered list.
 
 ## Boxes {#boxes}
 
-The wiki has a two level hierarchy:
-there's a list of boxes,
-each of which contains a list of objects.
+The wiki has a two level hierarchy: there's a list of boxes, each of which
+contains a list of objects.
 
 **Examples:**
 
