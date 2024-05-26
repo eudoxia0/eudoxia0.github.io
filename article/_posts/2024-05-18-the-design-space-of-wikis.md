@@ -733,14 +733,17 @@ How does the user interact with the wiki?
 
 **Pros:**
 
-- fast:
-  - reading compiled HTML files from disk is very fast
-- portable:
-  - one time i built a wiki compiler and then i lost the source code in my
-    giant folder of semi-finished projects
-  - but i was able to read the pages i wrote because i saved the compiled
-    output from the last time I ran the compile step
-- publishing: publishing to a website is trivial
+- **Fast:** reading compiled HTML files from disk is very fast.
+
+- **Portable:** the compiled HTML can be read without the wiki software used to
+  build it.
+
+  One time I built a wiki compiler and then lost the source code in my giant
+  folder of semi-finished projects, but I was still able to read the pages I
+  wrote because I kept the `build` directory with the compiled output from the
+  last time I ran the compile step.
+
+- **Publishable:** publishing the compiled HTML to the web is trivial.
 
 **Cons:**
 
