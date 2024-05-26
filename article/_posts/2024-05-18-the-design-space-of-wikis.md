@@ -582,22 +582,22 @@ bring your own EDITOR.
 
 **Pros:**
 
-- version control for free
-  - can track changes in git
-  - vcs are a lot more sophisticated than built-in vc
-    - for example: most version control in wikis that have it is per-object
-    - that means reverting a version can introduce links to objects that don't
-      exist, breaking link integrity
-  - there's two ways to do this:
-    - the client "owns" the git repo, and makes commits
-      - e.g. gitit, ikiwiki
-    - the client just reads from, and writes to, the repo, but does not make commits
-      - e.g. obsidian
-- change review
-  - for collaborative wikis, changes can be proposed in PRs
-- multi-file changes
-  - with git, changes can apply to multiple files
-    - this is unique to git
+- **Version Control:** you get version control for free, because the files can
+  be comitted to a Git repo.
+
+  What's more, VCS software is always more sophisticated than in-app version
+  control: changesets can apply to multiple files, for example, and you can time
+  travel to view the state of the repo at a given point in time.
+
+  There's typically two ways to do this. The Obsidian way is the app just reads
+  from, and writes to, the files, and it's up to the user to manage the Git side
+  of things. The other approach, implemneted by Ikiwiki and Gitit, is that the
+  app "owns" the repository and can make commits on behalf of the user by
+  providing a web interface.
+
+- **Change Review:** for collaborative wikis, changes can be proposed in PRs,
+  discussed, edited, and finally merged.
+
 - file generation
   - can do cool things with makefiles
   - e.g. generate pages from some source of truth data
@@ -610,11 +610,14 @@ bring your own EDITOR.
   - dually, you can turn files from the filesystem into database pages
     - you can have a CSV file with your reading list
     - and a makefile to compile that into like one page per entry
-- bring your own tools
-  - can edit in emacs or vim or zed or vscode or whatever editor you want
-- durable
-  - plain text files are gonna last longer than some proprietary format
-  - can be read from and written to with standard tools
+
+- **Bring Your Own Tools:** you can edit in Emacs or Vim or Zed or VSCode or
+  whatever it is you want. So if e.g. you've configured Emacs to have the best
+  Markdown editing experience in the world, you don't have to give that up for a
+  web editor.
+
+- **Durable:** plain text files will last longer than any proprietary
+  database. They can be read from, written to, and searched with standard tools.
 
 **Cons:**
 
