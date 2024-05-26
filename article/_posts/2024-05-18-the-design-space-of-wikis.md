@@ -637,8 +637,11 @@ bring your own editor.
 
 **Cons:**
 
-- **Visibility:** auth for Git repos is generally repo-wide, so the
+- **Permissions:** auth for Git repos is generally repo-wide, so the
   finer-grained visibility policies of apps like Notion are harder to implement.
+
+- **Change Visibility:** if changes are stored in Git, rather than in a
+  database, it is harder to surface them to the app level.
 
 - two-app failure modes:
   - if one app is used to write, and another to view, the latter tends to be
@@ -661,9 +664,7 @@ bring your own editor.
 - sync is harder
   - using the thing from e.g. your phone is harder, you need git and the
     filesystem
-- visibility of changes
-  - changes are stuck in the git history
-  - may not be easy to make them visible to the application
+
 - file upload is harder
 
 **Compatibility:**
