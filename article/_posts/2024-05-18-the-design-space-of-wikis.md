@@ -125,9 +125,11 @@ How are objects identified?
 
 ## Unreadable Identifiers {#uuid}
 
-Like serial IDs or UUIDs.  These make is easy to rename objects without breaking
-links, but generally have to be hidden from the user (e.g.: requires a
+Like serial IDs or [UUIDs][uuid].  These make is easy to rename objects without
+breaking links, but generally have to be hidden from the user (e.g.: requires a
 [WYSIWYG](#wysiwyg) editor and a [database](#storage-db)).
+
+[uuid]: https://en.wikipedia.org/wiki/Universally_unique_identifier
 
 **Examples:** [Notion][notion]
 
