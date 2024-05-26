@@ -637,10 +637,6 @@ bring your own editor.
 
 **Cons:**
 
-- forces lightweight markup
-  - if the idea is that you can bring your own editor
-  - you pretty much need something like markdown
-  - this may be a pro
 - visibility
   - auth for git repos is repo-wide
   - you can either view the entire repo, or none of it
@@ -669,6 +665,11 @@ bring your own editor.
   - changes are stuck in the git history
   - may not be easy to make them visible to the application
 - file upload is harder
+
+**Compatibility:**
+
+- If the goal is BYOE, you pretty much need [lightweight markup](#markup) like
+  Markdown for the text representation.
 
 **Examples:**
 
