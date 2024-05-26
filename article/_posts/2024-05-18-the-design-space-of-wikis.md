@@ -766,7 +766,7 @@ filesystem and minimally updates the compiled output.
 
 ## Wiki Server {#wiki-server}
 
-- examples: most software
+An application provides features to browse, read, and edit the wiki.
 
 **Pros:**
 
@@ -783,4 +783,11 @@ filesystem and minimally updates the compiled output.
 
 **Cons:**
 
-- publishing: harder
+- **Publishing:** publishing the wiki as static HTML is harder, if that is
+  desirable.
+
+**Examples:**
+
+- Obsidian
+- MediaWiki
+- Notion
