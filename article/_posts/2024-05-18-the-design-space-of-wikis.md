@@ -771,22 +771,18 @@ An application provides features to browse, read, and edit the wiki.
 **Pros:**
 
 - **Single Client:** a single app provides for editing and reading.
-
-- you only need one app
-- can do validation at interaction time
-- compatible with any kind of storage
-  - can be plain text
-  - can also be a database
-    - most commonly a database
-- compatible with any kind of markup
-  - can have a complex WYSIWYG editor
-  - can also just do lightweight markup or XML
-- file upload is easier
+- **Validation:** validation (e.g.: link integrity) can be done at interaction
+  time, rather than at build time).
 
 **Cons:**
 
 - **Publishing:** publishing the wiki as static HTML is harder, if that is
   desirable.
+
+**Compatibility:**
+
+- Storage: compatible with either databases or plain-text storage.
+- Markup: compatible with any kind of [markup](#markup) or text representation.
 
 **Examples:**
 
