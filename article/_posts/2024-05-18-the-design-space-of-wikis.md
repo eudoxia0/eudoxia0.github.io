@@ -168,9 +168,7 @@ How are objects connected?
 No links. The wiki is just a collection of objects. Objects can only be referred
 to by an unlinked name.
 
-**Examples:** reality, [Cardfile][cardfile].
-
-[cardfile]: https://en.wikipedia.org/wiki/Cardfile
+**Examples:** reality, [Cardfile].
 
 ## One-Way {#one-way}
 
