@@ -5,11 +5,16 @@ summary: etc.
 
 - intro
   - this post describes the design space of wikis
-  - sections are axes in design space: they correspond to design questions, "how should we do X?"
-  - sub-sections are points or intervals along that axis: they are design choices, "we do X this way"
-  - sections titled "mixin" are design choices that can be applied to multiple other choices
+  - sections are axes in design space: they correspond to design questions, "how
+    should we do X?"
+  - sub-sections are points or intervals along that axis: they are design
+    choices, "we do X this way"
+  - sections titled "mixin" are design choices that can be applied to multiple
+    other choices
   - axes are not entirely orthogonal: there are incompatible regions of space
-  - "wiki" here is meant as a shorthand for the broad space of things called: note-taking apps, document management systems, wikis, tools for thought, zettelkasten.
+  - "wiki" here is meant as a shorthand for the broad space of things called:
+    note-taking apps, document management systems, wikis, tools for thought,
+    zettelkasten.
 
 # Contents
 
