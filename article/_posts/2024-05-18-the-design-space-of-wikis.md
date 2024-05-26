@@ -598,18 +598,34 @@ bring your own EDITOR.
 - **Change Review:** for collaborative wikis, changes can be proposed in PRs,
   discussed, edited, and finally merged.
 
-- file generation
-  - can do cool things with makefiles
-  - e.g. generate pages from some source of truth data
-  - transclusion
-  - compilation into different formats
-  - e.g. say you have some corporate policies
-    - you can have the markdown files in the wiki be the source of truth
-    - and a makefile to transclude them and compile them to a PDF
-    - to upload e.g. to a compliance management platform
-  - dually, you can turn files from the filesystem into database pages
-    - you can have a CSV file with your reading list
-    - and a makefile to compile that into like one page per entry
+- **Export:** having the wiki's contents be files in the filesystem makes it
+  easier to export the data and do other things with it.
+
+  For example, you can have a script that scrapes your journal entries for
+  metadata (e.g. `gym=yes, bed_on_time=no`), and compiles a habit-tracking
+  spreadsheet.
+
+  Consider a corporate wiki, where your corporate policies are
+  described in separate wiki pages. Then at some point you need to make a big
+  PDF of all your corporate policies, e.g. to give to investors or auditors. If
+  the wiki is stored in the filesystem, it is easy to write a script that takes
+  the text from the wiki pages, and compiles it into a single document (with
+  nothing more complex than `awk` and `cat`) and then uses `pandoc` to compile
+  it to a PDF. A CI script can even ensure this happens automatically whenever
+  policy pages are updated.
+
+- **Import:** analogously, storing the wiki's contents in the filesystem makes
+  it easier to bring external data into the wiki.
+
+  For example: you can use CLI-based tools (like [gnuplot][gp], [graphviz][gv],
+  or [PlantUML][puml]) to compile diagrams-as-code into images to embed in the
+  wiki. You can compile some source of truth data into multiple distinct wiki
+  pages, e.g. you can turn a CSV with your reading list into a set of wiki pages
+  with one page per entry.
+
+  [gp]: http://www.gnuplot.info/
+  [gv]: https://graphviz.org/
+  [puml]: https://plantuml.com/
 
 - **Bring Your Own Tools:** you can edit in Emacs or Vim or Zed or VSCode or
   whatever it is you want. So if e.g. you've configured Emacs to have the best
