@@ -648,29 +648,26 @@ bring your own editor.
   but for editing, you either need a web frontend that makes Git commits (like
   Gitit) or a Git client (which is harder on mobile).
 
-- two-app failure modes:
-  - if one app is used to write, and another to view, the latter tends to be
-    ignored
-  - the reason is if you are editing files through e.g. a text editor, you
-    have to be able to find that file by browsing
-  - therefore the editor can browse, read, edit, and search the files
-  - what does the viewer do?
-  - it provides a cute interface, maybe higher-level search, it renders tex
-    math, and maybe it can do things like queries over the database (liek
-    notion views)
-  - in my experience of using jekyll as a person wiki, i only actually
-    launched the wiki when I wanted to view rendered tex math
-  - otherwise I'd just use Zed or Emacs to read and write
-  - it helps that markdown is very readable like that
-  - obsidian doesn't have this because the viewer is also a very convenient
-    editor
-    - it never occurs to me to edit an obsidian vault with Emacs
-    - this might interact poorly with e.g. version control
-- sync is harder
-  - using the thing from e.g. your phone is harder, you need git and the
-    filesystem
+- **Two-App Failure Mode:** if you have one app to write, and another to view,
+  the latter tends to be ignored for the former. For example, if you edit the
+  wiki using Emacs and compile to HTML using a static site generator, you will
+  tend to mostly use Emacs for everything and only view the compiled output
+  occasionally.
 
-- file upload is harder
+  The reason is that the editor has to be able to browse and read files in order
+  to edit them. So already most of the functions of the wiki (browsing, reading,
+  writing) can be done in the editor itself. What does the rendered output
+  provide? Search, following links, a cute interface, maybe it renders TeX math
+  which is useful.
+
+  In my experience of using Jekyll as a personal wiki, I found that I really
+  only looked at the rendered output when writing math notes, to ensure the TeX
+  was correct. Otherwise I'd just use Zed or Emacs for everything.
+
+  Obsidian doesn't have this failure mode because the same app provides viewing
+  and editing, it _just happens_ to be backed by plain text rather than a
+  database. But if it was backed by a database, the UI would be basically
+  indistinguishable.
 
 **Compatibility:**
 
