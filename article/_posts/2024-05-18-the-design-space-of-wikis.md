@@ -670,8 +670,6 @@ application, and object histories are stored in the database.
 
 - **Permissions:** for collaboratibe wikis, custom permissions and visibility
   rules can be implemented on top of the database, unlike in Git.
-- **Renaming:** objects can be given database IDs, and so they can be renamed
-  without breaking links.
 - **Free Structure:** with plain text storage, a directory structure has to be
   used to make it easy to browse large wikis. It's natural to make the folder
   structure correspond to the hierarchy by which pages are organized (e.g. how
@@ -774,6 +772,9 @@ An application provides features to browse, read, and edit the wiki.
 
 - **Validation:** validation (e.g.: link integrity) can be done at interaction
   time, rather than at build time).
+
+- **Renaming:** objects can be renamed without breaking links, because the
+  server can transparently update all backlinks when an object is edited.
 
 **Cons:**
 
