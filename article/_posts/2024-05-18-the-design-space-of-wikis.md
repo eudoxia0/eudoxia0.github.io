@@ -685,9 +685,9 @@ bring your own editor.
 
 ## Database {#storage-db}
 
-- objects are stored in a database
-- manipulation is through a client application
-- object histories are kept in the database, if any
+Objects are stored in a database. Viewing and editing is done through a client
+application, and object histories are stored in the database.
+
 - pros:
   - hostable:
     - if there's a database and a server, the app can be hosted somewhere and
