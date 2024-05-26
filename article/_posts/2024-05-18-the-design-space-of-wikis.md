@@ -135,9 +135,7 @@ breaking links, but generally have to be hidden from the user (e.g.: requires a
 
 ## Unique Title {#title}
 
-The object title is globally unique.
-This makes it easy to reference objects when using plain-text markup:
-you just write the title in `[[wikilinks]]`.
+The object title is globally unique. This makes it easy to reference objects when using plain-text markup: you just write the title in `[[wikilinks]]`.
 
 **Examples:** [MediaWiki][mediawiki]
 
