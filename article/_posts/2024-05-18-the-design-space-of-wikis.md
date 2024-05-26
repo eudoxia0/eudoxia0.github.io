@@ -142,8 +142,8 @@ when using plain-text markup: you just write the title in `[[wikilinks]]`.
 
 ## File Path {#path}
 
-With [plain-text wikis](#storage-plain),
-the path to a file is a globally unique identifier by definition.
+With [plain-text wikis](#storage-plain), the path to a file is a globally unique
+identifier by definition.
 
 Pros:
 
