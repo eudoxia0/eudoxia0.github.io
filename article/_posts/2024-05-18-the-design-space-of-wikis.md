@@ -12,7 +12,9 @@ The axes are not entirely orthogonal. A completely orthogonal reframing is a
 challenge for the reader.
 
 "Wiki" here is used as a shorthard for the broad category of application with
-names like wiki, note-taking app, tool for thought, zettelkasten etc.
+names like wiki, note-taking app, tool for thought, [zettelkasten][zk] etc.
+
+[zk]: https://en.wikipedia.org/wiki/Zettelkasten
 
 # Contents
 
