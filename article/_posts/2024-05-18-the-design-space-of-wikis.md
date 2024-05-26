@@ -535,8 +535,10 @@ generality of XML for complex use cases?
 
 [Djot](https://djot.net/) is a new markup language from the creator of
 [Pandoc](https://pandoc.org/).  It is designed to be easier to parse than
-Markdown, and to have a broader feature set than CommonMark. But the key feature
-is that it has:
+Markdown, and to have a broader feature set than [CommonMark][comark]. But the
+key feature is that it has:
+
+[comark]: https://commonmark.org/
 
 > generic containers for text, inline content, and block-level content, to which
 > arbitrary attributes can be applied. This allows for extensibility using AST
