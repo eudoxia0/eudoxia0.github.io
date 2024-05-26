@@ -390,9 +390,9 @@ The user edits text using a WYSIWYG editor.
 **Cons:**
 
 - Vastly harder to implement than plain-text markup.
-- Every single WYSIWYG editor is janky in some sui generis, hard to describe
-  way, e.g.: Markdown shortcuts don't work, backspacing into formatting applies
-  the formatting to new text you write, indenting/dedenting lists can be a pain,
+- Every single WYSIWYG editor is jank in some sui generis, hard to describe way,
+  e.g.: Markdown shortcuts don't work, backspacing into formatting applies the
+  formatting to new text you write, indenting/dedenting lists can be a pain,
   simple text editing operations can have unpredictable results.
 - Complex markup can be exponentially harder to implement: e.g. the full power
   of HTML tables (with `colspan` and `rowspan`) requires essentially a
