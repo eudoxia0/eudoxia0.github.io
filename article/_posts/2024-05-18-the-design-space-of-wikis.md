@@ -82,8 +82,8 @@ Plain text, but the only formatting construct is the link.
 
 ## Rich Text {#rich-text}
 
-Bold text, bulleted list, tables, code blocks.
-Essentially everything you can do with Markdown.
+Bold text, bulleted list, tables, code blocks. Essentially everything you can do
+with Markdown.
 
 **Examples:** essentially all.
 
