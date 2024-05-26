@@ -179,11 +179,12 @@ a decentralized setup.
 
 ## Two-Way {#two-way}
 
-The original grand vision of hypertext: with [bidirectional links][bidi],
-objects know which other objects have linked to them. There's usually a tab or
-pane to view the "backlinks" in a given page.
+The [original grand vision][vision] of hypertext: with [bidirectional
+links][bidi], objects know which other objects have linked to them. There's
+usually a tab or pane to view the "backlinks" in a given page.
 
 [bidi]: https://www.w3.org/DesignIssues/Topology.html
+[vision]: https://en.wikipedia.org/wiki/Project_Xanadu
 
 **Examples:**
 
