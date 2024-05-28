@@ -22,7 +22,7 @@ names like wiki, note-taking app, tool for thought, [zettelkasten][zk] etc.
 
 # Contents
 
-1. [Objects](#objects)
+1. [Pages](#pages)
    1. [Plain Text](#plain-text-content)
    1. [Plain Text + Links](#plain-text-links)
    1. [Rich Text](#rich-text)
@@ -64,14 +64,14 @@ names like wiki, note-taking app, tool for thought, [zettelkasten][zk] etc.
    1. [Wiki Compiler](#wiki-compiler)
    1. [Wiki Server](#wiki-server)
 
-# Objects {#objects}
+# Pages {#pages}
 
-What kinds of data can objects hold?
+What kinds of data can pages hold?
 
 ## Plain Text {#plain-text-content}
 
-Objects contain plain, unformatted text. Plain-text conventions are used for
-formatting. Links don't exist as first-class objects.
+Pages contain plain, unformatted text. Plain-text conventions are used for
+formatting. Links don't exist as first-class pages.
 
 **Examples:** mostly older ones.
 
@@ -93,19 +93,19 @@ with Markdown.
 
 ## Rich Text + Metadata {#rich-text-meta}
 
-An object has body text, but also a mapping of properties to values.
+A page has body text, but also a mapping of properties to values.
 
 **Examples:** [Notion databases][notiondb] are probably the most prominent
-  example. Tools like [Obsidian][obsidian] or [org-mode][org] let you add
-  properties to pages.
+example. Tools like [Obsidian][obsidian] or [org-mode][org] let you add
+properties to pages.
 
 [notiondb]: https://www.notion.so/help/intro-to-databases
 [org]: https://orgmode.org/
 
 ## Typed Properties {#typed-properties}
 
-An object is just a mapping of properties to values, and some of those values
-may be rich text.  Body text is no longer a privileged, separate thing.
+A page is just a mapping of properties to values, and some of those values may
+be rich text.  Body text is no longer a privileged, separate thing.
 
 The main advantage of this is: you can have multiple different blocks of body
 text.
@@ -123,11 +123,11 @@ content may be limited to some fixed length.
 
 # Identifiers {#ident}
 
-How are objects identified?
+How are pages identified?
 
 ## Unreadable Identifiers {#uuid}
 
-Like serial IDs or [UUIDs][uuid].  These make is easy to rename objects without
+Like serial IDs or [UUIDs][uuid].  These make is easy to rename pages without
 breaking links, but generally have to be hidden from the user (e.g.: requires a
 [WYSIWYG](#wysiwyg) editor and a [database](#storage-db)).
 
@@ -137,7 +137,7 @@ breaking links, but generally have to be hidden from the user (e.g.: requires a
 
 ## Unique Title {#title}
 
-The object title is globally unique. This makes it easy to reference objects
+The page title is globally unique. This makes it easy to reference pages
 when using plain-text markup: you just write the title in `[[wikilinks]]`.
 
 **Examples:** [MediaWiki][mediawiki]
@@ -149,8 +149,8 @@ identifier by definition.
 
 Pros:
 
-- Object titles need not be unique.
-- Can rename objects without breaking anything.
+- Page titles need not be unique.
+- Can rename pages without breaking anything.
 
 Cons:
 
@@ -161,18 +161,18 @@ Cons:
 
 # Links {#links}
 
-How are objects connected?
+How are pages connected?
 
 ## No Links {#no-links}
 
-No links. The wiki is just a collection of objects. Objects can only be referred
-to by an unlinked name.
+No links. The wiki is just a collection of pages. Pages can only be referred to
+by an unlinked name.
 
 **Examples:** reality, [Cardfile].
 
 ## One-Way {#one-way}
 
-Links are one-way. Objects don't know which other objects have linked to them.
+Links are one-way. Pages don't know which other pages have linked to them.
 
 **Examples:** HTML, since one-way links are pretty much the only way to do it in
 a decentralized setup.
@@ -180,7 +180,7 @@ a decentralized setup.
 ## Two-Way {#two-way}
 
 The [original grand vision][vision] of hypertext: with [bidirectional
-links][bidi], objects know which other objects have linked to them. There's
+links][bidi], pages know which other pages have linked to them. There's
 usually a tab or pane to view the "backlinks" in a given page.
 
 [bidi]: https://www.w3.org/DesignIssues/Topology.html
@@ -225,11 +225,11 @@ trigger an error.
 
 # Organization {#organization}
 
-How are objects organized?
+How are pages organized?
 
 ## Singleton Folder {#singleton-folder}
 
-All objects in the wiki exist in a single set or ordered list.
+All pages in the wiki exist in a single set or ordered list.
 
 **Examples:** [The Archive], [Cardfile].
 
@@ -239,13 +239,13 @@ All objects in the wiki exist in a single set or ordered list.
 ## Boxes {#boxes}
 
 The wiki has a two level hierarchy: there's a list of boxes, each of which
-contains a list of objects.
+contains a list of pages.
 
 **Examples:** [Xerox NoteCards](https://en.wikipedia.org/wiki/NoteCards).
 
 ## Hierarchical Folders {#folders}
 
-Like a hierarchical filesystem. Folders contain objects and other folders.
+Like a hierarchical filesystem. Folders contain pages and other folders.
 
 **Pros:**
 
@@ -278,13 +278,13 @@ incredibly useful feature is not more widely implemented.
 
 ## Tags {#tags}
 
-Give up on hierarchy: objects can be given a list of tags, clicking on a tag
-shows all objects with the tag, boolean operation on tags (`a and (b or c)`) can
+Give up on hierarchy: pages can be given a list of tags, clicking on a tag
+shows all pages with the tag, boolean operation on tags (`a and (b or c)`) can
 be used to search.
 
 **Pros:**
 
-- Handles the fact that objects can live in multiple places.
+- Handles the fact that pages can live in multiple places.
 
 **Cons:**
 
@@ -303,7 +303,7 @@ Give up on hierarchy. Just links.
 
 **Cons:**
 
-- Does not appeal to spatial intuition: objects are not in "one place", they are
+- Does not appeal to spatial intuition: pages are not in "one place", they are
   floating in the aether.
 - The graph can become a tangled mess.
 - Folders are inevitably reinvented "one level up": you have pages that act as
@@ -313,7 +313,7 @@ Give up on hierarchy. Just links.
 
 ## Spatial Organization {#spatial}
 
-Objects exist on a canvas that you can pan or scroll.
+Pages exist on a canvas that you can pan or scroll.
 
 **Pros:**
 
@@ -331,10 +331,9 @@ Hierarchies collapse on contact with the first counter-example.
 Tags are too flat.
 Hypertext leads to a tangled mess.
 
-Another way to organize information is by type:
-all objects which have the same properties are grouped together.  All journal
-entries in one folder, all rolodex entries in another, all book reviews in
-another, etc.
+Another way to organize information is by type: all pages which have the same
+properties are grouped together.  All journal entries in one folder, all rolodex
+entries in another, all book reviews in another, etc.
 
 **Examples:** [Notion databases][notiondb]. Relational databases work like this:
 a database is a list of tables, and tables have rows. Real life also works like
@@ -359,7 +358,7 @@ children.
 
 A constrained system can be more tractable to deal with.  You may have an upper
 bound on nesting, where folders can only be two or three levels deep.  You may
-have a _fixed_ level of nesting, where every object _must be_ inside a second or
+have a _fixed_ level of nesting, where every page _must be_ inside a second or
 third-level folder.  Analogously, you may have limits on arity, where folders
 have an upper bound on how many folders they have.
 
@@ -642,8 +641,8 @@ generators.
 
 ## Database {#storage-db}
 
-Objects are stored in a database. Viewing and editing is done through a client
-application, and object histories are stored in the database.
+Pages are stored in a database. Viewing and editing is done through a client
+application, and page histories are stored in the database.
 
 **Pros:**
 
@@ -661,7 +660,7 @@ application, and object histories are stored in the database.
 
 - Data in a database is less portable than plain-text files in the filesystem,
   especially if the database schema is such that complex queries have to be made
-  to reconstruct an object.
+  to reconstruct a page.
 - A custom client must be implemented. Plain-text wikis can save a lot of code
   because off the shelf editing software can do much of the work. With a
   database, custom client software has to be written to query and mutate the
@@ -739,8 +738,8 @@ An application provides features to browse, read, and edit the wiki.
   the Internet, and from multiple devices.
 - Validation (e.g.: link integrity) can be done at interaction time, rather than
   at build time).
-- Objects can be renamed without breaking links, because the server can
-  transparently update all backlinks when an object is edited.
+- Pages can be renamed without breaking links, because the server can
+  transparently update all backlinks when a page is edited.
 
 **Cons:**
 
