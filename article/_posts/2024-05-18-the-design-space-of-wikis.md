@@ -44,7 +44,7 @@ names like wiki, note-taking app, tool for thought, [zettelkasten][zk] etc.
    1. [Singleton Folder](#singleton-folder)
    1. [Boxes](#boxes)
    1. [Hierarchical Folders](#folders)
-   1. [Unified Folders and Pages](#)
+   1. [Hierarchical Pages](#nested-pages)
    1. [Tags](#tags)
    1. [Pure Hypertext](#hypertext)
    1. [Spatial Organization](#spatial)
@@ -267,7 +267,7 @@ Like a hierarchical filesystem. Folders contain pages and other folders.
 
 **Examples:** [Obsidian][obsidian].
 
-## Unified Folders and Pages {#unified-folders}
+## Hierarchical Pages {#nested-pages}
 
 Pages and folders are unified: pages can have contain subpages.
 Or, from a more SQL perspective: pages can have parent pointers.
