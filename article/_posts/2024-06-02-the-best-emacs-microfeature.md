@@ -23,16 +23,16 @@ If you're writing prose your lines will frequently exceed the width of the
 editor. Then you have two choices. You can use word-wrap, which doesn't play
 well with indentation for nested content:
 
-![](/assets/content/the-best-emacs-microfeature/wrap.png)
+![](/assets/content/the-best-emacs-microfeature/wrap.webp)
 
 Or you can `toggle-truncate-lines`, which puts much of the text out of reach:
 
-![](/assets/content/the-best-emacs-microfeature/truncate.png)
+![](/assets/content/the-best-emacs-microfeature/truncate.webp)
 
 Or you can insert newlines so that the text fits within the column limit, but
 doing this by hand is incredibly tedious. Enter `M-q`:
 
-![](/assets/content/the-best-emacs-microfeature/fill.png)
+![](/assets/content/the-best-emacs-microfeature/fill.webp)
 
 Gorgeous. My only complaint is the ragged edges. Maybe when LLMs are good enough
 we can have `semantic-fill-paragraph`, where the text content is rewritten so
@@ -44,11 +44,11 @@ number of words in the selection, and [`markdown-mode`][markdown-mode] has a
 really useful feature for automatically aligning Markdown tables, so you can
 very quickly write this:
 
-<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.png" />
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.webp" />
 
 And `C-c C-d` turns it into this:
 
-<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.png" />
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.webp" />
 
 And so despite the jank I persist in using Emacs.
 
