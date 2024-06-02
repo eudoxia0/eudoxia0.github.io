@@ -1,0 +1,60 @@
+---
+title: The Best Emacs Microfeature
+summary: Why I keep using Emacs in 2024.
+card: the-best-emacs-microfeature.jpg
+card_source: |
+    “Electron beam lithography machine, Paul Klee, 1929, watercolor, auctioned by Christie's”, DALL-E, June 2022.
+---
+
+When [Emacs] users explain why they use it, it's usually big picture features:
+[elisp], [org-mode], [dired]. The fact that it's been around forever and will
+continue to be around for decades to come. For me it's the humble `M-q`, or, in
+the vernacular, `Alt+q` or `Option+q`. This is the key combination for
+[`fill-paragraph`][fill]. It reshapes a paragraph of text so that it fits under
+80 columns.
+
+[fill]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands.html
+
+This is a marvelously useful feature that is sadly absent from many other
+editors. I would probably have switched to [Zed] already if it had this, or the
+ability to extend the editor with custom buffer-manipulation commands.
+
+If you're writing prose your lines will frequently exceed the width of the
+editor. Then you have two choices. You can use word-wrap, which doesn't play
+well with indentation for nested content:
+
+![](/assets/content/the-best-emacs-microfeature/wrap.png)
+
+Or you can `toggle-truncate-lines`, which puts much of the text out of reach:
+
+![](/assets/content/the-best-emacs-microfeature/truncate.png)
+
+Or you can insert newlines so that the text fits within the column limit, but
+doing this by hand is incredibly tedious. Enter `M-q`:
+
+![](/assets/content/the-best-emacs-microfeature/fill.png)
+
+Gorgeous. My only complaint is the ragged edges. Maybe when LLMs are good enough
+we can have `semantic-fill-paragraph`, where the text content is rewritten so
+that on each line, a word happens to end at the 80th column.
+
+Emacs is full of hundreds of microscopic quality of life features like this,
+accreted over decades: [`sort-lines`][sort] does what it says, `M-=` counts the
+number of words in the selection, and [`markdown-mode`][markdown-mode] has a
+really useful feature for automatically aligning Markdown tables, so you can
+very quickly write this:
+
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.png" />
+
+And `C-c C-d` turns it into this:
+
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.png" />
+
+And so despite the jank I persist in using Emacs.
+
+[Emacs]: https://www.gnu.org/software/emacs/
+[elisp]: https://www.gnu.org/software/emacs/manual/html_node/eintr/
+[org-mode]: https://orgmode.org/
+[dired]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
+[sort]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Sorting.html
+[markdown-mode]: https://jblevins.org/projects/markdown-mode/
