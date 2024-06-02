@@ -3,7 +3,7 @@
 You can find the live version [here][site].
 
 ```bash
-$ jekyll serve --watch --future
+$ ./serve.sh
 ```
 
 [site]: http://borretti.me/
