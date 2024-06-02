@@ -23,16 +23,16 @@ If you're writing prose your lines will frequently exceed the width of the
 editor. Then you have two choices. You can use word-wrap, which doesn't play
 well with indentation for nested content:
 
-![](/assets/content/the-best-emacs-microfeature/wrap.webp)
+![A screenshot of Emacs, showing word wrapping around the 80 column mark. The word wrap does not respect indentation, since lines continue from the leftmost side of the screen.](/assets/content/the-best-emacs-microfeature/wrap.webp)
 
 Or you can `toggle-truncate-lines`, which puts much of the text out of reach:
 
-![](/assets/content/the-best-emacs-microfeature/truncate.webp)
+![A screenshot of Emacs, showing lines truncated at the 80 column mark, which the remainder of the text hidden.](/assets/content/the-best-emacs-microfeature/truncate.webp)
 
 Or you can insert newlines so that the text fits within the column limit, but
 doing this by hand is incredibly tedious. Enter `M-q`:
 
-![](/assets/content/the-best-emacs-microfeature/fill.webp)
+![A screenshot of Emacs, showing paragraphs filled at the 80 column mark, and properly indented.](/assets/content/the-best-emacs-microfeature/fill.webp)
 
 Gorgeous. My only complaint is the ragged edges. Maybe when LLMs are good enough
 we can have `semantic-fill-paragraph`, where the text content is rewritten so
@@ -44,11 +44,11 @@ number of words in the selection, and [`markdown-mode`][markdown-mode] has a
 really useful feature for automatically aligning Markdown tables, so you can
 very quickly write this:
 
-<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.webp" />
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.webp" alt="A screenshot of Emacs showing a Markdown table without alignment." />
 
 And `C-c C-d` turns it into this:
 
-<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.webp" />
+<img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.webp" alt="A screenshot of Emacs showing a Markdown table where all columns are aligned with whitespace to the same width." />
 
 And so despite the jank I persist in using Emacs.
 
