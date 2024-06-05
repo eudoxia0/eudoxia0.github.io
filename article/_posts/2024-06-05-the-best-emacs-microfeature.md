@@ -13,6 +13,10 @@ the vernacular, `Alt+q` or `Option+q`. This is the key combination for
 [`fill-paragraph`][fill]. It reshapes a paragraph of text so that it fits under
 80 columns.
 
+[Emacs]: https://www.gnu.org/software/emacs/
+[elisp]: https://www.gnu.org/software/emacs/manual/html_node/eintr/
+[org-mode]: https://orgmode.org/
+[dired]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
 [fill]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands.html
 
 This is a marvelously useful feature that is sadly absent from many other
@@ -52,9 +56,5 @@ And `C-c C-d` turns it into this:
 
 And so despite the jank I persist in using Emacs.
 
-[Emacs]: https://www.gnu.org/software/emacs/
-[elisp]: https://www.gnu.org/software/emacs/manual/html_node/eintr/
-[org-mode]: https://orgmode.org/
-[dired]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
 [sort]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Sorting.html
 [markdown-mode]: https://jblevins.org/projects/markdown-mode/
