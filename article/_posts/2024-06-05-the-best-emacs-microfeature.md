@@ -50,6 +50,9 @@ number of words in the selection, and [`markdown-mode`][markdown-mode] has a
 really useful feature for automatically aligning Markdown tables, so you can
 very quickly write this:
 
+[sort]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Sorting.html
+[markdown-mode]: https://jblevins.org/projects/markdown-mode/
+
 <img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/before.webp" alt="A screenshot of Emacs showing a Markdown table without alignment." />
 
 And `C-c C-d` turns it into this:
@@ -57,6 +60,3 @@ And `C-c C-d` turns it into this:
 <img width="60%" style="margin: 0 auto;" src="/assets/content/the-best-emacs-microfeature/after.webp" alt="A screenshot of Emacs showing a Markdown table where all columns are aligned with whitespace to the same width." />
 
 And so despite the jank I persist in using Emacs.
-
-[sort]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Sorting.html
-[markdown-mode]: https://jblevins.org/projects/markdown-mode/
