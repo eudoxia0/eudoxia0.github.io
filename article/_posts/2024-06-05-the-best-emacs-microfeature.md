@@ -23,6 +23,8 @@ This is a marvelously useful feature that is sadly absent from many other
 editors. I would probably have switched to [Zed] already if it had this, or the
 ability to extend the editor with custom buffer-manipulation commands.
 
+[Zed]: https://zed.dev/
+
 If you're writing prose your lines will frequently exceed the width of the
 editor. Then you have two choices. You can use word-wrap, which doesn't play
 well with indentation for nested content:
