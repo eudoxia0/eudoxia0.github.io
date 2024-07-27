@@ -401,9 +401,7 @@ article {
     }
 
     :not(pre) > code {
-        font-family: 'Inconsolata';
-        font-size: $f1;
-        line-height: $b2;
+        font-family: 'Courier', monospace;
     }
 
     pre {
