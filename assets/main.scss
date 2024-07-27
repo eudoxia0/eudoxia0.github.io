@@ -4,38 +4,6 @@
 @charset "utf-8";
 
 //
-// Local Fonts
-//
-
-@font-face {
-    font-family: "NimbusRoman";
-    font-weight: normal;
-    font-style: normal;
-    src: url("/assets/fonts/nimbus-roman/NimbusRoman-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "NimbusRoman";
-    font-weight: normal;
-    font-style: italic;
-    src: url("/assets/fonts/nimbus-roman/NimbusRoman-Italic.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "NimbusRoman";
-    font-weight: bold;
-    font-style: normal;
-    src: url("/assets/fonts/nimbus-roman/NimbusRoman-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "NimbusRoman";
-    font-weight: bold;
-    font-style: italic;
-    src: url("/assets/fonts/nimbus-roman/NimbusRoman-BoldItalic.otf") format("opentype");
-}
-
-//
 // Reset
 //
 
@@ -113,7 +81,7 @@ html {
 //
 
 body {
-    font-family: 'NimbusRoman', 'Times', 'Times New Roman', serif;
+    font-family: 'Times', 'Times New Roman', serif;
     font-weight: normal;
     font-size: $f1;
     line-height: $b * 2;
