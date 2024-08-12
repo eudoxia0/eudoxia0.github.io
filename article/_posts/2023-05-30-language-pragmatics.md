@@ -115,7 +115,7 @@ productivity.
 In C and C++ there are many build systems and package managers, but none is the
 obvious [focal point][fp] in the way [cargo][cargo] is for Rust. So people
 vendor their dependencies, sometimes downloading them by hand. Smaller libraries
-are often made [header-only][header], this is advetised as a feature because
+are often made [header-only][header], this is advertised as a feature because
 they require less build system overhead to integrate into your projects. This
 discourages dependencies, which is basically the same as discouraging the
 division of labour, with obvious costs.
