@@ -57,7 +57,7 @@ traverses the codebase. `null` goes away.
 
 In Java the problem is compounded by the fact that the simulationist school of
 OOP endorses the idea that each concept in the domain of discourse object should
-correspond to a class. So while in a Haskell project you may have fiften types
+correspond to a class. So while in a Haskell project you may have fifteen types
 to represent a purchase order (representing different stages of
 validation/enrichment, like the intermediate representations in a compiler), in
 Java you'd have one omnipresent `Order` class that is tied to every component in
