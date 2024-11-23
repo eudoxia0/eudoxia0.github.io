@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-jekyll serve --livereload --future --incremental
+gem exec jekyll serve --livereload --future --incremental
