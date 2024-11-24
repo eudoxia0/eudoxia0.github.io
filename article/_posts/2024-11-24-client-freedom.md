@@ -1,6 +1,6 @@
 ---
 title: Client Freedom
-summary: On the freedom to bring your own client.
+summary: On the decline of open protocols.
 card: client-freedom.webp
 card_source: |
     “Cover for Neverness, David Zindell, 1988, oil on canvas, trending on ArtStation”, DALL-E, June 2022.
