@@ -49,26 +49,13 @@ a {
     --size-2: calc(var(--size-1) * 2);
     --size-3: calc(var(--size-1) * 3);
     --size-4: calc(var(--size-1) * 4);
+    --font-scale: 1.25;
+    --font-base: 16px;
+    --font-s: calc(var(--font-base) * 0.8);
+    --font-2: calc(var(--font-base) * pow(var(--font-scale), 1));
+    --font-3: calc(var(--font-base) * pow(var(--font-scale), 3));
+    --font-4: calc(var(--font-base) * pow(var(--font-scale), 4));
 }
-
-//
-// Parameters to the design system.
-//
-
-// `f` is the base font size: 16px.
-$f: 16px;
-// `s` is the font scale; 1.250 (major third).
-$s: 1.25;
-
-//
-// Derived Constants
-//
-
-// Font sizes.
-$fs: $f * 0.8;
-$f2: $f * $s;
-$f3: $f * $s * $s * $s;
-$f4: $f * $s * $s * $s * $s;
 
 //
 // Root Styles
@@ -86,7 +73,7 @@ html {
 body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
-    font-size: $f;
+    font-size: var(--font-base);
     line-height: var(--size-2);
 }
 
@@ -169,7 +156,7 @@ body {
     padding: var(--size-4);
 
     h1 {
-        font-size: $f4;
+        font-size: var(--font-4);
         line-height: var(--size-4);
         margin-bottom: var(--size-4);
     }
@@ -226,7 +213,7 @@ nav.media-nav {
 
                 > span {
                     display: block;
-                    font-size: $f3;
+                    font-size: var(--font-3);
                     line-height: var(--size-4);
                     margin-left: var(--size-2);
                 }
@@ -278,7 +265,7 @@ nav.media-nav {
     }
 
     > h2 {
-        font-size: $f2;
+        font-size: var(--font-2);
         line-height: var(--size-3);
         margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
@@ -291,7 +278,7 @@ nav.media-nav {
 
             > a {
                 display: block;
-                font-size: $f2;
+                font-size: var(--font-2);
                 line-height: var(--size-2);
 
                 color: black;
@@ -306,7 +293,7 @@ nav.media-nav {
             }
 
             > .info {
-                font-size: $fs;
+                font-size: var(--font-s);
                 line-height: var(--size-2);
 
                 > .date {
@@ -340,7 +327,7 @@ nav.media-nav {
         box-shadow: 0 -1px 0 #000 inset;
 
         h1 {
-            font-size: $f4;
+            font-size: var(--font-4);
             line-height: var(--size-4);
             margin: var(--size-2) var(--size-1);
             text-align: center;
@@ -352,7 +339,7 @@ article {
     padding: var(--size-2);
 
     h1 {
-        font-size: $f3;
+        font-size: var(--font-3);
         line-height: var(--size-4);
         margin-bottom: var(--size-2);
         border-bottom: 1px solid #8a8a8a;
@@ -360,7 +347,7 @@ article {
     }
 
     h2 {
-        font-size: $f2;
+        font-size: var(--font-2);
         line-height: var(--size-3);
         margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
@@ -368,13 +355,13 @@ article {
     }
 
     h3 {
-        font-size: $f;
+        font-size: var(--font-base);
         line-height: var(--size-3);
         font-weight: bold;
     }
 
     sup[role="doc-noteref"] {
-        font-size: $f;
+        font-size: var(--font-base);
         vertical-align: 0;
 
         &:before {
