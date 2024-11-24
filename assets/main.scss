@@ -68,10 +68,10 @@ $f3: $f * $s * $s * $s;
 $f4: $f * $s * $s * $s * $s;
 
 // Sizes.
-$b1: 12px;
-$b2: $b1 * 2;
-$b3: $b1 * 3;
-$b4: $b1 * 4;
+$size1: 12px;
+$size2: $size1 * 2;
+$size3: $size1 * 3;
+$size4: $size1 * 4;
 
 //
 // Root Styles
@@ -90,7 +90,7 @@ body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
     font-size: $f1;
-    line-height: $b1 * 2;
+    line-height: $size1 * 2;
 }
 
 //
@@ -131,7 +131,7 @@ body {
 
     > nav.top-nav,
     > nav.bottom-nav {
-        padding: $b1;
+        padding: $size1;
 
         ul {
             li {
@@ -144,7 +144,7 @@ body {
 
                 a,
                 .sep {
-                    margin-right: $b1;
+                    margin-right: $size1;
                 }
             }
         }
@@ -155,7 +155,7 @@ body {
     }
 
     > footer {
-        padding: $b1;
+        padding: $size1;
         border-top: 1px solid black;
 
         a {
@@ -169,12 +169,12 @@ body {
 //
 
 .home-page {
-    padding: $b4;
+    padding: $size4;
 
     h1 {
         font-size: $f4;
-        line-height: $b4;
-        margin-bottom: $b4;
+        line-height: $size4;
+        margin-bottom: $size4;
     }
 }
 
@@ -183,12 +183,12 @@ body {
 //
 
 nav.media-nav {
-    $initial: $b1 * 8;
+    $initial: $size1 * 8;
     $final: $initial * 2;
 
     > ul {
         > li {
-            margin-bottom: $b2;
+            margin-bottom: $size2;
 
             > a {
                 display: flex;
@@ -230,8 +230,8 @@ nav.media-nav {
                 > span {
                     display: block;
                     font-size: $f3;
-                    line-height: $b4;
-                    margin-left: $b2;
+                    line-height: $size4;
+                    margin-left: $size2;
                 }
 
                 &:hover {
@@ -270,10 +270,10 @@ nav.media-nav {
 //
 
 .post-list {
-    padding: $b2;
+    padding: $size2;
 
     > p {
-        margin-bottom: $b2;
+        margin-bottom: $size2;
 
         a {
             color: var(--link-color);
@@ -282,20 +282,20 @@ nav.media-nav {
 
     > h2 {
         font-size: $f2;
-        line-height: $b3;
-        margin-bottom: $b1;
+        line-height: $size3;
+        margin-bottom: $size1;
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     > ul.posts {
         > li {
-            margin-bottom: $b2;
+            margin-bottom: $size2;
 
             > a {
                 display: block;
                 font-size: $f2;
-                line-height: $b2;
+                line-height: $size2;
 
                 color: black;
                 transition: color 0.3s linear;
@@ -310,7 +310,7 @@ nav.media-nav {
 
             > .info {
                 font-size: $fs;
-                line-height: $b2;
+                line-height: $size2;
 
                 > .date {
                     color: #474747;
@@ -344,35 +344,35 @@ nav.media-nav {
 
         h1 {
             font-size: $f4;
-            line-height: $b4;
-            margin: $b2 $b1;
+            line-height: $size4;
+            margin: $size2 $size1;
             text-align: center;
         }
     }
 }
 
 article {
-    padding: $b2;
+    padding: $size2;
 
     h1 {
         font-size: $f3;
-        line-height: $b4;
-        margin-bottom: $b2;
+        line-height: $size4;
+        margin-bottom: $size2;
         border-bottom: 1px solid #8a8a8a;
         font-weight: normal;
     }
 
     h2 {
         font-size: $f2;
-        line-height: $b3;
-        margin-bottom: $b1;
+        line-height: $size3;
+        margin-bottom: $size1;
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     h3 {
         font-size: $f1;
-        line-height: $b3;
+        line-height: $size3;
         font-weight: bold;
     }
 
@@ -399,12 +399,12 @@ article {
     h2,
     h3,
     hr {
-        margin-bottom: $b1;
+        margin-bottom: $size1;
     }
 
     .highlighter-rouge,
     pre {
-        margin-bottom: $b1;
+        margin-bottom: $size1;
     }
 
     p {
@@ -413,11 +413,11 @@ article {
 
     img {
         max-width: 100%;
-        padding: $b1;
+        padding: $size1;
     }
 
     blockquote {
-        margin: $b2;
+        margin: $size2;
         font-style: italic;
     }
 
@@ -429,7 +429,7 @@ article {
         border: 1px solid #f2f2f2;
         background: #fcfcfc;
         overflow-x: auto;
-        padding: $b1;
+        padding: $size1;
 
         line-height: 15px;
 
@@ -457,7 +457,7 @@ article {
     ul,
     ol,
     dl {
-        margin-left: $b2;
+        margin-left: $size2;
     }
 
     dl {
@@ -466,7 +466,7 @@ article {
         }
 
         dd {
-            margin-left: $b2;
+            margin-left: $size2;
         }
     }
 
@@ -732,7 +732,7 @@ article {
 //
 
 .chapter-start {
-    margin: $b2 0;
+    margin: $size2 0;
 
     p {
         text-align: center;
@@ -740,7 +740,7 @@ article {
 }
 
 nav.chapter-nav {
-    margin-top: $b2;
+    margin-top: $size2;
 
     ul {
         margin: 0;
@@ -759,7 +759,7 @@ nav.chapter-nav {
 }
 
 .epigraph {
-    padding: $b2;
+    padding: $size2;
 }
 
 .nameplate p {
@@ -823,8 +823,8 @@ nav.chapter-nav {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
-    padding: $b2;
-    margin-bottom: $b1;
+    padding: $size2;
+    margin-bottom: $size1;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
