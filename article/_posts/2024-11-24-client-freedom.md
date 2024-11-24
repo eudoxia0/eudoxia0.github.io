@@ -39,7 +39,7 @@ everything about the experience:
 
 - No feed, just put people in lists and subscribe to them over RSS so I can read
   them on [NetNewsWire][nnw].
-- Notifications are a batched into a once-a-day email.
+- Notifications are batched into a once-a-day email.
 - DMs and group chats entirely separated.
 - On my phone I want a client _just_ for tweeting into the void. No timeline, no
   scrolling, notifications.[^f2]
