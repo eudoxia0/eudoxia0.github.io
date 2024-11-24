@@ -66,7 +66,6 @@ $s: 1.25;
 
 // Font sizes.
 $fs: $f * 0.8;
-$f1: $f;
 $f2: $f * $s;
 $f3: $f * $s * $s * $s;
 $f4: $f * $s * $s * $s * $s;
@@ -87,7 +86,7 @@ html {
 body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
-    font-size: $f1;
+    font-size: $f;
     line-height: var(--size-2);
 }
 
@@ -369,13 +368,13 @@ article {
     }
 
     h3 {
-        font-size: $f1;
+        font-size: $f;
         line-height: var(--size-3);
         font-weight: bold;
     }
 
     sup[role="doc-noteref"] {
-        font-size: $f1;
+        font-size: $f;
         vertical-align: 0;
 
         &:before {
