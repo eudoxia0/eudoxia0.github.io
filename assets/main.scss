@@ -2,6 +2,7 @@
 ---
 
 @charset "utf-8";
+@use 'sass:math';
 
 //
 // Reset
@@ -61,7 +62,7 @@ $link-color: #b1002e;
 //
 
 // Font sizes.
-$fs: $f * calc(1 / $s);
+$fs: $f * math.div(1, $s);
 $f1: $f;
 $f2: $f * $s;
 $f3: $f * $s * $s * $s;
