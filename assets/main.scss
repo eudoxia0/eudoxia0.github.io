@@ -45,6 +45,10 @@ a {
 
 :root {
     --link-color: #b1002e;
+    --size-1: 12px;
+    --size-2: calc(var(--size-1) * 2);
+    --size-3: calc(var(--size-1) * 3);
+    --size-4: calc(var(--size-1) * 4);
 }
 
 //
@@ -67,12 +71,6 @@ $f2: $f * $s;
 $f3: $f * $s * $s * $s;
 $f4: $f * $s * $s * $s * $s;
 
-// Sizes.
-$size1: 12px;
-$size2: $size1 * 2;
-$size3: $size1 * 3;
-$size4: $size1 * 4;
-
 //
 // Root Styles
 //
@@ -90,7 +88,7 @@ body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
     font-size: $f1;
-    line-height: $size2;
+    line-height: var(--size-2);
 }
 
 //
@@ -131,7 +129,7 @@ body {
 
     > nav.top-nav,
     > nav.bottom-nav {
-        padding: $size1;
+        padding: var(--size-1);
 
         ul {
             li {
@@ -144,7 +142,7 @@ body {
 
                 a,
                 .sep {
-                    margin-right: $size1;
+                    margin-right: var(--size-1);
                 }
             }
         }
@@ -155,7 +153,7 @@ body {
     }
 
     > footer {
-        padding: $size1;
+        padding: var(--size-1);
         border-top: 1px solid black;
 
         a {
@@ -169,12 +167,12 @@ body {
 //
 
 .home-page {
-    padding: $size4;
+    padding: var(--size-4);
 
     h1 {
         font-size: $f4;
-        line-height: $size4;
-        margin-bottom: $size4;
+        line-height: var(--size-4);
+        margin-bottom: var(--size-4);
     }
 }
 
@@ -188,7 +186,7 @@ nav.media-nav {
 
     > ul {
         > li {
-            margin-bottom: $size2;
+            margin-bottom: var(--size-2);
 
             > a {
                 display: flex;
@@ -230,8 +228,8 @@ nav.media-nav {
                 > span {
                     display: block;
                     font-size: $f3;
-                    line-height: $size4;
-                    margin-left: $size2;
+                    line-height: var(--size-4);
+                    margin-left: var(--size-2);
                 }
 
                 &:hover {
@@ -270,10 +268,10 @@ nav.media-nav {
 //
 
 .post-list {
-    padding: $size2;
+    padding: var(--size-2);
 
     > p {
-        margin-bottom: $size2;
+        margin-bottom: var(--size-2);
 
         a {
             color: var(--link-color);
@@ -282,20 +280,20 @@ nav.media-nav {
 
     > h2 {
         font-size: $f2;
-        line-height: $size3;
-        margin-bottom: $size1;
+        line-height: var(--size-3);
+        margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     > ul.posts {
         > li {
-            margin-bottom: $size2;
+            margin-bottom: var(--size-2);
 
             > a {
                 display: block;
                 font-size: $f2;
-                line-height: $size2;
+                line-height: var(--size-2);
 
                 color: black;
                 transition: color 0.3s linear;
@@ -310,7 +308,7 @@ nav.media-nav {
 
             > .info {
                 font-size: $fs;
-                line-height: $size2;
+                line-height: var(--size-2);
 
                 > .date {
                     color: #474747;
@@ -344,35 +342,35 @@ nav.media-nav {
 
         h1 {
             font-size: $f4;
-            line-height: $size4;
-            margin: $size2 $size1;
+            line-height: var(--size-4);
+            margin: var(--size-2) var(--size-1);
             text-align: center;
         }
     }
 }
 
 article {
-    padding: $size2;
+    padding: var(--size-2);
 
     h1 {
         font-size: $f3;
-        line-height: $size4;
-        margin-bottom: $size2;
+        line-height: var(--size-4);
+        margin-bottom: var(--size-2);
         border-bottom: 1px solid #8a8a8a;
         font-weight: normal;
     }
 
     h2 {
         font-size: $f2;
-        line-height: $size3;
-        margin-bottom: $size1;
+        line-height: var(--size-3);
+        margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     h3 {
         font-size: $f1;
-        line-height: $size3;
+        line-height: var(--size-3);
         font-weight: bold;
     }
 
@@ -399,12 +397,12 @@ article {
     h2,
     h3,
     hr {
-        margin-bottom: $size1;
+        margin-bottom: var(--size-1);
     }
 
     .highlighter-rouge,
     pre {
-        margin-bottom: $size1;
+        margin-bottom: var(--size-1);
     }
 
     p {
@@ -413,11 +411,11 @@ article {
 
     img {
         max-width: 100%;
-        padding: $size1;
+        padding: var(--size-1);
     }
 
     blockquote {
-        margin: $size2;
+        margin: var(--size-2);
         font-style: italic;
     }
 
@@ -429,7 +427,7 @@ article {
         border: 1px solid #f2f2f2;
         background: #fcfcfc;
         overflow-x: auto;
-        padding: $size1;
+        padding: var(--size-1);
 
         line-height: 15px;
 
@@ -457,7 +455,7 @@ article {
     ul,
     ol,
     dl {
-        margin-left: $size2;
+        margin-left: var(--size-2);
     }
 
     dl {
@@ -466,7 +464,7 @@ article {
         }
 
         dd {
-            margin-left: $size2;
+            margin-left: var(--size-2);
         }
     }
 
@@ -732,7 +730,7 @@ article {
 //
 
 .chapter-start {
-    margin: $size2 0;
+    margin: var(--size-2) 0;
 
     p {
         text-align: center;
@@ -740,7 +738,7 @@ article {
 }
 
 nav.chapter-nav {
-    margin-top: $size2;
+    margin-top: var(--size-2);
 
     ul {
         margin: 0;
@@ -759,7 +757,7 @@ nav.chapter-nav {
 }
 
 .epigraph {
-    padding: $size2;
+    padding: var(--size-2);
 }
 
 .nameplate p {
@@ -823,8 +821,8 @@ nav.chapter-nav {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
-    padding: $size2;
-    margin-bottom: $size1;
+    padding: var(--size-2);
+    margin-bottom: var(--size-1);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
