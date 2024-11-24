@@ -17,7 +17,7 @@ with client freedom. You can read email through a [native GUI app][mail], a
 [em]: https://en.wikipedia.org/wiki/Gnus
 
 Client freedom peaked in the 90s when most communication was through open
-protocls, and has been on the decline since. I remember, circa 2013, using
+protocols, and has been on the decline since. I remember, circa 2013, using
 Facebook Messenger over [Pidgin][pid], through their [XMPP][xmpp] gateway, and
 with [OTR][otr] messaging turned on. Then Facebook shut down its XMPP gateway,
 as Slack shut down its IRC gateway.
