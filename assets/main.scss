@@ -2,7 +2,6 @@
 ---
 
 @charset "utf-8";
-@use 'sass:math';
 
 //
 // Reset
@@ -44,6 +43,10 @@ a {
     text-decoration: none;
 }
 
+:root {
+    --link-color: #b1002e;
+}
+
 //
 // Parameters to the design system.
 //
@@ -54,8 +57,6 @@ $f: 16px;
 $s: 1.25;
 // `b` is the rhythm baseline: 12px.
 $b: 12px;
-
-$link-color: #b1002e;
 
 //
 // Derived Constants
@@ -162,7 +163,7 @@ body {
         border-top: 1px solid black;
 
         a {
-            color: $link-color;
+            color: var(--link-color);
         }
     }
 }
@@ -279,7 +280,7 @@ nav.media-nav {
         margin-bottom: $b2;
 
         a {
-            color: $link-color;
+            color: var(--link-color);
         }
     }
 
@@ -305,7 +306,7 @@ nav.media-nav {
                 border-bottom: 1px solid transparent;
 
                 &:hover {
-                    color: $link-color;
+                    color: var(--link-color);
                     transition: color 0.3s linear;
                     border-color: #bbb;
                 }
@@ -505,7 +506,7 @@ article {
     }
 
     a {
-        color: $link-color;
+        color: var(--link-color);
         text-decoration: none;
     }
 
