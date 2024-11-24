@@ -2,7 +2,6 @@
 ---
 
 @charset "utf-8";
-@use 'sass:math';
 
 //
 // Reset
@@ -44,37 +43,19 @@ a {
     text-decoration: none;
 }
 
-//
-// Parameters to the design system.
-//
-
-// `f` is the base font size: 16px.
-$f: 16px;
-// `s` is the font scale; 1.250 (major third).
-$s: 1.25;
-// `b` is the rhythm baseline: 12px.
-$b: 12px;
-
-$link-color: #b1002e;
-
-//
-// Derived Constants
-//
-
-// Font sizes.
-$fs: $f * 0.8;
-$f1: $f;
-$f2: $f * $s;
-$f3: $f * $s * $s * $s;
-$f4: $f * $s * $s * $s * $s;
-$f5: $f * $s * $s * $s * $s * $s;
-
-// Sizes.
-$b1: $b;
-$b2: $b * 2;
-$b3: $b * 3;
-$b4: $b * 4;
-$b5: $b * 5;
+:root {
+    --link-color: #b1002e;
+    --size-1: 12px;
+    --size-2: calc(var(--size-1) * 2);
+    --size-3: calc(var(--size-1) * 3);
+    --size-4: calc(var(--size-1) * 4);
+    --font-scale: 1.25;
+    --font-base: 16px;
+    --font-s: calc(var(--font-base) * 0.8);
+    --font-2: calc(var(--font-base) * pow(var(--font-scale), 1));
+    --font-3: calc(var(--font-base) * pow(var(--font-scale), 3));
+    --font-4: calc(var(--font-base) * pow(var(--font-scale), 4));
+}
 
 //
 // Root Styles
@@ -92,8 +73,8 @@ html {
 body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
-    font-size: $f1;
-    line-height: $b * 2;
+    font-size: var(--font-base);
+    line-height: var(--size-2);
 }
 
 //
@@ -134,7 +115,7 @@ body {
 
     > nav.top-nav,
     > nav.bottom-nav {
-        padding: $b1;
+        padding: var(--size-1);
 
         ul {
             li {
@@ -147,7 +128,7 @@ body {
 
                 a,
                 .sep {
-                    margin-right: $b1;
+                    margin-right: var(--size-1);
                 }
             }
         }
@@ -158,11 +139,11 @@ body {
     }
 
     > footer {
-        padding: $b1;
+        padding: var(--size-1);
         border-top: 1px solid black;
 
         a {
-            color: $link-color;
+            color: var(--link-color);
         }
     }
 }
@@ -172,12 +153,12 @@ body {
 //
 
 .home-page {
-    padding: $b4;
+    padding: var(--size-4);
 
     h1 {
-        font-size: $f4;
-        line-height: $b4;
-        margin-bottom: $b4;
+        font-size: var(--font-4);
+        line-height: var(--size-4);
+        margin-bottom: var(--size-4);
     }
 }
 
@@ -186,12 +167,12 @@ body {
 //
 
 nav.media-nav {
-    $initial: $b * 8;
+    $initial: 96px;
     $final: $initial * 2;
 
     > ul {
         > li {
-            margin-bottom: $b2;
+            margin-bottom: var(--size-2);
 
             > a {
                 display: flex;
@@ -232,9 +213,9 @@ nav.media-nav {
 
                 > span {
                     display: block;
-                    font-size: $f3;
-                    line-height: $b4;
-                    margin-left: $b2;
+                    font-size: var(--font-3);
+                    line-height: var(--size-4);
+                    margin-left: var(--size-2);
                 }
 
                 &:hover {
@@ -273,47 +254,47 @@ nav.media-nav {
 //
 
 .post-list {
-    padding: $b2;
+    padding: var(--size-2);
 
     > p {
-        margin-bottom: $b2;
+        margin-bottom: var(--size-2);
 
         a {
-            color: $link-color;
+            color: var(--link-color);
         }
     }
 
     > h2 {
-        font-size: $f2;
-        line-height: $b3;
-        margin-bottom: $b1;
+        font-size: var(--font-2);
+        line-height: var(--size-3);
+        margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     > ul.posts {
         > li {
-            margin-bottom: $b2;
+            margin-bottom: var(--size-2);
 
             > a {
                 display: block;
-                font-size: $f2;
-                line-height: $b2;
+                font-size: var(--font-2);
+                line-height: var(--size-2);
 
                 color: black;
                 transition: color 0.3s linear;
                 border-bottom: 1px solid transparent;
 
                 &:hover {
-                    color: $link-color;
+                    color: var(--link-color);
                     transition: color 0.3s linear;
                     border-color: #bbb;
                 }
             }
 
             > .info {
-                font-size: $fs;
-                line-height: $b2;
+                font-size: var(--font-s);
+                line-height: var(--size-2);
 
                 > .date {
                     color: #474747;
@@ -346,41 +327,41 @@ nav.media-nav {
         box-shadow: 0 -1px 0 #000 inset;
 
         h1 {
-            font-size: $f4;
-            line-height: $b4;
-            margin: $b2 $b1;
+            font-size: var(--font-4);
+            line-height: var(--size-4);
+            margin: var(--size-2) var(--size-1);
             text-align: center;
         }
     }
 }
 
 article {
-    padding: $b2;
+    padding: var(--size-2);
 
     h1 {
-        font-size: $f3;
-        line-height: $b4;
-        margin-bottom: $b2;
+        font-size: var(--font-3);
+        line-height: var(--size-4);
+        margin-bottom: var(--size-2);
         border-bottom: 1px solid #8a8a8a;
         font-weight: normal;
     }
 
     h2 {
-        font-size: $f2;
-        line-height: $b3;
-        margin-bottom: $b1;
+        font-size: var(--font-2);
+        line-height: var(--size-3);
+        margin-bottom: var(--size-1);
         border-bottom: 1px solid #c6c6c6;
         font-weight: bold;
     }
 
     h3 {
-        font-size: $f1;
-        line-height: $b * 3;
+        font-size: var(--font-base);
+        line-height: var(--size-3);
         font-weight: bold;
     }
 
     sup[role="doc-noteref"] {
-        font-size: $f1;
+        font-size: var(--font-base);
         vertical-align: 0;
 
         &:before {
@@ -402,12 +383,12 @@ article {
     h2,
     h3,
     hr {
-        margin-bottom: $b1;
+        margin-bottom: var(--size-1);
     }
 
     .highlighter-rouge,
     pre {
-        margin-bottom: $b1;
+        margin-bottom: var(--size-1);
     }
 
     p {
@@ -416,11 +397,11 @@ article {
 
     img {
         max-width: 100%;
-        padding: $b1;
+        padding: var(--size-1);
     }
 
     blockquote {
-        margin: $b2;
+        margin: var(--size-2);
         font-style: italic;
     }
 
@@ -432,7 +413,7 @@ article {
         border: 1px solid #f2f2f2;
         background: #fcfcfc;
         overflow-x: auto;
-        padding: $b1;
+        padding: var(--size-1);
 
         line-height: 15px;
 
@@ -460,7 +441,7 @@ article {
     ul,
     ol,
     dl {
-        margin-left: $b2;
+        margin-left: var(--size-2);
     }
 
     dl {
@@ -469,7 +450,7 @@ article {
         }
 
         dd {
-            margin-left: $b2;
+            margin-left: var(--size-2);
         }
     }
 
@@ -505,7 +486,7 @@ article {
     }
 
     a {
-        color: $link-color;
+        color: var(--link-color);
         text-decoration: none;
     }
 
@@ -735,7 +716,7 @@ article {
 //
 
 .chapter-start {
-    margin: $b2 0;
+    margin: var(--size-2) 0;
 
     p {
         text-align: center;
@@ -743,7 +724,7 @@ article {
 }
 
 nav.chapter-nav {
-    margin-top: $b2;
+    margin-top: var(--size-2);
 
     ul {
         margin: 0;
@@ -762,7 +743,7 @@ nav.chapter-nav {
 }
 
 .epigraph {
-    padding: $b2;
+    padding: var(--size-2);
 }
 
 .nameplate p {
@@ -826,8 +807,8 @@ nav.chapter-nav {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
-    padding: $b2;
-    margin-bottom: $b1;
+    padding: var(--size-2);
+    margin-bottom: var(--size-1);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
