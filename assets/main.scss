@@ -62,7 +62,7 @@ $link-color: #b1002e;
 //
 
 // Font sizes.
-$fs: $f * math.div(1, $s);
+$fs: $f * 0.8;
 $f1: $f;
 $f2: $f * $s;
 $f3: $f * $s * $s * $s;
