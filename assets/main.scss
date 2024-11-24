@@ -183,7 +183,7 @@ body {
 //
 
 nav.media-nav {
-    $initial: $size1 * 8;
+    $initial: 96px;
     $final: $initial * 2;
 
     > ul {
