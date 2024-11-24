@@ -8,10 +8,13 @@ card_source: |
 
 Client freedom, by analogy to the [four freedoms][four], is the freedom to
 operate a third-party client to an API. Email, IRC, and RSS are open protocols
-with client freedom. You can read email through a native GUI app, a spartan
-text-only client, and even an Emacs mode.
+with client freedom. You can read email through a [native GUI app][mail], a
+[spartan text-only client][tui], and even an [Emacs mode][em].
 
 [four]: https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms
+[mail]: https://en.wikipedia.org/wiki/Apple_Mail
+[tui]: https://en.wikipedia.org/wiki/Mutt_(email_client)
+[em]: https://en.wikipedia.org/wiki/Gnus
 
 Client freedom peaked in the 90s when most communication was through open
 protocls, and has been on the decline since. I remember, circa 2013, using
