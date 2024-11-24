@@ -26,11 +26,12 @@ as Slack shut down its IRC gateway.
 [xmpp]: https://xmpp.org/
 [otr]: https://otr.cypherpunks.ca/
 
-Twitter, Discord, and most proprietary applications are closed protocols because
-I can't BYOC. Discord [explicitly bans][dis] third-party clients, and so does
-Twitter[^f1]. This has an uncomfortable risk profile where, if you use a
-third-party client, most of the time nothing happens, until the company installs
-a new traffic analysis package and bans your account unappealably.
+In 2024 most protocols we use are closed. Twitter, Discord, and most proprietary
+applications are closed protocols because I can't BYOC. Discord [explicitly
+bans][dis] third-party clients, and so does Twitter[^f1]. This has an
+uncomfortable risk profile where, if you use a third-party client, most of the
+time nothing happens, until the company installs a new traffic analysis package
+and bans your account unappealably.
 
 [dis]: https://x.com/discord/status/1229357198918197248
 
