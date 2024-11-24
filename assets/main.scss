@@ -55,8 +55,6 @@ a {
 $f: 16px;
 // `s` is the font scale; 1.250 (major third).
 $s: 1.25;
-// `b` is the rhythm baseline: 12px.
-$b: 12px;
 
 //
 // Derived Constants
@@ -70,10 +68,10 @@ $f3: $f * $s * $s * $s;
 $f4: $f * $s * $s * $s * $s;
 
 // Sizes.
-$b1: $b;
-$b2: $b * 2;
-$b3: $b * 3;
-$b4: $b * 4;
+$b1: 12px;
+$b2: $b1 * 2;
+$b3: $b1 * 3;
+$b4: $b1 * 4;
 
 //
 // Root Styles
@@ -92,7 +90,7 @@ body {
     font-family: "Times", "Times New Roman", serif;
     font-weight: normal;
     font-size: $f1;
-    line-height: $b * 2;
+    line-height: $b1 * 2;
 }
 
 //
@@ -185,7 +183,7 @@ body {
 //
 
 nav.media-nav {
-    $initial: $b * 8;
+    $initial: $b1 * 8;
     $final: $initial * 2;
 
     > ul {
@@ -374,7 +372,7 @@ article {
 
     h3 {
         font-size: $f1;
-        line-height: $b * 3;
+        line-height: $b3;
         font-weight: bold;
     }
 
