@@ -6,28 +6,30 @@ card_source: |
     “Cover for Neverness, David Zindell, 1988, oil on canvas, trending on ArtStation”, DALL-E, June 2022.
 ---
 
-Email, IRC, and RSS are open protocols because I can bring my own client, and
-this gives me greater freedom in how I use them. Twitter, Discord, and most
-proprietary applications are closed protocols because I can't BYOC. Discord
-[explicitly bans][dis] third-party clients, and so does Twitter[^f1]. This has
-an uncomfortable risk profile where, if you use a third-party client, most of
-the time nothing happens, until the company installs a new traffic analysis
-package and bans your account unappealably.
-
-[dis]: https://x.com/discord/status/1229357198918197248
-
 Client freedom, by analogy to the [four freedoms][four], is the freedom to
-operate a third-party client to an API. This peaked in the 90s when most
-communication was through email, IRC, and Usenet, and has been on the decline
-ever since. I remember, circa 2013, using Facebook Messenger over [Pidgin][pid],
-through their [XMPP][xmpp] gateway, and with [OTR][otr] messaging turned
-on. Then Facebook shut down its XMPP gateway, as Slack shut down its IRC
-gateway.
+operate a third-party client to an API. Email, IRC, and RSS are open protocols
+with client freedom. You can read email through a native GUI app, a spartan
+text-only client, and even an Emacs mode.
 
 [four]: https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms
+
+Client freedom peaked in the 90s when most communication was through open
+protocls, and has been on the decline since. I remember, circa 2013, using
+Facebook Messenger over [Pidgin][pid], through their [XMPP][xmpp] gateway, and
+with [OTR][otr] messaging turned on. Then Facebook shut down its XMPP gateway,
+as Slack shut down its IRC gateway.
+
 [pid]: https://www.pidgin.im/
 [xmpp]: https://xmpp.org/
 [otr]: https://otr.cypherpunks.ca/
+
+Twitter, Discord, and most proprietary applications are closed protocols because
+I can't BYOC. Discord [explicitly bans][dis] third-party clients, and so does
+Twitter[^f1]. This has an uncomfortable risk profile where, if you use a
+third-party client, most of the time nothing happens, until the company installs
+a new traffic analysis package and bans your account unappealably.
+
+[dis]: https://x.com/discord/status/1229357198918197248
 
 I wish Twitter in particular had client freedom. I would change literally
 everything about the experience:
