@@ -19,7 +19,7 @@ package and bans your account unappealably.
 Client freedom, by analogy to the [four freedoms][four], is the freedom to
 operate a third-party client to an API. This peaked in the 90s when most
 communication was through email, IRC, and Usenet, and has been on the decline
-ever since. I remember c. 2013 using Facebook Messenger over [Pidgin][pid],
+ever since. I remember, circa 2013, using Facebook Messenger over [Pidgin][pid],
 through their [XMPP][xmpp] gateway, and with [OTR][otr] messaging turned
 on. Then Facebook shut down its XMPP gateway, as Slack shut down its IRC
 gateway.
