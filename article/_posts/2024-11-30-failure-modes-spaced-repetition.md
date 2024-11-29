@@ -27,6 +27,7 @@ summary: And how to overcome them.
 
 - Maybe the reason you can't make spaced repetition into a habit is the same reason you can't seem to form any good habits—namely, you have ADHD.
 - In this case, it's best to talk to a psychiatrist and get things addressed rather than keep beating your head against the wall.
+- Biological problems should be addressed at the level of biology.
 
 # Cards not atomic enough.
 
