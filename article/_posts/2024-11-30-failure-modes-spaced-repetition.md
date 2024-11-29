@@ -15,7 +15,8 @@ summary: And how to overcome them.
 # Habit Formation Failure
 
 - Probably the most common failure mode.
-- People use SR then break off after 2 weeks and therefore failing to remember anything long-term.
+- People discover SR, go mad with power, put everything in, use it for 2 weeks and then break off, therefore failing to remember anything long-term.
+
 
 # Being Unhappy:
 
