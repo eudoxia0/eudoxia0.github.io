@@ -88,3 +88,5 @@ summary: And how to overcome them.
 - Also, the problem of using other people's decks is you can't learn from the decks. You have to understand first, then memorize. And understanding is best done in literally any other format than reading poorly-ordered SR decks, mostly because there's no canonical order to the cards.
 
 # Low Effort Cards
+
+- recall effort correlated with future recall
