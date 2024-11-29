@@ -16,7 +16,9 @@ summary: And how to overcome them.
 
 - Probably the most common failure mode.
 - People discover SR, go mad with power, put everything in, use it for 2 weeks and then break off, therefore failing to remember anything long-term.
-
+- Make it a habit _first_, ideally with a small number of relatively unimportant cards.
+- If you use a todo list app like Todoist or Reminders, just a daily recurring task to do the reviews. Or you can put a recurring calendar task. 15m is more than enough.
+- When you're able to do it regularly, then it's time to load up on cards.
 
 # Being Unhappy:
 
