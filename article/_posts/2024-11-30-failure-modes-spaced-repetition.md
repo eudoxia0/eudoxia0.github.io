@@ -3,11 +3,6 @@ title: Failure Modes in Spaced Repetition
 summary: And how to overcome them.
 ---
 
-- Taxonomy
-  - Structural Issues
-  - Behavioural Issues
-  - Technical Issues
-
 - Going Too Fast
   - Failing to fully mentally represen the card's content before answering.
   - Also, if you get most things right, it just becomes a habit to click "remembered", and then recall the information.
