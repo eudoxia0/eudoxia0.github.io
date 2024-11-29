@@ -35,7 +35,9 @@ summary: And how to overcome them.
 
 - Remember the hierarchy of effectiveness from Gwern's posts.
 
-# Memorizing before understanding.
+# Memorizing before understanding
+
+- does not work
 
 # "Inbox Overhang"
 
