@@ -22,6 +22,13 @@ summary: And how to overcome them.
 - If your todo list is just a list of things you hate doing, you will become averse to it.
 - Analogously, if your reviews are mostly things you don't care about, or don't properly understand, you will become averse to it.
 - And if you hate it, it's very easy to just hit spacebar for the entire review, mark everything "remembered" without recalling anything, and fuck up the review schedule of every card, just to get it over with.
+- This is ultimately counterproductive.
+- You might want to introspect into why you're doing this.
+- But one solution is to try to do it on your own terms.
+  - You are allowed to add "useless" but fun things to the deck.
+  - Things you care about even if some part of you thinks you shouldn't.
+  - My deck has poetry, trivia, archaic English words I will never use.
+  - You can read an RPG rulebook and put the rules and the lore in as flashcards. Why not? If it takes some of the weight off, then it's worth doing.
 
 # Undiagnosed ADHD
 
