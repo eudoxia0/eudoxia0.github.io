@@ -24,7 +24,9 @@ And so the trend in UI design, for the past 15y, has been towards less informati
 
 # First-Class Objects
 
-Calibre has a button that brings up a table of background jobs:
+[Calibre] has a button that brings up a table of background jobs:
+
+[Calibre]: https://calibre-ebook.com/
 
 ![A screenshot of a Calibre window, showing a list of jobs.](/assets/content/ephemerality-in-user-interfaces/calibre.webp)
 
