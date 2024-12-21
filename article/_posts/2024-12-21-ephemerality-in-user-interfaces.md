@@ -36,7 +36,9 @@ You can watch the progress of a job, kill it, and open its logfile. Jobs are fir
 
 A common antipattern nowadays is where you can infer the existence of some entity, but you can't interact with it. You are screened from it.
 
-I had a problem with iMessage where I uploaded a photo, and sent some messages, but noticed the messages weren't sending. Then I saw this thin progress bar at the top, stuck at 95%, and thought: the image upload is stuck, and everything is queued up behind it. But I can't cancel the upload, because the progress bar doesn't have a cancel button, it doesn't show a button on hover, and you can't click on it to bring up a menu.
+I had a problem with [iMessage] where I uploaded a photo, and sent some messages, but noticed the messages weren't sending. Then I saw this thin progress bar at the top, stuck at 95%, and thought: the image upload is stuck, and everything is queued up behind it. But I can't cancel the upload, because the progress bar doesn't have a cancel button, it doesn't show a button on hover, and you can't click on it to bring up a menu.
+
+[iMessage]: https://en.wikipedia.org/wiki/IMessage
 
 There is an entity: "asynchronous job to upload IMG_0451.jpg". But I can't touch it. I'm on the wrong side of an event horizon: I can see it, but it can't see me.
 
