@@ -46,7 +46,9 @@ Calibre is the work of one Kovid Goyal. iMessage is the work of a company with a
 
 # Case Study: Reminders
 
-In Reminders, the properties of a task are visible only in this fragile popover. Touch anything and it goes away.
+In [Reminders], the properties of a task are visible only in this fragile popover. Touch anything and it goes away.
+
+[Reminders]: https://en.wikipedia.org/wiki/Reminders_(Apple)
 
 ![A screenshot of the reminders app, showing a list of tasks, and a popover showing a task's details.](/assets/content/ephemerality-in-user-interfaces/reminders1.webp)
 
