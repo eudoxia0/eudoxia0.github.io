@@ -73,6 +73,6 @@ But, crucially, you can see the table of subtasks. From a task's page, you can n
 
 In the real world, tasks can be broken down, recursively, to any depth. Linear supports this naturally. In Reminders, you are constantly fighting against the system. To break _down_ a task you have to move it one level _up_, into a list, to break down a list you have to move it up into a folder of lists, and so on.
 
-Linear beats Reminders because it has the [right _ontology_][onto]: the concepts (tasks, projects, views), properties (completion states, due dates), and relations (child of, parent of, blocked by) are fit for purpose. And because the UI exposes the ontology without compromises. The vocabulary of the ontology and that of the UI are one and the same: a task in the UI is the same as a task in the domain of discourse of Linear.
+Linear beats Reminders because it has [the right _ontology_][onto]: the concepts (tasks, projects, views), properties (completion states, due dates), and relations (child of, parent of, blocked by) are fit for purpose. And because the UI exposes the ontology without compromises. The vocabulary of the ontology and that of the UI are one and the same: a task in the UI is the same as a task in the domain of discourse of Linear.
 
 [onto]: https://meaningness.substack.com/p/software-purpose-nebulosity
