@@ -38,7 +38,7 @@ I had a problem with [iMessage] where I uploaded a photo, and sent some messages
 
 There is an entity: "asynchronous job to upload IMG_0451.jpg". But I can't touch it. I'm on the wrong side of an event horizon: I can see it, but it can't see me.
 
-Calibre is the work of one [Kovid Goyal][kovid]. iMessage is the work of a company with a market cap of $3.85 \times 10^{12}$ USD. Which is more functional?
+Calibre is the work of one [Kovid Goyal][kovid]. iMessage is the work of a company with a market cap of 3.85×10<sup>12</sup> USD. Which is more functional?
 
 # Case Study: Reminders
 
