@@ -26,8 +26,6 @@ And so the trend in UI design, for the past 15y, has been towards less informati
 
 [Calibre] has a button that brings up a table of background jobs:
 
-[Calibre]: https://calibre-ebook.com/
-
 ![A screenshot of a Calibre window, showing a list of jobs.](/assets/content/ephemerality-in-user-interfaces/calibre.webp)
 
 You can watch the progress of a job, kill it, and open its logfile. Jobs are first-class objects: real and graspable.
@@ -38,8 +36,6 @@ A common antipattern nowadays is where you can infer the existence of some entit
 
 I had a problem with [iMessage] where I uploaded a photo, and sent some messages, but noticed the messages weren't sending. Then I saw this thin progress bar at the top, stuck at 95%, and thought: the image upload is stuck, and everything is queued up behind it. But I can't cancel the upload, because the progress bar doesn't have a cancel button, it doesn't show a button on hover, and you can't click on it to bring up a menu.
 
-[iMessage]: https://en.wikipedia.org/wiki/IMessage
-
 There is an entity: "asynchronous job to upload IMG_0451.jpg". But I can't touch it. I'm on the wrong side of an event horizon: I can see it, but it can't see me.
 
 Calibre is the work of one Kovid Goyal. iMessage is the work of a company with a market cap of $3.85 \times 10^{12}$ USD. Which is more functional?
@@ -47,8 +43,6 @@ Calibre is the work of one Kovid Goyal. iMessage is the work of a company with a
 # Case Study: Reminders
 
 In [Reminders], the properties of a task are visible only in this fragile popover. Touch anything and it goes away.
-
-[Reminders]: https://en.wikipedia.org/wiki/Reminders_(Apple)
 
 ![A screenshot of the reminders app, showing a list of tasks, and a popover showing a task's details.](/assets/content/ephemerality-in-user-interfaces/reminders1.webp)
 
@@ -64,8 +58,6 @@ You can't navigate to a task because there is no free-standing task object in th
 
 In [Linear], clicking on a task takes you to a distinct page for that task. It has a URL, and takes up the entire screen. All the properties of a task, and the task's change history, are visible.
 
-[Linear]: https://linear.app/
-
 ![A screenshot of Linear showing a task page, including the table of the task's subtasks.](/assets/content/ephemerality-in-user-interfaces/linear1.webp)
 ![A screenshot of Linear showing the task page for one of the subtasks in the previous image. The user interface looks identical.](/assets/content/ephemerality-in-user-interfaces/linear2.webp)
 
@@ -75,5 +67,9 @@ In the real world, tasks can be broken down, recursively, to any depth. Linear s
 
 Linear beats Reminders because it has [the right _ontology_][onto]: the concepts (tasks, projects, views), properties (completion states, due dates), and relations (child of, parent of, blocked by) are fit for purpose. And because the UI exposes the ontology without compromises. The [vocabulary] of the ontology and that of the UI are one and the same: a task in the UI is the same as a task in the domain of discourse of Linear.
 
+[Calibre]: https://calibre-ebook.com/
+[iMessage]: https://en.wikipedia.org/wiki/IMessage
+[Reminders]: https://en.wikipedia.org/wiki/Reminders_(Apple)
+[Linear]: https://linear.app/
 [onto]: https://meaningness.substack.com/p/software-purpose-nebulosity
 [vocabulary]: https://en.wikipedia.org/wiki/Domain_of_discourse
