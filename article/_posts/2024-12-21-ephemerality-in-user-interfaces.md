@@ -62,7 +62,9 @@ You can't navigate to a task because there is no free-standing task object in th
 
 # Case Study: Linear
 
-In Linear, clicking on a task takes you to a distinct page for that task. It has a URL, and takes up the entire screen. All the properties of a task, and the task's change history, are visible.
+In [Linear], clicking on a task takes you to a distinct page for that task. It has a URL, and takes up the entire screen. All the properties of a task, and the task's change history, are visible.
+
+[Linear]: https://linear.app/
 
 ![A screenshot of Linear showing a task page, including the table of the task's subtasks.](/assets/content/ephemerality-in-user-interfaces/linear1.webp)
 ![A screenshot of Linear showing the task page for one of the subtasks in the previous image. The user interface looks identical.](/assets/content/ephemerality-in-user-interfaces/linear2.webp)
