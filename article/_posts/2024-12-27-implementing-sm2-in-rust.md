@@ -43,7 +43,7 @@ $$
 
 As a function of correct repetitions and EF:
 
-![](/assets/content/implementing-sm2-in-rust/interval.png)
+![A plot of showing how an item's interval evolves as a function of the number of correct repetitions, for different values of EF. Higher EF values grow faster.](/assets/content/implementing-sm2-in-rust/interval.png)
 
 To test an item, the user is shown the question, then they mentally recall the answer, and reveal the actual answer. Then the user rates their performance by selecting the **quality** of their response from this list:
 
