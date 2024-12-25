@@ -81,7 +81,7 @@ $$
 
 Qualitatively, $f(q)$ looks like this:
 
-![](/assets/content/implementing-sm2-in-rust/ef.png)
+![A plot showing the magnitude of change to the EF as a function of quality. At q<4, the magnitude is negative, but a minimum change of -0.8 at q=0. At q=4, the magnitude is zero. At q=5, the magnitude is 0.1.](/assets/content/implementing-sm2-in-rust/ef.png)
 
 So for anything less than perfect recall the EF decreases (and so the next interval is shorter), and only perfect recall makes a card less difficult.  At $q=4$ nothing changes.
 
