@@ -35,7 +35,7 @@ Finally, I took the top 30 conversations by message count and manually classifie
 
 With the categories being:
 
-- "Advice" is me trying to work something out: overcome anxiety, aversion, decision paralysis. Claude is really good at helping here, mostly because thinking quickly saturates: when you've thought about a problem for five minutes, you've had all the thoughts you're gonna have, and it's time to talk to someone else. Claude let's me sample fresh perspectives and possible actions I had not thought of.
+- "Advice" is me trying to work something out: overcome anxiety, aversion, decision paralysis. Claude is really good at helping here, mostly because thinking quickly saturates: when you've thought about a problem for five minutes, you've had all the thoughts you're gonna have, and it's time to talk to someone else. Claude lets me sample fresh perspectives and possible actions I had not thought of.
 - "Exploration" is exploring ideas together, including both vague open-ended conversations, and more concretely trying to learn something.
 - "Code" is roughly 50% asking Claude to write something for me, and 50% using Claude as a rubber ducky: talking possibilities, tradeoffs, etc.
 - "Writing" is asking Claude to critique something I wrote.
