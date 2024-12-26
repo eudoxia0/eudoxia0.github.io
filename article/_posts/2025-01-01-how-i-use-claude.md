@@ -57,7 +57,7 @@ And there's a virtuous cycle where, every time Claude excels at something, the "
 
 ## Affect
 
-But then there's the affective explanation: talking to Claude feels like using the [Primer][da]. And though there is no Miranda on the other side, it is no less magical.
+Then there's the affective explanation: talking to Claude feels like using the [Primer][da]. And though there is no Miranda on the other side, it is no less magical.
 
 Claude is genuinely engaging. Exploring ideas with Claude is _fun_. You can have genuinely interesting, intellectual conversations with Claude. It knows everything, so you can use highly idiosyncratic language, or draw analogies from anywhere, and Claude will keep pace.
 
