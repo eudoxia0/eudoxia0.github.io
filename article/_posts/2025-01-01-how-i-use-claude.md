@@ -49,7 +49,7 @@ What changed after 3.6, that before I had to actively try to find uses for Claud
 
 ## Performance
 
-If we define performance as how likely I am to be satisfied by Claude's attempt at a task, then 3.6 is much better. There isn't one big, loud way in which it is better---which, presumably, is why Anthropic calls it "Claude 3.5 Sonnet (new)" instead of bumping up the version number. Rather, it's like a thousand subtleties that add up to a feeling of "holy shit".
+If we define performance as how likely I am to be satisfied by Claude's attempt at a task, then 3.6 is much better. Not in one big, obvious way---which is presumably why Anthropic calls it "Claude 3.5 Sonnet (new)" instead of bumping up the version number. Rather, it's like a thousand subtleties that add up to a feeling of "holy shit".
 
 3.6 is also more reliable than 3.5. Before, when using LLMs as tutors, I was always on guard for hallucinations. And the constant skepticism is a big source of friction. The first thing I noticed after the 3.6 release is that hallucination is basically solved for major topics (though Claude will make mistakes for e.g. the minutiae of some Python library). So if you want to learn some well-trod subject, like French or special relativity, Claude is great.
 
