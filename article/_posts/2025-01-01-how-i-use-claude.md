@@ -13,7 +13,7 @@ The most striking change is the cumulative amount of words I have written to Cla
 
 ![A plot of the cumulative amount of words I've written to Claude over time. The x-axis is time, discretized into weeks. The x-axis begins on April 2024 and ends in December 2024. The y-axis is the word count, ranging from 0 to 70,000. The curve is flat at the start, shows slow (and slowing) growth in the middle of the year, and goes up much faster after late October 2024. A red vertical line indicates the release date of Claude 3.6.](/assets/content/how-i-use-claude/cw.png)
 
-On a weekly basis; conversations, messages, and words written to Claude show a visible discontinuity:
+On a weekly basis, conversations, messages, and words written to Claude show a visible discontinuity:
 
 ![A plot of conversations per week. Same x-axis as above. The y-axis ranges from 0 to 60. There's a bump around April with a peak at ~45 conversations, then a gradual slowdown. In the middle of the year, the numbers sit at around ten conversations a week. After the release of Claude 3.6, the number of conversations grows markedly.](/assets/content/how-i-use-claude/cpw.png)
 
