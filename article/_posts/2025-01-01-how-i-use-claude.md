@@ -55,7 +55,7 @@ If we define performance as how likely I am to be satisfied by Claude's attempt 
 
 For this reason I often use Claude where it is not a natural fit, like for web search. Googling something feels like wading through an ocean of sewage. Asking Claude is always at least okay, and often pleasant. So I don't mind that I'm asking a compressed, nine month old snapshot of the web. Had I the time I'd [give][tool] Claude access to [Kagi] or [DDG], and never use Google again.
 
-And there's a virtuous cycle where, every time Claude excels at something, the "use Claude" heuritic gets bumped up, leading to a virtuous cycle of using Claude in more and more adjacent tasks. And so the next use of Claude suggests itself.
+And there's a virtuous cycle where, every time Claude excels at something, the "use Claude" heuristic gets bumped up, leading to a virtuous cycle of using Claude in more and more adjacent tasks. And so the next use of Claude suggests itself.
 
 ## Affect
 
