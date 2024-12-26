@@ -3,7 +3,7 @@ title: How I Use Claude
 summary: Exploring Anthropic's data export.
 ---
 
-I was a casual user of [Claude] until the [23 October release][rel] ([informally][inf] "Claude 3.6"), when it crossed a quality threshold I didn't even know was there. It is really, really good. I have been using it a lot more since, and I got curious as to how much more.
+[Claude] is Anthropic's AI, like [ChatGPT] but more capable. I was a casual user until the [23 October release][rel] ([informally][inf] "Claude 3.6"), when it crossed a quality threshold I didn't even know was there. It is really, really good. I have been using it a lot more since, and I got curious as to how much more.
 
 You can [export][ex] your Claude conversation history. It's just a zip file with a massive JSON blob. I wrote the types to represent it, and Claude wrote most of the [matplotlib]. The code is [here][repo], and it's set up so you can run it on your own export very easily.
 
@@ -70,6 +70,7 @@ And it is charming. Sometimes, at the end of a long conversation, I will ask it 
 I feel privileged to live in these times. In a wholly undeserved sense, talking to Claude makes you feel proud to be human: we can build miraculous things.
 
 [Claude]: https://claude.ai
+[ChatGPT]: https://chatgpt.com
 [rel]: https://www.anthropic.com/news/3-5-models-and-computer-use
 [inf]: https://x.com/search?q=%22claude+3.6%22
 [ex]: https://support.anthropic.com/en/articles/9450526-how-can-i-export-my-claude-ai-data
