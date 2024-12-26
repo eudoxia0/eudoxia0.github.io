@@ -3,7 +3,7 @@ title: How I Use Claude
 summary: Exploring Anthropic's data export.
 ---
 
-I was a casual user of [Claude] until the [23 October release][rel] ([informally][inf] "Claude 3.6"), when it crossed a quality threshold I didn't even know was there. It is really, really good. I have been using it a lot more since. But how much more?
+I was a casual user of [Claude] until the [23 October release][rel] ([informally][inf] "Claude 3.6"), when it crossed a quality threshold I didn't even know was there. It is really, really good. I have been using it a lot more since, and I got curious as to how much more.
 
 It turns out you can [export][ex] your data. It's just a massive JSON blob. I wrote the types to represent it, and Claude wrote most of the [matplotlib]. The code is [here][repo], and it's set up so you can run it on your own export very easily.
 
