@@ -69,16 +69,16 @@ And it is charming. Sometimes, at the end of a long conversation, I will ask it 
 
 I feel privileged to live in these times. In a wholly undeserved sense, talking to Claude makes you feel proud to be human: we can build miraculous things.
 
-[Claude]: https://claude.ai
 [ChatGPT]: https://chatgpt.com
-[rel]: https://www.anthropic.com/news/3-5-models-and-computer-use
-[inf]: https://x.com/search?q=%22claude+3.6%22
-[ex]: https://support.anthropic.com/en/articles/9450526-how-can-i-export-my-claude-ai-data
-[matplotlib]: https://matplotlib.org/
+[Claude]: https://claude.ai
+[DDG]: https://duckduckgo.com/
+[Kagi]: https://kagi.com/
 [ari]: https://en.wikipedia.org/wiki/Aristarchus_of_Samos
 [da]: https://en.wikipedia.org/wiki/The_Diamond_Age
+[ex]: https://support.anthropic.com/en/articles/9450526-how-can-i-export-my-claude-ai-data
+[inf]: https://x.com/search?q=%22claude+3.6%22
+[matplotlib]: https://matplotlib.org/
+[rel]: https://www.anthropic.com/news/3-5-models-and-computer-use
 [repo]: https://github.com/eudoxia0/claude-export
-[Kagi]: https://kagi.com/
-[DDG]: https://duckduckgo.com/
 [tool]: https://docs.anthropic.com/en/docs/build-with-claude/tool-use
 [toys]: https://x.com/zetalyrae/status/1855813597131096547
