@@ -47,11 +47,15 @@ I remember, halfway through the year, feeling guilty for paying $20 a month for 
 
 What changed after 3.6, that before I had to actively try to find uses for Claude, and now I'm mired in more possibilities than I have time to pursue?
 
-There's a behaviourist explanation: every time Claude excels at something, the "use Claude" heuritic gets bumped up, leading to a virtuous cycle of using Claude in more and more adjacent tasks. And so the next use of Claude suggests itself.
+## Performance
 
-There's a performance explanation: Claude 3.6 is much more reliable than 3.5. Before, when using LLMs as tutors, I was always on guard for hallucinations. And the constant skepticism is a big source of friction. The first thing I noticed after the 3.6 release is that hallucination is basically solved for major topics (though Claude will make mistakes for e.g. the minutiae of some Python library). So if you want to learn some well-trod subject, like French or special relativity, Claude is great.
+Claude 3.6 is much more reliable than 3.5. Before, when using LLMs as tutors, I was always on guard for hallucinations. And the constant skepticism is a big source of friction. The first thing I noticed after the 3.6 release is that hallucination is basically solved for major topics (though Claude will make mistakes for e.g. the minutiae of some Python library). So if you want to learn some well-trod subject, like French or special relativity, Claude is great.
 
 For this reason I often use Claude where it is not a natural fit, like for web search. Googling something feels like wading through an ocean of sewage. Asking Claude is always at least okay, and often pleasant. So I don't mind that I'm asking a compressed, nine month old snapshot of the web. Had I the time I'd [give][tool] Claude access to [Kagi] or [DDG], and never use Google again.
+
+And there's a virtuous cycle where, every time Claude excels at something, the "use Claude" heuritic gets bumped up, leading to a virtuous cycle of using Claude in more and more adjacent tasks. And so the next use of Claude suggests itself.
+
+## Affect
 
 But then there's the affective explanation: talking to Claude feels like using the [Primer][da]. And though there is no Miranda on the other side, it is no less magical.
 
