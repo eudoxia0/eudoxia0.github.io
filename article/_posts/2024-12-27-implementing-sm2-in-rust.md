@@ -224,9 +224,15 @@ fn efp(ef: Ease, q: Quality) -> Ease {
 }
 ```
 
+---
+
+_Edit 2024-12-28_: correction, Mochi doesn't use SM-2. I was reading their old [FAQ][faqold], which as of right now is still indexed on Google. The [current FAQ][faq] says they use a simpler system where the interval is multiplied by a number $>1$ on success and by a number in $[0,1]$ on failure.
+
 [Mochi]: https://mochi.cards/
 [eh]: https://web.archive.org/web/20201127173107/https://massimmersionapproach.com/table-of-contents/anki/low-key-anki/the-ease-factor-problem/
 [repo]: https://github.com/eudoxia0/sm2
 [sm2]: https://super-memory.com/english/ol/sm2.htm
 [sm]: https://en.wikipedia.org/wiki/SuperMemo
 [sr]: /article/effective-spaced-repetition
+[faqold]: https://web.archive.org/web/20240000000000*/https://mochi.cards/faq.html
+[faq]: https://mochi.cards/docs/faq/
