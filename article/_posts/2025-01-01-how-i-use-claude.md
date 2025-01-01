@@ -85,4 +85,4 @@ I feel privileged to live in these times. In a wholly undeserved sense, talking 
 
 # Footnotes
 
-[^hal]: Ironically the one situation I've found where Claude reliably hallucinates is when I ask questions about a large and novel text that's entirely in context. Which is the opposite of what I would expect to see. Maybe this is to do with how Anthropic scaled attention to such long contexts.
+[^hal]: Ironically the one situation I've found where Claude noticeably hallucinates is when I ask questions about a large and novel text that's entirely in context. Which is the opposite of what I would expect to see. Maybe this is to do with how Anthropic scaled attention to such long contexts.
