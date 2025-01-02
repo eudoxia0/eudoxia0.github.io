@@ -537,7 +537,8 @@ fn delta_d(g: Grade) -> f64 {
 
 # See Also
 
-- Description of the algorithm: <https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm>
+- [Description of the algorithm](https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm)
+- [FSRS visualizer](https://open-spaced-repetition.github.io/anki_fsrs_visualizer/)
 
 [sm2]: /article/implementing-sm2-in-rust
 [Anki]: https://apps.ankiweb.net/
