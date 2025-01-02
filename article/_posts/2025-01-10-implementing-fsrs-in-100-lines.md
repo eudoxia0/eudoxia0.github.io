@@ -70,3 +70,39 @@ impl From<Grade> for f64 {
     }
 }
 ```
+
+# Retrievability
+
+TODO define item
+
+The retrievability of an item is approximated by:
+
+$$
+R(t) = \left( 1 + F\frac{t}{S} \right)^C
+$$
+
+Where $t$ is time in days since the last review, $S$ is the stability of the item, and $F$ and $C$ are constants to control the shape of the curve:
+
+$$
+\begin{align*}
+F &= \frac{19}{81} \\
+C &= -0.5
+\end{align*}
+$$
+
+This allows us to predict how retrievability decays over time as a function of time and stability. In code:
+
+```rust
+type T = f64;
+
+const F: f64 = 19.0 / 81.0;
+const C: f64 = -0.5;
+
+fn retrievability(t: T, s: S) -> R {
+    (1.0 + F * (t / s)).powf(C)
+}
+```
+
+Note: at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen an item, we have a 100% chance of recalling it.
+
+TODO charts
