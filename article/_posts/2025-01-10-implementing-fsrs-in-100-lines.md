@@ -106,3 +106,52 @@ fn retrievability(t: T, s: S) -> R {
 Note: at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen an item, we have a 100% chance of recalling it.
 
 TODO charts
+
+# Review Intervals
+
+The equation for the review interval is found by manipulating the definition of retrievability.
+
+Start from this:
+
+$$
+R = \left(1 + F\frac{t}{S}\right)^C
+$$
+
+The idea is that this equation gives us "retrievability at time $t$", but we can rearrange it to instead find "time at which retrievability decays to a given value". That value is the **desired retention**: the probability that you will recall the card on review.
+
+The idea of FSRS is to schedule items so that review happens when predicted retrievability hits desired retention. If desired retention is $0.9$, and you do all your reviews on schedule, then the probability that you will recall an item will always oscillate between 100% and 90%. Which is pretty good.
+
+So, we want to express $t$ in terms of $R$. So we exponentiate both sides by $1/C$:
+
+$$
+R^{1/C} = 1 + F\frac{t}{S}
+$$
+
+And move everything left:
+
+$$
+\begin{align*}
+R^{1/C} - 1 &= F\frac{t}{S} \\
+S(R^{1/C} - 1) &= Ft \\
+\frac{S}{F}(R^{1/C} - 1) &= t
+\end{align*}
+$$
+And rename things to make this clearer:
+
+$$
+I(R_d) = \frac{S(R_d^{(1/C)} - 1)}{F}
+$$
+Given the desired retention, and the stability of an item, we can calculate when it should next be reviewed.
+
+```rust
+fn interval(r_d: R, s: S) -> T {
+    (s / F) * (r_d.powf(1.0 / C) - 1.0)
+}
+```
+
+TODO charts
+
+Two things to note:
+
+- At higher $R_d$, reviews will be more frequent, which is what we expect.
+- Stability is defined as the interval where $R$ will equal $0.9$. So, for $R_d = 0.9$, $I(S) = S$ by definition, and so the line is at 45deg.
