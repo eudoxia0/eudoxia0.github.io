@@ -334,7 +334,7 @@ $$
 
 In Rust:
 
-```{python}
+```rust
 fn d_0(g: Grade) -> D {
     let g: f64 = g.into();
     clamp_d(W[4] - f64::exp(W[5] * (g - 1.0)) + 1.0)
@@ -359,7 +359,7 @@ D'(D, G)       &= D + \Delta D(G) \left( \frac{10 - D}{9} \right) \\
 \end{align*}
 $$
 
-```{python}
+```rust
 fn difficulty(d: D, g: Grade) -> D {
     clamp_d(W[7] * d_0(Grade::Easy) + (1.0 - W[7]) * dp(d, g))
 }
