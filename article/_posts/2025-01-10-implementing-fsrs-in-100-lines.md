@@ -287,12 +287,12 @@ $$
 Where:
 
 $$
-\begin{align}
+\begin{align*}
 d_f &= D^{-w_{12}} \\
 s_f &= ((S+1)^{w_{13}} - 1) \\
 r_f &= e^{w_{14}(1-R)} \\
 c_f &= w_{11} \\
-\end{align}
+\end{align*}
 $$
 
 ```rust
