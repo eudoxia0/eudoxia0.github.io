@@ -136,11 +136,13 @@ S(R^{1/C} - 1) &= Ft \\
 \frac{S}{F}(R^{1/C} - 1) &= t
 \end{align*}
 $$
+
 And rename things to make this clearer:
 
 $$
 I(R_d) = \frac{S(R_d^{(1/C)} - 1)}{F}
 $$
+
 Given the desired retention, and the stability of an item, we can calculate when it should next be reviewed.
 
 ```rust
