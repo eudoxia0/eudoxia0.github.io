@@ -278,7 +278,9 @@ $$
 S'(D, S, R) = \min(S_f, S)
 $$
 
-$\min$ is there to ensure that stability at failure cannot be greater than $S$. $S_f$, stability on failure, is defined by:
+$\min$ is there to ensure that stability at failure cannot be greater than $S$.
+
+$S_f$, stability on failure, is defined by:
 
 $$
 S_f = d_fs_fr_fc_f
