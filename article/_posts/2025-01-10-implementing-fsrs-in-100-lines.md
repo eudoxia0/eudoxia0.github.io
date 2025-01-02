@@ -33,3 +33,40 @@ type S = f64;
 ```rust
 type D = f64;
 ```
+
+# The Main Loop
+
+- For each card schedule today:
+	- Show the user the question (the front of the card).
+	- User mentally recalls the answer
+	- User flips the card.
+	- User rates their answer by giving it a grade.
+	- The system updates the card's stability and difficulty. It calculates the next review interval, and schedules the card for that day.
+
+When a user reviews a flashcard, they are shown a question, mentally recall the answer, flip the card, and rate their recall performance. This rating is called the **grade**, and it's one of:
+
+- 1: forgot the answer ("forgot").
+- 2: recalled the answer, but it was hard ("hard")
+- 3: recalled the answer ("good")
+- 4: recalled the answer, and it was easy ("easy")
+
+```rust
+#[derive(Clone, Copy, PartialEq, Debug)]
+enum Grade {
+    Forgot,
+    Hard,
+    Good,
+    Easy,
+}
+
+impl From<Grade> for f64 {
+    fn from(g: Grade) -> f64 {
+        match g {
+            Grade::Forgot => 1.0,
+            Grade::Hard => 2.0,
+            Grade::Good => 3.0,
+            Grade::Easy => 4.0,
+        }
+    }
+}
+```
