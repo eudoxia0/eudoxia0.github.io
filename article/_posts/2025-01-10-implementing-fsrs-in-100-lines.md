@@ -155,3 +155,163 @@ Two things to note:
 
 - At higher $R_d$, reviews will be more frequent, which is what we expect.
 - Stability is defined as the interval where $R$ will equal $0.9$. So, for $R_d = 0.9$, $I(S) = S$ by definition, and so the line is at 45deg.
+
+# Updating Stability
+
+This section describes how an item's stability is updated after a review.
+
+## First Time
+
+A card that has never been reviewed has no stability.
+
+The first time the user reviews a card, its initial stability is:
+
+$$
+S_0(G) = w_{G-1}
+$$
+
+That is, the parameters $w_0$ to $w_3$ represent the initial values of stability. In code:
+
+```rust
+fn s_0(g: Grade) -> S {
+    match g {
+        Grade::Forgot => W[0],
+        Grade::Hard => W[1],
+        Grade::Good => W[2],
+        Grade::Easy => W[3],
+    }
+}
+```
+
+## Stability on Success
+
+Stability is updated differently depending on whether the user forgot ($G=1$) or remembered ($G \in [2,3,4]$) the item. The equation is very big, so I'm going to break it down hierarchically.
+
+After a review, stability is updated by multiplying it with a scaling factor $\alpha$:
+
+$$
+S'(D, S, R, G) = S\alpha
+$$
+
+Where:
+
+$$
+\alpha = 1 + t_d t_s t_r h(G) b(G) c
+$$
+
+The addition is because some of the multiplicative terms may be zero, and in that case, $\alpha=1$.
+
+$t_d$ is the "difficulty penalty", defined by:
+
+$$
+t_d = 11-D
+$$
+
+Harder items (higher $D$) increase stability more slowly. The highest difficulty is $D=10$, here, $d=1$ and therefore difficulty provides no boost. This is intuitive: harder items are harder to consolidate.
+
+$t_s$ determines how today's stability affects the next stability:
+
+$$
+t_s = S^{-w_9}
+$$
+
+If $S$ is high, updates will be smaller. The more stable a memory is, the harder it is to make it more stable. Memory stability saturates.
+
+$t_r$ is about memory saturation:
+
+$$
+t_r = e^{w_{10}(1-R)} - 1
+$$
+
+If $R=1$ (100% recall) then $t_3=0$. So $\alpha$ as a whole is $1$, i.e. stability does not change. The lower $R$ is, the higher $\alpha$ will be. So the optimal time to review some material is when you have almost forgotten it. Which is somewhat counterintuitive, but it makes sense: the more you remember something, the fewer the gains from reviewing, dually, the more you have forgotten it, the more room there is to improve.
+
+$h$ is the hard penalty:
+
+$$
+h(G) = \begin{cases}
+  w_{15} & G = 2 \\
+  1      & \text{otherwise}
+\end{cases}
+$$
+
+If recall was hard, we apply $w_{15}$ (a learned parameter between 0 and 1). This penalizes stability growth where recall was shaky. Otherwise, it has no effect.
+
+$b$  is the opposite of $h$, a bonus for easy recall:
+
+$$
+b(G) = \begin{cases}
+  w_{16} & G = 4 \\
+  1      & \text{otherwise}
+\end{cases}
+$$
+
+If recall was easy, we multiply by $w_{16}$, a number greater than one, which scales stability up. Otherwise, it has no effect.
+
+Finally, $c$ just applies a learned parameter to control the shape of the curve:
+
+$$
+c = e^{w_8}
+$$
+
+Putting it all together:
+
+```rust
+fn s_success(d: D, s: S, r: R, g: Grade) -> S {
+    let t_d = 11.0 - d;
+    let t_s = s.powf(-W[9]);
+    let t_r = f64::exp(W[10] * (1.0 - r)) - 1.0;
+    let h = if g == Grade::Hard { W[15] } else { 1.0 };
+    let b = if g == Grade::Easy { W[16] } else { 1.0 };
+    let c = f64::exp(W[8]);
+    let alpha = 1.0 + t_d * t_s * t_r * h * b * c;
+    s * alpha
+}
+```
+
+## Stability on Failure
+
+The formula is different if the user selects `Forgot`:
+
+$$
+S'(D, S, R) = \min(S_f, S)
+$$
+
+$\min$ is there to ensure that stability at failure cannot be greater than $S$. $S_f$, stability on failure, is defined by:
+
+$$
+S_f = d_fs_fr_fc_f
+$$
+
+Where:
+
+$$
+\begin{align}
+d_f &= D^{-w_{12}} \\
+s_f &= ((S+1)^{w_{13}} - 1) \\
+r_f &= e^{w_{14}(1-R)} \\
+c_f &= w_{11} \\
+\end{align}
+$$
+
+```rust
+fn s_fail(d: D, s: S, r: R) -> S {
+    let d_f = d.powf(-W[12]);
+    let s_f = (s + 1.0).powf(W[13]) - 1.0;
+    let r_f = f64::exp(W[14] * (1.0 - r));
+    let c_f = W[11];
+    let s_f = d_f * s_f * r_f * c_f;
+    f64::min(s_f, s)
+}
+```
+
+Putting it all together:
+
+```rust
+fn stability(d: D, s: S, r: R, g: Grade) -> S {
+    if g == Grade::Forgot {
+        s_fail(d, s, r)
+    } else {
+        s_success(d, s, r, g)
+    }
+}
+```
