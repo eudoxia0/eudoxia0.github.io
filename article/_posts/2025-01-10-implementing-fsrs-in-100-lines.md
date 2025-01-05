@@ -167,15 +167,13 @@ This section describes how a card's stability is updated after a review.
 
 ## First Time
 
-A card that has never been reviewed has no stability.
-
 The first time the user reviews a card, its initial stability is:
 
 $$
 S_0(G) = w_{G-1}
 $$
 
-That is, the parameters $w_0$ to $w_3$ represent the initial values of stability. In code:
+That is, the parameters $w_0$ to $w_3$ represent the initial values of stability for a given initial grade. In code:
 
 ```rust
 fn s_0(g: Grade) -> S {
@@ -188,11 +186,13 @@ fn s_0(g: Grade) -> S {
 }
 ```
 
+Note that a card that has never been reviewed has _no_ stability.
+
 ## Stability on Success
 
 Stability is updated differently depending on whether the user forgot ($G=1$) or remembered ($G \in [2,3,4]$) the card. The equation is very big, so I'm going to break it down hierarchically.
 
-After a review, stability is updated by multiplying it with a scaling factor $\alpha$:
+After a review, stability is updated by multiplying it by a scaling factor $\alpha$:
 
 $$
 S'(D, S, R, G) = S\alpha
