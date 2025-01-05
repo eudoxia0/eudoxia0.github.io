@@ -388,6 +388,12 @@ fn delta_d(g: Grade) -> f64 {
 }
 ```
 
+And visually:
+
+![](/assets/content/implementing-fsrs-in-100-lines/difficulty.png)
+
+Hitting "good" leaves difficulty unchanged: the line where $G = \text{good}$ has $D'=D$. The $G = \text{easy}$ line has positive slope, difficulty decreases, e.g. if $D=4$ then $D'=3$. The $G = \text{hard}$ and $G = \text{forgot}$ lines have negative slope, so difficulty increases, e.g. forgetting a card with difficulty $3$ pushed the next difficulty to just above $4$.
+
 # The Simulator
 
 That's it. That's all you need to implement an SR app that uses FSRS.
