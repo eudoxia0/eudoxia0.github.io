@@ -152,12 +152,14 @@ fn interval(r_d: R, s: S) -> T {
 }
 ```
 
-TODO charts
+Intervals grow linearly with stability, for different values of $R_d$:
+
+![](/assets/content/implementing-fsrs-in-100-lines/intervals.png)
 
 Two things to note:
 
 - At higher $R_d$, reviews will be more frequent, which is what we expect.
-- Stability is defined as the interval where $R$ will equal $0.9$. So, for $R_d = 0.9$, $I(S) = S$ by definition, and so the line is at 45deg.
+- Stability is defined as the interval where $R$ will equal $0.9$. So, for $R_d = 0.9$, $I(S) = S$ by definition, and so the line is at $45^\circ$.
 
 # Updating Stability
 
