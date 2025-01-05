@@ -1,6 +1,6 @@
 ---
 title: Implementing FSRS in 100 Lines
-summary: .
+summary: A tiny implementation of the most advanced spaced repetition algorithm.
 math: yes
 ---
 
