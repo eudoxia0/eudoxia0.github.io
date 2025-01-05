@@ -354,6 +354,8 @@ fn clamp_d(d: D) -> D {
 }
 ```
 
+`clamp_d` is there to ensure difficulty never leaves the range (which can't really be done otherwise). Normally I would use newtypes with validating constructors to represent ranged values, but for this, it would add way too much overhead for what is meant to be a pedagogical implementation.
+
 Note that when $G=1$ (forgot), then $D_0(1) = w_4$, that is, $w_4$ is the initial difficulty of a card when its first review was a failure.
 
 ## $n$-th time
@@ -367,6 +369,8 @@ D'(D, G)       &= D + \Delta D(G) \left( \frac{10 - D}{9} \right) \\
 \Delta D(G) &= - w_6 (G-3)
 \end{align*}
 $$
+
+In code:
 
 ```rust
 fn difficulty(d: D, g: Grade) -> D {
