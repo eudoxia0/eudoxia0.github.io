@@ -400,9 +400,13 @@ But the equations are still kind of inscrutable. How can we convince ourselves t
 
 As far as I know, there are no test vectors for FSRS. But there is a [visualizer][vis] that lets you see for stability, difficulty, and the review intervals evolve for a given sequence of grades. So, let's build a simulation tool.
 
+The simulator takes a list of grades, where the $n$-th grade represents the user's rating on the $n$-th review of a card, and returns a table where each row represents the state of the card after the review:
+
 ```rust
-/// A simulation step.
-#[derive(Clone, Copy, Debug)]
+fn sim(grades: Vec<Grade>) -> Vec<Step> {
+  // ...
+}
+
 struct Step {
     /// The time when the review took place.
     t: T,
@@ -413,14 +417,53 @@ struct Step {
     /// Next interval.
     i: T,
 }
+```
 
-impl PartialEq for Step {
-    fn eq(&self, other: &Self) -> bool {
-        feq(self.t, other.t) && feq(self.s, other.s) && feq(self.d, other.d) && feq(self.i, other.i)
-    }
+We model the user as reviewing everything exactly when the algorithm schedules it, so we don't need to pass any other values.
+
+We start at $t=0$ and set $R_d$ to $0.9$:
+
+```rust
+let mut t: T = 0.0;
+let r_d: f64 = 0.9;
+```
+
+For the initial review, we call `s_0` and `d_0` to calculate the initial values of stability and difficulty:
+
+```rust
+let mut t: T = 0.0;
+let r_d: f64 = 0.9;
+let mut steps = vec![];
+
+// Initial review.
+assert!(!grades.is_empty());
+let mut grades = grades.clone();
+let g: Grade = grades.remove(0);
+let mut s: S = s_0(g);
+let mut d: D = d_0(g);
+```
+
+We round the interval to discretize the review time into a number of days in the future, and use `max` to ensure the shortest review interval is one day (otherwise, selecting "forget" would yield an interval within the same day).
+
+```rust
+let mut i: T = f64::max(interval(r_d, s).round(), 1.0);
+```
+
+The $n$-th review is the same as the initial, but we must first calculate $R$:
+
+```rust
+for g in grades {
+  t += i;
+  let r: R = retrievability(i, s);
+  s = stability(d, s, r, g);
+  d = difficulty(d, g);
+  i = f64::max(interval(r_d, s).round(), 1.0);
 }
+```
 
-/// Simulate a series of reviews.
+Finally, the entire simulator:
+
+```rust
 fn sim(grades: Vec<Grade>) -> Vec<Step> {
     let mut t: T = 0.0;
     let r_d: f64 = 0.9;
