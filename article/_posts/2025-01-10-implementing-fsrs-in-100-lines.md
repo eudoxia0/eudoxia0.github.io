@@ -275,7 +275,7 @@ fn s_success(d: D, s: S, r: R, g: Grade) -> S {
 
 ## Stability on Failure
 
-The formula is different if the user selects `Forgot`:
+The formula is different if the user forgot a card:
 
 $$
 S'(D, S, R) = \min(S_f, S)
@@ -299,6 +299,10 @@ r_f &= e^{w_{14}(1-R)} \\
 c_f &= w_{11} \\
 \end{align*}
 $$
+
+$c_f$ is another learned parameter to control the shape of the curve.
+
+Or, in code:
 
 ```rust
 fn s_fail(d: D, s: S, r: R) -> S {
