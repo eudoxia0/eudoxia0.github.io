@@ -421,7 +421,23 @@ struct Step {
 
 We model the user as reviewing everything exactly when the algorithm schedules it, so we don't need to pass any other values.
 
-We start at $t=0$ and set $R_d$ to $0.9$:
+The high-level structure of the simulator is:
+
+```rust
+fn sim(grades: Vec<Grade>) -> Vec<Step> {
+    let mut steps = vec![];
+
+    // <initial state>
+
+    // <initial review>
+
+    // <n-th review>
+
+    steps
+}
+```
+
+For the initial state, we start at $t=0$ and set $R_d = 0.9$:
 
 ```rust
 let mut t: T = 0.0;
@@ -431,11 +447,6 @@ let r_d: f64 = 0.9;
 For the initial review, we call `s_0` and `d_0` to calculate the initial values of stability and difficulty:
 
 ```rust
-let mut t: T = 0.0;
-let r_d: f64 = 0.9;
-let mut steps = vec![];
-
-// Initial review.
 assert!(!grades.is_empty());
 let mut grades = grades.clone();
 let g: Grade = grades.remove(0);
@@ -443,10 +454,16 @@ let mut s: S = s_0(g);
 let mut d: D = d_0(g);
 ```
 
-We round the interval to discretize the review time into a number of days in the future, and use `max` to ensure the shortest review interval is one day (otherwise, selecting "forget" would yield an interval within the same day).
+We then calculate the interval and round it to discretize the review time into a number of days in the future, and use `max` to ensure the shortest review interval is one day (otherwise, selecting "forget" would yield an interval within the same day).
 
 ```rust
 let mut i: T = f64::max(interval(r_d, s).round(), 1.0);
+```
+
+And record the first step:
+
+```rust
+steps.push(Step { t, s, d, i });
 ```
 
 The $n$-th review is the same as the initial, but we must first calculate $R$:
@@ -458,10 +475,11 @@ for g in grades {
   s = stability(d, s, r, g);
   d = difficulty(d, g);
   i = f64::max(interval(r_d, s).round(), 1.0);
+  steps.push(Step { t, s, d, i });
 }
 ```
 
-Finally, the entire simulator:
+Putting it together:
 
 ```rust
 fn sim(grades: Vec<Grade>) -> Vec<Step> {
