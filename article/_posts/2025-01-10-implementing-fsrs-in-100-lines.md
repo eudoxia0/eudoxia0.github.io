@@ -300,6 +300,12 @@ c_f &= w_{11} \\
 \end{align*}
 $$
 
+$d_f$ is the difficulty term, a value in $[0,1]$. Higher $D$ leads to smaller $d_f$, that is, more difficult cards experience a steeper stability loss.
+
+$s_f$ is the stability term, qualitatively, higher $S$ means higher $s_f$, meaning the stable cards lose stability more slowly.
+
+$r_f$ is the retrievability term. Low values of $R$ lead to large positive updates. As $R$ increases, $r_f$ converges to $1$.
+
 $c_f$ is another learned parameter to control the shape of the curve.
 
 Or, in code:
