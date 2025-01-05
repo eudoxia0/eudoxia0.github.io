@@ -201,7 +201,7 @@ $$
 Where:
 
 $$
-\alpha = 1 + t_d t_s t_r h b c
+\alpha = 1 + t_d t_s t_r h b e^{w_8}
 $$
 
 The addition is because some of the multiplicative terms may be zero, and in that case, $\alpha=1$.
@@ -252,11 +252,7 @@ $$
 
 If recall was easy, we multiply by $w_{16}$, a number greater than one, which scales stability up. Otherwise, it has no effect.
 
-Finally, $c$ just applies a learned parameter to control the shape of the curve:
-
-$$
-c = e^{w_8}
-$$
+Finally, the $e^{w_8}$ term just applies a learned parameter to control the shape of the curve.
 
 Putting it all together:
 
