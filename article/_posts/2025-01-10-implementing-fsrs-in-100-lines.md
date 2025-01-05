@@ -494,7 +494,7 @@ fn sim(grades: Vec<Grade>) -> Vec<Step> {
 
 # The Code
 
-Without further ado, the complete scheduler:
+Without further ado, this is the complete code for the scheduler:
 
 ```rust
 const W: [f64; 19] = [
