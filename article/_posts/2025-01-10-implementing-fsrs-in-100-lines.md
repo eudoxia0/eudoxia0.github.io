@@ -286,7 +286,7 @@ $\min$ is there to ensure that stability at failure cannot be greater than $S$.
 $S_f$, stability on failure, is defined by:
 
 $$
-S_f = d_fs_fr_fc_f
+S_f = d_f s_f r_f w_{11}
 $$
 
 Where:
@@ -296,7 +296,6 @@ $$
 d_f &= D^{-w_{12}} \\
 s_f &= (S+1)^{w_{13}} - 1 \\
 r_f &= e^{w_{14}(1-R)} \\
-c_f &= w_{11} \\
 \end{align*}
 $$
 
@@ -304,9 +303,9 @@ $d_f$ is the difficulty term, a value in $[0,1]$. Higher $D$ leads to smaller $d
 
 $s_f$ is the stability term, qualitatively, higher $S$ means higher $s_f$, meaning the stable cards lose stability more slowly.
 
-$r_f$ is the retrievability term. Low values of $R$ lead to large positive updates. As $R$ increases, $r_f$ converges to $1$.
+$r_f$ is the retrievability term. Low values of $R$ lead to large positive updates. As $R$ increases, $r_f$ converges to $1$. To be honest I'm not sure I understand this term. I think it's meant to model the fact that, the ower the predicted retrievability, the less it tells us about stability, since at low values of $R$ you expect the user to have forgotten the card.
 
-$c_f$ is another learned parameter to control the shape of the curve.
+Finally, $w_{11}$ is another learned parameter to control the shape of the curve.
 
 Or, in code:
 
