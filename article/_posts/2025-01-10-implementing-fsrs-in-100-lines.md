@@ -201,7 +201,7 @@ $$
 Where:
 
 $$
-\alpha = 1 + t_d t_s t_r h b(G) c
+\alpha = 1 + t_d t_s t_r h b c
 $$
 
 The addition is because some of the multiplicative terms may be zero, and in that case, $\alpha=1$.
@@ -244,7 +244,7 @@ If recall was hard, we apply $w_{15}$ (a learned parameter between 0 and 1). Thi
 $b$  is the opposite of $h$, a bonus for easy recall:
 
 $$
-b(G) = \begin{cases}
+b = \begin{cases}
   w_{16} & G = 4 \\
   1      & \text{otherwise}
 \end{cases}
