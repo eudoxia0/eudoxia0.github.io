@@ -39,10 +39,10 @@ type D = f64;
 The main loop of the algorithm is:
 
 1. For each card due today:
-  1. Show the user the question.
-  1. They mentally recall the answer, and flip the card.
-  1. The user rates their recall performance on the card.
-  1. The algorithm updates the card's stability and difficulty values, calculates the next review interval, and schedules the card for that day.
+    1. Show the user the question.
+    1. They mentally recall the answer, and flip the card.
+    1. The user rates their recall performance on the card.
+    1. The algorithm updates the card's stability and difficulty values, calculates the next review interval, and schedules the card for that day.
 
 The user's self-rating of recall performance is called the  **grade**, and it's one of:
 
@@ -102,9 +102,11 @@ fn retrievability(t: T, s: S) -> R {
 }
 ```
 
-Note: at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen a card, we have a 100% chance of recalling it.
+Graphically, the forgetting curves for different values of $S$ look like this:
 
-TODO charts
+![](/assets/content/implementing-fsrs-in-100-lines/curves.png)
+
+Note that at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen a card, we have a 100% chance of recalling it.
 
 # Review Intervals
 
