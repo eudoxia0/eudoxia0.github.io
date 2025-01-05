@@ -73,15 +73,13 @@ impl From<Grade> for f64 {
 
 # Retrievability
 
-TODO define item
-
-The retrievability of an item is approximated by:
+The retrievability of a card is approximated by:
 
 $$
 R(t) = \left( 1 + F\frac{t}{S} \right)^C
 $$
 
-Where $t$ is time in days since the last review, $S$ is the stability of the item, and $F$ and $C$ are constants to control the shape of the curve:
+Where $t$ is time in days since the last review, $S$ is the stability of the card, and $F$ and $C$ are constants to control the shape of the curve:
 
 $$
 \begin{align*}
@@ -103,7 +101,7 @@ fn retrievability(t: T, s: S) -> R {
 }
 ```
 
-Note: at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen an item, we have a 100% chance of recalling it.
+Note: at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen a card, we have a 100% chance of recalling it.
 
 TODO charts
 
@@ -119,7 +117,7 @@ $$
 
 The idea is that this equation gives us "retrievability at time $t$", but we can rearrange it to instead find "time at which retrievability decays to a given value". That value is the **desired retention**: the probability that you will recall the card on review.
 
-The idea of FSRS is to schedule items so that review happens when predicted retrievability hits desired retention. If desired retention is $0.9$, and you do all your reviews on schedule, then the probability that you will recall an item will always oscillate between 100% and 90%. Which is pretty good.
+The idea of FSRS is to schedule cards so that review happens when predicted retrievability hits desired retention. If desired retention is $0.9$, and you do all your reviews on schedule, then the probability that you will recall a card will always oscillate between 100% and 90%. Which is pretty good.
 
 So, we want to express $t$ in terms of $R$. So we exponentiate both sides by $1/C$:
 
@@ -143,7 +141,7 @@ $$
 I(R_d) = \frac{S(R_d^{(1/C)} - 1)}{F}
 $$
 
-Given the desired retention, and the stability of an item, we can calculate when it should next be reviewed.
+Given the desired retention, and the stability of a card, we can calculate when it should next be reviewed.
 
 ```rust
 fn interval(r_d: R, s: S) -> T {
@@ -160,7 +158,7 @@ Two things to note:
 
 # Updating Stability
 
-This section describes how an item's stability is updated after a review.
+This section describes how a card's stability is updated after a review.
 
 ## First Time
 
@@ -187,7 +185,7 @@ fn s_0(g: Grade) -> S {
 
 ## Stability on Success
 
-Stability is updated differently depending on whether the user forgot ($G=1$) or remembered ($G \in [2,3,4]$) the item. The equation is very big, so I'm going to break it down hierarchically.
+Stability is updated differently depending on whether the user forgot ($G=1$) or remembered ($G \in [2,3,4]$) the card. The equation is very big, so I'm going to break it down hierarchically.
 
 After a review, stability is updated by multiplying it with a scaling factor $\alpha$:
 
@@ -209,7 +207,7 @@ $$
 t_d = 11-D
 $$
 
-Harder items (higher $D$) increase stability more slowly. The highest difficulty is $D=10$, here, $d=1$ and therefore difficulty provides no boost. This is intuitive: harder items are harder to consolidate.
+Harder cards (higher $D$) increase stability more slowly. The highest difficulty is $D=10$, here, $d=1$ and therefore difficulty provides no boost. This is intuitive: harder cards are harder to consolidate.
 
 $t_s$ determines how today's stability affects the next stability:
 
@@ -322,11 +320,11 @@ fn stability(d: D, s: S, r: R, g: Grade) -> S {
 
 # Updating Difficulty
 
-This section describes how an item's difficulty is updated after a review.
+This section describes how a card's difficulty is updated after a review.
 
 ## First Time
 
-Analogously with stability: an item that has never been reviewed has no difficulty.
+Analogously with stability: a card that has never been reviewed has no difficulty.
 
 The initial difficulty, after the first review, is defined by:
 
@@ -347,7 +345,7 @@ fn clamp_d(d: D) -> D {
 }
 ```
 
-Note that when $G=1$ (forgot), then $D_0(1) = w_4$, that is, $w_4$ is the initial difficulty of an item when its first review was a failure.
+Note that when $G=1$ (forgot), then $D_0(1) = w_4$, that is, $w_4$ is the initial difficulty of a card when its first review was a failure.
 
 ## $n$-th time
 
