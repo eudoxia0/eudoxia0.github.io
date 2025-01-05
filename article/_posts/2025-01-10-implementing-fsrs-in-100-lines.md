@@ -201,7 +201,7 @@ $$
 Where:
 
 $$
-\alpha = 1 + t_d t_s t_r h(G) b(G) c
+\alpha = 1 + t_d t_s t_r h b(G) c
 $$
 
 The addition is because some of the multiplicative terms may be zero, and in that case, $\alpha=1$.
@@ -228,12 +228,12 @@ $$
 t_r = e^{w_{10}(1-R)} - 1
 $$
 
-If $R=1$ (100% recall) then $t_3=0$. So $\alpha$ as a whole is $1$, i.e. stability does not change. The lower $R$ is, the higher $\alpha$ will be. So the optimal time to review some material is when you have almost forgotten it. Which is somewhat counterintuitive, but it makes sense: the more you remember something, the fewer the gains from reviewing, dually, the more you have forgotten it, the more room there is to improve.
+If $R=1$ (100% recall) then $t_r=0$. So $\alpha$ as a whole is $1$, i.e. stability does not change. The lower $R$ is, the higher $\alpha$ will be. So the optimal time to review some material is when you have almost forgotten it. Which is somewhat counterintuitive, but it makes sense: the more you remember something, the fewer the gains from reviewing, dually, the more you have forgotten it, the more room there is to improve.
 
 $h$ is the hard penalty:
 
 $$
-h(G) = \begin{cases}
+h = \begin{cases}
   w_{15} & G = 2 \\
   1      & \text{otherwise}
 \end{cases}
