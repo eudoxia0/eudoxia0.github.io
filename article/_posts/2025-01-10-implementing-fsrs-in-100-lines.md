@@ -161,6 +161,19 @@ Two things to note:
 - At higher $R_d$, reviews will be more frequent, which is what we expect.
 - Stability is defined as the interval where $R$ will equal $0.9$. So, for $R_d = 0.9$, $I(S) = S$ by definition, and so the line is at $45^\circ$.
 
+# Parameters
+
+The algorithm has 19 learned parameters, with the following defaults:
+
+```rust
+pub const W: [f64; 19] = [
+    0.40255, 1.18385, 3.173, 15.69105, 7.1949, 0.5345, 1.4604, 0.0046, 1.54575, 0.1192, 1.01925,
+    1.9395, 0.11, 0.29605, 2.2698, 0.2315, 2.9898, 0.51655, 0.6621,
+];
+```
+
+Most of these are used once and have a specific role, so they could be assigned to named constants instead, but I'm keeping them in an array to keep the presentation short.
+
 # Updating Stability
 
 This section describes how a card's stability is updated after a review.
@@ -222,7 +235,7 @@ $$
 
 If $S$ is high, updates will be smaller. The more stable a memory is, the harder it is to make it more stable. Memory stability saturates.
 
-$t_r$ is about memory saturation:
+$t_r$ is about the saturation of retrievability:
 
 $$
 t_r = e^{w_{10}(1-R)} - 1
@@ -514,7 +527,7 @@ fn sim(grades: Vec<Grade>) -> Vec<Step> {
 
 # The Code
 
-Without further ado, this is the complete code for the scheduler:
+And without further ado, this is the complete code for the scheduler:
 
 ```rust
 const W: [f64; 19] = [
