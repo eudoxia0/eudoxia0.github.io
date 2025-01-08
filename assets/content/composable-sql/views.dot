@@ -1,0 +1,36 @@
+digraph G {
+    {
+        node[fillcolor=lightsalmon shape=cylinder style=filled]
+
+        b[label=boxes]
+        p[label=pallets]
+        c[label=containers]
+    }
+
+    {
+        node[fillcolor=aquamarine, shape=rectangle style=filled]
+
+        ppm[label=pallet_payload_mass]
+        pc[label=pallet_clearance]
+        pwm[label=pallet_wet_mass]
+
+        cpm[label=container_payload_mass]
+        cc[label=container_clearance]
+    }
+
+    ppm -> b
+    ppm -> p
+
+    pc -> p
+    pc -> ppm
+
+    pwm -> p
+    pwm -> b
+
+    cpm -> c
+    cpm -> pwm
+
+    cc -> c
+    cc -> cpm
+    cc -> pc
+}
