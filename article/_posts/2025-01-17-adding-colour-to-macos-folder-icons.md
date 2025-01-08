@@ -1,6 +1,6 @@
 ---
 title: Adding Colour to macOS Folder Icons
-summary: .
+summary: A short experiment with Python, ImageMagick, and iconutil.
 ---
 
 The other day I saw [this tweet][tw]:
