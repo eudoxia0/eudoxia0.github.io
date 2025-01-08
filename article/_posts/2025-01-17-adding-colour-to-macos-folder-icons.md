@@ -3,7 +3,7 @@ title: Adding Colour to macOS Folder Icons
 summary: .
 ---
 
-Today I saw [this tweet][tw]:
+The other day I saw [this tweet][tw]:
 
 ![](/assets/content/adding-colour-to-macos-folder-icons/tweet.webp)
 
