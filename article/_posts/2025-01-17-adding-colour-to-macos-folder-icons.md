@@ -44,11 +44,11 @@ $ magick default.png -modulate 100,0,100 -fill '#ef4444' -colorize 70 red.png
 
 Turning this:
 
-![](/assets/content/adding-colour-to-macos-folder-icons/default.png)
+![The default macOS folder icon: a folder with a blue tint.](/assets/content/adding-colour-to-macos-folder-icons/default.png)
 
 Into this:
 
-![](/assets/content/adding-colour-to-macos-folder-icons/red.png)
+![A red-tinted version of the default macOS folder icon.](/assets/content/adding-colour-to-macos-folder-icons/red.png)
 
 If you  this for each PNG in the iconset, the dual command:
 
