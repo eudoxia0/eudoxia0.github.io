@@ -402,3 +402,175 @@ You can't do this with native SQL, because SQL does not compose. The closest you
 # Conclusion
 
 We could keep going, and implement the rest of the functors for the logic of the logistics system. But these examples are enough to prove that functors solve the biggest pain points of SQL. We can write queries that are fast, testable, and which can be understood through entirely local reasoning.
+
+# Appendices
+
+Tangents, and brief sketches for extending the ideas in this post.
+
+## Apendix: Generics
+
+What if we want to factor out this into a functor:
+
+```sql
+select * from pallets where pallet_id = '...'
+```
+
+We can't do this:
+
+```sql
+create functor get_pallet_by_id(
+    p table (pallet_id uuid),
+    id uuid
+) returns ??? as
+    select
+        *
+    from
+        p
+    where
+        pallet_id = id;
+```
+
+Because what would we put as the return type? But we could do something like this:
+
+```sql
+create functor get_pallet_by_id<A>(
+    p table (pallet_id uuid, A...),
+    id uuid
+) returns (pallet_id uuid, A...) as
+    select
+        *
+    from
+        p
+    where
+        pallet_id = id;
+```
+
+Where `A` is a generic table type and the type `(pallet_id uuid, A...)` represents the set union between `A` and the type `(pallet_id uuid)`. So `get_pallet_by_id(pallets, '...')` has the return type:
+
+```sql
+(pallet_id uuid, dry_mass decimal, max_payload_mass decimal)
+```
+
+As its return type.
+
+And with this, we can rewrite:
+
+```sql
+with pallets as (
+    select * from pallets where pallet_id = '...'
+)
+select
+    cleared
+from
+    pallet_clearance(pallets, pallet_payload_mass(pallets, boxes));
+```
+
+Like so:
+
+```sql
+with pallets as get_pallet_by_id(pallets, '...')
+select
+    cleared
+from
+    pallet_clearance(pallets, pallet_payload_mass(pallets, boxes));
+```
+
+With functors, SQL can be short, simple, and understandable, without sacrificing performance.
+
+## Appendix: Generalizing Business Logic
+
+One aspect of the logistics platform example is that the business logic for pallets and containers is the same, but at different levels:
+
+- Both pallets and containers have a notion of a payload mass, which is the sum of the (wet) masses of their contents.
+- Both have a notion of a maximum payload mass, and a boolean property that indicates being in excess of that mass.
+- Both have a notion of a wet mass, which is the sum of their dry mass and the payload mass.
+
+We can implement functors in a way that is generic for both kinds of object, and use SQL renaming to map column names.
+
+For example, this functor:
+
+```sql
+create functor payload_mass(
+    a table (id uuid),
+    b table (id uuid, mass decimal)
+) returns table (id uuid, payload_mass decimal) as
+    select
+        a.id,
+        coalesce(sum(b.mass), 0) as payload_mass
+    from
+        a
+    left outer join
+        b on b.id = a.id
+    group by
+        a.id;
+```
+
+Expresses the general concept of "map an object to the sum of the masses of its children". This can work for pallets:
+
+```sql
+payload_mass(
+    select pallet_id as id from pallets,
+    select pallet_id as id, mass from boxes
+);
+```
+
+And containers:
+
+```sql
+payload_mass(
+    select container_id as id from containers,
+    select pallet_id as id, mass from pallets_with_mass
+);
+```
+
+Where `pallets_with_mass` is the result of joining `pallets` to the functor that calculates their mass.
+
+You can also generalize this further by making the ID type generic, e.g.:
+
+```sql
+create functor payload_mass<ID: Eq>(
+    a table (id ID),
+    b table (id ID, mass decimal)
+) returns table (id ID, payload_mass decimal) as
+    select
+        a.id,
+        coalesce(sum(b.mass), 0) as payload_mass
+    from
+        a
+    left outer join
+        b on b.id = a.id
+    group by
+        a.id;
+```
+
+## Appendix: Naming
+
+Why functor? Well, the alternatives aren't very good:
+
+- "Function" is confusing because SQL already has [functions][fun].
+- "Parameterized query" takes too long to say and is confusing because SQL queries can take scalar [parameters][param].
+- "Generic query" is too vague and also too many words.
+- "Query component/transformer/operator" is too wordy and too vague.
+- "Query template" sounds like C++, and de-emphasizes the static type-checking aspect.
+- "Macro" sounds too untyped and stringly typed. [dbt][mac] has macros, and they are stringly typed.
+
+"Functor" is one word and conveys the notion that it's happening one level up from queries.
+
+## Appendix: Global Variables
+
+Functors can specify the tables they depend on as parameters. A more interesting restriction is if functors can _only_ query from tables explicitly listed as parameters.
+
+Why would this be useful? Because SQL tables are _global variables_. By vanishing global variables, we automatically make every query fully testable.
+
+# Footnotes
+
+[^null]: For brevity, I'm omitting `not null` declarations.
+
+[^syn]: I tried to keep the syntax in line with the SQL style, which means it is hideously verbose.
+
+[^perf]: It's strange to me how bad query planners are, given how limited SQL is in terms of expressivity. SQL isn't *usefully* Turing complete, but it's Turing complete enough that the query planner has to be extremely conservative to preserve soundness. Which is the worst of both worlds.
+
+[fun]: https://www.postgresql.org/docs/current/functions.html
+[lit]: https://www.postgresql.org/docs/current/queries-values.html
+[param]: https://www.postgresql.org/docs/current/sql-prepare.html
+[mac]: https://docs.getdbt.com/docs/build/jinja-macros
