@@ -154,7 +154,7 @@ fn interval(r_d: R, s: S) -> T {
 
 Intervals grow linearly with stability, for different values of $R_d$:
 
-![](/assets/content/implementing-fsrs-in-100-lines/intervals.png)
+![A chart showing interval durations as a function of stability for different values of desired retention. The x axis is stability from 0 to 3. The y axis is the interval duration in days from 0 to 3. For a desired retentin of 0.9, the line is at 45deg. For a desired retention of 0.8, the line has a higher slope, i.e. the intervals grow more faster as stability increases. For a desired retention of 0.7, intervals grow are even longer for the same value of stability.](/assets/content/implementing-fsrs-in-100-lines/intervals.png)
 
 Two things to note:
 
