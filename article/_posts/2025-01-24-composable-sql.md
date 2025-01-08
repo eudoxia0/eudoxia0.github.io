@@ -236,12 +236,12 @@ create functor author_books(
     b table (title text, author_id uuid)
 ) returns table (author text, title text) as
     select
-       	a.name as author,
-       	b.title,
+        a.name as author,
+        b.title,
     from
-    	   a
+        a
     inner join
-    	   b on b.author_id = a.author_id;
+        b on b.author_id = a.author_id;
 ```
 
 Declares a functor `author_books`. The parameter `a` is any table that has _at least_ a column `author_id` of type `uuid` and a column `name` of type text [^null]. The functor's return type is the type of the rows returned by the query.
