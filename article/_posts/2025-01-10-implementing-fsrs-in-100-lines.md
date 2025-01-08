@@ -44,9 +44,11 @@ The main loop of the algorithm is:
 
 1. For each card due today:
     1. Show the user the question.
-    1. They mentally recall the answer, and flip the card.
-    1. The user rates their recall performance on the card.
+    1. User mentally recalls the answer, and flips the card.
+    1. User rates their recall performance on the card.
     1. The algorithm updates the card's stability and difficulty values, calculates the next review interval, and schedules the card for that day.
+
+We're focused on implementing the last step: in response to a user's performance, update the state of the card and schedule it for the next review.
 
 The user's self-rating of recall performance is called the  **grade**, and it's one of:
 
