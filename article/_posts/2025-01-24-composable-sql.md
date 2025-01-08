@@ -218,8 +218,6 @@ Improves performance by forcing Postgres to do the filtering at earlier stages. 
 
 If the query planner were [sufficiently smart][sm], this wouldn't be a problem. But the sufficiently smart query planner is always just one more heuristic away.
 
-[sm]: https://wiki.c2.com/?SufficientlySmartCompiler
-
 # The Solution {#sol}
 
 Imagine a programming language without functions. You can only write code that operates on concrete values, i.e. variables or literals. So instead of writing a function an calling it anywhere you have to write these little code templates as comments and every time you want to "call" the "function" you copy the template and do a search/replace.
@@ -593,3 +591,4 @@ Why would this be useful? Because SQL tables are _global variables_. By vanishin
 [sub]: https://en.wikipedia.org/wiki/Subtyping
 [row]: https://en.wikipedia.org/wiki/Row_polymorphism
 [ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
+[sm]: https://wiki.c2.com/?SufficientlySmartCompiler
