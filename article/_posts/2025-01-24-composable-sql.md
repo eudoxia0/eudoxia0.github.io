@@ -250,10 +250,6 @@ Declares a functor `author_books`. The parameter `a` is any table that has _at l
 
 Table types form a [subtyping][sub] relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism][row] in [TypeScript][ts.
 
-[sub]: https://en.wikipedia.org/wiki/Subtyping
-[row]: https://en.wikipedia.org/wiki/Row_polymorphism
-[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
-
 ## Functors for Testing {#funtest}
 
 The reason testing is hard is SQL queries depend on _concrete_ tables. But functors can depend on _interfaces_ instead.
@@ -594,3 +590,6 @@ Why would this be useful? Because SQL tables are _global variables_. By vanishin
 [lit]: https://www.postgresql.org/docs/current/queries-values.html
 [param]: https://www.postgresql.org/docs/current/sql-prepare.html
 [mac]: https://docs.getdbt.com/docs/build/jinja-macros
+[sub]: https://en.wikipedia.org/wiki/Subtyping
+[row]: https://en.wikipedia.org/wiki/Row_polymorphism
+[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
