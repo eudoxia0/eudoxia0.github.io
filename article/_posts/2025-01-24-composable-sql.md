@@ -398,3 +398,7 @@ from
 And that's it. If we want to filter a table early, we just filter it early, and pass the result to the functor. The functor can be applied to any table that satisfies the interface, including CTEs.
 
 You can't do this with native SQL, because SQL does not compose. The closest you could implement is copying the business logic query manually into a CTE, renaming the table references (and hoping you didn't forget any), and now you have one more query duplicating business logic that has to be kept in sync with everything else.
+
+# Conclusion
+
+We could keep going, and implement the rest of the functors for the logic of the logistics system. But these examples are enough to prove that functors solve the biggest pain points of SQL. We can write queries that are fast, testable, and which can be understood through entirely local reasoning.
