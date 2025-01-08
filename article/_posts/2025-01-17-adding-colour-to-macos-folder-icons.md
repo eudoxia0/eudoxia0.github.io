@@ -5,7 +5,7 @@ summary: .
 
 The other day I saw [this tweet][tw]:
 
-![](/assets/content/adding-colour-to-macos-folder-icons/tweet.webp)
+![Screenshot of the linked Tweet, showing macOS folders with colour-coded icons on the dock.](/assets/content/adding-colour-to-macos-folder-icons/tweet.webp)
 
 I use a [PARA method][para]-derived folder scheme, so I thought colour-coding the folders would be neat. But I was disappointed to find this isn't a native macOS feature. The OP made the icons with [Figma] which seems very labour-intensive. Can we do better?
 
