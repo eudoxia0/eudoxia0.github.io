@@ -118,3 +118,88 @@ Because SQL has such limited means of abstraction, we have only a choice of bad 
 3. We can implement the business logic in views.
 
 The next sections explain why each option is bad.
+
+### Duplication
+
+Write out the logic for computed properties in every query. Hope that changes to the business logic affect every place where the logic is defined. Testing would help here, but as discussed above, testing (especially for deep OLAP-type queries) is intractable because of the combinatorial explosion.
+
+Worse, if you duplicate the logic, but tailor it to the specifics of the query, it becomes much harder to actually find other instances. There is a single, abstract concept of a relation that e.g. maps pallet IDs to payload masses sale counts, but the implementations are varied and can't easily be identified.
+
+While the logic here isn't too complex, there are enough degrees of freedom that, if the logic is duplicated, we will have drift.
+
+Ideally, the logic for the definition of "how heavy is this pallet?" and "is this container ready to be loaded?" should be defined once, and tested once, but used in many places.
+
+### Denormalization
+
+We can denormalized the computed properties: adding a `payload_mass` and `cleared` column to both the `pallets` and `containers` tables. Whenever an event enters the system which affects these properties, they are recomputed. The logic can be implemented in one place, at the application layer (where it is easier to test).
+
+The costs of denormalization are well-known, but it boils down to:
+
+- There are now two definitions of the same concept: the declarative one and the imperative one.
+- There is an implicit invariant: for every row in the `pallets` table, the value of `payload_mass` must equal the result of the declarative query on the normalized data model. Detecting violations of this invariant is both computationally expensive and requires building custom infrastructure.
+- When writing a new mutation, you have to very carefully consider all the places in the database where denormalization is happening, to ensure the mutation doesn't violate implicit invariants.
+- Dually, when _introducing_ denormalization, you have to consider all existing mutations to patch the ones that relate to the denormalized data.
+- Bugs in the code require identifying all affected data (potentially impossible!) and running a data migration (incredibly tiresome).
+- Finally, there is the cost of physical storage. While storage is cheap, IaaS providers love to charge extra for database disks, as if only the finest iron oxides are fit for your Postgres cluster.
+
+### Views
+
+This is an approach I experimented with. I call it the "tree of views". You write a view for each of these read-time properties, and then your queries can read from those views. It's a tree because views can query other views, since logic builds upon logic (e.g. the logic for how well a product line is selling depends on the logic for how well each product is selling). The result is that each view is a very focused, very atomic piece of business logic, and the top-level queries can read from the views as if they were reading denormalized data, so they are usually very short.
+
+Concretely, for this case, you would write views like this:
+
+```sql
+-- Map a pallet ID to its payload mass.
+create view pallet_payload_mass as
+    select
+        p.pallet_id,
+        coalesce(sum(b.mass), 0) as payload_mass
+    from
+        pallets p
+    left outer join
+        boxes b on p.pallet_id = b.pallet_id
+    group by
+        p.pallet_id;
+
+-- Map a pallet ID to its clearance state.
+create view pallet_clearance as
+    select
+        p.pallet_id,
+        (ppm.payload_mass < p.max_payload_mass) as cleared
+    from
+        pallets p
+    inner join
+        pallet_payload_mass ppm on p.pallet_id = ppm.pallet_id;
+```
+
+And so on. With the views having the following data dependencies:
+
+![](/assets/content/composable-sql/view.svg)
+
+What you hope happens is that Postgres will recursively inline every view, merge them all together into a gigaquery, and shuffle the predicates up and down to maximally optimize the query. That was the conceit. And of course that never happens.
+
+The central problem is that views have to be written for the general case, and then you filter on the view's output. Views can't take parameters. And the optimizer is very conservative about pushing predicates down into the view. The `explain analyze` output shows these massive sequential scans, where only a tiny fraction of the data is ever needed, meaning Postgres is materializing the view and then filtering on it.
+
+An analogous situation is if you've ever written a query with lots of very general CTEs, and with filtering at the end:
+
+```sql
+with foo as ( ... ),
+     bar as ( ... ),
+     baz as ( ... )
+select derp from baz where ...;
+```
+
+These are often slow. Moving the predicates into the CTEs:
+
+```sql
+with foo as ( ... where ... ),
+     bar as ( ... where ... ),
+     baz as ( ... where ... )
+select derp from baz;
+```
+
+Improves performance by forcing Postgres to do the filtering at earlier stages. But the fact that Postgres won't push predicates into the CTEs on its own means CTEs and views are a minefield of pessimization, and there's a performance upper bound to using them[^perf].
+
+If the query planner were [sufficiently smart][sm], this wouldn't be a problem. But the sufficiently smart query planner is always just one more heuristic away.
+
+[sm]: https://wiki.c2.com/?SufficientlySmartCompiler
