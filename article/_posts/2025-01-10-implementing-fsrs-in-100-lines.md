@@ -108,7 +108,7 @@ fn retrievability(t: T, s: S) -> R {
 
 Graphically, the forgetting curves for different values of $S$ look like this:
 
-![](/assets/content/implementing-fsrs-in-100-lines/curves.png)
+![A graph showing how retrievability decays over time for different values of stability. The x axis is time in days, from 0 to 30 days. The y axis is retrievability, from 0 to 1. There are four curves, corresponding to a stability of 0.1, 0.5, 1.0, and 2.0. The 2.0 curve decays slowest and the 0.1 curve decays fastest.](/assets/content/implementing-fsrs-in-100-lines/curves.png)
 
 Note that at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have just seen a card, we have a 100% chance of recalling it.
 
