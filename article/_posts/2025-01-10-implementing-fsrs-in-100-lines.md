@@ -36,6 +36,8 @@ type S = f64;
 type D = f64;
 ```
 
+When implementing the algorithm, retrievability is computed dynamically, while stability and difficulty are properties of the card object.
+
 # The Main Loop
 
 The main loop of the algorithm is:
@@ -118,9 +120,7 @@ $$
 R = \left(1 + F\frac{t}{S}\right)^C
 $$
 
-The idea is that this equation gives us "retrievability at time $t$", but we can rearrange it to instead find "time at which retrievability decays to a given value". That value is the **desired retention**: the probability that you will recall the card on review.
-
-The idea of FSRS is to schedule cards so that review happens when predicted retrievability hits desired retention. If desired retention is $0.9$, and you do all your reviews on schedule, then the probability that you will recall a card will always oscillate between 100% and 90%. Which is pretty good.
+The idea is that this equation gives us "retrievability at time $t$", but we can rearrange it to instead find "time at which retrievability decays to a given value". That value is the **desired retention**. The idea behind FSRS scheduling is that review should happen when predicted retrievability hits desired retention. If desired retention is $0.9$, and you do all your reviews on schedule, then the probability that you will recall a card will always oscillate between 100% and 90%. Which is pretty good.
 
 So, we want to express $t$ in terms of $R$. So we exponentiate both sides by $1/C$:
 
