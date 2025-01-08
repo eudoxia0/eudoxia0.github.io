@@ -322,8 +322,8 @@ create functor pallet_clearance(
     ppm table (pallet_id uuid, payload_mass decimal)
 ) returns table (pallet_id uuid, cleared boolean) as
     select
-   	    p.pallet_id,
-       	(ppm.payload_mass <= p.max_payload_mass) as cleared
+        p.pallet_id,
+        (ppm.payload_mass <= p.max_payload_mass) as cleared
     from
         p
     inner join
