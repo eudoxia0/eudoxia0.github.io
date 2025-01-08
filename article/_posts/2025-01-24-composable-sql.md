@@ -190,7 +190,7 @@ create view pallet_clearance as
 
 And so on. With the views having the following data dependencies:
 
-![](/assets/content/composable-sql/views.svg)
+![A graph showing the data dependencies between views, rooted at tables.](/assets/content/composable-sql/views.svg)
 
 What you hope happens is that Postgres will recursively inline every view, merge them all together into a gigaquery, and shuffle the predicates up and down to maximally optimize the query. That was the conceit. And of course that never happens.
 
