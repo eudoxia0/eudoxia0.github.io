@@ -586,9 +586,9 @@ Why would this be useful? Because SQL tables are _global variables_. By vanishin
 
 [fun]: https://www.postgresql.org/docs/current/functions.html
 [lit]: https://www.postgresql.org/docs/current/queries-values.html
-[param]: https://www.postgresql.org/docs/current/sql-prepare.html
 [mac]: https://docs.getdbt.com/docs/build/jinja-macros
-[sub]: https://en.wikipedia.org/wiki/Subtyping
+[param]: https://www.postgresql.org/docs/current/sql-prepare.html
 [row]: https://en.wikipedia.org/wiki/Row_polymorphism
-[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
 [sm]: https://wiki.c2.com/?SufficientlySmartCompiler
+[sub]: https://en.wikipedia.org/wiki/Subtyping
+[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
