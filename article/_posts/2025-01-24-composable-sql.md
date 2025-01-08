@@ -409,7 +409,7 @@ from
     pallet_clearance(pallets, pallet_payload_mass(pallets, boxes));
 ```
 
-And that's it. If we want to filter a table early, we just filter it early, and pass the result to the functor. The functor can be applied to any table that satisfies the interface, including CTEs.
+And that's it. If we want to filter a table early, we just filter it early, and pass the result to the functor. The functor can be applied to any table that satisfies the interface, including CTEs or `select` expressions.
 
 You can't do this with native SQL, because SQL does not compose. The closest you could implement is copying the business logic query manually into a CTE, renaming the table references (and hoping you didn't forget any), and now you have one more query duplicating business logic that has to be kept in sync with everything else.
 
