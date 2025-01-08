@@ -7,7 +7,23 @@ SQL could be improved somewhat by introducing composable query fragments with st
 
 # Contents
 
-TODO
+1. [Motivation](#motivation)
+    1. [Testing](#testing)
+    1. [Business Logic](#logic)
+        1. [Duplication](#dup)
+        1. [Denormalization](#denorm)
+        1. [Views](#views)
+1. [The Solution](#sol)
+    1. [Functors](#func)
+    1. [Functors for Testing](#funtest)
+    1. [Functors for Business Logic](#funlog)
+1. [Conclusion](#conclusion)
+1. [Appendices](#app)
+    1. [Apendix: Generics](#generics)
+    1. [Appendix: Generalizing Business Logic](#general)
+    1. [Appendix: Naming](#naming)
+    1. [Appendix: Global Variables](#global)
+
 
 # Motivation {#motivation}
 
