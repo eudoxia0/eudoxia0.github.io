@@ -158,6 +158,8 @@ The costs of denormalization are well-known, but it boils down to:
 - Bugs in the code require identifying all affected data (potentially impossible!) and running a data migration (incredibly tiresome).
 - Finally, there is the cost of physical storage. While storage is cheap, IaaS providers love to charge extra for database disks, as if only the finest iron oxides are fit for your Postgres cluster.
 
+With denormalization, the individual _queries_ are more testable, but now the system as a whole has to be tested, end to end, to ensure the key invariants are maintained.
+
 ### Views {#views}
 
 This is an approach I experimented with. I call it the "tree of views". You write a view for each of these read-time properties, and then your queries can read from those views. It's a tree because views can query other views, since logic builds upon logic (e.g. the logic for how well a product line is selling depends on the logic for how well each product is selling). The result is that each view is a very focused, very atomic piece of business logic, and the top-level queries can read from the views as if they were reading denormalized data, so they are usually very short.
