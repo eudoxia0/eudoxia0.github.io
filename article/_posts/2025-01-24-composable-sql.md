@@ -248,7 +248,11 @@ create functor author_books(
 
 Declares a functor `author_books`. The parameter `a` is any table that has _at least_ a column `author_id` of type `uuid` and a column `name` of type text [^null]. The functor's return type is the type of the rows returned by the query.
 
-Table types form a [subtyping](https://en.wikipedia.org/wiki/Subtyping) relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism](https://en.wikipedia.org/wiki/Row_polymorphism) in [TypeScript](https://www.typescriptlang.org/docs/handbook/type-compatibility.html).
+Table types form a [subtyping][sub] relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism][row] in [TypeScript][ts.
+
+[sub]: https://en.wikipedia.org/wiki/Subtyping
+[row]: https://en.wikipedia.org/wiki/Row_polymorphism
+[ts]: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
 
 ## Functors for Testing {#funtest}
 
