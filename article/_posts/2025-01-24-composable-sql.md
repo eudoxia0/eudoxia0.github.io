@@ -203,3 +203,33 @@ Improves performance by forcing Postgres to do the filtering at earlier stages. 
 If the query planner were [sufficiently smart][sm], this wouldn't be a problem. But the sufficiently smart query planner is always just one more heuristic away.
 
 [sm]: https://wiki.c2.com/?SufficientlySmartCompiler
+
+# The Solution
+
+Imagine a programming language without functions. You can only write code that operates on concrete values, i.e. variables or literals. So instead of writing a function an calling it anywhere you have to write these little code templates as comments and every time you want to "call" the "function" you copy the template and do a search/replace.
+
+This would be tiresome. But that's what SQL is. The concrete values are the table names. The code is the queries. And the function templates you have to search replace are your business logic, which must be inlined everywhere it is used.
+
+This formulation suggests the solution: we need something like functions, for SQL. That is, we need a way to define composable query fragments with statically-typed interfaces. I'm calling these **functors**.
+
+## Functors
+
+The parameters to a functor are tables satisfying some interface, the return type is the return type of the body query. For example, this[^syn]:
+
+```sql
+create functor author_books(
+    a table (author_id uuid, name text),
+    b table (title text, author_id uuid)
+) returns table (author text, title text) as
+    select
+       	a.name as author,
+       	b.title,
+    from
+    	   a
+    inner join
+    	   b on b.author_id = a.author_id;
+```
+
+Declares a functor `author_books`. The parameter `a` is any table that has _at least_ a column `author_id` of type `uuid` and a column `name` of type text [^null]. The functor's return type is the type of the rows returned by the query.
+
+Table types form a [subtyping](https://en.wikipedia.org/wiki/Subtyping) relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism](https://en.wikipedia.org/wiki/Row_polymorphism) in [TypeScript](https://www.typescriptlang.org/docs/handbook/type-compatibility.html).
