@@ -233,3 +233,67 @@ create functor author_books(
 Declares a functor `author_books`. The parameter `a` is any table that has _at least_ a column `author_id` of type `uuid` and a column `name` of type text [^null]. The functor's return type is the type of the rows returned by the query.
 
 Table types form a [subtyping](https://en.wikipedia.org/wiki/Subtyping) relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism](https://en.wikipedia.org/wiki/Row_polymorphism) in [TypeScript](https://www.typescriptlang.org/docs/handbook/type-compatibility.html).
+
+## Functors for Testing
+
+The reason testing is hard is SQL queries depend on _concrete_ tables. But functors can depend on _interfaces_ instead.
+
+The business logic for "payload mass of a pallet" is implemented by this query:
+
+```sql
+-- Maps a pallet ID to its payload mass.
+select
+    p.pallet_id,
+    coalesce(sum(b.mass), 0) as payload_mass
+from
+    pallets p
+left outer join
+    boxes b on p.pallet_id = b.pallet_id
+group by
+    p.pallet_id;
+```
+
+Can be parameterized like so:
+
+```sql
+create functor pallet_payload_mass(
+    p table (pallet_id uuid),
+    b table (pallet_id uuid, mass decimal)
+) returns table (pallet_id uuid, payload_mass decimal) as
+    select
+        p.pallet_id,
+        coalesce(sum(b.mass), 0) as payload_mass
+    from
+        p
+    left outer join
+        b on b.pallet_id = p.pallet_id
+    group by
+        p.pallet_id;
+```
+
+We can test this query against fake tables satisfying the interface, e.g.:
+
+```sql
+create table test_boxes (pallet_id uuid, mass decimal);
+create table test_pallets (pallet_id uuid);
+
+insert into ...;
+
+select payload_mass from pallet_payload_mass(test_pallets, test_boxes);
+```
+
+While `pallets` point to `containers`, for this test, we don't need to create a container. We also don't need to come up with a value `max_payload_pass` for the pallet. If a value is causally independent of the query, it doesn't need to be provided.
+
+Postgres also supports [table literals][lit], so there is actually a way to write things without doing a single `insert` whatever. Test data can be loaded into a table literal like so:
+
+```sql
+with test_boxes as (
+    select * from (
+        values ('...', 1.0),
+               ('...', 2.0),
+               ('...', 3.0),
+    ) as t (pallet_id, mass)
+)
+```
+
+The `test_books` CTE has type `(title text)`, and therefore satisfies the interface.
