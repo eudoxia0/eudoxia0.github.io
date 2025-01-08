@@ -9,11 +9,11 @@ SQL could be improved somewhat by introducing composable query fragments with st
 
 TODO
 
-# Motivation
+# Motivation {#motivation}
 
 This section explains two big pain points of SQL.
 
-## Testing
+## Testing {#testing}
 
 Testing SQL is impossible. Consider the simplest possible query:
 
@@ -49,7 +49,7 @@ There are no good solutions to this:
 - You can make all your columns nullable, ruining the data model.
 - You can write all your tables in sixth normal form, which is the same as making everything nullable.
 
-## Business Logic
+## Business Logic {#logic}
 
 "Business logic" is usually thought of as imperative: in response to an event, we do X, Y, and Z. But if you have a fully-normalized database, a lot of your business logic is going to be implemented at read-time. This generally falls into two categories:
 
@@ -119,7 +119,7 @@ Because SQL has such limited means of abstraction, we have only a choice of bad 
 
 The next sections explain why each option is bad.
 
-### Duplication
+### Duplication {#dup}
 
 Write out the logic for computed properties in every query. Hope that changes to the business logic affect every place where the logic is defined. Testing would help here, but as discussed above, testing (especially for deep OLAP-type queries) is intractable because of the combinatorial explosion.
 
@@ -129,7 +129,7 @@ While the logic here isn't too complex, there are enough degrees of freedom that
 
 Ideally, the logic for the definition of "how heavy is this pallet?" and "is this container ready to be loaded?" should be defined once, and tested once, but used in many places.
 
-### Denormalization
+### Denormalization {#denorm}
 
 We can denormalized the computed properties: adding a `payload_mass` and `cleared` column to both the `pallets` and `containers` tables. Whenever an event enters the system which affects these properties, they are recomputed. The logic can be implemented in one place, at the application layer (where it is easier to test).
 
@@ -142,7 +142,7 @@ The costs of denormalization are well-known, but it boils down to:
 - Bugs in the code require identifying all affected data (potentially impossible!) and running a data migration (incredibly tiresome).
 - Finally, there is the cost of physical storage. While storage is cheap, IaaS providers love to charge extra for database disks, as if only the finest iron oxides are fit for your Postgres cluster.
 
-### Views
+### Views {#views}
 
 This is an approach I experimented with. I call it the "tree of views". You write a view for each of these read-time properties, and then your queries can read from those views. It's a tree because views can query other views, since logic builds upon logic (e.g. the logic for how well a product line is selling depends on the logic for how well each product is selling). The result is that each view is a very focused, very atomic piece of business logic, and the top-level queries can read from the views as if they were reading denormalized data, so they are usually very short.
 
@@ -204,7 +204,7 @@ If the query planner were [sufficiently smart][sm], this wouldn't be a problem. 
 
 [sm]: https://wiki.c2.com/?SufficientlySmartCompiler
 
-# The Solution
+# The Solution {#sol}
 
 Imagine a programming language without functions. You can only write code that operates on concrete values, i.e. variables or literals. So instead of writing a function an calling it anywhere you have to write these little code templates as comments and every time you want to "call" the "function" you copy the template and do a search/replace.
 
@@ -212,7 +212,7 @@ This would be tiresome. But that's what SQL is. The concrete values are the tabl
 
 This formulation suggests the solution: we need something like functions, for SQL. That is, we need a way to define composable query fragments with statically-typed interfaces. I'm calling these **functors**.
 
-## Functors
+## Functors {#func}
 
 The parameters to a functor are tables satisfying some interface, the return type is the return type of the body query. For example, this[^syn]:
 
@@ -234,7 +234,7 @@ Declares a functor `author_books`. The parameter `a` is any table that has _at l
 
 Table types form a [subtyping](https://en.wikipedia.org/wiki/Subtyping) relationship, so any table with a `title` column of type `text` can be passed as an argument. This is the same as to [row polymorphism](https://en.wikipedia.org/wiki/Row_polymorphism) in [TypeScript](https://www.typescriptlang.org/docs/handbook/type-compatibility.html).
 
-## Functors for Testing
+## Functors for Testing {#funtest}
 
 The reason testing is hard is SQL queries depend on _concrete_ tables. But functors can depend on _interfaces_ instead.
 
@@ -298,7 +298,7 @@ with test_boxes as (
 
 The `test_books` CTE has type `(title text)`, and therefore satisfies the interface.
 
-## Functors for Business Logic
+## Functors for Business Logic {#funlog}
 
 We have a functor `pallet_payload_mass` that maps pallet IDs to their payload mass. The pallet clearance state depends on the pallet's maximum payload mass, and the pallet's actual payload mass, so we can implement it as a functor like so:
 
@@ -399,15 +399,15 @@ And that's it. If we want to filter a table early, we just filter it early, and 
 
 You can't do this with native SQL, because SQL does not compose. The closest you could implement is copying the business logic query manually into a CTE, renaming the table references (and hoping you didn't forget any), and now you have one more query duplicating business logic that has to be kept in sync with everything else.
 
-# Conclusion
+# Conclusion {#conclusion}
 
 We could keep going, and implement the rest of the functors for the logic of the logistics system. But these examples are enough to prove that functors solve the biggest pain points of SQL. We can write queries that are fast, testable, and which can be understood through entirely local reasoning.
 
-# Appendices
+# Appendices {#app}
 
 Tangents, and brief sketches for extending the ideas in this post.
 
-## Apendix: Generics
+## Apendix: Generics {#generics}
 
 What if we want to factor out this into a functor:
 
@@ -477,7 +477,7 @@ from
 
 With functors, SQL can be short, simple, and understandable, without sacrificing performance.
 
-## Appendix: Generalizing Business Logic
+## Appendix: Generalizing Business Logic {#general}
 
 One aspect of the logistics platform example is that the business logic for pallets and containers is the same, but at different levels:
 
@@ -543,7 +543,7 @@ create functor payload_mass<ID: Eq>(
         a.id;
 ```
 
-## Appendix: Naming
+## Appendix: Naming {#naming}
 
 Why functor? Well, the alternatives aren't very good:
 
@@ -556,7 +556,7 @@ Why functor? Well, the alternatives aren't very good:
 
 "Functor" is one word and conveys the notion that it's happening one level up from queries.
 
-## Appendix: Global Variables
+## Appendix: Global Variables {#global}
 
 Functors can specify the tables they depend on as parameters. A more interesting restriction is if functors can _only_ query from tables explicitly listed as parameters.
 
