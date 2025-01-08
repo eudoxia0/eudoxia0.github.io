@@ -112,9 +112,7 @@ Note that at $t=0$, the equation simplifies to $R(0) = 1$, that is, when we have
 
 # Review Intervals
 
-The equation for the review interval is found by manipulating the definition of retrievability.
-
-Start from this:
+The equation for the review interval is found by manipulating the definition of retrievability. Starting from this:
 
 $$
 R = \left(1 + F\frac{t}{S}\right)^C
