@@ -297,3 +297,104 @@ with test_boxes as (
 ```
 
 The `test_books` CTE has type `(title text)`, and therefore satisfies the interface.
+
+## Functors for Business Logic
+
+We have a functor `pallet_payload_mass` that maps pallet IDs to their payload mass. The pallet clearance state depends on the pallet's maximum payload mass, and the pallet's actual payload mass, so we can implement it as a functor like so:
+
+```sql
+create functor pallet_clearance(
+    p   table (pallet_id uuid, max_payload_mass decimal)
+    ppm table (pallet_id uuid, payload_mass decimal)
+) returns table (pallet_id uuid, cleared boolean) as
+    select
+   	    p.pallet_id,
+       	(ppm.payload_mass <= p.max_payload_mass) as cleared
+    from
+        p
+    inner join
+        ppm on ppm.pallet_id = p.pallet_id;
+```
+
+Even though logic builds on logic, the `pallet_clearance` functor doesn't need to be aware of the `pallet_payload_mass` functor. The results of the latter can just be passed in. This makes the functors more testable (since testing one functor won't call another) but also keeps the interfaces small.
+
+Say we want to query the clearance state of a specific pallet. How do we write this? We can try this:
+
+```sql
+select
+    pc.cleared
+from
+    pallet_clearance(pallets, pallet_payload_mass(pallets, boxes)) pc
+where
+    pc.pallet_id = '...';
+```
+
+This query macroexpands into:
+
+```sql
+select
+    pc.cleared
+from
+    (
+        select
+            p.pallet_id,
+            (ppm.payload_mass <= p.max_payload_mass) as cleared
+        from
+            pallets p
+        inner join
+            pallet_payload_mass(pallets, boxes)
+            on
+            ppm.pallet_id = p.pallet_id
+    ) pc
+where
+    pc.pallet_id = '...';
+```
+
+Which in turn expands into:
+
+```sql
+select
+    pc.cleared
+from
+    (
+        select
+            p.pallet_id,
+            (ppm.payload_mass <= p.max_payload_mass) as cleared
+        from
+            pallets p
+        inner join
+            (
+                select
+                    p.pallet_id,
+                    coalesce(sum(b.mass), 0) as payload_mass
+                from
+                    pallets p
+                left outer join
+                    boxes b on b.pallet_id = p.pallet_id
+                group by
+                    p.pallet_id
+            ) ppm
+            on
+            ppm.pallet_id = p.pallet_id
+    ) pc
+where
+    pc.pallet_id = '...';
+```
+
+This is not satisfactory. It has the same problem of views: we're doing the filtering at the end, and relying on the optimizer to push the predicate down as far as it will go. Anecdotally, Postgres is more aggressive about optimizing subqueries than views, but relying on query planner arcana does not inspire confidence. We want to be able to write queries that expand into what we would write by hand.
+
+Can we do better? Yes. We can just do this:
+
+```sql
+with pallets as (
+    select * from pallets where pallet_id = '...'
+)
+select
+    cleared
+from
+    pallet_clearance(pallets, pallet_payload_mass(pallets, boxes));
+```
+
+And that's it. If we want to filter a table early, we just filter it early, and pass the result to the functor. The functor can be applied to any table that satisfies the interface, including CTEs.
+
+You can't do this with native SQL, because SQL does not compose. The closest you could implement is copying the business logic query manually into a CTE, renaming the table references (and hoping you didn't forget any), and now you have one more query duplicating business logic that has to be kept in sync with everything else.
