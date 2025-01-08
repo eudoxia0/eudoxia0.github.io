@@ -312,7 +312,7 @@ $d_f$ is the difficulty term, a value in $[0,1]$. Higher $D$ leads to smaller $d
 
 $s_f$ is the stability term, qualitatively, higher $S$ means higher $s_f$, meaning the stable cards lose stability more slowly.
 
-$r_f$ is the retrievability term. Low values of $R$ lead to large positive updates. As $R$ increases, $r_f$ converges to $1$. To be honest I'm not sure I understand this term. I think it's meant to model the fact that, the ower the predicted retrievability, the less it tells us about stability, since at low values of $R$ you expect the user to have forgotten the card.
+$r_f$ is the retrievability term. Low values of $R$ lead to large positive updates. As $R$ increases, $r_f$ converges to $1$. To be honest I'm not sure I understand this term. I think it's meant to model the fact that, the lower the predicted retrievability, the less it tells us about stability, since at low values of $R$ you expect the user to have forgotten the card.
 
 Finally, $w_{11}$ is another learned parameter to control the shape of the curve.
 
