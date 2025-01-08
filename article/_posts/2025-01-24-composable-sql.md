@@ -395,7 +395,7 @@ where
     pc.pallet_id = '...';
 ```
 
-This is not satisfactory. It has the same problem of views: we're doing the filtering at the end, and relying on the optimizer to push the predicate down as far as it will go. Anecdotally, Postgres is more aggressive about optimizing subqueries than views, but relying on query planner arcana does not inspire confidence. We want to be able to write queries that expand into what a talented DBA would write by hand.
+This is not satisfactory. It has the same problem of views: we're doing the filtering at the end, and relying on the query planner to push the predicate down as far as it will go. Anecdotally, Postgres is more aggressive about optimizing subqueries than views, but relying on query planner arcana does not inspire confidence. We want to be able to write queries that expand into what a talented DBA would write by hand.
 
 Can we do better? Yes. We can just do this:
 
