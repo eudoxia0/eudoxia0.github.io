@@ -64,7 +64,7 @@ I started out with a [Makefile][make], but make is really only tractable if you 
 
 Fortunately I have a Python interpreter, and an [infinitely-industrious alien buddy who turns natural language into code][claude]. So I had Claude write a Python script that generates a tinted ICNS file for each colour in the [Tailwind][tail] [colour palette][twcolour]. And this is the result:
 
-![](/assets/content/adding-colour-to-macos-folder-icons/result.png)
+![A screenshot of the Finder app, showing the script's output folder, with many different colour-tinted variants of the macOS default folder icon.](/assets/content/adding-colour-to-macos-folder-icons/result.png)
 
 Which I think is pretty good for a half hour project. The code is [here][repo].
 
