@@ -220,7 +220,7 @@ If the query planner were [sufficiently smart][sm], this wouldn't be a problem. 
 
 # The Solution {#sol}
 
-Imagine a programming language without functions. You can only write code that operates on concrete values, i.e. variables or literals. So instead of writing a function an calling it anywhere you have to write these little code templates as comments and every time you want to "call" the "function" you copy the template and do a search/replace.
+Imagine a programming language without functions. You can only write code that operates on concrete values, i.e. variables or literals. So instead of writing a function and calling it anywhere you have to write these little code templates as comments and every time you want to "call" the "function" you copy the template and do a search/replace.
 
 This would be tiresome. But that's what SQL is. The concrete values are the table names. The code is the queries. And the function templates you have to search replace are your business logic, which must be inlined everywhere it is used.
 
