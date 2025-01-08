@@ -403,7 +403,7 @@ fn delta_d(g: Grade) -> f64 {
 
 And visually:
 
-![](/assets/content/implementing-fsrs-in-100-lines/difficulty.png)
+![A chart showing difficulty after a review as a function of previous difficulty, for the four different grades. The x axis is the current difficulty from 1 to 10. The y axis is the updated difficulty from 1 to 10. The line corresponding to a grade of "good" is at 45deg. The line corresponding to a grade of "easy" starts lower and has a higher slope. The lines corresponding to "forgot" and "hard" start higher on the y axis, and have a smaller slope. All of them converge on the top right, where D' = D = 10.](/assets/content/implementing-fsrs-in-100-lines/difficulty.png)
 
 Hitting "good" leaves difficulty unchanged: the line where $G = \text{good}$ has $D'=D$. The $G = \text{easy}$ line has positive slope, difficulty decreases, e.g. if $D=4$ then $D'=3$. The $G = \text{hard}$ and $G = \text{forgot}$ lines have negative slope, so difficulty increases, e.g. forgetting a card with difficulty $3$ pushed the next difficulty to just above $4$.
 
