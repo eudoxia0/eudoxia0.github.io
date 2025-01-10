@@ -12,8 +12,6 @@ So I put everything I could find together, and cleaned it up. The implementation
 
 The rest of this post explains the theory of FSRS, with equations interleaved with Rust code. If you just want the code, scroll to the end. The repository is [here][repo].
 
-[repo]: https://github.com/eudoxia0/fsrs
-
 # The DSR Model
 
 FSRS is based on the [3-component model of memory][dsr], also called the DSR model. Under DSR, the state of a memory in the brain is modeled by three variables:
@@ -638,8 +636,9 @@ fn delta_d(g: Grade) -> f64 {
 - [Description of the algorithm](https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm)
 - [FSRS visualizer](https://open-spaced-repetition.github.io/anki_fsrs_visualizer/)
 
-[sm2]: /article/implementing-sm2-in-rust
 [Anki]: https://apps.ankiweb.net/
 [FSRS]: https://github.com/open-spaced-repetition/fsrs4anki
 [dsr]: https://supermemo.guru/wiki/Three_component_model_of_memory
+[repo]: https://github.com/eudoxia0/fsrs
+[sm2]: /article/implementing-sm2-in-rust
 [vis]: https://open-spaced-repetition.github.io/anki_fsrs_visualizer/
