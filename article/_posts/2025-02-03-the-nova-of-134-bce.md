@@ -32,23 +32,6 @@ I found this intriguing. What was this phenomenon? Was it just a [sun dog][sundo
 
 # The Treatise on the Celestial Offices
 
-In the [_Book of Han_][hanbuk]'s treatise on astronomy there is this line:
-
-[hanbuk]: https://en.wikipedia.org/wiki/Book_of_Han
-
-> 元光元年六月，客星見于房
->
-> In the sixth month of the first year of Yuanguang, a guest star appeared in the Fang constellation.
-
-Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], the six-year period from 134 BCE to 129BCE. Fang (房) is one of the [lunar mansions][mansion], corresponding to the constellation [Scorpius].
-
-[era]: https://en.wikipedia.org/wiki/List_of_Chinese_era_names
-[wu]: https://en.wikipedia.org/wiki/Emperor_Wu_of_Han
-[mansion]: https://en.wikipedia.org/wiki/Twenty-Eight_Mansions
-[Scorpius]: https://en.wikipedia.org/wiki/Scorpius
-
-So, in 134 BCE there was a nova on Scorpius.
-
 In the [_Records of the Grand Historian_][shiji] there is also a treatise on astronomy, which says:
 
 [shiji]: https://en.wikipedia.org/wiki/Shiji
@@ -59,15 +42,29 @@ In the [_Records of the Grand Historian_][shiji] there is also a treatise on ast
 
 [Chiyou]: https://en.wikipedia.org/wiki/Chiyou
 
-Yuanshou (元狩) is the period from 122 BCE to 117 BCE. This appears to be describing a comet.
-
-Also in the _Records of the Grand Historian_, we have the annals of the Wu Emperor, wherein it says:
+Yuanshou (元狩) is the period from 122 BCE to 117 BCE. This appears to be describing a comet. Also in the _Records of the Grand Historian_, we have the annals of the Wu Emperor, wherein it says:
 
 > 其後三年，有司言元宜以天瑞命，不宜以一二數。一元曰建元，二元以長星曰元光，三元以郊得一角獸曰元狩云。
 >
 > Three years later, officials suggested that reign periods should be named after heavenly omens, and should not simply use numbers like 'first' and 'second'. The first reign period was called Jianyuan. The second reign period was called Yuanguang due to the appearance of a long star. The third reign period was called Yuanshou because a one-horned beast was encountered during the suburban sacrifice.
 
 So the Yuanguang period was named after a nova. 元 means "first" or "primary", 光 means "light". A "long star" (長星) is obviously a comet.
+
+In the [_Book of Han_][hanbuk]'s treatise on astronomy there is this line:
+
+[hanbuk]: https://en.wikipedia.org/wiki/Book_of_Han
+
+> 元光元年六月，客星見于房
+>
+> In the sixth month of the first year of Yuanguang, a guest star appeared in the Fang constellation.
+
+Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], the six-year period from 134 BCE to 129BCE. Fang (房) is one of the [lunar mansions][mansion], corresponding to the constellation [Scorpius]. A "[guest star][guest]" (客星) is a nova. So, in 134 BCE there was a nova in Scorpius.
+
+[era]: https://en.wikipedia.org/wiki/List_of_Chinese_era_names
+[wu]: https://en.wikipedia.org/wiki/Emperor_Wu_of_Han
+[mansion]: https://en.wikipedia.org/wiki/Twenty-Eight_Mansions
+[Scorpius]: https://en.wikipedia.org/wiki/Scorpius
+[guest]: https://en.wikipedia.org/wiki/Guest_star_(astronomy)
 
 # Footnotes
 
