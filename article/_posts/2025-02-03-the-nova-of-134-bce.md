@@ -26,6 +26,10 @@ A nova appeared in the sky in 134 BCE. This is attested by the court astronomers
 [afri]: https://en.wikipedia.org/wiki/Scipio_Africanus
 [dere]: https://en.wikipedia.org/wiki/De_re_publica
 
+I found this intriguing. What was this phenomenon? Was it just a [sun dog][sundog], or could it have been a supernova?
+
+[sundog]: https://en.wikipedia.org/wiki/Sun_dog
+
 # Footnotes
 
 [^cic]: _De Natura Deorum_, Cicero, tr. H. Rackham. <https://archive.org/details/denaturadeorumac00ciceuoft/page/136/mode/2up>
