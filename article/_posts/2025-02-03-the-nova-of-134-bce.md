@@ -66,6 +66,8 @@ Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], 
 [Scorpius]: https://en.wikipedia.org/wiki/Scorpius
 [guest]: https://en.wikipedia.org/wiki/Guest_star_(astronomy)
 
+The _Records_ were written closer to the event (the author was alive in 134 BCE), and contain two independent mentions of a comet, but no mention of a guest star. The _Book of Han_ was written more than two centuries after the event, and mentions a guest star, but no comet.
+
 # Footnotes
 
 [^cic]: _De Natura Deorum_, Cicero, tr. H. Rackham. <https://archive.org/details/denaturadeorumac00ciceuoft/page/136/mode/2up>
