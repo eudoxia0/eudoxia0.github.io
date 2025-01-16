@@ -2,6 +2,8 @@
 title: The Nova of 134 BCE
 ---
 
+# The Second Sun of Cicero
+
 [Cicero], in [_De Natura Deorum_][denat], writes of the omens that cause men to believe in gods:
 
 >[...] and the doubling of the sun, which my father told me had happened in the consulship of [Tuditanus][tud] and [Aquilius][aq], the year in which the light was quenched of [Publius Africanus][aem], that second sun of Rome [...] [^cic]
