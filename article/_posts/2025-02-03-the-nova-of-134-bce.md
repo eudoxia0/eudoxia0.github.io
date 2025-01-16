@@ -68,6 +68,24 @@ Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], 
 
 The _Records_ were written closer to the event (the author was alive in 134 BCE), and contain two independent mentions of a comet, but no mention of a guest star. The _Book of Han_ was written more than two centuries after the event, and mentions a guest star, but no comet.
 
+# The Encyclopædia Britannica
+
+I found may documents that claim Hipparchus saw his nova specifically in 134 BCE. Some call it "the star of Hipparchus", or "the comet of Hipparchus", some state specifically that it was in Scorpio. Clearly they're associating it with the nova of the Chinese records. But nowhere is this claim sourced. Where does it come from?
+
+I think I know. The 1911 edition of the _Encyclopædia Britannica_'s [article][ebh] on Hipparchus says:
+
+[ebh]: https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hipparchus
+
+> The outburst of a new star in 134 B.C. is stated by Pliny (Hist. nat. ii. 26) to have prompted the preparation of his catalogue of 1080 stars [...]
+
+But this is not true. It is plainly false. Pliny mentions the star, but does not give a date. The _Natural History_, book two, chapter 26, [says][nat26]:
+
+[nat26]: https://www.gutenberg.org/cache/epub/57493/pg57493-images.html#BOOK_II_CHAP_24
+
+> This same Hipparchus, who can never be sufficiently commended, as one who more especially proved the relation of the stars to man, and that our souls are a portion of heaven, discovered a new star that was produced in his own age, and, by observing its motions on the day in which it shone, he was led to doubt whether it does not often happen, that those stars have motion which we suppose to be fixed. And the same individual attempted, what might seem presumptuous even in a deity, viz. to number the stars for posterity and to express their relations by appropriate names; having previously devised instruments, by which he might mark the places and the magnitudes of each individual star. In this way it might be easily discovered, not only whether they were destroyed or produced, but whether they changed their relative positions, and likewise, whether they were increased or diminished; the heavens being thus left as an inheritance to any one, who might be found competent to complete his plan.
+
+I consulted multiple translations, read the original Latin, searched for any reference to Hipparchus or new stars. Dates back then were given more obliquely, Pliny would have said "in the n-th Olympiad" or "in the consulship of so-and-so". But no dates are given. Where does the date of 134 BCE come from?
+
 # Footnotes
 
 [^cic]: _De Natura Deorum_, Cicero, tr. H. Rackham. <https://archive.org/details/denaturadeorumac00ciceuoft/page/136/mode/2up>
