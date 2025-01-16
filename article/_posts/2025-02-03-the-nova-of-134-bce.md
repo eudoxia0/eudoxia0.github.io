@@ -86,6 +86,21 @@ But this is not true. It is plainly false. Pliny mentions the star, but does not
 
 I consulted multiple translations, read the original Latin, searched for any reference to Hipparchus or new stars. Dates back then were given more obliquely, Pliny would have said "in the n-th Olympiad" or "in the consulship of so-and-so". But no dates are given. Where does the date of 134 BCE come from?
 
+The _Britannica_ article cites a number of sources. Most are inconvenient to read, some are impossible to find. But one of them, at least, reproduces the claim.
+
+[Arthur Berry][berry] was a historian of astronomy. His book, [_A Short History of Astronomy_][short], is among the citations of the _Britannica_ article, and includes this claim:
+
+[berry]: https://www.jstor.org/stable/225698
+[short]: https://www.gutenberg.org/files/59212/59212-h/59212-h.htm
+
+> The appearance in 134 B.C. of a new star in the Scorpion is said to have suggested to Hipparchus the construction of a new catalogue of the stars.
+
+But there are no fine-grained citations. Berry says that among other things he referred to [William Whewell][ww]’s  [_History of the Inductive Sciences_][induct]
+
+[ww]: https://en.wikipedia.org/wiki/William_Whewell
+[induct]: https://www.gutenberg.org/cache/epub/68693/pg68693-images.html
+
+
 # Footnotes
 
 [^cic]: _De Natura Deorum_, Cicero, tr. H. Rackham. <https://archive.org/details/denaturadeorumac00ciceuoft/page/136/mode/2up>
