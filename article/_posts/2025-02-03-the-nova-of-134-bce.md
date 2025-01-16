@@ -32,7 +32,7 @@ I found this intriguing. What was this phenomenon? Was it just a [sun dog][sundo
 
 # The Treatise on the Celestial Offices
 
-In the [_Records of the Grand Historian_][shiji] there is also a treatise on astronomy, which says:
+In the [_Records of the Grand Historian_][shiji] (completed ~91 BCE) there is also a treatise on astronomy, which says:
 
 [shiji]: https://en.wikipedia.org/wiki/Shiji
 
@@ -50,7 +50,7 @@ Yuanshou (元狩) is the period from 122 BCE to 117 BCE. This appears to be desc
 
 So the Yuanguang period was named after a nova. 元 means "first" or "primary", 光 means "light". A "long star" (長星) is obviously a comet.
 
-In the [_Book of Han_][hanbuk]'s treatise on astronomy there is this line:
+In the [_Book of Han_][hanbuk] (completed ~111 CE) there is a treatise on astronomy there is this line:
 
 [hanbuk]: https://en.wikipedia.org/wiki/Book_of_Han
 
