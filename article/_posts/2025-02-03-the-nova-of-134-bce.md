@@ -26,9 +26,30 @@ A nova appeared in the sky in 134 BCE. This is attested by the court astronomers
 [afri]: https://en.wikipedia.org/wiki/Scipio_Africanus
 [dere]: https://en.wikipedia.org/wiki/De_re_publica
 
-I found this intriguing. What was this phenomenon? Was it just a [sun dog][sundog], or could it have been a supernova?
+I found this intriguing. What was this phenomenon? Was it just a [sun dog][sundog], or could it have been a supernova? Searching for records of ancient supernovae, I found an interesting connection: Pliny wrote that Hipparchus, the Greek astronomer, was inspired to compile his catalogue of stars by the appearance of a "new star" in the sky. Hipparchus made his observations in Rhodes c. 129 BCE, the same year as the new sun of Cicero. So we have two observations of new stars, from around the same time.
 
 [sundog]: https://en.wikipedia.org/wiki/Sun_dog
+
+# The Treatise on the Celestial Offices
+
+In the [_Book of Han_][hanbuk]'s treatise on astronomy there is this line:
+
+[hanbuk]: https://en.wikipedia.org/wiki/Book_of_Han
+
+> 元光元年六月，客星見于房
+
+Or:
+
+> In the sixth month of the first year of Yuanguang, a guest star appeared in the Fang constellation.
+
+Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], the six-year period from 134 BCE to 129BCE. Fang (房) is one of the [lunar mansions][mansion], corresponding to the constellation [Scorpius].
+
+So, in 134 BCE there was a nova on Scorpius.
+
+[era]: https://en.wikipedia.org/wiki/List_of_Chinese_era_names
+[wu]: https://en.wikipedia.org/wiki/Emperor_Wu_of_Han
+[mansion]: https://en.wikipedia.org/wiki/Twenty-Eight_Mansions
+[Scorpius]: https://en.wikipedia.org/wiki/Scorpius
 
 # Footnotes
 
