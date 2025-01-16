@@ -95,10 +95,7 @@ The _Britannica_ article cites a number of sources. Most are inconvenient to rea
 
 > The appearance in 134 B.C. of a new star in the Scorpion is said to have suggested to Hipparchus the construction of a new catalogue of the stars.
 
-But there are no fine-grained citations. Berry says that among other things he referred to [William Whewell][ww]’s  [_History of the Inductive Sciences_][induct]
-
-[ww]: https://en.wikipedia.org/wiki/William_Whewell
-[induct]: https://www.gutenberg.org/cache/epub/68693/pg68693-images.html
+But there are no fine-grained citations.
 
 
 # Footnotes
