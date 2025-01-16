@@ -65,7 +65,9 @@ Also in the _Records of the Grand Historian_, we have the annals of the Wu Emper
 
 > 其後三年，有司言元宜以天瑞命，不宜以一二數。一元曰建元，二元以長星曰元光，三元以郊得一角獸曰元狩云。
 >
-> Three years later, officials suggested that reign periods should be named after heavenly omens, and should not simply use numbers like 'first' and 'second'. The first reign period was called Jianyuan (建元). The second reign period was called Yuanguang (元光) due to the appearance of a long star. The third reign period was called Yuanshou (元狩) because a one-horned beast was encountered during the suburban sacrifice.
+> Three years later, officials suggested that reign periods should be named after heavenly omens, and should not simply use numbers like 'first' and 'second'. The first reign period was called Jianyuan. The second reign period was called Yuanguang due to the appearance of a long star. The third reign period was called Yuanshou because a one-horned beast was encountered during the suburban sacrifice.
+
+So the Yuanguang period was named after a nova. 元 means "first" or "primary", 光 means "light". A "long star" (長星) is obviously a comet.
 
 # Footnotes
 
