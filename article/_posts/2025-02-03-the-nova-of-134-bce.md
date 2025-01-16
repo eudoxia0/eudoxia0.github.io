@@ -2,6 +2,12 @@
 title: The Nova of 134 BCE
 ---
 
+A nova appeared in the sky in 134 BCE. This is attested by the court astronomers of [Han China][han]. It is possibly the same nova that, according to [Pliny], inspired [Hipparchus] to compile the first catalogue of stars.
+
+[han]: https://en.wikipedia.org/wiki/Han_dynasty
+[Pliny]: https://en.wikipedia.org/wiki/Pliny_the_Elder
+[Hipparchus]: https://en.wikipedia.org/wiki/Hipparchus
+
 # The Second Sun of Cicero
 
 [Cicero], in [_De Natura Deorum_][denat], writes of the omens that cause men to believe in gods:
