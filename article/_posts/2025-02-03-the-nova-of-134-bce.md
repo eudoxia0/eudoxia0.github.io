@@ -101,7 +101,7 @@ The _Britannica_ article cites a number of sources. Most are inconvenient to rea
 
 But there are no fine-grained citations. Delambre and Tannery mention the _étoile nouvelle_ of Hipparchus, but neither one gives a date. The trail is cold.
 
-But then I found [this paper][newstar] ([PDF][pdf])
+But then I found [this paper][newstar] ([PDF][pdf]) from 1919.
 
 [newstar]: https://ui.adsabs.harvard.edu/abs/1919MNRAS..79..162F/abstract
 [pdf]: https://articles.adsabs.harvard.edu/pdf/1919MNRAS..79..162F
