@@ -99,7 +99,7 @@ The _Britannica_ article cites a number of sources. Most are inconvenient to rea
 
 > The appearance in 134 B.C. of a new star in the Scorpion is said to have suggested to Hipparchus the construction of a new catalogue of the stars.
 
-But there are no fine-grained citations. Delambre and Tannery mention the _étoile nouvelle_ of Hipparchus, but neither one gives a date. The trail is cold.
+But there are no fine-grained citations. Delambre and Tannery mention the _étoile nouvelle_ of Hipparchus, but neither one gives a date. Berry's German sources are unreadable Fraktur gobbledygook. The trail is cold.
 
 But then I found [this paper][newstar] ([PDF][pdf]) from 1919, which says:
 
