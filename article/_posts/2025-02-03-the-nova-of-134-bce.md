@@ -66,7 +66,7 @@ Yuanguang (元光) is an [era] during the reign of the [Emperor Wu of Han][wu], 
 [Scorpius]: https://en.wikipedia.org/wiki/Scorpius
 [guest]: https://en.wikipedia.org/wiki/Guest_star_(astronomy)
 
-The _Records_ were written closer to the event (the author, [Sima Qian][sima] was alive in 134 BCE), and contain two independent mentions of a comet, but no mention of a guest star. The _Book of Han_ was written more than two centuries after the event, and mentions a guest star, but no comet.
+The _Records_ were written closer to the event (the author, [Sima Qian][sima], was alive in 134 BCE), and contain two independent mentions of a comet, but no mention of a guest star. The _Book of Han_ was written more than two centuries after the event, and mentions a guest star, but no comet.
 
 [sima]: https://en.wikipedia.org/wiki/Sima_Qian
 
