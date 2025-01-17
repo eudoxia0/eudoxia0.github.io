@@ -72,7 +72,7 @@ The _Records_ were written closer to the event (the author, [Sima Qian][sima], w
 
 # The Encyclopædia Britannica
 
-I found may documents that claim Hipparchus saw his nova specifically in 134 BCE. Some call it "the star of Hipparchus", or "the comet of Hipparchus", some state specifically that it was in Scorpio. Clearly they're associating it with the nova of the Chinese records. But nowhere is this claim sourced. Where does it come from?
+I found many documents that claim Hipparchus saw his nova specifically in 134 BCE. Some call it "the star of Hipparchus", or "the comet of Hipparchus", some state specifically that it was in Scorpio. Clearly they're associating it with the nova of the Chinese records. But nowhere is this claim sourced. Where does it come from?
 
 I think I know. The 1911 edition of the _Encyclopædia Britannica_'s [article][ebh] on Hipparchus says:
 
