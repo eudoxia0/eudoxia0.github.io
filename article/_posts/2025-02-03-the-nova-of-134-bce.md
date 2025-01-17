@@ -86,6 +86,8 @@ But this is not true. It is plainly false. Pliny mentions the star, but does not
 
 > This same Hipparchus, who can never be sufficiently commended, as one who more especially proved the relation of the stars to man, and that our souls are a portion of heaven, discovered a new star that was produced in his own age, and, by observing its motions on the day in which it shone, he was led to doubt whether it does not often happen, that those stars have motion which we suppose to be fixed. And the same individual attempted, what might seem presumptuous even in a deity, viz. to number the stars for posterity and to express their relations by appropriate names; having previously devised instruments, by which he might mark the places and the magnitudes of each individual star. In this way it might be easily discovered, not only whether they were destroyed or produced, but whether they changed their relative positions, and likewise, whether they were increased or diminished; the heavens being thus left as an inheritance to any one, who might be found competent to complete his plan.
 
+Note that Pliny seems to be talking about a comet rather than a supernova, that is, the new star of Hipparchus moved across the sky.
+
 I consulted multiple translations, read the original Latin, searched for any reference to Hipparchus or new stars. Dates back then were given more obliquely, Pliny would have said "in the n-th Olympiad" or "in the consulship of so-and-so". But no dates are given. Where does the date of 134 BCE come from?
 
 The _Britannica_ article cites a number of sources. Most are inconvenient to read, some are impossible to find. But one of them, at least, reproduces the claim.
