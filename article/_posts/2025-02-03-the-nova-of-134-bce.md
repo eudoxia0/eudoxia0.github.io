@@ -101,6 +101,11 @@ The _Britannica_ article cites a number of sources. Most are inconvenient to rea
 
 But there are no fine-grained citations. Delambre and Tannery mention the _étoile nouvelle_ of Hipparchus, but neither one gives a date. The trail is cold.
 
+But then I found [this paper][newstar] ([PDF][pdf])
+
+[newstar]: https://ui.adsabs.harvard.edu/abs/1919MNRAS..79..162F/abstract
+[pdf]: https://articles.adsabs.harvard.edu/pdf/1919MNRAS..79..162F
+
 # Footnotes
 
 [^cic]: _De Natura Deorum_, Cicero, tr. H. Rackham. <https://archive.org/details/denaturadeorumac00ciceuoft/page/136/mode/2up>
