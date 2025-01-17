@@ -92,7 +92,7 @@ I consulted multiple translations, read the original Latin, searched for any ref
 
 The _Britannica_ article cites a number of sources. Most are inconvenient to read, some are impossible to find. But one of them, at least, reproduces the claim.
 
-[Arthur Berry][berry] was a historian of astronomy. His book, [_A Short History of Astronomy_][short], is among the citations of the _Britannica_ article, and includes this claim:
+[Arthur Berry][berry] was a historian of astronomy. His book, [_A Short History of Astronomy_][short] (1898), is among the citations of the _Britannica_ article, and includes this claim:
 
 [berry]: https://www.jstor.org/stable/225698
 [short]: https://www.gutenberg.org/files/59212/59212-h/59212-h.htm
@@ -101,7 +101,17 @@ The _Britannica_ article cites a number of sources. Most are inconvenient to rea
 
 But there are no fine-grained citations. Delambre and Tannery mention the _étoile nouvelle_ of Hipparchus, but neither one gives a date. The trail is cold.
 
-But then I found [this paper][newstar] ([PDF][pdf]) from 1919.
+But then I found [this paper][newstar] ([PDF][pdf]) from 1919, which says:
+
+> the comet of 134 B.C. has been known to Western scholars since the appearance of Biot’s paper in 1843
+
+[Édouard Biot][biot] was a French astronomer and sinologist. As an astronomer, he could have had the means and motive to read Pliny on Hipparchus. And we know he read the _Records of the Grand Historian_, because in his paper of 1843, _Catalogue des étoiles extraordinaires observées en Chine depuis les temps anciens jusqu'à l'an 1203 de notre ère_, he writes:
+
+[biot]: https://en.wikipedia.org/wiki/%C3%89douard_Biot
+
+> [Avant Jésus-Christ] 134, en juillet (sous _Wou-ti_, de la dynastie Han, période _Youen-kouang_, 1ʳᵉ année, 6ᵉ lune), une étoile extraordinaire parut dans l'astérisme Fang (β, π, ρ Scorpion).
+
+So, Biot publishes his translation in 1843, the information diffuses, and it becomes common knowledge in astronomy to associate the nova of 134 BCE with the nova of Hipparchus. Then in 1898 Berry publishes his book, including the date derived from Chinese sources.
 
 [newstar]: https://ui.adsabs.harvard.edu/abs/1919MNRAS..79..162F/abstract
 [pdf]: https://articles.adsabs.harvard.edu/pdf/1919MNRAS..79..162F
