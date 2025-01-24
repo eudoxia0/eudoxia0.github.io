@@ -418,6 +418,10 @@ You can't do this with native SQL, because SQL does not compose. The closest you
 
 We could keep going, and implement the rest of the functors for the logic of the logistics system. But these examples are enough to prove that functors solve the biggest pain points of SQL. We can write queries that are fast, testable, and which can be understood through entirely local reasoning.
 
+Could this be built? Yes. You could implement it as a compiler that takes a schema definition, and compiles functor-augmented SQL down to bare SQL by recursively macroexpanding the functors. And also does typechecking etc. The hardest part would be parsing and interpreting SQL syntax, which is a separate [problem][uniform]
+
+[uniform]: /article/why-lisp-syntax-works#specific
+
 # Appendices {#app}
 
 Tangents, and brief sketches for extending the ideas in this post.
