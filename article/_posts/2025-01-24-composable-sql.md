@@ -470,8 +470,6 @@ Where `A` is a generic table type and the type `(pallet_id uuid, A...)` represen
 (pallet_id uuid, dry_mass decimal, max_payload_mass decimal)
 ```
 
-As its return type.
-
 And with this, we can rewrite:
 
 ```sql
