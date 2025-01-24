@@ -24,7 +24,6 @@ SQL could be improved somewhat by introducing composable query fragments with st
     1. [Appendix: Naming](#naming)
     1. [Appendix: Global Variables](#global)
 
-
 # Motivation {#motivation}
 
 This section explains two big pain points of SQL.
