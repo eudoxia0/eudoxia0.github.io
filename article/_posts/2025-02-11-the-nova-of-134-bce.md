@@ -1,5 +1,6 @@
 ---
 title: The Nova of 134 BCE
+summary: .
 ---
 
 A nova appeared in the sky in 134 BCE. This is attested by the court astronomers of [Han China][han]. It is possibly the same nova that, according to [Pliny], inspired [Hipparchus] to compile the first catalogue of stars.
