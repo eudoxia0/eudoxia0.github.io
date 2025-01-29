@@ -146,7 +146,7 @@ Ideally, the logic for the definition of "how heavy is this pallet?" and "is thi
 
 ### Denormalization {#denorm}
 
-We can denormalized the computed properties: adding a `payload_mass` and `cleared` column to both the `pallets` and `containers` tables. Whenever an event enters the system which affects these properties, they are recomputed. The logic can be implemented in one place, at the application layer (where it is easier to test).
+We can denormalize the computed properties: adding a `payload_mass` and `cleared` column to both the `pallets` and `containers` tables. Whenever an event enters the system which affects these properties, they are recomputed. The logic can be implemented in one place, at the application layer (where it is easier to test).
 
 The costs of denormalization are well-known, but it boils down to:
 
