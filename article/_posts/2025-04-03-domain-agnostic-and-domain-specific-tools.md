@@ -20,11 +20,11 @@ Because when you implement a specific use case in a domain-agnostic tool, you ar
 
 At the ontology level, your data looks like this:
 
-![TODO](/assets/content/domain-agnostic-and-domain-specific-tools/a.svg)
+![An ER diagram showing three tables with rich attributes: people, companies, employment.](/assets/content/domain-agnostic-and-domain-specific-tools/a.svg)
 
 But the concrete data model looks like this:
 
-![TODO](/assets/content/domain-agnostic-and-domain-specific-tools/b.svg)
+![An ER diagram showing two tables: pages and links.](/assets/content/domain-agnostic-and-domain-specific-tools/b.svg)
 
 And all the domain-specific nuances are hidden in text, invisible to software automation.
 
