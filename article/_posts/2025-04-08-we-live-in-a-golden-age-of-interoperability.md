@@ -4,10 +4,14 @@ summary: On the growth of open standards.
 card: we-live-in-a-golden-age-of-interoperability.webp
 ---
 
-Yesterday I was reading _Exploring the Internet_, an oral history of the early
-Internet. The first part of the book describes the author's efforts to publish
-the ITU's Blue Book: 19 kilopages of standards documents for telephony and
-networks. What struck me was the description of the ITU's documentation stack:
+Yesterday I was reading [_Exploring the Internet_][eti], an oral history of the
+early Internet. The first part of the book describes the author's efforts to
+publish the [ITU]'s Blue Book: 19 kilopages of standards documents for telephony
+and networks. What struck me was the description of the ITU's documentation
+stack:
+
+[eti]: https://public.resource.org/eti/
+[ITU]: https://en.wikipedia.org/wiki/International_Telecommunication_Union
 
 > A week spent trolling the halls of the ITU had produced documentation on about
 > half of the proprietary, in-house text formatting system they had developed
@@ -51,10 +55,12 @@ Compare this to today: you drag some images into Adobe FrameMaker and press
 print.
 
 > The ITU had documented the format we could expect the tapes to be in. Each
-> file had a header written in the EBCDIC character set. The file itself used a
-> character set seemingly invented by the ITU, known by the bizarre name of
+> file had a header written in the [EBCDIC] character set. The file itself used
+> a character set seemingly invented by the ITU, known by the bizarre name of
 > Zentec. The only problem was that the header format wasn’t EBCDIC and the
 > structure the ITU had told us would be on the tape wasn’t present.
+
+[EBCDIC]: https://en.wikipedia.org/wiki/EBCDIC
 
 Proprietary character sets!
 
@@ -74,13 +80,20 @@ Proprietary character sets!
 >
 > Finally, after pages and pages of PERL code, we had the beginnings of a
 > conversion program. We had tried to use the software developed at the ITU to
-> convert from TPS into RTF, but the code had been worse than useless.
+> convert from TPS into [RTF], but the code had been worse than useless.
+
+[RTF]: https://en.wikipedia.org/wiki/Rich_Text_Format
 
 A proprietary, in-house, (ironically) undocumented document-preparation system!
-Today this would be a Git repo with Markdown files and TikZ/Asymptote source
-files for the diagrams, and a Makefile to tie it all together with pandoc. Maybe
-a few custom scripts for the things Markdown can't represent, like complex
-tables or asides.
+Today this would be a Git repo with Markdown files and [TikZ]/[Asymptote][as]
+source files for the diagrams, and a Makefile to tie it all together with
+Pandoc. Maybe a few custom scripts for the things Markdown can't represent, like
+complex tables or asides. Maybe [DITA] if you really like XML.
+
+[TikZ]: https://en.wikipedia.org/wiki/PGF/TikZ
+[as]: https://en.wikipedia.org/wiki/Asymptote_(vector_graphics_language)
+[Pandoc]: https://pandoc.org/
+[DITA]: https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture
 
 This reminded me of a similar side quest I attempted many years ago: I tried to
 build a modern version of the Common Lisp HyperSpec from the source text of the
