@@ -141,7 +141,7 @@ because we have SVG, an open standard.
 [pq]: https://en.wikipedia.org/wiki/Apache_Parquet
 [DWG]: https://en.wikipedia.org/wiki/.dwg
 
-TeX is probably the most antideluvian text "format" in widespread use, and maybe
+TeX is probably the most antediluvian text "format" in widespread use, and maybe
 [Typst] will replace it. Math is one area where we're stuck with embedding TeX
 (through [KaTeX] or equivalent) since MathML hasn't taken off (understandably,
 since nobody wants to write XML by hand).
