@@ -87,7 +87,7 @@ Proprietary character sets!
 A proprietary, in-house, (ironically) undocumented document-preparation system!
 Today this would be a Git repo with Markdown files and [TikZ]/[Asymptote][as]
 source files for the diagrams, and a Makefile to tie it all together with
-Pandoc. Maybe a few custom scripts for the things Markdown can't represent, like
+[Pandoc]. Maybe a few custom scripts for the things Markdown can't represent, like
 complex tables or asides. Maybe [DITA] if you really like XML.
 
 [TikZ]: https://en.wikipedia.org/wiki/PGF/TikZ
