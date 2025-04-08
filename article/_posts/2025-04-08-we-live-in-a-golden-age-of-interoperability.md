@@ -48,7 +48,7 @@ graphics. Text documents in the proprietary, binary Word format.
 Note that the diagrams were being assembled _physically_, by pasting pieces of
 paper together. And then they were photographed. That's why it's called a
 "camera ready" copy. And this is 1991, so it's not a digital camera: it's film,
-silver-halogen crystals in collagen. It's astouding to think that this medieval
+silver-halogen crystals in collagen. It's astounding to think that this medieval
 process was happening as recently as the 90s.
 
 Compare this to today: you drag some images into Adobe FrameMaker and press
