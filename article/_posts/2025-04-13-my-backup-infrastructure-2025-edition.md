@@ -18,7 +18,7 @@ My requirements for backup infrastructure are:
 1. Fast, but only incrementally: an initial snapshot can be slow.
 1. Simple configuration, with little surface area to mess things up.
 1. Encryption with keys that I control and which never leave my device. Ideally, encryption should be mandatory, to prevent accidentally putting cleartext on backup media.
-1. Has to satisfy the 3-2-1 rule: at least three disjoint copies, in two different media, at leasto one off-site.
+1. Has to satisfy the [3-2-1 rule][rule]: at least three disjoint copies, in two different media, at leasto one off-site.
 1. There has to be a known (documented, memorable) path to recovery. It would be embarrasing if you went to restore your backups and suddenly realized there's a missing link that prevents you from e.g. recovering the encryption key.
 
 The one non-criterion is portability. Because I only use macOS, I don't need a solution where I can restore the backups from different operating systems.
@@ -87,3 +87,4 @@ I have a recurring task on my todo list whereby, once a week, I plug in the exte
 [repo]: https://restic.readthedocs.io/en/stable/045_working_with_repos.html
 [restic]: https://restic.net/
 [rsync]: https://en.wikipedia.org/wiki/Rsync
+[rule]: https://www.hanselman.com/blog/the-computer-backup-rule-of-three
