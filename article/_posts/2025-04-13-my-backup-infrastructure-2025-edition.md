@@ -68,7 +68,7 @@ You will then be asked to enter the repository password.
 
 # Frequency
 
-I have a recurring task on my todo list whereby, once a week, I plug in the external drives, run the backup script, and also take a restic snapshot.
+I have a recurring task on my [todo list][todo] whereby, once a week, I plug in the external drives, run the backup script, and also take a restic snapshot.
 
 [APFS]: https://en.wikipedia.org/wiki/Apple_File_System
 [Borg]: https://www.borgbackup.org/
@@ -88,3 +88,4 @@ I have a recurring task on my todo list whereby, once a week, I plug in the exte
 [restic]: https://restic.net/
 [rsync]: https://en.wikipedia.org/wiki/Rsync
 [rule]: https://www.hanselman.com/blog/the-computer-backup-rule-of-three
+[todo]: https://www.todoist.com/
