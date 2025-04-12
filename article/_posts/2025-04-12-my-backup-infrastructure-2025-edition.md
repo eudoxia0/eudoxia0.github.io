@@ -4,7 +4,7 @@ summary: How I back up my personal data.
 card: my-backup-infrastructure-2025-edition.webp
 ---
 
-tl;dr two portable SSDs, synced with rsync; and a Backblaze bucket synced with restic.
+tl;dr two portable SSDs, synced with [rsync]; and a [Backblaze][bb] bucket synced with [restic].
 
 I'm finally satisfied with my infrastructure for backups, so I'm writing it up so others can benefit from it.
 
@@ -46,7 +46,7 @@ Why two disks? No reason. [Why have one when you can have two for twice the pric
 
 Continuing with the centaur naming convention, I have a Backblaze bucket named Pholus, and I use restic to take snapshots of the laptop and upload them to the bucket.
 
-Why Backblaze? Because it's cheaper than S3, and less involved than S3 (no IAM/roles/policies/etc.) and it does one thing and does it well.
+Why Backblaze? Because it's cheaper than [S3], and less involved than S3 (no IAM/roles/policies/etc.) and it does one thing and does it well.
 
 Why restic? Because everything else is worse. Duplicity requires using GnuPG for key management, which is like if to start a car you had to stab yourself with your keys. borg is written in Python, which is usually a bad sign for performance and user experience. rclone, by default, is just cloud rsync, it doesn't encrypt anything, you have to use a two-level configuration, where a `crypt` backend acts as a proxy to the real storage backend. So if you misconfigure things, you could end up writing cleartext to the cloud.
 
@@ -59,3 +59,8 @@ restic supports Backblaze directly, but the documentation recommends using Backb
 # Frequency
 
 I have a recurring task on my todo list whereby, once a week, I plug in the external drives, run the backup script, and also take a restic snapshot.
+
+[rsync]: https://en.wikipedia.org/wiki/Rsync
+[restic]: https://restic.net/
+[bb]: https://www.backblaze.com/
+[S3]: https://aws.amazon.com/s3/
