@@ -4,11 +4,11 @@ summary: How I back up my personal data.
 card: my-backup-infrastructure-2025-edition.webp
 ---
 
-tl;dr two portable SSDs, synced with [rsync]; and a [Backblaze][bb] bucket synced with [restic].
-
-I'm finally satisfied with my infrastructure for backups, so I'm writing it up so others can benefit from it.
+tl;dr two portable SSDs, synced with [rsync]; and a [Backblaze][bb] bucket synced with [restic]:
 
 ![A diagram of my backup infrastructure. In a box labeled 'local', my laptop, 'metauro', and the two SSDs, 'chiron' and 'nessus', backed up with rsync. In a box labeled 'remote', the Backblaze bucket named 'pholus', backed up with restic.](/assets/content/my-backup-infrastructure-2025-edition/infra.svg)
+
+I'm finally satisfied with my infrastructure for backups, so I'm writing it up so others can benefit from it.
 
 # Criteria
 
