@@ -53,7 +53,18 @@ restic is easy to learn. The ontology is: you have a thing called a [repository]
 
 I recommend trying out the commands using [local] repositories, where the data is stored in a directory. That lets you get a hang of the ontology and the commands. Then you can create a repository backed by cloud storage.
 
-restic supports Backblaze directly, but the documentation [recommends][rec] using Backblaze's S3-compatible API. To do that, when creating a key, you have to tick a particular box. Then you have to know how to map the key properties to the AWS environment variables. That is the only difficulty.
+restic supports Backblaze directly, but the documentation [recommends][rec] using Backblaze's S3-compatible API. To do this, when creating a bucket key you have to tick "Allow List All Bucket Names", you will also have to know how to map the Backblaze key properties to the AWS environment variables. This is the only difficulty.
+
+Taking a snapshot is just:
+
+```bash
+export AWS_ACCESS_KEY_ID=[Backblaze keyID]
+export AWS_SECRET_ACCESS_KEY=[Backblaze applicationKey]
+export RESTIC_REPOSITORY="s3:[bucket endpoint hostname]/[bucket name]"
+restic backup ~/Root
+```
+
+You will then be asked to enter the repository password.
 
 # Frequency
 
