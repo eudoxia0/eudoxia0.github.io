@@ -25,7 +25,7 @@ The one non-criterion is portability. Because I only use macOS, I don't need a s
 
 # Local Backups
 
-I have two portable SSDs, Chiron and Nessus, with encrypted [APFS]. The filesystem itself being encrypted is extremely convenient: I just plug them in, and the macOS keyring has the keys. There's no possibility of accidentally leaking cleartext into the disk because the encryption is transparent.
+I have two portable SSDs, Chiron and Nessus, with encrypted [APFS]. The filesystem itself being encrypted is extremely convenient: I just plug them in, and the [macOS keychain][kc] has the keys. There's no possibility of accidentally leaking cleartext into the disk because the encryption is transparent.
 
 I use rsync to synchronize the laptop to the disks. The specific incantation is:
 
@@ -40,8 +40,6 @@ Which recursively copies the contents of `~/Root` into `/Volumes/Chiron/Root`, p
 Note that in rsync, trailing slashes matter! `rsync -a source target` creates a `source` directory inside `target`, while `rsync -a source/ target` syncs the contents of `source` inside `target`.
 
 Why two disks? No reason. [Why have one when you can have two for twice the price?][hadden]
-
-[hadden]: https://www.youtube.com/watch?v=Et4sMJP9FmM
 
 # Remote Backups
 
@@ -66,3 +64,5 @@ I have a recurring task on my todo list whereby, once a week, I plug in the exte
 [bb]: https://www.backblaze.com/
 [S3]: https://aws.amazon.com/s3/
 [APFS]: https://en.wikipedia.org/wiki/Apple_File_System
+[kc]: https://en.wikipedia.org/wiki/Keychain_(software)
+[hadden]: https://www.youtube.com/watch?v=Et4sMJP9FmM
