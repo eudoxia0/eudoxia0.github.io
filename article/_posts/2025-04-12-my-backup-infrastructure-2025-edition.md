@@ -65,3 +65,4 @@ I have a recurring task on my todo list whereby, once a week, I plug in the exte
 [restic]: https://restic.net/
 [bb]: https://www.backblaze.com/
 [S3]: https://aws.amazon.com/s3/
+[APFS]: https://en.wikipedia.org/wiki/Apple_File_System
