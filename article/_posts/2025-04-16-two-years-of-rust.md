@@ -55,6 +55,7 @@ It's paint by numbers. The type errors make refactoring completely braindead. An
 - in rare circumstances, you get inscrutable lifetime errors, these often happen when multiple orthogonal features intersect: e.g. closures and async
 - often this is a sign you have to simplify
 - When you get a design that uses lifetimes to have a completely clone()-free flow, it is really satisfying. And you can expect it to be fast.
+- borrowing is like referential transparency but useful
 
 ## Hiring {#hiring}
 
