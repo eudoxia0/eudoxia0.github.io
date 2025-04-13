@@ -32,6 +32,10 @@ In Rust, where things are slow, it's usually because of a discrete, isolated pro
 
 ## Cargo {#cargo}
 
+[Cargo] has the best DX of any build system+package manager I have used. Typically you praise the features of a program, with cargo you praise the absences: there's no gotchas, no footguns, no lore you have to learn in anger, no weirdness. When you copy a command from the documentation and run it, it works, it doesn't spit out a useless error message that serves only as a unique identifier to find the relevant StackOverflow/Discourse thread.
+
+A tiny example: something that always trips me up with npm is when I update the dependencies in the `package.json`, running the type-checker/build tool/whatever doesn't pick up the change. I get an unexpected error and then I go, oh, right, I have to run `npm install` first. In cargo, if you update the depencnesi in the `Cargo.toml` file, any subsequent command (`cargo check` or `build` or `run`) will first resolve the dependencies, update `Cargo.lock`, download any missing dependencies, and _then_ run the command. The state of (`Cargo.toml`, `Cargo.lock`, dependency sources) is always synchronized.
+
 ## Error Handling {#error}
 
 ## Type Safety {#types}
@@ -86,6 +90,7 @@ The main thing you can do to improve performance is to split your workspace into
 - dynamic dispatch is more complicated in rust due to lifetimes
 - this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
 
+[Cargo]: https://doc.rust-lang.org/cargo/
 [LLVM]: https://llvm.org/
 [au]: https://github.com/austral/austral
 [cache]: https://github.com/Swatinem/rust-cache
