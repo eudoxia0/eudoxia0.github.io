@@ -69,6 +69,14 @@ Secondly, there's a selection effect for quality. Programmers who are curious, d
 
 Personally I've never identified as a "Python programmer" or a "Rust programmer". I'm just a programmer! When you learn enough languages you can form an orthogonal basis set of programming languages and translate concepts across them. And I think the same is true for the really talented programmers: they will just pick up the language.
 
+## Affect {#affect}
+
+Enough about tech. Let's talk about feelings.
+
+When I worked with Python+Django the characteristic feeling is _anxiety_. Writing Python feels like building a castle out of twigs, and the higher you go, the stronger the wind gets. You expect things to go wrong, you expect the code to be slow, you expect that when you run a script you wait for a few hundred milliseconds before anything happens. In JavaScript the characteristic feeling is _disappointment_: at least with Python the twigs are _rigid_. Writing JavaScript feels like trying to shape mud into a house, you constantly have to go back and forth re-shaping the parts that are melting in the Sun, and when you suggest using non-liquid building material you're told you're too ivory tower. Nobody knows what a "brick" is because they don't give a shit, they don't see anything wrong with how they build.
+
+Rust feels good. You can build with confidence. You can build things that not only work as desired and don't fail overnight but which are also _beautiful_. You can be proud of the work that you do, because it's not slop.
+
 # The Bad {#bad}
 
 TODO
