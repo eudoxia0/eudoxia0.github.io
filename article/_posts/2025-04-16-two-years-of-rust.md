@@ -70,6 +70,10 @@ Personally I've never identified as a "Python programmer" or a "Rust programmer"
 
 TODO
 
+## The Module System {#modules}
+
+TODO
+
 ## Typechecker Performance {#type-perf}
 
 TODO
@@ -102,6 +106,10 @@ It's not worth figuring out. Just pay for the bigger CI runners. Four or eight c
 TODO the above is not exactly true
 
 The main thing you can do to improve performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
+
+## Expressive Power {#power}
+
+It's easy to go insane with proc macros and trait magic and build an incomprehensible codebase where it's impossible to follow the flow of control or debug anything. You have to rein it in.
 
 ## Mocking {#mock}
 
