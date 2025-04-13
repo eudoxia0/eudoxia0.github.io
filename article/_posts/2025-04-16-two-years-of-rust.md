@@ -8,7 +8,22 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
 
 # Contents
 
-TODO
+1. [Learning](#learning)
+1. [The Good](#good)
+    1. [Performance](#perf)
+    1. [Cargo](#cargo)
+    1. [Error Handling](#error)
+    1. [Type Safety](#types)
+    1. [Refactoring](#refactoring)
+    1. [The Borrow Checker](#borrow)
+    1. [Hiring](#hiring)
+    1. [Affect](#affect)
+1. [The Bad](#bad)
+    1. [The Module System](#modules)
+    1. [Typechecker Performance](#type-perf)
+    1. [Build Performance](#build-perf)
+    1. [Expressive Power](#power)
+    1. [Mocking](#mock)
 
 # Learning {#learning}
 
@@ -51,7 +66,6 @@ TODO
 In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
 
 To given an example: I don't really know how to debug Rust programs because I never had to. The only parts of the code I had to debug were the SQL queries, because SQL [has many deficiencies][sql]. But the Rust code itself was overwhelmingly solid. When there were bugs, they were overwhelmingly conceptual bugs, i.e., misunderstanding the specification. The type of bugs that you can make in any language and that testing might miss.
-
 
 ## Refactoring {#refactoring}
 
