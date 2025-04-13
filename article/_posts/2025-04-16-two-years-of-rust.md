@@ -52,6 +52,16 @@ It's paint by numbers. The type errors make refactoring completely braindead. An
 - often this is a sign you have to simplify
 - When you get a design that uses lifetimes to have a completely clone()-free flow, it is really satisfying. And you can expect it to be fast.
 
+## Hiring {#hiring}
+
+Is it hard to hire Rust programmers? No.
+
+First, some mainstream languages like Python and TypeScript are so easy to hire for that they wrap back around and become hard. How do you find a truly talented Python programmer? You have to sift through a thousand mediocre resumes.
+
+Secondly, there's a selection effect for quality. Programmers who are curious, driven, and passionate will learn new technologies that attract them. "Has used Rust", "has written open-source projects in Rust", or "wants to use Rust professionally" is a huge positive signal about a candidate.
+
+Personally I've never identified as a "Python programmer" or a "Rust programmer". I'm just a programmer! When you learn enough languages you can form an orthogonal basis set of programming languages and translate concepts across them. And I think the same is true for the really talented programmers: they will just pick up the language.
+
 # The Bad {#bad}
 
 ## Typechecker Performance {#type-perf}
