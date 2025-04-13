@@ -38,7 +38,11 @@ A tiny example: something that always trips me up with npm is when I update the 
 
 ## Error Handling {#error}
 
+TODO
+
 ## Type Safety {#types}
+
+TODO
 
 ## Refactoring {#refactoring}
 
@@ -64,7 +68,11 @@ Personally I've never identified as a "Python programmer" or a "Rust programmer"
 
 # The Bad {#bad}
 
+TODO
+
 ## Typechecker Performance {#type-perf}
+
+TODO
 
 - not great
 - downstream of the fact that modules are not compilation units, but rather, crates are
@@ -96,6 +104,8 @@ TODO the above is not exactly true
 The main thing you can do to improve performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
 
 ## Mocking {#mock}
+
+TODO
 
 - dynamic dispatch is more complicated in rust due to lifetimes
 - this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
