@@ -14,6 +14,6 @@ card: two-years-of-rust.webp
 - didn't let rust the usual way
 - studied rust, more or less academically, as research for [Austral][au]
 - when I started the job I had not written almost anything
-- nevertheless I could jump right didn
+- nevertheless I could jump right in
 
 [au]: https://github.com/austral/austral
