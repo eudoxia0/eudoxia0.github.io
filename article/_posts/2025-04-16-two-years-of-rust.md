@@ -18,6 +18,9 @@ card: two-years-of-rust.webp
 
 # The Good {#good}
 
+- rust as a better go
+- rust as a faster python
+
 ## Cargo {#cargo}
 
 ## Error Handling {#error}
@@ -25,6 +28,11 @@ card: two-years-of-rust.webp
 ## Type Safety {#types}
 
 ## The Borrow Checker {#borrow}
+
+- fighting the borrow checker doesn't happen
+- often, the borrow checker steers you towards designs with mechanical sympathy
+- in rare circumstances, you get inscrutable lifetime errors, these often happen when multiple orthogonal features intersect: e.g. closures and async
+- often this is a sign you have to simplify
 
 # The Bad {#bad}
 
