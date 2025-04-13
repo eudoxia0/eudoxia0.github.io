@@ -44,7 +44,7 @@ card: two-years-of-rust.webp
 ## Build Performance {#build-perf}
 
 - really bad
-- usually blamed on LLVM
+- usually blamed on [LLVM]
   - fair enough
 - there's various tricks you can use to speed it up
 - there's also crate splitting
@@ -57,3 +57,4 @@ card: two-years-of-rust.webp
 - this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
 
 [au]: https://github.com/austral/austral
+[LLVM]: https://llvm.org/
