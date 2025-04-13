@@ -4,7 +4,7 @@ summary: Reflections on using Rust professionally for two years.
 card: two-years-of-rust.webp
 ---
 
-I spent the last two years writing b2b SaaS in Rust, so now is the ideal time to reflect on the experience and write about it.
+I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time to reflect on the experience and write about it.
 
 # Learning {#learning}
 
@@ -16,8 +16,7 @@ This turned out fine. Within a day or two I was committing changes. The problem 
 
 # The Good {#good}
 
-- rust as a better go
-- rust as a faster python
+The way I would summarize Rust is as a better Go, or maybe a faster Python. It's fast and statically-typed, it has SOTA tooling and a great ecosystem. It's not hard to learn. It's an industrial language, not an academic language, and you can be immensely productive with it. It's a general-purpose language, so you can build [backends][axum], [CLIs][clap], [TUIs][tui], [GUIs][gtk], and embedded firmware. The two areas where it's not yet a good fit are web frontends (though you can try) and native macOS apps.
 
 ## Performance {#perf}
 
@@ -103,8 +102,13 @@ The main thing you can do to improve performance is to split your workspace into
 
 [Cargo]: https://doc.rust-lang.org/cargo/
 [LLVM]: https://llvm.org/
+[Rust]: https://www.rust-lang.org/
 [au]: https://github.com/austral/austral
+[axum]: https://github.com/tokio-rs/axum
 [cache]: https://github.com/Swatinem/rust-cache
 [chef]: https://github.com/LukeMathWalker/cargo-chef
+[clap]: https://docs.rs/clap/latest/clap/
+[gtk]: https://gtk-rs.org/
 [matklad]: https://matklad.github.io/2021/09/04/fast-rust-builds.html
 [play]: https://play.rust-lang.org/
+[tui]: https://github.com/ratatui/ratatui
