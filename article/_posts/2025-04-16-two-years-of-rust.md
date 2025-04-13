@@ -8,10 +8,11 @@ I spent the last two years writing b2b SaaS in Rust, so now is the ideal time to
 
 # Learning {#learning}
 
-- didn't let rust the usual way
-- studied rust, more or less academically, as research for [Austral][au]
-- when I started the job I had not written almost anything
-- nevertheless I could jump right in
+I didn't learn Rust the usual way: by reading tutorials, or books; or just writing tiny projects. Rather, I would say that I studied Rust academically, as part of the research that went into building [Austral][au]. I would read papers about Rust, and the specification, and sometimes I'd go on the [Rust playground][play] and write a tiny program to understand how the borrow checker works on a specific edge case.
+
+So, when I joined, my knowledge was very lopsided: I had an enyclopedic knowledge of the minutiae of the borrow checker, and couldn't have told you how to write "Hello, world!". The largest Rust program I had written was maybe 60 lines of code and it was to empirically test how trait resolution works.
+
+This turned out fine. Within a day or two I was committing changes. The problem is when people ask me for resources for learning Rust, I draw a blank.
 
 # The Good {#good}
 
