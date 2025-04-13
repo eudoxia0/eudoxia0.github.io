@@ -45,7 +45,7 @@ Why two disks? No reason. [Why have one when you can have two for twice the pric
 
 Continuing with the centaur naming convention, I have a Backblaze bucket named Pholus, and I use restic to take snapshots of the laptop and upload them to the bucket.
 
-Why Backblaze? Because it's cheaper than [S3], and less involved than S3 (no IAM/roles/policies/etc.) and it does one thing and does it well.
+Why Backblaze? Because it's cheaper than [S3], and less involved than S3 (no IAM/roles/policies/etc.), and it does one thing and does it well. I would probably use S3 if I already had other personal infrastructure on AWS, and latency was a problem (I'm in Australia, and Backblaze is not; with AWS I could have an S3 bucket with ~6ms latency to my home).
 
 Why restic? Because everything else is worse. [Duplicity][dup] requires using [GnuPG][gpg] for key management, which is like if to start a car you had to stab yourself with your keys. [Borg] is written in Python, which is usually a bad sign for performance and user experience. [Rclone], by default, is just cloud rsync, it doesn't encrypt anything, you have to use a two-level configuration, where a [`crypt`][rcrypt] backend acts as a proxy to the real storage backend. So if you misconfigure things, you could end up writing cleartext to the cloud.
 
