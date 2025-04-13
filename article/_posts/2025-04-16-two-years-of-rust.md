@@ -36,6 +36,10 @@ In Rust, where things are slow, it's usually because of a discrete, isolated pro
 
 ## Type Safety {#types}
 
+## Refactoring {#refactoring}
+
+It's paint by numbers. The type errors make refactoring completely braindead. And if it compiles, it almost always works.
+
 ## The Borrow Checker {#borrow}
 
 - fighting the borrow checker doesn't happen
