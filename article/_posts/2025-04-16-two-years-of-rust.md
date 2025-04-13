@@ -28,6 +28,8 @@ The usual cope about performance is: you shouldn't worry about it, because in mo
 
 The much more common situation, when I worked in Python web applications, is not that you have a "hot region" of the call tree, but that _everything_, every function call, is 10x to 100x slower than it could be. And so there are no obvious places to cut, there are no pressing bottlenecks. You can optimize all the bottlenecks and find that the performance bedrock is just too high. And then what can you do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
 
+In Rust, where things are slow, it's usually because of a discrete, isolated problem (e.g. an underlying SQL query is slow) rather than a pervasive problem.
+
 ## Cargo {#cargo}
 
 ## Error Handling {#error}
