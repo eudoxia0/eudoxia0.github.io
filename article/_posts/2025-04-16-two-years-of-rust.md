@@ -16,4 +16,16 @@ card: two-years-of-rust.webp
 - when I started the job I had not written almost anything
 - nevertheless I could jump right in
 
+# The Good {#good}
+
+## Cargo {#cargo}
+
+## Error Handling {#error}
+
+## Type Safety {#types}
+
+## The Borrow Checker {#borrow}
+
+# The Bad {#bad}
+
 [au]: https://github.com/austral/austral
