@@ -1,6 +1,6 @@
 ---
 title: Two Years of Rust
-summary: TODO
+summary: Reflections on using Rust professionally for two years.
 card: two-years-of-rust.webp
 ---
 
