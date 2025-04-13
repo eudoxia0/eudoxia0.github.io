@@ -75,7 +75,7 @@ There are various tricks to speed up the builds: [caching][cache], [cargo chef][
 1. The powerset of all of the above.
 1. (Insert Russell's paradox joke)
 
-It's not worth figuring out. Just pay for the bigger CI runners. Four or eight cores should be enough. Too much parallelism is wasted: run `cargo build` with the `--timings` flag, open the report in your browser, and look at the value of "Max concurrency". This tells you how many crates can be built in parallel, and, therefore, how many cores you can buy before you hit diminishing returns.
+It's not worth figuring out. Just pay for the bigger CI runners. Four or eight cores should be enough. Too much parallelism is waste: run `cargo build` with the `--timings` flag, open the report in your browser, and look at the value of "Max concurrency". This tells you how many crates can be built in parallel, and, therefore, how many cores you can buy before you hit diminishing returns.
 
 TODO the above is not exactly true
 
