@@ -64,7 +64,7 @@ export RESTIC_REPOSITORY="s3:[bucket endpoint hostname]/[bucket name]"
 restic backup ~/Root
 ```
 
-You will then be asked to enter the repository password.
+You will then be asked to enter the repository password. For added peace of mind, you can `ls` the snapshot and dump the contents of a few representative files.
 
 # Frequency
 
