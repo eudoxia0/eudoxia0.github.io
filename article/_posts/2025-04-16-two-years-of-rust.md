@@ -4,10 +4,7 @@ summary: TODO
 card: two-years-of-rust.webp
 ---
 
-- context
-  - just finished a job
-  - 2y working with rust
-  - on b2b saas
+I spent the last two years writing b2b SaaS in Rust, so now is the ideal time to reflect on the experience and write about it.
 
 # Learning {#learning}
 
