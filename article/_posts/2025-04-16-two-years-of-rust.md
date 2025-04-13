@@ -21,6 +21,16 @@ card: two-years-of-rust.webp
 - rust as a better go
 - rust as a faster python
 
+## Performance {#perf}
+
+Rust is fast.
+
+But the way this shows up is not, "this specific thing is fast", but rather "everything is not uniformly slow".
+
+The usual cope about performance is: you shouldn't worry about it, because in most programs, 99% of the runtime is spent in 1% of the code, so once you have problems, you just profile and rewrite the "hot loops". But in web applications, that's not really true. Obviously you can write accidentally quadratic loops and n+1 queries in every language, but those are discrete performance problems that can be solved in isolation.
+
+The much more common situation, when I worked in Python web applications, is not that you have a "hot region" of the call tree, but that _everything_, every function call, is 10x to 100x slower than it could be. And so there are no obvious places to cut, there are no pressing bottlenecks. You can optimize all the bottlencks and find that the performance bedrock is just too high. And then what can you do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
+
 ## Cargo {#cargo}
 
 ## Error Handling {#error}
