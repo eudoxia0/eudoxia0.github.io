@@ -107,3 +107,4 @@ The main thing you can do to improve performance is to split your workspace into
 [cache]: https://github.com/Swatinem/rust-cache
 [chef]: https://github.com/LukeMathWalker/cargo-chef
 [matklad]: https://matklad.github.io/2021/09/04/fast-rust-builds.html
+[play]: https://play.rust-lang.org/
