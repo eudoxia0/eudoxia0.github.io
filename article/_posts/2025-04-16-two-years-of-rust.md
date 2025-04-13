@@ -6,6 +6,10 @@ card: two-years-of-rust.webp
 
 I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time to reflect on the experience and write about it.
 
+# Contents
+
+TODO
+
 # Learning {#learning}
 
 I didn't learn Rust the usual way: by reading tutorials, or books; or just writing tiny projects. Rather, I would say that I studied Rust academically, as part of the research that went into building [Austral][au]. I would read papers about Rust, and the specification, and sometimes I'd go on the [Rust playground][play] and write a tiny program to understand how the borrow checker works on a specific edge case.
