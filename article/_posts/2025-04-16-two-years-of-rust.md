@@ -50,18 +50,37 @@ The much more common situation, when I worked in Python web applications, is not
 
 ## Build Performance {#build-perf}
 
-- really bad
-- usually blamed on [LLVM]
-  - fair enough
-- there's various tricks you can use to speed it up
-- there's also crate splitting
-- but it's hard to measure the performance impact of crate splitting, because, for a large project, refactoring on crate into many is very, very time-consuming and laborious
-- just pay for bigger CI runners
+The worst thing about the Rust experience is the build times. This is usually blamed on [LLVM], which, fair enough, but I think part of it is just intrinsic features of the language, like the fact that modules are not independent compilation units, and of course monomorphization.
+
+There are various tricks to speed up the builds: [caching][cache], [cargo chef][chef], [tweaking the configuration][matklad]. But these are tricks, and tricks are fragile. When you notice a build performance regression, it could be for any number of reasons:
+
+1. The code is genuinely larger, and takes longer to build.
+1. You're using language features that slow down the frontend (e.g. complex type-level code).
+1. You're using language features that slow down the backend (e.g. excessive monomorphization).
+1. A proc macro is taking a very long time (tracing macros in particular are fantastically slow).
+1. The crate DAG has changed shape, and crates that used to be built in parallel are now being built serially.
+1. Any of the above, but in the transitive closure of your dependencies.
+1. You've added/updated an immediate dependency, which pulls in lots of transitive dependencies.
+1. You're caching too little, causing dependencies to be downloaded.
+1. You're caching _too much_, bloating the cache, which takes longer to download.
+1. The cache was recently invalidated (e.g. by updating `Cargo.lock`) and has not settled yet.
+1. The CI runners are slow today, for reasons unknowable.
+1. The powerset of all of the above.
+1. (Insert Russell's paradox joke)
+
+It's not worth figuring out. Just pay for the bigger CI runners. Four or eight cores should be enough. Too much parallelism is wasted: run `cargo build` with the `--timings` flag, open the report in your browser, and look at the value of "Max concurrency". This tells you how many crates can be built in parallel, and, therefore, how many cores you can buy before you hit diminishing returns.
+
+TODO the above is not exactly true
+
+The main thing you can do to improve performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
 
 ## Mocking {#mock}
 
 - dynamic dispatch is more complicated in rust due to lifetimes
 - this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
 
-[au]: https://github.com/austral/austral
 [LLVM]: https://llvm.org/
+[au]: https://github.com/austral/austral
+[cache]: https://github.com/Swatinem/rust-cache
+[chef]: https://github.com/LukeMathWalker/cargo-chef
+[matklad]: https://matklad.github.io/2021/09/04/fast-rust-builds.html
