@@ -70,6 +70,8 @@ You will then be asked to enter the repository password. For added peace of mind
 
 I have a recurring task on my [todo list][todo] whereby, once a week, I plug in the external drives, run the backup script, and also take a restic snapshot.
 
+I could leave the drives plugged in all the time, and run `rsync` automatically every day, but my MacBook Air doesn't have enough ports for that and, also, this risks propagating data loss to the backups, which defeats the purpose. My doing manual backups, if I lose data unintentionally, I have up to a week to notice and restore it from the SSD.
+
 [APFS]: https://en.wikipedia.org/wiki/Apple_File_System
 [Borg]: https://www.borgbackup.org/
 [Rclone]: https://rclone.org/
