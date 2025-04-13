@@ -41,13 +41,13 @@ The way I would summarize Rust is: it's a better Go, or a faster Python. It's fa
 
 Rust is fast.
 
-But the way this shows up is not, "this specific thing is fast", but rather "everything is not uniformly slow".
+You can write slow code in any language: quadratic loops and n+1 queries and bad cache usage. But these are _discrete_ problems. In Rust, when you fix the bottlenecks, the program is fast.
 
-The usual cope about performance is: you shouldn't worry about it, because in most programs, 99% of the runtime is spent in 1% of the code, so once you have problems, you just profile and rewrite the "hot loops". But in web applications, that's not really true. Obviously you can write accidentally quadratic loops and n+1 queries in any language, but those are discrete performance problems that can be solved in isolation.
+In other languages performance problems are often _pervasive_, so e.g. in Python it's very common to have a situation where you've fixed all the bottlenecks—any everything is still unacceptably slow. Why? Because in Python the primitives are 10x to 100x slower than in Rust, and the composition of slow primitives is a slow program. No matter how much you optimize _within_ the program, the performance ceiling is set by the language itself.
 
-The much more common situation, when I worked in Python web applications, is not that you have a "hot region" of the call tree, but that _everything_, every function call, is 10x to 100x slower than it could be. And so there are no obvious places to cut, there are no pressing bottlenecks. You can optimize all the bottlenecks and find that the performance bedrock is just too high. And then what can you do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
+And when you find yourself in that situation, what is there to do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
 
-In Rust, where things are slow, it's usually because of a discrete, isolated problem (e.g. an underlying SQL query is slow) rather than a pervasive problem.
+By having a high performance ceiling, Rust lets you write programs that are default fast without thinking too much about optimization, and when you need to improve performance, you have a low of room to optimize before you hit the performance ceiling.
 
 ## Cargo {#cargo}
 
