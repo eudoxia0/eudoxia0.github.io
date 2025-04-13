@@ -44,9 +44,11 @@ TODO
 
 TODO
 
+In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
+
 ## Refactoring {#refactoring}
 
-It's paint by numbers. The type errors make refactoring completely braindead. And if it compiles, it almost always works.
+It's paint by numbers. The type errors make refactoring extremely straightforward and safe.
 
 ## The Borrow Checker {#borrow}
 
