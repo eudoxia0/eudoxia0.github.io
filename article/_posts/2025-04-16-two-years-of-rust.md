@@ -190,6 +190,8 @@ Another problem with crate-splitting is that `rustc` has a really nice feature t
 
 So if you want builds to be fast, you have to completely re-arrange your architecture and manually massage the dependency DAG and also do all this make-work around creating crates. And for that you gain... intra-crate circular imports, which are a horrible antipattern and make it much harder to understand any codebase. I would much prefer if modules were disjoint compilation units.
 
+I also think the module system is just a hair too complex, with re-exports and way too many ways to import symbols. It could be stripped down a lot.
+
 ## Build Performance {#build-perf}
 
 The worst thing about the Rust experience is the build times. This is usually blamed on [LLVM], which, fair enough, but I think part of it is just intrinsic features of the language, like the fact that modules are not independent compilation units, and of course monomorphization.
