@@ -150,6 +150,8 @@ TODO
 - often this is a sign you have to simplify
 - When you get a design that uses lifetimes to have a completely clone()-free flow, it is really satisfying. And you can expect it to be fast.
 - borrowing is like referential transparency but useful
+- i didn't find myself fighting the borrow checker too much
+  - probably because I learnt Rust in an unusual way
 
 ## Hiring {#hiring}
 
