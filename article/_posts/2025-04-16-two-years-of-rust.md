@@ -128,6 +128,9 @@ The borrow checker is Rust's headline feature: it's how you can have memory safe
 
 Personally I didn't have borrow checker problems, but that's because before I started using Rust at work I'd [designed and built my own borrow checker][check]. I don't know if that's a scalable pedagogy. Many people report they have to go through a lengthy period of fighting the borrow checker, and slowly their brain discovers the implicit ruleset, and eventually they reach a point where they can write code without triggering inscrutable borrow checker errors.
 
+So, how learn Rust more effectively, without building your own compiler? It's useful to understand the concepts behind the borrow checker, the "aliased XOR mutable" rule, the motivation behind the borrow checker. Unfortunately I don't have a canonical resource that explains it _ab initio_.
+
+A change in mindset is useful: a lot of people's mental model of the borrow checker is as something bolted "on top" of Rust, like a static analyzer you can run on a C/C++ codebase, which just happens to be built into the compiler. This mindset leads to fighting the system, because you think: my code is legitimate, it type-checks, all the types are there, it's only this final layer, the borrow checker, that objects. It's better to think of the borrow checker as an intrinsic part of the language semantics. Borrow checking happens, necessarily, after type-checking (because it needs to know the types of terms), but a program that fails the borrow checker is as invalid as a program that doesn't type-check. Rather than mentally implementing something in C/C++, and then thinking, "how do I translate this to Rust in a way that satisfies the borrow-checker?", it's better to think, "how can I accomplish the goal within the semantics of Rust, thinking in terms of linearity and lifetimes?". But that's hard, because it requires a high level of fluency.
 
 - fighting the borrow checker doesn't happen
 - often, the borrow checker steers you towards designs with mechanical sympathy
@@ -135,12 +138,6 @@ Personally I didn't have borrow checker problems, but that's because before I st
   - often this is a sign you have to simplify
 - When you get a design that uses lifetimes to have a completely clone()-free flow, it is really satisfying. And you can expect it to be fast.
 - borrowing is like referential transparency but useful
-- a lot of people's mental model of the borrow checker is something that is "on top" of Rust, in the same way you might add a static analyzer on top of C/C++
-  - that mindset leads to fighting the system
-  - because you think, my code is legitimate, it type-checks, all the types make sense, it's only this final layer, the borrow checker, that objects
-  - it's better to think of the borrow checker as an intrinsic part of the language semantics
-  - and think, not, how can I translate the C++ in my head to Rust, but, rather, how can I accomplish the goal within the semantics of Rust?
-  - but that's hard, because it requires a high level of fluency
 
 ## Refactoring {#refactoring}
 
