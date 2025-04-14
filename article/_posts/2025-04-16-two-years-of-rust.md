@@ -56,7 +56,77 @@ Much of the DX virtues are downstream of the fact that cargo is entirely declara
 
 ## Error Handling {#error}
 
-TODO
+There's two ways to do errors: traditional exception handling (as in Java or Python) keeps the happy path free of error-handling code, but makes it hard to know, at a given point in the program, what sort of errors could happen. Errors-as-values, as in Go, makes error handling more explicit at the cost of being very verbose.
+
+Rust has a really nice solution where errors are represented as ordinary values, but there's syntactic sugar that means you don't have to slow down to write `if err != nil` a thousand times over.
+
+Basically, an error is any type that implements the `Error` trait. Then you have the `Result` type, which is basically:
+
+```rust
+enum Result<T, E: Error> {
+    Ok(T),
+    Err(E)
+}
+```
+
+Fuctions which are fallible simply return a `Result`, e.g.:
+
+```rust
+enum DbError {
+    InvalidPath,
+    Timeout,
+    // ...
+}
+
+fn open_database(path: String) -> Result<Database, DbError>
+```
+
+The question mark operator, `?`, makes it possible to write terse code that deals with errors. Code like this:
+
+```rust
+fn foo() -> Result<(), DbError> {
+    let db = open_database(path)?;
+    let tx = begin(db)?;
+    let data = query(tx, "...")?;
+    rollback(tx)?;
+    Ok(())
+}
+```
+
+Is transformed to the much more verbose:
+
+```rust
+fn foo() -> Result<(), DbError> {
+    let db = match open_database(path) {
+        Ok(db) => db,
+        Err(e) => {
+            // Rethrow.
+            return Err(e);
+        }
+    };
+    let tx = match begin(db) {
+        Ok(tx) => tx,
+        Err(e) => {
+            return Err(e);
+        }
+    };
+    let data = match query(tx, "...") {
+        Ok(data) => data,
+        Err(e) => {
+            return Err(e);
+        }
+    };
+    match rollback(tx) {
+        Ok(_) => (),
+        Err(e) => {
+            return Err(e);
+        }
+    };
+    Ok(())
+}
+```
+
+When you need to explicitly handle an error, you simply omit the question mark operator and then you can deal with the `Result` value, instead of the underlying success value.
 
 ## Type Safety {#types}
 
