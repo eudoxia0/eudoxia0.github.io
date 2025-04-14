@@ -157,6 +157,7 @@ TODO
   - because you think, my code is legitimate, it type-checks, all the types make sense, it's only this final layer, the borrow checker, that objects
   - it's better to think of the borrow checker as an intrinsic part of the language semantics
   - and think, not, how can I translate the C++ in my head to Rust, but, rather, how can I accomplish the goal within the semantics of Rust?
+  - but that's hard, because it requires a high level of fluency
 
 ## Hiring {#hiring}
 
