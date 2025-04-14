@@ -142,6 +142,8 @@ It's paint by numbers. The type errors make refactoring extremely straightforwar
 
 ## The Borrow Checker {#borrow}
 
+TODO
+
 - fighting the borrow checker doesn't happen
 - often, the borrow checker steers you towards designs with mechanical sympathy
 - in rare circumstances, you get inscrutable lifetime errors, these often happen when multiple orthogonal features intersect: e.g. closures and async
