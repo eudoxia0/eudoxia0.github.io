@@ -230,10 +230,125 @@ It's easy to go insane with proc macros and trait magic and build an incomprehen
 
 ## Mocking {#mock}
 
-TODO
+Maybe this is a skill issue, but I have not found a good way to write code where components have swappable dependencies, so that components can be tested independently of their dependencies. The central issue is that lifetimes impinge on late binding.
 
-- dynamic dispatch is more complicated in rust due to lifetimes
-- this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
+Consider a workflow for creating a new user in a web application. The three external effects are: creating a record for the user in the database, sending them a verification email, and logging the event in an audit log:
+
+```rust
+fn create_user(
+    tx: &Transaction,
+    email: Email,
+    password: Password
+) -> Result<(), CustomError>  {
+    insert_user_record(tx, &email, &password)?;
+    send_verification_email(&email)?;
+    log_user_created_event(tx, &email)?;
+    Ok(())
+}
+```
+
+Testing this function requires spinning up a database and an email server. No good! We want to detach the workflow from its dependencies, so we can test it without transitively testing its dependencies. There's three ways to do this:
+
+1. Use traits to define the interface, and pass things at compile-time.
+1. Use traits to define the interface, and use dynamic dispatch to pass things at run-time.
+1. Use function types to define the interface, and pass dependencies as closures.
+
+And all of these approaches work. But they require a lot of make-work. In TypeScript or Java or Python it would be painless, because those languages don't have lifetimes, and so dynamic dispatch or closures "just work".
+
+For example, say we're using traits and doing everything at compile-time. To minimize the work let's just focus on the dependency that writes the user's email and password to the database. We can define a trait for it:
+
+```rust
+trait InsertUser<T> {
+    fn execute(
+        &mut self,
+        tx: &T,
+        email: &Email,
+        password: &Password
+    ) -> Result<(), CustomError>;
+}
+```
+
+(We've parameterized the type of database transactions because the mock won't use transactions.)
+
+The real implementation requires defining a placeholder type, and implementing the `InsertUser` trait for it:
+
+```rust
+struct InsertUserAdapter {}
+
+impl InsertUser<Transaction> for InsertUserAdapter {
+    fn execute(
+        &mut self,
+        tx: &Transaction,
+        email: &Email,
+        password: &Password
+    ) -> Result<(), CustomError> {
+        insert_user_record(tx, email, password)?;
+        Ok(())
+    }
+}
+```
+
+The mock implementation uses the unit type `()` as the type of transactions:
+
+```rust
+struct InsertUserMock {
+    email: Email,
+    password: Password,
+}
+
+impl InsertUser<()> for InsertUserMock {
+    fn execute(
+        &mut self,
+        tx: &(),
+        email: &Email,
+        password: &Password
+    ) -> Result<(), CustomError> {
+        // Store the email and password in the mock object, so
+        // we can afterwards assert the right values were passed
+        // in.
+        self.email = email.clone();
+        self.password = password.clone();
+        Ok(())
+    }
+}
+```
+
+Finally we can define the `create_user` workflow like this:
+
+```rust
+fn create_user<T, I: InsertUser<T>>(
+    tx: &T,
+    insert_user: &mut I,
+    email: Email,
+    password: Password,
+) -> Result<(), CustomError> {
+    insert_user.execute(tx, &email, &password)?;
+    // Todo: the rest of the dependencies.
+    Ok(())
+}
+```
+
+The live, production implementation would look like this:
+
+```rust
+fn create_user_for_real(
+    tx: &Transaction,
+    email: Email,
+    password: Password,
+) -> Result<(), CustomError> {
+    let mut insert_user = InsertUserAdapter {};
+    create_user(tx, &mut insert_user, email, password)?;
+    Ok(())
+}
+```
+
+While in the unit tests we would instead create a `InsertUserMock` and pass it in.
+
+Obviously this is a lot of typing. Using traits and dynamic dispatch would probably make the code marginally shorter. Using closures is probably the simplest approach (a function type with type parameters is, in a sense, a trait with a single method), but then you run into the ergonomics issues of closures and lifetimes.
+
+Again, this might be a skill issue, and maybe there's an elegant and idiomatic way to do this.
+
+Alternatively, you might deny the entire necessity of mocking, and write code without swappable implementations, but that has its own problems: tests become slower, because you have to spin up servers to mock things like API calls; tests require a lot of code to set up and tear down these dependencies; tests are necessarily end-to-end, and the more end-to-end your tests, the more test cases you need to check every path because of the combinatorial explosion of inputs.
 
 # Footnotes
 
