@@ -210,10 +210,6 @@ It's not worth figuring out. Just pay for the bigger CI runners. Four or eight c
 
 The main thing you can do to improve performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
 
-## Expressive Power {#power}
-
-It's easy to go insane with proc macros and trait magic and build an incomprehensible codebase where it's impossible to follow the flow of control or debug anything. You have to rein it in.
-
 ## Mocking {#mock}
 
 Maybe this is a skill issue, but I have not found a good way to write code where components have swappable dependencies, so that components can be tested independently of their dependencies. The central issue is that lifetimes impinge on late binding.
@@ -335,6 +331,10 @@ Obviously this is a lot of typing. Using traits and dynamic dispatch would proba
 Again, this might be a skill issue, and maybe there's an elegant and idiomatic way to do this.
 
 Alternatively, you might deny the entire necessity of mocking, and write code without swappable implementations, but that has its own problems: tests become slower, because you have to spin up servers to mock things like API calls; tests require a lot of code to set up and tear down these dependencies; tests are necessarily end-to-end, and the more end-to-end your tests, the more test cases you need to check every path because of the combinatorial explosion of inputs.
+
+## Expressive Power {#power}
+
+It's easy to go insane with proc macros and trait magic and build an incomprehensible codebase where it's impossible to follow the flow of control or debug anything. You have to rein it in.
 
 # Footnotes
 
