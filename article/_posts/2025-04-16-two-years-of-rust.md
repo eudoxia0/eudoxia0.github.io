@@ -132,11 +132,9 @@ Personally I didn't have borrow checker problems, but that's because before I st
 - fighting the borrow checker doesn't happen
 - often, the borrow checker steers you towards designs with mechanical sympathy
 - in rare circumstances, you get inscrutable lifetime errors, these often happen when multiple orthogonal features intersect: e.g. closures and async
-- often this is a sign you have to simplify
+  - often this is a sign you have to simplify
 - When you get a design that uses lifetimes to have a completely clone()-free flow, it is really satisfying. And you can expect it to be fast.
 - borrowing is like referential transparency but useful
-- i didn't find myself fighting the borrow checker too much
-  - probably because I learnt Rust in an unusual way
 - a lot of people's mental model of the borrow checker is something that is "on top" of Rust, in the same way you might add a static analyzer on top of C/C++
   - that mindset leads to fighting the system
   - because you think, my code is legitimate, it type-checks, all the types make sense, it's only this final layer, the borrow checker, that objects
