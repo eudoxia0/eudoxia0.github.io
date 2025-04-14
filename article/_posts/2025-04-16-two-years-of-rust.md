@@ -99,7 +99,7 @@ Rust feels good. You can build with confidence. You can build things that not on
 
 # The Bad {#bad}
 
-TODO
+This section describes the things I don't like.
 
 ## The Module System {#modules}
 
