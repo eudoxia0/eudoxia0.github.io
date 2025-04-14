@@ -20,7 +20,6 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
     1. [Affect](#affect)
 1. [The Bad](#bad)
     1. [The Module System](#modules)
-    1. [Typechecker Performance](#type-perf)
     1. [Build Performance](#build-perf)
     1. [Expressive Power](#power)
     1. [Mocking](#mock)
@@ -118,13 +117,6 @@ This is a problem because creating a module is cheap, but creating a crate is sl
 Another problem with crate-splitting is that `rustc` has a really nice feature that warns you when code is unused. It's very thorough and I like it because it helps to keep the codebase tidy. But it only works within a crate. In a multi-crate workspace, declarations that are exported publicly in a crate, but not imported by any other sibling crates, are not reported as unused.[^mach]
 
 So if you want builds to be fast, you have to completely re-arrange your architecture and manually massage the dependency DAG and also do all this make-work around creating crates. And for that you gain... circular imports, which are a horrible antipattern and make it much harder to understand any codebase. I would much prefer if modules were disjoint compilation units.
-
-## Typechecker Performance {#type-perf}
-
-TODO
-
-- not great
-- downstream of the fact that modules are not compilation units, but rather, crates are
 
 ## Build Performance {#build-perf}
 
