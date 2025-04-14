@@ -122,10 +122,6 @@ fn foo() -> Result<(), DbError> {
 
 When you need to explicitly handle an error, you simply omit the question mark operator and then you can deal with the `Result` value, instead of the underlying success value.
 
-## Refactoring {#refactoring}
-
-It's paint by numbers. The type errors make refactoring extremely straightforward and safe.
-
 ## The Borrow Checker {#borrow}
 
 TODO
@@ -144,6 +140,10 @@ TODO
   - it's better to think of the borrow checker as an intrinsic part of the language semantics
   - and think, not, how can I translate the C++ in my head to Rust, but, rather, how can I accomplish the goal within the semantics of Rust?
   - but that's hard, because it requires a high level of fluency
+
+## Refactoring {#refactoring}
+
+It's paint by numbers. The type errors make refactoring extremely straightforward and safe.
 
 ## Hiring {#hiring}
 
