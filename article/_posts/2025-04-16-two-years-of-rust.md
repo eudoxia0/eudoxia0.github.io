@@ -124,7 +124,7 @@ When you need to explicitly handle an error, you simply omit the question mark o
 
 ## The Borrow Checker {#borrow}
 
-The borrow checker is Rust's headline feature: it's how you can have both manual memory management and memory safety, it's how you can have "fearless concurrency". It's also, for most people, the most frustrating part of learning and using Rust.
+The borrow checker is Rust's headline feature: it's how you can have memory safety without garbage collection, it's the thing that enables "fearless concurrency". It's also, for most people, the most frustrating part of learning and using Rust.
 
 Personally I didn't have borrow checker problems, but that's because before I started using Rust at work I'd designed and built my own borrow checker. I don't know if that's a scalable pedagogy. Many people report they have to go through a lengthy period of fighting the borrow checker, and slowly their brain discovers the implicit ruleset, and eventually they reach a point where they can write code without triggering inscrutable borrow checker errors.
 
