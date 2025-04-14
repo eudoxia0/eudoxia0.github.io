@@ -8,21 +8,7 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
 
 # Contents
 
-1. [Learning](#learning)
-1. [The Good](#good)
-    1. [Performance](#perf)
-    1. [Tooling](#tooling)
-    1. [Error Handling](#error)
-    1. [Type Safety](#types)
-    1. [Refactoring](#refactoring)
-    1. [The Borrow Checker](#borrow)
-    1. [Hiring](#hiring)
-    1. [Affect](#affect)
-1. [The Bad](#bad)
-    1. [The Module System](#modules)
-    1. [Build Performance](#build-perf)
-    1. [Expressive Power](#power)
-    1. [Mocking](#mock)
+TODO
 
 # Learning {#learning}
 
@@ -53,6 +39,14 @@ By having a high performance ceiling, Rust lets you write programs that are defa
 [Cargo] has the best DX of any build system+package manager I have used. Typically you praise the features of a program, with cargo you praise the absences: there's no gotchas, no footguns, no lore you have to learn in anger, no weirdness, no environment variables to configure, no virtualenvs to forget to activate. When you copy a command from the documentation and run it, it works, it doesn't spit out a useless error message that serves only as a unique identifier to find the relevant StackOverflow/Discourse thread.
 
 Much of the DX virtues are downstream of the fact that cargo is entirely declarative rather than stateful. An example: something that always trips me up with npm is when I update the dependencies in the `package.json`, running the type-checker/build tool/whatever doesn't pick up the change. I get an unexpected error and then I go, oh, right, I have to run `npm install` first. With cargo, if you update the dependencies in the `Cargo.toml` file, any subsequent command (`cargo check` or `build` or `run`) will first resolve the dependencies, update `Cargo.lock`, download any missing dependencies, and _then_ run the command. The state of (`Cargo.toml`, `Cargo.lock`, local dependency store) is always synchronized.
+
+## Type Safety {#types}
+
+Rust has a good type system: sum types with exhaustiveness checking, option types instead of `null`, no surprising type conversions. Again, as with tooling, what makes a type system good is a small number of features, and a thousand _abscences_, mistakes that were not made.
+
+The practical consequence is you can have a high degree of confidence in the robustness of your code. In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
+
+To given an example: I don't really know how to debug Rust programs because I never had to. The only parts of the code I had to debug were the SQL queries, because SQL [has many deficiencies][sql]. But the Rust code itself was overwhelmingly solid. When there were bugs, they were overwhelmingly conceptual bugs, i.e., misunderstanding the specification. The type of bugs that you can make in any language and that testing might miss.
 
 ## Error Handling {#error}
 
@@ -127,14 +121,6 @@ fn foo() -> Result<(), DbError> {
 ```
 
 When you need to explicitly handle an error, you simply omit the question mark operator and then you can deal with the `Result` value, instead of the underlying success value.
-
-## Type Safety {#types}
-
-Rust has a good type system: sum types with exhaustiveness checking, option types instead of `null`, no surprising type conversions. Again, as with tooling, what makes a type system good is a small number of features, and a thousand _abscences_, mistakes that were not made.
-
-The practical consequence is you can have a high degree of confidence in the robustness of your code. In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
-
-To given an example: I don't really know how to debug Rust programs because I never had to. The only parts of the code I had to debug were the SQL queries, because SQL [has many deficiencies][sql]. But the Rust code itself was overwhelmingly solid. When there were bugs, they were overwhelmingly conceptual bugs, i.e., misunderstanding the specification. The type of bugs that you can make in any language and that testing might miss.
 
 ## Refactoring {#refactoring}
 
