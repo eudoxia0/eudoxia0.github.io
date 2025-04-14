@@ -11,7 +11,7 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
 1. [Learning](#learning)
 1. [The Good](#good)
     1. [Performance](#perf)
-    1. [Cargo](#cargo)
+    1. [Tooling](#tooling)
     1. [Error Handling](#error)
     1. [Type Safety](#types)
     1. [Refactoring](#refactoring)
@@ -49,7 +49,7 @@ And when you find yourself in that situation, what is there to do? You can scale
 
 By having a high performance ceiling, Rust lets you write programs that are default fast without thinking too much about optimization, and when you need to improve performance, you have a low of room to optimize before you hit the performance ceiling.
 
-## Cargo {#cargo}
+## Tooling {#tooling}
 
 [Cargo] has the best DX of any build system+package manager I have used. Typically you praise the features of a program, with cargo you praise the absences: there's no gotchas, no footguns, no lore you have to learn in anger, no weirdness, no environment variables to configure, no virtualenvs to forget to activate. When you copy a command from the documentation and run it, it works, it doesn't spit out a useless error message that serves only as a unique identifier to find the relevant StackOverflow/Discourse thread.
 
