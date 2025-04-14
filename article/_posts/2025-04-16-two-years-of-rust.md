@@ -104,7 +104,20 @@ TODO
 
 ## The Module System {#modules}
 
-TODO
+In Rust, there's two levels of code organization:
+
+- **Modules** are namespaces with visibility rules.
+- **Crates** are a collection of modules, and they can have dependencies on other crates. Crates can be either executables or libraries.
+
+A project, or workspace, can be made up of multiple crates. For example a web application could have library crates for each orthogonal feature and an executable crate that takes care of actually starting the server.
+
+What surprised me was learning that modules are not compilation units, and I learnt this by accident when I noticed you can have circular dependencies between modules within a crate[^reg]. Instead, crates are the compilation unit. When you change any module in a crate, the _entire_ crate has to be recompiled. This means that compiling large crates is slow, and large projects should be broken down into many small crates, with their dependency DAG arranged to maximize parallel compilation.
+
+This is a problem because creating a module is cheap, but creating a crate is slow. Creating a new module is just creating a new file and adding an entry for it in the sibling `mod.rs` file. Creating a new create requires running `cargo new`, and don't forget to set `publish = false` in the `Cargo.toml`, and adding the name of that crate in the workspace-wide `Cargo.toml` so you can import it from other crates. Importing a symbol within a crate is easy: you start typing the name, and the LSP can auto-insert the `use` declaration, but this doesn't work across crates, you have to manually open the `Cargo.toml` file for the crate you're working on and manually add a dependency to the crate you want to import code from. This is very time-consuming.
+
+Another problem with crate-splitting is that `rustc` has a really nice feature that warns you when code is unused. It's very thorough and I like it because it helps to keep the codebase tidy. But it only works within a crate. In a multi-crate workspace, declarations that are exported publicly in a crate, but not imported by any other sibling crates, are not reported as unused.[^mach]
+
+So if you want builds to be fast, you have to completely re-arrange your architecture and manually massage the dependency DAG and also do all this make-work around creating crates. And for that you gain... circular imports, which are a horrible antipattern and make it much harder to understand any codebase. I would much prefer if modules were disjoint compilation units.
 
 ## Typechecker Performance {#type-perf}
 
@@ -149,6 +162,12 @@ TODO
 
 - dynamic dispatch is more complicated in rust due to lifetimes
 - this makes mocking harder, because instead of being able to pass a new instance of a class, you have to move the mocking to the type-level
+
+# Footnotes
+
+[^reg]: If modules were separate compilation units this wouldn't work. If module A depends on B, to compile A you need to first compile B to know what declarations it exports and what their types are. But if B also depends on A, you have an infinite regression.
+
+[^mach]: One way to fix this is to make extremely fine-grained crates, and rely on `cargo-machete` to identify unused code at the dependency level. But this would take up way too much time.
 
 [Cargo]: https://doc.rust-lang.org/cargo/
 [LLVM]: https://llvm.org/
