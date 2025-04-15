@@ -68,7 +68,7 @@ There's two ways to do errors: traditional exception handling (as in Java or Pyt
 
 Rust has a really nice solution where errors are represented as ordinary values, but there's syntactic sugar that means you don't have to slow down to write `if err != nil` a thousand times over.
 
-Basically, an error is any type that implements the `Error` trait. Then you have the `Result` type, which is basically:
+In Rust, an error is any type that implements the `Error` trait. Then you have the `Result` type:
 
 ```rust
 enum Result<T, E: Error> {
@@ -134,7 +134,7 @@ fn foo() -> Result<(), DbError> {
 }
 ```
 
-When you need to explicitly handle an error, you simply omit the question mark operator and then you can deal with the `Result` value, instead of the underlying success value.
+When you need to explicitly handle an error, you omit the question mark operator and use thw `Result` value directly.
 
 ## The Borrow Checker {#borrow}
 
