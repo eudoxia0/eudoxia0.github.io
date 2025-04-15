@@ -153,7 +153,18 @@ When you are comfortable with the borrow checker, life is pretty good. "Fighting
 
 ## Async {#async}
 
-TODO
+Everyone complains about async. They complain that it's too complex or they invoke that thought-terminating cliche about "coloured functions". It's easy to complain about something when comparing it to some vague, abstract, ideal state of affairs; but what, exactly, is the concrete and existing alternative to async?
+
+The binding constraint is that OS threads are slow. Not accidentally but intrinsically, because of the kernel, and having to swap the CPU state and stack on each context switch. OS threads are never going to be fast. If you want to build high-performance network services, it matters a lot how many concurrent connections and how much throughput you can get per CPU.  So you need an alternative way to do concurrency that lets you maximize your hardware resources.
+
+And there are basically two alternatives.
+
+1. Green threads, which give programmers the same semantics as OS threads (good!) but often leave a lot of performance on the table (bad!) because you need to allocate memory for each thread's stack and you need a runtime scheduler to do preemptive multitasking.
+2. Stackless coroutines, as in Rust, which add complexity to the language semantics and implementation (bad!) but have a high performance ceiling (good!).
+
+From the perspective of a language implementor, or someone who cares about specifying the semantics of programming languages, async is not a trivial feature. The intersection of async and lifetimes is hard to understand. From the perspective of a library implementor, someone who writes the building blocks of services and is down in the trenches with the `Pin`/`Poll`/`Future`, it's rough.
+
+But from the perspective of a user, async Rust is pretty good. It mostly "just works". The user perspective is you put `async` in front of function definitions that perform IO and you put `await` at the call sites and that's it. The only major area where things are unergonomic is calling async functions inside iterators.
 
 ## Refactoring {#refactoring}
 
