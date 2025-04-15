@@ -64,7 +64,7 @@ To give an example: I don't really know how to debug Rust programs because I nev
 
 ## Error Handling {#error}
 
-There's two ways to do errors: traditional exception handling (as in Java or Python) keeps the happy path free of error-handling code, but makes it hard to know, at a given point in the program, what sort of errors could happen. Errors-as-values, as in Go, makes error handling more explicit at the cost of being very verbose.
+There's two ways to do errors: traditional exception handling (as in Java or Python) keeps the happy path free of error-handling code, but makes it hard to know the set of errors that can be raised at a given program point. Errors-as-values, as in Go, makes error handling more explicit at the cost of being very verbose.
 
 Rust has a really nice solution where errors are represented as ordinary values, but there's syntactic sugar that means you don't have to slow down to write `if err != nil` a thousand times over.
 
