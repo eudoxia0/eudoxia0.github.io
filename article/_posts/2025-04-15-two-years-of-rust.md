@@ -31,7 +31,7 @@ I didn't learn Rust the usual way: by reading tutorials, or books; or writing ti
 
 So, when I started working in Rust, my knowledge was very lopsided: I had an encyclopedic knowledge of the minutiae of the borrow checker, and couldn't have told you how to write "Hello, world!". The largest Rust program I had written was maybe 60 lines of code and it was to empirically test how trait resolution works.
 
-This turned out fine. Within a day or two I was committing changes. The problem is when people ask me for resources for learning Rust, I draw a blank.
+This turned out fine. Within a day or two I was committing changes. The problem is when people ask me for resources to learn Rust, I draw a blank.
 
 # The Good {#good}
 
