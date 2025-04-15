@@ -206,7 +206,7 @@ There are various tricks to speed up the builds: [caching][cache], [cargo chef][
 1. The code is genuinely larger, and takes longer to build.
 1. You're using language features that slow down the frontend (e.g. complex type-level code).
 1. You're using language features that slow down the backend (e.g. excessive monomorphization).
-1. A proc macro is taking a very long time (tracing macros in particular are fantastically slow).
+1. A proc macro is taking a very long time ([`tracing::instrument`][inst] in particular is fantastically slow).
 1. The crate DAG has changed shape, and crates that used to be built in parallel are now being built serially.
 1. Any of the above, but in the transitive closure of your dependencies.
 1. You've added/updated an immediate dependency, which pulls in lots of transitive dependencies.
@@ -363,6 +363,7 @@ It's easy to go insane with proc macros and trait magic and build an incomprehen
 [chef]: https://github.com/LukeMathWalker/cargo-chef
 [clap]: https://docs.rs/clap/latest/clap/
 [gtk]: https://gtk-rs.org/
+[inst]: https://docs.rs/tracing/latest/tracing/attr.instrument.html
 [matklad]: https://matklad.github.io/2021/09/04/fast-rust-builds.html
 [play]: https://play.rust-lang.org/
 [sql]: /article/composable-sql
