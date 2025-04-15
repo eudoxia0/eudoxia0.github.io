@@ -162,7 +162,7 @@ And there are basically two alternatives.
 1. Green threads, which give programmers the same semantics as OS threads (good!) but often leave a lot of performance on the table (bad!) because you need to allocate memory for each thread's stack and you need a runtime scheduler to do preemptive multitasking.
 2. Stackless coroutines, as in Rust, which add complexity to the language semantics and implementation (bad!) but have a high performance ceiling (good!).
 
-From the perspective of a language implementor, or someone who cares about specifying the semantics of programming languages, async is not a trivial feature. The intersection of async and lifetimes is hard to understand. From the perspective of a library implementor, someone who writes the building blocks of services and is down in the trenches with the `Pin`/`Poll`/`Future`, it's rough.
+From the perspective of a language implementor, or someone who cares about specifying the semantics of programming languages, async is not a trivial feature. The intersection of async and lifetimes is hard to understand. From the perspective of a library implementor, someone who writes the building blocks of services and is down in the trenches with `Pin`/`Poll`/`Future`, it's rough.
 
 But from the perspective of a user, async Rust is pretty good. It mostly "just works". The user perspective is you put `async` in front of function definitions that perform IO and you put `await` at the call sites and that's it. The only major area where things are unergonomic is calling async functions inside iterators.
 
