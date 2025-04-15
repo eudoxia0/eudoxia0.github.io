@@ -60,7 +60,7 @@ Rust has a good type system: sum types with exhaustiveness checking, option type
 
 The practical consequence is you can have a high degree of confidence in the robustness of your code. In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
 
-To given an example: I don't really know how to debug Rust programs because I never had to. The only parts of the code I had to debug were the SQL queries, because SQL [has many deficiencies][sql]. But the Rust code itself was overwhelmingly solid. When there were bugs, they were overwhelmingly conceptual bugs, i.e., misunderstanding the specification. The type of bugs that you can make in any language and that testing might miss.
+To give an example: I don't really know how to debug Rust programs because I never had to. The only parts of the code I had to debug were the SQL queries, because SQL [has many deficiencies][sql]. But the Rust code itself was overwhelmingly solid. When there were bugs, they were overwhelmingly conceptual bugs, i.e., misunderstanding the specification. The type of bugs that you can make in any language and that testing might miss.
 
 ## Error Handling {#error}
 
