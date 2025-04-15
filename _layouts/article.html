@@ -13,6 +13,18 @@ layout: common
         <td class="key">Published</td>
         <td class="value">{{ page.date | date: "%-d %B, %Y" }}</td>
       </tr>
+      <tr>
+        <td class="key">Previous Post</td>
+        <td class="value">
+          {% if page.previous.url %}
+          <a href="{{ page.previous.url }}">
+            {{ page.previous.title }}
+          </a>
+          {% else %}
+          <i>None</i>
+          {% endif %}
+        </td>
+      </tr>
     </table>
   </div>
 </div>
