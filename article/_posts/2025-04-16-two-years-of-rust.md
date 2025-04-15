@@ -46,7 +46,7 @@ In other languages performance problems are often _pervasive_, so e.g. in Python
 
 And when you find yourself in that situation, what is there to do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
 
-By having a high performance ceiling, Rust lets you write programs that are default fast without thinking too much about optimization, and when you need to improve performance, you have a low of room to optimize before you hit the performance ceiling.
+By having a high performance ceiling, Rust lets you write programs that are default fast without thinking too much about optimization, and when you need to improve performance, you have a lot of room to optimize before you hit the performance ceiling.
 
 ## Tooling {#tooling}
 
