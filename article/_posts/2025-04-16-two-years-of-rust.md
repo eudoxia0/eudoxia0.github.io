@@ -355,6 +355,7 @@ fn test_create_user() -> Result<(), CustomError> {
 
     Ok(())
 }
+```
 
 Obviously this is a lot of typing. Using traits and dynamic dispatch would probably make the code marginally shorter. Using closures is probably the simplest approach (a function type with type parameters is, in a sense, a trait with a single method), but then you run into the ergonomics issues of closures and lifetimes.
 
