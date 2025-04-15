@@ -391,7 +391,8 @@ article {
         margin-bottom: var(--size-1);
     }
 
-    p {
+    p,
+    li {
         text-align: justify;
     }
 
@@ -442,6 +443,7 @@ article {
     ol,
     dl {
         margin-left: var(--size-2);
+        margin-right: var(--size-2);
     }
 
     dl {
