@@ -135,7 +135,7 @@ fn foo() -> Result<(), DbError> {
 }
 ```
 
-When you need to explicitly handle an error, you omit the question mark operator and use thw `Result` value directly.
+When you need to explicitly handle an error, you omit the question mark operator and use the `Result` value directly.
 
 ## The Borrow Checker {#borrow}
 
