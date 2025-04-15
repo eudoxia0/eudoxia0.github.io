@@ -154,6 +154,8 @@ When you are comfortable with the borrow checker, life is pretty good. "Fighting
 
 It's paint by numbers. The type errors make refactoring extremely straightforward and safe.
 
+Once I had to deploy a significant emergency change. The code compiled, but I had zero confidence that it would work. And I deployed it and it worked flawlessly. In most languages you can tell the opposite story: where you have full confidence in the code, and it still something explodes because of dynamic typing or `null` pointers.
+
 ## Hiring {#hiring}
 
 Is it hard to hire Rust programmers? No.
