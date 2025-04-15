@@ -8,7 +8,21 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
 
 # Contents
 
-TODO
+1. [Learning](#learning)
+1. [The Good](#good)
+    1. [Performance](#perf)
+    1. [Tooling](#tooling)
+    1. [Type Safety](#types)
+    1. [Error Handling](#error)
+    1. [The Borrow Checker](#borrow)
+    1. [Refactoring](#refactoring)
+    1. [Hiring](#hiring)
+    1. [Affect](#affect)
+1. [The Bad](#bad)
+    1. [The Module System](#modules)
+    1. [Build Performance](#build-perf)
+    1. [Mocking](#mock)
+    1. [Expressive Power](#power)
 
 # Learning {#learning}
 
