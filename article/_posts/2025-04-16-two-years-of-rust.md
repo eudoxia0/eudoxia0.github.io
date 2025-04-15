@@ -77,7 +77,7 @@ enum Result<T, E: Error> {
 }
 ```
 
-Fuctions which are fallible simply return a `Result`, e.g.:
+Functions which are fallible simply return a `Result`, e.g.:
 
 ```rust
 enum DbError {
