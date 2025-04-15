@@ -15,6 +15,7 @@ I recently wrapped up a job where I spent the last two years writing the backend
     1. [Type Safety](#types)
     1. [Error Handling](#error)
     1. [The Borrow Checker](#borrow)
+    1. [Async](#async)
     1. [Refactoring](#refactoring)
     1. [Hiring](#hiring)
     1. [Affect](#affect)
@@ -149,6 +150,10 @@ Firstly, it's useful to understand the concepts behind the borrow checker, the "
 Secondly, a change in mindset is useful: a lot of people's mental model of the borrow checker is as something bolted "on top" of Rust, like a static analyzer you can run on a C/C++ codebase, which just happens to be built into the compiler. This mindset leads to fighting the system, because you think: my code is legitimate, it type-checks, all the types are there, it's only this final layer, the borrow checker, that objects. It's better to think of the borrow checker as an intrinsic part of the language semantics. Borrow checking happens, necessarily, after type-checking (because it needs to know the types of terms), but a program that fails the borrow checker is as invalid as a program that doesn't type-check. Rather than mentally implementing something in C/C++, and then thinking, "how do I translate this to Rust in a way that satisfies the borrow-checker?", it's better to think, "how can I accomplish the goal within the semantics of Rust, thinking in terms of linearity and lifetimes?". But that's hard, because it requires a high level of fluency.
 
 When you are comfortable with the borrow checker, life is pretty good. "Fighting the borrow checker" isn't something that happens. When the borrow checker complains it's either because you're doing something where multiple orthogonal features impinge on each other (e.g. async + closures + borrowing) or because you're doing something that's too complex, and the errors are a signal you have to simplify. Often, the borrow checker steers you towards designs that have mechanical sympathy, that are aligned with how the hardware works. When you converge on a design that leverages lifetimes to have a completely `clone()`-free flow of data, it is really satisfying. When you design a linearly-typed API where the linearity makes it really hard to misuse, you're grateful for the borrow checker.
+
+## Async {#async}
+
+TODO
 
 ## Refactoring {#refactoring}
 
