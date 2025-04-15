@@ -174,11 +174,11 @@ It's paint by numbers. The type errors make refactoring extremely straightforwar
 
 Is it hard to hire Rust programmers? No.
 
-First, some mainstream languages like Python and TypeScript are so easy to hire for that they wrap back around and become hard. How do you find a truly talented Python programmer? You have to sift through a thousand mediocre resumes.
+First, mainstream languages like Python and TypeScript are so easy to hire for that they wrap back around and become hard. To find a truly talented Python programmer you have to sift through a thousand resumes.
 
-Secondly, there's a selection effect for quality. Programmers who are curious, driven, and passionate will learn new technologies that attract them. "Has used Rust", "has written open-source projects in Rust", or "wants to use Rust professionally" is a huge positive signal about a candidate.
+Secondly, there's a selection effect for quality. "Has used Rust", "has written open-source code in Rust", or "wants to use Rust professionally" are huge positive signals about a candidate because it says they are curious and they care about improving their skills.
 
-Personally I've never identified as a "Python programmer" or a "Rust programmer". I'm just a programmer! When you learn enough languages you can form an orthogonal basis set of programming concept and translate them across languages. And I think the same is true for the really talented programmers: they will just pick up the language.
+Personally I've never identified as a "Python programmer" or a "Rust programmer". I'm just a programmer! When you learn enough languages you can form an orthogonal basis set of programming concept and translate them across languages. And I think the same is true for the really talented programmers: they are able to learn the language quickly.
 
 ## Affect {#affect}
 
