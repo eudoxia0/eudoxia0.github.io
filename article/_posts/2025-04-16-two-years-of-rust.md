@@ -56,7 +56,7 @@ Much of the DX virtues are downstream of the fact that cargo is entirely declara
 
 ## Type Safety {#types}
 
-Rust has a good type system: sum types with exhaustiveness checking, option types instead of `null`, no surprising type conversions. Again, as with tooling, what makes a type system good is a small number of features, and a thousand _absences_, mistakes that were not made.
+Rust has a good type system: sum types with exhaustiveness checking, option types instead of `null`, no surprising type conversions. Again, as with tooling, what makes a type system good is a small number of features, and a thousand absences, mistakes that were not made.
 
 The practical consequence is you can have a high degree of confidence in the robustness of your code. In e.g. Python the state of nature is you have zero confidence that the code won't blow up in your face, so you spend your time writing tests (to compensate for the lack of a type system) and waiting for the tests to clear CI (because it's slow as shit). In Rust you write the code and if it compiles, it almost always works. Writing tests can feel like a chore because of how rarely they surface defects.
 
