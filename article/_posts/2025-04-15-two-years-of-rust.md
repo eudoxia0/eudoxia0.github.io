@@ -4,7 +4,7 @@ summary: Reflections on using Rust professionally for two years.
 card: two-years-of-rust.webp
 ---
 
-I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time to reflect on the experience and write about it.
+I recently wrapped up a job where I spent the last two years writing the backend of a B2B SaaS product in [Rust], so now is the ideal time to reflect on the experience and write about it.
 
 # Contents
 
