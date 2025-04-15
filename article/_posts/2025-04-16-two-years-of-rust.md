@@ -28,7 +28,7 @@ I spent the last two years writing b2b SaaS in [Rust], so now is the ideal time 
 
 I didn't learn Rust the usual way: by reading tutorials, or books; or writing tiny projects. Rather, I would say that I studied Rust, as part of the research that went into building [Austral][au]. I would read papers about Rust, and the specification, and sometimes I'd go on the [Rust playground][play] and write a tiny program to understand how the borrow checker works on a specific edge case.
 
-So, when I joined, my knowledge was very lopsided: I had an encyclopedic knowledge of the minutiae of the borrow checker, and couldn't have told you how to write "Hello, world!". The largest Rust program I had written was maybe 60 lines of code and it was to empirically test how trait resolution works.
+So, when I started working in Rust, my knowledge was very lopsided: I had an encyclopedic knowledge of the minutiae of the borrow checker, and couldn't have told you how to write "Hello, world!". The largest Rust program I had written was maybe 60 lines of code and it was to empirically test how trait resolution works.
 
 This turned out fine. Within a day or two I was committing changes. The problem is when people ask me for resources for learning Rust, I draw a blank.
 
@@ -40,9 +40,9 @@ The way I would summarize Rust is: it's a better Go, or a faster Python. It's fa
 
 Rust is fast.
 
-You can write slow code in any language: quadratic loops and n+1 queries and bad cache usage. But these are _discrete_ problems. In Rust, when you fix the bottlenecks, the program is fast.
+You can write slow code in any language: quadratic loops and n+1 queries and bad cache usage. But these are _discrete_ bottlenecks. In Rust, when you fix the bottlenecks, the program is fast.
 
-In other languages performance problems are often _pervasive_, so e.g. in Python it's very common to have a situation where you've fixed all the bottlenecks—any everything is still unacceptably slow. Why? Because in Python the primitives are 10x to 100x slower than in Rust, and the composition of slow primitives is a slow program. No matter how much you optimize _within_ the program, the performance ceiling is set by the language itself.
+In other languages performance problems are often _pervasive_, so e.g. in Python it's very common to have a situation where you've fixed all the bottlenecks---and everything is still unacceptably slow. Why? Because in Python the primitives are 10x to 100x slower than in Rust, and the composition of slow primitives is a slow program. No matter how much you optimize _within_ the program, the performance ceiling is set by the language itself.
 
 And when you find yourself in that situation, what is there to do? You can scale the hardware vertically, and end up like those people who spend five figures a month on AWS to get four requests per second. You can keep your dependencies up to date, and hope that the community is doing the work of improving performance. And you can use async as much as possible on the belief that your code is I/O-bound, and be disappointed when it turns out that actually you're CPU-bound.
 
