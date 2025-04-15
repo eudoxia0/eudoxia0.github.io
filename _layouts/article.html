@@ -25,6 +25,18 @@ layout: common
           {% endif %}
         </td>
       </tr>
+      <tr>
+        <td class="key">Next Post</td>
+        <td class="value">
+          {% if page.next.url %}
+          <a href="{{ page.next.url }}">
+            {{ page.next.title }}
+          </a>
+          {% else %}
+          <i>None</i>
+          {% endif %}
+        </td>
+      </tr>
     </table>
   </div>
 </div>
