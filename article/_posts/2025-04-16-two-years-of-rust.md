@@ -34,7 +34,7 @@ This turned out fine. Within a day or two I was committing changes. The problem 
 
 # The Good {#good}
 
-The way I would summarize Rust is: it's a better Go, or a faster Python. It's fast and statically-typed, it has SOTA tooling and a great ecosystem. It's not hard to learn. It's an industrial language, not an academic language, and you can be immensely productive with it. It's a general-purpose language, so you can build [backends][axum], [CLIs][clap], [TUIs][tui], [GUIs][gtk], and embedded firmware. The two areas where it's not yet a good fit are web frontends (though you can try) and native macOS apps.
+The way I would summarize Rust is: it's a better Go, or a faster Python. It's fast and statically-typed, it has SOTA tooling, and a great ecosystem. It's not hard to learn. It's an industrial language, not an academic language, and you can be immensely productive with it. It's a general-purpose language, so you can build [backends][axum], [CLIs][clap], [TUIs][tui], [GUIs][gtk], and embedded firmware. The two areas where it's not yet a good fit are web frontends (though you can try) and native macOS apps.
 
 ## Performance {#perf}
 
