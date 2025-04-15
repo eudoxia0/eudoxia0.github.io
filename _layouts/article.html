@@ -14,7 +14,7 @@ layout: common
         <td class="value">{{ page.date | date: "%-d %B, %Y" }}</td>
       </tr>
       <tr>
-        <td class="key">Previous Post</td>
+        <td class="key">Previous</td>
         <td class="value">
           {% if page.previous.url %}
             <a href="{{ page.previous.url }}">
@@ -26,7 +26,7 @@ layout: common
         </td>
       </tr>
       <tr>
-        <td class="key">Next Post</td>
+        <td class="key">Next</td>
         <td class="value">
           {% if page.next.url %}
             <a href="{{ page.next.url }}">
