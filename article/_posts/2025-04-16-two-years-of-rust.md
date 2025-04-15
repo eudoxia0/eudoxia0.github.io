@@ -187,13 +187,13 @@ In Rust, there's two levels of code organization:
 
 A project, or workspace, can be made up of multiple crates. For example a web application could have library crates for each orthogonal feature and an executable crate that ties them together and starts the server.
 
-What surprised me was learning that modules are not compilation units, and I learnt this by accident when I noticed you can have circular dependencies between modules within a crate[^reg]. Instead, crates are the compilation unit. When you change any module in a crate, the _entire_ crate has to be recompiled. This means that compiling large crates is slow, and large projects should be broken down into many small crates, with their dependency DAG arranged to maximize parallel compilation.
+What surprised me was learning that modules are not compilation units, and I learnt this by accident when I noticed you a circular dependency between modules within the same crate[^reg]. Instead, crates are the compilation unit. When you change any module in a crate, the _entire_ crate has to be recompiled. This means that compiling large crates is slow, and large projects should be broken down into many small crates, with their dependency DAG arranged to maximize parallel compilation.
 
 This is a problem because creating a module is cheap, but creating a crate is slow. Creating a new module is just creating a new file and adding an entry for it in the sibling `mod.rs` file. Creating a new crate requires running `cargo new`, and don't forget to set `publish = false` in the `Cargo.toml`, and adding the name of that crate in the workspace-wide `Cargo.toml` so you can import it from other crates. Importing a symbol within a crate is easy: you start typing the name, and the LSP can auto-insert the `use` declaration, but this doesn't work across crates, you have to manually open the `Cargo.toml` file for the crate you're working on and manually add a dependency to the crate you want to import code from. This is very time-consuming.
 
 Another problem with crate-splitting is that `rustc` has a really nice feature that warns you when code is unused. It's very thorough and I like it because it helps to keep the codebase tidy. But it only works within a crate. In a multi-crate workspace, declarations that are exported publicly in a crate, but not imported by any other sibling crates, are not reported as unused.[^mach]
 
-So if you want builds to be fast, you have to completely re-arrange your architecture and manually massage the dependency DAG and also do all this make-work around creating crates. And for that you gain... intra-crate circular imports, which are a horrible antipattern and make it much harder to understand any codebase. I would much prefer if modules were disjoint compilation units.
+So if you want builds to be fast, you have to completely re-arrange your architecture and manually massage the dependency DAG and also do all this make-work around creating and updating crate metadata. And for that you gain... intra-crate circular imports, which are a horrible antipattern and make it much harder to understand the codebase. I would much prefer if modules were disjoint compilation units.
 
 I also think the module system is just a hair too complex, with re-exports and way too many ways to import symbols. It could be stripped down a lot.
 
@@ -219,11 +219,11 @@ There are various tricks to speed up the builds: [caching][cache], [cargo chef][
 
 It's not worth figuring out. Just pay for the bigger CI runners. Four or eight cores should be enough. Too much parallelism is waste: run `cargo build` with the `--timings` flag, open the report in your browser, and look at the value of "Max concurrency". This tells you how many crates can be built in parallel, and, therefore, how many cores you can buy before you hit diminishing returns.
 
-The main thing you can do to improve performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
+The main thing you can do to improve build performance is to split your workspace into multiple crates, and arranging the crate dependencies such that as much of your workspace can be built in parallel. This is easy to do at the start of a project, and very time-consuming after.
 
 ## Mocking {#mock}
 
-Maybe this is a skill issue, but I have not found a good way to write code where components have swappable dependencies, so that components can be tested independently of their dependencies. The central issue is that lifetimes impinge on late binding.
+Maybe this is a skill issue, but I have not found a good way to write code where components have swappable dependencies and can be tested independently of their dependencies. The central issue is that lifetimes impinge on late binding.
 
 Consider a workflow for creating a new user in a web application. The three external effects are: creating a record for the user in the database, sending them a verification email, and logging the event in an audit log:
 
@@ -261,7 +261,7 @@ trait InsertUser<T> {
 }
 ```
 
-(We've parameterized the type of database transactions because the mock won't use transactions.)
+(We've parameterized the type of database transactions because the mock won't use a real database, therefore, we won't have a way to construct a `Transaction` type in the tests.)
 
 The real implementation requires defining a placeholder type, and implementing the `InsertUser` trait for it:
 
@@ -335,7 +335,26 @@ fn create_user_for_real(
 }
 ```
 
-While in the unit tests we would instead create a `InsertUserMock` and pass it in.
+While in the unit tests we would instead create a `InsertUserMock` and pass it in:
+
+```rust
+#[test]
+fn test_create_user() -> Result<(), CustomError> {
+    let mut insert_user = InsertUserMock {
+        email: "".to_string(),
+        password: "".to_string()
+    };
+    let email = "foo@example.com".to_string();;
+    let password = "hunter2".to_string();
+
+    create_user(tx, &mut insert_user, email, password)?;
+
+    // Assert `insert_user` was called with the right values.
+    assert_eq!(insert_user.email, "foo@example.com");
+    assert_eq!(insert_user.password, "hunter2");
+
+    Ok(())
+}
 
 Obviously this is a lot of typing. Using traits and dynamic dispatch would probably make the code marginally shorter. Using closures is probably the simplest approach (a function type with type parameters is, in a sense, a trait with a single method), but then you run into the ergonomics issues of closures and lifetimes.
 
