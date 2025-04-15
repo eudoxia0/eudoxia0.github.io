@@ -185,7 +185,7 @@ In Rust, there's two levels of code organization:
 - **Modules** are namespaces with visibility rules.
 - **Crates** are a collection of modules, and they can depend on other crates. Crates can be either executables or libraries.
 
-A project, or workspace, can be made up of multiple crates. For example a web application could have library crates for each orthogonal feature and an executable crate that takes care of actually starting the server.
+A project, or workspace, can be made up of multiple crates. For example a web application could have library crates for each orthogonal feature and an executable crate that ties them together and starts the server.
 
 What surprised me was learning that modules are not compilation units, and I learnt this by accident when I noticed you can have circular dependencies between modules within a crate[^reg]. Instead, crates are the compilation unit. When you change any module in a crate, the _entire_ crate has to be recompiled. This means that compiling large crates is slow, and large projects should be broken down into many small crates, with their dependency DAG arranged to maximize parallel compilation.
 
