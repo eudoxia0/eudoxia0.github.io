@@ -183,7 +183,7 @@ This section describes the things I don't like.
 In Rust, there's two levels of code organization:
 
 - **Modules** are namespaces with visibility rules.
-- **Crates** are a collection of modules, and they can have dependencies on other crates. Crates can be either executables or libraries.
+- **Crates** are a collection of modules, and they can depend on other crates. Crates can be either executables or libraries.
 
 A project, or workspace, can be made up of multiple crates. For example a web application could have library crates for each orthogonal feature and an executable crate that takes care of actually starting the server.
 
