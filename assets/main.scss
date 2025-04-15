@@ -498,6 +498,31 @@ article {
     }
 }
 
+.post-metadata {
+    border-top: 1px solid black;
+    padding: var(--size-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    table {
+        td {
+            padding: 3px 12px;
+        }
+
+        .key {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .value {
+            a {
+                color: var(--link-color);
+            }
+        }
+    }
+}
+
 //
 // Syntax Highlighting
 //

@@ -7,4 +7,36 @@ layout: common
     <h1>{{ page.title }}</h1>
   </header>
   <article>{{ content }}</article>
+  <div class="post-metadata">
+    <table>
+      <tr>
+        <td class="key">Published</td>
+        <td class="value">{{ page.date | date: "%-d %B, %Y" }}</td>
+      </tr>
+      <tr>
+        <td class="key">Previous</td>
+        <td class="value">
+          {% if page.previous.url %}
+            <a href="{{ page.previous.url }}">
+              {{ page.previous.title }}
+            </a>
+          {% else %}
+            <i>None</i>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td class="key">Next</td>
+        <td class="value">
+          {% if page.next.url %}
+            <a href="{{ page.next.url }}">
+              {{ page.next.title }}
+            </a>
+          {% else %}
+            <i>None</i>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
