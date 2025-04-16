@@ -135,6 +135,7 @@ body {
     }
 
     > main {
+        width: 100%;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -315,6 +316,7 @@ nav.media-nav {
 
 .layout-article,
 .layout-fiction {
+    width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -342,6 +344,7 @@ nav.media-nav {
 }
 
 article {
+    width: 100%;
     flex: 1;
     padding: var(--size-2);
 
