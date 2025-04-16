@@ -361,7 +361,7 @@ fn test_create_user() -> Result<(), CustomError> {
     let email = "foo@example.com".to_string();;
     let password = "hunter2".to_string();
 
-    create_user(tx, &mut insert_user, email, password)?;
+    create_user(&(), &mut insert_user, email, password)?;
 
     // Assert `insert_user` was called with the right values.
     assert_eq!(insert_user.email, "foo@example.com");
