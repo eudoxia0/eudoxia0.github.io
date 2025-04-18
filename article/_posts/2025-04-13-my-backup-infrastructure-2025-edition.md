@@ -30,8 +30,7 @@ I have two portable SSDs, Chiron and Nessus, with encrypted [APFS]. The filesyst
 I use rsync to synchronize the laptop to the disks. The specific incantation is:
 
 ```bash
-rsync --progress --archive --human-readable \
-      --executability --checksum --delete \
+rsync --progress --archive --human-readable --delete \
       ~/Root/ /Volumes/Chiron/Root
 ```
 
