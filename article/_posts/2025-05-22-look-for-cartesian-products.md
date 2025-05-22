@@ -52,7 +52,13 @@ This section lists Cartesian problems waiting to be factored.
 
 ## Package Management
 
-TODO
+Every operating system has at least one package manager: NuGet for Windows, Homebrew for macOS, apt-get / yum / nix for Linux. And, additionally, every programming language has its own package manager, and its own infrastructure for package repositories.
+
+Additionally, many applications bundle something like a package manager: Anki and Firefox have plugin managers, games like Factorio have mod managers. These typically have a small user surface area, and a lot of internal complexity, therefore, they tend to be Greenspunned. So the mod manager in a game might not support dependencies, so that you have to manually find and install the mods that it depends on.
+
+Some of this duplication of effort is necessary: different programming languages genuinely have different compilation models, and incompatible ontologies about what a package is, how dependencies work. The devil is in the details: conditional compilation, conditional dependencies, binary packages, etc.
+
+But there is a large subset of the problem that can be put away behind a common API: a protocol for repositories, broadly defined, which could host source code, or binaries, or other artifacts (e.g. datasets for scientific computing).
 
 ## Communication
 
