@@ -34,14 +34,19 @@ It is remarkable how much time passed between this $nm$ problem becoming evident
 
 We have $n$ document formats: Markdown and troff and Docbook and HTML, etc. Rather than writing $n^2$ ad-hoc conversion programs along the lines of `md2pdf` or `docbook2html`, [pandoc] solves this problem by creating an intermediate representation for documents. Then we only need $n$ parsers plus $n$ emitters.
 
+[ffmpeg] is the analogous solution for audio/video.
+
 # Object Store APIs
 
 We have $n$ languages and $m$ object store services (S3, Backblaze, Azure Blob Storage). Many of these services implement S3-compatible APIs. So, rather than having to write $nm$ libraries for each programming language-object store pair, we can write $n$ S3 clients with configurable endpoints, one for each programming language.
 
 # The Web
 
-TODO
+We have $n$ operating systems and $m$ applications. If an application developer wants to have the largest possible market, they don't have to write $n$ versions of their application: for Windows, macOS, Linux, iOS, Android, etc. because the web is the intermediate layer. They need only write a single web application. So instead of $nm$ native applications, we have $n$ native browsers plus $m$ web applications.
 
-[lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
+c.f. the 80s, Infocom building a VM.
+
 [LLVM]: https://llvm.org/
+[ffmpeg]: https://ffmpeg.org/
+[lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
 [pandoc]: https://pandoc.org/
