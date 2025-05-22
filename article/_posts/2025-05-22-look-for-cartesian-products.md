@@ -1,5 +1,5 @@
 ---
-title: Look for Cartesian Products
+title: Look for Cartesian Problems
 summary: TODO
 card: TODO
 math: yes
