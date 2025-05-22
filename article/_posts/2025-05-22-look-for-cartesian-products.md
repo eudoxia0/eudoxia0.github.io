@@ -32,13 +32,13 @@ It is remarkable how much time passed between this $nm$ problem becoming evident
 
 # Format Conversion
 
-We have $n$ document formats: Markdown and troff and Docbook and HTML, etc. Rather than writing $n^2$ ad-hoc conversion programs along the lines of `md2pdf` or `docbook2html`, [pandoc] solves this problem by creating an intermediate representation for documents. Then we only need $n$ parsers plus $n$ emitters.
+We have $n$ document formats: Markdown and troff and Docbook and HTML, etc. Rather than writing $n^2$ ad-hoc conversion programs along the lines of `md2pdf` or `docbook2html`, [pandoc] solves this problem by creating an [intermediate representation][ir] for documents. Then we only need $n$ parsers plus $n$ emitters.
 
 [ffmpeg] is the analogous solution for audio/video.
 
 # Object Store APIs
 
-We have $n$ languages and $m$ object store services (S3, Backblaze, Azure Blob Storage). Many of these services implement S3-compatible APIs. So, rather than having to write $nm$ libraries for each programming language-object store pair, we can write $n$ S3 clients with configurable endpoints, one for each programming language.
+We have $n$ languages and $m$ object store services (S3, Backblaze, Azure Blob Storage). The S3 API has become a de-facto standard and many of these services implement an S3-compatible API. So, rather than writing $nm$ libraries for each (language, object store) pair, we can write $n$ S3 clients with configurable endpoints, one for each language.
 
 # The Web
 
@@ -63,3 +63,4 @@ TODO
 [lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
 [pandoc]: https://pandoc.org/
 [pm]: https://github.com/emacsmirror/python-mode
+[ir]: https://en.wikipedia.org/wiki/Intermediate_representation
