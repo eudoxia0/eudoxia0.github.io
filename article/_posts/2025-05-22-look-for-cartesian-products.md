@@ -52,6 +52,12 @@ This section lists Cartesian problems waiting to be factored.
 
 ## Package Management
 
+TODO
+
+## Communication
+
+TODO
+
 [LLVM]: https://llvm.org/
 [ffmpeg]: https://ffmpeg.org/
 [lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
