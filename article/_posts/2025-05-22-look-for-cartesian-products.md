@@ -46,6 +46,12 @@ We have $n$ operating systems and $m$ applications. If an application developer 
 
 c.f. the 80s, Infocom building a VM.
 
+# Open Problems
+
+This section lists Cartesian problems waiting to be factored.
+
+## Package Management
+
 [LLVM]: https://llvm.org/
 [ffmpeg]: https://ffmpeg.org/
 [lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
