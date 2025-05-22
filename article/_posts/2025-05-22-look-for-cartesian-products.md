@@ -32,11 +32,11 @@ It is remarkable how much time passed between this $nm$ problem becoming evident
 
 # Format Conversion
 
-TODO
+We have $n$ document formats: Markdown and troff and Docbook and HTML, etc. Rather than writing $n^2$ ad-hoc conversion programs along the lines of `md2pdf` or `docbook2html`, [pandoc] solves this problem by creating an intermediate representation for documents. Then we only need $n$ parsers plus $n$ emitters.
 
 # Object Store APIs
 
-TODO
+We have $n$ languages and $m$ object store services (S3, Backblaze, Azure Blob Storage). Many of these services implement S3-compatible APIs. So, rather than having to write $nm$ libraries for each programming language-object store pair, we can write $n$ S3 clients with configurable endpoints, one for each programming language.
 
 # The Web
 
@@ -44,3 +44,4 @@ TODO
 
 [lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
 [LLVM]: https://llvm.org/
+[pandoc]: https://pandoc.org/
