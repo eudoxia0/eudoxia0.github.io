@@ -1,0 +1,12 @@
+digraph G {
+    rankdir=LR;
+    node[shape=rect]
+
+    C -> LLVM
+    Ada -> LLVM
+    Fortran -> LLVM
+    Scala -> LLVM
+    LLVM -> x86
+    LLVM -> amd64
+    LLVM -> arm64
+}

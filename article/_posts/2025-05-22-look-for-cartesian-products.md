@@ -17,3 +17,5 @@ We have $n$ languages and $m$ instruction set architectures. Naively, we might h
 | arm64 | `c2arm64` | ... | ...     | ...   |
 
 But we don't. Instead we have [LLVM]: a portable assembly language that can any language can be compiled to, and which can in turn compile to any instruction set architecture:
+
+<img src="/assets/content/look-for-cartesian-products/llvm.svg" alt="A graph with a central node labeled LLVM. Nodes representing C, Ada, Fortran, and Scala have arrows pointing to LLVM. Nodes representing x86, amd64, and arm64 have arrows pointed-to by LLVM." style="margin: auto;" />
