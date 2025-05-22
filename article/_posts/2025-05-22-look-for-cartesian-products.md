@@ -66,6 +66,19 @@ But there is a large subset of the problem that can be put away behind a common 
 
 TODO
 
+## Data Visualization
+
+If you use R you have ggplot2. If you use Python you have your choice of matplotlib, plotly, and seaborn. If you use JavaScript you have D3.
+
+Otherwise, you're out of luck.
+
+There is not a portable grammar of graphics, an intermediate language for charts and plots.
+
+## Shell Completions
+
+TODO
+
+
 [LLVM]: https://llvm.org/
 [ffmpeg]: https://ffmpeg.org/
 [lsp]: https://en.wikipedia.org/wiki/Language_Server_Protocol
