@@ -44,13 +44,15 @@ We have $n$ languages and $m$ object store services (S3, Backblaze, Azure Blob S
 
 We have $n$ operating systems and $m$ applications. If an application developer wants to have the largest possible market, they don't have to write $n$ versions of their application: for Windows, macOS, Linux, iOS, Android, etc. because the web is the intermediate layer. They need only write a single web application. So instead of $nm$ native applications, we have $n$ native browsers plus $m$ web applications.
 
-c.f. the 80s, Infocom building a VM.
+c.f. the 80s, Infocom building a VM for their games.
 
 # Open Problems
 
 This section lists Cartesian problems waiting to be factored.
 
 ## Package Management
+
+$n$ operating systems, $m$ applications / libraries.
 
 Every operating system has at least one package manager: NuGet for Windows, Homebrew for macOS, apt-get / yum / nix for Linux. And, additionally, every programming language has its own package manager, and its own infrastructure for package repositories.
 
