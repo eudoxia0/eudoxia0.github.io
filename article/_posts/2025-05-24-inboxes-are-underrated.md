@@ -24,11 +24,11 @@ This is the utility of inbox zero: it has no false negatives! If the inbox is em
 
 Why do so few apps have inboxes? Probably because most people never archive their emails, they just keep everything in the inbox. And probably the concept of an inbox reminds them of email, and email feels old and corporate and spammy. Most of the email I get is transactional (e.g. login codes), notifications, and spam.
 
-Inboxes could be entirely local to the client software, the protocol doesn't have to implement the inbox/archive distinction. But communication protocols are increasingly [locked down][cf], so that you can't bring your own client, with your own features.
-
 For people like me who want to be conscientious about communication, and who need mechanical help to achieve that, the lack of an inbox is really, really frustrating.
 
-Tangentially: inbox zero is not an obvious practice at all. Maybe the software should make triaging a first-class workflow. Like spaced repetition: you open [Anki], click "Study", go through the flashcards due today, choosing either "Forgot" or "Remembered". You open the email client, click "Triage", and go through one conversation at a time, and choose either "Delete", "Archive", "Reply", or "Skip".
+And while inboxes could be entirely local to the client software, the protocol doesn't have to implement the inbox/archive distinction. But communication protocols are increasingly [locked down][cf], so that you can't bring your own client, with your own features.
+
+Tangentially: inbox zero is not an obvious practice at all. Rather than relying on the user to implement the inbox zero workflow, the software should make triaging a first-class workflow. Like spaced repetition: you open [Anki], click "Study", go through the flashcards due today, choosing either "Forgot" or "Remembered". You open the email client, click "Triage", and go through one conversation at a time, and choose either "Delete", "Archive", "Reply", or "Skip".
 
 # Footnotes
 
