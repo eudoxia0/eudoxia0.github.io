@@ -4,9 +4,7 @@ summary: On inboxes as application-specific todo lists.
 card: inboxes-are-underrated.webp
 ---
 
-I have a lot of communication apps. By volume: Twitter DMs, Signal, Whatsapp, iMessage, Discord, email.
-
-Because I have so many disjoint places where communication happens, I have a daily task on [Todoist] to go through each of these, and ensure that every conversation is handled, where "handled" means: if I can reply immediately, I do so; otherwise, I make a task to reply. Polling is better than interrupts.
+I have a lot of communication apps. By volume: Twitter DMs, Signal, Whatsapp, iMessage, Discord, email. Because I have so many disjoint places where communication happens, I have a daily task on [Todoist] to go through each of these, and ensure that every conversation is handled, where "handled" means: if I can reply immediately, I do so; otherwise, I make a task to reply. Polling is better than interrupts.
 
 But this is imperfect, because often I get distracted, and I do neither. Sometimes I read the other person's message, and mentally begin drafting a reply, but forget to make a task. Sometimes I check DMs outside of this timeblock, when I'm less disciplined about following the checklist. Sometimes I'm interrupted before I can create the task. And so on. And all of these systems have a concept a conversation being read/unread, but it is fragile: touch it and it goes away. So if I don't reply immediately, and I don't make a task, I might never reply. And then new conversations pile up, burying the old ones.
 
