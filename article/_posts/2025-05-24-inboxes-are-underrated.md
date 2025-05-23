@@ -10,7 +10,7 @@ Because I have so many disjoint places where communication happens, I have a dai
 
 But this is imperfect, because often I get distracted, and I do neither. Sometimes I read the other person's message, and mentally begin drafting a reply, but forget to make a task. Sometimes I check DMs outside of this timeblock, when I'm less disciplined about following the checklist. Sometimes I'm interrupted before I can create the task. And so on. And all of these systems have a concept a conversation being read/unread, but it is fragile: touch it and it goes away. So if I don't reply immediately, and I don't make a task, I might never reply. And then new conversations pile up, burying the old ones.
 
-Email is where I get the least human communication, but it is the one system that has an inbox. And the inbox is invaluable for me, because it acts as a domain-specific todo list: it draws a hard line between the things that have are handled (archived), and the things that are not (inbox). Crossing this line requires an _explicit_ act.
+Email is where I get the least human communication, but it is the one system that has an inbox. And the inbox is invaluable for me, because it acts as a domain-specific todo list: it draws a hard line between the things that have been handled (archived), and the things that are not (inbox). Crossing this line requires an _explicit_ act.
 
 With email, I can execute this algorithm:
 
