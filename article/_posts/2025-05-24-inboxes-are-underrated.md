@@ -28,7 +28,7 @@ For people like me who want to be conscientious about communication, and who nee
 
 And while inboxes could be entirely local to the client software, the protocol doesn't have to implement the inbox/archive distinction. But communication protocols are increasingly [locked down][cf], so that you can't bring your own client, with your own features.
 
-Tangentially: inbox zero is not an obvious practice at all. Rather than relying on the user to implement the inbox zero workflow, the software should make triaging a first-class workflow. Like spaced repetition: you open [Anki], click "Study", go through the flashcards due today, choosing either "Forgot" or "Remembered". You open the email client, click "Triage", and go through one conversation at a time, and choose either "Delete", "Archive", "Reply", or "Skip".
+Tangentially: inbox zero is not an obvious practice at all. Rather than relying on the user to implement the inbox zero workflow, the client should make triaging a first-class workflow. Like spaced repetition: you open [Anki], click "Study", go through the flashcards due today, choosing either "Forgot" or "Remembered". You open the email client, click "Triage", and go through one conversation at a time, and choose either "Delete", "Archive", "Reply", or "Skip".
 
 # Footnotes
 
