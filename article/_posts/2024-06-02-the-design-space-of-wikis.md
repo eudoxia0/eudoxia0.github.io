@@ -21,48 +21,10 @@ names like wiki, note-taking app, tool for thought, [zettelkasten][zk] etc.
 [zk]: https://en.wikipedia.org/wiki/Zettelkasten
 
 # Contents
+{: .no_toc }
 
-1. [Pages](#pages)
-   1. [Plain Text](#plain-text-content)
-   1. [Plain Text + Links](#plain-text-links)
-   1. [Rich Text](#rich-text)
-   1. [Rich Text + Metadata](#rich-text-meta)
-   1. [Typed Properties](#typed-properties)
-   1. [Mixin: Fixed-Length Content](#mixin-fixed-length-content)
-1. [Identifiers](#ident)
-   1. [Unreadable Identifiers](#uuid)
-   1. [Unique Title](#title)
-   1. [File Path](#path)
-1. [Links](#links)
-   1. [No Links](#no-links)
-   1. [One-Way](#one-way)
-   1. [Two-Way](#two-way)
-   1. [Typed Links](#typed-links)
-   1. [Mixin: Red Links](#mixin-red-links)
-   1. [Mixin: Link Integrity](#mixin-link-integrity)
-1. [Organization](#organization)
-   1. [Singleton Folder](#singleton-folder)
-   1. [Boxes](#boxes)
-   1. [Hierarchical Folders](#folders)
-   1. [Hierarchical Pages](#nested-pages)
-   1. [Tags](#tags)
-   1. [Pure Hypertext](#hypertext)
-   1. [Spatial Organization](#spatial)
-   1. [Organization by Type](#organize-by-type)
-   1. [Mixin: Constrained Folders](#mixin-constrained-folders)
-1. [Markup](#markup)
-   1. [WYSIWYG](#wysiwyg)
-   1. [Markdown](#md)
-   1. [XML](#xml)
-   1. [Djot](#djot)
-   1. [MDX](#mdx)
-   1. [Other Markup](#other-markup)
-1. [Storage](#storage)
-   1. [Plain Text Files](#storage-plain)
-   1. [Database](#storage-db)
-1. [Client](#client)
-   1. [Wiki Compiler](#wiki-compiler)
-   1. [Wiki Server](#wiki-server)
+1. toc
+{:toc}
 
 # Pages {#pages}
 
