@@ -680,7 +680,7 @@ From now on, we simply write $\text{Confluent}(R)$ and forget about CR.
 
 The above theorems.
 
-## Theorem 2.1.6
+## Theorem 2.1.6 {#theo_216}
 
 If $\text{Confluent}(R)$ and $x \conv y$ then:
 
@@ -749,7 +749,7 @@ $$
 
 **Forward Proof:**
 
-If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [[#Theorem 2.1.6]], $x \join = y \join$.
+If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [Theorem 2.1.6](#theo_216), $x \join = y \join$.
 
 **Backward Proof:**
 
