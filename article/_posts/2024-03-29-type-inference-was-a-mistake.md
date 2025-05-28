@@ -23,7 +23,7 @@ diff. When editing code in a limited environment, e.g. stock `vim` in a VM.
 
 In all of those contexts, the code becomes less clear.
 
-# In Ocaml, Type Inference is a Footgun
+# In OCaml, Type Inference is a Footgun
 
 In Rust and Haskell you have to at least annotate the parameter types and return
 type of functions. Type inference is only for variable bindings inside the
