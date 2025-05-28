@@ -14,27 +14,10 @@ constraints. This post is a checklist of useful database constraints you should
 consider when designing a schema.
 
 # Contents
+{: .no_toc }
 
-1. [Invariants](#inv)
-1. [Defense in Depth](#depth)
-1. [Checklist: Scalar Constraints](#scalar)
-    1. [Non-Null](#null)
-    1. [Uniqueness](#unique)
-    1. [Non-Empty Strings](#string)
-    1. [String Normalization](#string-norm)
-    1. [Numeric Ranges](#numeric)
-    1. [Allowed Values](#enums)
-1. [Checklist: Multi-Column Constraints](#multi)
-    1. [Unique Together](#together)
-    1. [Conditional Nulls](#cond)
-    1. [Implication](#impl)
-    1. [Multiple Boolean Columns](#bool)
-    1. [Timestamp Relationships](#timestamp)
-1. [Checklist: Before/After Constraints](#before)
-    1. [Immutable Columns](#imm)
-    1. [State Transitions](#state-trans)
-    1. [Numeric Changes](#numeric-change)
-1. [Conclusion](#conclusion)
+1. toc
+{:toc}
 
 # Invariants {#inv}
 
@@ -469,6 +452,7 @@ them. For a tiny cost in development effort, you buy a solid baseline of
 reliablity.
 
 # Footnotes
+{: .no_toc }
 
 [^fn1]:
     This is related to [Primitive
