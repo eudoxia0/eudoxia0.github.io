@@ -26,6 +26,12 @@ Human language can be expressed with [formal grammars][gram], which are just ter
 
 So term rewriting is a formalism with very broad applicability and worth learning.
 
+# Contents
+{: .no_toc }
+
+1. toc
+{:toc}
+
 # Example: Symbolic Differentiation
 
 Consider the grammar:
