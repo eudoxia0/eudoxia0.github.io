@@ -269,7 +269,7 @@ If $x \to y$ then $y$ is called a **direct successor** of $x$.
 
 If $x \pluspath y$ then $y$ is a **successor** of $x$.
 
-$x$ and $y$ are **joinable** iff there exists a $z$ such that $x \tostar z$ and $y \tostar z$, which is denoted $x \join y$.
+$x$ and $y$ are **joinable** iff there exists a $z$ such that $x \pluspath z$ and $y \pluspath z$, which is denoted $x \join y$.
 
 ## Example: The Divisibility Relation
 
@@ -345,7 +345,7 @@ In other words, in a CR relation, connectedness and joinability are the same pro
 
 ## Confluence
 
-A reduction is called **confluent** when $x \tostar y_1$ and $x \tostar y_2$ implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then they are joinable. More formally:
+A reduction is called **confluent** when $x \pluspath y_1$ and $x \pluspath y_2$ implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then they are joinable. More formally:
 
 $$
 \text{Confluent}(R) \iff \left(
@@ -459,7 +459,7 @@ $$
 
 The proof that confluence implies the CR property is harder. To make is simpler, we introduce an intermediate definition.
 
-A relation is **semi-confluent** iff $x \to y$ and $x \tostar y_2$ implies $y_1 \join y_2$. More formally:
+A relation is **semi-confluent** iff $x \to y$ and $x \pluspath y_2$ implies $y_1 \join y_2$. More formally:
 
 $$
 \text{Semiconfluent}(R) \iff \left(
