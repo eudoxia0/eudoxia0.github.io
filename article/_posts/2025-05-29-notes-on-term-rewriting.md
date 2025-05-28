@@ -90,7 +90,7 @@ At this point, no rewrite rules apply.
 
 Graphically:
 
-![[Screenshot 2025-05-20 at 11.48.20 am.png]]
+![](/assets/content/notes-on-term-rewriting/diff.png)
 
 This tiny example brings up a couple import concepts.
 
