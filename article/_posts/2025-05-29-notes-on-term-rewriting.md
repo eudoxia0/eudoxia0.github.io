@@ -123,6 +123,7 @@ Relations can be composed: given $R \subseteq A \times B$ and $S \subseteq B \ti
 $$
 \set{(x,z) \in A \times C \mid \exists y \in B . (x,y) \in R \land (y,z) \in S}
 $$
+
 That is: if $a \stackrel{R}{\to} b$ and $b \stackrel{S}{\to} c$, then $a \stackrel{R \circ S}{\to} c$. Or, in Prolog notation: if $R(a,b)$ and $S(b,c)$ then $(R \circ S)(a, c)$.
 
 ## Identity
@@ -144,6 +145,7 @@ Given a relation $R$ and $i \in \N^+$ we can define:
 $$
 R^i = R^{i-1} \circ R
 $$
+
 That is, $R^i$ is the **$i$-fold composition** of $R$ with itself. It is the version of $R$ that "skips ahead" by $i-1$ steps.
 
 Note that, as in arithmetic: $R^1 = R^0 \circ R = R$.
@@ -155,11 +157,13 @@ One step further, we have:
 $$
 R^+ = \bigcup\limits_{i \gt 0} R^i
 $$
+
 That is:
 
 $$
 R^+ = R^1 \cup R^2 \cup \ldots
 $$
+
 This is called the **transitive closure** of $R$ and it relates every term in $A$ to any one of its successors.
 
 Say $R$ is the successor relation on the set $\N$, that is:
@@ -167,6 +171,7 @@ Say $R$ is the successor relation on the set $\N$, that is:
 $$
 R = \set{(n, n+1) \mid n \in \N}
 $$
+
 So that $0 \to 1$, $1 \to 2$, and so on.
 
 Then $R^2$ is $R \circ R$ which relates $n \to n+2$, and $R^3$ relates $n \to n+3$, and so on. So $R^+$ relates:
@@ -191,6 +196,7 @@ Note: $R^+$ does not include a union with $R^0$. The next definition adds that.
 $$
 R^* = R^+ \cup R^0
 $$
+
 This is simply the transitive closure plus the identity relation.
 
 ## Reflexive Closure
@@ -210,6 +216,7 @@ The **inverse** of a relation, denoted $R^{-1}$, is defined by:
 $$
 R^{-1} = \set{(y,x) \mid (x,y) \in R}
 $$
+
 If $R(a,b)$ then $R^{-1}(b,a)$.
 
 ## Symmetric Closure
@@ -219,6 +226,7 @@ The **symmetric closure** $R^s$ is defined by
 $$
 R^s = R \cup R^{-1}
 $$
+
 That is, $R(a,b)$ implies both $R^s(a,b)$ and $R^s(b,a)$.
 
 ## Transitive Symmetric Closure
@@ -228,6 +236,7 @@ The **transitive symmetric closure** of $R$ is $R^{s+}$, i.e.:
 $$
 R^{s+} = \bigcup\limits_{i \gt 0} R^i \cup (R^i)^{-1}
 $$
+
 ## Reflexive Transitive Symmetric Closure
 
 Without further ado:
@@ -235,6 +244,7 @@ Without further ado:
 $$
 R^{s*} = R^{s+} \cup R^0
 $$
+
 # Abstract Rewriting Systems
 
 An **term rewriting system** (TRS) is a pair $(A, R)$ where $A$ is a set of **terms** and the **reduction** $R$ is a binary relation on the set, i.e. $R \subseteq A \times A$.
@@ -476,6 +486,7 @@ Confluence implies semiconfluence. More formally:
 $$
 \text{Confluent}(R) \implies \text{Semiconfluent}(R)
 $$
+
 **Intuitive Proof:**
 
 Semiconfluence is a special case of confluence.
@@ -729,13 +740,10 @@ If $R$ is confluent and normalizing then:
 $$
 x \conv y \iff \left( x \downarrow = y \downarrow \right)
 $$
+
 **Forward Proof:**
 
 If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [[#Theorem 2.1.6]], $x \join = y \join$.
-
-
-
-
 
 **Backward Proof:**
 
