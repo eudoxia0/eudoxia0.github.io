@@ -5,19 +5,17 @@ math: yes
 ---
 
 $$
-\newcommand{\starpath}{\stackrel{*}{\to}}
-\newcommand{\pluspath}{\stackrel{+}{\to}}
-\newcommand{\conv}{\stackrel{*}{\leftrightarrow}}
-
-\newcommand{\BeginKB}{\begin{align}}
-\newcommand{\EndKB}{\end{align}}
-\newcommand{\Fact}[2]{\tag{#1} & #2 \\}
-\newcommand{\FFact}[2]{\tag{#1} &\qquad #2 \\}
-\newcommand{\FFFact}[2]{\tag{#1} &\qquad\qquad #2 \\}
-\newcommand{\FFFFact}[2]{\tag{#1} &\qquad\qquad\qquad #2 \\}
-
-% common ancestor
-\newcommand{\CA}[3]{#1 \stackrel{*}{\leftarrow} #2 \stackrel{*}{\rightarrow} #3}
+\gdef\join{ \downarrow }
+\gdef\starpath{\stackrel{*}{\to}}
+\gdef\pluspath{\stackrel{+}{\to}}
+\gdef\conv{\stackrel{*}{\leftrightarrow}}
+\gdef\BeginKB{\begin{align}}
+\gdef\EndKB{\end{align}}
+\gdef\Fact#1#2{\tag{#1} & #2 \\}
+\gdef\FFact#1#2{\tag{#1} &\qquad #2 \\}
+\gdef\FFFact#1#2{\tag{#1} &\qquad\qquad #2 \\}
+\gdef\FFFFact#1#2{\tag{#1} &\qquad\qquad\qquad #2 \\}
+\gdef\CA#1#2#3{#1 \stackrel{*}{\leftarrow} #2 \stackrel{*}{\rightarrow} #3}
 $$
 
 Human language can be expressed with [formal grammars][gram], which are just term rewriting systems. Parsing is term rewriting in reverse: finding derivation trees that create a given sentence. In [equational logic][eqlog], most of a proof is just applying rewrite rules. Lambda calculus evaluation can be expressed using term rewriting. According to Stephen Wolfram, [the universe is a graph rewriting system][wolfram].
