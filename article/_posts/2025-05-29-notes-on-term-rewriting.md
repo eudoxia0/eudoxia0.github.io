@@ -62,6 +62,7 @@ Consider the expression
 $$
 D_X(XX)
 $$
+
 By applying $\text{R4}$ we can write this into:
 
 $$
@@ -78,6 +79,7 @@ Both of these expressions can be rewritten into the same expression, by applying
 $$
 1X + 1X
 $$
+
 At this point, no rewrite rules apply.
 
 Graphically:
