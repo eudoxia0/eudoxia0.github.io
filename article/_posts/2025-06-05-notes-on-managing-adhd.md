@@ -14,8 +14,6 @@ This post is about managing ADHD. It is divided into two sections: "Strategies" 
 1. toc
 {:toc}
 
-[borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
-
 # Strategies
 
 High-level advice.
@@ -176,3 +174,8 @@ This ensures I leave my home on time. If it's something especially important I o
 # Resources
 
 TODO
+
+[Focusmate]: https://www.focusmate.com/
+[Raycast]: https://www.raycast.com/
+[borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
+[parker]: https://parconley.com/focusmate/
