@@ -77,7 +77,7 @@ I don't like the word "prioritize", because it has two subtly different meanings
 
 "Weak prioritization" is something everyone should do: it takes a moment to go over the todo list and drag the tasks into more or less the order in which you will do them. This keeps the most relevant tasks near the top, which is where your eyes naturally go to.
 
-"Strong prioritization" is, in my view, a bad job scheduling algorithm. Importance alone is not good enough.
+"Strong prioritization" is a terrible job scheduling algorithm. Importance alone is not good enough.
 
 Consider the case where you have a very important task A which takes a long time to finish, and a less important task B which takes 5m to finish. For example, writing an essay versus replying to an email. Which should you do first? I would execute B first, because doing so in turn unblocks B's successor tasks. If you reply to the email and then get to work on task A, the other person has time to read your email and reply to you. And the conversation moves forward while you are otherwise engaged.
 
