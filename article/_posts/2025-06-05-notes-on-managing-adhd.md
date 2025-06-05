@@ -92,10 +92,6 @@ TODO
 
 TODO
 
-## The Rising Floor
-
-TODO
-
 ## Day Killers
 
 TODO
