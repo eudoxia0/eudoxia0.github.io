@@ -74,7 +74,19 @@ My task-selection algorithm is basically: do the shortest task first, with two e
 
 ## Visual Field Management
 
-TODO
+Out of sight, out of mind. The corollary: to keep something in mind, put it in your visual field; to keep it out, leave it out.
+
+My desk is very spartan: there's a monitor, a mouse, and a keyboard, and a few trinkets. My desktop is empty. There are no files in it. The dock has only the apps I use frequently. And at a higher level, I try to keep the apartment very clean and orderly. Because everything that's out of place is a distraction, visual noise. That's the negative aspect: the things I remove.
+
+The positive aspect, the things I keep in my visual field: most of the time, I have two windows open on my computer the todo list occupies the left third of the screen, the right two-thirds are occupied by whatever window I have open at the time, e.g.:
+
+TODO SCREENSHOT
+
+And so at a glance, I can see:
+
+1. What I'm currently working on
+2. What I will work on next
+3. The list of active projects, so that I don't forget they exist.
 
 ## Project Check-Ins
 
