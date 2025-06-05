@@ -100,8 +100,8 @@ The positive aspect, the things I keep in my visual field: most of the time, I h
 
 And so at a glance, I can see:
 
-1. What I'm currently working on
-2. What I will work on next
+1. What I'm currently working on.
+2. What I will work on next.
 3. The list of active projects, so that I don't forget they exist.
 
 ## Project Check-Ins
