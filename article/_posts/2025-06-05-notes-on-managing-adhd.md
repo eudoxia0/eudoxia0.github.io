@@ -64,18 +64,6 @@ TODO
 
 TODO
 
-## Plan First, Do Later
-
-TODO
-
-## The Rising Floor
-
-TODO
-
-## Day Killers
-
-TODO
-
 ## Centralize Your Inboxes
 
 TODO
@@ -85,6 +73,18 @@ TODO
 TODO
 
 ## Inbox Bankruptcy
+
+TODO
+
+## Plan First, Do Later
+
+TODO
+
+## The Rising Floor
+
+TODO
+
+## Day Killers
 
 TODO
 
