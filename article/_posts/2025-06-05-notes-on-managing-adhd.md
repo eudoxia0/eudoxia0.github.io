@@ -96,7 +96,7 @@ My desk is very spartan: there's a monitor, a mouse, and a keyboard, and a few t
 
 The positive aspect, the things I keep in my visual field: most of the time, I have two windows open on my computer the todo list occupies the left third of the screen, the right two-thirds are occupied by whatever window I have open at the time, e.g.:
 
-TODO SCREENSHOT
+![](/assets/content/notes-on-managing-adhd/desktop.png)
 
 And so at a glance, I can see:
 
