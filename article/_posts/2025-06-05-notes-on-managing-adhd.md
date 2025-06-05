@@ -141,7 +141,11 @@ TODO
 
 ## Using OCD to Defeat ADHD
 
-TODO
+In a sense, having a really complex productivity system is like trying to use OCD to defeat ADHD, to use high neuroticism to defeat low conscientiousness. There's an element of truth to that, sure (see mastery of drudgery).
+
+But here's the thing: you have to play to your strengths. You have to. If you are very OCD and you like order and systems and planning but you struggle with doing, then, yeah, it might work, for you, to spend more energy on the trappings of productivity (ensuring your todo list is properly formatted, organized, etc.) if that bleeds over into making it easier to do the real, meaningful things.
+
+For example: I like emojis in my todo list. The chores have a 🧼 emoji, the comms tasks have an ✉️ emoji. That kind of thing. Makes it easy to see at a glance what kind of things I have to do, to group them by category. But Todoist doesn't support emoji icons on tasks, unlike Notion, so adding the emojis takes a bit more effort: I have to open [Raycast] and search for the emoji I want and paste it into the task title. It adds a little friction each time I create a task, but the benefit is I enjoy using the todo list more.
 
 ## The Master of Drudgery
 
