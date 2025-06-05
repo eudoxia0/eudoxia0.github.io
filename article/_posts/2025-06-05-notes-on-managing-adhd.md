@@ -98,7 +98,18 @@ TODO
 
 ## Inbox Zero
 
-TODO
+You have probably heard of inbox zero. It sounds like LinkedIn-tier advice. But if you struggle with comms, with replying to people in a timely manner (or at all), inbox zero is a good strategy. There are two reasons, briefly:
+
+- Inbox zero has no false negatives: if an inbox is empty, you know you've handled everything.
+- Important communications have a way of "camouflaging" themselves among irrelevance.
+
+And, like everything: before you make it into a habit, it feels incredibly time-consuming and labour-intensive. But once you make it into a habit, it's almost effortless.
+
+So, I will give you an example. I come in to work, and read four emails. Three could've been archived outright, one needed a reply from me. And I said, oh, I'll get to it in a second. And then I got distracted with other tasks. And throughout the day I kept glancing at the email client, and thinking, yeah, I will get to it. Eventually I got used to those four emails: they are the "new normal", and what's normal doesn't require action. I would think: if those emails are there, and I already looked at them, then it's probably fine. At the end of the day I looked at the inbox again and saw, wait, no, one of those emails was actually important. That's the failure mode of inbox greater-than-zero: the important stuff hides among the irrelevant stuff, such that a quick glance at the todo list doesn't show anything obviously wrong. Dually, with inbox zero, if you see a single email in the inbox, you know there's work to do.
+
+Inbox zero removes ambiguity. If there's _anything_ in the inbox, you know, unambiguously, you have a task to complete. If there is nothing in the inbox, you know, unambiguously, there is nothing to do. Inbox zero frees you from false negatives, where you think you've handled your correspondence but there's some important email, camouflaged among the trivial ones, that has not been replied to.
+
+A problem with doing inbox zero is most communication apps (like Discord, Slack, iMessage etc.) don't have a concept of an inbox, just the read/unread flag on conversations. Since there's no separation between the inbox and the archive, it takes more discipline to ensure every conversation is replied to.
 
 ## Inbox Bankruptcy
 
