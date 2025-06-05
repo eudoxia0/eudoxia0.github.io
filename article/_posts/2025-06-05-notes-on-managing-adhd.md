@@ -44,7 +44,25 @@ TODO
 
 ## Timers
 
-TODO
+If you have ADHD you've probably heard of the Pomodoro method, tried it, and bounced off it. The way it's framed is very neurotypical: it's scaffolding around _doing_, but ADHD people often have problems with the doing itself. And so the scaffolding is kind of pointless.
+
+The method works well in three kinds of contexts:
+
+- **Overcoming Aversion:** when you have a large number of microtasks, each of which takes a few seconds to a few minutes, but the number of them, and the uncertainty factor, makes the sum seem a lot larger. A classic example for me is having to reply to like ten different people. Realistically, each person can be handled in 15s. One or two might require a couple of minutes to compose a longer reply. But often I will avoid those tasks like the plague and drag them across the entire day.
+
+  The pomodoro method works here because you're basically trading (up to) 25m of pain for an entire day's peace and quiet. So you get all the annoying little tasks together, start a timer, and go through them. And usually you're done in maybe ten minutes. And you feel _really_ good after, because all those annoying little tasks are done.
+
+  It really is amazing what a little bit of fake urgency can do.
+
+- **Starting:** sometimes the problem is just starting. It is very trite, but it's true. You have something you _want to want_ to do, but don't _want_ to do. I want to want to read this book, to learn this topic, to write this blog post, to work on this software project. But I don't _want_ to do it. The pomodoro method helps you start.
+
+  You're not comitting to finishing the project. You're not comitting to months or weeks or days or even hours of work. You're comitting to a half hour. And if you work just that half hour: great, promise kept. 30m a day, over the course of a single month, is 15h of work. And often I start a 30m timer and end up working four hours, and maybe that's a good outcome.
+
+- **Stopping:** dually, sometimes the problem is stopping. If you're trying to advance multiple projects at the same time, if you hyperfocus on one, it eats into the time you allocated for the others. And more broadly, spending too much time on one project can derail all your plans for the day. Maybe you meant to go to the gym at 6pm but you got so stuck in with this project that it's 8:30pm and you're still glued to the screen. So the gym suffers, your sleep schedule suffers, etc.
+
+  Actually stopping when the pomodoro timer goes off can prevent excessive single-mindedness.
+
+  Additionally, the five-minute break at the end of the pomodoro block is useful. It's a time to get up from the computer, unround your shoulders, practice mindfulness, essentially, all those little things that you want to do a few times throughout the day.
 
 # Tactics
 
