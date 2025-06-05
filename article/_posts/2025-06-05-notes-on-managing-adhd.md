@@ -52,6 +52,14 @@ TODO
 
 Strategems, tricks.
 
+## Task Selection
+
+TODO
+
+## Visual Field Management
+
+TODO
+
 ## Project Check-Ins
 
 TODO
@@ -65,14 +73,6 @@ TODO
 TODO
 
 ## Day Killers
-
-TODO
-
-## Task Selection
-
-TODO
-
-## Visual Field Management
 
 TODO
 
