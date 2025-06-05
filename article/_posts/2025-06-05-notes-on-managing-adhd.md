@@ -181,6 +181,8 @@ There's this running joke, or meme, online, about the kind of person who has thi
 
 Every task falls into one of two categories: the quick wins, and everything else. Life is not made of quick wins. Creative, generative, open-ended work requires long periods of focused work. A lot of unpleasant, aversion-causing things have to be done. But the quick wins are infinite: there's always some micro-chore to do around the house, for example.
 
+I don't have advice specifically on avoiding this. But you should notice if you're doing it and course-correct.
+
 ## Put Travel in the Calendar
 
 I am chronically late. So if I have a calendar event like a party at someone's home, I will go on Google Maps and measure the travel time (from my home or wherever I'm likely to be) to the destination, and make a time block for that. e.g., if it takes 30m to go to the dentist and back, this is what my calendar looks like:
