@@ -121,7 +121,13 @@ And by archiving things rather than deleting them, you leave open the possibilit
 
 ## Do It On Your Own Terms
 
-TODO
+If you're averse to doing something, for emotional reasons, one way to overcome the aversion is to do it as much as possible on your own terms.
+
+An example: you have to fill out some government form. You're averse to it because you worry about making a mistake. And just the thought of opening the form fills you with dread. So, take the boxes in the form, and make a spreadsheet for them. If fonts/colours/emojis/etc. if that makes it feel more personal, or like something you designed and created. Then fill out the form in the spreadsheet. And then copy the values to the form and submit.
+
+This helps because instead of performing the task in this external domain where you feel threatened, you're performing the task in your own domain, in your own terms.
+
+Another example: you have an email you have to reply to, and you're anxious about it. Just opening the email client gives you a bad feeling. Instead, try composing the email elsewhere, say, in a text editor. The change of environment changes the emotional connotation: you're not replying to an email, you're writing a text. You might even think of it as a work of fiction, a pseudoepigraphy.
 
 ## Replace Interrupts with Polling
 
