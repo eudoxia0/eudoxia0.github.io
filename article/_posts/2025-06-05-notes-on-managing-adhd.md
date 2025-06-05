@@ -113,7 +113,11 @@ A problem with doing inbox zero is most communication apps (like Discord, Slack,
 
 ## Inbox Bankruptcy
 
-TODO
+By the time I started to become organized I'd already accumulated thousands of bookmarks, unread emails, files in my downloads folder, papers in my physical inbox, etc. It would have been a Herculean effort to file these things away. So I didn't. All the disorganized files, I wrapped them up in a folder and threw them in my `Attic` folder. Emails? Archived. Bookmarks? Exported to HTML, archived the export, and deleted them from the browser.
+
+Ideally you should do this once, at the start.
+
+And by archiving things rather than deleting them, you leave open the possibility that as some point in the future, you might be able to action some of those things. Triage the old bookmarks, sort your filesystem, etc.
 
 ## Do It On Your Own Terms
 
