@@ -149,7 +149,11 @@ For example: I like emojis in my todo list. The chores have a 🧼 emoji, the co
 
 ## The Master of Drudgery
 
-TODO
+A productivity antipattern: indulging too much in "quick wins".
+
+There's this running joke, or meme, online, about the kind of person who has this huge, colossal productivity system, but they get nothing done. They have five todo list apps and everything is categorized and indexed and sorted, but their material output is zero. They complete a hundred tasks a day and when you interrogate what those tasks are they are "brush my teeth" or "reorganize my bookshelf". There's a lot of truth to that.
+
+Every task falls into one of two categories: the quick wins, and everything else. Life is not made of quick wins. Creative, generative, open-ended work requires long periods of focused work. A lot of unpleasant, aversion-causing things have to be done. But the quick wins are infinite: there's always some micro-chore to do around the house, for example.
 
 ## Put Travel in the Calendar
 
