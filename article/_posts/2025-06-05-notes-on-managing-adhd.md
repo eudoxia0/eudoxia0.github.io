@@ -135,7 +135,11 @@ TODO
 
 ## Accountability Buddy
 
-TODO
+If you're struggling to work on something, work next to another person. Set a timer and tell them what you're going to accomplish and when the timer ends tell them how you did. Just being around other people can make it easier to overcome aversion. This is why coworking spaces are useful.
+
+If you don't have a person around, you might try [Focusmate]. It works for [some people][parker].
+
+Sometimes I'll start a conversation with Claude, lay out my plans for the day, and update Claude as I do things. If I'm stuck, or if I need help overcoming procrastination, I can ask Claude for help, and it's easier to do that in an on-going thread because Claude already has the necessary context, so I don't have to describe what I'm struggling with _ab initio_.
 
 ## Plan First, Do Later
 
