@@ -76,6 +76,18 @@ TODO
 
 TODO
 
+## Do It On Your Own Terms
+
+TODO
+
+## Replace Interrupts with Polling
+
+TODO
+
+## Accountability Buddy
+
+TODO
+
 ## Plan First, Do Later
 
 TODO
@@ -93,18 +105,6 @@ TODO
 TODO
 
 ## The Master of Drudgery
-
-TODO
-
-## Do It On Your Own Terms
-
-TODO
-
-## Replace Interrupts with Polling
-
-TODO
-
-## Accountability Buddy
 
 TODO
 
