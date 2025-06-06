@@ -138,7 +138,21 @@ And so at a glance, I can see:
 
 ## Project Check-Ins
 
-TODO
+A common failure mode I have is, I will fail to finish a project because I forget I even started it. Or, relatedly: I will let a project drag on and on until enough time has passed that my interests have shifted, the sun has set on it, and it is now a slog to finish.
+
+One reason I do this is that creative/intellectual work often requires (or feels like it requires) long stretches of uninterrupted time. So I procrastinate working on something until I can find such a chunk of time. Which never comes. Time passes and the project begins to slip the moorings of my attention, as other new and shiny things arrive.
+
+And sometimes I will pick the project back up after months or years, and I have lost so much context, it's impossible to know what I even intended. And then you procrastinate even more, because you don't want to feel the guilty of picking up a project and realizing it has become strange and unfamiliar to you.
+
+One way to combat this is to make regular project checkins. This could be a daily or few-times-a-week recurring task on Todoist that just says "spend 30m on this project".
+
+You don't even have to work on the thing: just allocate fifteen minutes to hold the project in your mind and nothing else. If it's creative writing, you might open the Word document and just look at it. If it's a programming project: read the Jira board and look at the code again. Don't write anything. Just read the code. You will likely come up with a few tasks to do, so write those down. Think. Plan. Build up the structures in your mind, refresh the caches. If you can do, do, otherwise, plan, and if you can't even do that, read.
+
+When you're doing this regularly, when you're in regular contact with the project, when the shape of it is clear in your mind, you will have the tasks on the top of your mind, you will no longer feel that you need a giant empty runway of time to work on it, you will be able to work on it in shorter chunks.
+
+To manage long-term creative work, keep in regular contact. That doesn't mean work on them every day, but maybe _look_ at them every day.
+
+The [pomodoro method](#timers) works here. Set a timer for just 25m to keep in touch with the project.
 
 ## Centralize Your Inboxes
 
