@@ -60,11 +60,13 @@ The daily reviews are pretty freeform. Weekly and above there's more structure. 
 
 Journaling is a valuable habit. I started doing it for vague reasons: I wasn't sure what I wanted to get out of it, and it took a long time (and long stretches of not doing it) until it became a regular, daily habit. I've been doing it consistently now for three years, and I can identify the benefits.
 
-The first is that today's journal entry is a good default place for writing ad-hoc notes or thoughts. Often I wanted to write something, but didn't know where I would file it (how do you even file these little scraps of thought?) and from not knowing where to put it, I would not do it. Nowdays I just begin writing in the journal. Later, if it is valuable to file it away, I do so.
+The main benefit is that to change bad patterns, you have to notice them. And it is very easy to travel in a fix orbit, day in, day out, and not notice it. Laying it out in writing helps to notice the maladaptive coping mechanisms. Reading back over the journal entries helps you notice: when an event of type X happens, I react with Y.
 
-The second is that creating a journal entry in the morning is a good opportunity to go over the goals and priorities for the day and explicitly restate them to myself.
+Secondly, today's journal entry is a good default place for writing ad-hoc notes or thoughts. Often I wanted to write something, but didn't know where I would file it (how do you even file these little scraps of thought?) and from not knowing where to put it, I would not do it. Nowdays I just begin writing in the journal. Later, if it is valuable to file it away, I do so.
 
-The third is that I can look at the past and see how my life has changed. And this is often a positive experience, because the things that worried me didn't come to pass, the things I used to struggle with are now easy, or at least easier.
+The third benefit is that creating a journal entry in the morning is a good opportunity to go over the goals and priorities for the day and explicitly restate them to myself.
+
+The fourth and final benefit is retrospection: I can look at the past and see how my life has changed. And this is often a positive experience, because the things that worried me didn't come to pass, the things I used to struggle with are now easy, or at least easier.
 
 There's a paradox with productivity: when you grind executive function enough, things that you used to struggle with become quotidian. And so what was once the ceiling becomes the new floor. You no longer feel proud that you did X, Y, Z because that's just the new normal. It's like the hedonic treadmill. You might feel that you never get to "productive". Journaling helps to combat this because you can see how far you've come.
 
