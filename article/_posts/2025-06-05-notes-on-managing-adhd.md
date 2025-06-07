@@ -311,6 +311,7 @@ This ensures I leave my home on time. If it's something especially important I o
 [Obsidian]: https://obsidian.md/
 [Raycast]: https://www.raycast.com/
 [borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
+[dtd]: https://www.goodreads.com/book/show/108593.Driven_to_Distraction
 [gtd]: en.wikipedia.org/wiki/Getting_Things_Done
 [htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
