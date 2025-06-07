@@ -90,10 +90,6 @@ Journaling is a valuable habit. I started doing it for vague reasons: I wasn't s
 
   There's a paradox with productivity: when you grind executive function enough, things that you used to struggle with become quotidian. And so what was once the ceiling becomes the new floor. You no longer feel proud that you did X, Y, Z because that's just the new normal. It's like the hedonic treadmill. You might feel that you never get to "productive". Journaling helps to combat this because you can see how far you've come.
 
-## Growth
-
-TODO
-
 ## Timers
 
 If you have ADHD you've probably heard of the Pomodoro method, tried it, and bounced off it. The way it's framed is very neurotypical: it's scaffolding around _doing_, but ADHD people often have problems with the doing itself. And so the scaffolding is kind of pointless.
