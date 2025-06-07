@@ -232,7 +232,9 @@ Another example: you have an email you have to reply to, and you're anxious abou
 
 ## Replace Interrupts with Polling
 
-TODO
+"Interrupts" means notifications, which arrive at unpredictable and often inconvenient times. "Polling" means manually checking the source of the notifications for things to action. The obvious benefit of replacing interrupts with polling is you don't get interrupted by a notification. The less obvious benefit is that when notifications are smeared throughout the day, it is easy for them to fall through the cracks. Something comes in when you're busy, and you swipe it away, and forget about it, and realize days later you forgot to respond to an important message. Polling is focused: you've chosen a block of time and you're committed to going through the notifications systematically. Instead of random islands of interruptions throughout the day, you have a few short, focused blocks of going through your notifications.
+
+This is so trite. "Put your phone on Do Not Disturb and silence notifications". And yet it works. For a long time I resisted this because I aspire to be the kind of person who gets a message and replies within minutes. But I didn't notice how much notifications were impairing my focus until one day I accidentally put the phone/desktop on DND and had a wonderfully productive, distraction-free day.
 
 ## Accountability Buddy
 
