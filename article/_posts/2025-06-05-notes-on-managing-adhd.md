@@ -28,7 +28,27 @@ TODO
 
 ## Energy
 
-TODO
+There are many metaphors for the concept of mental energy. [Spoon theory][spoon], for example. The usual metaphor is that "mental energy" is like a battery that is drained through the day, in greater and lesser quantities, and is replenished by sleep.
+
+To me, energy is less like a battery and more like voltage. Some machines require a threshold voltage to operate. Below that voltage they don't just operate slower, they don't operate at all. Analogously, different categories of activity have different threshold voltages. For me, it's like this:
+
+1. Things I am averse to, the things I intuitively want to put off because they bring up painful emotions, are high-voltage.
+1. Creative, open-ended work is high-voltage to start, but once you get started, keeping it going is medium-voltage.
+1. Simple chores like cleaning, throwing clothes in the washing machine, etc. are low-voltage.
+
+And when I wake up I have the highest possible voltage, and throughout the course of the day the voltage declines. And that's the key difference from spoon theory: spoons are fungible across time, voltage is not. For each category of activity, there is a span of the day when I can action it.
+
+When I wake up, I do my morning routine, get some quick wins, and then I try to tackle the thing I dread the most, as early in the morning as possible, because that's the time of day when I have the most energy and self-control. I get that done and I move on.
+
+(Another reason to do the dreaded tasks first: if you put it off to, say, late morning, well, why not put it off again? And again and again. And then it's 7pm and you can't even think about the task, and it's late, and I don't have energy, so I couldn't even do it if I wanted to, so let's do it tomorrow.)
+
+And then, when I have removed that burden, I work on projects. The creative, generative, intellectual things. The things that move some kind of needle, and aren't just pointless chores.
+
+And when I run out of energy to create, I read.
+
+And when I run out of energy to read, I clean and go to the gym and do the other things.
+
+And when the sun goes down everything starts to unravel: I have zero energy and the lazy dopamine-seeking behaviour comes out. So I take melatonin, and try to be in bed before the instant gratification monkey seizes power.
 
 ## Procrastination
 
