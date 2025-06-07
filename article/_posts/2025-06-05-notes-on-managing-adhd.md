@@ -20,7 +20,35 @@ High-level advice.
 
 ## Chemistry First
 
-TODO
+The treatment for ADHD is stimulants. Everything else in this post is not an alternative to, but a complement to, stimulant medication. In fact most of the strategies described here, I was only able to execute _after_ starting stimulant medication. Chemistry is the critical node in the tech tree: the todo list, the pomodoro timers, etc., all of that was _unlocked_ by the medication.
+
+And if stimulant side-effects are bad, you can try another stimulant, or another dose. And if you exhaust all of them, you can try alternative ADHD drugs.
+
+A lot of people don't want to take medication for shame-based reasons. There is a lot of pill-shaming in the culture. You must learn to ignore it: we are automata, our minds are molecules in salt water.
+
+### Example: Melatonin
+
+As a motivating example for the "salt water automaton" view: I struggled with sleep hygiene for a long time. It felt like WW1: throwing wave after wave of discipline at it and always failing. I would set an alarm, for, say, 10pm, that said: it is time to go to bed. How many times did I obey it? Never. I was always doing something more important.
+
+What fixed it? Melatonin. I have an alarm that goes off at 8pm to remind me to take melatonin. The point of the alarm is not, "now you must log off", which is a very discipline-demanding task. The point of the alarm is simply: take this pill. It takes but a moment. Importantly, I'm not committing to anything other than taking a pill. Thirty, forty minutes later, I _want_ to sleep. That is the key thing: the melatonin has changed my preferences. And then I don't need willpower to close the sixteen Wikipedia tabs or whatever, because I _want_ to sleep more than I want to scroll, or watch YouTube.
+
+### Internal and External Change
+
+The broader perpsective here is that personal growth is a dialogue between internal changes and external changes.
+
+Internal changes might come from medication, meditation, therapy, coaching, or practicing habits for a long enough time. External changes are the scaffolding around the brain: using a todo list, and using it effectively. Using a calendar. Clearing your desk so you don't get distracted by things. Journaling, so that you can introspect and notice patterns: which behaviours leads to a good workday, and which behaviours lead to a day being wasted.
+
+Are internal changes more important? Kind of. It's more a back and forth, where internal changes unlock external changes which unlock further internal changes.
+
+Here's an example: you (having undiagnosed ADHD) try to set a schedule, or use a todo list, or clean your bed every day, but it doesn't stick. So you get on medication, and the medication lets you form your first habit: which is using a todo list app consistently, checking it every morning. Then, with the todo list as a core part of your exocortex, you start adding recurring tasks, and forming other simple habits: you have a daily recurring task to make your bed, and so every morning when you check the todo list, you see the task, and make your bed, and in time, with your now-functioning dopamine system, you make a habit to make your bed every day, such that you no longer need to have that in the todo list.
+
+So the timeline is:
+
+1. Internal change: starting medication unlocks...
+2. External change: using a todo list, which provides scaffolding (e.g. daily recurring tasks) for forming new habits, which unlocks
+3. Internal change: new habits formed (make bed, brush teeth in the morning)
+
+Taking Ritalin with no plan for what you will do today/tomorrow/this week doesn't work. Dually, an ambitious todo list will sit idle if your brain won't let you execute it. So personal growth comes from using _both_ internal and external changes, like a ladder with alternating left-right steps.
 
 ## Tools
 
