@@ -176,7 +176,26 @@ The [pomodoro method](#timers) works here. Set a timer for just 25m to keep in t
 
 ## Centralize Your Inboxes
 
-TODO
+Life is full of inboxes:
+
+1. Email
+1. DMs on Twitter, iMessage, WhatsApp, Signal, Discord, etc.
+1. Twitter bookmarks
+1. Browser bookmarks
+1. Your Downloads folder.
+1. Messages in my myGov inbox.
+1. The physical mailbox in my apartment.
+
+These are inboxes because they fill up over time and need action to empty. You can also think of them as little domain-specific task lists. "Centralizing your inboxes" means moving all these tasks from their silos into the one, central todo list.
+
+For example, I have a daily task called "catch up" to clear the digital inboxes:
+
+1. Go through all my communication apps (email, Discord, Twitter DMs etc) and triage the unread conversations: if something needs replying to, I either reply immediately or make a task to reply later so I don't
+orget.
+1. File the contents of my Downloads folder.
+1. Go through Twitter/browser bookmarks and turn them into tasks (e.g., if I bookmark an article, the task is to read the article).
+
+In this way I mostly manage to stay on top of comms.
 
 ## Inbox Zero
 
