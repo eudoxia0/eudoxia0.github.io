@@ -290,7 +290,7 @@ Every task falls into one of two categories: the quick wins, and everything else
 
 I don't have advice specifically on avoiding this. But you should notice if you're doing it and course-correct.
 
-## Thrasing
+## Thrashing
 
 A bad failure mode I have is: I have a task _T_ that I have to do, but I can't, because of some kind of aversion. But when I try to work on other things, the alarms are going off in my head, telling me to work on _T_ because you've been putting this off for so long and life is finite and the years are short and all that. The end result is that because one thing is blocked, everything grinds to a halt. It's a very annoying state to be in.
 
