@@ -244,7 +244,19 @@ Sometimes I'll start a conversation with Claude, lay out my plans for the day, a
 
 ## Plan First, Do Later
 
-TODO
+Separating planning from doing can be useful. Firstly because planning/doing require different kinds of mental energy. When you're too tired to do, you can often still plan. Secondly because by separating them you can look back and see how useful the plan was, how much you stuck to it, and then get better at planning.
+
+Thirdly, and most importantly, because for ADHD people doing can be a source of distractions that impair other tasks. From [_Driven to Distraction_][dtd]:
+
+> The first item on the list referred to a cough drop. As I read it, I asked her about it.
+>
+> “Oh,” she answered, “that is about a cough drop someone left on the dashboard of our car. The other day I saw the cough drop and thought, I’ll have to throw that away. When I arrived at my first stop, I forgot to take the cough drop to a trash can. When I got back into the car, I saw it and thought, I’ll throw it away at the gas station. The gas station came and went and I hadn’t thrown the cough drop away. Well, the whole day went like that, the cough drop still sitting on the dashboard. When I got home, I thought, I’ll take it inside with me and throw it out. In the time it took me to open the car door, I forgot about the cough drop. It was there to greet me when I got in the car the next morning. [...]
+>
+> It was such a classic ADD story that I’ve come to call it the “cough drop sign” when a person **habitually has trouble following through on plans on a minute-to-minute, even second-to-second, basis**. This is not due to procrastination per se as much as it is due to **the busyness of the moment interrupting or interfering with one’s memory circuits**. You can get up from your chair, go into the kitchen to get a glass of water, and then in the kitchen forget the reason for your being there.
+
+Emphasis mine.
+
+When I notice a micro-task like this, my instinct is not to do it, but to put it in the todo list. _Then_ I try to do it immediately. And if I get distracted halfway through, it's still there, in the todo list.
 
 ## Derailment
 
