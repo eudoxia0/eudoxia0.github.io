@@ -144,7 +144,22 @@ Journaling is a valuable habit. I started doing it for vague reasons: I wasn't s
 
   There's a paradox with productivity: when you grind executive function enough, things that you used to struggle with become quotidian. And so what was once the ceiling becomes the new floor. You no longer feel proud that you did X, Y, Z because that's just the new normal. It's like the hedonic treadmill. You might feel that you never get to "productive". Journaling helps to combat this because you can see how far you've come.
 
-## Timers
+## Time
+
+To manage time, you need a calendar (macro) and a timer (micro).
+
+### Macro
+
+At the macro level, I use the calendar very lightly. Mostly for social things (to ensure I don't forget an event, and that I don't double-book things). I also use it to schedule the gym: if the goal is to lift, say, five times a week, I schedule five time blocks to lift. Lifting is special because it has a lot of temporal constraints:
+
+1. I lift exactly _n_ times per week.
+1. I lift in the evening (if I got in the morning my brain is fried for the remainder of the day) which might clash with social things.
+1. There are exclusion constraints i.e. doing shoulders the day before chest is bad.
+1. There is at least one rest day which has to be scheduled strategically (e.g. to have maximal distance between successive deadlift sessions).
+
+Essentially everything else goes in the todo list.
+
+### Micro
 
 If you have ADHD you've probably heard of the Pomodoro method, tried it, and bounced off it. The way it's framed is very neurotypical: it's scaffolding around _doing_, but ADHD people often have problems with the doing itself. And so the scaffolding is kind of pointless.
 
