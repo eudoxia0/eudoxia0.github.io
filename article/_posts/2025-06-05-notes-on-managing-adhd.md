@@ -267,8 +267,9 @@ This ensures I leave my home on time. If it's something especially important I o
 
 TODO
 
-[Obsidian]: https://obsidian.md/
 [Focusmate]: https://www.focusmate.com/
+[Obsidian]: https://obsidian.md/
 [Raycast]: https://www.raycast.com/
 [borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
 [parker]: https://parconley.com/focusmate/
+[spoon]: https://en.wikipedia.org/wiki/Spoon_theory
