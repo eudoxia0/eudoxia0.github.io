@@ -52,7 +52,33 @@ And when the sun goes down everything starts to unravel: I have zero energy and 
 
 ## Procrastination
 
-TODO
+In my ontology there are three types of procrastination:
+
+- **ADHD Procrastination:** you want to do the task, but can't because of distraction/hyperactivity.
+- **Anxious Procrastination:** you know you have to do the task, but you don't want to, because it triggers difficult emotions.
+- **Decision Paralysis Procrastination:** you _don't know_ how to execute the task, because it involves a decision and you have difficulty making the decision.
+
+### ADHD Procrastination
+
+This is the easiest kind to address. The solution is pharmacological treatment for ADHD + having a productivity system and some tricks.
+
+### Anxious Procrastination
+
+This one is harder. The good thing is you know, cognitively, what you have to do. The hard part is getting over the aversion.
+
+In the short term, the way to fix this is to do it scared. Accept the anxiety. Asking for help also works, sometimes you just need someone in the room with you when you hit send on the email. You can also use techniques like CBT to rationally challenge the source of the anxiety and maybe overcome it.
+
+In the long term: write down the things you procrastinate one due to anxiety, and find the common through-line, or the common ancestor. By identifying the emotional root cause, you can work on fixing it.
+
+### Decision Paralysis Procrastination
+
+And this is the hardest, because you don't know, cognitively, what the right choice is, and also you probably have a lot of anxiety/aversion around it. Many things in life are susceptible to this: you have set of choices, there's good arguments for/against each one, and you have a lot of uncertainty as to the outcomes. And so you ruminate on it endlessly.
+
+I don't have a good general solution for this.
+
+Talking to people helps: friends, therapists, Claude. This works because thinking by yourself has diminishing returns: you will quickly exhaust all the thoughts you will have about the problem, and start going in circles. Often people will bring up options/considerations I would never have thought of. Sometimes, if you're lucky, that's all it takes: someone mentions an option you had not considered and you realize, oh, it was all so simple.
+
+One thing to consider is that _thinking in your head_ is inherently circular, because you have a limited working memory, and you will inevitably start going in circles. Writing things down helps here. Treat the decision, or the emotions behind it, like an object of study, or an engineering problem. Sit down and write an essay about it. Name the arguments, number the bullet points, refer back to things. Make the thoughts into real, physical, manipulable entities.
 
 ## Introspection
 
