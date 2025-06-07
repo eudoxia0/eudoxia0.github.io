@@ -308,6 +308,16 @@ I am chronically late. So if I have a calendar event like a party at someone's h
 
 This ensures I leave my home on time. If it's something especially important I often add 15m to the travel block as a buffer.
 
+## Choice of Tools
+
+What productivity app should I use? Reminders? Linear? Todoist? A bullet journal?
+
+Use something that feels good and works. That's all. Personally I use Todoist. A lot of people think todo list apps are commodities, but when you have an app open for 98% of your screentime, the little subtleties really add up. I've tried using Reminders, Linear, as my todo lists, and building my own. My productivity always suffers and I always go back to Todoist.
+
+One app is better than two: the more disjoint things you have to pay attention to, the worse it is.
+
+If you're a software engineer I strongly against building your own, which is a terrible form of procrastination for creative types.
+
 # Resources
 
 - [_How To Do Things_][htdt] describes an ADHD-friendly version of the Pomodoro method. It's a 50 page PDF with no fluff, so it's worth buying to support writers who don't waste the reader's time.
