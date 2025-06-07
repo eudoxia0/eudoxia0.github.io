@@ -258,6 +258,8 @@ Emphasis mine.
 
 When I notice a micro-task like this, my instinct is not to do it, but to put it in the todo list. _Then_ I try to do it immediately. And if I get distracted halfway through, it's still there, in the todo list.
 
+A practical example is something I call the apartment survey. When I clean the apartment, I start by walking around, noticing everything that needs fixing, and creating a little task for it. Even something as simple as "move the book from the coffee table to the bookshelf". But I don't start anything until the survey is done. And when the survey is done, I execute it. And if I get distracted halfway through cleaning the apartment, I have the tasks in the list to go back to.
+
 ## Derailment
 
 Through [introspection](#introspection) you can discover the behaviours that derail your productivity.
