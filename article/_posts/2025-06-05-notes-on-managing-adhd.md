@@ -229,6 +229,12 @@ Every task falls into one of two categories: the quick wins, and everything else
 
 I don't have advice specifically on avoiding this. But you should notice if you're doing it and course-correct.
 
+## Thrasing
+
+A bad failure mode I have is: I have a task _T_ that I have to do, but I can't, because of some kind of aversion. But when I try to work on other things, the alarms are going off in my head, telling me to work on _T_ because you've been putting this off for so long and life is finite and the years are short and all that. The end result is that because one thing is blocked, everything grinds to a halt. It's a very annoying state to be in.
+
+And I don't have a perfect solution, but I try to manage it but applying a sense of proportionality, "render unto Caesar" etc. You can't ignore _T_ forever, dually, you probably won't solve it in the next ten minutes. But you can timebox _T_: allocate some block of time every day to try to advance it, or at least to work around it, e.g. to ask a friend for help, for example. And the rest of the day you can dedicate to moving other things forward.
+
 ## Put Travel in the Calendar
 
 I am chronically late. So if I have a calendar event like a party at someone's home, I will go on Google Maps and measure the travel time (from my home or wherever I'm likely to be) to the destination, and make a time block for that. e.g., if it takes 30m to go to the dentist and back, this is what my calendar looks like:
