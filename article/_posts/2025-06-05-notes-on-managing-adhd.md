@@ -227,9 +227,17 @@ Sometimes I'll start a conversation with Claude, lay out my plans for the day, a
 
 TODO
 
-## Day Killers
+## Derailment
 
-TODO
+Through [introspection](#introspection) you can discover the behaviours that derail your productivity.
+
+Lifting in the morning derails the day. Cardio is fine, but if I lift weights in the morning, the rest of the day I'm running on -40 IQ points. I'm not sure what the physiology is: maybe it's exhaustion of the glycogen stores, or fatigue byproducts floating around in my brain, or the CNS is busy rewiring the motor cortex. The point is that I try to do the cognitively-demanding things in the morning and lift in the evening.
+
+Motion also does this. I suppose it's the H in ADHD: hyperactivity. I used to be a big pacer: put on headphones, pace my room back and forth daydreaming for hours and hours. Some days I would pace so much my legs were sore. To think, I have to be in motion. But sometimes I've thought enough, and it's time to do.
+
+Music, too, derails me. If I start listening to music very soon I start pacing the room and it's over.
+
+So, to be productive I have to not move too much, and be in silence, and not have fried my brain with exercise.
 
 ## Using OCD to Defeat ADHD
 
