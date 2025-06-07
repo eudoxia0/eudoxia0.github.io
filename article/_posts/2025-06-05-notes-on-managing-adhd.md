@@ -292,11 +292,15 @@ This ensures I leave my home on time. If it's something especially important I o
 
 # Resources
 
-TODO
+_ [_How To Do Things_][htdt] describes an ADHD-friendly version of the Pomodoro method. It's a 50 page PDF with no fluff, so it's worth buying to support writers who don't waste the reader's time.
+
+- [_Getting Things Done_][gtd] has a lot of good advice (e.g. dump your entire brain into the todo list) but it's somewhat neurotypical in that it's assumed you won't have any problems actually _executing_ the tasks.
 
 [Focusmate]: https://www.focusmate.com/
 [Obsidian]: https://obsidian.md/
 [Raycast]: https://www.raycast.com/
 [borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
+[gtd]: en.wikipedia.org/wiki/Getting_Things_Done
+[htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
 [spoon]: https://en.wikipedia.org/wiki/Spoon_theory
