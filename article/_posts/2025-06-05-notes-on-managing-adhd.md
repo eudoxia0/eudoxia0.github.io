@@ -50,7 +50,25 @@ So the timeline is:
 
 Taking Ritalin with no plan for what you will do today/tomorrow/this week doesn't work. Dually, an ambitious todo list will sit idle if your brain won't let you execute it. So personal growth comes from using _both_ internal and external changes, like a ladder with alternating left-right steps.
 
-## Tools
+## Memory
+
+I use [Todoist] on my desktop and my phone. The pro plan is worth it. I don't really think of it as an app, rather, it's a cognitive prosthesis.
+
+The todo list provides three things:
+
+- **Memory:** the list remembers things for me. I'm not at the mercy of my brain randomly pinging me that I forgot to do X or I want to someday do Y. The todo list remembers.
+- **Order:** the todo list lets you drag and drop tasks around, so you can figure out the ordering in which you're going to do them.
+- **Hierarchy:** the todo list lets you break tasks down hierarchically and without limit.
+
+Of these, the most important is memory. The todolist is an action-oriented long term memory prosthesis.
+
+This is especially useful for habit formation: my biggest blocker with forming habits was just remembered that I'd committed to doing something. If you think, i will make the bed every day, you might do it today, tomorrow, and by the third day you forget. You're failing by simply forgetting to show up, which is a sad way to fail. By making something a recurring task on the todo list, it ensures I will see it. In a sense, the todo list turns many habits into one. You don't need to remember "I will make my bed every day", "I will floss my teeth every night", etc., because the todolist remembers all those things for you. You only need to form a _single_ habit: checking the todo list.
+
+Analogously, I often fail to finish projects simply because I forget about them. I start reading a book, but I don't write it down anywhere (say, in Goodreads) that "I'm reading this book" is something I have committed to. I leave the book on a table where it's out of sight (and therefore out of mind) for all of my waking hours. I glance at it occasionally and think, oh, yeah, I was reading that book, and then I'm distracted by something else. And weeks later, when I've already started another book, I notice the first book, with the bookmark on page 20, abandoned.
+
+The todolist prevents this failure mode: you create a project to represent reading the book, and that project is now tracked, when you open the todo list, you can see it in the list of active projects.
+
+### How I Use Todoist
 
 TODO
 
