@@ -171,11 +171,14 @@ To manage time, you need a calendar (macro) and a timer (micro).
 At the macro level, I use the calendar very lightly. Mostly for social things (to ensure I don't forget an event, and that I don't double-book things). I also use it to schedule the gym: if the goal is to lift, say, five times a week, I schedule five time blocks to lift. Lifting is special because it has a lot of temporal constraints:
 
 1. I lift exactly _n_ times per week.
-1. I lift in the evening (if I got in the morning my brain is fried for the remainder of the day) which might clash with social things.
-1. There are exclusion constraints i.e. doing shoulders the day before chest is bad.
+1. I lift at most once a day.
+1. I lift in the evening, which potentially clashes with social things.
+1. There are adjacency constraints, e.g. doing shoulders the day before chest is bad.
 1. There is at least one rest day which has to be scheduled strategically (e.g. to have maximal distance between successive deadlift sessions).
 
-A calendar can be a useful self-binding device. If you keep dragging some project along because you haven't made time: consider making a time block in the calendar, and sticking to it. Creating a calendar event is, literally, making time: it's like calling `malloc_time()`.
+But outside these two categories, my calendar is empty.
+
+The calendar might be useful to you as a self-binding device. If you keep dragging some project along because you "haven't made time" for it: consider making a time block in the calendar, and sticking to it. Creating a calendar event is, literally, making time: it's like calling `malloc_time()`.
 
 Some people use the calendar as their entire todo list. I think this kind of works if your todo list is very coarse grained: "buy groceries" and "go to the dentist". But I have a very fine-grained todo list, and putting my tasks in the calendar would make it overwhelming.
 
