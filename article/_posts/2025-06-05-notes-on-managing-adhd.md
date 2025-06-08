@@ -157,9 +157,15 @@ At the macro level, I use the calendar very lightly. Mostly for social things (t
 1. There are exclusion constraints i.e. doing shoulders the day before chest is bad.
 1. There is at least one rest day which has to be scheduled strategically (e.g. to have maximal distance between successive deadlift sessions).
 
-Essentially everything else goes in the todo list.
+A calendar can be a useful self-binding device. If you keep dragging some project along because you haven't made time: consider making a time block in the calendar, and sticking to it. Creating a calendar event is, literally, making time: it's like calling `malloc_time()`.
+
+Some people use the calendar as their entire todo list. I think this kind of works if your todo list is very coarse grained: "buy groceries" and "go to the dentist". But I have a very fine-grained todo list, and putting my tasks in the calendar would make it overwhelming.
+
+Another problem with calendars is they are too time-bound: if I make a calendar block to do something, and I don't do it, the calendar doesn't know it. It just sits there, forgotten, in the past. In a todo list, everything gets dragged along until I explicitly complete it. Along the same lines, the calendar is not good for collecting vague ideas and plans for things you want to do in the future, while todo lists are ideal for this.
 
 ### Micro
+
+The problem with todo lists is that they're timeless: there is no sense of urgency. You look at the list and think, I could do the next task now, or in five minutes, or in an hour. There's always _some_ time left in the day. Or tomorrow. You need a way to manufacture urgency.
 
 If you have ADHD you've probably heard of the Pomodoro method, tried it, and bounced off it. The way it's framed is very neurotypical: it's scaffolding around _doing_, but ADHD people often have problems with the doing itself. And so the scaffolding is kind of pointless.
 
