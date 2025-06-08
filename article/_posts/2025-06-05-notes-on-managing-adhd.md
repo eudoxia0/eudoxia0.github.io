@@ -418,6 +418,7 @@ If you're a software engineer I strongly against building your own, which is a t
 [Focusmate]: https://www.focusmate.com/
 [Obsidian]: https://obsidian.md/
 [Raycast]: https://www.raycast.com/
+[Todoist]: https://www.todoist.com/
 [borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
 [dtd]: https://www.goodreads.com/book/show/108593.Driven_to_Distraction
 [gtd]: en.wikipedia.org/wiki/Getting_Things_Done
