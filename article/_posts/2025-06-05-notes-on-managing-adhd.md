@@ -438,7 +438,7 @@ If you're a software engineer I strongly against building your own, which is a t
 [Todoist]: https://www.todoist.com/
 [borges]: https://www.goodreads.com/book/show/864175.Selected_Non_fictions
 [dtd]: https://www.goodreads.com/book/show/108593.Driven_to_Distraction
-[gtd]: en.wikipedia.org/wiki/Getting_Things_Done
+[gtd]: https://en.wikipedia.org/wiki/Getting_Things_Done
 [htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
 [project]: https://www.todoist.com/help/articles/introduction-to-projects-TLTjNftLM
