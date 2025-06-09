@@ -8,7 +8,7 @@ card: notes-on-managing-adhd.webp
 >
 > <p class="cite"> —  Jorge Luis Borges, [_Selected Non-Fictions_][borges] </p>
 
-This post is about managing ADHD. It is divided into two sections: "Strategies" describes the high-level control system, "Tactics" is a list of micro-level improvements (really it should be called "strategems", since most are essentially about tricking yourself).
+This post is about managing ADHD. It is divided into two sections: "Strategies" describes the high-level control system, "Tactics" is a list of micro-level improvements (really it should be called "stratagems", since most are essentially about tricking yourself).
 
 # Contents
 {: .no_toc }
@@ -36,7 +36,7 @@ What fixed it? Melatonin. I have an alarm that goes off at 8pm to remind me to t
 
 ### Internal and External Change
 
-The broader perpsective here is that personal growth is a dialogue between internal changes and external changes.
+The broader perspective here is that personal growth is a dialogue between internal changes and external changes.
 
 Internal changes might come from medication, meditation, therapy, coaching, or practicing habits for a long enough time. External changes are the scaffolding around the brain: using a todo list, and using it effectively. Using a calendar. Clearing your desk so you don't get distracted by things. Journaling, so that you can introspect and notice patterns: which behaviours leads to a good workday, and which behaviours lead to a day being wasted.
 
@@ -164,7 +164,7 @@ Journal/
     YYYY.md
 ```
 
-In the morning I finish yesterday's journal entry, and begin today's. Every Sunday I write the review of the week, the first of each month I write the review of the previous month, the first of each year I review the past year. The time alloted to each review is in inverse proportion to its frequency: so a monthly review might take an hour while an early review might take up a whole morning.
+In the morning I finish yesterday's journal entry, and begin today's. Every Sunday I write the review of the week, the first of each month I write the review of the previous month, the first of each year I review the past year. The time allotted to each review is in inverse proportion to its frequency: so a monthly review might take an hour while an early review might take up a whole morning.
 
 The daily reviews are pretty freeform. Weekly and above there's more structure. For example, for the weekly reviews I will write a list of the salient things that happened in the week. Then I list on what went well and what went poorly. And then I reflect on how I will change my behaviour to make the next week go better.
 
@@ -172,7 +172,7 @@ Journaling is a valuable habit. I started doing it for vague reasons: I wasn't s
 
 - The main benefit is that to change bad patterns, you have to notice them. And it is very easy to travel in a fix orbit, day in, day out, and not notice it. Laying it out in writing helps to notice the maladaptive coping mechanisms. Reading back over the journal entries helps you notice: when an event of type X happens, I react with Y.
 
-- Today's journal entry is a good default place for writing ad-hoc notes or thoughts. Often I wanted to write something, but didn't know where I would file it (how do you even file these little scraps of thought?) and from not knowing where to put it, I would not do it. Nowdays I just begin writing in the journal. Later, if it is valuable to file it away, I do so.
+- Today's journal entry is a good default place for writing ad-hoc notes or thoughts. Often I wanted to write something, but didn't know where I would file it (how do you even file these little scraps of thought?) and from not knowing where to put it, I would not do it. Nowadays I just begin writing in the journal. Later, if it is valuable to file it away, I do so.
 
 - Creating a journal entry in the morning is a good opportunity to go over the goals and priorities for the day and explicitly restate them to myself.
 
@@ -218,7 +218,7 @@ The method works well in three kinds of contexts:
 
 - **Starting:** sometimes the problem is just starting. It is very trite, but it's true. You have something you _want to want_ to do, but don't _want_ to do. I want to want to read this book, to learn this topic, to write this blog post, to work on this software project. But I don't _want_ to do it. The pomodoro method helps you start.
 
-  You're not comitting to finishing the project. You're not comitting to months or weeks or days or even hours of work. You're comitting to a half hour. And if you work just that half hour: great, promise kept. 30m a day, over the course of a single month, is 15h of work. And often I start a 30m timer and end up working four hours, and maybe that's a good outcome.
+  You're not committing to finishing the project. You're not committing to months or weeks or days or even hours of work. You're committing to a half hour. And if you work just that half hour: great, promise kept. 30m a day, over the course of a single month, is 15h of work. And often I start a 30m timer and end up working four hours, and maybe that's a good outcome.
 
 - **Stopping:** dually, sometimes the problem is stopping. If you're trying to advance multiple projects at the same time, if you hyperfocus on one, it eats into the time you allocated for the others. And more broadly, spending too much time on one project can derail all your plans for the day. Maybe you meant to go to the gym at 6pm but you got so stuck in with this project that it's 8:30pm and you're still glued to the screen. So the gym suffers, your sleep schedule suffers, etc.
 
@@ -228,7 +228,7 @@ The method works well in three kinds of contexts:
 
 # Tactics
 
-Strategems, tricks.
+Stratagems, tricks.
 
 ## Task Selection
 
@@ -258,7 +258,7 @@ My desk is very spartan: there's a monitor, a mouse, and a keyboard, and a few t
 
 The positive aspect, the things I keep in my visual field: most of the time, I have two windows open on my computer the todo list occupies the left third of the screen, the right two-thirds are occupied by whatever window I have open at the time, e.g.:
 
-![A screenshot of my desktop, showing Todolist on the leftmost one-third of the screen, and Emacs on the rightmost two-thirds of the screen.](/assets/content/notes-on-managing-adhd/desktop.png)
+![A screenshot of my desktop, showing Todoist on the leftmost one-third of the screen, and Emacs on the rightmost two-thirds of the screen.](/assets/content/notes-on-managing-adhd/desktop.png)
 
 And so at a glance, I can see:
 
@@ -300,8 +300,7 @@ These are inboxes because they fill up over time and need action to empty. You c
 
 For example, I have a daily task called "catch up" to clear the digital inboxes:
 
-1. Go through all my communication apps (email, Discord, Twitter DMs etc) and triage the unread conversations: if something needs replying to, I either reply immediately or make a task to reply later so I don't
-orget.
+1. Go through all my communication apps (email, Discord, Twitter DMs etc) and triage the unread conversations: if something needs replying to, I either reply immediately or make a task to reply later so I don't forget.
 1. File the contents of my Downloads folder.
 1. Go through Twitter/browser bookmarks and turn them into tasks (e.g., if I bookmark an article, the task is to read the article).
 
@@ -382,7 +381,7 @@ Lifting in the morning derails the day. Cardio is fine, but if I lift weights in
 
 Motion also does this. I suppose it's the H in ADHD: hyperactivity. I used to be a big pacer: put on headphones, pace my room back and forth daydreaming for hours and hours. Some days I would pace so much my legs were sore. To think, I have to be in motion. But sometimes I've thought enough, and it's time to do.
 
-Music, too, derails me. If I start listening to music very soon I start pacing the room and it's over. Music is almost like reverse methylphenidateme: it makes me restless, mentally hyperactive, and inattentive.
+Music, too, derails me. If I start listening to music very soon I start pacing the room and it's over. Music is almost like reverse methylphenidate: it makes me restless, mentally hyperactive, and inattentive.
 
 So, to be productive I have to not move too much, and be in silence, and not have fried my brain with exercise.
 
