@@ -1,5 +1,6 @@
 ---
 title: Notes on Managing ADHD
+summary: Strategies and tactics for staying productive.
 ---
 
 > The pleasure is in foreseeing it, not in bringing it to term.
