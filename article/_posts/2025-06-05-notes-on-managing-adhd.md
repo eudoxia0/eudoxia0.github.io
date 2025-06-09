@@ -68,7 +68,7 @@ This is especially useful for habit formation: my biggest blocker with forming h
 
 Analogously, I often fail to finish projects simply because I forget about them. I start reading a book, but I don't write it down anywhere (say, in Goodreads) that "I'm reading this book" is something I have committed to. I leave the book on a table where it's out of sight (and therefore out of mind) for all of my waking hours. I glance at it occasionally and think, oh, yeah, I was reading that book, and then I'm distracted by something else. And weeks later, when I've already started another book, I notice the first book, with the bookmark on page 20, abandoned.
 
-The todolist prevents this failure mode: you create a project to represent reading the book, and that project is now tracked, when you open the todo list, you can see it in the list of active projects.
+The todolist prevents this failure mode: you create a project to represent reading the book, and that project is now tracked, and when you open the todo list, you can see it in the list of active projects.
 
 ### How I Use Todoist
 
