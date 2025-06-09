@@ -74,7 +74,7 @@ The todolist prevents this failure mode: you create a project to represent readi
 
 In Todoist, every task is part of a [project] (which really should just be called a list). My sidebar looks like this:
 
-<img src="/assets/content/notes-on-managing-adhd/sidebar.png" width="300" alt="" />
+<img src="/assets/content/notes-on-managing-adhd/sidebar.png" width="300" alt="A screenshot of my Todoist sidebar, showing a list of projects described below." />
 
 **Tasks** is the list for ad-hoc tasks. Mostly chores and things that don't fit in elsewhere. Unload the dishwasher, reply to this email, etc. The only rule for this list is that everything in it must be scheduled.
 
@@ -258,7 +258,7 @@ My desk is very spartan: there's a monitor, a mouse, and a keyboard, and a few t
 
 The positive aspect, the things I keep in my visual field: most of the time, I have two windows open on my computer the todo list occupies the left third of the screen, the right two-thirds are occupied by whatever window I have open at the time, e.g.:
 
-![](/assets/content/notes-on-managing-adhd/desktop.png)
+![A screenshot of my desktop, showing Todolist on the leftmost one-third of the screen, and Emacs on the rightmost two-thirds of the screen.](/assets/content/notes-on-managing-adhd/desktop.png)
 
 And so at a glance, I can see:
 
@@ -414,7 +414,7 @@ And I don't have a perfect solution, but I try to manage it but applying a sense
 
 I am chronically late. So if I have a calendar event like a party at someone's home, I will go on Google Maps and measure the travel time (from my home or wherever I'm likely to be) to the destination, and make a time block for that. e.g., if it takes 30m to go to the dentist and back, this is what my calendar looks like:
 
-![](/assets/content/notes-on-managing-adhd/travel.png)
+![A screenshot of my calendar, showing an event to go to the dentist, bookended by two events to travel to and from the dentist.](/assets/content/notes-on-managing-adhd/travel.png)
 
 This ensures I leave my home on time. If it's something especially important I often add 15m to the travel block as a buffer.
 
