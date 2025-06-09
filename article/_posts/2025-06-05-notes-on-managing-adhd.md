@@ -76,6 +76,19 @@ In Todoist, every task is part of a [project] (which really should just be calle
 
 <img src="/assets/content/notes-on-managing-adhd/sidebar.png" width="300" alt="" />
 
+**Tasks** is the list for ad-hoc tasks. Mostly chores and things that don't fit in elsewhere. Unload the dishwasher, reply to this email, etc. The only rule for this list is that everything in it must be scheduled.
+
+**Groceries** is self-explanatory.
+
+**Ideas** is the where every half-formed goal, intention, project idea etc. goes. "Go deeper into metta" and "learn how to use the slide rule" and "go penguin watching in Manly" and "write a journalling app" and "learn PLT redex". I put these things here so that they don't live in my brain. And occasionally I go through the list and promote something into an actual, active project.
+
+**Blog** is like the ideas list specifically ideas for blog posts.
+
+**Reading List** is for media I want to consume. This is divided into: fiction books, non-fiction books, technical books, blog posts, papers, games, films.
+
+**Cycles** is for recurring tasks. This one is divided into sections by period: daily, weekly, and above. The daily recurring tasks are things like "take vitamin D", "meditate", and the inbox-clearing task.
+
+**Projects** is a container for actual projects: an objective which takes multiple tasks to accomplish. Why lift projects into lists? Why not just use a top-level task to represent the project's objective, and nested subtasks to represent the execution steps of the project? Because having the project in the sidebar is one mechanism I use to ensure I don't forget about it. Every time I glance at the todo list, I can see the list of active projects. I can notice if something has not been worked on for a while, and act on it. Otherwise: out of sight, out of mind.
 
 ## Energy
 
