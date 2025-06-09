@@ -164,7 +164,7 @@ Journal/
     YYYY.md
 ```
 
-In the morning I finish yesterday's journal entry, and begin today's. Every Sunday I write the review of the week, the first of each month I write the review of the previous month, the first of each year I review the past year. The time allotted to each review is in inverse proportion to its frequency: so a monthly review might take an hour while an early review might take up a whole morning.
+In the morning I finish yesterday's journal entry, and begin today's. Every Sunday I write the review of the week, the first of each month I write the review of the previous month, the first of each year I review the past year. The time allotted to each review is in inverse proportion to its frequency: so a monthly review might take an hour while a yearly review might take up a whole morning.
 
 The daily reviews are pretty freeform. Weekly and above there's more structure. For example, for the weekly reviews I will write a list of the salient things that happened in the week. Then I list on what went well and what went poorly. And then I reflect on how I will change my behaviour to make the next week go better.
 
