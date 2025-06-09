@@ -425,7 +425,7 @@ Use something that feels good and works. That's all. Personally I use Todoist. A
 
 One app is better than two: the more disjoint things you have to pay attention to, the worse it is.
 
-If you're a software engineer I strongly against building your own, which is a terrible form of procrastination for creative types.
+If you're a software engineer I strongly advise against building your own, which is a terrible form of procrastination for creative types.
 
 # Resources
 
