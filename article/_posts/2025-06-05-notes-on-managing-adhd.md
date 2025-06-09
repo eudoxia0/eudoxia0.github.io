@@ -72,7 +72,10 @@ The todolist prevents this failure mode: you create a project to represent readi
 
 ### How I Use Todoist
 
-TODO
+In Todoist, every task is part of a [project] (which really should just be called a list). My sidebar looks like this:
+
+<img src="/assets/content/notes-on-managing-adhd/sidebar.png" width="300" alt="" />
+
 
 ## Energy
 
@@ -426,4 +429,5 @@ If you're a software engineer I strongly against building your own, which is a t
 [gtd]: en.wikipedia.org/wiki/Getting_Things_Done
 [htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
+[project]: https://www.todoist.com/help/articles/introduction-to-projects-TLTjNftLM
 [spoon]: https://en.wikipedia.org/wiki/Spoon_theory
