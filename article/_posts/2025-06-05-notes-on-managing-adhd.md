@@ -414,7 +414,7 @@ And I don't have a perfect solution, but I try to manage it but applying a sense
 
 I am chronically late. So if I have a calendar event like a party at someone's home, I will go on Google Maps and measure the travel time (from my home or wherever I'm likely to be) to the destination, and make a time block for that. e.g., if it takes 30m to go to the dentist and back, this is what my calendar looks like:
 
-![A screenshot of my calendar, showing an event to go to the dentist, bookended by two events to travel to and from the dentist.](/assets/content/notes-on-managing-adhd/travel.png)
+<img src="/assets/content/notes-on-managing-adhd/travel.png" alt="A screenshot of my calendar, showing an event to go to the dentist, bookended by two events to travel to and from the dentist." width="300" />
 
 This ensures I leave my home on time. If it's something especially important I often add 15m to the travel block as a buffer.
 
