@@ -476,6 +476,10 @@ If you're a software engineer I strongly advise against building your own, which
 - [_How To Do Things_][htdt] describes an ADHD-friendly version of the Pomodoro method. It's a 50 page PDF with no fluff, so it's worth buying to support writers who don't waste the reader's time.
 - [_Getting Things Done_][gtd] has a lot of good advice (e.g. dump your entire brain into the todo list) but it's somewhat neurotypical in that it's assumed you won't have any problems actually _executing_ the tasks.
 
+# Acknowledgements
+
+Thanks to Cameron Pinnegar for reviewing.
+
 [Focusmate]: https://www.focusmate.com/
 [Obsidian]: https://obsidian.md/
 [Raycast]: https://www.raycast.com/
