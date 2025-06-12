@@ -18,7 +18,7 @@ This post is about managing ADHD. It is divided into two sections: "Strategies" 
 
 # Strategies
 
-High-level advice.
+High-level advice, control systems.
 
 ## Chemistry First
 
