@@ -26,7 +26,7 @@ _ADHD has a biological cause and drugs are the first-line treatment for good rea
 
 The first-line treatment for ADHD is stimulants. Everything else in this post works best as a complement to, rather than as an alternative to, stimulant medication. In fact most of the strategies described here, I was only able to execute _after_ starting stimulants. For me, chemistry is the critical node in the tech tree: the todo list, the pomodoro timers, etc., all of that was unlocked by the medication.
 
-And if stimulant side-effects are bad, you can try another stimulant, or another dose. And if you exhaust all of them, you can try alternative ADHD drugs. There are many options before giving up on psychiatry.
+Some people can't tolerate a specific stimulant. But there are many stimulant and non-stimulant drugs for ADHD. It's worth exhausting the psychiatric options before trying to white-knuckle it.
 
 A lot of people don't want to take medication for shame-based reasons. There is a lot of pill-shaming in the culture. You must learn to ignore it: we are automata, our minds are molecules in salt water.
 
