@@ -84,7 +84,7 @@ In Todoist, every task is part of a [project] (which really should just be calle
 
 **Groceries** is self-explanatory.
 
-**Ideas** is the where every half-formed goal, intention, project idea etc. goes. "Go deeper into metta" and "learn how to use the slide rule" and "go penguin watching in Manly" and "write a journalling app" and "learn PLT redex". I put these things here so that they don't live in my brain. And occasionally I go through the list and promote something into an actual, active project.
+**Ideas** is the where every half-formed goal, intention, project idea etc. goes. "Go deeper into metta" and "learn how to use the slide rule" and "go penguin watching in Manly" and "write a journalling app" and "learn [PLT Redex][plt]". I put these things here so that they don't live in my brain. And occasionally I go through the list and promote something into an actual, active project.
 
 **Blog** is like the ideas list specifically ideas for blog posts.
 
@@ -489,5 +489,6 @@ Thanks to Cameron Pinnegar for reviewing.
 [gtd]: https://en.wikipedia.org/wiki/Getting_Things_Done
 [htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
+[plt]: https://redex.racket-lang.org/
 [project]: https://www.todoist.com/help/articles/introduction-to-projects-TLTjNftLM
 [spoon]: https://en.wikipedia.org/wiki/Spoon_theory
