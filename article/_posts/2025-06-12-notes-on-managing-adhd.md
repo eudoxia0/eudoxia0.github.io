@@ -24,7 +24,7 @@ High-level advice, control systems.
 
 _ADHD has a biological cause and drugs are the first-line treatment for good reasons. There is no virtue in trying to beat it through willpower alone._
 
-The first-line treatment for ADHD is stimulants. Everything else in this post is not an alternative to, but a complement to, psychiatric treatment. In fact most of the strategies described here, I was only able to execute _after_ starting stimulant medication. Chemistry is the critical node in the tech tree: the todo list, the pomodoro timers, etc., all of that was _unlocked_ by the medication.
+The first-line treatment for ADHD is stimulants. Everything else in this post works best as a complement to, rather than as an alternative to, stimulant medication. In fact most of the strategies described here, I was only able to execute _after_ starting stimulants. For me, chemistry is the critical node in the tech tree: the todo list, the pomodoro timers, etc., all of that was unlocked by the medication.
 
 And if stimulant side-effects are bad, you can try another stimulant, or another dose. And if you exhaust all of them, you can try alternative ADHD drugs. There are many options before giving up on psychiatry.
 
