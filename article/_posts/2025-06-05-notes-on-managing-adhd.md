@@ -22,6 +22,8 @@ High-level advice, control systems.
 
 ## Chemistry First
 
+_ADHD has a biological cause and drugs are the first-line treatment for good reasons. There is no virtue in trying to beat it through willpower alone._
+
 The treatment for ADHD is stimulants. Everything else in this post is not an alternative to, but a complement to, stimulant medication. In fact most of the strategies described here, I was only able to execute _after_ starting stimulant medication. Chemistry is the critical node in the tech tree: the todo list, the pomodoro timers, etc., all of that was _unlocked_ by the medication.
 
 And if stimulant side-effects are bad, you can try another stimulant, or another dose. And if you exhaust all of them, you can try alternative ADHD drugs.
@@ -53,6 +55,8 @@ So the timeline is:
 Taking Ritalin with no plan for what you will do today/tomorrow/this week doesn't work. Dually, an ambitious todo list will sit idle if your brain won't let you execute it. So personal growth comes from using _both_ internal and external changes, like a ladder with alternating left-right steps.
 
 ## Memory
+
+_A todo list is a neuroprosthesis that augments long-term memory for tasks._
 
 I use [Todoist] on my desktop and my phone. The pro plan is worth it. I don't really think of it as an app, rather, it's a cognitive prosthesis.
 
@@ -92,6 +96,8 @@ In Todoist, every task is part of a [project] (which really should just be calle
 
 ## Energy
 
+_The difficulty class of the tasks you can perform declines throughout the day._
+
 There are many metaphors for the concept of mental energy. [Spoon theory][spoon], for example. The usual metaphor is that "mental energy" is like a battery that is drained through the day, in greater and lesser quantities, and is replenished by sleep.
 
 To me, energy is less like a battery and more like voltage. Some machines require a threshold voltage to operate. Below that voltage they don't just operate slower, they don't operate at all. Analogously, different categories of activity have different threshold voltages. For me, it's like this:
@@ -115,6 +121,8 @@ And when I run out of energy to read, I clean and go to the gym and do the other
 And when the sun goes down everything starts to unravel: I have zero energy and the lazy dopamine-seeking behaviour comes out. So I take melatonin, and try to be in bed before the instant gratification monkey seizes power.
 
 ## Procrastination
+
+_Typology of procrastination, approaches._
 
 In my ontology there are three types of procrastination:
 
@@ -145,6 +153,8 @@ Talking to people helps: friends, therapists, Claude. This works because thinkin
 One thing to consider is that _thinking in your head_ is inherently circular, because you have a limited working memory, and you will inevitably start going in circles. Writing things down helps here. Treat the decision, or the emotions behind it, like an object of study, or an engineering problem. Sit down and write an essay about it. Name the arguments, number the bullet points, refer back to things. Make the thoughts into real, physical, manipulable entities.
 
 ## Introspection
+
+_Journaling is good for detecting maladaptive patterns and tracking your progress._
 
 I keep a hierarchical journal in [Obsidian]. Hierarchical because I have entries for the days, weeks, months, and years. The directory tree looks like this:
 
@@ -181,6 +191,8 @@ Journaling is a valuable habit. I started doing it for vague reasons: I wasn't s
   There's a paradox with productivity: when you grind executive function enough, things that you used to struggle with become quotidian. And so what was once the ceiling becomes the new floor. You no longer feel proud that you did X, Y, Z because that's just the new normal. It's like the hedonic treadmill. You might feel that you never get to "productive". Journaling helps to combat this because you can see how far you've come.
 
 ## Time
+
+_Manage time at the macro level with calendars, at the micro level with timers._
 
 To manage time, you need a calendar (macro) and a timer (micro).
 
@@ -232,6 +244,8 @@ Stratagems, tricks.
 
 ## Task Selection
 
+_To select the next task, pick either the shortest or the most-procrastinated task._
+
 I don't like the word "prioritize", because it has two subtly different meanings:
 
 - "Weak prioritization" means to sort a list of tasks by some unspecified criterion, that is, to establish an order where some things are prior to another.
@@ -252,6 +266,8 @@ My task-selection algorithm is basically: do the shortest task first, with two e
 
 ## Visual Field Management
 
+_To remember something, put it in your visual field. Dually: to forget, get it out of sight._
+
 Out of sight, out of mind. The corollary: to keep something in mind, put it in your visual field; to keep it out, leave it out.
 
 My desk is very spartan: there's a monitor, a mouse, and a keyboard, and a few trinkets. My desktop is empty. There are no files in it. The dock has only the apps I use frequently. And at a higher level, I try to keep the apartment very clean and orderly. Because everything that's out of place is a distraction, visual noise. That's the negative aspect: the things I remove.
@@ -267,6 +283,8 @@ And so at a glance, I can see:
 3. The list of active projects, so that I don't forget they exist.
 
 ## Project Check-Ins
+
+_Keep in regular contact with long-running projects._
 
 A common failure mode I have is, I will fail to finish a project because I forget I even started it. Or, relatedly: I will let a project drag on and on until enough time has passed that my interests have shifted, the sun has set on it, and it is now a slog to finish.
 
@@ -285,6 +303,8 @@ To manage long-term creative work, keep in regular contact. That doesn't mean wo
 The [pomodoro method](#timers) works here. Set a timer for just 25m to keep in touch with the project.
 
 ## Centralize Your Inboxes
+
+_Bring all tasks, broadly defined, into one todo list._
 
 Life is full of inboxes:
 
@@ -308,6 +328,8 @@ In this way I mostly manage to stay on top of comms.
 
 ## Inbox Zero
 
+_All inboxes should be at zero._
+
 You have probably heard of inbox zero. It sounds like LinkedIn-tier advice. But if you struggle with comms, with replying to people in a timely manner (or at all), inbox zero is a good strategy. There are two reasons, briefly:
 
 - Inbox zero has no false negatives: if an inbox is empty, you know you've handled everything.
@@ -323,6 +345,8 @@ A problem with doing inbox zero is most communication apps (like Discord, Slack,
 
 ## Inbox Bankruptcy
 
+_If an inbox is overwhelmed, archive it in a recoverable way._
+
 By the time I started to become organized I'd already accumulated thousands of bookmarks, unread emails, files in my downloads folder, papers in my physical inbox, etc. It would have been a Herculean effort to file these things away. So I didn't. All the disorganized files, I wrapped them up in a folder and threw them in my `Attic` folder. Emails? Archived. Bookmarks? Exported to HTML, archived the export, and deleted them from the browser.
 
 Ideally you should do this once, at the start.
@@ -330,6 +354,8 @@ Ideally you should do this once, at the start.
 And by archiving things rather than deleting them, you leave open the possibility that as some point in the future, you might be able to action some of those things. Triage the old bookmarks, sort your filesystem, etc.
 
 ## Do It On Your Own Terms
+
+_Bring aversion-causing tasks into an environment that you control._
 
 If you're averse to doing something, for emotional reasons, one way to overcome the aversion is to do it as much as possible on your own terms.
 
@@ -341,6 +367,8 @@ Another example: you have an email you have to reply to, and you're anxious abou
 
 ## Replace Interrupts with Polling
 
+_Turn off notifications, check comms as an explicit task._
+
 "Interrupts" means notifications, which arrive at unpredictable and often inconvenient times. "Polling" means manually checking the source of the notifications for things to action.
 
 The obvious benefit of replacing interrupts with polling is you don't get interrupted by a notification. The less obvious benefit is that when notifications are smeared throughout the day, it is easy for them to fall through the cracks. Something comes in when you're busy, and you swipe it away, and forget about it, and realize days later you forgot to respond to an important message. Polling is focused: you've chosen a block of time, you're committed to going through the notifications systematically. Instead of random islands of interruptions throughout the day, you have a few short, focused blocks of going through your notifications. Often I get an email while I'm on my phone and think, well, I can't reply, typing on mobile is horrible, I'm on a train, etc. Polling usually happens at my desk so I have no excuses: I'm in the right environment and in the right mental state.
@@ -349,6 +377,8 @@ This is so trite. "Put your phone on Do Not Disturb and silence notifications". 
 
 ## Accountability Buddy
 
+_Get someone to sit next to you while you work._
+
 If you're struggling to work on something, work next to another person. Set a timer and tell them what you're going to accomplish and when the timer ends tell them how you did. Just being around other people can make it easier to overcome aversion. This is why coworking spaces are useful.
 
 If you don't have a person around, you might try [Focusmate]. It works for [some people][parker].
@@ -356,6 +386,8 @@ If you don't have a person around, you might try [Focusmate]. It works for [some
 Sometimes I'll start a conversation with Claude, lay out my plans for the day, and update Claude as I do things. If I'm stuck, or if I need help overcoming procrastination, I can ask Claude for help, and it's easier to do that in an on-going thread because Claude already has the necessary context, so I don't have to describe what I'm struggling with _ab initio_.
 
 ## Plan First, Do Later
+
+_Separate planning from action, so if you get distracted while acting, you can return to the plans._
 
 Separating planning from doing can be useful. Firstly because planning/doing require different kinds of mental energy. When you're too tired to do, you can often still plan. Secondly because by separating them you can look back and see how useful the plan was, how much you stuck to it, and then get better at planning.
 
@@ -375,6 +407,8 @@ A practical example is something I call the apartment survey. When I clean the a
 
 ## Derailment
 
+_Introspect to find the things that ruin your productivity and avoid them._
+
 Through [introspection](#introspection) you can discover the behaviours that derail your productivity.
 
 Lifting in the morning derails the day. Cardio is fine, but if I lift weights in the morning, the rest of the day I'm running on -40 IQ points. The most cognitively demanding thing I can do is wash the dishes. I'm not sure what the physiology is: maybe it's exhaustion of the glycogen stores, or fatigue byproducts floating around in my brain, or the CNS is busy rewiring the motor cortex. The point is that I try to do the cognitively-demanding things in the morning and lift in the evening.
@@ -387,6 +421,8 @@ So, to be productive I have to not move too much, and be in silence, and not hav
 
 ## Using OCD to Defeat ADHD
 
+_If being organized makes you feel good, spend more on organizing your productivity system._
+
 In a sense, having a really complex productivity system is like trying to use OCD to defeat ADHD, to use high neuroticism to defeat low conscientiousness. There's an element of truth to that, sure (see mastery of drudgery).
 
 But here's the thing: you have to play to your strengths. You have to. If you are very OCD and you like order and systems and planning but you struggle with doing, then, yeah, it might work, for you, to spend more energy on the trappings of productivity (ensuring your todo list is properly formatted, organized, etc.) if that bleeds over into making it easier to do the real, meaningful things.
@@ -394,6 +430,8 @@ But here's the thing: you have to play to your strengths. You have to. If you ar
 For example: I like emojis in my todo list. The chores have a 🧼 emoji, the comms tasks have an ✉️ emoji. That kind of thing. Makes it easy to see at a glance what kind of things I have to do, to group them by category. But Todoist doesn't support emoji icons on tasks, unlike Notion, so adding the emojis takes a bit more effort: I have to open [Raycast] and search for the emoji I want and paste it into the task title. It adds a little friction each time I create a task, but the benefit is I enjoy using the todo list more.
 
 ## The Master of Drudgery
+
+_Avoid spending too much productive time on worthless chores._
 
 A productivity antipattern: indulging too much in "quick wins".
 
@@ -405,11 +443,15 @@ I don't have advice specifically on avoiding this. But you should notice if you'
 
 ## Thrashing
 
+_Don't let procrastiation on one task derail everything else._
+
 A bad failure mode I have is: I have a task _T_ that I have to do, but I can't, because of some kind of aversion. But when I try to work on other things, the alarms are going off in my head, telling me to work on _T_ because you've been putting this off for so long and life is finite and the years are short and all that. The end result is that because one thing is blocked, everything grinds to a halt. It's a very annoying state to be in.
 
 And I don't have a perfect solution, but I try to manage it but applying a sense of proportionality, "render unto Caesar" etc. You can't ignore _T_ forever, dually, you probably won't solve it in the next ten minutes. But you can timebox _T_: allocate some block of time every day to try to advance it, or at least to work around it, e.g. to ask a friend for help, for example. And the rest of the day you can dedicate to moving other things forward.
 
 ## Put Travel in the Calendar
+
+_Calculate travel time ahead of time to avoid being late._
 
 I am chronically late. So if I have a calendar event like a party at someone's home, I will go on Google Maps and measure the travel time (from my home or wherever I'm likely to be) to the destination, and make a time block for that. e.g., if it takes 30m to go to the dentist and back, this is what my calendar looks like:
 
@@ -418,6 +460,8 @@ I am chronically late. So if I have a calendar event like a party at someone's h
 This ensures I leave my home on time. If it's something especially important I often add 15m to the travel block as a buffer.
 
 ## Choice of Tools
+
+_Use tools that are effective and you like._
 
 What productivity app should I use? Reminders? Linear? Todoist? A bullet journal?
 
