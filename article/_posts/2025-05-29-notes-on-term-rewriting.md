@@ -1005,3 +1005,21 @@ The forward direction (termination implies the existence of a monotone mapping):
 **Formal Proof:**
 
 TODO
+
+## Lexicographic Order
+
+Given two strict orders $(A, R_A)$ and $(B, R_B)$, the **lexicographic product** $R_{A \times B}$ defined on $A \times B$ is:
+
+$$
+R_{A \times B}((x, y), (x', y')) \iff R_A(x, x') \lor (x = x' \land R_B(y, y'))
+$$
+
+i.e., element-wise greater than.
+
+## Lemma
+
+The lexicographic product of two strict orders is a strict order.
+
+## Lemma
+
+The lexicographic product of two terminating relations is terminating.
