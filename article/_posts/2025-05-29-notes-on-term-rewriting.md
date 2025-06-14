@@ -868,7 +868,7 @@ $$
 
 That is: $a$ rewrites to any natural number (infinitely-branching), and every natural number rewrites to $b$.
 
-## Theorem
+## Theorem: Global Finitude Criterion {#gfc}
 
 A finitely branching and terminating relation is globally finite. Or,
 
@@ -996,3 +996,12 @@ $$
 $$
 
 **Informal Proof:**
+
+The backward direction is true because if there is a monotone mapping, then $R$ terminates.
+This is intuitively true but maybe should be lifted into its own result.
+
+The forward direction (termination implies the existence of a monotone mapping): let $\varphi(x)$ be the number of successors of $x$. By the [global finitude criterion](#gfc), $R$ is globally finite, therefore, $\varphi(x)$ is finite, and $x \to x'$ implies that $x'$ has strictly fewer successors than $x$. That means $\varphi(x) \gt \varphi(x')$, and so the mapping is monotone.
+
+**Formal Proof:**
+
+TODO
