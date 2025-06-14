@@ -987,7 +987,7 @@ Another choice is the number of letters. For each $a \in \Sigma$ define $\varphi
 
 ## Lemma
 
-A finitely-branching rewrite system $(A,B)$ terminates iff there is a monotone embedding into $(\N, \gt)$. More formally:
+A finitely-branching rewrite system $(A,R)$ terminates iff there is a monotone embedding into $(\N, \gt)$. More formally:
 
 $$
 \text{FB}(R) \implies \left(
