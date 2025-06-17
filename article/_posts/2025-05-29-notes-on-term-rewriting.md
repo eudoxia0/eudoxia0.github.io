@@ -1042,4 +1042,12 @@ $$
 \left( \text{Terminating}(R) \land \text{LC}(R) \right) \implies \text{Confluent}(R)
 $$
 
+**Informal Proof:**
+
+TODO
+
+**Formal Proof:**
+
+TODO
+
 ## Proving Confluence
