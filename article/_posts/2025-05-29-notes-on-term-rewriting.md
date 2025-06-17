@@ -1044,10 +1044,25 @@ $$
 
 **Informal Proof:**
 
-TODO
+Since $R$ is terminating, we can use WFI. The induction predicate is the definition of global confluence: $\CA{y}{x}{z} \implies y \join z$. We prove that this holds under the assumption that it holds for all successors of $x$.
 
 **Formal Proof:**
 
-TODO
+$R$ is terminating, is we can use WFI. Define the induction predicate as follows:
+
+$$
+P(x) = \forall y, z . \CA{y}{x}{z} \implies y \join z
+$$
+
+Assume that $P(t)$ holds for all $t$ such that $x \pluspath t$. That is: if $t$ is a successor of $x$, then the successors of $t$ have a join.
+
+Now consider an arbitrary chain $\CA{y}{x}{y}$. Let's do case analysis:
+
+1. $x = y,    x = z$: the trivial chain, $x = x \join x$ and so $P(x)$ holds.
+2. $x = y,    x \neq z$: the chain $x \starpath z$, $P(x)$ holds since $z = x \join z$.
+3. $x \neq y, x = z$: the chain $y \stackrel{*}{\leftarrow} x$, $P(x)$ holds analogously.
+4. $x \neq y, x \neq z$: here we have $y \stackrel{*}{\leftarrow} y_1 \leftarrow x \rightarrow z_1 \starpath z$. By the local confluence assumption, $\exists u . u = y_1 \join z_1$. By assumption, we know $P(y_1)$ holds, that is, there exists a $v = y \join u$. Analogously, there exists a $w = v \join z$. Therefore, $P(x)$ holds.
+
+By WFI, $P(x)$ holds universally.
 
 ## Proving Confluence
