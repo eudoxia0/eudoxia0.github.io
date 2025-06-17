@@ -1063,6 +1063,10 @@ Now consider an arbitrary chain $\CA{y}{x}{y}$. Let's do case analysis:
 3. $x \neq y, x = z$: the chain $y \stackrel{*}{\leftarrow} x$, $P(x)$ holds analogously.
 4. $x \neq y, x \neq z$: here we have $y \stackrel{*}{\leftarrow} y_1 \leftarrow x \rightarrow z_1 \starpath z$. By the local confluence assumption, $\exists u . u = y_1 \join z_1$. By assumption, we know $P(y_1)$ holds, that is, there exists a $v = y \join u$. Analogously, there exists a $w = v \join z$. Therefore, $P(x)$ holds.
 
+Graphically:
+
+![](/assets/content/notes-on-term-rewriting/newman.png)
+
 By WFI, $P(x)$ holds universally.
 
 ## Proving Confluence
