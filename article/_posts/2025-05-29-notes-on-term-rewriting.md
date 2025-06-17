@@ -1023,3 +1023,23 @@ The lexicographic product of two strict orders is a strict order.
 ## Lemma
 
 The lexicographic product of two terminating relations is terminating.
+
+## Local Confluence
+
+A relation $R$ is **locally confluent** iff:
+
+$$
+y_1 \leftarrow x \rightarrow y_2 \implies y_1 \join y_2
+$$
+
+Local confluence is strictly weaker than confluence: that is, a relation can be locally confluent while not being confluent.
+
+## Newman's Lemma
+
+A terminating relation is confluent if it is locally confluent. Formally:
+
+$$
+\left( \text{Terminating}(R) \land \text{LC}(R) \right) \implies \text{Confluent}(R)
+$$
+
+## Proving Confluence
