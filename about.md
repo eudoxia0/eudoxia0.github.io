@@ -84,4 +84,22 @@ This website is built with [Emacs][emacs], [Jekyll][jekyll], and
 [jason]: https://en.wikipedia.org/wiki/Jason_and_Medea_(painting)
 [mermaid]: https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_A_Mermaid.jpg
 
+# 🍵
+
+This website is part of the [matcha monday webring][mmw].
+
+- Previous: <span id="prev"><i>Loading...</i></span>
+- Next: <span id="next"><i>Loading...</i></span>
+
+<script type="module">
+  import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
+  const neighbors = getRingNeighbors("https://borretti.me");
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  prev.innerHTML = `<a href="${neighbors.previous.url}">${neighbors.previous.name}</a>`
+  next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name}</a>`
+</script>
+
+[mmw]: https://www.matchamonday.net/
+
 </article>
