@@ -93,7 +93,7 @@ This website is part of the [matcha monday webring][mmw].
 
 <script type="module">
   import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
-  const neighbors = getRingNeighbors("https://borretti.me");
+  const neighbors = getRingNeighbors("https://borretti.me/about");
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
   prev.innerHTML = `<a href="${neighbors.previous.url}">${neighbors.previous.name}</a>`
