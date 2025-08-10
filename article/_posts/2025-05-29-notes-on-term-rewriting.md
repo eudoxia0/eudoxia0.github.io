@@ -1099,4 +1099,8 @@ $$
 
 By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence.
 
+TODO
+
 **Formal Proof:**
+
+TODO idk fam idk
