@@ -475,7 +475,7 @@ $$
 
 The proof that confluence implies the CR property is harder. To make is simpler, we introduce an intermediate definition.
 
-A relation is **semi-confluent** iff $x \to y$ and $x \pluspath y_2$ implies $y_1 \join y_2$. More formally:
+A relation is **semi-confluent** iff $x \to y$ and $x \starpath y_2$ implies $y_1 \join y_2$. More formally:
 
 $$
 \text{Semiconfluent}(R) \iff \left(
@@ -1092,11 +1092,11 @@ Note that $y_1$ must be swappable WLOG. That is, if we have $b \leftarrow a \rig
 Any strongly confluent relation is confluent.
 
 $$
-\text{SC}(R) \implies \text{Confluent}(R)
+\text{StronglyConfluent}(R) \implies \text{Confluent}(R)
 $$
 
 **Informal Proof:**
 
-
+By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence.
 
 **Formal Proof:**
