@@ -1024,6 +1024,10 @@ The lexicographic product of two strict orders is a strict order.
 
 The lexicographic product of two terminating relations is terminating.
 
+# Proving Confluence
+
+Is hard, and so we do it step by step.
+
 ## Local Confluence
 
 A relation $R$ is **locally confluent** iff:
@@ -1069,4 +1073,30 @@ Graphically:
 
 By WFI, $P(x)$ holds universally.
 
-## Proving Confluence
+## Strong Confluence
+
+A relation is **strongly confluent** iff:
+
+$$
+y_1 \leftarrow x \rightarrow y_2 \implies \exists z . y_1 \starpath z \stackrel{=}{\leftarrow} y_2
+$$
+
+(Note: $\stackrel{=}{\leftarrow}$ is [reflexive closure](#reflexive-closure).)
+
+Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$.
+
+Note that $y_1$ must be swappable WLOG. That is, if we have $b \leftarrow a \rightarrow c$ and the relation is strongly confluent, we must have both $\exists z_1 . b \starpath z_1 \stackrel{=}{\leftarrow} c$ and $\exists z_2 . c \starpath z_2 \stackrel{=}{\leftarrow} b$.
+
+## Lemma
+
+Any strongly confluent relation is confluent.
+
+$$
+\text{SC}(R) \implies \text{Confluent}(R)
+$$
+
+**Informal Proof:**
+
+
+
+**Formal Proof:**
