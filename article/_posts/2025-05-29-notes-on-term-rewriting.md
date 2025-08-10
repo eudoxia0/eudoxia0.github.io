@@ -595,7 +595,7 @@ $$
 \EndKB
 $$
 
-By the se2miconfluent chain extension lemma, we can derive $x \join y'$.
+By the semiconfluent chain extension lemma, we can derive $x \join y'$.
 
 We have proven the inductive case:
 
