@@ -1083,7 +1083,11 @@ $$
 
 (Note: $\stackrel{=}{\leftarrow}$ is [reflexive closure](#reflexive-closure).)
 
-Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$.
+Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$. That is: $z = y_1 \join y_2$.
+
+Visually, strong confluence turns triangles into squares:
+
+![](/assets/content/notes-on-term-rewriting/strong.png)
 
 Note that $y_1$ must be swappable WLOG. That is, if we have $b \leftarrow a \rightarrow c$ and the relation is strongly confluent, we must have both $\exists z_1 . b \starpath z_1 \stackrel{=}{\leftarrow} c$ and $\exists z_2 . c \starpath z_2 \stackrel{=}{\leftarrow} b$.
 
@@ -1098,9 +1102,6 @@ $$
 **Informal Proof:**
 
 By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence.
-
-TODO
-
 **Formal Proof:**
 
 TODO idk fam idk
