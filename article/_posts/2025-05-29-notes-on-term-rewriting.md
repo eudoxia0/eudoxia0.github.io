@@ -1101,14 +1101,14 @@ $$
 
 **Informal Proof:**
 
-By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence.
+By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence. Starting from strong confluence and doing induction on a chain we can prove semiconfluence.
 
 **Formal Proof:**
 
 Assume $R$ is strongly confluent, that is:
 
 $$
-y_1 \leftarrow x \rightarrow y_2 \implies \exists z . y_1 \starpath z \stackrel{=}{\leftarrow} y_2
+y_1 \leftarrow x \rightarrow y_2 \implies \exists z . y_1 \stackrel{*}{\leftarrow} z \stackrel{=}{\leftarrow} y_2
 $$
 
 And assume there exists a chain:
@@ -1133,14 +1133,18 @@ $$
 y \leftarrow x \rightarrow y_1
 $$
 
-By strong confluence, there exists a $z_1$ such that $y \starpath z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$. Therefore: $z_1 = y \join y_1$.
+By strong confluence, there exists a $z_1$ such that $y \stackrel{*}{\rightarrow} z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$. Therefore: $z_1 = y \join y_1$.
 
-For $n=2$, we have:
+For $n = k + 1$ and $k \geq 0$, we have:
 
 $$
-y \leftarrow x \rightarrow y_1 \rightarrow y_2
+y \leftarrow x \rightarrow y_1 \rightarrow \ldots \rightarrow y_k \rightarrow y_{k+1}
 $$
 
-We also know $y \starpath z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$.
+And our induction hypothesis is:
 
-And so we have $y_2 \leftarrow y_1 \starpath z_1$ and by semiconfluence there exists $z_2 = y_2 \join z_1$. And so on.
+$$
+y \stackrel{*}{\rightarrow} z_{k} \stackrel{=}{\leftarrow} y_k
+$$
+
+By strong confluence: $\exists z_{k+1} . y \stackrel{*}{\rightarrow} z_{k+1} \stackrel{=}{\leftarrow} y_{k+1}$. And, therefore: $z_{k+1} = y \join y_{k+1}$.
