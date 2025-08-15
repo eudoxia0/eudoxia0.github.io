@@ -1083,7 +1083,7 @@ $$
 
 (Note: $\stackrel{=}{\leftarrow}$ is [reflexive closure](#reflexive-closure).)
 
-Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$. That is: $z = y_1 \join y_2$.
+Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$. This implies: $z = y_1 \join y_2$.
 
 Visually, strong confluence turns triangles into squares:
 
@@ -1102,6 +1102,45 @@ $$
 **Informal Proof:**
 
 By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence.
+
 **Formal Proof:**
 
-TODO idk fam idk
+Assume $R$ is strongly confluent, that is:
+
+$$
+y_1 \leftarrow x \rightarrow y_2 \implies \exists z . y_1 \starpath z \stackrel{=}{\leftarrow} y_2
+$$
+
+And assume there exists a chain:
+
+$$
+y \leftarrow x \stackrel{n}{\rightarrow} y_n
+$$
+
+We need to prove that $y \join y_n$. We do this by induction on the length $n$ of the right side of the chain.
+
+For $n=0$, start with the chain
+
+$$
+y \leftarrow x
+$$
+
+where $x = y_0$. Trivially $y = y \join x$.
+
+For $n=1$ we have:
+
+$$
+y \leftarrow x \rightarrow y_1
+$$
+
+By strong confluence, there exists a $z_1$ such that $y \starpath z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$. Therefore: $z_1 = y \join y_1$.
+
+For $n=2$, we have:
+
+$$
+y \leftarrow x \rightarrow y_1 \rightarrow y_2
+$$
+
+We also know $y \starpath z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$.
+
+And so we have $y_2 \leftarrow y_1 \starpath z_1$ and by semiconfluence there exists $z_2 = y_2 \join z_1$. And so on.
