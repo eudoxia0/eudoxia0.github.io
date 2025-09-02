@@ -60,6 +60,14 @@ This is a repository for my [projects][port], [blog][blog], and
 1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
 1. [Signed Integers are Asymmetrical](/article/signed-integers-asymmetrical)
 
+# Podcasts
+
+Podcasts I have been on:
+
+1. [The Stewart Mackenzie Indaba #31 Fernando Borretti](https://www.youtube.com/watch?v=qMjxZHZkPIM)
+2. [Fernando Borretti: How to Balance Coding, Writing, and Creativity | Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
+3. [Func Prog Podcast Episode 6 - Fernando Borretti](https://www.youtube.com/watch?v=QcBaJBAQfQo)
+
 # Colophon
 
 This website is built with [Emacs][emacs], [Jekyll][jekyll], and
