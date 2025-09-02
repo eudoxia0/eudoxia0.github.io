@@ -64,9 +64,9 @@ This is a repository for my [projects][port], [blog][blog], and
 
 Podcasts I have been on:
 
-1. [The Stewart Mackenzie Indaba #31 Fernando Borretti](https://www.youtube.com/watch?v=qMjxZHZkPIM)
-2. [Fernando Borretti: How to Balance Coding, Writing, and Creativity | Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
-3. [Func Prog Podcast Episode 6 - Fernando Borretti](https://www.youtube.com/watch?v=QcBaJBAQfQo)
+1. [The Stewart Mackenzie Indaba #31](https://www.youtube.com/watch?v=qMjxZHZkPIM)
+2. [Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
+3. [Func Prog Podcast #6](https://www.youtube.com/watch?v=QcBaJBAQfQo)
 
 # Colophon
 
