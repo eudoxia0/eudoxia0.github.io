@@ -16,6 +16,8 @@ $$
 \gdef\FFFact#1#2{\tag{#1} &\qquad\qquad #2 \\}
 \gdef\FFFFact#1#2{\tag{#1} &\qquad\qquad\qquad #2 \\}
 \gdef\CA#1#2#3{#1 \stackrel{*}{\leftarrow} #2 \stackrel{*}{\rightarrow} #3}
+\gdef\pos{ \mathcal{Pos} }
+\gdef\subterm#1#2{ #1 \vert_{#2} }
 $$
 
 Human language can be expressed with [formal grammars][gram], which are just term rewriting systems. Parsing is term rewriting in reverse: finding derivation trees that create a given sentence. In [equational logic][eqlog], most of a proof is just applying rewrite rules. Lambda calculus evaluation can be expressed using term rewriting. According to Stephen Wolfram, [the universe is a graph rewriting system][wolfram].
@@ -1148,3 +1150,147 @@ y \stackrel{*}{\rightarrow} z_{k} \stackrel{=}{\leftarrow} y_k
 $$
 
 By strong confluence: $\exists z_{k+1} . y \stackrel{*}{\rightarrow} z_{k+1} \stackrel{=}{\leftarrow} y_{k+1}$. And, therefore: $z_{k+1} = y \join y_{k+1}$.
+
+## The Diamond Property
+
+A relation $R$ has the **diamond property** iff
+
+$$
+y_1 \leftarrow x \rightarrow y_2 \implies \exists z . y_1 \rightarrow z \leftarrow y_2
+$$
+
+## Commutation
+
+Let $\to_1$ and $\to_2$ be two relations. Then we say that they **commute** iff:
+
+$$
+y_1 \stackrel{*}{\leftarrow_1} x \stackrel{*}{\rightarrow_2} y_2 \implies \exists z . y_1 \stackrel{*}{\rightarrow_2} z \stackrel{*}{\leftarrow_1} y_2
+$$
+
+They they **strongly commute** iff:
+
+$$
+y_1 \leftarrow_1 x \rightarrow_2 y_2 \implies \exists z . y_1 \stackrel{=}{\rightarrow_2} z \stackrel{*}{\leftarrow_1} y_2
+$$
+
+And that they have the **commuting diamond property** iff:
+
+$$
+y_1 \leftarrow_1 x \rightarrow_2 y_2 \implies \exists z . y_1 \rightarrow_2 z \leftarrow_1 y_2
+$$
+
+Commutation is a generalization of confluence: confluence concerns one relation, commutation two. Note that a relation $\to$ is confluent if $\to$ and $\to$ commute.
+
+## The Commutative Union Lemma
+
+The utility of commutation is we can apply divide-and-conquer to confluence proofs by dividing a relation into a set of commuting relations, and proving each one confluent. This is enabled by the commutative union lemma, which says:
+
+If $R$ and $R'$ are confluent and commute, then $R \cup R'$ is confluent.
+
+**Proof:**
+
+`sorry`
+
+## The Commutation Lemma
+
+Two strongly commuting reductions commute. Formally:
+
+$$
+\text{StrongCommute}(R) \land \text{StrongCommute}(R') \implies \text{Commute}(R, R')
+$$
+
+Proof:
+
+`sorry`
+
+# Universal Algebra
+
+## Signatures
+
+A **signature** $\Sigma$ is a set of **function symbols** to and a mapping $\Sigma \to \N$ that associates each symbol with an **arity**. For $n \in \N$, $\Sigma^{(n)} \subseteq \Sigma$ is the set of $n$-ary symbols. The members of $\Sigma^{(0)}$ are called **constant symbols**.
+
+## Terms
+
+Let $\Sigma$ be a signature, and $X$ a set of **variables**, such that $\Sigma \cap X = \empty$.
+
+The set of **$\Sigma$-terms over $X$**, denoted $T(\Sigma, X)$, is defined inductively by:
+
+- $\forall x \in X . x \in T(\Sigma, X)$ (every variable is a term)
+- $\forall n \in \N, f \in \Sigma^{(n)}, t_1, \dots, t_n \in T(\Sigma, X) . f(t_1, \dots, t_n) \in T(\Sigma, X)$ (applying an $n$n-ary function to $n$ terms yields a term)
+
+## Positions
+
+A **position** is a vector of natural numbers.
+
+Let $t \in T(\Sigma, X)$. The set of positions of $t$, denoted $\mathcal{Pos}(t)$, is defined by:
+
+$$
+\mathcal{Pos}(t) =
+\begin{cases}
+
+\set{()} & t \in X \\
+
+\set{()} \bigcup\limits_{i=1}^n \set{ i :: p \mid p \in \mathcal{Pos}(t_1) }  & t = f(t_1, \dots, t_n) \\
+
+\end{cases}
+$$
+
+Where $::$ is consing, i.e., a function $\N \times \N^n \to \N^{n+1}$ that prepends an element to a vector.
+
+The **size** of a term $t$, denoted $\vert t \vert$, is the cardinality of $\mathcal{Pos}(t)$.
+
+For a term $f(x, g(y))$, the set of positions is:
+
+$$
+\set{(), (1), (2), (2, 1)}
+$$
+
+## Subterm at a Position
+
+Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The **subterm of $t$ at position $p$**, denoted $\subterm{t}{p}$, is:
+
+$$
+\subterm{t}{p} = \begin{cases}
+t & p = () \\
+\subterm{t_i}{p'} & t = f(t_1, \dots, t_n), p = i :: p'
+\end{cases}
+$$
+
+For a term $t = f(x, g(y))$, the subterms are:
+
+$$
+\begin{align*}
+\subterm{t}{()}     &= f(x, g(y)) \\
+\subterm{t}{(1)}    &= x \\
+\subterm{t}{(2)}    &= g(y) \\
+\subterm{t}{(2, 1)} &= y \\
+\end{align*}
+$$
+
+## Substitution of a Subterm
+
+Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The term created by replacing the subterm at $p$ by $s$ is denoted $t[s]_p$, and this is defined by:
+
+$$
+t[s]_p \begin{cases}
+s & p = () \\
+f(t_1, \dots, t_i[s]_{p'}, \dots, t_n) & f(t_1, \dots, t_i, \dots, t_n), p = i :: p' \\
+\end{cases}
+$$
+
+## Variables in a Term
+
+The set of variables in $t$, denoted $\mathcal{Var}(t)$, is defined inductively by:
+
+$$
+\mathcal{Var}(t) = \begin{cases}
+\set{x} & t = x \in X \\
+\bigcup\limits_{i=1}^n \mathcal{Var}(t_i) & t = f(t_1, \dots, t_n)
+\end{cases}
+$$
+
+## Ground Terms
+
+A term $t$ is called **ground** iff $\mathcal{Var}(t) = \empty$.
+
+The set of ground terms over $\Sigma$ is denoted $T(\Sigma)$.
