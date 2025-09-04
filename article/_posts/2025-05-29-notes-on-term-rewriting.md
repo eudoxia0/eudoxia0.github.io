@@ -1294,3 +1294,102 @@ $$
 A term $t$ is called **ground** iff $\mathcal{Var}(t) = \empty$.
 
 The set of ground terms over $\Sigma$ is denoted $T(\Sigma)$.
+
+## Variable Substitution
+
+Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A **substitution** is a function $\sigma : V \to T(\Sigma, V)$ where, for finitely many variables $x \in V$, we have $\sigma(x) \neq x$.
+
+$\mathcal{Dom}(\sigma)$, called the **domain** of $\sigma$, is the set $\set{x \in V \mid \sigma(x) \neq x}$.
+
+$\mathcal{Ran}(\sigma)$, called the **range** of $\sigma$, is the set $\set{\sigma(x) \mid x \in \mathcal{Dom}(\sigma)}$.
+
+If $x \in \mathcal{Dom}(\sigma)$, we say $\sigma$ **instantiates** $x$.
+
+## Term Substitution
+
+A substitution $\sigma : V \to T(\Sigma, V)$ can be trivially **extended** into a function $\hat{\sigma} : TV(\Sigma, V) \to T(\Sigma, V)$ defined by:
+
+$$
+\hat{\sigma}(t) = \begin{cases}
+\sigma(x) & t = x \in V \\
+f(\hat{\sigma}(t_1), \dots, \hat{\sigma}(t_n)) & t = f(t_1, \dots, t_n)
+\end{cases}
+$$
+
+To simplify notation, we often write $\sigma$ where we should technically write $\hat\sigma$.
+
+## Instances
+
+A term $t$ is called an **instance** of another term $s$ iff $\exists \sigma . \sigma(s) = t$.
+
+## Identities
+
+Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A **$\Sigma$-identity** is a pair $(t, s) \in T(\Sigma, V) \times T(\Sigma, V)$, which we denote $s \approx t$.
+
+Identities can be interpreted as in algebra: as asserting the equality of two expressions.
+
+## The Reduction Relation
+
+Let $E$ be a set of $\Sigma$ identities. The **reduction relation** $R_E \subseteq T(\Sigma, V) \times T(\Sigma, V)$ is:
+
+$$
+R_E(a, b) \iff \exists (l, r) \in E, p \in \pos(s), \sigma \in \mathcal{Sub}(\Sigma, V) . \subterm{a}{p} = \sigma(l) \land b = a[\sigma(r)]_p
+$$
+
+In other words: $R_E(a,b)$ means there's a pair $(l, r)$ and a substitution by which the subterm of $a$ at $p$ can be matched with $l$, and, replacing that subterm with $\sigma(r)$ makes the resulting term equal to $b$.
+
+## Closure and Compatibility
+
+Let $R$ be a binary relation on $T(\Sigma, V)$.
+
+$R$ is **closed under substitutions** iff:
+
+$$
+R(a,b) \implies R(\sigma(a), \sigma(b))
+$$
+
+In other words: any consistent substitution of variables to terms preserves the relation.
+
+$R$ is **closed under $\Sigma$ operations** iff:
+
+$$
+R(a_1, b_1) \land \dots \land R(a_n, b_n) \implies R(f(a_1, \dots, a_n), f(b_1, \dots, b_n))
+$$
+
+In other words: terms built up from related arguments, in the right order and arity, are related.
+
+$R$ is **compatible with $\Sigma$ operations** iff:
+
+$$
+R(a,b)
+\implies
+R(f(t_1, \dots, a, \dots t_n), f(t_1, \dots, b, \dots t_n))
+$$
+
+$R$ is **compatible with $\Sigma$ contexts** iff:
+
+$$
+R(a, b) \implies R(t[a]_p, t[b]_p)
+$$
+
+For any $t \in T(\Sigma, V)$ and $p \in \pos(t)$.
+
+## Lemma
+
+Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is closed under substitutions.
+
+**Proof:**
+
+`sorry`
+
+## Lemma
+
+Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is compatible with $\Sigma$ operations.
+
+**Proof:**
+
+`sorry`
+
+## Remark
+
+$R_E$ need not be closed under $\Sigma$ operations, since reduction takes place at a single position.
