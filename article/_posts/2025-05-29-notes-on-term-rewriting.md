@@ -18,6 +18,7 @@ $$
 \gdef\CA#1#2#3{#1 \stackrel{*}{\leftarrow} #2 \stackrel{*}{\rightarrow} #3}
 \gdef\pos{ \mathcal{Pos} }
 \gdef\subterm#1#2{ #1 \vert_{#2} }
+\gdef\p#1{ \left( #1 \right) }
 $$
 
 Human language can be expressed with [formal grammars][gram], which are just term rewriting systems. Parsing is term rewriting in reverse: finding derivation trees that create a given sentence. In [equational logic][eqlog], most of a proof is just applying rewrite rules. Lambda calculus evaluation can be expressed using term rewriting. According to Stephen Wolfram, [the universe is a graph rewriting system][wolfram].
@@ -1307,7 +1308,7 @@ If $x \in \mathcal{Dom}(\sigma)$, we say $\sigma$ **instantiates** $x$.
 
 ## Term Substitution
 
-A substitution $\sigma : V \to T(\Sigma, V)$ can be trivially **extended** into a function $\hat{\sigma} : TV(\Sigma, V) \to T(\Sigma, V)$ defined by:
+A substitution $\sigma : V \to T(\Sigma, V)$ can be trivially **extended** into a function $\hat{\sigma} : T(\Sigma, V) \to T(\Sigma, V)$ defined by:
 
 $$
 \hat{\sigma}(t) = \begin{cases}
@@ -1333,7 +1334,7 @@ Identities can be interpreted as in algebra: as asserting the equality of two ex
 Let $E$ be a set of $\Sigma$ identities. The **reduction relation** $R_E \subseteq T(\Sigma, V) \times T(\Sigma, V)$ is:
 
 $$
-R_E(a, b) \iff \exists (l, r) \in E, p \in \pos(s), \sigma \in \mathcal{Sub}(\Sigma, V) . \subterm{a}{p} = \sigma(l) \land b = a[\sigma(r)]_p
+R_E(a, b) \iff \exists (l, r) \in E, p \in \pos(a), \sigma \in \mathcal{Sub}(\Sigma, V) . \subterm{a}{p} = \sigma(l) \land b = a[\sigma(r)]_p
 $$
 
 In other words: $R_E(a,b)$ means there's a pair $(l, r)$ and a substitution by which the subterm of $a$ at $p$ can be matched with $l$, and, replacing that subterm with $\sigma(r)$ makes the resulting term equal to $b$.
@@ -1366,13 +1367,27 @@ R(a,b)
 R(f(t_1, \dots, a, \dots t_n), f(t_1, \dots, b, \dots t_n))
 $$
 
+In other words: $a \to b$ means any term with $a$ as an immediate subterm is related to that term where $a$ has been replaced with $b$.
+
 $R$ is **compatible with $\Sigma$ contexts** iff:
 
 $$
 R(a, b) \implies R(t[a]_p, t[b]_p)
 $$
 
-For any $t \in T(\Sigma, V)$ and $p \in \pos(t)$.
+For any $t \in T(\Sigma, V)$ and $p \in \pos(t)$. In other words: any term that contains $a$ is related to itself where $a$ has been replaced with $b$ at a given position $p$.
+
+## Lemma
+
+Let $t \in T(\Sigma, X)$, $p \in \pos(t)$, and $\sigma \in \mathcal{Sub}(\Sigma, X)$. Then:
+
+$$
+\sigma(\subterm{t}{p}) = \subterm{\sigma(t)}{p}
+$$
+
+**Proof:**
+
+Trivial. Since $\sigma$ can only replace variables, any $p$ in $\pos(t)$ must also be in $\pos(\sigma(t))$: positions can only ever be added by a substitution.
 
 ## Lemma
 
@@ -1380,7 +1395,57 @@ Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is closed 
 
 **Proof:**
 
-`sorry`
+Assume $R_E(a, b)$. By the definition of $R_E$, there exists an $(l, r) \in E$, a $p \in \pos(s)$, and a $\sigma \in \mathcal{Sub}(\Sigma, V)$ such that:
+
+$$
+\subterm{a}{p} = \sigma(l)
+$$
+
+And:
+
+$$
+b = a[\sigma(r)]_p
+$$
+
+Let $\sigma'$ be any substitution. We want to prove $R(\sigma'(a), \sigma'(b))$.
+
+Let $s(t) = \sigma'(\sigma(t))$. Then apply $\sigma'$ to both sides of $\subterm{a}{p} = \sigma(l)$:
+
+$$
+\sigma'(\subterm{a}{p}) = \sigma'(\sigma(l))
+$$
+
+By the previous lemma:
+
+$$
+\subterm{\sigma'(a)}{p} = \sigma'(\sigma(l))
+$$
+
+Rewriting using the definition of $s$:
+
+$$
+\subterm{\sigma'(a)}{p} = s(l)
+$$
+
+Analogously, applying $\sigma'$ to both sides of $b = a[\sigma(r)]_p$:
+
+$$
+\sigma'(b) = \sigma'(a[\sigma(r)]_p)
+$$
+
+Clearly, $\sigma(a[b]_p) = \sigma(a)[\sigma(b)]_p$, and so:
+
+$$
+\sigma'(b) = \sigma'(a)[\sigma'(\sigma(r))]_p
+$$
+
+Rewriting using the definition of $s$:
+
+$$
+\sigma'(b) = \sigma'(a)[s(r)]_p
+$$
+
+This proves $R(\sigma'(a), \sigma'(b))$.
 
 ## Lemma
 
@@ -1393,3 +1458,23 @@ Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is compati
 ## Remark
 
 $R_E$ need not be closed under $\Sigma$ operations, since reduction takes place at a single position.
+
+Example: consider $E = \set{a \approx 1, b \approx 2}$. Clearly, $f(a, b) \to_E f(1, b)$ and $f(a,b) \to_E f(a, 2)$, but since we can't substitute in multiple places at once, we can't assert $f(a,b) \to_E f(1,2)$.
+
+## Lemma
+
+Let $R$ be a binary relation on $T(\Sigma, V)$. Then $R$ is compatible with $\Sigma$ operations iff it is compatible with $\Sigma$ contexts.
+
+**Proof:**
+
+`sorry`
+
+## Lemma
+
+Let $R$ be a binary relation on $T(\Sigma, V)$. If $R$ is reflexive and transitive, then it is compatible with $\Sigma$ operations iff it is closed under $\Sigma$ operations. More formally:
+
+$$
+\p{ \text{Refl}(R) \land \text{Trans}(R) }
+\implies
+\p{ \text{CWO}(R) \iff \text{CUO}(R) }
+$$
