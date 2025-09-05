@@ -1,0 +1,18 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+\node (x)  at (0,  0)  {$x$};
+\node (y1) at (-1, -1) {$y_1$};
+\node (y2) at (1,  -1) {$y_2$};
+\node (z)  at (0,  -2) {$z$};
+
+
+\draw[->] (x) -- (y1);
+\draw[->] (x) -- (y2);
+\draw[->] (y1) -- node[above right] {*} (z);
+\draw[->] (y2) -- node[above left] {=} (z);
+
+\end{tikzpicture}
+\end{document}
