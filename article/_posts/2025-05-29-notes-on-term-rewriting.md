@@ -1393,6 +1393,10 @@ Trivial. Since $\sigma$ can only replace variables, any $p$ in $\pos(t)$ must al
 
 Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is closed under substitutions.
 
+**Informal Proof:**
+
+$R(a,b)$ means we have a $\sigma$ to make $\sigma(l) = \subterm{a}{p}$, and $a[\sigma(r)]_p = b$. To prove closure under substitution, we need to prove $R(\sigma'(a), \sigma'(b))$ for some arbitrary substitution $\sigma'$, that is, we need to find an $s$ such that $\subterm{\sigma'(a)}{p} = s(l)$ and $\sigma'(b) = \sigma'(a)[s(r)]_p$. Just let $s(t) = \sigma'(\sigma(t))$.
+
 **Proof:**
 
 Assume $R_E(a, b)$. By the definition of $R_E$, there exists an $(l, r) \in E$, a $p \in \pos(s)$, and a $\sigma \in \mathcal{Sub}(\Sigma, V)$ such that:
@@ -1478,3 +1482,15 @@ $$
 \implies
 \p{ \text{CWO}(R) \iff \text{CUO}(R) }
 $$
+
+**Proof:**
+
+`sorry`
+
+## Theorem
+
+Let $E$ be a set of $\Sigma$ identities. The relation $\stackrel{*}{\leftrightarrow}_E$ is the smallest equivalence relation on $T(\Sigma, V)$ that contains $E$ and is closed under substitution and $\Sigma$-operations.
+
+**Proof:**
+
+`sorry`
