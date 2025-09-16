@@ -1634,3 +1634,13 @@ The identity $s \approx t$ is a **semantic consequence** of $E$, denoted $E \mod
 $$
 \forall \mathcal A \in \mathcal V(E) . \mathcal A \models s \approx t
 $$
+
+## Equational Theories
+
+The relation:
+
+$$
+\approx_E = \set{(s,t) \in T(\Sigma, V) \times T(\Sigma, V) \mid E \models s \approx t}
+$$
+
+is called the **equational theory** induced by $E$.
