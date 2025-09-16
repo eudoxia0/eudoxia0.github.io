@@ -1611,3 +1611,26 @@ $\mathcal T(\Sigma, X)$ is free with generating set $X$ in the class of all $\Si
 **Proof:**
 
 `sorry`
+
+## Entailment
+
+The $\Sigma$ identity $s \approx t$ **holds** in the $\Sigma$ algebra $\mathcal A$, denoted $A \models s \approx t$) iff $\phi(s) = \phi(t)$ for all homomorphisms $\phi: \mathcal T(\Sigma, V)
+\to \mathcal A$.
+
+Intuitively, an identity holds when all possible assignments of variables to values cause the expression to evaluate to true. The use of a homomorphism above reflects the fact that this replacement can be thought of as a homomorphism from terms to objects in the algebra.
+
+## Models
+
+Let $E$ be a set of $\Sigma$ identities. The $\Sigma$ algebra $\mathcal A$ is a model of $E$, denoted $\mathcal A \models E$ iff every identity in $E$ holds in $\mathcal A$.
+
+## Varieties
+
+The class of all models of $E$ is called the **$\Sigma$-variety** of $E$, and is denoted $\mathcal V(E)$.
+
+## Semantic Consequence
+
+The identity $s \approx t$ is a **semantic consequence** of $E$, denoted $E \models s \approx t$, iff it holds in all models of $E$. That is:
+
+$$
+\forall \mathcal A \in \mathcal V(E) . \mathcal A \models s \approx t
+$$
