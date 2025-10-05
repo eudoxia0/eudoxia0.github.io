@@ -75,7 +75,7 @@ The equivalent in Mochi is this:
 
 This is a lot of typing. And you might object that it's only a few characters longer. But when you're studying from a textbook, or when you're copying words from a vocabulary table, these small frictions add up. If writing flashcards is frustrating, you'll write fewer of them: and that means less knowledge gained. Dually, a system that makes flashcard creation as frictionless as possible means more flashcards, and more knowledge.
 
-Another problem is that Mochi doesn't have an equivalent of Anki's note types. In Anki you can make a note type for chemical elements, with fields like atomic number, symbol, name, etc., and write templates to generate flashcards asking questions like:
+Another problem is that Mochi doesn't have an equivalent of Anki's note types. For example: you can make a note type for chemical elements, with fields like atomic number, symbol, name, etc., and write templates to generate flashcards asking questions like:
 
 - What is the atomic number of [name]?
 - What element has atomic number [number]?
@@ -105,11 +105,11 @@ And so on for other properties. This is good. Automation is good. Less work, mor
     - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
       - they could be improved by seeing things just a bit more often
   - in addition, there's only two buttons, forgot and remembered, which is not precise enough
-  - also, mochi has no equivalent of anki's note types, just templates
 
-# etc
+# Desiderata
 
-- desiderata
+What do I want from a spaced repetition system?
+
   - plain-text
     - enter prompts by writing into texts
       - i came up with this idea because, well, I was doing it myself
