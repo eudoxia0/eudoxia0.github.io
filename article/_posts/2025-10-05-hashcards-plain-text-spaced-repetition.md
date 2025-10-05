@@ -104,7 +104,8 @@ And so on for other properties. This is good. Automation is good. Less work, mor
       - and the user just reaps the benefits
     - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
       - they could be improved by seeing things just a bit more often
-  - in addition, there's only two buttons, forgot and remembered, which is not precise enough
+
+Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is simpler for the user, yes, but most SR scheduling algorithms have more options for a reason: different degrees of recall adjust the card parameters by different magnitudes.
 
 # Desiderata
 
