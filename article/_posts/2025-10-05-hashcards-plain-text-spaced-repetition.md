@@ -39,7 +39,7 @@ C: Speech is [understood] in [Wernicke's] area.
 ```
 
 You write flashcards more or less like you'd write ordinary notes, with
-lightweight markup to denote basic (question/answer) flashcards, and [cloze
+lightweight markup to denote basic (question/answer) flashcards and [cloze
 deletion][cl] flashcards. Then, to study, you run:
 
 ```
