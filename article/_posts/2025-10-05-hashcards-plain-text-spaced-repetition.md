@@ -39,35 +39,23 @@ This opens a web interface on `localhost:8000`, where you can review the flashca
 
 This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a Git repo, track its changes, share it on GitHub with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
 
-Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi. But also, additionally, because my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, is not acceptable. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
+Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi. But also, additionally, because my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, doesn't feel good. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
 
 The rest of this post explains my frustrations with Anki and Mochi, and how I landed on the design decisions for hashcards.
 
 # Anki
 
-- the good
-  - open source
-  - will be around forever
-  - a million plugins
-  - first to use fsrs
-  - note types
-    - let you generate flashcards from structured data
-  - really good stats
-- the bad
-  - interface is bad
-  - this shows up in three ways
-    - first, it's ugly to look at
-      - especially during reviews
-    - second, doing simple things is hard
-      - a nice thing about mochi is you start the app and you go on the study mode immediately
-      - anki doesn't have a "study all cards due today" mode
-      - instead you have to click on a deck to study
-  - plugins are bad
-    - it just feels bad
-    - like a house of cards, everything jury-rigged
-  - wysiwyg editing
-    - keyboard driven
-    - entering stuff requires either using the mouse (increases latency) or knowing a million keybindings
+[Anki] was the first SR system I used. It's open source, so it will be around forever; it has a million plugins; it was the first SR system to use [FSRS] for scheduling. It has really rich stats, which I think are mostly useless but are fun to look at. And the [note types][nt] feature is really good: it lets you generate a large number of flashcards automatically from structured data.
+
+The central problem with Anki is that the interface is really bad. This manifests in various ways.
+
+First, it is ugly to look at, particularly the review screen. And this diminishes your enjoyment of what is already an often boring and frustrating process.
+
+Second, doing simple things is hard. A nice feature of Mochi is that when you start the app you go right into review mode. You're drilling flashcards before you even realize it. Anki doesn't have a "study all cards due today", rather, you have to manually go into a deck and click the "Study Now" button. So what I would do is put all my decks under a "Root" deck, and study that. But this is a hack.
+
+And, third: card input uses WYSIWYG editing. So, you're either jumping from the keyboard to the mouse (which increases latency, and makes flashcard creation more frustrating) or you have to remember all these keybindings to do basic things like "make this text a cloze deletion" or "make this TeX math".
+
+Finally, plugins are a double-edged sword. Because having the _option_ to use them is nice, but the experience of _actually_ using most plugins is bad. The whole setup feels rickety, like a house of cards, like at any point you're going to click the wrong thing and it's going to break.
 
 # Mochi
 
@@ -131,3 +119,4 @@ The rest of this post explains my frustrations with Anki and Mochi, and how I la
 [Mochi]: https://mochi.cards/
 [FSRS]: /article/implementing-fsrs-in-100-lines
 [cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
+[nt]: https://docs.ankiweb.net/getting-started.html#note-types
