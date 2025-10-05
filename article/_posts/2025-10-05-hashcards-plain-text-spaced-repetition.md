@@ -29,9 +29,21 @@ C: Speech is [produced] in [Broca's] area.
 C: Speech is [understood] in [Wernicke's] area.
 ```
 
-You write flashcards more or less like you'd write ordinary notes, with lightweight markup to denote basic (question/aswer) flashcards, and [cloze deletion][cl] flashcards.
+You write flashcards more or less like you'd write ordinary notes, with lightweight markup to denote basic (question/aswer) flashcards, and [cloze deletion][cl] flashcards. Then, to study, you run:
+
+```
+$ hashcards drill <path to the cards directory>
+```
+
+This opens a web interface on `localhost:8000`, where you can review the flashcards. Your performance and review history is stored in an SQLite database in the same directory as the cards, cards are content-addressed, that is, identified by the hash of their text.
 
 This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a Git repo, track its changes, share it on GitHub with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
+
+Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi, but my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, is not acceptable. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
+
+The rest of this post explains my frustrations with Anki and Mochi, and how I landed on the design decisions for hashcards.
+
+# Anki
 
 - why build one?
   - dissatisfaction with the existing stuff
