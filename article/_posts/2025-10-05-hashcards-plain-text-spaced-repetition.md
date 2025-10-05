@@ -55,14 +55,35 @@ Second, doing simple things is hard. A nice feature of Mochi is that when you st
 
 And, third: card input uses WYSIWYG editing. So, you're either jumping from the keyboard to the mouse (which increases latency, and makes flashcard creation more frustrating) or you have to remember all these keybindings to do basic things like "make this text a cloze deletion" or "make this TeX math".
 
-Finally, plugins are a double-edged sword. Because having the _option_ to use them is nice, but the experience of _actually_ using most plugins is bad. The whole setup feels rickety, like a house of cards, like at any point you're going to click the wrong thing and it's going to break.
+Finally, plugins are a double-edged sword. Because having the _option_ to use them is nice, but the experience of _actually_ using most plugins is bad. The whole setup feels janky, like a house of cards. Most of the time, if a feature is not built into the app itself, I would rather live without it than use a plugin.
 
 # Mochi
 
-- the good
-  - nice interface
-  - this is the main selling point
-  - markdown input is much better than anki's
+[Mochi] feels like it was built to address the main complaint about Anki: the interface. It is intuitive, good looking, shortcut-rich. No jank. Instead of WYSIWYG, card text is Markdown: this is delightful.
+
+There's a few problems. While Markdown is a very low-friction way to write flashcards, cloze deletions in Mochi are very verbose. In hashcards, you can write this:
+
+```md
+Speech is [produced] in [Broca's] area.
+```
+
+The equivalent in Mochi is this:
+
+```md
+{% raw %}Speech is {{1::produced}} in {{2::Broca's}} area.{% endraw %}
+```
+
+This is a lot of typing. And you might object that it's only a few characters longer. But when you're studying from a textbook, or when you're copying words from a vocabulary table, these small frictions add up. If writing flashcards is frustrating, you'll write fewer of them: and that means less knowledge gained. Dually, a system that makes flashcard creation as frictionless as possible means more flashcards, and more knowledge.
+
+Another problem is that Mochi doesn't have an equivalent of Anki's note types. In Anki you can make a note type for chemical elements, with fields like atomic number, symbol, name, etc., and write templates to generate flashcards asking questions like:
+
+- What is the atomic number of [name]?
+- What element has atomic number [number]?
+- What is the symbol for [name]?
+- What element has symbol [symbol]?
+
+And so on for other properties. This is good. Automation is good. Less work, more flashcards. Mochi doesn't have this feature. It has [templates][mt], but these are not as powerful.
+
 - the bad
   - until very recently, when they added beta support for fsrs, the algo was terrible
     - it wasn't even sm2
@@ -84,7 +105,6 @@ Finally, plugins are a double-edged sword. Because having the _option_ to use th
     - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
       - they could be improved by seeing things just a bit more often
   - in addition, there's only two buttons, forgot and remembered, which is not precise enough
-  - cloze deletions are too verbose. they take infinity time to type
   - also, mochi has no equivalent of anki's note types, just templates
 
 # etc
@@ -120,3 +140,4 @@ Finally, plugins are a double-edged sword. Because having the _option_ to use th
 [FSRS]: /article/implementing-fsrs-in-100-lines
 [cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
+[mt]: https://mochi.cards/docs/#templates
