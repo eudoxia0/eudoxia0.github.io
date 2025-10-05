@@ -48,7 +48,7 @@ $ hashcards drill <path to the cards directory>
 
 This opens a web interface on `localhost:8000`, where you can review the
 flashcards. Your performance and review history is stored in an [SQLite]
-database in the same directory as the cards, cards are content-addressed, that
+database in the same directory as the cards. Cards are content-addressed, that
 is, identified by the hash of their text.
 
 This central design decision yields many benefits: you can edit your flashcards
