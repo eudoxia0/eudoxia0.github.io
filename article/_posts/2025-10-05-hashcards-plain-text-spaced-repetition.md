@@ -1,6 +1,7 @@
 ---
 title: "Hashcards: A Plain-Text Spaced Repetition System"
 summary: Announcing my latest open-source project.
+card: hashcards-plain-text-spaced-repetition.webp
 ---
 
 [hashcards] is a [spaced repetition][sr] app, along the lines of [Anki] or [Mochi]. Like Anki, it uses [FSRS], the most advanced scheduling algorithm yet, to schedule review.
