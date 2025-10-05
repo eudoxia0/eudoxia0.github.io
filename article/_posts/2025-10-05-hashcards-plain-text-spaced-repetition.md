@@ -169,7 +169,7 @@ this is how it works, and, crucially: I don't want to configure things! I don't
 want "scheduler parameter finetuning" to be yet another skill I have to acquire:
 I want the scheduler to _just work_.
 
-In general, I think spaced repetition algoriths are a too optimistic. I'd rather
+In general, I think spaced repetition algorithms are a too optimistic. I'd rather
 see cards slightly more often, and spend more time reviewing things, than get
 stuck in "forgetting hell". But developers have to worry that making the system
 too burdensome will hurt retention.
