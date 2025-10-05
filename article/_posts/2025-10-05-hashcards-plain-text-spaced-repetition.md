@@ -84,26 +84,17 @@ Another problem is that Mochi doesn't have an equivalent of Anki's note types. F
 
 And so on for other properties. This is good. Automation is good. Less work, more flashcards. Mochi doesn't have this feature. It has [templates][mt], but these are not as powerful.
 
-- the bad
-  - until very recently, when they added beta support for fsrs, the algo was terrible
-    - it wasn't even sm2
-    - it was just based on multipliers
-    - if you click remember, it multiplies the interval by a number >1
-    - if you forget, it multiplies the interval by a number between 0 and 1
-    - this is terrible
-      - my experience of it is that i often felt mochi works well enough for the short term but not well for the long-term
-    - especially if you forget a card with a long interval (multiple months)
-      - because the interval doesn't reset
-      - you're gonna see the card in weeks
-      - not tomorrow, which would help reconsolidate that memory
-    - the rationale for this was simplicity
-      - make it easier for the user to reason about intervals
-      - but the whole point of SRS is you don't calculate the intervals yourself
-      - the algorithm is entirely transparent to the user
-      - the optimality is that the app implements the most advanced (most learning for fewest reviews) algorithm possible
-      - and the user just reaps the benefits
-    - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
-      - they could be improved by seeing things just a bit more often
+But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than SM-2. It was based on multiplers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
+
+The supposed rationale for this is simplicity: the user can reason about the algorithm more easily. But I think this is pointless. The whole point of an SR app is the software manages the schedule for you, and the user is completely unaware of how the scheduler works. The optimality is to have the most advanced possible scheduling algorithm (meaning the one that yields the most recall for the least review time) under the most intuitive interfave possible, and the user just reaps the benefits.
+
+Obviously without an RCT we can't compare Mochi/SM-2/FSRS, but my subjective experience of it is that the algorithm works well for the short-term, and falters on the long-term. It's very bad when you forget a mature card: if a card has an interval of sixty days, and you click forget, you don't reset the interval to one day (which is good, because it helps you reconsolidate the lost knowledge). Rather, the interval is multiplied by the forget multiplier (by default: 0.5) down to _thirty days_. What's the use? If I forgot something after sixty days, I surely won't have better recall in thirty.
+
+You can fix this by setting the forget multiplier to zero. But you have to know this is how it works, and, crucially: I don't want to configure things! I don't want "scheduler parameter finetuning" to be yet another skill I have to acquire: I want the scheduler to _just work_.
+
+(In general, I think spaced repetition algoriths are a too optimistic. I'd rather see cards slightly more often, and spend more time reviewing things, than get stuck in "forgetting hell").
+
+In Anki, it's the interface that's frustrating, but the algorithm works marvelously. In Mochi, the interface is delightful, but it's the algorithm that's frustrating. Because you can spend months and months drilling flashcards, building up your collection, but when the cards cross some invisible age threshold, you start to forget them, and the algorithm does not help you to relearn things you have forgotten. Eventually I burned out on it and stopped doing my reviews, because I expected to forget everything eventually anyhow. And now they added support for FSRS, but by now I have 1700 cards overdue.
 
 Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is simpler for the user, yes, but most SR scheduling algorithms have more options for a reason: different degrees of recall adjust the card parameters by different magnitudes.
 
@@ -142,3 +133,4 @@ What do I want from a spaced repetition system?
 [cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
 [mt]: https://mochi.cards/docs/#templates
+[mf]: https://x.com/MochiCardsApp/status/1924692507570667630
