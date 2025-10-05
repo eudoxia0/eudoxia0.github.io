@@ -98,7 +98,7 @@ In Anki, it's the interface that's frustrating, but the algorithm works marvelou
 
 Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is simpler for the user, yes, but most SR scheduling algorithms have more options for a reason: different degrees of recall adjust the card parameters by different magnitudes.
 
-# Desiderata
+# Hashcards
 
 What do I want from a spaced repetition system?
 
@@ -137,21 +137,20 @@ Sometimes you wrote multiple cards for the same concept, so you have to update t
 
 But why plain-text files in a Git repo? Why not use the above format, but in a "normal" app with a database?
 
-The vague idea of a spaced repetition system where flashcards are stored as plain-text files in a Git repo had been kicking around my cranium for a long time. I remember asking an Ankihead on IRC circa 2011 if such a thing existed. But I think the idea got bumped up the priority queue because I started using a workflow that was similar to my current hashcards workflow.
+The vague idea of a spaced repetition system where flashcards are stored as plain-text files in a Git repo had been kicking around my cranium for a long time. I remember asking an Ankihead on IRC circa 2011 if such a thing existed. At some point I read [Andy Matuschak's note][andy] on his implementation of an SR system. In his system, the flashcards are colocated with prose notes. The notation is similar to mine: `Q` and `A` tags for question-answer cards, and `{curly braces}` for cloze deletions. And the cards are content-addressed: identified by their hash. Which is an obviously good idea. But his code is private and, besides, I feel that prose notes and flashcards are very different beasts, and I don't need or want them to mix.
 
-When studying from a textbook or a website, I'd write flashcards in a Markdown file. Usually, I used a shorthad like `[foo]` for cloze deletions and then wrote a tiny Python script to transform those into the `{% raw %}{{1::foo}}{% endraw %}` notation used by Mochi. And while I read I'd edit the flashcards in the file, as my knowledge built up and my sense of what was relevant and important to remember improved. And then, when I was done with the chapter or document or whatever, only then, I would manually import the flashcards into Mochi.
+But I think the idea of plain-text spaced repetition got bumped up the priority queue because I spontaneously started using a workflow that was similar to my current hashcards workflow.
+
+When studying from a textbook or a website, I'd write flashcards in a Markdown file. Usually, I used a shorthad like `[foo]` for cloze deletions. Then I'd use a Python script to transform the shorthand into the `{% raw %}{{1::foo}}{% endraw %}` notation used by Mochi. And I'd edit the flashcards in the file, as my knowledge built up and my sense of what was relevant and important to remember improved. And then, when I was done with the chapter or document or whatever, only then, I would manually import the flashcards into Mochi.
 
 And it struck me that the last step was kind of unnecessary. I was already writing my flashcards as lightly-annotated Markdown in plain-text files. I had [already implemented FSRS][fsrsblog] out of curiosity. I was looking for a personal project to build during funemployment. So hashcards was by then a very neatly-shaped hole that I just needed to paint inside.
 
-At some point I read [Andy Matuschak's note][andy] on his implementation of an SR system. In his system, the flashcards are colocated with prose notes. The notation is similar to mine: `Q` and `A` tags for question-answer cards, and `{curly braces}` for cloze deletions. And the cards are content-addressed: identified by their hash. Which is an obviously good idea. But his code is private and, besides, I feel that prose notes and flashcards are very different beasts, and I don't need or want them to mix.
-
-Using plain-text storage has a lot of synergies:
+It turns out that using plain-text storage has a lot of synergies:
 
 - You can edit the cards using whatever editor you use, build up a library of card-creating macros, and navigate the collection using the editor's file browser.
 - You can use Git for version control. Git is infinitely more featureful than the change-tracking of any SR app: you can edit multiple cards in one commit, branch, merge, use pull requests, etc.
 - You can make your flashcards public on GitHub.
-- You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck.
-
+- You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck. Anki's note types don't have to be built into hashcards, rather, you can DIY it using some Python and make.
 
 [hashcards]: https://github.com/eudoxia0/hashcards
 [sr]: /article/effective-spaced-repetition
