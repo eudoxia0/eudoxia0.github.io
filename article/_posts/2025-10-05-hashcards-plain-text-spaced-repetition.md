@@ -283,7 +283,7 @@ queue because I spontaneously started using a workflow that was similar to my
 current hashcards workflow.
 
 When studying from a textbook or a website, I'd write flashcards in a Markdown
-file. Usually, I used a shorthad like `[foo]` for cloze deletions. Then I'd use
+file. Usually, I used a shorthand like `[foo]` for cloze deletions. Then I'd use
 a Python script to transform the shorthand into the `{% raw %}{{1::foo}}{%
 endraw %}` notation used by Mochi. And I'd edit the flashcards in the file, as
 my knowledge built up and my sense of what was relevant and important to
