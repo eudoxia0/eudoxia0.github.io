@@ -43,7 +43,7 @@ $ hashcards drill <path to the cards directory>
 
 This opens a web interface on `localhost:8000`, where you can review the flashcards. Your performance and review history is stored in an [SQLite] database in the same directory as the cards, cards are content-addressed, that is, identified by the hash of their text.
 
-This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a [Git] repo, track its changes, share it on [GitHub] with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
+This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a [Git] repo, track its changes, share it on [GitHub] with others ([as I have][mine]). You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
 
 Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi. But also, additionally, because my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, doesn't feel good. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
 
@@ -175,6 +175,7 @@ The result is a system where creating and editing flashcards is nearly frictionl
 [hashcards]: https://github.com/eudoxia0/hashcards
 [makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
 [mf]: https://x.com/MochiCardsApp/status/1924692507570667630
+[mine]: https://github.com/eudoxia0/flashcards
 [mt]: https://mochi.cards/docs/#templates
 [mult]: https://mochi.cards/docs/faq/#which-spaced-repetition-algorithm-does-mochi-use
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
