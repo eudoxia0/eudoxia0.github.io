@@ -45,60 +45,62 @@ The rest of this post explains my frustrations with Anki and Mochi, and how I la
 
 # Anki
 
-- why build one?
-  - dissatisfaction with the existing stuff
-- anki
-  - the good
-    - open source
-    - will be around forever
-    - a million plugins
-    - first to use fsrs
-    - note types
-      - let you generate flashcards from structured data
-    - really good stats
-  - the bad
-    - interface is bad
-    - this shows up in three ways
-      - first, it's ugly to look at
-        - especially during reviews
-      - second, doing simple things is hard
-        - a nice thing about mochi is you start the app and you go on the study mode immediately
-        - anki doesn't have a "study all cards due today" mode
-        - instead you have to click on a deck to study
-    - plugins are bad
-      - it just feels bad
-      - like a house of cards, everything jury-rigged
-    - wysiwyg editing
-      - keyboard driven
-      - entering stuff requires either using the mouse (increases latency) or knowing a million keybindings
-- mochi
-  - the good
-    - nice interface
-    - this is the main selling point
-    - markdown input is much better than anki's
-  - the bad
-    - until very recently, when they added beta support for fsrs, the algo was terrible
-      - it wasn't even sm2
-      - it was just based on multipliers
-      - if you click remember, it multiplies the interval by a number >1
-      - if you forget, it multiplies the interval by a number between 0 and 1
-      - this is terrible
-        - my experience of it is that i often felt mochi works well enough for the short term but not well for the long-term
-      - especially if you forget a card with a long interval (multiple months)
-        - because the interval doesn't reset
-        - you're gonna see the card in weeks
-        - not tomorrow, which would help reconsolidate that memory
-      - the rationale for this was simplicity
-        - make it easier for the user to reason about intervals
-        - but the whole point of SRS is you don't calculate the intervals yourself
-        - the algorithm is entirely transparent to the user
-        - the optimality is that the app implements the most advanced (most learning for fewest reviews) algorithm possible
-        - and the user just reaps the benefits
-      - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
-        - they could be improved by seeing things just a bit more often
-    - in addition, there's only two buttons, forgot and remembered, which is not precise enough
-    - cloze deletions are too verbose. they take infinity time to type
-    - also, mochi has no equivalent of anki's note types, just templates
+- the good
+  - open source
+  - will be around forever
+  - a million plugins
+  - first to use fsrs
+  - note types
+    - let you generate flashcards from structured data
+  - really good stats
+- the bad
+  - interface is bad
+  - this shows up in three ways
+    - first, it's ugly to look at
+      - especially during reviews
+    - second, doing simple things is hard
+      - a nice thing about mochi is you start the app and you go on the study mode immediately
+      - anki doesn't have a "study all cards due today" mode
+      - instead you have to click on a deck to study
+  - plugins are bad
+    - it just feels bad
+    - like a house of cards, everything jury-rigged
+  - wysiwyg editing
+    - keyboard driven
+    - entering stuff requires either using the mouse (increases latency) or knowing a million keybindings
+
+# Mochi
+
+- the good
+  - nice interface
+  - this is the main selling point
+  - markdown input is much better than anki's
+- the bad
+  - until very recently, when they added beta support for fsrs, the algo was terrible
+    - it wasn't even sm2
+    - it was just based on multipliers
+    - if you click remember, it multiplies the interval by a number >1
+    - if you forget, it multiplies the interval by a number between 0 and 1
+    - this is terrible
+      - my experience of it is that i often felt mochi works well enough for the short term but not well for the long-term
+    - especially if you forget a card with a long interval (multiple months)
+      - because the interval doesn't reset
+      - you're gonna see the card in weeks
+      - not tomorrow, which would help reconsolidate that memory
+    - the rationale for this was simplicity
+      - make it easier for the user to reason about intervals
+      - but the whole point of SRS is you don't calculate the intervals yourself
+      - the algorithm is entirely transparent to the user
+      - the optimality is that the app implements the most advanced (most learning for fewest reviews) algorithm possible
+      - and the user just reaps the benefits
+    - in general, i think spaced repetition algoriths in general are a bit too optimistic about recall
+      - they could be improved by seeing things just a bit more often
+  - in addition, there's only two buttons, forgot and remembered, which is not precise enough
+  - cloze deletions are too verbose. they take infinity time to type
+  - also, mochi has no equivalent of anki's note types, just templates
+
+# etc
+
 - desiderata
   - plain-text
     - enter prompts by writing into texts
