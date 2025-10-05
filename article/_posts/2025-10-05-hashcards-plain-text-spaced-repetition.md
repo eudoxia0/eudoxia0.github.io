@@ -145,7 +145,7 @@ When studying from a textbook or a website, I'd write flashcards in a Markdown f
 
 And it struck me that the last step was kind of unnecessary. I was already writing my flashcards as lightly-annotated Markdown in plain-text files. I had [already implemented FSRS][fsrsblog] out of curiosity. I was looking for a personal project to build during funemployment. So hashcards was by then a very neatly-shaped hole that I just needed to paint inside.
 
-It turns out that using plain-text storage has a lot of synergies:
+It turns out that using plain-text storage has many synergies:
 
 - You can edit the cards using whatever editor you use, build up a library of card-creating macros, and navigate the collection using the editor's file browser.
 - You can query and update the collection using standard Unix tools, or a programming language, e.g. using `wc` to get the total number of words in the collection, or using `awk` to make a bulk-update to a set of cards.
