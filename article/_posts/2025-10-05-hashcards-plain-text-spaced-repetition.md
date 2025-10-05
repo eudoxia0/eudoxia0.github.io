@@ -35,9 +35,9 @@ You write flashcards more or less like you'd write ordinary notes, with lightwei
 $ hashcards drill <path to the cards directory>
 ```
 
-This opens a web interface on `localhost:8000`, where you can review the flashcards. Your performance and review history is stored in an SQLite database in the same directory as the cards, cards are content-addressed, that is, identified by the hash of their text.
+This opens a web interface on `localhost:8000`, where you can review the flashcards. Your performance and review history is stored in an [SQLite] database in the same directory as the cards, cards are content-addressed, that is, identified by the hash of their text.
 
-This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a Git repo, track its changes, share it on GitHub with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
+This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a [Git] repo, track its changes, share it on [GitHub] with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
 
 Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi. But also, additionally, because my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, doesn't feel good. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
 
@@ -75,7 +75,7 @@ The equivalent in Mochi is this:
 
 This is a lot of typing. And you might object that it's only a few characters longer. But when you're studying from a textbook, or when you're copying words from a vocabulary table, these small frictions add up. If writing flashcards is frustrating, you'll write fewer of them: and that means less knowledge gained. Dually, a system that makes flashcard creation as frictionless as possible means more flashcards, and more knowledge.
 
-Another problem is that Mochi doesn't have an equivalent of Anki's note types. For example: you can make a note type for chemical elements, with fields like atomic number, symbol, name, etc., and write templates to generate flashcards asking questions like:
+Another problem is that Mochi doesn't have an equivalent of Anki's [note types][nt]. For example: you can make a note type for chemical elements, with fields like atomic number, symbol, name, etc., and write templates to generate flashcards asking questions like:
 
 - What is the atomic number of [name]?
 - What element has atomic number [number]?
@@ -84,11 +84,11 @@ Another problem is that Mochi doesn't have an equivalent of Anki's note types. F
 
 And so on for other properties. This is good. Automation is good. Less work, more flashcards. Mochi doesn't have this feature. It has [templates][mt], but these are not as powerful.
 
-But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than SM-2. It was based on multiplers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
+But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than [SM-2]. It was based on multiplers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
 
 The supposed rationale for this is simplicity: the user can reason about the algorithm more easily. But I think this is pointless. The whole point of an SR app is the software manages the schedule for you, and the user is completely unaware of how the scheduler works. The optimality is to have the most advanced possible scheduling algorithm (meaning the one that yields the most recall for the least review time) under the most intuitive interface possible, and the user just reaps the benefits.
 
-Obviously without an RCT we can't compare Mochi/SM-2/FSRS, but my subjective experience of it is that the algorithm works well for the short-term, and falters on the long-term. It's very bad when you forget a mature card: if a card has an interval of sixty days, and you click forget, you don't reset the interval to one day (which is good, because it helps you reconsolidate the lost knowledge). Rather, the interval is multiplied by the forget multiplier (by default: 0.5) down to _thirty days_. What's the use? If I forgot something after sixty days, I surely won't have better recall in thirty.
+Obviously without an RCT we can't compare Mochi/[SM-2]/FSRS, but my subjective experience of it is that the algorithm works well for the short-term, and falters on the long-term. It's very bad when you forget a mature card: if a card has an interval of sixty days, and you click forget, you don't reset the interval to one day (which is good, because it helps you reconsolidate the lost knowledge). Rather, the interval is multiplied by the forget multiplier (by default: 0.5) down to _thirty days_. What's the use? If I forgot something after sixty days, I surely won't have better recall in thirty.
 
 You can fix this by setting the forget multiplier to zero. But you have to know this is how it works, and, crucially: I don't want to configure things! I don't want "scheduler parameter finetuning" to be yet another skill I have to acquire: I want the scheduler to _just work_.
 
@@ -151,14 +151,18 @@ It turns out that using plain-text storage has a lot of synergies:
 - You can query and update the collection using standard Unix tools, or a programming language, e.g. using `wc` to get the total number of words in the collection, or using `awk` to make a bulk-update to a set of cards.
 - You can use Git for version control. Git is infinitely more featureful than the change-tracking of any SR app: you can edit multiple cards in one commit, branch, merge, use pull requests, etc.
 - You can make your flashcards public on GitHub.
-- You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck. Anki's note types don't have to be built into hashcards, rather, you can DIY it using some Python and make.
+- You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck. Anki's [note types][nt] don't have to be built into hashcards, rather, you can DIY it using some Python and make.
 
 The result is a system where creating and editing flashcards is nearly frictionless, that uses an advanced spaced repetition scheduler, and, when drilling cards, provides an elegant (if not beautiful) web interface.
 
 [Anki]: https://apps.ankiweb.net/
 [Claude]: https://claude.ai/
 [FSRS]: /article/implementing-fsrs-in-100-lines
+[GitHub]: https://github.com/
+[Git]: https://git-scm.com/
 [Mochi]: https://mochi.cards/
+[SM-2]: /article/implementing-sm2-in-rust
+[SQLite]: https://sqlite.org/
 [andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
 [cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
 [fsrsblog]: /article/implementing-fsrs-in-100-lines
