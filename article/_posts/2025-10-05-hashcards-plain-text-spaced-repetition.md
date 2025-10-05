@@ -14,7 +14,7 @@ card_source: |
 to schedule review.
 
 The thing that makes hashcards unique: it doesn't use a database. Rather, your
-flashcardcollection is just a directory of Markdown files, like so:
+flashcard collection is just a directory of Markdown files, like so:
 
 ```
 Cards/
