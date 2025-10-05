@@ -84,7 +84,7 @@ Another problem is that Mochi doesn't have an equivalent of Anki's [note types][
 
 And so on for other properties. This is good. Automation is good. Less work, more flashcards. Mochi doesn't have this feature. It has [templates][mt], but these are not as powerful.
 
-But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than [SM-2]. It was based on multiplers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
+But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than [SM-2]. It was based on multipliers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
 
 The supposed rationale for this is simplicity: the user can reason about the algorithm more easily. But I think this is pointless. The whole point of an SR app is the software manages the schedule for you, and the user is completely unaware of how the scheduler works. The optimality is to have the most advanced possible scheduling algorithm (meaning the one that yields the most recall for the least review time) under the most intuitive interface possible, and the user just reaps the benefits.
 
