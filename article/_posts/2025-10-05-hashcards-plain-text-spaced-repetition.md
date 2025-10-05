@@ -53,7 +53,7 @@ First, it is ugly to look at, particularly the review screen. And this diminishe
 
 Second, doing simple things is hard. A nice feature of Mochi is that when you start the app you go right into review mode. You're drilling flashcards before you even realize it. Anki doesn't have a "study all cards due today", rather, you have to manually go into a deck and click the "Study Now" button. So what I would do is put all my decks under a "Root" deck, and study that. But this is a hack.
 
-And, third: card input uses WYSIWYG editing. So, you're either jumping from the keyboard to the mouse (which increases latency, and makes flashcard creation more frustrating) or you have to remember all these keybindings to do basic things like "make this text a cloze deletion" or "make this TeX math".
+And, third: card input uses WYSIWYG editing. So, you're either jumping from the keyboard to the mouse (which increases latency, and makes flashcard creation more frustrating) or you have to remember all these keybindings to do basic things like "make this text a cloze deletion" or "make this [TeX math][tex]".
 
 Finally, plugins are a double-edged sword. Because having the _option_ to use them is nice, but the experience of _actually_ using most plugins is bad. The whole setup feels janky, like a house of cards. Most of the time, if a feature is not built into the app itself, I would rather live without it than use a plugin.
 
@@ -172,3 +172,4 @@ The result is a system where creating and editing flashcards is nearly frictionl
 [mt]: https://mochi.cards/docs/#templates
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
 [sr]: /article/effective-spaced-repetition
+[tex]: https://docs.ankiweb.net/math.html
