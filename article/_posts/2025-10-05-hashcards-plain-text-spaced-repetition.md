@@ -102,6 +102,45 @@ Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is sim
 
 What do I want from a spaced repetition system?
 
+The first thing is frictionless. I have learned that the biggest bottleneck in spaced repetition, for me, is not doing the reviews (I am very disciplined about this and have done SR reviews daily for months on end), it's not even converting conceptual knowledge into flashcards, the biggest bottleneck is just entering cards into the system.
+
+The surest way to shore up your knowledge of some concept or topic is to write more flashcards about it: asking the same question in different ways, in different directions, from different angles. More volume means you see the same information more often, asking in different ways prevents "memorizing the shape of the card", and it acts as a kind of redundancy: there are multiple edges connecting that bit of knowledge to the rest of your mind.
+
+And there have been many times where I have thought: I would make this more solid by writing another flashcard. But I opted not to because it was too effortful.
+
+If getting cards into the system involves a lot of friction, you write fewer cards. And there's an opportunity cost: the card you don't write is a concept you don't learn. Integrated across time, it's entire oceans of knowledge which are lost.
+
+So: the system should make card entry effortless. This was the guiding principle behind the design of hashcards' text format. For example, cloze deletions use square brackets because in a US keyboard, square brackets can be typed without pressing shift (compare Mochi's curly brace). And it's one bracket, not two. Originally, the format was one line per card, with blank lines separating flashcards, and question-answer cards used slashes to separate the sides, like so:
+
+```markdown
+What is the atomic number of carbon? / 6
+
+The atomic number of [carbon] is [6].
+```
+
+And this is strictly less friction. But it creates a problem for multi-line flashcards, which are common enough that they should not be a second-class citizen. Eventually, I settled on the current format:
+
+```
+Q: What is the atomic number of carbon?
+A: 6
+
+C: The atomic number of [carbon] is [6].
+```
+
+Which is only slightly more typing, and has the benefit that you can easily visually identify where a card begins and ends, and what kind of card it is.
+
+So: Markdown with a lightweight syntax on top.
+
+But why plain-text files in a Git repo? Why not use the above format, but in a "normal" app with a database?
+
+The vague idea of a spaced repetition system where flashcards are stored as plain-text files in a Git repo had been kicking around my cranium for a long time. I remember asking an Ankihead on IRC circa 2011 if such a thing existed. But I think the idea got bumped up the priority queue because I started using a workflow that was similar to my current hashcards workflow.
+
+When studying from a textbook or a website, I'd write flashcards in a Markdown file. Usually, I used a shorthad like `[foo]` for cloze deletions and then wrote a tiny Python script to transform those into the `{% raw %}{{1::foo}}{% endraw %}` notation used by Mochi. And while I read I'd edit the flashcards in the file, as my knowledge built up and my sense of what was relevant and important to remember improved. And then, when I was done with the chapter or document or whatever, only then, I would manually import the flashcards into Mochi.
+
+And it struck me that the last step was kind of unnecessary. Why not read the flashcards from the file itself?
+
+At some point I read [Andy Matuschak's note][andy] on his implementation of an SR system. In his system, the flashcards are colocated with prose notes. The notation is similar to mine: `Q` and `A` tags for question-answer cards, and `{curly braces}` for cloze deletions. And the cards are content-addressed: identified by their hash. Which is an obviously good idea. But his code is private and, besides, I feel that prose notes and flashcards are very different beasts, and I don't need or want them to mix.
+
   - plain-text
     - enter prompts by writing into texts
       - i came up with this idea because, well, I was doing it myself
@@ -134,3 +173,4 @@ What do I want from a spaced repetition system?
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
 [mt]: https://mochi.cards/docs/#templates
 [mf]: https://x.com/MochiCardsApp/status/1924692507570667630
+[andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
