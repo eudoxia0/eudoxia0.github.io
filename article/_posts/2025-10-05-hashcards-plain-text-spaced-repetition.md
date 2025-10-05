@@ -127,7 +127,7 @@ A: 6
 C: The atomic number of [carbon] is [6].
 ```
 
-Which is only slightly more typing, and has the benefit that you can easily visually identify where a card begins and ends, and what kind of card it is.
+Which is only slightly more typing, and has the benefit that you can easily visually identify where a card begins and ends, and what kind of card it is. I spent a lot of time arguing back and forth with [Claude] about what the optimal format should be.
 
 Another source of friction is not creating the cards but _editing_ them. The central problem is that your knowledge changes and improves over time. Often textbooks take this approach where Chapter 1 introduces one kind of ontology, and by Chapter 3 they tell you, "actually that was a lie, here's the real ontology of this subject", and then you have to go back and edit the old flashcards to match. Because otherwise you have one card asking, e.g., for the undergraduate definition of some concept, while another asks you for the graduate-level definition, creating ambiguity.
 
@@ -167,3 +167,4 @@ The result is a system where creating and editing flashcards is nearly frictionl
 [andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
 [fsrsblog]: /article/implementing-fsrs-in-100-lines
 [makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
+[Claude]: https://claude.ai/
