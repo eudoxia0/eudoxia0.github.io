@@ -2,6 +2,11 @@
 title: "Hashcards: A Plain-Text Spaced Repetition System"
 summary: Announcing my latest open-source project.
 card: hashcards-plain-text-spaced-repetition.webp
+card_source: |
+    [_The Terrace, Vizcaya_][l], 1917, by [John Singer Sargent][jss].
+
+    [l]: https://www.artic.edu/artworks/145904/the-terrace-vizcaya
+    [jss]: https://en.wikipedia.org/wiki/John_Singer_Sargent
 ---
 
 [hashcards] is a [spaced repetition][sr] app, along the lines of [Anki] or [Mochi]. Like Anki, it uses [FSRS], the most advanced scheduling algorithm yet, to schedule review.
