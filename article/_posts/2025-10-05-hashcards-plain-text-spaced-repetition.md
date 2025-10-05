@@ -9,9 +9,9 @@ card_source: |
     [jss]: https://en.wikipedia.org/wiki/John_Singer_Sargent
 ---
 
-[hashcards] is a [spaced repetition][sr] app, along the lines of [Anki] or
-[Mochi]. Like Anki, it uses [FSRS], the most advanced scheduling algorithm yet,
-to schedule review.
+[hashcards] is a local-first [spaced repetition][sr] app, along the lines of
+[Anki] or [Mochi]. Like Anki, it uses [FSRS], the most advanced scheduling
+algorithm yet, to schedule reviews.
 
 The thing that makes hashcards unique: it doesn't use a database. Rather, your
 flashcard collection is just a directory of Markdown files, like so:
