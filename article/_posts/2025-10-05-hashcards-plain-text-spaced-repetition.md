@@ -102,15 +102,15 @@ Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is sim
 
 What do I want from a spaced repetition system?
 
-The first thing is frictionless. I have learned that the biggest bottleneck in spaced repetition, for me, is not doing the reviews (I am very disciplined about this and have done SR reviews daily for months on end), it's not even converting conceptual knowledge into flashcards, the biggest bottleneck is just entering cards into the system.
+The first thing is: card creation must be frictionless. I have learned that the biggest bottleneck in spaced repetition, for me, is not doing the reviews (I am very disciplined about this and have done SR reviews daily for months on end), it's not even converting conceptual knowledge into flashcards, the biggest bottleneck is just entering cards into the system.
 
 The surest way to shore up your knowledge of some concept or topic is to write more flashcards about it: asking the same question in different ways, in different directions, from different angles. More volume means you see the same information more often, asking in different ways prevents "memorizing the shape of the card", and it acts as a kind of redundancy: there are multiple edges connecting that bit of knowledge to the rest of your mind.
 
-And there have been many times where I have thought: I would make this more solid by writing another flashcard. But I opted not to because it was too effortful.
+And there have been many times where I have thought: I would make this more solid by writing another flashcard. But I opted not to because the marginal flashcard is too effortful.
 
 If getting cards into the system involves a lot of friction, you write fewer cards. And there's an opportunity cost: the card you don't write is a concept you don't learn. Integrated across time, it's entire oceans of knowledge which are lost.
 
-So: the system should make card entry effortless. This was the guiding principle behind the design of hashcards' text format. For example, cloze deletions use square brackets because in a US keyboard, square brackets can be typed without pressing shift (compare Mochi's curly brace). And it's one bracket, not two. Originally, the format was one line per card, with blank lines separating flashcards, and question-answer cards used slashes to separate the sides, like so:
+So: the system should make card entry effortless. This was the guiding principle behind the design of the hashcards text format. For example, cloze deletions use square brackets because in a US keyboard, square brackets can be typed without pressing shift (compare Mochi's curly brace). And it's one bracket, not two. Originally, the format was one line per card, with blank lines separating flashcards, and question-answer cards used slashes to separate the sides, like so:
 
 ```markdown
 What is the atomic number of carbon? / 6
