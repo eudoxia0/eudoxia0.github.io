@@ -148,9 +148,12 @@ And it struck me that the last step was kind of unnecessary. I was already writi
 It turns out that using plain-text storage has a lot of synergies:
 
 - You can edit the cards using whatever editor you use, build up a library of card-creating macros, and navigate the collection using the editor's file browser.
+- You can query and update the collection using standard Unix tools, or a programming language, e.g. using `wc` to get the total number of words in the collection, or using `awk` to make a bulk-update to a set of cards.
 - You can use Git for version control. Git is infinitely more featureful than the change-tracking of any SR app: you can edit multiple cards in one commit, branch, merge, use pull requests, etc.
 - You can make your flashcards public on GitHub.
 - You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck. Anki's note types don't have to be built into hashcards, rather, you can DIY it using some Python and make.
+
+The result is a system where creating and editing flashcards is nearly frictionless, that uses an advanced spaced repetition scheduler, and, when drilling cards, provides an elegant (if not beautiful) web interface.
 
 [hashcards]: https://github.com/eudoxia0/hashcards
 [sr]: /article/effective-spaced-repetition
