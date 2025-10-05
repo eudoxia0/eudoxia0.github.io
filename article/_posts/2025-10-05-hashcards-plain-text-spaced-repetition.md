@@ -155,16 +155,16 @@ It turns out that using plain-text storage has a lot of synergies:
 
 The result is a system where creating and editing flashcards is nearly frictionless, that uses an advanced spaced repetition scheduler, and, when drilling cards, provides an elegant (if not beautiful) web interface.
 
-[hashcards]: https://github.com/eudoxia0/hashcards
-[sr]: /article/effective-spaced-repetition
 [Anki]: https://apps.ankiweb.net/
-[Mochi]: https://mochi.cards/
-[FSRS]: /article/implementing-fsrs-in-100-lines
-[cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
-[nt]: https://docs.ankiweb.net/getting-started.html#note-types
-[mt]: https://mochi.cards/docs/#templates
-[mf]: https://x.com/MochiCardsApp/status/1924692507570667630
-[andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
-[fsrsblog]: /article/implementing-fsrs-in-100-lines
-[makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
 [Claude]: https://claude.ai/
+[FSRS]: /article/implementing-fsrs-in-100-lines
+[Mochi]: https://mochi.cards/
+[andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
+[cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
+[fsrsblog]: /article/implementing-fsrs-in-100-lines
+[hashcards]: https://github.com/eudoxia0/hashcards
+[makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
+[mf]: https://x.com/MochiCardsApp/status/1924692507570667630
+[mt]: https://mochi.cards/docs/#templates
+[nt]: https://docs.ankiweb.net/getting-started.html#note-types
+[sr]: /article/effective-spaced-repetition
