@@ -129,7 +129,11 @@ C: The atomic number of [carbon] is [6].
 
 Which is only slightly more typing, and has the benefit that you can easily visually identify where a card begins and ends, and what kind of card it is.
 
-So: Markdown with a lightweight syntax on top.
+Another source of friction is not creating the cards but _editing_ them. The central problem is that your knowledge changes and improves over time. Often textbooks take this approach where Chapter 1 introduces one kind of ontology, and by Chapter 3 they tell you, "actually that was a lie, here's the real ontology of this subject", and then you have to go back and edit the old flashcards to match. Because otherwise you have one card asking, e.g., for the undergraduate definition of some concept, while another asks you for the graduate-level definition, creating ambiguity.
+
+For this reason, when studying from a textbook, I create a deck for the textbook, with sub-decks for each chapter. That makes it easy to match the flashcards to their source material (to ensure they are aligned) and each chapter deck only has a few tens of cards usually, keeping them navigable.
+
+Sometimes you wrote multiple cards for the same concept, so you have to update them all at once. Finding the related ones can be hard if the deck is large. In hashcards, a deck is just a Markdown file. The cards immediately above and below a card are usually semantically related. You just scroll up and down and make the edits in place.
 
 But why plain-text files in a Git repo? Why not use the above format, but in a "normal" app with a database?
 
@@ -137,32 +141,17 @@ The vague idea of a spaced repetition system where flashcards are stored as plai
 
 When studying from a textbook or a website, I'd write flashcards in a Markdown file. Usually, I used a shorthad like `[foo]` for cloze deletions and then wrote a tiny Python script to transform those into the `{% raw %}{{1::foo}}{% endraw %}` notation used by Mochi. And while I read I'd edit the flashcards in the file, as my knowledge built up and my sense of what was relevant and important to remember improved. And then, when I was done with the chapter or document or whatever, only then, I would manually import the flashcards into Mochi.
 
-And it struck me that the last step was kind of unnecessary. Why not read the flashcards from the file itself?
+And it struck me that the last step was kind of unnecessary. I was already writing my flashcards as lightly-annotated Markdown in plain-text files. I had [already implemented FSRS][fsrsblog] out of curiosity. I was looking for a personal project to build during funemployment. So hashcards was by then a very neatly-shaped hole that I just needed to paint inside.
 
 At some point I read [Andy Matuschak's note][andy] on his implementation of an SR system. In his system, the flashcards are colocated with prose notes. The notation is similar to mine: `Q` and `A` tags for question-answer cards, and `{curly braces}` for cloze deletions. And the cards are content-addressed: identified by their hash. Which is an obviously good idea. But his code is private and, besides, I feel that prose notes and flashcards are very different beasts, and I don't need or want them to mix.
 
-  - plain-text
-    - enter prompts by writing into texts
-      - i came up with this idea because, well, I was doing it myself
-      - i would take notes before transferring them into flashcards
-      - sometimes i would use shorthands, like square brackets for cloze deletions, and then write a quick python script to translate them into the mochi format
-        - so that:
-        - ```
-          [foo] bar [baz]
-          ```
-        - becomes:
-        - ```
-          {% raw %}{{1::foo}} bar {{2::baz}}{% endraw %}
-          ```
-    - content addressing is like a clever hack: if you had to assign an ID manually to each flashcard it would be a huge pain in the ass
-    - the plain-text thing has many "unexpected good side effects", e.g.:
-      - scriptability: you can write a script to generate flashcards from some data source (e.g. a CSV), and use a Makefile to tie everything together
-        - i do this in my personal deck
-  - web interface
-    - cli is out of the question because many of my flashcards contain tex
-    - i wanted a web interface so could use katex to render the latex blocks
-    - and also: i wanted the UI to look beautiful, or at least elegant
-  - frictionless
+Using plain-text storage has a lot of synergies:
+
+- You can edit the cards using whatever editor you use, build up a library of card-creating macros, and navigate the collection using the editor's file browser.
+- You can use Git for version control. Git is infinitely more featureful than the change-tracking of any SR app: you can edit multiple cards in one commit, branch, merge, use pull requests, etc.
+- You can make your flashcards public on GitHub.
+- You can generate flashcards using scripts (e.g., turn a CSV of foreign language vocabulary into a deck of flashcards), and write a Makefile to tie the script, data source, and target together. I [do this][makefile] in my personal deck.
+
 
 [hashcards]: https://github.com/eudoxia0/hashcards
 [sr]: /article/effective-spaced-repetition
@@ -174,3 +163,5 @@ At some point I read [Andy Matuschak's note][andy] on his implementation of an S
 [mt]: https://mochi.cards/docs/#templates
 [mf]: https://x.com/MochiCardsApp/status/1924692507570667630
 [andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
+[fsrsblog]: /article/implementing-fsrs-in-100-lines
+[makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
