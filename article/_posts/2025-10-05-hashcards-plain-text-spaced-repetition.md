@@ -84,7 +84,7 @@ Another problem is that Mochi doesn't have an equivalent of Anki's [note types][
 
 And so on for other properties. This is good. Automation is good. Less work, more flashcards. Mochi doesn't have this feature. It has [templates][mt], but these are not as powerful.
 
-But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than [SM-2]. It was based on multipliers: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
+But the biggest problem with Mochi, I think, is the algorithm. Until [very recently][mf], when they added beta support for FSRS, the algorithm used by Mochi was even simpler than [SM-2]. It was based on [multipliers][mult]: remembering a card multiplies its interval by a number >1, forgetting a card multiplies its interval by a number between 0 and 1.
 
 The supposed rationale for this is simplicity: the user can reason about the algorithm more easily. But I think this is pointless. The whole point of an SR app is the software manages the schedule for you, and the user is completely unaware of how the scheduler works. The optimality is to have the most advanced possible scheduling algorithm (meaning the one that yields the most recall for the least review time) under the most intuitive interface possible, and the user just reaps the benefits.
 
@@ -92,7 +92,7 @@ Obviously without an RCT we can't compare Mochi/[SM-2]/FSRS, but my subjective e
 
 You can fix this by setting the forget multiplier to zero. But you have to know this is how it works, and, crucially: I don't want to configure things! I don't want "scheduler parameter finetuning" to be yet another skill I have to acquire: I want the scheduler to _just work_.
 
-(In general, I think spaced repetition algoriths are a too optimistic. I'd rather see cards slightly more often, and spend more time reviewing things, than get stuck in "forgetting hell").
+In general, I think spaced repetition algoriths are a too optimistic. I'd rather see cards slightly more often, and spend more time reviewing things, than get stuck in "forgetting hell". But developers have to worry that making the system too burdensome will hurt retention.
 
 In Anki, it's the interface that's frustrating, but the algorithm works marvelously. In Mochi, the interface is delightful, but it's the algorithm that's frustrating. Because you can spend months and months drilling flashcards, building up your collection, but when the cards cross some invisible age threshold, you start to forget them, and the algorithm does not help you to relearn things you have forgotten. Eventually I burned out on it and stopped doing my reviews, because I expected to forget everything eventually anyhow. And now they added support for FSRS, but by now I have 1700 cards overdue.
 
@@ -170,6 +170,7 @@ The result is a system where creating and editing flashcards is nearly frictionl
 [makefile]: https://github.com/eudoxia0/flashcards/blob/87b082e4723e5b1b286e3bb5378316f464cfc28f/Makefile
 [mf]: https://x.com/MochiCardsApp/status/1924692507570667630
 [mt]: https://mochi.cards/docs/#templates
+[mult]: https://mochi.cards/docs/faq/#which-spaced-repetition-algorithm-does-mochi-use
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
 [sr]: /article/effective-spaced-repetition
 [tex]: https://docs.ankiweb.net/math.html
