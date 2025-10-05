@@ -319,8 +319,9 @@ It turns out that using plain-text storage has many synergies:
   rather, you can DIY it using some Python and make.
 
 The result is a system where creating and editing flashcards is nearly
-frictionless, that uses an advanced spaced repetition scheduler, and, when
-drilling cards, provides an elegant (if not beautiful) web interface.
+frictionless, that uses an advanced spaced repetition scheduler, and which
+provides an elegant UI for drilling flashcards. I hope others will find it
+useful.
 
 [Anki]: https://apps.ankiweb.net/
 [Claude]: https://claude.ai/
