@@ -39,7 +39,7 @@ This opens a web interface on `localhost:8000`, where you can review the flashca
 
 This central design decision yields many benefits: you can edit your flashcards with your editor of choice, store your flashcard collection in a Git repo, track its changes, share it on GitHub with others. You can use scripts to generate flashcards from some source of structured data (e.g. a CSV of English/French vocabulary pairs). You can query and manipulate your collection using standard Unix tools, or programmatically, without having to dig into the internals of some app's database.
 
-Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi, but my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, is not acceptable. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
+Why build a new spaced repetition app? Mostly because I was dissatisfied with both Anki and Mochi. But also, additionally, because my flashcards collection is very important to me, and having it exist either in some remote database, or as an opaque unusable data blob on my computer, is not acceptable. "Markdown files in a Git repo" gives me a level of ownership that other approaches lack.
 
 The rest of this post explains my frustrations with Anki and Mochi, and how I landed on the design decisions for hashcards.
 
