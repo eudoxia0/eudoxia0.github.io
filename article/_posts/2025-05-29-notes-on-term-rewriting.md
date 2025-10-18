@@ -1,6 +1,6 @@
 ---
 title: Notes on Term Rewriting
-summary: Notes from _Term Rewriting and All That_.
+summary: Notes from <i>Term Rewriting and All That</i>.
 math: yes
 ---
 
