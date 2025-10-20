@@ -53,6 +53,7 @@ This section lists Cartesian problems waiting to be factored.
 - Application packaging: $n$ operating systems, $m$ applications.
 - Data visualization: $n$ programming languages, $m$ visualization grammars.
 - Shell completion: $n$ shells, $m$ command line applications.
+- Terraform, Iac
 
 [LLVM]: https://llvm.org/
 [ffmpeg]: https://ffmpeg.org/
