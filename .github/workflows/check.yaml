@@ -17,6 +17,30 @@ jobs:
 
       - run: bundle install
 
+      - name: build
+        run: |
+          bundle exec jekyll build --strict_front_matter 2>&1 | tee build.log
+
+          # Check for warnings in the build output
+          if grep -i "warning" build.log; then
+            echo "❌ Jekyll build produced warnings"
+            exit 1
+          fi
+
+          echo "✓ Jekyll build completed successfully without warnings"
+
+      - name: check that site was generated
+        run: |
+          if [ ! -d "_site" ]; then
+            echo "Error: _site directory was not created"
+            exit 1
+          fi
+          if [ -z "$(ls -A _site)" ]; then
+            echo "Error: _site directory is empty"
+            exit 1
+          fi
+          echo "✓ Site generated successfully"
+
   check-stats-script:
     runs-on: ubuntu-latest
     steps:
