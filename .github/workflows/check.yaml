@@ -64,7 +64,7 @@ jobs:
             echo "words_per_month.png is missing!"
             exit 1
           fi
-          if [ ! -f ./_stats/cumulative_words.png ]; then
-            echo "cumulative_words.png is missing!"
+          if [ ! -f ./_stats/cumulative_words_per_month.png ]; then
+            echo "cumulative_words_per_month.png is missing!"
             exit 1
           fi
