@@ -31,8 +31,7 @@ jobs:
       - run: uv sync
         working-directory: ./_stats
 
-      - name: make
-        run: make
+      - run: make
         working-directory: ./_stats
 
       - name: verify
