@@ -32,3 +32,14 @@ jobs:
       - name: make
         run: make
         working-directory: ./_stats
+
+      - name: verify
+        run: |
+          if [ ! -f ./_stats/words_per_month.png ]; then
+            echo "words_per_month.png is missing!"
+            exit 1
+          fi
+          if [ ! -f ./_stats/cumulative_words.png ]; then
+            echo "cumulative_words.png is missing!"
+            exit 1
+          fi
