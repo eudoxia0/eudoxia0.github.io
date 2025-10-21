@@ -7,23 +7,10 @@ card: two-years-of-rust.webp
 I recently wrapped up a job where I spent the last two years writing the backend of a B2B SaaS product in [Rust], so now is the ideal time to reflect on the experience and write about it.
 
 # Contents
+{: .no_toc }
 
-1. [Learning](#learning)
-1. [The Good](#good)
-    1. [Performance](#perf)
-    1. [Tooling](#tooling)
-    1. [Type Safety](#types)
-    1. [Error Handling](#error)
-    1. [The Borrow Checker](#borrow)
-    1. [Async](#async)
-    1. [Refactoring](#refactoring)
-    1. [Hiring](#hiring)
-    1. [Affect](#affect)
-1. [The Bad](#bad)
-    1. [The Module System](#modules)
-    1. [Build Performance](#build-perf)
-    1. [Mocking](#mock)
-    1. [Expressive Power](#power)
+1. toc
+{:toc}
 
 # Learning {#learning}
 
@@ -382,6 +369,7 @@ Alternatively, you might deny the entire necessity of mocking, and write code wi
 It's easy to go insane with proc macros and trait magic and build an incomprehensible codebase where it's impossible to follow the flow of control or debug anything. You have to rein it in.
 
 # Footnotes
+{: .no_toc }
 
 [^reg]: If modules were separate compilation units this wouldn't work. If module A depends on B, to compile A you need to first compile B to know what declarations it exports and what their types are. But if B also depends on A, you have an infinite regression.
 

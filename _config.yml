@@ -7,11 +7,12 @@ markdown: kramdown
 
 kramdown:
   parse_block_html: true
+  toc_levels: 1..2
 
 highlighter: rouge
 
 sass:
-    style: :compressed
+  style: :compressed
 
 defaults:
   - scope:
@@ -22,7 +23,6 @@ defaults:
       path: "fiction"
     values:
       layout: fiction
-
 
 permalink: /:categories/:title
 

@@ -60,6 +60,14 @@ This is a repository for my [projects][port], [blog][blog], and
 1. [Lessons from Writing a Compiler](/article/lessons-writing-compiler)
 1. [Signed Integers are Asymmetrical](/article/signed-integers-asymmetrical)
 
+# Podcasts
+
+Podcasts I have been on:
+
+1. [The Stewart Mackenzie Indaba #31](https://www.youtube.com/watch?v=qMjxZHZkPIM)
+2. [Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
+3. [Func Prog Podcast #6](https://www.youtube.com/watch?v=QcBaJBAQfQo)
+
 # Colophon
 
 This website is built with [Emacs][emacs], [Jekyll][jekyll], and
@@ -83,5 +91,23 @@ This website is built with [Emacs][emacs], [Jekyll][jekyll], and
 [derby]: https://en.wikipedia.org/wiki/Joseph_Wright_of_Derby
 [jason]: https://en.wikipedia.org/wiki/Jason_and_Medea_(painting)
 [mermaid]: https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_A_Mermaid.jpg
+
+# 🍵
+
+This website is part of the [matcha monday webring][mmw].
+
+- Previous: <span id="prev"><i>Loading...</i></span>
+- Next: <span id="next"><i>Loading...</i></span>
+
+<script type="module">
+  import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
+  const neighbors = getRingNeighbors("https://borretti.me/about");
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  prev.innerHTML = `<a href="${neighbors.previous.url}">${neighbors.previous.name}</a>`
+  next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name}</a>`
+</script>
+
+[mmw]: https://www.matchamonday.net/
 
 </article>

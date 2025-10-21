@@ -6,23 +6,10 @@ summary: Better SQL through typed, composable query fragments.
 SQL could be improved somewhat by introducing composable query fragments with statically-typed interfaces. I begin by explaining two areas (testing and reusing business logic) where SQL does very poorly. Then I explain my solution, and how it addresses the problems.
 
 # Contents
+{: .no_toc }
 
-1. [Motivation](#motivation)
-    1. [Testing](#testing)
-    1. [Business Logic](#logic)
-        1. [Duplication](#dup)
-        1. [Denormalization](#denorm)
-        1. [Views](#views)
-1. [The Solution](#sol)
-    1. [Functors](#func)
-    1. [Functors for Testing](#funtest)
-    1. [Functors for Business Logic](#funlog)
-1. [Conclusion](#conclusion)
-1. [Appendices](#app)
-    1. [Apendix: Generics](#generics)
-    1. [Appendix: Generalizing Business Logic](#general)
-    1. [Appendix: Naming](#naming)
-    1. [Appendix: Global Variables](#global)
+1. toc
+{:toc}
 
 # Motivation {#motivation}
 
@@ -582,6 +569,7 @@ Functors can specify the tables they depend on as parameters. A more interesting
 Why would this be useful? Because SQL tables are _global variables_. By vanishing global variables, we automatically make every query fully testable.
 
 # Footnotes
+{: .no_toc }
 
 [^null]: For brevity, I'm omitting `not null` declarations.
 
