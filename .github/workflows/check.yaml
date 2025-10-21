@@ -1,8 +1,8 @@
-name: check jekyll build
+name: check
 on: push
 
 jobs:
-  build:
+  check-jekyll-build:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,3 +14,21 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
+
+  check-stats-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v5
+
+      - name: install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - run: uv sync
+        working-directory: ./_stats
+
+      - name: make
+        run: make
+        working-directory: ./_stats
