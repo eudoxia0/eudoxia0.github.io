@@ -1,11 +1,6 @@
 .PHONY: all
 
-all: words_per_month.png \
-	cumulative_words_per_month.png \
-	assets/content/design-austral-compiler/pipeline.png
-
-assets/content/design-austral-compiler/pipeline.png: assets/content/design-austral-compiler/pipeline.dot
-	dot -T png assets/content/design-austral-compiler/pipeline.dot -o assets/content/design-austral-compiler/pipeline.png
+all: words_per_month.png cumulative_words_per_month.png
 
 POSTS := article/_posts/*.md
 
@@ -17,6 +12,5 @@ cumulative_words_per_month.png: $(POSTS) stats.py
 
 .PHONY: clean
 clean:
-	rm -f assets/content/design-austral-compiler/pipeline.png
 	rm -f words_per_month.png
 	rm -f cumulative_words_per_month.png
