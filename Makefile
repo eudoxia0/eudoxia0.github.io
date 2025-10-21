@@ -15,10 +15,6 @@ words_per_month.png: $(POSTS) stats.py
 cumulative_words_per_month.png: $(POSTS) stats.py
 	python3 stats.py cumulative_words_per_month
 
-.PHONY: serve
-serve:
-	jekyll serve --watch --future --drafts
-
 .PHONY: clean
 clean:
 	rm -f assets/content/design-austral-compiler/pipeline.png
