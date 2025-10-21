@@ -6,7 +6,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-POSTS_DIRECTORY: Path = Path("article/_posts/")
+POSTS_DIRECTORY: Path = Path("../article/_posts/")
 
 
 def _read_file_contents(file_path: Path) -> str:
@@ -70,11 +70,14 @@ class Post:
     def year_month(self) -> YearMonth:
         return YearMonth(year=self.year, month=self.month)
 
+
 def earliest_month(posts: list[Post]) -> YearMonth:
     return sorted(posts, key=lambda p: p.year_month())[0].year_month()
 
+
 def latest_month(posts: list[Post]) -> YearMonth:
     return sorted(posts, key=lambda p: p.year_month())[-1].year_month()
+
 
 def all_months(posts: list[Post]) -> list[YearMonth]:
     first: YearMonth = earliest_month(posts)
@@ -134,6 +137,7 @@ def plot_words_per_month(posts: list[Post]) -> None:
     # Save the plot as a PNG file
     plt.savefig("words_per_month.png", dpi=300)
 
+
 def plot_cumulative_words_per_month(posts: list[Post]) -> None:
     # Initialize a defaultdict with int (default: 0)
     words_per_month = defaultdict(int)
@@ -166,7 +170,9 @@ def plot_cumulative_words_per_month(posts: list[Post]) -> None:
 
     # Create a bar chart using matplotlib
     plt.figure(figsize=(12, 6))
-    plt.bar(sorted_months, [cumulative_words_per_month[month] for month in sorted_months])
+    plt.bar(
+        sorted_months, [cumulative_words_per_month[month] for month in sorted_months]
+    )
     plt.xticks(fontsize=8, rotation=90, ha="right")
     plt.xlabel("Month")
     plt.ylabel("Cumulative Words Written")
@@ -174,6 +180,7 @@ def plot_cumulative_words_per_month(posts: list[Post]) -> None:
     plt.tight_layout()
     # Save the plot as a PNG file
     plt.savefig("cumulative_words_per_month.png", dpi=300)
+
 
 def main():
     if len(sys.argv) != 2:
