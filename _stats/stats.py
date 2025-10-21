@@ -92,7 +92,7 @@ def all_months(posts: list[Post]) -> list[YearMonth]:
 
 
 def get_posts_from_directory(directory_path: Path) -> list[Post]:
-    posts = []
+    posts: list[Post] = []
     for file_path in directory_path.glob("*.md"):
         post = Post.from_file_path(file_path)
         posts.append(post)
@@ -101,7 +101,7 @@ def get_posts_from_directory(directory_path: Path) -> list[Post]:
 
 def plot_words_per_month(posts: list[Post]) -> None:
     # Initialize a defaultdict with int (default: 0)
-    words_per_month = defaultdict(int)
+    words_per_month: defaultdict[str, int] = defaultdict(int)
 
     # Iterate through the posts and aggregate the word count by month
     for post in posts:
@@ -140,8 +140,8 @@ def plot_words_per_month(posts: list[Post]) -> None:
 
 def plot_cumulative_words_per_month(posts: list[Post]) -> None:
     # Initialize a defaultdict with int (default: 0)
-    words_per_month = defaultdict(int)
-    cumulative_words_per_month = defaultdict(int)
+    words_per_month: defaultdict[str, int] = defaultdict(int)
+    cumulative_words_per_month: defaultdict[str, int] = defaultdict(int)
 
     # Iterate through the posts and aggregate the word count by month
     for post in posts:
