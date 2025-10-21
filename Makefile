@@ -10,10 +10,10 @@ assets/content/design-austral-compiler/pipeline.png: assets/content/design-austr
 POSTS := article/_posts/*.md
 
 words_per_month.png: $(POSTS) stats.py
-	python stats.py words_per_month
+	python3 stats.py words_per_month
 
 cumulative_words_per_month.png: $(POSTS) stats.py
-	python stats.py cumulative_words_per_month
+	python3 stats.py cumulative_words_per_month
 
 .PHONY: serve
 serve:
