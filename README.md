@@ -1,5 +1,6 @@
 # Personal Site
 
+[![check](https://github.com/eudoxia0/eudoxia0.github.io/actions/workflows/check.yaml/badge.svg)](https://github.com/eudoxia0/eudoxia0.github.io/actions/workflows/check.yaml)
 [![pages-build-deployment](https://github.com/eudoxia0/eudoxia0.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/eudoxia0/eudoxia0.github.io/actions/workflows/pages/pages-build-deployment)
 
 You can find the live version [here][site].
