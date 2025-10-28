@@ -364,7 +364,7 @@ In other words, in a CR relation, connectedness and joinability are the same pro
 
 ## Confluence
 
-A reduction is called **confluent** when $x \pluspath y_1$ and $x \pluspath y_2$ implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then they are joinable. More formally:
+A reduction is called **confluent** when $x \starpath y_1$ and $x \starpath y_2$ implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then they are joinable. More formally:
 
 $$
 \text{Confluent}(R) \iff \left(
