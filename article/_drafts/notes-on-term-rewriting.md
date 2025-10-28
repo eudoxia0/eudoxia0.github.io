@@ -694,15 +694,30 @@ If $\text{Confluent}(R)$ and $x \conv y$ then:
 
 What this means intuitively is that for a confluent relation, terms being in normal form put constraints on how they can be connected. If we know $x \conv y$ and $y$ is a normal form, then $x$ can only be an ancestor of $y$  (or $y$ itself). If both are normal forms, then neither can be converted to the other, since no rewrite rules apply to either. Therefore, they must be the same term.
 
-**Proof:**
+**Proof of point 1:**
 
-Self-evidently true.
+We know $x \conv y$. There are five ways in which two terms can be convertible:
+
+1. Left-ancestry: $x \pluspath y$
+1. Right-ancestry: $x \stackrel{+}{\leftarrow} y$
+1. Common ancestry: $\exists z . x \stackrel{*}{\leftarrow} z \starpath y$
+1. Join: $\exists z . x \starpath z \stackrel{*}{\leftarrow} y$
+1. Identity: $x=y$
+
+Since $y$ is a normal form, it can't be right-ancestry or join (i.e.: no arrows can flow out of $y$). And it can't be common ancestry: if $x$ and $y$ had a common ancestor, then, by confluence, they'd be joinable, but $y$ can't be joinable because it's a normal form. This leaves two options:
+
+1. $x \pluspath y$, or
+2. $x = y$
+
+Or, more succinctly: $x \starpath y$.
+
+**Proof of point 2:**
+
+Now suppose both $x$ and $y$ are normal. We can rule out left-ancestry, right-ancestry, and join. Confluence means we can throw out common ancestry because it would lead to a contradiction. And so we have one option left: $x=y$.
 
 **Weakening:**
 
-Why is confluence a requirement for this theorem?
-
-Consider the relation defined by:
+Why is confluence a requirement for this theorem? Consider the relation defined by:
 
 $$
 b' \leftarrow b \leftarrow a \to c
