@@ -390,15 +390,21 @@ A reduction is called **convergent** if it is both confluent and terminating.
 
 ## The Church-Rosser Property
 
-A relation is called **Church-Rosser** iff $x \stackrel{*}{\leftrightarrow} y \implies x \join y$. More formally:
+A relation is called **Church-Rosser** iff $x \stackrel{*}{\leftrightarrow} y
+\implies x \join y$. More formally:
 
 $$
 \text{ChurchRosser}(R) \iff \left( x \stackrel{*}{\leftrightarrow} y \implies x \join y \right)
 $$
 
-(The name is because Alonzo Church and J. Barkley Rosser proved the $\lambda$ calculus has this property.)
+(The name is because Alonzo Church and J. Barkley Rosser proved the $\lambda$
+calculus has this property.)
 
-Note that the dual of the right hand side is always true. That is: it is a theorem that  $x \downarrow y \implies x \stackrel{*}{\leftrightarrow} y$. The intuitive proof is that if you can get from $x$ or $y$ to a common normal form $z$, then, once you erase the direction of the arrows, there is a path connecting $x$ and $y$.
+Note that the dual of the right hand side is always true. That is: it is a
+theorem that $x \downarrow y \implies x \stackrel{*}{\leftrightarrow} y$. The
+intuitive proof is that if you can get from $x$ or $y$ to a common normal form
+$z$, then, once you erase the direction of the arrows, there is a path
+connecting $x$ and $y$.
 
 The formal proof is:
 
@@ -412,11 +418,14 @@ $$
 \text{ChurchRosser}(R) \iff \left( x \stackrel{*}{\leftrightarrow} y \iff x \join y \right)
 $$
 
-In other words, in a CR relation, connectedness and joinability are the same property.
+In other words, in a CR relation, connectedness and joinability are the same
+property.
 
 ## Confluence
 
-A reduction is called **confluent** when $x \starpath y_1$ and $x \starpath y_2$ implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then they are joinable. More formally:
+A reduction is called **confluent** when $x \starpath y_1$ and $x \starpath y_2$
+implies $y_1 \join y_2$. In English: if two terms have a common ancestor, then
+they are joinable. More formally:
 
 $$
 \text{Confluent}(R) \iff \left(
@@ -424,7 +433,8 @@ $$
 \right)
 $$
 
-Confluence feels like a weaker property than CR: "two terms have a common ancestor" is clearly a strict subset of "two terms are connected in some way".
+Confluence feels like a weaker property than CR: "two terms have a common
+ancestor" is clearly a strict subset of "two terms are connected in some way".
 
 However, confluence and the Church-Rosser property are the same thing! That is:
 
@@ -448,7 +458,9 @@ The CR property means: if two terms are convertible, they are joinable.
 
 Confluence means: if two terms have a common ancestor, they are joinable.
 
-Clearly, "having a common ancestor" implies convertibility. Because two terms are convertible if they are connected in any way, and common ancestry is a way of being connected.
+Clearly, "having a common ancestor" implies convertibility. Because two terms
+are convertible if they are connected in any way, and common ancestry is a way
+of being connected.
 
 **Formal Proof:**
 
@@ -469,7 +481,8 @@ $$
 \EndKB
 $$
 
-From this we can derive $y_1 \conv y_2$. Why? Because both terms have a common ancestor at $x$, so we can "join the chains" at $x$.
+From this we can derive $y_1 \conv y_2$. Why? Because both terms have a common
+ancestor at $x$, so we can "join the chains" at $x$.
 
 $$
 \BeginKB
@@ -528,9 +541,11 @@ $$
 
 ## Semi-Confluence
 
-The proof that confluence implies the CR property is harder. To make is simpler, we introduce an intermediate definition.
+The proof that confluence implies the CR property is harder. To make is simpler,
+we introduce an intermediate definition.
 
-A relation is **semi-confluent** iff $x \to y$ and $x \starpath y_2$ implies $y_1 \join y_2$. More formally:
+A relation is **semi-confluent** iff $x \to y$ and $x \starpath y_2$ implies
+$y_1 \join y_2$. More formally:
 
 $$
 \text{Semiconfluent}(R) \iff \left(
@@ -538,7 +553,8 @@ y_1 \leftarrow x \starpath y_2 \implies y_1 \join y_2
 \right)
 $$
 
-The intuitive meaning is: if $y_1$ has $x$ as a direct ancestor, and $y_2$ has $x$ as an ancestor (direct or otherwise), then $y_1$ and $y_2$ are joinable.
+The intuitive meaning is: if $y_1$ has $x$ as a direct ancestor, and $y_2$ has
+$x$ as an ancestor (direct or otherwise), then $y_1$ and $y_2$ are joinable.
 
 ## Theorem: Confluence implies SC
 
@@ -566,13 +582,17 @@ Let:
 
 Then: if $y \to y'$ or $y \leftarrow y'$, then $x \join y'$.
 
-Less formally: if $R$ is semiconfluent and we have $x$ and $y$ which are convertible and joinable, extending the chain by one element means the new chain is still joinable.
+Less formally: if $R$ is semiconfluent and we have $x$ and $y$ which are
+convertible and joinable, extending the chain by one element means the new chain
+is still joinable.
 
 **Intuitive Proof:**
 
-In the forward case we have $x \conv y \to y'$. The definition of semiconfluence means $x \join y'$.
+In the forward case we have $x \conv y \to y'$. The definition of semiconfluence
+means $x \join y'$.
 
-In the backward case we have $x \conv y \leftarrow y'$. By transitivity: $y' \to y \starpath z$. And since $x \starpath z$ we know $x \join y'$.
+In the backward case we have $x \conv y \leftarrow y'$. By transitivity: $y' \to
+y \starpath z$. And since $x \starpath z$ we know $x \join y'$.
 
 **Formal Proof:**
 
@@ -588,7 +608,8 @@ $$
 
 **Intuitive Proof:**
 
-Let $R$ be a semiconfluent relation. Assume a chain $x \conv y$ exists. Then, using the fact of semiconfluence, prove that the chain is joinable.
+Let $R$ be a semiconfluent relation. Assume a chain $x \conv y$ exists. Then,
+using the fact of semiconfluence, prove that the chain is joinable.
 
 **Proof:**
 
@@ -609,9 +630,11 @@ $$
 \EndKB
 $$
 
-Let $P_n$ stand for the statement: $x \conv y$ has length $n$ and $x \join y$. We need to prove $P$ for all $n$.
+Let $P_n$ stand for the statement: $x \conv y$ has length $n$ and $x \join
+y$. We need to prove $P$ for all $n$.
 
-The base case, $P_0$, is trivial: in a chain of length zero, $x = y$ and $x = x \join x$.
+The base case, $P_0$, is trivial: in a chain of length zero, $x = y$ and $x = x
+\join x$.
 
 $$
 \BeginKB
@@ -632,9 +655,12 @@ $$
 \EndKB
 $$
 
-That is: we have a chain $x \conv y$ of length $k$ and we have proven there exists a $z = x \join y$.
+That is: we have a chain $x \conv y$ of length $k$ and we have proven there
+exists a $z = x \join y$.
 
-We now extend the chain to length $k+1$ by adding a term $y'$ on the right. There are two ways of doing this: $x \conv y \to y'$ or $x \conv y \leftarrow y'$.
+We now extend the chain to length $k+1$ by adding a term $y'$ on the
+right. There are two ways of doing this: $x \conv y \to y'$ or $x \conv y
+\leftarrow y'$.
 
 $$
 \BeginKB
@@ -744,7 +770,11 @@ If $\text{Confluent}(R)$ and $x \conv y$ then:
 
 **Intuition:**
 
-What this means intuitively is that for a confluent relation, terms being in normal form put constraints on how they can be connected. If we know $x \conv y$ and $y$ is a normal form, then $x$ can only be an ancestor of $y$  (or $y$ itself). If both are normal forms, then neither can be converted to the other, since no rewrite rules apply to either. Therefore, they must be the same term.
+What this means intuitively is that for a confluent relation, terms being in
+normal form put constraints on how they can be connected. If we know $x \conv y$
+and $y$ is a normal form, then $x$ can only be an ancestor of $y$ (or $y$
+itself). If both are normal forms, then neither can be converted to the other,
+since no rewrite rules apply to either. Therefore, they must be the same term.
 
 **Proof of point 1:**
 
@@ -756,7 +786,10 @@ We know $x \conv y$. There are five ways in which two terms can be convertible:
 1. Join: $\exists z . x \starpath z \stackrel{*}{\leftarrow} y$
 1. Identity: $x=y$
 
-Since $y$ is a normal form, it can't be right-ancestry or join (i.e.: no arrows can flow out of $y$). And it can't be common ancestry: if $x$ and $y$ had a common ancestor, then, by confluence, they'd be joinable, but $y$ can't be joinable because it's a normal form. This leaves two options:
+Since $y$ is a normal form, it can't be right-ancestry or join (i.e.: no arrows
+can flow out of $y$). And it can't be common ancestry: if $x$ and $y$ had a
+common ancestor, then, by confluence, they'd be joinable, but $y$ can't be
+joinable because it's a normal form. This leaves two options:
 
 1. $x \pluspath y$, or
 2. $x = y$
@@ -765,11 +798,14 @@ Or, more succinctly: $x \starpath y$.
 
 **Proof of point 2:**
 
-Now suppose both $x$ and $y$ are normal. We can rule out left-ancestry, right-ancestry, and join. Confluence means we can throw out common ancestry because it would lead to a contradiction. And so we have one option left: $x=y$.
+Now suppose both $x$ and $y$ are normal. We can rule out left-ancestry,
+right-ancestry, and join. Confluence means we can throw out common ancestry
+because it would lead to a contradiction. And so we have one option left: $x=y$.
 
 **Weakening:**
 
-Why is confluence a requirement for this theorem? Consider the relation defined by:
+Why is confluence a requirement for this theorem? Consider the relation defined
+by:
 
 $$
 b' \leftarrow b \leftarrow a \to c
@@ -781,11 +817,14 @@ $$
 R = \set{(a, b), (a, c), (b, b')}
 $$
 
-Here, $c$ is in normal form, and $b \conv c$, but it is not true that $b \starpath c$. Also, both $b'$ and $c$ are normal forms, and $b' \conv c$, but it is not true that $b=c$.
+Here, $c$ is in normal form, and $b \conv c$, but it is not true that $b
+\starpath c$. Also, both $b'$ and $c$ are normal forms, and $b' \conv c$, but it
+is not true that $b=c$.
 
 ## Theorem
 
-If a relation $R$ is confluent, then every element has _at most_ one normal form, which we denote $x \join$.
+If a relation $R$ is confluent, then every element has _at most_ one normal
+form, which we denote $x \join$.
 
 **Proof:**
 
@@ -795,19 +834,23 @@ Let $\text{Confluent}(R)$ and pick a term $x$. There are two possibilities:
 2. $x$ has one normal form
 3. $x$ has more than one normal form
 
-The first two cases satisfy the theorem. For the third case: let $x$ have two normal forms $y$ and $z$. Therefore: $x \starpath y$ and $x \starpath z$.
+The first two cases satisfy the theorem. For the third case: let $x$ have two
+normal forms $y$ and $z$. Therefore: $x \starpath y$ and $x \starpath z$.
 
-However, by the definition of confluence, $y \join z$, which means they can't be in normal form. A contradiction.
+However, by the definition of confluence, $y \join z$, which means they can't be
+in normal form. A contradiction.
 
 So $x$ can have either zero or one normal forms.
 
 ## Theorem
 
-If a relation $R$ is normalizing and confluent, every element has a unique normal form.
+If a relation $R$ is normalizing and confluent, every element has a unique
+normal form.
 
 **Proof:**
 
-Normalizing means every $x$ must have a normal form $x \join$. So this is the previous theorem, excluding the zero case.
+Normalizing means every $x$ must have a normal form $x \join$. So this is the
+previous theorem, excluding the zero case.
 
 ## Theorem
 
@@ -819,7 +862,8 @@ $$
 
 **Forward Proof:**
 
-If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [Theorem 2.1.6](#theo_216), $x \join = y \join$.
+If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [Theorem
+2.1.6](#theo_216), $x \join = y \join$.
 
 **Backward Proof:**
 
@@ -837,9 +881,11 @@ $$
 }
 $$
 
-That is: if you can prove $P(x)$ under the assumption that $P$ holds for all successors of $x$, then $P(x)$ holds universally.
+That is: if you can prove $P(x)$ under the assumption that $P$ holds for all
+successors of $x$, then $P(x)$ holds universally.
 
-Where is the base case? For elements without a successor, there is no $y$ such that $x \pluspath y$, so the assumption is vacuously true.
+Where is the base case? For elements without a successor, there is no $y$ such
+that $x \pluspath y$, so the assumption is vacuously true.
 
 WFI doesn't hold for arbitrary $R$, only terminating $R$.
 
@@ -859,7 +905,8 @@ $$
 \neg \text{Valid}(\text{WFI}) \implies \neg \text{Terminating}(R)
 $$
 
-If WFI does not hold, that means there exists a predicate $P$ for which the premise holds but the conclusion does not. That is, this holds.
+If WFI does not hold, that means there exists a predicate $P$ for which the
+premise holds but the conclusion does not. That is, this holds.
 
 $$
 \forall x . \left( \forall y . x \pluspath y \implies P(y) \right) \implies P(x)
@@ -891,7 +938,8 @@ $$
 
 That is, there exists an $a_1$ such that $a_0 \to a_1$ and $\neg P(a_1)$.
 
-Now repeat the above logic with $a_1$ and we can derive the existence of $a_2$, $a_3$, and so on infinitely. Therefore, $R$ does not terminate.
+Now repeat the above logic with $a_1$ and we can derive the existence of $a_2$,
+$a_3$, and so on infinitely. Therefore, $R$ does not terminate.
 
 ## Theorem
 
@@ -901,19 +949,28 @@ If WFI holds, then $R$ terminates.
 
 Let $P(x)$ stand for "there is no infinite chain starting at $x$".
 
-Proving the induction step is easy: if there is no infinite chain starting at any successor of $x$, then there is no infinite chain starting from $x$. Since WFI holds by hypothesis, we conclude $P(x)$ for all $x$. And $P(x)$ holds for all $x$, then $R$ terminates.
+Proving the induction step is easy: if there is no infinite chain starting at
+any successor of $x$, then there is no infinite chain starting from $x$. Since
+WFI holds by hypothesis, we conclude $P(x)$ for all $x$. And $P(x)$ holds for
+all $x$, then $R$ terminates.
 
 ## Naming
 
-Terminating relations are also called **well-founded** or **Noetherian**. WFI is also called **Noetherian induction**.
+Terminating relations are also called **well-founded** or **Noetherian**. WFI is
+also called **Noetherian induction**.
 
 # Branching and Cycles
 
-We can use WFI to study some further properties of relations that relate to termination.
+We can use WFI to study some further properties of relations that relate to
+termination.
 
-A relation is called **finitely branching** if each element has only finitely many direct successors.
+A relation is called **finitely branching** if each element has only finitely
+many direct successors.
 
-A relation is called **globally finite** of each element has only finitely many successors. This _does not_ mean that the chains from each element are finite (since that would be the same as termination) but rather that the number of _distinct_ successors is finite. The cyclic relation:
+A relation is called **globally finite** of each element has only finitely many
+successors. This _does not_ mean that the chains from each element are finite
+(since that would be the same as termination) but rather that the number of
+_distinct_ successors is finite. The cyclic relation:
 
 $$
 \begin{align*}
@@ -922,9 +979,11 @@ $$
 \end{align*}
 $$
 
-is globally finite (since the set of successors for each element is $\set{a, b}$) but not terminating because it has a cycle.
+is globally finite (since the set of successors for each element is $\set{a,
+b}$) but not terminating because it has a cycle.
 
-A relation is called **acyclic** if there is no element $a$ such that $a \pluspath a$.
+A relation is called **acyclic** if there is no element $a$ such that $a
+\pluspath a$.
 
 ## Counterexample
 
@@ -936,7 +995,8 @@ $$
 R = \set{ (a, n) \mid n \in \N } \cup \set{ (n, b) \mid n \in \N }
 $$
 
-That is: $a$ rewrites to any natural number (infinitely-branching), and every natural number rewrites to $b$.
+That is: $a$ rewrites to any natural number (infinitely-branching), and every
+natural number rewrites to $b$.
 
 ## Theorem: Global Finitude Criterion {#gfc}
 
@@ -951,9 +1011,11 @@ $$
 An element can have infinitely many successors in two ways:
 
 - Depth: a chain that never terminates.
-- Width: infinitely many direct successors (e.g., a relation that rewrites a natural number $n$ into every number $m$ with $m > n$)
+- Width: infinitely many direct successors (e.g., a relation that rewrites a
+  natural number $n$ into every number $m$ with $m > n$)
 
-If a relation is terminating, every chain is finite. And if it's finitely-branching, every element has finitely many direct successors.
+If a relation is terminating, every chain is finite. And if it's
+finitely-branching, every element has finitely many direct successors.
 
 Therefore, the number of successors of an element must be finite.
 
@@ -967,9 +1029,14 @@ $$
 \forall x . \forall y . x \pluspath y \implies P(y)
 $$
 
-Where $P(x)$ means "$x$ has finitely many successors". What the above says is: for all terms $x$, the successors of $x$ all have finitely many successors.
+Where $P(x)$ means "$x$ has finitely many successors". What the above says is:
+for all terms $x$, the successors of $x$ all have finitely many successors.
 
-Let $x$ be an arbitrary term with direct successors $\{y_0, y_1, \ldots, y_n\}$. We know this set is finite because $R$ is finitely-branching. From the induction hypothesis, we know that $y_0, \ldots, y_n$ each have finitely-many successors. Therefore, $x$ itself has finitely many successors, since the sum of finitely-many natural numbers is finite.
+Let $x$ be an arbitrary term with direct successors $\{y_0, y_1, \ldots,
+y_n\}$. We know this set is finite because $R$ is finitely-branching. From the
+induction hypothesis, we know that $y_0, \ldots, y_n$ each have finitely-many
+successors. Therefore, $x$ itself has finitely many successors, since the sum of
+finitely-many natural numbers is finite.
 
 We have proven:
 
@@ -977,7 +1044,8 @@ $$
 \forall x . \left( \forall y . x \pluspath y \implies P(y) \right) \implies P(x)
 $$
 
-Since $R$ is terminating, we can invoke WFI. By WFI: $P(x)$ holds for all $x$, i.e., $R$ is globally finite.
+Since $R$ is terminating, we can invoke WFI. By WFI: $P(x)$ holds for all $x$,
+i.e., $R$ is globally finite.
 
 ## Theorem
 
@@ -989,21 +1057,31 @@ $$
 
 **Informal Proof:**
 
-If $R$ is acyclic, the chains starting from an element $a$ cannot reach back to $a$. And if $R$ is globally finite, $a$ has finitely-many successors. So eventually each of those chains must terminate.
+If $R$ is acyclic, the chains starting from an element $a$ cannot reach back to
+$a$. And if $R$ is globally finite, $a$ has finitely-many successors. So
+eventually each of those chains must terminate.
 
 **Formal Proof:**
 
-Let $R$ be an acyclic GF relation. Assume $R$ does not terminate, that is: there exists an infinite chain:
+Let $R$ be an acyclic GF relation. Assume $R$ does not terminate, that is: there
+exists an infinite chain:
 
 $$
 x_0 \to x_1 \to x_2 \to \ldots
 $$
 
-Since $R$ is acyclic, $x_i \neq x_j$ for all $i \neq j$. Therefore $x_0$ has infinitely-many distinct successors. Which contradicts the GF assumption. So we have a contradiction. Therefore $R$ terminates.
+Since $R$ is acyclic, $x_i \neq x_j$ for all $i \neq j$. Therefore $x_0$ has
+infinitely-many distinct successors. Which contradicts the GF assumption. So we
+have a contradiction. Therefore $R$ terminates.
 
 # Proving Termination
 
-is undecidable in general (Turing, 1936), but not impossible in every single case. For example it is trivial to prove that $\set{a, b}$ with the relation $\set{(a,b)}$ terminates, however uninteresting this may be. Analogously there are proof techniques to prove termination in larger systems. This is a problem in the design of languages for high-integrity systems: how to have the most expressivity while retaining the ability to prove termination.
+is undecidable in general (Turing, 1936), but not impossible in every single
+case. For example it is trivial to prove that $\set{a, b}$ with the relation
+$\set{(a,b)}$ terminates, however uninteresting this may be. Analogously there
+are proof techniques to prove termination in larger systems. This is a problem
+in the design of languages for high-integrity systems: how to have the most
+expressivity while retaining the ability to prove termination.
 
 ## Preliminary: Preimages
 
@@ -1013,25 +1091,37 @@ $$
 f^{-1}[S] = \set{ x \in A \mid f(x) \in S }
 $$
 
-That is: the preimage of $S$ under $f$ is the set of $x \in A$ that $f$ maps to $S$.
+That is: the preimage of $S$ under $f$ is the set of $x \in A$ that $f$ maps to
+$S$.
 
 We can extend this to relations.
 
-Let $f: A \to B$ and $R \subseteq B \times B$. The preimage of $R$ under $f$ is the set:
+Let $f: A \to B$ and $R \subseteq B \times B$. The preimage of $R$ under $f$ is
+the set:
 
 $$
 f^{-1}[R] = \set{ (x, x') \in A \times A \mid (f(x), f(x')) \in R }
 $$
 
-That is: the preimage of a relation $R \subseteq B \times B$ under a function $f: A \to B$ is the set of pairs in $A \times A$ that are mapped by $f$ to pairs which are in $R$.
+That is: the preimage of a relation $R \subseteq B \times B$ under a function
+$f: A \to B$ is the set of pairs in $A \times A$ that are mapped by $f$ to pairs
+which are in $R$.
 
 ## Inverse Image Construction
 
-The most basic method for proving a rewrite system $(A, R)$ terminates is to embed it in another rewrite system $(B, S)$ that is known to terminate, using a monotone mapping function $\varphi : A \to B$, where **monotone** means that $R(x, x') \implies S(\varphi(x), \varphi(x'))$.
+The most basic method for proving a rewrite system $(A, R)$ terminates is to embed
+it in another rewrite system $(B, S)$ that is known to terminate, using a
+monotone mapping function $\varphi : A \to B$, where **monotone** means that
+$R(x, x') \implies S(\varphi(x), \varphi(x'))$.
 
-If $R$ was non-terminating, an infinite chain $x_0 \stackrel{R}{\to}x_1 \stackrel{R}{\to} \ldots$ would map into an infinite chain $\varphi(x_0) \stackrel{S}{\to} \varphi(x_1) \stackrel{S}{\to} \ldots$ which we know can't be true since $S$ terminates.
+If $R$ was non-terminating, an infinite chain $x_0 \stackrel{R}{\to}x_1
+\stackrel{R}{\to} \ldots$ would map into an infinite chain $\varphi(x_0)
+\stackrel{S}{\to} \varphi(x_1) \stackrel{S}{\to} \ldots$ which we know can't be
+true since $S$ terminates.
 
-The mapping $\varphi$ is called a **measure function** and the whole process is called the **inverse image construction** because $R \subseteq \varphi^{-1}[S]$ where:
+The mapping $\varphi$ is called a **measure function** and the whole processis
+called the **inverse image construction** because $R \subseteq \varphi^{-1}[S]$
+where:
 
 $$
 \varphi^{-1}[S] = \set{ (x, x') \in A \times A \mid \varphi(x) \stackrel{S}{\to} \varphi(x') }
@@ -1049,15 +1139,19 @@ TODO
 
 ## Example: Embedding into $\N$
 
-The system $(\N, \gt)$ is known to terminate. Let $A$ bet the set of strings for some alphabet $\Sigma$.
+The system $(\N, \gt)$ is known to terminate. Let $A$ bet the set of strings for
+some alphabet $\Sigma$.
 
-One choice of mapping is length. Let $\varphi(w)$ be the length of the string $w$. This proves that all length-decreasing reductions terminate.
+One choice of mapping is length. Let $\varphi(w)$ be the length of the string
+$w$. This proves that all length-decreasing reductions terminate.
 
-Another choice is the number of letters. For each $a \in \Sigma$ define $\varphi_a(w)$ as the number of occurrences of $a$ in $w$.
+Another choice is the number of letters. For each $a \in \Sigma$ define
+$\varphi_a(w)$ as the number of occurrences of $a$ in $w$.
 
 ## Lemma
 
-A finitely-branching rewrite system $(A,R)$ terminates iff there is a monotone embedding into $(\N, \gt)$. More formally:
+A finitely-branching rewrite system $(A,R)$ terminates iff there is a monotone
+embedding into $(\N, \gt)$. More formally:
 
 $$
 \text{FB}(R) \implies \left(
@@ -1067,10 +1161,15 @@ $$
 
 **Informal Proof:**
 
-The backward direction is true because if there is a monotone mapping, then $R$ terminates.
-This is intuitively true but maybe should be lifted into its own result.
+The backward direction is true because if there is a monotone mapping, then $R$
+terminates.  This is intuitively true but maybe should be lifted into its own
+result.
 
-The forward direction (termination implies the existence of a monotone mapping): let $\varphi(x)$ be the number of successors of $x$. By the [global finitude criterion](#gfc), $R$ is globally finite, therefore, $\varphi(x)$ is finite, and $x \to x'$ implies that $x'$ has strictly fewer successors than $x$. That means $\varphi(x) \gt \varphi(x')$, and so the mapping is monotone.
+The forward direction (termination implies the existence of a monotone mapping):
+let $\varphi(x)$ be the number of successors of $x$. By the [global finitude
+criterion](#gfc), $R$ is globally finite, therefore, $\varphi(x)$ is finite, and
+$x \to x'$ implies that $x'$ has strictly fewer successors than $x$. That means
+$\varphi(x) \gt \varphi(x')$, and so the mapping is monotone.
 
 **Formal Proof:**
 
@@ -1078,7 +1177,8 @@ TODO
 
 ## Lexicographic Order
 
-Given two strict orders $(A, R_A)$ and $(B, R_B)$, the **lexicographic product** $R_{A \times B}$ defined on $A \times B$ is:
+Given two strict orders $(A, R_A)$ and $(B, R_B)$, the **lexicographic product**
+$R_{A \times B}$ defined on $A \times B$ is:
 
 $$
 R_{A \times B}((x, y), (x', y')) \iff R_A(x, x') \lor (x = x' \land R_B(y, y'))
@@ -1106,7 +1206,8 @@ $$
 y_1 \leftarrow x \rightarrow y_2 \implies y_1 \join y_2
 $$
 
-Local confluence is strictly weaker than confluence: that is, a relation can be locally confluent while not being confluent.
+Local confluence is strictly weaker than confluence: that is, a relation can be
+locally confluent while not being confluent.
 
 ## Newman's Lemma
 
@@ -1118,7 +1219,9 @@ $$
 
 **Informal Proof:**
 
-Since $R$ is terminating, we can use WFI. The induction predicate is the definition of global confluence: $\CA{y}{x}{z} \implies y \join z$. We prove that this holds under the assumption that it holds for all successors of $x$.
+Since $R$ is terminating, we can use WFI. The induction predicate is the
+definition of global confluence: $\CA{y}{x}{z} \implies y \join z$. We prove
+that this holds under the assumption that it holds for all successors of $x$.
 
 **Formal Proof:**
 
@@ -1128,14 +1231,21 @@ $$
 P(x) = \forall y, z . \CA{y}{x}{z} \implies y \join z
 $$
 
-Assume that $P(t)$ holds for all $t$ such that $x \pluspath t$. That is: if $t$ is a successor of $x$, then the successors of $t$ have a join.
+Assume that $P(t)$ holds for all $t$ such that $x \pluspath t$. That is: if $t$
+is a successor of $x$, then the successors of $t$ have a join.
 
 Now consider an arbitrary chain $\CA{y}{x}{y}$. Let's do case analysis:
 
-1. $x = y,    x = z$: the trivial chain, $x = x \join x$ and so $P(x)$ holds.
-2. $x = y,    x \neq z$: the chain $x \starpath z$, $P(x)$ holds since $z = x \join z$.
-3. $x \neq y, x = z$: the chain $y \stackrel{*}{\leftarrow} x$, $P(x)$ holds analogously.
-4. $x \neq y, x \neq z$: here we have $y \stackrel{*}{\leftarrow} y_1 \leftarrow x \rightarrow z_1 \starpath z$. By the local confluence assumption, $\exists u . u = y_1 \join z_1$. By assumption, we know $P(y_1)$ holds, that is, there exists a $v = y \join u$. Analogously, there exists a $w = v \join z$. Therefore, $P(x)$ holds.
+1. $x = y, x = z$: the trivial chain, $x = x \join x$ and so $P(x)$ holds.
+2. $x = y, x \neq z$: the chain $x \starpath z$, $P(x)$ holds since $z = x \join
+   z$.
+3. $x \neq y, x = z$: the chain $y \stackrel{*}{\leftarrow} x$, $P(x)$ holds
+   analogously.
+4. $x \neq y, x \neq z$: here we have $y \stackrel{*}{\leftarrow} y_1 \leftarrow
+   x \rightarrow z_1 \starpath z$. By the local confluence assumption, $\exists
+   u . u = y_1 \join z_1$. By assumption, we know $P(y_1)$ holds, that is, there
+   exists a $v = y \join u$. Analogously, there exists a $w = v \join
+   z$. Therefore, $P(x)$ holds.
 
 Graphically:
 
@@ -1153,13 +1263,18 @@ $$
 
 (Note: $\stackrel{=}{\leftarrow}$ is [reflexive closure](#reflexive-closure).)
 
-Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor of $z$ or equal to $z$. This implies: $z = y_1 \join y_2$.
+Less formally: $x$ being a direct ancestor of $y_1$ and $y_2$ means there exists
+an $z$ where $y_1$ is an ancestor of $z$ and $y_2$ is either a direct ancestor
+of $z$ or equal to $z$. This implies: $z = y_1 \join y_2$.
 
 Visually, strong confluence turns triangles into squares:
 
 ![](/assets/content/notes-on-term-rewriting/strong.png)
 
-Note that $y_1$ must be swappable WLOG. That is, if we have $b \leftarrow a \rightarrow c$ and the relation is strongly confluent, we must have both $\exists z_1 . b \starpath z_1 \stackrel{=}{\leftarrow} c$ and $\exists z_2 . c \starpath z_2 \stackrel{=}{\leftarrow} b$.
+Note that $y_1$ must be swappable WLOG. That is, if we have $b \leftarrow a
+\rightarrow c$ and the relation is strongly confluent, we must have both
+$\exists z_1 . b \starpath z_1 \stackrel{=}{\leftarrow} c$ and $\exists z_2 . c
+\starpath z_2 \stackrel{=}{\leftarrow} b$.
 
 ## Lemma
 
@@ -1171,7 +1286,9 @@ $$
 
 **Informal Proof:**
 
-By [this theorem](#theorem-church-rosser-equivalence), if we prove semiconfluence from strong confluence, we can prove confluence. Starting from strong confluence and doing induction on a chain we can prove semiconfluence.
+By [this theorem](#theorem-church-rosser-equivalence), if we prove
+semiconfluence from strong confluence, we can prove confluence. Starting from
+strong confluence and doing induction on a chain we can prove semiconfluence.
 
 **Formal Proof:**
 
@@ -1187,7 +1304,8 @@ $$
 y \leftarrow x \stackrel{n}{\rightarrow} y_n
 $$
 
-We need to prove that $y \join y_n$. We do this by induction on the length $n$ of the right side of the chain.
+We need to prove that $y \join y_n$. We do this by induction on the length $n$
+of the right side of the chain.
 
 For $n=0$, start with the chain
 
@@ -1203,7 +1321,9 @@ $$
 y \leftarrow x \rightarrow y_1
 $$
 
-By strong confluence, there exists a $z_1$ such that $y \stackrel{*}{\rightarrow} z_1$ and $z_1 \stackrel{=}{\leftarrow} y_1$. Therefore: $z_1 = y \join y_1$.
+By strong confluence, there exists a $z_1$ such that $y
+\stackrel{*}{\rightarrow} z_1$ and $z_1 \stackrel{=}{\leftarrow}
+y_1$. Therefore: $z_1 = y \join y_1$.
 
 For $n = k + 1$ and $k \geq 0$, we have:
 
@@ -1217,7 +1337,8 @@ $$
 y \stackrel{*}{\rightarrow} z_{k} \stackrel{=}{\leftarrow} y_k
 $$
 
-By strong confluence: $\exists z_{k+1} . y \stackrel{*}{\rightarrow} z_{k+1} \stackrel{=}{\leftarrow} y_{k+1}$. And, therefore: $z_{k+1} = y \join y_{k+1}$.
+By strong confluence: $\exists z_{k+1} . y \stackrel{*}{\rightarrow} z_{k+1}
+\stackrel{=}{\leftarrow} y_{k+1}$. And, therefore: $z_{k+1} = y \join y_{k+1}$.
 
 ## The Diamond Property
 
@@ -1247,11 +1368,15 @@ $$
 y_1 \leftarrow_1 x \rightarrow_2 y_2 \implies \exists z . y_1 \rightarrow_2 z \leftarrow_1 y_2
 $$
 
-Commutation is a generalization of confluence: confluence concerns one relation, commutation two. Note that a relation $\to$ is confluent if $\to$ and $\to$ commute.
+Commutation is a generalization of confluence: confluence concerns one relation,
+commutation two. Note that a relation $\to$ is confluent if $\to$ and $\to$
+commute.
 
 ## The Commutative Union Lemma
 
-The utility of commutation is we can apply divide-and-conquer to confluence proofs by dividing a relation into a set of commuting relations, and proving each one confluent. This is enabled by the commutative union lemma, which says:
+The utility of commutation is we can apply divide-and-conquer to confluence
+proofs by dividing a relation into a set of commuting relations, and proving
+each one confluent. This is enabled by the commutative union lemma, which says:
 
 If $R$ and $R'$ are confluent and commute, then $R \cup R'$ is confluent.
 
@@ -1275,22 +1400,30 @@ Proof:
 
 ## Signatures
 
-A **signature** $\Sigma$ is a set of **function symbols** to and a mapping $\Sigma \to \N$ that associates each symbol with an **arity**. For $n \in \N$, $\Sigma^{(n)} \subseteq \Sigma$ is the set of $n$-ary symbols. The members of $\Sigma^{(0)}$ are called **constant symbols**.
+A **signature** $\Sigma$ is a set of **function symbols** to and a mapping
+$\Sigma \to \N$ that associates each symbol with an **arity**. For $n \in \N$,
+$\Sigma^{(n)} \subseteq \Sigma$ is the set of $n$-ary symbols. The members of
+$\Sigma^{(0)}$ are called **constant symbols**.
 
 ## Terms
 
-Let $\Sigma$ be a signature, and $X$ a set of **variables**, such that $\Sigma \cap X = \empty$.
+Let $\Sigma$ be a signature, and $X$ a set of **variables**, such that $\Sigma
+\cap X = \empty$.
 
-The set of **$\Sigma$-terms over $X$**, denoted $T(\Sigma, X)$, is defined inductively by:
+The set of **$\Sigma$-terms over $X$**, denoted $T(\Sigma, X)$, is defined
+inductively by:
 
 - $\forall x \in X . x \in T(\Sigma, X)$ (every variable is a term)
-- $\forall n \in \N, f \in \Sigma^{(n)}, t_1, \dots, t_n \in T(\Sigma, X) . f(t_1, \dots, t_n) \in T(\Sigma, X)$ (applying an $n$n-ary function to $n$ terms yields a term)
+- $\forall n \in \N, f \in \Sigma^{(n)}, t_1, \dots, t_n \in T(\Sigma, X)
+  . f(t_1, \dots, t_n) \in T(\Sigma, X)$ (applying an $n$n-ary function to $n$
+  terms yields a term)
 
 ## Positions
 
 A **position** is a vector of natural numbers.
 
-Let $t \in T(\Sigma, X)$. The set of positions of $t$, denoted $\mathcal{Pos}(t)$, is defined by:
+Let $t \in T(\Sigma, X)$. The set of positions of $t$, denoted
+$\mathcal{Pos}(t)$, is defined by:
 
 $$
 \mathcal{Pos}(t) =
@@ -1452,7 +1585,9 @@ $$
 R(a, b) \implies R(t[a]_p, t[b]_p)
 $$
 
-For any $t \in T(\Sigma, V)$ and $p \in \pos(t)$. In other words: any term that contains $a$ is related to itself where $a$ has been replaced with $b$ at a given position $p$.
+For any $t \in T(\Sigma, V)$ and $p \in \pos(t)$. In other words: any term that
+contains $a$ is related to itself where $a$ has been replaced with $b$ at a
+given position $p$.
 
 ## Lemma
 
@@ -1464,19 +1599,27 @@ $$
 
 **Proof:**
 
-Trivial. Since $\sigma$ can only replace variables, any $p$ in $\pos(t)$ must also be in $\pos(\sigma(t))$: positions can only ever be added by a substitution.
+Trivial. Since $\sigma$ can only replace variables, any $p$ in $\pos(t)$ must
+also be in $\pos(\sigma(t))$: positions can only ever be added by a
+substitution.
 
 ## Lemma
 
-Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is closed under substitutions.
+Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is closed
+under substitutions.
 
 **Informal Proof:**
 
-$R(a,b)$ means we have a $\sigma$ to make $\sigma(l) = \subterm{a}{p}$, and $a[\sigma(r)]_p = b$. To prove closure under substitution, we need to prove $R(\sigma'(a), \sigma'(b))$ for some arbitrary substitution $\sigma'$, that is, we need to find an $s$ such that $\subterm{\sigma'(a)}{p} = s(l)$ and $\sigma'(b) = \sigma'(a)[s(r)]_p$. Just let $s(t) = \sigma'(\sigma(t))$.
+$R(a,b)$ means we have a $\sigma$ to make $\sigma(l) = \subterm{a}{p}$, and
+$a[\sigma(r)]_p = b$. To prove closure under substitution, we need to prove
+$R(\sigma'(a), \sigma'(b))$ for some arbitrary substitution $\sigma'$, that is,
+we need to find an $s$ such that $\subterm{\sigma'(a)}{p} = s(l)$ and
+$\sigma'(b) = \sigma'(a)[s(r)]_p$. Just let $s(t) = \sigma'(\sigma(t))$.
 
 **Proof:**
 
-Assume $R_E(a, b)$. By the definition of $R_E$, there exists an $(l, r) \in E$, a $p \in \pos(s)$, and a $\sigma \in \mathcal{Sub}(\Sigma, V)$ such that:
+Assume $R_E(a, b)$. By the definition of $R_E$, there exists an $(l, r) \in E$,
+a $p \in \pos(s)$, and a $\sigma \in \mathcal{Sub}(\Sigma, V)$ such that:
 
 $$
 \subterm{a}{p} = \sigma(l)
@@ -1490,7 +1633,8 @@ $$
 
 Let $\sigma'$ be any substitution. We want to prove $R(\sigma'(a), \sigma'(b))$.
 
-Let $s(t) = \sigma'(\sigma(t))$. Then apply $\sigma'$ to both sides of $\subterm{a}{p} = \sigma(l)$:
+Let $s(t) = \sigma'(\sigma(t))$. Then apply $\sigma'$ to both sides of
+$\subterm{a}{p} = \sigma(l)$:
 
 $$
 \sigma'(\subterm{a}{p}) = \sigma'(\sigma(l))
@@ -1530,7 +1674,8 @@ This proves $R(\sigma'(a), \sigma'(b))$.
 
 ## Lemma
 
-Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is compatible with $\Sigma$ operations.
+Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is
+compatible with $\Sigma$ operations.
 
 **Proof:**
 
@@ -1538,13 +1683,17 @@ Let $E$ be a set of $\Sigma$ identities. The reduction relation $R_E$ is compati
 
 ## Remark
 
-$R_E$ need not be closed under $\Sigma$ operations, since reduction takes place at a single position.
+$R_E$ need not be closed under $\Sigma$ operations, since reduction takes place
+at a single position.
 
-Example: consider $E = \set{a \approx 1, b \approx 2}$. Clearly, $f(a, b) \to_E f(1, b)$ and $f(a,b) \to_E f(a, 2)$, but since we can't substitute in multiple places at once, we can't assert $f(a,b) \to_E f(1,2)$.
+Example: consider $E = \set{a \approx 1, b \approx 2}$. Clearly, $f(a, b) \to_E
+f(1, b)$ and $f(a,b) \to_E f(a, 2)$, but since we can't substitute in multiple
+places at once, we can't assert $f(a,b) \to_E f(1,2)$.
 
 ## Lemma
 
-Let $R$ be a binary relation on $T(\Sigma, V)$. Then $R$ is compatible with $\Sigma$ operations iff it is compatible with $\Sigma$ contexts.
+Let $R$ be a binary relation on $T(\Sigma, V)$. Then $R$ is compatible with
+$\Sigma$ operations iff it is compatible with $\Sigma$ contexts.
 
 **Proof:**
 
@@ -1552,7 +1701,9 @@ Let $R$ be a binary relation on $T(\Sigma, V)$. Then $R$ is compatible with $\Si
 
 ## Lemma
 
-Let $R$ be a binary relation on $T(\Sigma, V)$. If $R$ is reflexive and transitive, then it is compatible with $\Sigma$ operations iff it is closed under $\Sigma$ operations. More formally:
+Let $R$ be a binary relation on $T(\Sigma, V)$. If $R$ is reflexive and
+transitive, then it is compatible with $\Sigma$ operations iff it is closed
+under $\Sigma$ operations. More formally:
 
 $$
 \p{ \text{Refl}(R) \land \text{Trans}(R) }
@@ -1566,7 +1717,10 @@ $$
 
 ## Theorem
 
-Let $E$ be a set of $\Sigma$ identities. The relation $\stackrel{*}{\leftrightarrow}_E$ is the smallest equivalence relation on $T(\Sigma, V)$ that contains $E$ and is closed under substitution and $\Sigma$-operations.
+Let $E$ be a set of $\Sigma$ identities. The relation
+$\stackrel{*}{\leftrightarrow}_E$ is the smallest equivalence relation on
+$T(\Sigma, V)$ that contains $E$ and is closed under substitution and
+$\Sigma$-operations.
 
 **Proof:**
 
@@ -1579,35 +1733,47 @@ Algebras extend signatures with an interpretation of their function symbols.
 Let $\Sigma$ be a signature. A **$\Sigma$-algebra** $\mathcal A$ is:
 
 - a **carrier set** $A$, and
-- a mapping from each function symbol $f \in \Sigma^{(n)}$ to a function $f^{\mathcal A} : A^n \to A$.
+- a mapping from each function symbol $f \in \Sigma^{(n)}$ to a function
+  $f^{\mathcal A} : A^n \to A$.
 
 ## Example
 
-Consider $\Sigma_G = \set{e \to 0, i \to 1, f \to 2}$ (the G is for group). Let $\Z$ be the carrier set, and interpret $e$ as $0$, $i$ as negation, and $f$ as addition. The resulting algebra is the additive group of the integers.
+Consider $\Sigma_G = \set{e \to 0, i \to 1, f \to 2}$ (the G is for group). Let
+$\Z$ be the carrier set, and interpret $e$ as $0$, $i$ as negation, and $f$ as
+addition. The resulting algebra is the additive group of the integers.
 
 ## Subalgebras
 
-$\mathcal B$ is a subalgebra of $\mathcal A$ iff $B \subseteq A$ and $\forall n \in \N . \forall b_1, \dots, b_n \in B . f^{\mathcal B}(b_1, \dots, b_n) = f^{\mathcal A}(b_1, \dots, b_n) \land f^{\mathcal B}(b_1, \dots, b_n) \in B$.
+$\mathcal B$ is a subalgebra of $\mathcal A$ iff $B \subseteq A$ and $\forall n
+\in \N . \forall b_1, \dots, b_n \in B . f^{\mathcal B}(b_1, \dots, b_n) =
+f^{\mathcal A}(b_1, \dots, b_n) \land f^{\mathcal B}(b_1, \dots, b_n) \in B$.
 
 ## Generators
 
-Let $X$ be a subset of the carrier set of an algebra $\mathcal A$. The **$\Sigma$ subalgebra of $\mathcal A$ generated by $X$** is the smallest subalgebra of $A$ that contains $X$.
+Let $X$ be a subset of the carrier set of an algebra $\mathcal A$. The
+**$\Sigma$ subalgebra of $\mathcal A$ generated by $X$** is the smallest
+subalgebra of $A$ that contains $X$.
 
 ## Homomorphisms
 
-Let $\Sigma$ be a signature and $\mathcal A$, $\mathcal B$ be $\Sigma$ algebras. A $\Sigma$ **homomorphism** $\phi: \mathcal A \to \mathcal B$ is a mapping $A \to B$ such that:
+Let $\Sigma$ be a signature and $\mathcal A$, $\mathcal B$ be $\Sigma$
+algebras. A $\Sigma$ **homomorphism** $\phi: \mathcal A \to \mathcal B$ is a
+mapping $A \to B$ such that:
 
 $$
 \phi(f^{\mathcal A}(a_1, \dots, a_n)) = f^{\mathcal B}(\phi(a_1), \dots, \phi(a_n))
 $$
 
-If the mapping is surjective, then $\mathcal B$ is called a **homomorphic image** of $\mathcal A$.
+If the mapping is surjective, then $\mathcal B$ is called a **homomorphic
+image** of $\mathcal A$.
 
-If $\phi: \mathcal A \to \mathcal A$ then it's called an **endomorphism**, and a bijective endomorphism is called an **isomorphism**.
+If $\phi: \mathcal A \to \mathcal A$ then it's called an **endomorphism**, and a
+bijective endomorphism is called an **isomorphism**.
 
 ## Congruence
 
-Let $\mathcal A$ be a $\Sigma$ algebra. An equivalence relation $R$ on the carrier set $A$ is called a **congruence** on $\mathcal A$ iff:
+Let $\mathcal A$ be a $\Sigma$ algebra. An equivalence relation $R$ on the
+carrier set $A$ is called a **congruence** on $\mathcal A$ iff:
 
 $$
 \forall a_1 \equiv b_1, \dots, a_n \equiv b_n . f^{\mathcal A}(a_1, \dots, a_n) \equiv f^{\mathcal A}(b_1, \dots, b_n)
@@ -1615,7 +1781,8 @@ $$
 
 ## Quotient Algebras
 
-The **quotient algebra** $\mathcal{A} /_\equiv$ has as its carrier set the set of equivalence classes on $A$ defined by $\equiv$, and the interpretation is:
+The **quotient algebra** $\mathcal{A} /_\equiv$ has as its carrier set the set
+of equivalence classes on $A$ defined by $\equiv$, and the interpretation is:
 
 $$
 f^{\mathcal{A} /_\equiv}([a_1]_\equiv, ..., [a_n]_\equiv) = [f^{\mathcal A}(a_1, ..., a_n)]_\equiv
@@ -1623,7 +1790,9 @@ $$
 
 ## Lemma
 
-Let $\equiv$ be a congruence on $\mathcal A$. The quotient algebra $\mathcal A / _ \equiv$ is the homomorphic image of $\mathcal A$ under the **canonical homomorphism** $\pi_\equiv : A \to A /_\equiv$ defined by:
+Let $\equiv$ be a congruence on $\mathcal A$. The quotient algebra $\mathcal A /
+_ \equiv$ is the homomorphic image of $\mathcal A$ under the **canonical
+homomorphism** $\pi_\equiv : A \to A /_\equiv$ defined by:
 
 $$
 \pi_\equiv(a) = [a]_\equiv
@@ -1631,19 +1800,25 @@ $$
 
 **Proof:**
 
-We need to prove that $\pi_\equiv$ is a homomorphism to $\mathcal A / _ \equiv$, and that is it surjective. By the definition of $\pi_\equiv$:
+We need to prove that $\pi_\equiv$ is a homomorphism to $\mathcal A / _ \equiv$,
+and that is it surjective. By the definition of $\pi_\equiv$:
 
 $$
 \pi_\equiv(f^{\mathcal A}(a_1, \dots, a_n)) = [f^{\mathcal A}(a_1, \dots, a_n)]_\equiv
 $$
 
-The right hand side is how $f^{\mathcal A / _ \equiv}$ is defined, so it is a homomorphism.
+The right hand side is how $f^{\mathcal A / _ \equiv}$ is defined, so it is a
+homomorphism.
 
-Is $\pi_\equiv$ surjective? Yes: equivalence relations partition every element in the set.
+Is $\pi_\equiv$ surjective? Yes: equivalence relations partition every element
+in the set.
 
 ## Lemma
 
-Let $\mathcal $ and $\mathcal B$ be $\Sigma$-algebras, with $\mathcal A$ generated by $X$. Let $\phi$ and $\psi$ be homomorphisms $\mathcal A \to \mathcal B$. If $\forall x \in X. \phi(x) = \psi(x)$, then $\forall x \in A . \phi(x) = \psi(x)$.
+Let $\mathcal $ and $\mathcal B$ be $\Sigma$-algebras, with $\mathcal A$
+generated by $X$. Let $\phi$ and $\psi$ be homomorphisms $\mathcal A \to
+\mathcal B$. If $\forall x \in X. \phi(x) = \psi(x)$, then $\forall x \in A
+. \phi(x) = \psi(x)$.
 
 **Proof:**
 
@@ -1653,23 +1828,31 @@ Let $\mathcal $ and $\mathcal B$ be $\Sigma$-algebras, with $\mathcal A$ generat
 
 **Informal Definition:**
 
-> If an algebra $\mathcal A$ is generated by a subset $X$ of its carrier set, any homomorphism of $\mathcal A$ into $\mathcal B$ is uniquely determined by $X$.
+> If an algebra $\mathcal A$ is generated by a subset $X$ of its carrier set,
+> any homomorphism of $\mathcal A$ into $\mathcal B$ is uniquely determined by
+> $X$.
 
 In other words: free algebras are like basis sets in linear algebra.
 
 **Formal Definition:**
 
-Let $\Sigma$ be a signature, $X$ a set, $\mathcal K$ a class of $\Sigma$ algebras. $\mathcal A$ is called **free in $\mathcal K$ with generating set $X$** iff the following are true:
+Let $\Sigma$ be a signature, $X$ a set, $\mathcal K$ a class of $\Sigma$
+algebras. $\mathcal A$ is called **free in $\mathcal K$ with generating set
+$X$** iff the following are true:
 
 1. $\mathcal A$ is generated by $X \subseteq A$
 1. $\mathcal A \in \mathcal K$
-1. $\forall \mathcal B \in \mathcal K$ every mapping $\phi : X \to B$ can be extended into a homomorphism $\phi : \mathcal A \to \mathcal B$.
+1. $\forall \mathcal B \in \mathcal K$ every mapping $\phi : X \to B$ can be
+   extended into a homomorphism $\phi : \mathcal A \to \mathcal B$.
 
 A free algebra with an empty generating set is called an **initial algebra**.
 
 ## Term Algebras
 
-Let $\Sigma$ be a signature and $X$ a set of variables disjoint from $\Sigma$. The **$\Sigma$-term algebra** $\mathcal T (\Sigma, X)$ has $T(\Sigma, X)$ as its carrier, and each function symbol $f \in \Sigma^{(n)}$ is interpreted as a function
+Let $\Sigma$ be a signature and $X$ a set of variables disjoint from
+$\Sigma$. The **$\Sigma$-term algebra** $\mathcal T (\Sigma, X)$ has $T(\Sigma,
+X)$ as its carrier, and each function symbol $f \in \Sigma^{(n)}$ is interpreted
+as a function
 
 $$
 f^{\mathcal T (\Sigma, X)}: T(\Sigma, X)^n \to T(\Sigma, X) : (t_1, \dots, t_n) \to f(t_1, \dots, t_n)
@@ -1683,7 +1866,8 @@ Term algebras are free in the class of all $\Sigma$ algebras.
 
 **Formal Statement:**
 
-$\mathcal T(\Sigma, X)$ is free with generating set $X$ in the class of all $\Sigma$ algebras.
+$\mathcal T(\Sigma, X)$ is free with generating set $X$ in the class of all
+$\Sigma$ algebras.
 
 **Proof:**
 
@@ -1691,22 +1875,30 @@ $\mathcal T(\Sigma, X)$ is free with generating set $X$ in the class of all $\Si
 
 ## Entailment
 
-The $\Sigma$ identity $s \approx t$ **holds** in the $\Sigma$ algebra $\mathcal A$, denoted $A \models s \approx t$) iff $\phi(s) = \phi(t)$ for all homomorphisms $\phi: \mathcal T(\Sigma, V)
-\to \mathcal A$.
+The $\Sigma$ identity $s \approx t$ **holds** in the $\Sigma$ algebra $\mathcal
+A$, denoted $A \models s \approx t$) iff $\phi(s) = \phi(t)$ for all
+homomorphisms $\phi: \mathcal T(\Sigma, V) \to \mathcal A$.
 
-Intuitively, an identity holds when all possible assignments of variables to values cause the expression to evaluate to true. The use of a homomorphism above reflects the fact that this replacement can be thought of as a homomorphism from terms to objects in the algebra.
+Intuitively, an identity holds when all possible assignments of variables to
+values cause the expression to evaluate to true. The use of a homomorphism above
+reflects the fact that this replacement can be thought of as a homomorphism from
+terms to objects in the algebra.
 
 ## Models
 
-Let $E$ be a set of $\Sigma$ identities. The $\Sigma$ algebra $\mathcal A$ is a model of $E$, denoted $\mathcal A \models E$ iff every identity in $E$ holds in $\mathcal A$.
+Let $E$ be a set of $\Sigma$ identities. The $\Sigma$ algebra $\mathcal A$ is a
+model of $E$, denoted $\mathcal A \models E$ iff every identity in $E$ holds in
+$\mathcal A$.
 
 ## Varieties
 
-The class of all models of $E$ is called the **$\Sigma$-variety** of $E$, and is denoted $\mathcal V(E)$.
+The class of all models of $E$ is called the **$\Sigma$-variety** of $E$, and is
+denoted $\mathcal V(E)$.
 
 ## Semantic Consequence
 
-The identity $s \approx t$ is a **semantic consequence** of $E$, denoted $E \models s \approx t$, iff it holds in all models of $E$. That is:
+The identity $s \approx t$ is a **semantic consequence** of $E$, denoted $E
+\models s \approx t$, iff it holds in all models of $E$. That is:
 
 $$
 \forall \mathcal A \in \mathcal V(E) . \mathcal A \models s \approx t
