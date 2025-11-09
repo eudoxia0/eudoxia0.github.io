@@ -21,13 +21,19 @@ $$
 \gdef\p#1{ \left( #1 \right) }
 $$
 
-Human language can be expressed with [formal grammars][gram], which are just term rewriting systems. Parsing is term rewriting in reverse: finding derivation trees that create a given sentence. In [equational logic][eqlog], most of a proof is just applying rewrite rules. Lambda calculus evaluation can be expressed using term rewriting. According to Stephen Wolfram, [the universe is a graph rewriting system][wolfram].
+Human language can be expressed with [formal grammars][gram], which are just
+term rewriting systems. Parsing is term rewriting in reverse: finding derivation
+trees that create a given sentence. In [equational logic][eqlog], most of a
+proof is just applying rewrite rules. Lambda calculus evaluation can be
+expressed using term rewriting. According to Stephen Wolfram, [the universe is a
+graph rewriting system][wolfram].
 
 [gram]: https://en.wikipedia.org/wiki/Formal_grammar
 [eqlog]: https://en.wikipedia.org/wiki/Equational_logic
 [wolfram]: https://www.wolframphysics.org/index.php.en
 
-So term rewriting is a formalism with very broad applicability and worth learning.
+So term rewriting is a formalism with very broad applicability and worth
+learning.
 
 # Contents
 {: .no_toc }
@@ -64,7 +70,8 @@ $$
 \end{align}
 $$
 
-(Note that we're "lifting" the algebraic variables $X$ and $Y$ into constants of the object language)
+(Note that we're "lifting" the algebraic variables $X$ and $Y$ into constants of
+the object language)
 
 Consider the expression
 
@@ -78,12 +85,14 @@ $$
 D_X(X)X + D_X(X)X
 $$
 
-Then, we can apply $\text{R1}$, _but_, we have two places where we can apply this rule. So this expression has two possibly "outputs":
+Then, we can apply $\text{R1}$, _but_, we have two places where we can apply
+this rule. So this expression has two possibly "outputs":
 
 1. $1X + D_X(X)X$ if we rewrite the first occurrence of $D_X(X)$, and
 2. $D_X(X)X + 1X$ if we choose to rewrite the second
 
-Both of these expressions can be rewritten into the same expression, by applying $\text{R1}$ on the last instance of $D_X(X)$:
+Both of these expressions can be rewritten into the same expression, by applying
+$\text{R1}$ on the last instance of $D_X(X)$:
 
 $$
 1X + 1X
@@ -99,41 +108,62 @@ This tiny example brings up a couple import concepts.
 
 ## Termination
 
-The first is termination. A TRS **terminates** when, given any starting expression, we can always reach an expression for which no more rules apply. Such an expression is called a **normal form**.
+The first is termination. A TRS **terminates** when, given any starting
+expression, we can always reach an expression for which no more rules
+apply. Such an expression is called a **normal form**.
 
-More formally, a TRS is terminating if given a term $t$ there exists a (potentially empty) finite chain of rule application that gives us a normal form $t'$.
+More formally, a TRS is terminating if given a term $t$ there exists a
+(potentially empty) finite chain of rule application that gives us a normal form
+$t'$.
 
-A dual definition: a TRS terminates if there does not exist an infinite chain of rule applications.
+A dual definition: a TRS terminates if there does not exist an infinite chain of
+rule applications.
 
 ## Confluence
 
-In the graph above there's an expression where the rule applications fork, and then they join again. They might be other systems where expressions can diverge but not join again. Dually, there might be systems where _any_ divergence is guaranteed to eventually join again.
+In the graph above there's an expression where the rule applications fork, and
+then they join again. They might be other systems where expressions can diverge
+but not join again. Dually, there might be systems where _any_ divergence is
+guaranteed to eventually join again.
 
-A TRS is **confluent** where, if there is a fork in the tree of rule applications, we can always find a join point. More formally: if a term $t$ can be rewritten into $t_1$ and $t_2$ with $t_1 \neq t_2$, there exists a common term $s$ that can be reached from both $t_1$ and $t_2$.
+A TRS is **confluent** where, if there is a fork in the tree of rule
+applications, we can always find a join point. More formally: if a term $t$ can
+be rewritten into $t_1$ and $t_2$ with $t_1 \neq t_2$, there exists a common
+term $s$ that can be reached from both $t_1$ and $t_2$.
 
 ## Completion
 
-Making a non-confluent TRS into a confluent one by adding rules is called **completion**.
+Making a non-confluent TRS into a confluent one by adding rules is called
+**completion**.
 
 ## Convergence
 
-A TRS that is both terminating and confluent is called **convergent** or **canonical**.
+A TRS that is both terminating and confluent is called **convergent** or
+**canonical**.
 
 # Relations
 
-A **relation** is a subset of $A \times B$. Conceptually, it's a function where an input can have more than one output (this expressivity is needed because multiple rewrite rules might apply to a given expression).
+A **relation** is a subset of $A \times B$. Conceptually, it's a function where
+an input can have more than one output (this expressivity is needed because
+multiple rewrite rules might apply to a given expression).
 
-For a relation $R$ we can write $R(a, b)$ to mean $(a,b) \in R$. This is Prolog notation.
+For a relation $R$ we can write $R(a, b)$ to mean $(a,b) \in R$. This is Prolog
+notation.
 
-Usually the relation is implicit and we just write $a \to b$ to mean $(a,b) \in R$. This is arrow notation. If we want to make the relation explicit, we can write $a \stackrel{R}{\to} b$.
+Usually the relation is implicit and we just write $a \to b$ to mean $(a,b) \in
+R$. This is arrow notation. If we want to make the relation explicit, we can
+write $a \stackrel{R}{\to} b$.
 
-Relations can be composed: given $R \subseteq A \times B$ and $S \subseteq B \times C$, the composition $R \circ S \subseteq A \times C$ is defined by:
+Relations can be composed: given $R \subseteq A \times B$ and $S \subseteq B
+\times C$, the composition $R \circ S \subseteq A \times C$ is defined by:
 
 $$
 \set{(x,z) \in A \times C \mid \exists y \in B . (x,y) \in R \land (y,z) \in S}
 $$
 
-That is: if $a \stackrel{R}{\to} b$ and $b \stackrel{S}{\to} c$, then $a \stackrel{R \circ S}{\to} c$. Or, in Prolog notation: if $R(a,b)$ and $S(b,c)$ then $(R \circ S)(a, c)$.
+That is: if $a \stackrel{R}{\to} b$ and $b \stackrel{S}{\to} c$, then $a
+\stackrel{R \circ S}{\to} c$. Or, in Prolog notation: if $R(a,b)$ and $S(b,c)$
+then $(R \circ S)(a, c)$.
 
 ## Identity
 
@@ -145,7 +175,8 @@ $$
 
 This is the **identity relation**, which maps every term to itself.
 
-Note that $R_0 \subseteq A \times A$, so the domain and the codomain must be the same.
+Note that $R_0 \subseteq A \times A$, so the domain and the codomain must be the
+same.
 
 ## $i$-fold Composition
 
@@ -155,7 +186,8 @@ $$
 R^i = R^{i-1} \circ R
 $$
 
-That is, $R^i$ is the **$i$-fold composition** of $R$ with itself. It is the version of $R$ that "skips ahead" by $i-1$ steps.
+That is, $R^i$ is the **$i$-fold composition** of $R$ with itself. It is the
+version of $R$ that "skips ahead" by $i-1$ steps.
 
 Note that, as in arithmetic: $R^1 = R^0 \circ R = R$.
 
@@ -173,7 +205,8 @@ $$
 R^+ = R^1 \cup R^2 \cup \ldots
 $$
 
-This is called the **transitive closure** of $R$ and it relates every term in $A$ to any one of its successors.
+This is called the **transitive closure** of $R$ and it relates every term in
+$A$ to any one of its successors.
 
 Say $R$ is the successor relation on the set $\N$, that is:
 
@@ -183,7 +216,8 @@ $$
 
 So that $0 \to 1$, $1 \to 2$, and so on.
 
-Then $R^2$ is $R \circ R$ which relates $n \to n+2$, and $R^3$ relates $n \to n+3$, and so on. So $R^+$ relates:
+Then $R^2$ is $R \circ R$ which relates $n \to n+2$, and $R^3$ relates $n \to
+n+3$, and so on. So $R^+$ relates:
 
 $$
 \begin{align*}
