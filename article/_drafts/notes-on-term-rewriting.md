@@ -290,27 +290,42 @@ $$
 
 # Abstract Rewriting Systems
 
-An **term rewriting system** (TRS) is a pair $(A, R)$ where $A$ is a set of **terms** and the **reduction** $R$ is a binary relation on the set, i.e. $R \subseteq A \times A$.
+An **term rewriting system** (TRS) is a pair $(A, R)$ where $A$ is a set of
+**terms** and the **reduction** $R$ is a binary relation on the set, i.e. $R
+\subseteq A \times A$.
 
 ## Paths
 
-A **path** is a (potentially empty, potentially infinite) chain of rule applications. More formally, given a TRS $(A, R)$, a path $P$ is a sequence $(a_0, a_1, a_2, ...)$ with $a_i \in A$ such that $a_i \to a_{i+1}, \forall i \in \N$.
+A **path** is a (potentially empty, potentially infinite) chain of rule
+applications. More formally, given a TRS $(A, R)$, a path $P$ is a sequence
+$(a_0, a_1, a_2, ...)$ with $a_i \in A$ such that $a_i \to a_{i+1}, \forall i
+\in \N$.
 
-The notation $x \stackrel{n}{\to} y$ means there exists a path of length $n$ from $x$ to $y$. Alternatively: $R^n(x,y)$.
+The notation $x \stackrel{n}{\to} y$ means there exists a path of length $n$
+from $x$ to $y$. Alternatively: $R^n(x,y)$.
 
-The notation $x \starpath y$ means there exists a finite path from $x$ to $y$. Alternatively: $R^*(x,y)$.
+The notation $x \starpath y$ means there exists a finite path from $x$ to
+$y$. Alternatively: $R^*(x,y)$.
 
-The notation $x \pluspath y$ means there exists a non-empty path from $x$ to $y$. Alternatively: $R^+(x,y)$.
+The notation $x \pluspath y$ means there exists a non-empty path from $x$ to
+$y$. Alternatively: $R^+(x,y)$.
 
-The notation $x \stackrel{*}{\leftrightarrow} y$ means $R^{s*}(x, y)$. It is _not_ an assertion that there exists a bidirectional finite path in $R$ _itself_ that joins $x$ to $y$. Rather, it means that there would be such a path if we ignored the direction of the arrows.
+The notation $x \stackrel{*}{\leftrightarrow} y$ means $R^{s*}(x, y)$. It is
+_not_ an assertion that there exists a bidirectional finite path in $R$ _itself_
+that joins $x$ to $y$. Rather, it means that there would be such a path if we
+ignored the direction of the arrows.
 
-In other words: what $a \stackrel{*}{\leftrightarrow} b$ really says is that $a$ and $b$ are connected in some way by $R$, but we don't know the direction of the arrows, and we don't know how many steps of indirection/transitivity there are.
+In other words: what $a \stackrel{*}{\leftrightarrow} b$ really says is that $a$
+and $b$ are connected in some way by $R$, but we don't know the direction of the
+arrows, and we don't know how many steps of indirection/transitivity there are.
 
-The notation $x \stackrel{*}{\leftrightarrow} y$ is typically read as "convertible".
+The notation $x \stackrel{*}{\leftrightarrow} y$ is typically read as
+"convertible".
 
 ## Terminology
 
-$x$ is **reducible** iff there is a $y$ such that $x \to y$. That is, if $R(x, y)$.
+$x$ is **reducible** iff there is a $y$ such that $x \to y$. That is, if $R(x,
+y)$.
 
 $x$ is in normal form (i.e. **irreducible**) iff it is not reducible.
 
@@ -322,7 +337,8 @@ If $x \to y$ then $y$ is called a **direct successor** of $x$.
 
 If $x \pluspath y$ then $y$ is a **successor** of $x$.
 
-$x$ and $y$ are **joinable** iff there exists a $z$ such that $x \pluspath z$ and $y \pluspath z$, which is denoted $x \join y$.
+$x$ and $y$ are **joinable** iff there exists a $z$ such that $x \pluspath z$
+and $y \pluspath z$, which is denoted $x \join y$.
 
 ## Example: The Divisibility Relation
 
