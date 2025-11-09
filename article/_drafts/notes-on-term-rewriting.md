@@ -348,7 +348,9 @@ $$
 R = \set{ (p,q) \mid p \gt q \land q \mid p   }
 $$
 
-The notation $q \mid p$ means reads "$q$ divides $p$" and means $\exists n \in \N : p = nq$. For example: $R(10, 5)$ because $10 \gt 5$ and $5 \mid 10$ i.e. $10 = 2 \times 5$.
+The notation $q \mid p$ means reads "$q$ divides $p$" and means $\exists n \in
+\N : p = nq$. For example: $R(10, 5)$ because $10 \gt 5$ and $5 \mid 10$
+i.e. $10 = 2 \times 5$.
 
 More abstractly: $a \to b$ when $a$ can be integer-divided by $b$.
 
