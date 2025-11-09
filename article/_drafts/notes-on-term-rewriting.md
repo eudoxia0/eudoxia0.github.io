@@ -361,22 +361,28 @@ From these definitions we can draw the following conclusions:
 - $p$ is a normal form of $m$ iff $p$ is a prime factor of $m$.
 	- Obviously true.
 - $R^+ = R$ because $\gt$ and divides are already transitive:
-	- That is, in the context of $R$, if $a \to b$ and $b \to c$, then $a \to c$ is also true by the transitivity of greater-than and divisibility.
+	- That is, in the context of $R$, if $a \to b$ and $b \to c$, then $a \to c$
+      is also true by the transitivity of greater-than and divisibility.
 - $R^{s*} = A \times A$
 	- In $R^{-1}$, the graph has the same shape, but the arrows are flipped.
-	- In $R^s = R \cup R^{-1}$ the two graphs are merged, so that the arrows are now bidirectional.
-	- So between any two distinct numbers $a$ and $b$, we can find a chain that joins them. e.g. for $(3,2)$:
+	- In $R^s = R \cup R^{-1}$ the two graphs are merged, so that the arrows are
+      now bidirectional.
+	- So between any two distinct numbers $a$ and $b$, we can find a chain that
+      joins them. e.g. for $(3,2)$:
 		- By the definition of $R$ we know $R(6, 3)$
 		- Which implies $R^{-1}(3,6)$.
 		- By the definition of $R$ we know $R(6,2)$.
-		- So in the context of $R^{s*}$, which includes $R^{-1}$ we have a chain $3 \to 6 \to 2$. By transitivity: $3 \to 2$.
-	- The reflexivity step allows one more step of generality, for the case where $a=b$.
+		- So in the context of $R^{s*}$, which includes $R^{-1}$ we have a chain
+          $3 \to 6 \to 2$. By transitivity: $3 \to 2$.
+	- The reflexivity step allows one more step of generality, for the case
+      where $a=b$.
 	- Then any pair of numbers can be joined up.
 	- This is the fundamental theorem of arithmetic in disguise.
 
 ## Word Problems
 
-The **word problem** is: given a TRS whose rewrite rules are bidirectional, and two terms $a$ and $b$, is it possible to transform $a$ into $b$?
+The **word problem** is: given a TRS whose rewrite rules are bidirectional, and
+two terms $a$ and $b$, is it possible to transform $a$ into $b$?
 
 That is: are $a$ and $b$ equivalent under the given set of identities?
 
@@ -1527,27 +1533,35 @@ f(\hat{\sigma}(t_1), \dots, \hat{\sigma}(t_n)) & t = f(t_1, \dots, t_n)
 \end{cases}
 $$
 
-To simplify notation, we often write $\sigma$ where we should technically write $\hat\sigma$.
+To simplify notation, we often write $\sigma$ where we should technically write
+$\hat\sigma$.
 
 ## Instances
 
-A term $t$ is called an **instance** of another term $s$ iff $\exists \sigma . \sigma(s) = t$.
+A term $t$ is called an **instance** of another term $s$ iff $\exists \sigma
+. \sigma(s) = t$.
 
 ## Identities
 
-Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A **$\Sigma$-identity** is a pair $(t, s) \in T(\Sigma, V) \times T(\Sigma, V)$, which we denote $s \approx t$.
+Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A
+**$\Sigma$-identity** is a pair $(t, s) \in T(\Sigma, V) \times T(\Sigma, V)$,
+which we denote $s \approx t$.
 
-Identities can be interpreted as in algebra: as asserting the equality of two expressions.
+Identities can be interpreted as in algebra: as asserting the equality of two
+expressions.
 
 ## The Reduction Relation
 
-Let $E$ be a set of $\Sigma$ identities. The **reduction relation** $R_E \subseteq T(\Sigma, V) \times T(\Sigma, V)$ is:
+Let $E$ be a set of $\Sigma$ identities. The **reduction relation** $R_E
+\subseteq T(\Sigma, V) \times T(\Sigma, V)$ is:
 
 $$
 R_E(a, b) \iff \exists (l, r) \in E, p \in \pos(a), \sigma \in \mathcal{Sub}(\Sigma, V) . \subterm{a}{p} = \sigma(l) \land b = a[\sigma(r)]_p
 $$
 
-In other words: $R_E(a,b)$ means there's a pair $(l, r)$ and a substitution by which the subterm of $a$ at $p$ can be matched with $l$, and, replacing that subterm with $\sigma(r)$ makes the resulting term equal to $b$.
+In other words: $R_E(a,b)$ means there's a pair $(l, r)$ and a substitution by
+which the subterm of $a$ at $p$ can be matched with $l$, and, replacing that
+subterm with $\sigma(r)$ makes the resulting term equal to $b$.
 
 ## Closure and Compatibility
 
