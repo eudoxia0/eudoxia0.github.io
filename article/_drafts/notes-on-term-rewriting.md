@@ -36,7 +36,8 @@ So term rewriting is a formalism with very broad applicability and worth
 learning.
 
 These notes are from [_Term Rewriting and All That_][traat] by [Franz
-Baader][franz] and [Tobias Nipkow][tobias].
+Baader][franz] and [Tobias Nipkow][tobias]. First-level headings correspond to
+chapters in the book, everything else is my own organization.
 
 [traat]: https://www.cambridge.org/core/books/term-rewriting-and-all-that/71768055278D0DEF4FFC74722DE0D707
 [franz]: https://en.wikipedia.org/wiki/Franz_Baader
@@ -48,7 +49,7 @@ Baader][franz] and [Tobias Nipkow][tobias].
 1. toc
 {:toc}
 
-# Example: Symbolic Differentiation
+# Motivating Examples
 
 Consider the grammar:
 
