@@ -1251,9 +1251,11 @@ $$
 \end{cases}
 $$
 
-Where $::$ is consing, i.e., a function $\N \times \N^n \to \N^{n+1}$ that prepends an element to a vector.
+Where $::$ is consing, i.e., a function $\N \times \N^n \to \N^{n+1}$ that
+prepends an element to a vector.
 
-The **size** of a term $t$, denoted $\vert t \vert$, is the cardinality of $\mathcal{Pos}(t)$.
+The **size** of a term $t$, denoted $\vert t \vert$, is the cardinality of
+$\mathcal{Pos}(t)$.
 
 For a term $f(x, g(y))$, the set of positions is:
 
@@ -1263,7 +1265,8 @@ $$
 
 ## Subterm at a Position
 
-Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The **subterm of $t$ at position $p$**, denoted $\subterm{t}{p}$, is:
+Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The **subterm of $t$ at position
+$p$**, denoted $\subterm{t}{p}$, is:
 
 $$
 \subterm{t}{p} = \begin{cases}
@@ -1285,7 +1288,8 @@ $$
 
 ## Substitution of a Subterm
 
-Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The term created by replacing the subterm at $p$ by $s$ is denoted $t[s]_p$, and this is defined by:
+Let $t \in T(\Sigma, X)$ and $p \in \pos(t)$. The term created by replacing the
+subterm at $p$ by $s$ is denoted $t[s]_p$, and this is defined by:
 
 $$
 t[s]_p \begin{cases}
@@ -1296,7 +1300,8 @@ $$
 
 ## Variables in a Term
 
-The set of variables in $t$, denoted $\mathcal{Var}(t)$, is defined inductively by:
+The set of variables in $t$, denoted $\mathcal{Var}(t)$, is defined inductively
+by:
 
 $$
 \mathcal{Var}(t) = \begin{cases}
@@ -1313,17 +1318,22 @@ The set of ground terms over $\Sigma$ is denoted $T(\Sigma)$.
 
 ## Variable Substitution
 
-Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A **substitution** is a function $\sigma : V \to T(\Sigma, V)$ where, for finitely many variables $x \in V$, we have $\sigma(x) \neq x$.
+Let $\Sigma$ be a signature, and $V$ a countably-infinite set of variables. A
+**substitution** is a function $\sigma : V \to T(\Sigma, V)$ where, for finitely
+many variables $x \in V$, we have $\sigma(x) \neq x$.
 
-$\mathcal{Dom}(\sigma)$, called the **domain** of $\sigma$, is the set $\set{x \in V \mid \sigma(x) \neq x}$.
+$\mathcal{Dom}(\sigma)$, called the **domain** of $\sigma$, is the set $\set{x
+\in V \mid \sigma(x) \neq x}$.
 
-$\mathcal{Ran}(\sigma)$, called the **range** of $\sigma$, is the set $\set{\sigma(x) \mid x \in \mathcal{Dom}(\sigma)}$.
+$\mathcal{Ran}(\sigma)$, called the **range** of $\sigma$, is the set
+$\set{\sigma(x) \mid x \in \mathcal{Dom}(\sigma)}$.
 
 If $x \in \mathcal{Dom}(\sigma)$, we say $\sigma$ **instantiates** $x$.
 
 ## Term Substitution
 
-A substitution $\sigma : V \to T(\Sigma, V)$ can be trivially **extended** into a function $\hat{\sigma} : T(\Sigma, V) \to T(\Sigma, V)$ defined by:
+A substitution $\sigma : V \to T(\Sigma, V)$ can be trivially **extended** into
+a function $\hat{\sigma} : T(\Sigma, V) \to T(\Sigma, V)$ defined by:
 
 $$
 \hat{\sigma}(t) = \begin{cases}
