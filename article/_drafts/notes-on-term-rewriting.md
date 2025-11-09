@@ -149,7 +149,9 @@ Making a non-confluent TRS into a confluent one by adding rules is called
 A TRS that is both terminating and confluent is called **convergent** or
 **canonical**.
 
-# Relations
+# Abstract Reduction Systems
+
+## Relations
 
 A **relation** is a subset of $A \times B$. Conceptually, it's a function where
 an input can have more than one output (this expressivity is needed because
@@ -296,7 +298,7 @@ $$
 R^{s*} = R^{s+} \cup R^0
 $$
 
-# Abstract Rewriting Systems
+## Abstract Rewriting Systems
 
 An **term rewriting system** (TRS) is a pair $(A, R)$ where $A$ is a set of
 **terms** and the **reduction** $R$ is a binary relation on the set, i.e. $R
@@ -394,7 +396,7 @@ two terms $a$ and $b$, is it possible to transform $a$ into $b$?
 
 That is: are $a$ and $b$ equivalent under the given set of identities?
 
-# Properties of Relations
+## Properties of Relations
 
 A reduction is called **terminating** if there is no infinite chain of reductions $a_0 \to a_1 \to ...$
 
@@ -883,7 +885,7 @@ If $x \conv y$ then $x \join \conv y \join$ by reachability. Then, by [Theorem
 
 If $x \join = y \join$ then $x \join y$, which obviously implies $x \conv y$.
 
-# Well-Founded Induction
+## Well-Founded Induction
 
 The principle of **well-founded induction** is defined by the inference rule:
 
@@ -973,7 +975,7 @@ all $x$, then $R$ terminates.
 Terminating relations are also called **well-founded** or **Noetherian**. WFI is
 also called **Noetherian induction**.
 
-# Branching and Cycles
+## Branching and Cycles
 
 We can use WFI to study some further properties of relations that relate to
 termination.
@@ -1088,7 +1090,7 @@ Since $R$ is acyclic, $x_i \neq x_j$ for all $i \neq j$. Therefore $x_0$ has
 infinitely-many distinct successors. Which contradicts the GF assumption. So we
 have a contradiction. Therefore $R$ terminates.
 
-# Proving Termination
+## Proving Termination
 
 is undecidable in general (Turing, 1936), but not impossible in every single
 case. For example it is trivial to prove that $\set{a, b}$ with the relation
@@ -1208,7 +1210,7 @@ The lexicographic product of two strict orders is a strict order.
 
 The lexicographic product of two terminating relations is terminating.
 
-# Proving Confluence
+## Proving Confluence
 
 Is hard, and so we do it step by step.
 
@@ -1935,3 +1937,23 @@ $$
 $$
 
 is called the **equational theory** induced by $E$.
+
+# Equational Problems
+
+TODO
+
+# Termination
+
+TODO
+
+# Confluence
+
+TODO
+
+# Completion
+
+TODO
+
+# Gröbner Bases and Buchberger's Algorithm
+
+TODO
