@@ -1,0 +1,28 @@
+---
+title: Linux on the Fujitsu Lifebook U729
+---
+
+- context
+  - past few months
+  - had three computers
+  - none portable
+  - thought about buying a new macbook air
+  - but tahoe sucks
+	- border radius
+  - started playing around with linux and fell in love again
+- wanted a linux laptop
+  - i was disappointed by the thinkpad x1
+  - browsing refurbs
+  - randomly came across the fujitsu
+  - the price/specs was really good: 250AUD for 16GiB of RAM and 512GiB of SSD storage, and a 2020 processor
+  - and it's 12in, which i like
+  - but i think the main thing was the vibe: a Fujitsu laptop!
+	- like the thinkpad of thinkpads
+	- i'm already a huge hipter: I just NixOS and a trackball and stumpwm
+    - so this is the apotheosis of being a tech hipster
+- problems
+  - secureboot
+	- things that didn't work
+	- how to disable
+  - weird shitty spyware thing
+- once disabling secure boot, installing nixos was easy
