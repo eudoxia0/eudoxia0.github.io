@@ -1,5 +1,6 @@
 ---
 title: Agda on NixOS
+summary: Troubleshooting notes.
 ---
 
 To install [Agda][agda] and its standard library, add this to your config:
