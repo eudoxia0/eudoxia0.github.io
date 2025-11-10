@@ -178,10 +178,10 @@ In Anki, it's the interface that's frustrating, but the algorithm works
 marvelously. In Mochi, the interface is delightful, but it's the algorithm
 that's frustrating. Because you can spend months and months drilling flashcards,
 building up your collection, but when the cards cross some invisible age
-threshold, you start to forget them, and the algorithm does not help you to
-relearn things you have forgotten. Eventually I burned out on it and stopped
-doing my reviews, because I expected to forget everything eventually anyhow. And
-now they added support for FSRS, but by now I have 1700 cards overdue.
+threshold, you start to forget them, and the algorithm does not help you relearn
+things you have forgotten. Eventually I burned out on it and stopped doing my
+reviews, because I expected to forget everything eventually anyhow. And now they
+added support for FSRS, but by now I have 1700 cards overdue.
 
 Additionally: Mochi has only two buttons, "Forgot" and "Remembered". This is
 simpler for the user, yes, but most SR scheduling algorithms have more options
