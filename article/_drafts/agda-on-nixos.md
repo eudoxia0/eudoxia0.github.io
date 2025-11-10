@@ -1,6 +1,11 @@
 ---
 title: Agda on NixOS
 summary: Troubleshooting notes.
+card: agda-on-nixos.webp
+card_source: |
+    _Olive Trees, Corfu_, [John Singer Sargent][jss], 1909.
+
+    [jss]: https://en.wikipedia.org/wiki/John_Singer_Sargent
 ---
 
 To install [Agda][agda] and its standard library, add this to your config:
