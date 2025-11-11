@@ -26,3 +26,16 @@ title: Linux on the Fujitsu Lifebook U729
 	- how to disable
   - weird shitty spyware thing
 - once disabling secure boot, installing nixos was easy
+- things that work flawlessly ootb
+  - display brightness
+  - sound
+  - wifi
+  - bluetooth
+  - the screen is actually a touchscreen and i only realized this accidentally
+  - battery life
+  - webcam
+	- not winning any awards
+  - mic?
+- notes
+  - enter bios: smash f2 until you hear the beep
+  - enter boot select: smash f12 until you hear the beep
