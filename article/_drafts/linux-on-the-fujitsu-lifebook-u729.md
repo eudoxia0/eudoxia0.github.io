@@ -142,3 +142,4 @@ To enter the boot menu: as above but with `F12`.
 [deb]: https://www.debian.org/
 [elecom]: https://elecomusa.com/products/deft-trackball-wireless-copy
 [NixOS]: https://en.wikipedia.org/wiki/NixOS
+[mech]: https://www.amazon.com.au/dp/B07B8J6C3C
