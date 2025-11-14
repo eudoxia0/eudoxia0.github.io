@@ -746,22 +746,22 @@ article.
 [legion]: https://github.com/fukamachi/legion
 
 [rtd]: https://readthedocs.org/
-[quickdocs]: http://quickdocs.org/
+[quickdocs]: https://quickdocs.org/
 [docparser]: https://github.com/eudoxia0/docparser
 [codex]: https://github.com/CommonDoc/codex
-[commondoc]: http://commondoc.github.io/
+[commondoc]: https://commondoc.github.io/
 
 [uni]: http://weitz.de/cl-unicode/
 
 [criterion]: https://hackage.haskell.org/package/criterion
-[esrap]: http://quickdocs.org/esrap/
+[esrap]: https://quickdocs.org/esrap/
 [proc-parse]: https://github.com/fukamachi/proc-parse
 
 [jonathan]: https://github.com/Rudolph-Miller/jonathan
 [plump]: https://github.com/Shinmera/plump
-[yason]: http://quickdocs.org/yason
+[yason]: https://quickdocs.org/yason
 [cl-yaml]: https://github.com/eudoxia0/cl-yaml
-[cl-csv]: http://quickdocs.org/cl-csv
+[cl-csv]: https://quickdocs.org/cl-csv
 
 [ql]: https://www.quicklisp.org
 [qlot]: https://github.com/fukamachi/qlot
@@ -775,7 +775,7 @@ article.
 [cepl]: https://github.com/cbaggers/cepl
 [varjo]: https://github.com/cbaggers/varjo
 [cepl-video]: https://www.youtube.com/playlist?list=PL2VAYZE_4wRKKr5pJzfYD1w4tKCXARs5y
-[opengl]: http://quickdocs.org/cl-opengl/
+[opengl]: https://quickdocs.org/cl-opengl/
 [sdl]: https://github.com/lispgames/cl-sdl2
 [pg]: https://github.com/fogleman/pg
 
