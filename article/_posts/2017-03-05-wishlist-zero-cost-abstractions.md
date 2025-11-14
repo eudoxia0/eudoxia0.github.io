@@ -186,7 +186,7 @@ language like Rust.
 [audio-realtime]: https://atastypixel.com/four-common-mistakes-in-audio-development/
 
 [haskell-ord]: https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Ord.html#t:Ordering
-[libdill]: http://libdill.org/
+[libdill]: https://github.com/sustrik/libdill
 [rust]: https://rust-lang.org/
 
 [iterate]: https://common-lisp.net/project/iterate/
