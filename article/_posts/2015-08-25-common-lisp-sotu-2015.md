@@ -751,7 +751,7 @@ article.
 [codex]: https://github.com/CommonDoc/codex
 [commondoc]: https://commondoc.github.io/
 
-[uni]: http://weitz.de/cl-unicode/
+[uni]: https://edicl.github.io/cl-unicode/
 
 [criterion]: https://hackage.haskell.org/package/criterion
 [esrap]: https://quickdocs.org/esrap
