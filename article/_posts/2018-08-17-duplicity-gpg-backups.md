@@ -86,7 +86,7 @@ encrypted. You don't have to pass the `--encrypt-key` argument here since the
 key ID is stored in the encrypted files, so GnuPG knows which private key to use
 for decryption.
 
-[luks]: https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)
+[luks]: https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup
 [geli]: https://www.freebsd.org/cgi/man.cgi?geli(8)
 [duplicity]: http://duplicity.nongnu.org/
 [bsddupl]: https://www.freebsd.org/cgi/man.cgi?query=duplicity&apropos=0&sektion=0&manpath=FreeBSD+7.1-RELEASE+and+Ports&format=html
