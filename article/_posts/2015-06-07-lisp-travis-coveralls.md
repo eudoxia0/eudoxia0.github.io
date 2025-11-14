@@ -264,7 +264,7 @@ Coveralls:
 [ansible]: https://github.com/ansible/ansible
 [chef]: https://www.chef.io/chef/
 [salt]: http://saltstack.com/
-[sbcl]: http://www.sbcl.org/
+[sbcl]: https://www.sbcl.org/
 [ccl]: http://ccl.clozure.com/
 [scriba]: https://github.com/CommonDoc/scriba
 [cim]: https://github.com/KeenS/CIM
