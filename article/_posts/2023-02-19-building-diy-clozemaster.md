@@ -35,7 +35,7 @@ corpus is [OpenSubtitles][os], so the vocabulary is very skewed to movie
 dialogue. And then I found [Tatoeba][tatoeba]: an open-source database of
 sentences and their translations.
 
-[frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/A_Frequency_Dictionary_of_French
+[frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/French
 [frsen]: http://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.html
 [os]: https://www.opensubtitles.org/en/en%20
 [mochi]: https://mochi.cards/
