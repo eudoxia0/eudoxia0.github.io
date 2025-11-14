@@ -41,7 +41,7 @@ chapters in the book, everything else is my own organization.
 
 [traat]: https://www.cambridge.org/core/books/term-rewriting-and-all-that/71768055278D0DEF4FFC74722DE0D707
 [franz]: https://en.wikipedia.org/wiki/Franz_Baader
-[tobias]: http://en.wikipedia.org/wiki/Tobias_Nipkow
+[tobias]: https://en.wikipedia.org/wiki/Tobias_Nipkow
 
 # Contents
 {: .no_toc }
