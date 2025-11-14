@@ -680,7 +680,7 @@ article.
 
 [sotu]: https://github.com/Gabriel439/post-rfc/blob/master/sotu.md
 [sotu-hn]: https://news.ycombinator.com/item?id=10071535
-[fare]: http://fare.livejournal.com/169346.html
+[fare]: https://fare.livejournal.com/169346.html
 
 [clack]: https://github.com/fukamachi/clack
 [caveman]: https://github.com/fukamachi/caveman
