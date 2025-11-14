@@ -74,7 +74,7 @@ This website is built with [Emacs][emacs], [Jekyll][jekyll], and
 [Sass][sass]. Hosting is provided by [GitHub Pages][pages].
 
 [emacs]: https://www.gnu.org/software/emacs/
-[jekyll]: http://jekyllrb.com/
+[jekyll]: https://jekyllrb.com/
 [sass]: https://sass-lang.com/
 [pages]: https://pages.github.com/
 
