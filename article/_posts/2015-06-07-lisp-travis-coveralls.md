@@ -261,7 +261,7 @@ Coveralls:
 
 [travis]: https://travis-ci.org/
 [docker]: https://www.docker.com/
-[ansible]: http://www.ansible.com/home
+[ansible]: https://github.com/ansible/ansible
 [chef]: https://www.chef.io/chef/
 [salt]: http://saltstack.com/
 [sbcl]: http://www.sbcl.org/
