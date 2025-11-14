@@ -741,7 +741,7 @@ article.
 [async]: http://orthecreedence.github.io/cl-async/
 [uv]: https://github.com/joyent/libuv
 [node]: https://nodejs.org/
-[stmx]: http://stmx.org/
+[stmx]: https://github.com/cosmos72/stmx
 [lpara]: http://lparallel.org/
 [legion]: https://github.com/fukamachi/legion
 
