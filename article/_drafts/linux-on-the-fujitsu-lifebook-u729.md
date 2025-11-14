@@ -99,7 +99,9 @@ You now have the option to disable Secure Boot:
 
 ![A photograph of the BIOS screen showing the option to disable Secure Boot.](/assets/content/linux-on-the-fujitsu-lifebook-u729/secureboot-disable.webp)
 
-After this, I was able to install Linux from a live USB.
+After this, I was able to install NixOS from a live USB:
+
+![A photograph of the laptop, showing the NixOS installer.](/assets/content/linux-on-the-fujitsu-lifebook-u729/nixos.webp)
 
 ## Spyware
 
