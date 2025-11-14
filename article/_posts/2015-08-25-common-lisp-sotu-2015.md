@@ -688,7 +688,7 @@ article.
 [lucerne]: https://borretti.me/lucerne/
 [woo]: https://github.com/fukamachi/woo
 [hunchentoot]: https://edicl.github.io/hunchentoot/
-[libev]: http://software.schmorp.de/pkg/libev.html
+[libev]: https://software.schmorp.de/pkg/libev.html
 [clack-errors]: https://github.com/eudoxia0/clack-errors
 
 [parenscript]: https://github.com/vsedach/Parenscript
