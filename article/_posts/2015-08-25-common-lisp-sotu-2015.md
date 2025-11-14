@@ -724,7 +724,7 @@ article.
 [mgl-mat]: https://github.com/melisgl/mgl-mat
 [lla]: https://github.com/tpapp/lla
 [scipy]: https://scipy.org/
-[numpy]: http://www.numpy.org/
+[numpy]: https://numpy.org/
 
 [fad]: http://weitz.de/cl-fad/
 [osicat]: https://common-lisp.net/project/osicat/
