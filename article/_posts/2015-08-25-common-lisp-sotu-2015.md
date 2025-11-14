@@ -687,7 +687,7 @@ article.
 [ningle]: http://8arrow.org/ningle/
 [lucerne]: https://borretti.me/lucerne/
 [woo]: https://github.com/fukamachi/woo
-[hunchentoot]: http://weitz.de/hunchentoot/
+[hunchentoot]: https://edicl.github.io/hunchentoot/
 [libev]: http://software.schmorp.de/pkg/libev.html
 [clack-errors]: https://github.com/eudoxia0/clack-errors
 
