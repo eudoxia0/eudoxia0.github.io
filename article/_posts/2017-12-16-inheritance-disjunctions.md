@@ -558,11 +558,11 @@ illegal states unrepresentable.
 
 [sum]: https://en.wikipedia.org/wiki/Tagged_union
 [blindness]: https://shreevatsa.wordpress.com/2015/01/31/boolean-blindness/
-[cl-integer]: http://clhs.lisp.se/Body/t_intege.htm
-[no-oop]: http://www.paulgraham.com/noop.html
-[declaim]: http://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm
+[cl-integer]: https://clhs.lisp.se/Body/t_intege.htm
+[no-oop]: https://www.paulgraham.com/noop.html
+[declaim]: https://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
-[values]: http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm
+[values]: https://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm
 [a-blindness]: https://github.com/quchen/articles/blob/master/algebraic-blindness.md
 [haskell-do]: https://en.wikibooks.org/wiki/Haskell/do_notation
 [sml-monad]: https://existentialtype.wordpress.com/2011/05/01/of-course-ml-has-monads/
