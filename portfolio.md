@@ -283,7 +283,7 @@ abstraction, and [SxQL][sxql] is used as the DSL for generating SQL.
 </div>
 
 [django]: https://www.djangoproject.com/
-[sqlalchemy]: http://www.sqlalchemy.org/
+[sqlalchemy]: https://www.sqlalchemy.org/
 [fukamachi]: https://github.com/fukamachi
 [dbi]: https://github.com/fukamachi/cl-dbi
 [sxql]: https://github.com/fukamachi/sxql
