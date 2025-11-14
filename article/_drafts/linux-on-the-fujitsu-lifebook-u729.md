@@ -138,3 +138,4 @@ To enter the boot menu: as above but with `F12`.
 [ds]: https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
 [pw]: https://pipewire.org/
 [bctl]: https://github.com/Hummer12007/brightnessctl
+[ap]: https://www.absolute.com/platform/persistence
