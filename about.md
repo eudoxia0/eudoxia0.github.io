@@ -75,7 +75,7 @@ This website is built with [Emacs][emacs], [Jekyll][jekyll], and
 
 [emacs]: https://www.gnu.org/software/emacs/
 [jekyll]: http://jekyllrb.com/
-[sass]: http://sass-lang.com/
+[sass]: https://sass-lang.com/
 [pages]: https://pages.github.com/
 
 ## Icon Sources
