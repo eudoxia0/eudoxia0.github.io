@@ -784,7 +784,7 @@ article.
 [atom]: https://atom.io/
 
 [github-repos]: http://planet.lisp.org/github.atom
-[news]: http://www.newsbeuter.org/
+[news]: https://github.com/akrennmair/newsbeuter
 
 [ltk]: https://www.peter-herth.de/ltk/
 [clisp]: https://en.wikipedia.org/wiki/CLISP
