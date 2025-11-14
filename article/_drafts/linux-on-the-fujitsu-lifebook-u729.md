@@ -1,9 +1,7 @@
 ---
 title: Linux on the Fujitsu Lifebook U729
 summary: A short review and troubleshooting guide.
-card: TODO
-card_source: |
-    TODO
+card: linux-on-the-fujitsu-lifebook-u729.png
 ---
 
 This post describes my experience using Linux on the [Fujitsu Lifebook
