@@ -183,7 +183,7 @@ language like Rust.
 [hungarian]: https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/
 [fsharp]: https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference/units-of-measure
 
-[audio-realtime]: http://atastypixel.com/blog/four-common-mistakes-in-audio-development/
+[audio-realtime]: https://atastypixel.com/four-common-mistakes-in-audio-development/
 
 [haskell-ord]: https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Ord.html#t:Ordering
 [libdill]: http://libdill.org/
