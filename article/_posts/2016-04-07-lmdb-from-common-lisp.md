@@ -273,7 +273,7 @@ CL-USER> (uiop:delete-directory-tree +directory+ :validate t)
 [^planets]:
     A 1024-bit wide machine word is probably overkill even then.
 
-[lmdb]: http://symas.com/mdb/
+[lmdb]: https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database
 [talk]: http://www.infoq.com/presentations/lmdb-lighting-memory-mapped-database
 [wal]: https://en.wikipedia.org/wiki/Write-ahead_logging
 [liblmdb]: https://github.com/antimer/liblmdb
