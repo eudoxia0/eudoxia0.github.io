@@ -422,7 +422,7 @@ together so you only serve a single CSS file and a single JS one.
 [opencv]: https://opencv.org/
 [ne]: https://github.com/kanzure/nanoengineer
 [parcom]: https://en.wikipedia.org/wiki/Parser_combinator
-[mlton]: http://mlton.org/
+[mlton]: https://en.wikipedia.org/wiki/MLton
 [sqlite]: https://www.sqlite.org/index.html
 [forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
 [eog581]: https://borretti.me/fiction/eog581
