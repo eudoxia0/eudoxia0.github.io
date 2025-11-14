@@ -682,7 +682,7 @@ article.
 [sotu-hn]: https://news.ycombinator.com/item?id=10071535
 [fare]: http://fare.livejournal.com/169346.html
 
-[clack]: http://clacklisp.org/
+[clack]: https://github.com/fukamachi/clack
 [caveman]: http://8arrow.org/caveman/
 [ningle]: http://8arrow.org/ningle/
 [lucerne]: http://eudoxia.me/lucerne/
