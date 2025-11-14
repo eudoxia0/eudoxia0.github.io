@@ -74,7 +74,7 @@ hard to write.
 By analogy to [shotgun parsers][shotgun], shotgun IO is when effectful code is
 smeared all over the codebase.
 
-[shotgun]: http://langsec.org/papers/langsec-cwes-secdev2016.pdf
+[shotgun]: https://langsec.org/papers/langsec-cwes-secdev2016.pdf
 
 Consider Haskell vs. everything else. Many language communities have some best
 practice about [moving IO to the edges][edge]. But there is no strict
