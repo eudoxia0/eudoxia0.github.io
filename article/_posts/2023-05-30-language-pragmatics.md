@@ -82,7 +82,7 @@ language-level enforcement of this rule. Because of expedience, because you have
 to release this tonight or else, someone puts some database access code deep
 inside otherwise pure data transform code, along with a `FIXME` comment.
 
-[edge]: http://eweise.com/post/sideeffects/
+[edge]: https://web.archive.org/web/20230921132049/http://eweise.com/post/sideeffects/
 
 Gradually you go down the slope of pragmatics: I/O is spread across the
 codebase. In Haskell, there is no way out: you have to use the `IO` monad. And
