@@ -2,6 +2,12 @@
 title: Linux on the Fujitsu Lifebook U729
 ---
 
+This post describes my experience using Linux on the [Fujitsu Lifebook
+U729][laptop]. The tl;dr is that this is a delightful laptop, and Linux runs
+flawlessly, and all the hardware things I've needed run OOTB. The only
+difficulty I had was in disabling Secure Boot, but I figured out how to do it,
+which I explain below.
+
 # Contents
 {: .no_toc }
 
