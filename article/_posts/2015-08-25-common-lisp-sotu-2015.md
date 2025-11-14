@@ -684,7 +684,7 @@ article.
 
 [clack]: https://github.com/fukamachi/clack
 [caveman]: https://github.com/fukamachi/caveman
-[ningle]: http://8arrow.org/ningle/
+[ningle]: https://github.com/fukamachi/ningle
 [lucerne]: https://borretti.me/lucerne/
 [woo]: https://github.com/fukamachi/woo
 [hunchentoot]: https://edicl.github.io/hunchentoot/
