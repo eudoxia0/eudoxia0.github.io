@@ -742,7 +742,7 @@ article.
 [uv]: https://github.com/joyent/libuv
 [node]: https://nodejs.org/
 [stmx]: https://github.com/cosmos72/stmx
-[lpara]: http://lparallel.org/
+[lpara]: https://github.com/lmj/lparallel
 [legion]: https://github.com/fukamachi/legion
 
 [rtd]: https://readthedocs.org/
