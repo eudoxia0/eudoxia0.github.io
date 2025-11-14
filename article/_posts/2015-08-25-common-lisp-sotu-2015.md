@@ -787,7 +787,7 @@ article.
 [news]: http://www.newsbeuter.org/
 
 [ltk]: http://www.peter-herth.de/ltk/
-[clisp]: http://www.clisp.org/
+[clisp]: https://en.wikipedia.org/wiki/CLISP
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: https://ccl.clozure.com/
 [ecl]: https://common-lisp.net/project/ecl/
