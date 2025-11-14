@@ -80,7 +80,7 @@ I feel privileged to live in these times. In a wholly undeserved sense, talking 
 [matplotlib]: https://matplotlib.org/
 [rel]: https://www.anthropic.com/news/3-5-models-and-computer-use
 [repo]: https://github.com/eudoxia0/claude-export
-[tool]: https://docs.anthropic.com/en/docs/build-with-claude/tool-use
+[tool]: https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview
 [toys]: https://x.com/zetalyrae/status/1855813597131096547
 
 # Footnotes
