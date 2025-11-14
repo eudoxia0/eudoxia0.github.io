@@ -87,6 +87,9 @@ After this, I was able to install Linux from a live USB.
 
 # Review
 
+I love it. It's small and portable. It feels solid. The keyboard feels good. All
+the hardware works out of the box. The battery life is pretty good for Linux.
+
 # Non-Problems
 
 The following work flawlessly OOTB:
