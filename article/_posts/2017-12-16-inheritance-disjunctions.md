@@ -561,7 +561,7 @@ illegal states unrepresentable.
 [cl-integer]: http://clhs.lisp.se/Body/t_intege.htm
 [no-oop]: http://www.paulgraham.com/noop.html
 [declaim]: http://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm
-[sbcl]: https://sbcl.org/
+[sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [values]: http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm
 [a-blindness]: https://github.com/quchen/articles/blob/master/algebraic-blindness.md
 [haskell-do]: https://en.wikibooks.org/wiki/Haskell/do_notation

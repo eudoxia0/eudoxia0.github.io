@@ -81,7 +81,7 @@ can be as heavy as the [Vasa][vasa]; only small languages, however, can
 [adacore]: https://www.adacore.com/
 [flights]: https://www.google.com/flights
 [ita]: https://www.itasoftware.com/
-[sbcl]: https://www.sbcl.org/
+[sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [sunk]: https://en.wikipedia.org/wiki/Sunk_cost
 [lisp]: https://lisp-lang.org/
 [hyperspec]: http://www.lispworks.com/documentation/HyperSpec/Front/

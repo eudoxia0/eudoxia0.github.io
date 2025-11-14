@@ -788,7 +788,7 @@ article.
 
 [ltk]: http://www.peter-herth.de/ltk/
 [clisp]: http://www.clisp.org/
-[sbcl]: http://www.sbcl.org/
+[sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: http://ccl.clozure.com/
 [ecl]: https://common-lisp.net/project/ecl/
 [abcl]: https://common-lisp.net/project/ecl/
