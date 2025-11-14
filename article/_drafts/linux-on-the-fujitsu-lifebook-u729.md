@@ -16,10 +16,10 @@ which I explain below.
 
 # Background
 
-From early 2024 my daily driver was an M2 MacBook Air, until earlier this year I
-broke the screen, and the repair was quoted at almost 1000 AUD. Since I used it
-as a desktop most of the time, this didn't affect me much. After some
-flip-flopping I decided to get an M4 Mac mini. Partly for the faster CPU and
+From early 2024 my daily driver was an [M2 MacBook Air], until earlier this year
+I broke the screen, and the repair was quoted at almost 1000 AUD. Since I used
+it as a desktop most of the time, this didn't affect me much. After some
+flip-flopping I decided to get an [M4 Mac mini]. Partly for the faster CPU and
 more RAM, but partly because I liked the idea of LARPing like it's the 2000s,
 when computers, and by extension the Internet, where fixed in physical space,
 rather than following everyone around.
@@ -30,12 +30,12 @@ desktop---and none of them were portable. When I went to [RustForge 2025][rf] I
 just brought my phone. If I wanted to travel, even within Sydney, to a demo
 night or math club or some such, I didn't have a laptop to bring with me.
 
-So I needed a new laptop. And the Tahoe release of macOS was so ugly it made me
-boot up the old Linux desktop, and start playing around with NixOS again. And I
-fell in love with Linux again: with the tinkering and the experimentation and
-the freedom it affords you.
+So I needed a new laptop. And the [Tahoe release][tahoe] of macOS was so ugly it
+made me boot up the old Linux desktop, and start playing around with [NixOS]
+again. And I fell in love with Linux again: with the tinkering and the
+experimentation and the freedom it affords you.
 
-So, I wanted a Linux laptop. I had a ThinkPad X1 some years ago and it was
+So, I wanted a Linux laptop. I had a [ThinkPad X1][tp] some years ago and it was
 terribly: flimsy plastic build and hardware that vastly underperformed its
 price. I looked around for old, refursbished workstation laptops, and, randomly,
 I ran into an eBay seller offering a refurbished Fujitsu laptop.
@@ -45,9 +45,9 @@ The specs/price ratio was pretty good: 16 GiB of RAM and 512GiB of SSD, all for
 lightweight. But the thing that got me, in all honesty, was the brand. "Fujitsu
 laptop" sounds like colour in a William Gibson novel: "crawling into the
 avionics bay, Case took out a battered Fujitsu refurb, and stuck a JTAG port in
-the flight computer---". I already use [NixOS] and a [trackball][elecom] and a
-mechanical keyboard, so a laptop that's even more obscure than a ThinkPad is
-perfect for me. And it was only 250 AUD. So I got it.
+the flight computer---". I already use NixOS and a [trackball][elecom] and a
+[mechanical keyboard][mech], so a laptop that's even more obscure than a
+ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
 # Secure Boot
 
