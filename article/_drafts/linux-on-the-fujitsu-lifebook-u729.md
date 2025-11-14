@@ -20,10 +20,10 @@ which I explain below.
 
 # Background
 
-From early 2024 my daily driver was an [M2 MacBook Air], until earlier this year
-I broke the screen, and the repair was quoted at almost 1000 AUD. Since I used
-it as a desktop most of the time, this didn't affect me much. After some
-flip-flopping I decided to get an [M4 Mac mini]. Partly for the faster CPU and
+From early 2024 my daily driver was an M2 MacBook Air, until earlier this year I
+broke the screen, and the repair was quoted at almost 1000 AUD. Since I used it
+as a desktop most of the time, this didn't affect me much. After some
+flip-flopping I decided to get an M4 Mac mini. Partly for the faster CPU and
 more RAM, but partly because I liked the idea of LARPing like it's the 2000s,
 when computers, and by extension the Internet, where fixed in physical space,
 rather than following everyone around.
