@@ -311,7 +311,7 @@ shows the scope of the macro system.
 </div>
 </div>
 
-[sjs]: http://sweetjs.org/
+[sjs]: https://sweetjs.org/
 [magma]: https://github.com/eudoxia0/magma
 
 # Corona
@@ -417,7 +417,7 @@ together so you only serve a single CSS file and a single JS one.
 [yaml]: https://yaml.org/
 [cl-libyaml]: https://github.com/eudoxia0/cl-libyaml
 [libyaml]: https://pyyaml.org/wiki/LibYAML
-[scrapy]: https://scrapy.org/
+[scrapy]: https://www.scrapy.org/
 [trello]: https://trello.com/
 [opencv]: https://opencv.org/
 [ne]: https://github.com/kanzure/nanoengineer
