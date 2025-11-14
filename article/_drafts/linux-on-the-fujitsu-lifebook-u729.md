@@ -34,10 +34,11 @@ desktop---and none of them were portable. When I went to [RustForge 2025][rf] I
 just brought my phone. If I wanted to travel, even within Sydney, to a demo
 night or math club or some such, I didn't have a laptop to bring with me.
 
-So I needed a new laptop. And the [Tahoe release][tahoe] of macOS was so ugly it
-made me boot up the old Linux desktop, and start playing around with [NixOS]
-again. And I fell in love with Linux again: with the tinkering and the
-experimentation and the freedom it affords you.
+So I needed a new laptop. And the [Tahoe release][tahoe] of macOS was so ugly
+(see e.g. [1][ugly1], [2][ugly2], [3][ugly3]) it made me boot up the old Linux
+desktop, and start playing around with [NixOS] again. And I fell in love with
+Linux again: with the tinkering and the experimentation and the freedom it
+affords you.
 
 So, I wanted a Linux laptop. I had a [ThinkPad X1][tp] some years ago and it was
 terribly: flimsy plastic build and hardware that vastly underperformed its
@@ -144,3 +145,6 @@ To enter the boot menu: as above but with `F12`.
 [NixOS]: https://en.wikipedia.org/wiki/NixOS
 [mech]: https://www.amazon.com.au/dp/B07B8J6C3C
 [tahoe]: https://en.wikipedia.org/wiki/MacOS_Tahoe
+[ugly1]: https://x.com/zetalyrae/status/1968813221025865886
+[ugly2]: https://x.com/zetalyrae/status/1979654314244403272
+[ugly3]: https://x.com/zetalyrae/status/1971719256980312211
