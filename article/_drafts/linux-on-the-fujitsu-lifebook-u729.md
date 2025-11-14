@@ -65,3 +65,5 @@ which I explain below.
 
 - enter bios: smash f2 until you hear the beep
 - enter boot select: smash f12 until you hear the beep
+
+[laptop]: https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
