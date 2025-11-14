@@ -46,7 +46,7 @@ subgoal after subgoal, until you hit rock bottom and you find yourself doing
 some task so distantly related to the original goal you're in another universe
 entirely. See also: [yak shaving][yak], [OCD][ocd].
 
-[yak]: http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html
+[yak]: https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html
 [ocd]: https://medlineplus.gov/obsessivecompulsivedisorder.html
 
 I do this all the time: I learned to program because I wanted to write a program
