@@ -735,7 +735,7 @@ article.
 [t-types]: https://github.com/m2ym/trivial-types
 [interval-types]: https://common-lisp.net/project/cdr/document/5/extra-num-types.html
 
-[5am]: http://quickdocs.org/fiveam/
+[5am]: https://quickdocs.org/fiveam
 [prove]: https://github.com/fukamachi/prove
 
 [async]: http://orthecreedence.github.io/cl-async/
