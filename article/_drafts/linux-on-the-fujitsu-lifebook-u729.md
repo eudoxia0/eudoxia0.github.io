@@ -110,7 +110,7 @@ The following work flawlessly OOTB:
 
 - WiFi
 - Bluetooth
-- Sound (using [pipewire])
+- Sound (using [PipeWire][pw])
 - Display brightness control (using [brightnessctl][bctl])
 - Touchscreen (I didn't realize the screen was actually a touchscreen until I
   touched it by accident and saw the mouse move)
@@ -136,3 +136,5 @@ To enter the boot menu: as above but with `F12`.
 [laptop-ar]: https://web.archive.org/web/20230923090211/https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
 [rf]: https://rustforgeconf.com/
 [ds]: https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
+[pw]: https://pipewire.org/
+[bctl]: https://github.com/Hummer12007/brightnessctl
