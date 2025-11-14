@@ -51,6 +51,10 @@ ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
 # Secure Boot
 
+I tried to install [Debian] the usual way, when I was greeted by this:
+
+[TODO: photo]
+
 - secureboot
 	- things that didn't work
 	- how to disable
