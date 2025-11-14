@@ -23,7 +23,7 @@ Or, using [home-manager][hm]:
 ```nix
 home-manager.users.$username.home.packages = with pkgs; [
   (agda.withPackages (p: [
-	p.standard-library
+    p.standard-library
   ]))
 ];
 ```
@@ -47,8 +47,8 @@ home-manager.users.eudoxia = {
     enable = true;
     extraPackages =
       epkgs: with epkgs; [
-	    agda2-mode
-		# ...
+        agda2-mode
+        # ...
       ];
   };
 };
