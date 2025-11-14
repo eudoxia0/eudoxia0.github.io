@@ -705,7 +705,7 @@ article.
 [ros-travis]: https://github.com/snmsts/roswell/wiki/Using-with-Travis-CI
 
 [commonqt]: https://github.com/commonqt/commonqt
-[qtools]: http://shinmera.github.io/qtools/
+[qtools]: https://codeberg.org/shinmera/qtools
 [smoke]: https://techbase.kde.org/Development/Languages/Smoke
 [qt-libs]: https://github.com/Shinmera/qt-libs
 [gtk]: https://github.com/crategus/cl-cffi-gtk
