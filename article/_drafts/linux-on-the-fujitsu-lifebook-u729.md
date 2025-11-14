@@ -14,7 +14,7 @@ which I explain below.
 1. toc
 {:toc}
 
-# Rambling
+# Background
 
 From early 2024 my daily driver was an M2 MacBook Air, until earlier this year I
 broke the screen, and the repair was quoted at almost 1000 AUD. Since I used it
