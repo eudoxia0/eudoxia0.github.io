@@ -754,7 +754,7 @@ article.
 [uni]: http://weitz.de/cl-unicode/
 
 [criterion]: https://hackage.haskell.org/package/criterion
-[esrap]: https://quickdocs.org/esrap/
+[esrap]: https://quickdocs.org/esrap
 [proc-parse]: https://github.com/fukamachi/proc-parse
 
 [jonathan]: https://github.com/Rudolph-Miller/jonathan
@@ -775,7 +775,7 @@ article.
 [cepl]: https://github.com/cbaggers/cepl
 [varjo]: https://github.com/cbaggers/varjo
 [cepl-video]: https://www.youtube.com/playlist?list=PL2VAYZE_4wRKKr5pJzfYD1w4tKCXARs5y
-[opengl]: https://quickdocs.org/cl-opengl/
+[opengl]: https://quickdocs.org/cl-opengl
 [sdl]: https://github.com/lispgames/cl-sdl2
 [pg]: https://github.com/fogleman/pg
 
