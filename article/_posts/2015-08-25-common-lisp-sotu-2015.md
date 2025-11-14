@@ -685,7 +685,7 @@ article.
 [clack]: https://github.com/fukamachi/clack
 [caveman]: http://8arrow.org/caveman/
 [ningle]: http://8arrow.org/ningle/
-[lucerne]: http://eudoxia.me/lucerne/
+[lucerne]: https://borretti.me/lucerne/
 [woo]: https://github.com/fukamachi/woo
 [hunchentoot]: http://weitz.de/hunchentoot/
 [libev]: http://software.schmorp.de/pkg/libev.html
