@@ -713,7 +713,7 @@ article.
 [antik]: https://www.common-lisp.net/project/antik/
 [gsl]: https://www.gnu.org/software/gsl/
 
-[msi]: http://www.msi.co.jp/english/
+[msi]: https://www.msi.co.jp/english/index.html
 [mmaul]: https://github.com/mmaul
 [clml]: https://github.com/mmaul/clml
 [clml-tutorial]: https://mmaul.github.io/clml.tutorials//2015/08/08/CLML-Time-Series-Part-1.html
