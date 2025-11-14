@@ -91,7 +91,9 @@ the BIOS (the ordering seems to be important: first update the Fujitsu firmware
 through Windows Update, then the BIOS through DeskUpdate).
 
 Reboot and go into the BIOS (F2). You should have a new BIOS version. In my
-case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28.
+case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28:
+
+![A photograph of the BIOS screen showing BIOS version information.](/assets/content/linux-on-the-fujitsu-lifebook-u729/bios.webp)
 
 You now have the option to disable Secure Boot:
 
