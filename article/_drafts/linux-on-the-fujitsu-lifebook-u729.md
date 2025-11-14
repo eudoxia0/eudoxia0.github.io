@@ -2,6 +2,14 @@
 title: Linux on the Fujitsu Lifebook U729
 ---
 
+# Contents
+{: .no_toc }
+
+1. toc
+{:toc}
+
+# Rambling
+
 - context
   - past few months
   - had three computers
@@ -20,12 +28,22 @@ title: Linux on the Fujitsu Lifebook U729
 	- like the thinkpad of thinkpads
 	- i'm already a huge hipter: I just NixOS and a trackball and stumpwm
     - so this is the apotheosis of being a tech hipster
-- problems
-  - secureboot
+
+# Secure boot
+
+- secureboot
 	- things that didn't work
 	- how to disable
-  - weird shitty spyware thing
 - once disabling secure boot, installing nixos was easy
+
+# Spyware
+
+- weird shitty spyware thing
+
+# Review
+
+# Non-Problems
+
 - things that work flawlessly ootb
   - display brightness
   - sound
@@ -36,6 +54,8 @@ title: Linux on the Fujitsu Lifebook U729
   - webcam
 	- not winning any awards
   - mic?
-- notes
-  - enter bios: smash f2 until you hear the beep
-  - enter boot select: smash f12 until you hear the beep
+
+# Notes
+
+- enter bios: smash f2 until you hear the beep
+- enter boot select: smash f12 until you hear the beep
