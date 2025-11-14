@@ -726,7 +726,7 @@ article.
 [scipy]: https://scipy.org/
 [numpy]: https://numpy.org/
 
-[fad]: http://weitz.de/cl-fad/
+[fad]: https://edicl.github.io/cl-fad/
 [osicat]: https://common-lisp.net/project/osicat/
 
 [log4cl]: http://quickdocs.org/log4cl/
