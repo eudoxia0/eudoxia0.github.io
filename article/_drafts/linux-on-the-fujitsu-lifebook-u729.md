@@ -32,43 +32,24 @@ night or math club or some such, I didn't have a laptop to bring with me.
 
 So I needed a new laptop. And the Tahoe release of macOS was so ugly it made me
 boot up the old Linux desktop, and start playing around with NixOS again. And I
-fell in love with Linux, again: with the tinkering and the experimentation and
+fell in love with Linux again: with the tinkering and the experimentation and
 the freedom it affords you.
 
-So, a Linux laptop. I had a ThinkPad X1 some years ago and it was terribly:
-flimsy plastic build and hardware that vastly underperformed its price. I looked
-around for old, refursbished workstation laptops, and, randomly, I ran into an
-eBay seller offering a refurbished Fujitsu laptop.
+So, I wanted a Linux laptop. I had a ThinkPad X1 some years ago and it was
+terribly: flimsy plastic build and hardware that vastly underperformed its
+price. I looked around for old, refursbished workstation laptops, and, randomly,
+I ran into an eBay seller offering a refurbished Fujitsu laptop.
 
 The specs/price ratio was pretty good: 16 GiB of RAM and 512GiB of SSD, all for
 250 AUD. And it was 12in and 1.1kg, which I like: laptops should be small and
 lightweight. But the thing that got me, in all honesty, was the brand. "Fujitsu
 laptop" sounds like colour in a William Gibson novel: "crawling into the
 avionics bay, Case took out a battered Fujitsu refurb, and stuck a JTAG port in
-the flight computer---". I use [NixOS] and a [trackball][elecom] and a
-mechanical keyboard, so clearly I need a laptop with which I can out-hipster a
-ThinkPad. The ThinkPad of ThinkPads.
+the flight computer---". I already use [NixOS] and a [trackball][elecom] and a
+mechanical keyboard, so a laptop that's even more obscure than a ThinkPad is
+perfect for me. And it was only 250 AUD. So I got it.
 
-- context
-  - past few months
-  - had three computers
-  - none portable
-  - thought about buying a new macbook air
-  - but tahoe sucks
-	- border radius
-  - started playing around with linux and fell in love again
-- wanted a linux laptop
-  - i was disappointed by the thinkpad x1
-  - browsing refurbs
-  - randomly came across the fujitsu
-  - the price/specs was really good: 250AUD for 16GiB of RAM and 512GiB of SSD storage, and a 2020 processor
-  - and it's 12in, which i like
-  - but i think the main thing was the vibe: a Fujitsu laptop!
-	- like the thinkpad of thinkpads
-	- i'm already a huge hipter: I just NixOS and a trackball and stumpwm
-    - so this is the apotheosis of being a tech hipster
-
-# Secure boot
+# Secure Boot
 
 - secureboot
 	- things that didn't work
