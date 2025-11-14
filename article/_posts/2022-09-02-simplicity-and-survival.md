@@ -84,7 +84,7 @@ can be as heavy as the [Vasa][vasa]; only small languages, however, can
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [sunk]: https://en.wikipedia.org/wiki/Sunk_cost
 [lisp]: https://lisp-lang.org/
-[hyperspec]: http://www.lispworks.com/documentation/HyperSpec/Front/
+[hyperspec]: https://www.lispworks.com/documentation/HyperSpec/Front/
 [sbcl-team]: https://github.com/sbcl/sbcl/pulse/monthly
 [clisp]: https://clisp.sourceforge.io/
 [austral-spec]: https://austral-lang.org/spec/spec.html

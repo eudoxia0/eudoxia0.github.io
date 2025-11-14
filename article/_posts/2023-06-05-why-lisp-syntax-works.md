@@ -98,7 +98,7 @@ And macros are Lisp code, so they can use whatever toolkit of list and
 tree-manipulation code you bring in. You can even define [lexically-scoped
 macros][macrolet].
 
-[macrolet]: http://www.lispworks.com/documentation/lw70/CLHS/Body/s_flet_.htm
+[macrolet]: https://www.lispworks.com/documentation/lw70/CLHS/Body/s_flet_.htm
 
 Syntactic uniformity also means there is a lot less room for syntax
 bikeshedding. Really the only thing you can bikeshed is the naming convention
