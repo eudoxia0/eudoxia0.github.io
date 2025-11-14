@@ -51,7 +51,7 @@ ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
 The only problem I had was disabling Secure Boot in order to install
 Linux. Otherwise: I love it. It's small and lightweight, feels solid, the
-keyboard is good, all the hardware works out of the box with Linux, and the
+keyboard is good, all the hardware works out of the box with NixOS, and the
 battery life is pretty good.
 
 # Troubleshooting
