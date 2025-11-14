@@ -49,18 +49,37 @@ the flight computer---". I already use NixOS and a [trackball][elecom] and a
 [mechanical keyboard][mech], so a laptop that's even more obscure than a
 ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
-# Secure Boot
+# Troubleshooting
+
+This section describes the problems I encountered.
+
+## Secure Boot
 
 I tried to install [Debian] the usual way, when I was greeted by this:
 
 [TODO: photo]
 
-- secureboot
-	- things that didn't work
-	- how to disable
-- once disabling secure boot, installing nixos was easy
+Going into the BIOS, the option to disable [Secure Boot][sb] was greyed out. I
+tried a bunch of random bullshit: wiping the TPM, disabling the TPM. That didn't
+work.
 
-# Spyware
+What did work was this:
+
+1. Install Windows 11. This came with the laptop. And the installation makes
+   installing Linux feel easy: I had to do so many weird tricks to avoid having
+   to create an account with Microsoft during the installation.
+1. Once Windows is installed, go into Windows Update. Under "Advanced Options >
+   Optional Updates", there should be an option to install Fujitsu-specific
+   drivers. Install those. And for good measure, do a general Windows update.
+1. There was a program called DeskUpdate on the Desktop. This is the Fujitsu
+   BIOS update tool. Run this and go through the instructions: this should
+   update the BIOS (the ordering seems to be important: first update the Fujitsu
+   firmware through Windows Update, then the BIOS through DeskUpdate).
+1. Reboot and go into the BIOS (F2). You should have a new BIOS version. In my
+   case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28.
+1. You now have the option to disable SecureBoot.
+
+## Spyware
 
 - weird shitty spyware thing
 
