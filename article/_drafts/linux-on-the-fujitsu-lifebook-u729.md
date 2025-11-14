@@ -67,7 +67,7 @@ This section describes the problems I encountered.
 
 ## Secure Boot
 
-I tried to install [Debian][deb] the usual way, when I was greeted by this:
+I tried to install Linux the usual way, when I was greeted by this:
 
 ![A photograph of the laptop screen showing an error message, red text on white: 'secure boot is failed **access denied**'.](/assets/content/linux-on-the-fujitsu-lifebook-u729/secureboot.webp)
 
@@ -149,7 +149,6 @@ To enter the boot menu: as above but with `F12`.
 
 [ap]: https://www.absolute.com/platform/persistence
 [bctl]: https://github.com/Hummer12007/brightnessctl
-[deb]: https://www.debian.org/
 [ds]: https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
 [elecom]: https://elecomusa.com/products/deft-trackball-wireless-copy
 [laptop-ar]: https://web.archive.org/web/20230923090211/https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
