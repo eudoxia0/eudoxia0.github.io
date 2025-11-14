@@ -103,10 +103,12 @@ Things I have not tested:
 
 - Microphone
 
-# Notes
+# BIOS Notes
 
-- enter bios: smash f2 until you hear the beep
-- enter boot select: smash f12 until you hear the beep
+To enter the BIOS: smash `F2` until you hear the beep. No need to hold down the
+`Fn` key.
+
+To enter the boot menu: as above but with `F12`.
 
 # Links
 
