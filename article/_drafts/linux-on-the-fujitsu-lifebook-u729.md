@@ -77,19 +77,25 @@ work.
 
 What did work was this:
 
-1. Install Windows 11. This came with the laptop. And the installation makes
-   installing Linux feel easy: I had to do so many weird tricks to avoid having
-   to create an account with Microsoft during the installation.
-1. Once Windows is installed, go into Windows Update. Under "Advanced Options >
-   Optional Updates", there should be an option to install Fujitsu-specific
-   drivers. Install those. And for good measure, do a general Windows update.
-1. There was a program called DeskUpdate on the Desktop. This is the Fujitsu
-   BIOS update tool. Run this and go through the instructions: this should
-   update the BIOS (the ordering seems to be important: first update the Fujitsu
-   firmware through Windows Update, then the BIOS through DeskUpdate).
-1. Reboot and go into the BIOS (F2). You should have a new BIOS version. In my
-   case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28.
-1. You now have the option to disable SecureBoot.
+First, install Windows 11. This came with the laptop. And the installation makes
+installing Linux feel easy: I had to do so many weird tricks to avoid having to
+create an account with Microsoft during the installation.
+
+Once Windows is installed, go into Windows Update. Under "Advanced Options >
+Optional Updates", there should be an option to install Fujitsu-specific
+drivers. Install those. And for good measure, do a general Windows update.
+
+There should be a program called DeskUpdate on the Desktop. This is the Fujitsu
+BIOS update tool. Run this and go through the instructions: this should update
+the BIOS (the ordering seems to be important: first update the Fujitsu firmware
+through Windows Update, then the BIOS through DeskUpdate).
+
+Reboot and go into the BIOS (F2). You should have a new BIOS version. In my
+case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28.
+
+You now have the option to disable Secure Boot:
+
+![A photograph of the BIOS screen showing the option to disable Secure boot.](/assets/content/linux-on-the-fujitsu-lifebook-u729/secureboot-disable.webp)
 
 After this, I was able to install Linux from a live USB.
 
