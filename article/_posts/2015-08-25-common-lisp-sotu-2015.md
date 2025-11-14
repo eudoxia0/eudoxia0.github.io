@@ -786,7 +786,7 @@ article.
 [github-repos]: http://planet.lisp.org/github.atom
 [news]: http://www.newsbeuter.org/
 
-[ltk]: http://www.peter-herth.de/ltk/
+[ltk]: https://www.peter-herth.de/ltk/
 [clisp]: https://en.wikipedia.org/wiki/CLISP
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: https://ccl.clozure.com/
