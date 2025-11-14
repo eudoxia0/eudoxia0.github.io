@@ -727,7 +727,7 @@ article.
 [numpy]: https://numpy.org/
 
 [fad]: https://edicl.github.io/cl-fad/
-[osicat]: https://common-lisp.net/project/osicat/
+[osicat]: https://github.com/osicat/osicat
 
 [log4cl]: https://quickdocs.org/log4cl
 [vom]: https://github.com/orthecreedence/vom/
