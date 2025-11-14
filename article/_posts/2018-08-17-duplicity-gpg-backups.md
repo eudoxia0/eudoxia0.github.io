@@ -88,6 +88,6 @@ for decryption.
 
 [luks]: https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup
 [geli]: https://www.freebsd.org/cgi/man.cgi?geli(8)
-[duplicity]: http://duplicity.nongnu.org/
+[duplicity]: https://en.wikipedia.org/wiki/Duplicity_(software)
 [bsddupl]: https://www.freebsd.org/cgi/man.cgi?query=duplicity&apropos=0&sektion=0&manpath=FreeBSD+7.1-RELEASE+and+Ports&format=html
 [gpg]: https://gnupg.org/
