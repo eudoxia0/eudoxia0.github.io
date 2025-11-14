@@ -265,7 +265,7 @@ Coveralls:
 [chef]: https://www.chef.io/chef/
 [salt]: https://en.wikipedia.org/wiki/Salt_(software)
 [sbcl]: https://www.sbcl.org/
-[ccl]: http://ccl.clozure.com/
+[ccl]: https://ccl.clozure.com/
 [scriba]: https://github.com/CommonDoc/scriba
 [cim]: https://github.com/KeenS/CIM
 [crane]: https://github.com/eudoxia0/crane
