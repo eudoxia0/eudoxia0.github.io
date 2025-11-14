@@ -187,7 +187,7 @@ language like Rust.
 
 [haskell-ord]: https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Ord.html#t:Ordering
 [libdill]: http://libdill.org/
-[rust]: https://www.rust-lang.org/en-US/
+[rust]: https://rust-lang.org/
 
 [iterate]: https://common-lisp.net/project/iterate/
 [for]: https://shinmera.github.io/for/
