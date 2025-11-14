@@ -9,4 +9,4 @@ You can find the live version [here][site].
 $ ./serve.sh
 ```
 
-[site]: http://borretti.me/
+[site]: https://borretti.me/
