@@ -148,3 +148,4 @@ To enter the boot menu: as above but with `F12`.
 [ugly1]: https://x.com/zetalyrae/status/1968813221025865868
 [ugly2]: https://x.com/zetalyrae/status/1979654314244403272
 [ugly3]: https://x.com/zetalyrae/status/1971719256980312211
+[tp]: https://www.lenovo.com/au/en/p/laptops/thinkpad/thinkpadx1/x1-extreme-g4/22tp2x1x1e4
