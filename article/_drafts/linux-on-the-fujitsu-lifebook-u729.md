@@ -1,5 +1,6 @@
 ---
 title: Linux on the Fujitsu Lifebook U729
+summary: A short review and troubleshooting guide.
 ---
 
 This post describes my experience using Linux on the [Fujitsu Lifebook
