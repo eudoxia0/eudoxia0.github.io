@@ -191,6 +191,6 @@ language like Rust.
 
 [iterate]: https://common-lisp.net/project/iterate/
 [for]: https://shinmera.github.io/for/
-[loop]: http://www.lispworks.com/documentation/lw51/CLHS/Body/m_loop.htm
+[loop]: https://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm
 
 [eqdw]: http://eqdw.net/
