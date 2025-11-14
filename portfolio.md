@@ -426,7 +426,7 @@ together so you only serve a single CSS file and a single JS one.
 [sqlite]: https://www.sqlite.org/index.html
 [forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
 [eog581]: https://borretti.me/fiction/eog581
-[lmdb]: http://www.lmdb.tech/doc/
+[lmdb]: https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database
 [electron]: https://www.electronjs.org/
 
 </article>
