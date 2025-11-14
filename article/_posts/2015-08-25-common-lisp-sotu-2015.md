@@ -723,7 +723,7 @@ article.
 [higgs]: https://www.kaggle.com/c/higgs-boson
 [mgl-mat]: https://github.com/melisgl/mgl-mat
 [lla]: https://github.com/tpapp/lla
-[scipy]: http://www.scipy.org/
+[scipy]: https://scipy.org/
 [numpy]: http://www.numpy.org/
 
 [fad]: http://weitz.de/cl-fad/
