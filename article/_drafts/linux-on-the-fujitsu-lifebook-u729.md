@@ -145,6 +145,6 @@ To enter the boot menu: as above but with `F12`.
 [NixOS]: https://en.wikipedia.org/wiki/NixOS
 [mech]: https://www.amazon.com.au/dp/B07B8J6C3C
 [tahoe]: https://en.wikipedia.org/wiki/MacOS_Tahoe
-[ugly1]: https://x.com/zetalyrae/status/1968813221025865886
+[ugly1]: https://x.com/zetalyrae/status/1968813221025865868
 [ugly2]: https://x.com/zetalyrae/status/1979654314244403272
 [ugly3]: https://x.com/zetalyrae/status/1971719256980312211
