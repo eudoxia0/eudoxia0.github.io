@@ -263,7 +263,7 @@ Coveralls:
 [docker]: https://www.docker.com/
 [ansible]: https://github.com/ansible/ansible
 [chef]: https://www.chef.io/chef/
-[salt]: http://saltstack.com/
+[salt]: https://en.wikipedia.org/wiki/Salt_(software)
 [sbcl]: https://www.sbcl.org/
 [ccl]: http://ccl.clozure.com/
 [scriba]: https://github.com/CommonDoc/scriba
