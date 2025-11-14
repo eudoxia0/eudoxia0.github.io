@@ -695,7 +695,7 @@ The following guides were crucial in writing this article:
 [asus]: https://www.amazon.com/gp/product/B01DT49XN8/
 
 [crypt-howto]: https://forums.freebsd.org/threads/howto-freebsd-10-1-amd64-uefi-boot-with-encrypted-zfs-root-using-geli.51393/
-[intel]: http://www.srobb.net/freebsdintel.html
+[intel]: https://www.srobb.net/freebsdintel.html
 [freebsd-laptop]: https://www.c0ffee.net/blog/freebsd-on-a-laptop/
 
 [jekyll]: https://jekyllrb.com/
