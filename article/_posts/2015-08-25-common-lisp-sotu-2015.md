@@ -711,7 +711,7 @@ article.
 [gtk]: https://github.com/crategus/cl-cffi-gtk
 
 [antik]: https://www.common-lisp.net/project/antik/
-[gsl]: http://www.gnu.org/software/gsl/
+[gsl]: https://www.gnu.org/software/gsl/
 
 [msi]: http://www.msi.co.jp/english/
 [mmaul]: https://github.com/mmaul
