@@ -729,7 +729,7 @@ article.
 [fad]: https://edicl.github.io/cl-fad/
 [osicat]: https://common-lisp.net/project/osicat/
 
-[log4cl]: http://quickdocs.org/log4cl/
+[log4cl]: https://quickdocs.org/log4cl
 [vom]: https://github.com/orthecreedence/vom/
 
 [t-types]: https://github.com/m2ym/trivial-types
