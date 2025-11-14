@@ -54,6 +54,8 @@ the flight computer---". I already use NixOS and a [trackball][elecom] and a
 [mechanical keyboard][mech], so a laptop that's even more obscure than a
 ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
+![A photograph of the laptop.](/assets/content/linux-on-the-fujitsu-lifebook-u729/laptop.webp)
+
 The only problem I had was disabling Secure Boot in order to install
 Linux. Otherwise: I love it. It's small and lightweight, feels solid, the
 keyboard is good, all the hardware works out of the box with NixOS, and the
@@ -67,7 +69,7 @@ This section describes the problems I encountered.
 
 I tried to install [Debian][deb] the usual way, when I was greeted by this:
 
-[TODO: photo]
+![A photograph of the laptop screen showing an error message, red text on white: 'secure boot is failed **access denied**'.](/assets/content/linux-on-the-fujitsu-lifebook-u729/secureboot.webp)
 
 Going into the BIOS, the option to disable [Secure Boot][sb] was greyed out. I
 tried a bunch of random bullshit: wiping the TPM, disabling the TPM. That didn't
