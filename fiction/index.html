@@ -5,16 +5,16 @@ novella:
   - title: The Epiphany of Gliese 581
     date: 2022-11-15
     summary: A linguist, a chemist, and a comparative psychologist explore the ruins of a dead superintelligence.
-    url: eog581
+    slug: eog581
 stories:
   - title: The Iron Lung of Su-Hui
     date: 2021-08-13
     summary: A man discovers a language that changes the world.
-    url: iron-lung
+    slug: iron-lung
   - title: Maker of Rivers
     date: 2021-08-08
     summary: A group of explorers petition a deity.
-    url: maker-of-rivers
+    slug: maker-of-rivers
 ---
 
 <div class="post-list">
@@ -22,7 +22,7 @@ stories:
   <ul class="posts">
     {% for page in page.novella %}
       <li>
-        <a href="{{ page.url }}">
+        <a href="/fiction/{{ page.slug }}">
           {{ page.title }}
         </a>
         <div class="info">
@@ -43,7 +43,7 @@ stories:
   <ul class="posts">
     {% for page in page.stories %}
       <li>
-        <a href="{{ page.url }}">
+        <a href="/fiction/{{ page.slug }}">
           {{ page.title }}
         </a>
         <div class="info">
