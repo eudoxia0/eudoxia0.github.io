@@ -64,7 +64,7 @@ This section describes the problems I encountered.
 
 ## Secure Boot
 
-I tried to install [Debian] the usual way, when I was greeted by this:
+I tried to install [Debian][deb] the usual way, when I was greeted by this:
 
 [TODO: photo]
 
@@ -139,3 +139,5 @@ To enter the boot menu: as above but with `F12`.
 [pw]: https://pipewire.org/
 [bctl]: https://github.com/Hummer12007/brightnessctl
 [ap]: https://www.absolute.com/platform/persistence
+[deb]: https://www.debian.org/
+[elecom]: https://elecomusa.com/products/deft-trackball-wireless-copy
