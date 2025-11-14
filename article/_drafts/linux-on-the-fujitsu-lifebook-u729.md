@@ -104,6 +104,8 @@ I only noticed this because I was searching the BIOS thoroughly for a way to
 disable Secure Boot. The good news is disabling it is pretty straightforward:
 you just disable it in the BIOS.
 
+![A photograph of the BIOS screen showing the Absolute Persistence options.](/assets/content/linux-on-the-fujitsu-lifebook-u729/ap.webp)
+
 As I understand it, Absolute Persistence requires an agent running in the OS, so
 the BIOS support, by itself, doesn't do anything once disabled.
 
