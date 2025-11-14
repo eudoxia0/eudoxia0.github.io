@@ -132,6 +132,7 @@ The following work flawlessly OOTB:
 Things I have not tested:
 
 - Microphone
+- Fingerprint sensor
 
 # BIOS Notes
 
