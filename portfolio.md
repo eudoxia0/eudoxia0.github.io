@@ -337,7 +337,7 @@ the Ruby ecosystem to install Vagrant. It's also pretty nice to use.
 </div>
 
 [vagrant]: https://github.com/hashicorp/vagrant
-[vcloud]: https://vagrantcloud.com/
+[vcloud]: https://developer.hashicorp.com/vagrant/vagrant-cloud
 
 # Rock
 
