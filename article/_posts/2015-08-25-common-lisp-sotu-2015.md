@@ -718,7 +718,7 @@ article.
 [clml]: https://github.com/mmaul/clml
 [clml-tutorial]: https://mmaul.github.io/clml.tutorials//2015/08/08/CLML-Time-Series-Part-1.html
 [mgl]: https://github.com/melisgl/mgl
-[melis]: http://quotenil.com/
+[melis]: https://quotenil.com/
 [higgsml]: https://github.com/melisgl/higgsml
 [higgs]: https://www.kaggle.com/c/higgs-boson
 [mgl-mat]: https://github.com/melisgl/mgl-mat
