@@ -122,7 +122,7 @@ combining pass, where the separate module interface and module body are combined
 into a single object. The parser is written in [Menhir][menhir], a powerful
 parser generator for OCaml, and the lexer is writting in [ocamllex][lex].
 
-[lex]: https://v2.ocaml.org/manual/lexyacc.html
+[lex]: https://ocaml.org/manual/5.4/lexyacc.html
 
 ## The Concrete Syntax Tree {#cst}
 
