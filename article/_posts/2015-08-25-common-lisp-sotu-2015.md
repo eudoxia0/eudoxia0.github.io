@@ -683,7 +683,7 @@ article.
 [fare]: http://fare.livejournal.com/169346.html
 
 [clack]: https://github.com/fukamachi/clack
-[caveman]: http://8arrow.org/caveman/
+[caveman]: https://github.com/fukamachi/caveman
 [ningle]: http://8arrow.org/ningle/
 [lucerne]: https://borretti.me/lucerne/
 [woo]: https://github.com/fukamachi/woo
