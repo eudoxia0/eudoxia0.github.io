@@ -49,6 +49,11 @@ the flight computer---". I already use NixOS and a [trackball][elecom] and a
 [mechanical keyboard][mech], so a laptop that's even more obscure than a
 ThinkPad is perfect for me. And it was only 250 AUD. So I got it.
 
+The only problem I had was disabling Secure Boot in order to install
+Linux. Otherwise: I love it. It's small and lightweight, feels solid, the
+keyboard is good, all the hardware works out of the box with Linux, and the
+battery life is pretty good.
+
 # Troubleshooting
 
 This section describes the problems I encountered.
@@ -84,11 +89,6 @@ After this, I was able to install Linux from a live USB.
 ## Spyware
 
 - weird shitty spyware thing
-
-# Review
-
-I love it. It's small and portable. It feels solid. The keyboard feels good. All
-the hardware works out of the box. The battery life is pretty good for Linux.
 
 # Non-Problems
 
