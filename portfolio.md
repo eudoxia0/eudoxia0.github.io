@@ -358,7 +358,7 @@ together so you only serve a single CSS file and a single JS one.
 </div>
 </div>
 
-[bower]: http://bower.io/
+[bower]: https://bower.io/
 
 # Other Projects
 
