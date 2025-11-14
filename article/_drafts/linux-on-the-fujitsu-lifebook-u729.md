@@ -79,6 +79,8 @@ What did work was this:
    case, I went from BIOS 2.17 to 2.31 which was released on 2025-03-28.
 1. You now have the option to disable SecureBoot.
 
+After this, I was able to install Linux from a live USB.
+
 ## Spyware
 
 - weird shitty spyware thing
@@ -87,16 +89,19 @@ What did work was this:
 
 # Non-Problems
 
-- things that work flawlessly ootb
-  - display brightness
-  - sound
-  - wifi
-  - bluetooth
-  - the screen is actually a touchscreen and i only realized this accidentally
-  - battery life
-  - webcam
-	- not winning any awards
-  - mic?
+The following work flawlessly OOTB:
+
+- WiFi
+- Bluetooth
+- Sound (using [pipewire])
+- Display brightness control (using [brightnessctl][bctl])
+- Touchscreen (I didn't realize the screen was actually a touchscreen until I
+  touched it by accident and saw the mouse move)
+- Webcam (not winning any awards on quality, but it works)
+
+Things I have not tested:
+
+- Microphone
 
 # Notes
 
