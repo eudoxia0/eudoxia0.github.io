@@ -88,7 +88,17 @@ After this, I was able to install Linux from a live USB.
 
 ## Spyware
 
-- weird shitty spyware thing
+The laptop comes with this corporate spyware thing called [Absolute
+Persistence][ap]. It's some anti-theft tracking device. Since the Lifebook is
+typically an enterprise laptop, it makes sense that it comes with this type of
+thing.
+
+I only noticed this because I was searching the BIOS thoroughly for a way to
+disable Secure Boot. The good news is disabling it is pretty straightforward:
+you just disable it in the BIOS.
+
+As I understand it, Absolute Persistence requires an agent running in the OS, so
+the BIOS support, by itself, doesn't do anything once disabled.
 
 # Non-Problems
 
