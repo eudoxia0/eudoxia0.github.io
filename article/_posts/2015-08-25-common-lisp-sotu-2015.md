@@ -792,7 +792,7 @@ article.
 [ccl]: https://ccl.clozure.com/
 [ecl]: https://common-lisp.net/project/ecl/
 [abcl]: https://common-lisp.net/project/ecl/
-[puercopop]: http://www.puercopop.com/
+[puercopop]: https://github.com/PuercoPop
 [fukamachi]: https://8arrow.org/
 [fare]: http://fare.tunes.org/
 [gabriel]: https://www.haskellforall.com/
