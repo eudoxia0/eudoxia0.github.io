@@ -36,7 +36,7 @@ dialogue. And then I found [Tatoeba][tatoeba]: an open-source database of
 sentences and their translations.
 
 [frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/French
-[frsen]: http://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.html
+[frsen]: https://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.htm
 [os]: https://www.opensubtitles.org/en/en%20
 [mochi]: https://mochi.cards/
 [tatoeba]: https://tatoeba.org/en/
