@@ -567,7 +567,7 @@ bring your own editor.
   pages, e.g. you can turn a CSV with your reading list into a set of wiki pages
   with one page per entry.
 
-  [gp]: http://www.gnuplot.info/
+  [gp]: https://en.wikipedia.org/wiki/Gnuplot
   [gv]: https://graphviz.org/
   [puml]: https://plantuml.com/
 
