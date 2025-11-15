@@ -65,7 +65,7 @@ a really outstanding parser generator on par with Java's [ANTLR][antlr].
 
 [ocaml]: https://ocaml.org/
 [sum]: https://ocaml.org/docs/data-types#a-simple-custom-type
-[menhir]: http://gallium.inria.fr/~fpottier/menhir/
+[menhir]: https://gallium.inria.fr/~fpottier/menhir/
 [antlr]: https://www.antlr.org/
 
 # Requirements {#requirements}
