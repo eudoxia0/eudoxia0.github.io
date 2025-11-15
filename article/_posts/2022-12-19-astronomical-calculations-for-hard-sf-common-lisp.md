@@ -794,7 +794,7 @@ is [Gliese 555][g555], Ararat is [Gliese 570A][g570], Tigranes is [HD
 [bpic]: https://en.wikipedia.org/wiki/Beta_Pictoris
 [g555]: https://en.wikipedia.org/wiki/Gliese_555
 [g570]: https://en.wikipedia.org/wiki/Gliese_570
-[tig]: http://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40790560&Name=HD%20%2035650&submit=submit
+[tig]: https://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40790560&Name=HD%20%2035650&submit=submit
 
 Zoomed in around Gliese 581 for clarity:
 
