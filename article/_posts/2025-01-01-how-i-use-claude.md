@@ -75,7 +75,7 @@ I feel privileged to live in these times. In a wholly undeserved sense, talking 
 [Kagi]: https://kagi.com/
 [ari]: https://en.wikipedia.org/wiki/Aristarchus_of_Samos
 [da]: https://en.wikipedia.org/wiki/The_Diamond_Age
-[ex]: https://support.anthropic.com/en/articles/9450526-how-can-i-export-my-claude-ai-data
+[ex]: https://support.claude.com/en/articles/9450526-how-can-i-export-my-claude-data
 [inf]: https://x.com/search?q=%22claude+3.6%22
 [matplotlib]: https://matplotlib.org/
 [rel]: https://www.anthropic.com/news/3-5-models-and-computer-use

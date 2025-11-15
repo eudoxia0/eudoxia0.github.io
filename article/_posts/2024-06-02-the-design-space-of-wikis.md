@@ -61,7 +61,7 @@ A page has body text, but also a mapping of properties to values.
 example. Tools like [Obsidian][obsidian] or [org-mode][org] let you add
 properties to pages.
 
-[notiondb]: https://www.notion.so/help/intro-to-databases
+[notiondb]: https://www.notion.com/help/intro-to-databases
 [org]: https://orgmode.org/
 
 ## Typed Properties {#typed-properties}
@@ -166,7 +166,7 @@ _Pale File_ was written by [[Vladimir Nabokov]]{type=author}.
 [database properties][notion-prop].
 
 [dataview]: https://blacksmithgu.github.io/obsidian-dataview/
-[notion-prop]: https://www.notion.so/help/database-properties
+[notion-prop]: https://www.notion.com/help/database-properties
 
 ## Mixin: Red Links {#mixin-red-links}
 
