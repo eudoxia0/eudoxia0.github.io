@@ -744,5 +744,5 @@ Not much, surprisingly:
 [effect]: https://en.wikipedia.org/wiki/Effect_system
 [finalization]: https://www.adaic.org/resources/add_content/docs/95style/html/sec_9/9-2-3.html
 [subst]: https://dl.acm.org/citation.cfm?doid=2048066.2048115
-[sutter]: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0709r4.pdf
+[sutter]: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0709r4.pdf
 [midori]: https://joeduffyblog.com/2016/02/07/the-error-model/
