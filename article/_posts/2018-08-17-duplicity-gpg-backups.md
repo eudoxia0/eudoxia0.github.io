@@ -87,7 +87,7 @@ key ID is stored in the encrypted files, so GnuPG knows which private key to use
 for decryption.
 
 [luks]: https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup
-[geli]: https://www.freebsd.org/cgi/man.cgi?geli(8)
+[geli]: https://man.freebsd.org/cgi/man.cgi?geli(8)
 [duplicity]: https://en.wikipedia.org/wiki/Duplicity_(software)
 [bsddupl]: https://www.freebsd.org/cgi/man.cgi?query=duplicity&apropos=0&sektion=0&manpath=FreeBSD+7.1-RELEASE+and+Ports&format=html
 [gpg]: https://gnupg.org/
