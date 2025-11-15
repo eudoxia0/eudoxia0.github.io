@@ -1212,8 +1212,8 @@ Links:
   - [Documentation](https://cyclone.thelanguage.org/wiki/User%20Manual/)
 - Papers:
   - [Cyclone: A safe dialect of C](http://www.cs.umd.edu/projects/cyclone/papers/cyclone-safety.pdf) (2002)
-  - [Cyclone: A Type-Safe Dialect of C](http://www.cs.umd.edu/~mwh/papers/cyclone-cuj.pdf) (2005)
-  - [Region-Based Memory Management in Cyclone](http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions.pdf)
+  - [Cyclone: A Type-Safe Dialect of C](https://www.cs.umd.edu/~mwh/papers/cyclone-cuj.pdf) (2005)
+  - [Region-Based Memory Management in Cyclone](https://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions.pdf)
   - [Linear Regions Are All You Need](https://www.cs.cornell.edu/people/fluet/research/substruct-regions/ESOP06/esop06.pdf)
 
 ## LinearML {#linearml}
