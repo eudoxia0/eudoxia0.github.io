@@ -410,7 +410,7 @@ together so you only serve a single CSS file and a single JS one.
 [eruby]: https://en.wikipedia.org/wiki/ERuby
 [clack]: https://github.com/fukamachi/clack
 [cl-libssh2]: https://github.com/alxchk/cl-libssh2
-[libssh2]: https://www.libssh2.org/
+[libssh2]: https://libssh2.org/
 [slime]: https://slime.common-lisp.dev/
 [fmat]: https://jekyllrb.com/docs/front-matter/
 [lass]: https://shinmera.github.io/LASS/
