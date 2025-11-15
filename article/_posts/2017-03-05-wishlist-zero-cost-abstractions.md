@@ -181,7 +181,7 @@ language like Rust.
     guidelines into hard, verifiable constraints in a _huge_ improvement.
 
 [hungarian]: https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/
-[fsharp]: https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference/units-of-measure
+[fsharp]: https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/units-of-measure
 
 [audio-realtime]: https://atastypixel.com/four-common-mistakes-in-audio-development/
 
@@ -189,7 +189,7 @@ language like Rust.
 [libdill]: https://github.com/sustrik/libdill
 [rust]: https://rust-lang.org/
 
-[iterate]: https://common-lisp.net/project/iterate/
+[iterate]: https://iterate.common-lisp.dev/
 [for]: https://shinmera.github.io/for/
 [loop]: https://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm
 

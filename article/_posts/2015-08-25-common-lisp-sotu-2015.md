@@ -768,7 +768,7 @@ article.
 
 [dbi]: https://github.com/fukamachi/cl-dbi
 [sxql]: https://github.com/fukamachi/sxql
-[sql-parameter]: http://blog.codinghorror.com/give-me-parameterized-sql-or-give-me-death/
+[sql-parameter]: https://blog.codinghorror.com/give-me-parameterized-sql-or-give-me-death/
 [crane]: https://github.com/eudoxia0/crane
 [integral]: https://github.com/fukamachi/integral
 
