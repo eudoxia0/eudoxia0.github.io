@@ -485,7 +485,7 @@ to an external SAT solver like [MiniSat][minisat] or [Clasp][clasp]. The [DIMACS
 format][dimacs] provides a standard file format for SAT solver input.
 
 [handbook]: https://www.iospress.com/catalog/books/handbook-of-satisfiability-2
-[minisat]: http://minisat.se/
+[minisat]: https://github.com/niklasso/minisat
 [clasp]: https://potassco.org/clasp/
 [dimacs]: https://logic.pdmi.ras.ru/~basolver/dimacs.html
 
