@@ -643,7 +643,7 @@ $ ./_build/default/forth/bin/menhir_tutorial.exe
 ```
 
 [ocaml]: https://ocaml.org/
-[menhir]: http://gallium.inria.fr/~fpottier/menhir/
+[menhir]: https://gallium.inria.fr/~fpottier/menhir/
 [ocamllex]: https://ocaml.org/manual/5.4/lexyacc.html
 [opam]: https://opam.ocaml.org/
 [dune]: https://dune.readthedocs.io/en/stable/
