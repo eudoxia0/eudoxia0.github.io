@@ -22,7 +22,7 @@ And then I drill them. And if priorities or life circumstances or distraction ca
 
 Making spaced repetition into a habit lets me have the best of both worlds: I can read widely and zero in on my [special interest][si] du jour, and drop it when the next interesting thing comes along, and still make tangible progress.
 
-[si]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4543385/
+[si]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4543385/
 
 The [next post][next] will be about how I learnt to use spaced repetition effectively.
 

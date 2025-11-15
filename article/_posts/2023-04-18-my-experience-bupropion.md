@@ -227,11 +227,11 @@ after discussing it with friends who have ADHD and with my psychiatrist:
    types is hard to reason about. I threw out exceptions because exceptions are
    hard to reason about.
 
-[lauzhu]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6331660/
+[lauzhu]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6331660/
 [austral]: https://github.com/austral/austral
 [antifeatures]: https://austral-lang.org/features
 [linearrules]: https://austral-lang.org/spec/spec.html#linearity
-[pacing]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6061115/
+[pacing]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6061115/
 [wiki1]: https://en.wikipedia.org/wiki/Enceladus
 [wiki2]: https://en.wikipedia.org/wiki/Bombing_of_Wilhelmshaven_in_World_War_II
 [tyr]: https://en.wikipedia.org/wiki/Tyrosine
@@ -463,7 +463,7 @@ From [_15 Years of Clinical Experience With Bupropion HCl: From Bupropion to Bup
 >comorbidities, clinical situations, or concomitant medications that may lower
 >seizure threshold.
 
-[fava2005]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1163271/
+[fava2005]: https://pmc.ncbi.nlm.nih.gov/articles/PMC1163271/
 
 From [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004] by Stahl et. al., 2004:
 
@@ -481,7 +481,7 @@ From [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and
 >0.07% at doses up to 400 mg/day. The mechanisms by which antidepressants may
 >lower the seizure threshold are largely unknown.
 
-[stahl2004]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC514842/
+[stahl2004]: https://pmc.ncbi.nlm.nih.gov/articles/PMC1319796/
 
 From the [FDA][fda]:
 
