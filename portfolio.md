@@ -311,7 +311,7 @@ shows the scope of the macro system.
 </div>
 </div>
 
-[sjs]: https://sweetjs.org/
+[sjs]: https://www.sweetjs.org/
 [magma]: https://github.com/eudoxia0/magma
 
 # Corona
