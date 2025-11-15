@@ -1629,7 +1629,7 @@ Links:
 
 - [Enforcing High-Level Protocols in Low-Level Software][hlp]
 
-[hlp]: http://people.eecs.berkeley.edu/~necula/Papers/vault01.pdf
+[hlp]: https://people.eecs.berkeley.edu/~necula/Papers/vault01.pdf
 
 ## Verona {#verona}
 
