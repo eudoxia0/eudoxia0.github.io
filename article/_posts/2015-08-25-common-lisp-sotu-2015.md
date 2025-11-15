@@ -649,7 +649,7 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
                             (local-time:unix-to-timestamp
                              (getf result :|pubDate|)))
                         (dbi:fetch-all
-                         (dbi:execute query "http://planet.lisp.org/github.atom")))))
+                         (dbi:execute query "https://planet.lisp.org/github.atom")))))
   (with-open-file (stream output
                           :direction :output
                           :if-exists :supersede
