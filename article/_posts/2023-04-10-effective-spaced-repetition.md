@@ -1630,7 +1630,7 @@ it. Let me reiterate the important parts:
 
 [woz]: https://en.wikipedia.org/wiki/Piotr_Wo%C5%BAniak_(researcher)
 [sm]: https://en.wikipedia.org/wiki/SuperMemo
-[twenty]: http://super-memory.com/articles/20rules.htm
+[twenty]: https://super-memory.com/articles/20rules.htm
 
 1. _Understand_ before _memorizing_: the concepts have to be clear in your head
    before you try to commit them to memory. "Clarity" is a fuzzy thing, but what
