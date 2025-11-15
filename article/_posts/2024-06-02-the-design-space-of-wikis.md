@@ -715,5 +715,5 @@ An application provides features to browse, read, and edit the wiki.
 **Examples:** [Obsidian][obsidian], [MediaWiki][mediawiki], [Notion][notion].
 
 [obsidian]: https://obsidian.md/
-[notion]: https://www.notion.so
+[notion]: https://www.notion.com/
 [mediawiki]: https://en.wikipedia.org/wiki/MediaWiki
