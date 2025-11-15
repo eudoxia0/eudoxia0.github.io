@@ -36,7 +36,7 @@ field's existence.
 
 [cogarch]: https://en.wikipedia.org/wiki/Cognitive_architecture
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
-[actr]: https://act-r.psy.cmu.edu/
+[actr]: https://en.wikipedia.org/wiki/ACT-R
 [vdb]: https://en.wikipedia.org/wiki/Vector_database
 [rag]: https://www.pinecone.io/learn/retrieval-augmented-generation/
 
