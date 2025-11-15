@@ -695,14 +695,14 @@ article.
 [jscl]: https://github.com/davazp/jscl
 
 [cl-launch]: https://github.com/luismbo/cl-launch
-[roswell]: https://github.com/snmsts/roswell
+[roswell]: https://github.com/roswell/roswell
 [codex-ros]: https://github.com/CommonDoc/codex/blob/df9d478d1688e18bfe564038f86fbbcb35dcbdac/roswell/codex.ros
-[travis]: https://travis-ci.org/
+[travis]: https://www.travis-ci.com/
 [cl-travis]: https://github.com/luismbo/cl-travis
 [coveralls]: https://coveralls.io/
 [cl-coveralls]: https://github.com/fukamachi/cl-coveralls
 [circle]: https://circleci.com/
-[ros-travis]: https://github.com/snmsts/roswell/wiki/Using-with-Travis-CI
+[ros-travis]: https://github.com/roswell/roswell/wiki/Using-with-Travis-CI
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: https://codeberg.org/shinmera/qtools
@@ -733,19 +733,19 @@ article.
 [vom]: https://github.com/orthecreedence/vom/
 
 [t-types]: https://github.com/m2ym/trivial-types
-[interval-types]: https://common-lisp.net/project/cdr/document/5/extra-num-types.html
+[interval-types]: https://cdr.common-lisp.dev/document/5/extra-num-types.html
 
 [5am]: https://quickdocs.org/fiveam
 [prove]: https://github.com/fukamachi/prove
 
 [async]: https://orthecreedence.github.io/cl-async/
 [uv]: https://github.com/joyent/libuv
-[node]: https://nodejs.org/
+[node]: https://nodejs.org/en
 [stmx]: https://github.com/cosmos72/stmx
 [lpara]: https://github.com/lmj/lparallel
 [legion]: https://github.com/fukamachi/legion
 
-[rtd]: https://readthedocs.org/
+[rtd]: https://about.readthedocs.com/?ref=app.readthedocs.org
 [quickdocs]: https://quickdocs.org/
 [docparser]: https://github.com/eudoxia0/docparser
 [codex]: https://github.com/CommonDoc/codex

@@ -259,7 +259,7 @@ Coveralls:
     things like finding your hostname, quitting the Lisp image, or finding the
     system's architecture in a reliably portable way.
 
-[travis]: https://travis-ci.org/
+[travis]: https://www.travis-ci.com/
 [docker]: https://www.docker.com/
 [ansible]: https://github.com/ansible/ansible
 [chef]: https://en.wikipedia.org/wiki/Progress_Chef
