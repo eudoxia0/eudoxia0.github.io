@@ -10,4 +10,4 @@ This is the index post for a series of tutorials on parsing with
 - [Part I: Forth](/article/parsing-menhir-forth)
 
 [ocaml]: https://ocaml.org/
-[menhir]: http://gallium.inria.fr/~fpottier/menhir/
+[menhir]: https://gallium.inria.fr/~fpottier/menhir/
