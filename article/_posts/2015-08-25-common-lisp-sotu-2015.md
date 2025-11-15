@@ -783,7 +783,7 @@ article.
 [sly]: https://github.com/capitaomorte/sly
 [atom]: https://atom.io/
 
-[github-repos]: http://planet.lisp.org/github.atom
+[github-repos]: https://planet.lisp.org/github.atom
 [news]: https://github.com/akrennmair/newsbeuter
 
 [ltk]: https://www.peter-herth.de/ltk/
