@@ -702,7 +702,7 @@ article.
 [coveralls]: https://coveralls.io/
 [cl-coveralls]: https://github.com/fukamachi/cl-coveralls
 [circle]: https://circleci.com/
-[ros-travis]: https://github.com/roswell/roswell/wiki/Using-with-Travis-CI
+[ros-travis]: https://github.com/roswell/roswell/wiki/Travis-CI
 
 [commonqt]: https://github.com/commonqt/commonqt
 [qtools]: https://codeberg.org/shinmera/qtools
