@@ -77,7 +77,7 @@ creativity, which makes it a [tool of thought][iverson].
     [FreeType][freetype] alone is 120k lines of C. I haven't measured
     [Pango][pango].
 
-[yosef]: http://yosefk.com/blog/my-history-with-forth-stack-machines.html
+[yosef]: https://yosefk.com/blog/my-history-with-forth-stack-machines.html
 [forth]: https://www.forth.com/forth/
 [tesla]: https://en.wikipedia.org/wiki/Tesla_Model_S#Instrument_panel
 [alto]: https://en.wikipedia.org/wiki/Xerox_Alto
