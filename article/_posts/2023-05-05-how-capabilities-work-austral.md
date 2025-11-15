@@ -70,7 +70,7 @@ security vulnerabilities will not be fixed by demanding superhuman discipline
 but by building languages with safer semantics.
 
 [type]: https://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/milner-type-polymorphism.pdf
-[rust]: https://www.rust-lang.org/
+[rust]: https://rust-lang.org/
 
 # Contents
 

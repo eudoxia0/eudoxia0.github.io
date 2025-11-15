@@ -377,7 +377,7 @@ It's easy to go insane with proc macros and trait magic and build an incomprehen
 
 [Cargo]: https://doc.rust-lang.org/cargo/
 [LLVM]: https://llvm.org/
-[Rust]: https://www.rust-lang.org/
+[Rust]: https://rust-lang.org/
 [au]: https://github.com/austral/austral
 [axum]: https://github.com/tokio-rs/axum
 [cache]: https://github.com/Swatinem/rust-cache

@@ -733,7 +733,7 @@ Not much, surprisingly:
 [pthread_cancel]: http://man7.org/linux/man-pages/man3/pthread_cancel.3.html
 [dfree]: https://www.owasp.org/index.php/Doubly_freeing_memory
 [union]: https://en.wikipedia.org/wiki/Tagged_union
-[rust]: https://www.rust-lang.org/
+[rust]: https://rust-lang.org/
 [rustpanic]: https://doc.rust-lang.org/std/macro.panic.html
 [rustcatch]: https://doc.rust-lang.org/std/panic/fn.catch_unwind.html
 [absint]: https://en.wikipedia.org/wiki/Abstract_interpretation
