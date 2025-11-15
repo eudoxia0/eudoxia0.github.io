@@ -154,7 +154,7 @@ To enter the boot menu: as above but with `F12`.
 [laptop]: https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
 [mech]: https://www.amazon.com.au/dp/B07B8J6C3C
 [nixos]: https://en.wikipedia.org/wiki/NixOS
-[pw]: https://pipewire.org/
+[pw]: https://en.wikipedia.org/wiki/PipeWire
 [rf]: https://rustforgeconf.com/
 [sb]: https://en.wikipedia.org/wiki/UEFI#Secure_Boot
 [tahoe]: https://en.wikipedia.org/wiki/MacOS_Tahoe
