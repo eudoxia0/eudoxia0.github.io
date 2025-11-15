@@ -25,6 +25,9 @@ jobs:
             --no-progress
             --timeout=30
             --exclude="www\.gnu\.org"
+            --exclude="fredkozlowski\.com"
+            --exclude="antipope\.org"
+            --exclude="langsec\.org"
             --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429
             './_site/**/*.html'
           fail: true
