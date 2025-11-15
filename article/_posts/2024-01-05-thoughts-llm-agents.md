@@ -48,7 +48,7 @@ yet to hear of any of these doing anything impressive.
 
 [autogpt]: https://github.com/Significant-Gravitas/AutoGPT
 [babyagi]: https://github.com/yoheinakajima/babyagi
-[gpt-engineer]: https://github.com/gpt-engineer-org/gpt-engineer
+[gpt-engineer]: https://github.com/AntonOsika/gpt-engineer
 
 And I wonder why. If AI is going to increase human productivity, it has to be
 able to solve complex tasks. Copilot is great, but it's just a faster horse: I
@@ -173,8 +173,8 @@ I don't have one. There's a number of possibilities that fit the evidence:
 
 # Bibliography
 
-1. [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf)
+1. [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442)
 1. [RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and
-   Generation](https://arxiv.org/pdf/2303.12570.pdf)
+   Generation](https://arxiv.org/pdf/2303.12570)
 1. [Studying artificial life with cellular automata](https://gwern.net/doc/cs/cellular-automaton/1986-langton.pdf)
 1. [Integrated Models of Cognitive Systems](https://academic.oup.com/book/37037)

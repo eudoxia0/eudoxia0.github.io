@@ -644,7 +644,7 @@ $ ./_build/default/forth/bin/menhir_tutorial.exe
 
 [ocaml]: https://ocaml.org/
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
-[ocamllex]: https://ocaml.org/manual/lexyacc.html
+[ocamllex]: https://ocaml.org/manual/5.4/lexyacc.html
 [opam]: https://opam.ocaml.org/
 [dune]: https://dune.readthedocs.io/en/stable/
 [repo]: https://github.com/eudoxia0/parsing-menhir

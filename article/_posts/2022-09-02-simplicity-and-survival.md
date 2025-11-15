@@ -75,11 +75,11 @@ can be as heavy as the [Vasa][vasa]; only small languages, however, can
 | **Small community** | Live           | Die          |
 | **Large community** | Live           | Live         |
 
-[hundred]: http://www.paulgraham.com/hundred.html
+[hundred]: https://paulgraham.com/hundred.html
 [austral]: https://austral-lang.org/
 [ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)
 [adacore]: https://www.adacore.com/
-[flights]: https://www.google.com/flights
+[flights]: https://www.google.com/travel/flights/unsupported?ucpp=Ch5odHRwczovL3d3dy5nb29nbGUuY29tL2ZsaWdodHM
 [ita]: https://www.itasoftware.com/
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [sunk]: https://en.wikipedia.org/wiki/Sunk_cost

@@ -72,9 +72,9 @@ I don't think this is incompetence, but rather the result of the metrics-driven
 race to the bottom. There's a spreadsheet somewhere that says geoip makes some
 ill-conceived metric go up, so let's use that.
 
-[header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+[header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Accept-Language
 [geoip]: https://en.wikipedia.org/wiki/Geolocation_software
 [nav]: https://carter.sande.duodecima.technology/javascript-page-navigation/
 [ddg]: https://en.wikipedia.org/wiki/DuckDuckGo
 [startpage]: https://en.wikipedia.org/wiki/Startpage.com
-[select]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+[select]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select
