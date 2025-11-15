@@ -1403,7 +1403,7 @@ The problem is you have the same problems in a language like C++:
 - Papers:
   - [RustBelt: Securing the Foundations of the Rust Programming Language](https://dl.acm.org/doi/pdf/10.1145/3158154)
 
-[rust-slides]: http://venge.net/graydon/talks/RustForModernCPPDevs.pdf
+[rust-slides]: https://venge.net/graydon/talks/RustForModernCPPDevs.pdf
 [rust-future]: https://graydon2.dreamwidth.org/307291.html
 [rust-future-hn]: https://news.ycombinator.com/item?id=36193326
 [rust-future-lb]: https://lobste.rs/s/47amaq/rust_i_wanted_had_no_future
