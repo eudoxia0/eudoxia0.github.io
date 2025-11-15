@@ -277,7 +277,7 @@ CL-USER> (uiop:delete-directory-tree +directory+ :validate t)
 [talk]: https://www.infoq.com/presentations/lmdb-lighting-memory-mapped-database/
 [wal]: https://en.wikipedia.org/wiki/Write-ahead_logging
 [liblmdb]: https://github.com/antimer/liblmdb
-[cffi]: https://common-lisp.net/project/cffi/
+[cffi]: https://cffi.common-lisp.dev/
 [cllmdb]: https://github.com/antimer/lmdb
 [moneta]: https://github.com/minad/moneta
 [utf8]: https://quickdocs.org/trivial-utf-8/api
