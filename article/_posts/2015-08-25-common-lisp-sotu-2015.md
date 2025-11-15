@@ -710,7 +710,7 @@ article.
 [qt-libs]: https://github.com/Shinmera/qt-libs
 [gtk]: https://github.com/crategus/cl-cffi-gtk
 
-[antik]: https://www.common-lisp.net/project/antik/
+[antik]: https://antik.common-lisp.dev/
 [gsl]: https://www.gnu.org/software/gsl/
 
 [msi]: https://www.msi.co.jp/english/index.html
