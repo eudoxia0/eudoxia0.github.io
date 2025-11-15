@@ -262,7 +262,7 @@ Coveralls:
 [travis]: https://travis-ci.org/
 [docker]: https://www.docker.com/
 [ansible]: https://github.com/ansible/ansible
-[chef]: https://www.chef.io/chef/
+[chef]: https://en.wikipedia.org/wiki/Progress_Chef
 [salt]: https://en.wikipedia.org/wiki/Salt_(software)
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: https://ccl.clozure.com/
