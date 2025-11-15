@@ -81,7 +81,7 @@ The following use cases are very naturally separable:
   reminders, etc.? Now I am a very happy user of [Todoist][todo] (which has
   increased my productivity at least 150%) and I'm not looking back.
 
-[todo]: https://todoist.com/
+[todo]: https://www.todoist.com/
 
 - **Learning:** if you're studying something, you can keep your notes in a
   TfT. This is one of the biggest use cases. But the problem is never
