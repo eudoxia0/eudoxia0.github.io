@@ -1050,7 +1050,7 @@ reader.
 
 I got the formula from the [Atomic Rockets][atom] website:
 
-[atom]: http://www.projectrho.com/public_html/starmaps/trigonometry.php
+[atom]: https://www.projectrho.com/public_html/starmaps/trigonometry.php
 
 ```lisp
 (defun equatorial-to-cartesian (pos)
