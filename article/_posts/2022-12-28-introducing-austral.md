@@ -1049,7 +1049,7 @@ end;
 [linearitycheck]: https://github.com/austral/austral/blob/32fba714b3fe900e79c39682e44b63846017f4df/lib/LinearityCheck.ml
 [cap]: https://en.wikipedia.org/wiki/Capability-based_security
 [supplychain]: https://en.wikipedia.org/wiki/Supply_chain_attack
-[langsec]: http://langsec.org/
+[langsec]: https://langsec.org/
 [clock]: https://twitter.com/robotlolita/status/1474351603008389122
 [timing]: https://en.wikipedia.org/wiki/Timing_attack
 [side]: https://en.wikipedia.org/wiki/Side-channel_attack
