@@ -406,7 +406,7 @@ together so you only serve a single CSS file and a single JS one.
 
 [be]: https://github.com/BetterErrors/better_errors
 [asdf]: https://asdf.common-lisp.dev/
-[b58]: https://en.bitcoinwiki.org/wiki/Base58
+[b58]: https://bitcoinwiki.org/wiki/Base58
 [eruby]: https://en.wikipedia.org/wiki/ERuby
 [clack]: https://github.com/fukamachi/clack
 [cl-libssh2]: https://github.com/alxchk/cl-libssh2
