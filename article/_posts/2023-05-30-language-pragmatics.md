@@ -164,7 +164,7 @@ to the detriment of other things.
 [Erik Naggum][erik] and the [parable of the catapult][parable]:
 
 [erik]: https://www.loper-os.org/?p=165
-[parable]: https://groups.google.com/g/comp.lang.lisp/c/Vn31kjztWpQ#52564cc186195b05
+[parable]: https://groups.google.com/g/comp.lang.lisp/c/Vn31kjztWpQ/m/BVsZhsFMVlIJ
 
 >People use C because it _feels_ faster. Like, if you build a catapult strong
 >enough that it can hurl a bathtub with someone crouching inside it from London
