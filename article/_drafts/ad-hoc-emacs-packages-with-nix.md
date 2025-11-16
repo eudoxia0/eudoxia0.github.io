@@ -59,7 +59,9 @@ And there is. Lo:
 ```
 
 
-Recently I used a Makefile that would download the necessary `.el` from GitHub, then use `home-manager` to copy it into `.emacs.d`, but this only works for simple
+Recently I used a Makefile that would download the necessary `.el` from GitHub,
+then use `home-manager` to copy it into `.emacs.d`, but this only works for
+simple
 
 The first time I had cause to do this recently was when I wanted to use the
 [inform7-mode][i7m] for [Inform 7][i7], which is packaged nowehere.
