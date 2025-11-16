@@ -30,8 +30,8 @@ frame of the yak shave was to look for an Emacs mode. [`inform7-mode`][i7m]
 exists, but isn't packaged anywhere. So I had to vendor it in.
 
 You can use [git submodules][sub] for this, but I hate them. Instead I did
-something far more annoying: I wrote a [Makefile] to download the `.el` from
-GitHub with `curl`, and used [home-manager][hm] to put copy it into my
+something far more annoying: I wrote a [Makefile][make] to download the `.el`
+from GitHub with `curl`, and used [home-manager][hm] to put copy it into my
 `.emacs.d`. Which is nasty.
 
 And of course this only works for small, single-file packages. And there are
@@ -147,9 +147,11 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 ```
 
 [fpil]: https://lean-lang.org/functional_programming_in_lean/
+[hm]: https://github.com/nix-community/home-manager
 [i7]: https://ganelson.github.io/inform-website/
 [i7m]: https://github.com/alexispurslane/inform7-mode
 [l4m]: https://github.com/leanprover-community/lean4-mode
+[make]: https://en.wikipedia.org/wiki/Make_(software)
 [nix]: https://nixos.org/
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
