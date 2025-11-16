@@ -39,7 +39,7 @@ other problems: whatever dependencies your vendored packages need have to be
 specified in `extraPackages`, which confuses the packages _you_ want directly,
 with the transitive dependencies of your vendored packages.
 
-I felt like [the orange juice bit from _The Simpsons_][oj]. There must be a
+I felt like [the orange juice bit][oj] from _The Simpsons_. There must be a
 better way!
 
 And there is. With some help from Claude, I wrote this:
@@ -152,6 +152,8 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [i7m]: https://github.com/alexispurslane/inform7-mode
 [l4m]: https://github.com/leanprover-community/lean4-mode
 [make]: https://en.wikipedia.org/wiki/Make_(software)
+[melpa]: https://melpa.org/
 [nix]: https://nixos.org/
+[nixpkgs]: https://github.com/NixOS/nixpkgs
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
