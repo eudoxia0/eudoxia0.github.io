@@ -31,12 +31,10 @@ exists, but isn't packaged anywhere. So I had to vendor it in.
 
 You can use [git submodules][sub] for this, but I have an irrational aversion to
 submodules. Instead I did something far worse: I wrote a [Makefile][make] to
-download the `.el` from GitHub with `curl`, and used [home-manager][hm] to put
-copy it into my `.emacs.d`. Which is nasty.
-
-And of course this only works for small, single-file packages. And there are
-other problems: whatever dependencies your vendored packages need have to be
-specified in `extraPackages`, which confuses the packages _you_ want directly,
+download the `.el` from GitHub, and used [home-manager][hm] to copy it into my
+`.emacs.d`. Which is nasty. And of course this only works for small, single-file
+packages. And, on top of that: whatever dependencies your vendored packages need
+have to be listed in `extraPackages`, which confuses the packages _you_ want,
 with the transitive dependencies of your vendored packages.
 
 I felt like [the orange juice bit][oj] from _The Simpsons_. There must be a
@@ -79,7 +77,7 @@ in
 Nix takes care of everything: commit pinning, security (with the SHA-256 hash),
 dependencies for custom packages. And it works wonderfully.
 
-Armed with a new hammer, I set out to sink some nails.
+Armed with a new hammer, I set out to drive some nails.
 
 # xcompose-mode
 
