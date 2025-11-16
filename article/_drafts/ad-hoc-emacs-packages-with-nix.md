@@ -28,9 +28,10 @@ You can use [Nix][nix] as a package manager for Emacs, like so:
 Today I learned you can also use it to create ad-hoc packages for things not in
 [MELPA][melpa] or [nixpkgs].
 
-Recently I wanted to get back into [Inform 7][i7], naturally the first stack
-frame of the yak shave was to look for an Emacs mode. [`inform7-mode`][i7m]
-exists, but isn't packaged anywhere. So I had to vendor it in.
+The other day I wanted to get back into [Inform 7][i7], naturally the first
+stack frame of the yak shave was to look for an Emacs
+mode. [`inform7-mode`][i7m] exists, but isn't packaged anywhere. So I had to
+vendor it in.
 
 You can use [git submodules][sub] for this, but I have an irrational aversion to
 submodules. Instead I did something far worse: I wrote a [Makefile][make] to
