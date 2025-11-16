@@ -186,7 +186,7 @@ What is left?
 [zotero]: https://www.zotero.org/
 [nanosystems]: https://www.amazon.com/Nanosystems-P-K-Eric-Drexler/dp/0471575186
 [mermaid]: https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_A_Mermaid.jpg
-[tellico]: https://tellico-project.org/
+[tellico]: https://en.wikipedia.org/wiki/Tellico_(software)
 
 When you take out everything that is better served by an app or plain old folder
 structure, all you're left with is collection management. So instead of building
