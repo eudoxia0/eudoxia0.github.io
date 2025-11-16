@@ -29,10 +29,10 @@ Recently I wanted to get back into [Inform 7][i7], naturally the first stack
 frame of the yak shave was to look for an Emacs mode. [`inform7-mode`][i7m]
 exists, but isn't packaged anywhere. So I had to vendor it in.
 
-You can use [git submodules][sub] for this, but I hate them. Instead I did
-something far more annoying: I wrote a [Makefile][make] to download the `.el`
-from GitHub with `curl`, and used [home-manager][hm] to put copy it into my
-`.emacs.d`. Which is nasty.
+You can use [git submodules][sub] for this, but I have an irrational aversion to
+submodules. Instead I did something far worse: I wrote a [Makefile][make] to
+download the `.el` from GitHub with `curl`, and used [home-manager][hm] to put
+copy it into my `.emacs.d`. Which is nasty.
 
 And of course this only works for small, single-file packages. And there are
 other problems: whatever dependencies your vendored packages need have to be
@@ -189,7 +189,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [i7m]: https://github.com/alexispurslane/inform7-mode
 [kragen]: https://github.com/kragen/xcompose
 [l4m]: https://github.com/leanprover-community/lean4-mode
-[make]: https://en.wikipedia.org/wiki/Make_(software)
+[make]: https://github.com/eudoxia0/dotfiles/blob/ffe18b06a516586ee591cae77351cab8e3569c5f/nixos/modules/emacs/Makefile
 [melpa]: https://melpa.org/
 [nix]: https://nixos.org/
 [nixpkgs]: https://github.com/NixOS/nixpkgs
