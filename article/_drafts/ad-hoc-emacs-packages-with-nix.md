@@ -79,9 +79,31 @@ dependencies for custom packages. And it works wonderfully.
 
 Armed with a new hammer, I set out to drive some nails.
 
+# cabal-mode
+
+Recently I created a tiny Haskell project, and when I opened the `.cabal` file,
+noticed it had no syntax highlighting. I was surprised to find there's no
+`cabal-mode` in MELPA. But coincidentally, someone started working on this
+literally [three weeks ago][cm]! So I wrote a small expression to package this
+new `cabal-mode`:
+
+```nix
+cabal-mode = pkgs.emacsPackages.trivialBuild {
+  pname = "eat";
+  version = "unstable";
+  src = pkgs.fetchFromGitHub {
+    owner = "webdevred";
+    repo = "cabal-mode";
+    rev = "083a777e09bdb5a8d8d69862d44f13078664091f";
+    sha256 = "sha256-c5dUsnEx+0uXFzxQLMnhiP8Gvwedzvq0F0BA+beBkmI=";
+  };
+  packageRequires = [ ];
+};
+```
+
 # xcompose-mode
 
-I recently switched from macOS to Linux, and since I'm stuck on X11 by using
+I recently switched from macOS to Linux, and since I'm stuck on X11 because of
 [stumpwm], I'm using [XCompose][xc] to define keybindings for entering dashes,
 [smart quotes][sq] etc. It bothered me slightly that my `.XCompose` file didn't
 have syntax highlighting. I found [`xcompose-mode.el`][xcm] in [kragen's
@@ -122,28 +144,6 @@ eat = pkgs.emacsPackages.trivialBuild {
   packageRequires = with pkgs.emacsPackages; [
     compat
   ];
-};
-```
-
-# cabal-mode
-
-Recently I created a tiny Haskell project, and when I opened the `.cabal` file,
-noticed it had no syntax highlighting. I was surprised to find there's no
-`cabal-mode` in MELPA. But coincidentally, someone started working on this
-literally [three weeks ago][cm]! So I wrote a small expression to package this
-new `cabal-mode`:
-
-```nix
-cabal-mode = pkgs.emacsPackages.trivialBuild {
-  pname = "eat";
-  version = "unstable";
-  src = pkgs.fetchFromGitHub {
-    owner = "webdevred";
-    repo = "cabal-mode";
-    rev = "083a777e09bdb5a8d8d69862d44f13078664091f";
-    sha256 = "sha256-c5dUsnEx+0uXFzxQLMnhiP8Gvwedzvq0F0BA+beBkmI=";
-  };
-  packageRequires = [ ];
 };
 ```
 
