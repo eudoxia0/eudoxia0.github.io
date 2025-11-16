@@ -22,8 +22,48 @@ You can use [Nix][nix] as a package manager for Emacs, like so:
 }
 ```
 
-- use nix as an emacs package manager
-  - example from my dotfiles
+I recently learnt you can also use it to create ad-hoc packages for things not
+in [MELPA][melpa] or [nixpkgs].
+
+Recently I wanted to get back into [Inform 7][i7], naturally the first step was
+to look for an Emacs mode. [`inform7-mode`][i7m] exists, but isn't packaged
+anywhere. So I had to vendor it in.
+
+You can use [git submodules][sub] for this, but I hate them. Instead I did
+something far more annoying: I wrote a [Makefile] to download the `.el` from
+GitHub with `curl`, and used [home-manager][hm] to put copy it into my
+`.emacs.d`. Which is nasty. And of course this only works for small, single-file
+packages. And there are other problems: whatever dependencies your vendored
+packages need have to be specified in `extraPackages`, which confuses the
+packages _you_ want directly, with the transitive dependencies of your vendored
+packages.
+
+I felt like [the orange juice bit from _The Simpsons_][oj]. There must be a
+better way!
+
+And there is. Lo:
+
+```nix
+{
+  home-manager.users.eudoxia = {
+    programs.emacs = {
+      enable = true;
+      extraPackages =
+        epkgs: with epkgs; [
+          customPackages.inform7-mode
+          # ...
+        ];
+    };
+  };
+}
+```
+
+
+Recently I used a Makefile that would download the necessary `.el` from GitHub, then use `home-manager` to copy it into `.emacs.d`, but this only works for simple
+
+The first time I had cause to do this recently was when I wanted to use the
+[inform7-mode][i7m] for [Inform 7][i7], which is packaged nowehere.
+
 - you can also use this to create ad-hoc packages for things not in MELPA or nixpkgs
 - recently i've had two causes to use this
   - inform7-mode
@@ -55,3 +95,4 @@ You can use [Nix][nix] as a package manager for Emacs, like so:
     - coincidentally, someone started working on a cabal-mode just 3wk ago!
 
 [nix]: https://nixos.org/
+[oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
