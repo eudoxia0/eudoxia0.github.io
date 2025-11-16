@@ -2,6 +2,8 @@
 title: Ad-Hoc Emacs Packages with Nix
 summary: Creating ad-hoc Emacs packages in a few lines of code.
 card: ad-hoc-emacs-packages-with-nix.webp
+card_source: |
+    "Pink sky of twilight, 1899, John Singer Sargent, realist watercolor, from the Musée du Louvre", DALL-E, June 2022.
 ---
 
 You can use [Nix][nix] as a package manager for Emacs, like so:
