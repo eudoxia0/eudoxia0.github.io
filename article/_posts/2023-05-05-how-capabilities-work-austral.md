@@ -109,7 +109,7 @@ Capabilities at the process and operating system level are widely implemented:
 
 [bsd]: https://en.wikipedia.org/wiki/Capsicum_(Unix)
 [fuch]: https://en.wikipedia.org/wiki/Fuchsia_(operating_system)
-[pledge]: https://man.openbsd.org/pledge.2
+[pledge]: https://web.archive.org/web/20250929043541/https://man.openbsd.org/pledge.2
 [seccomp]: https://en.wikipedia.org/wiki/Seccomp
 
 These are typically more coarse-grained than what you can do with language-level
