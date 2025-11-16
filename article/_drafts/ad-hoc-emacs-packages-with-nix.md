@@ -87,11 +87,10 @@ I recently switched from macOS to Linux, and since I'm stuck on X11 by using
 [stumpwm], I'm using [XCompose][xc] to define keybindings for entering dashes,
 [smart quotes][sq] etc. It bothered me slightly that my `.XCompose` file didn't
 have syntax highlighting. I found [`xcompose-mode.el`][xcm] in [kragen's
-`xcompose` repository repo][kragen], but it's slightly broken (it's missing a
-`provide` call at the end). I started wondering how I could write a Nix
-expression to modify the source after fetching, when I found that [Thomas
-Voss][tv] hosts a patched version [here][xcm-fixed]. Which made this very
-simple:
+`xcompose` repo][kragen], but it's slightly broken (it's missing a `provide`
+call at the end). I started wondering how I could write a Nix expression to
+modify the source after fetching, when I found that [Thomas Voss][tv] hosts a
+patched version [here][xcm-fixed]. Which made this very simple:
 
 ```nix
 xcompose-mode = pkgs.emacsPackages.trivialBuild {
