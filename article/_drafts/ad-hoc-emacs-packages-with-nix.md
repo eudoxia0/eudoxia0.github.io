@@ -1,5 +1,6 @@
 ---
 title: Ad-Hoc Emacs Packages with Nix
+summary: Creating ad-hoc Emacs packages in a few lines of code.
 ---
 
 - use nix as an emacs package manager
