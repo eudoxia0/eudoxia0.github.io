@@ -25,9 +25,9 @@ You can use [Nix][nix] as a package manager for Emacs, like so:
 I recently learnt you can also use it to create ad-hoc packages for things not
 in [MELPA][melpa] or [nixpkgs].
 
-Recently I wanted to get back into [Inform 7][i7], naturally the first step was
-to look for an Emacs mode. [`inform7-mode`][i7m] exists, but isn't packaged
-anywhere. So I had to vendor it in.
+Recently I wanted to get back into [Inform 7][i7], naturally the first stack
+frame of the yak shaving was to look for an Emacs mode. [`inform7-mode`][i7m]
+exists, but isn't packaged anywhere. So I had to vendor it in.
 
 You can use [git submodules][sub] for this, but I hate them. Instead I did
 something far more annoying: I wrote a [Makefile] to download the `.el` from
