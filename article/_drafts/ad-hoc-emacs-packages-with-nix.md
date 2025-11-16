@@ -25,8 +25,8 @@ You can use [Nix][nix] as a package manager for Emacs, like so:
 }
 ```
 
-I recently learnt you can also use it to create ad-hoc packages for things not
-in [MELPA][melpa] or [nixpkgs].
+Today I learned you can also use it to create ad-hoc packages for things not in
+[MELPA][melpa] or [nixpkgs].
 
 Recently I wanted to get back into [Inform 7][i7], naturally the first stack
 frame of the yak shave was to look for an Emacs mode. [`inform7-mode`][i7m]
