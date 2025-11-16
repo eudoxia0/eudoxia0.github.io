@@ -1,6 +1,7 @@
 ---
 title: Ad-Hoc Emacs Packages with Nix
 summary: Creating ad-hoc Emacs packages in a few lines of code.
+card: ad-hoc-emacs-packages-with-nix.webp
 ---
 
 You can use [Nix][nix] as a package manager for Emacs, like so:
