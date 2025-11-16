@@ -146,9 +146,9 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 };
 ```
 
-[nix]: https://nixos.org/
-[oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
 [fpil]: https://lean-lang.org/functional_programming_in_lean/
-[l4m]: https://github.com/leanprover-community/lean4-mode
 [i7]: https://ganelson.github.io/inform-website/
 [i7m]: https://github.com/alexispurslane/inform7-mode
+[l4m]: https://github.com/leanprover-community/lean4-mode
+[nix]: https://nixos.org/
+[oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
