@@ -108,11 +108,26 @@ eat = pkgs.emacsPackages.trivialBuild {
 
 # cabal-mode
 
-- cabal-mode
-  - recently created a haskell project with cabal init
-  - opening the `.cabal` file i saw there was no syntax highlighting
-  - surprisingly, there's no cabal-mode on melpa
-  - coincidentally, someone started working on a cabal-mode just 3wk ago!
+Recently I created a tiny Haskell project, and when I opened the `.cabal` file,
+noticed it had no syntax highlighting. I was surprised to find there's no
+`cabal-mode` in MELPA. But coincidentally, someone started working on this
+literally [three weeks ago][cm]! So I wrote a small expression to package this
+new `cabal-mode`:
+
+```nix
+cabal-mode = pkgs.emacsPackages.trivialBuild {
+  pname = "eat";
+  version = "unstable";
+  src = pkgs.fetchFromGitHub {
+    owner = "webdevred";
+    repo = "cabal-mode";
+    rev = "083a777e09bdb5a8d8d69862d44f13078664091f";
+    sha256 = "sha256-c5dUsnEx+0uXFzxQLMnhiP8Gvwedzvq0F0BA+beBkmI=";
+  };
+  packageRequires = [ ];
+};
+```
+
 
 # lean4-mode
 
@@ -146,6 +161,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 };
 ```
 
+[cm]: https://github.com/webdevred/cabal-mode
 [eat]: https://codeberg.org/akib/emacs-eat
 [fpil]: https://lean-lang.org/functional_programming_in_lean/
 [hm]: https://github.com/nix-community/home-manager
