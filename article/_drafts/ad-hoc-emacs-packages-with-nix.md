@@ -87,9 +87,9 @@ Armed with a new hammer, I set out to sink some nails.
 
 # eat
 
-Somehow the version of `eat` in nixpkgs unstable was missing the configuration
-option to use a custom shell. Since I want to use [nu] instead of bash, I had to
-package this myself from the latest commit:
+Somehow the version of [`eat`][eat] in nixpkgs unstable was missing the
+configuration option to use a custom shell. Since I want to use [nu] instead of
+bash, I had to package this myself from the latest commit:
 
 ```nix
 eat = pkgs.emacsPackages.trivialBuild {
@@ -146,6 +146,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 };
 ```
 
+[eat]: https://codeberg.org/akib/emacs-eat
 [fpil]: https://lean-lang.org/functional_programming_in_lean/
 [hm]: https://github.com/nix-community/home-manager
 [i7]: https://ganelson.github.io/inform-website/
