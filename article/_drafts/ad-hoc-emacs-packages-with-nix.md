@@ -83,7 +83,28 @@ Armed with a new hammer, I set out to sink some nails.
 
 # xcompose-mode
 
-- xcompose-mode
+I recently switched from macOS to Linux, and since I'm stuck on X11 by using
+[stumpwm], I'm using [XCompose][xc] to define keybindings for entering dashes,
+[smart quotes][sq] etc. It bothered me slightly that my `.XCompose` file didn't
+have syntax highlighting. I found [`xcompose-mode.el`][xcm] in [kragen's
+`xcompose` repository repo][kragen], but it's slightly broken (it's missing a
+`provide` call at the end). I started wondering how I could write a Nix
+expression to modify the source after fetching, when I found that [Thomas
+Voss][tv] hosts a patched version [here][xcm-fixed]. Which made this very
+simple:
+
+```nix
+xcompose-mode = pkgs.emacsPackages.trivialBuild {
+  pname = "xcompose-mode";
+  version = "unstable";
+  src = pkgs.fetchgit {
+    url = "git://git.thomasvoss.com/xcompose-mode.git";
+    rev = "aeb03f9144e39c882ca6c5c61b9ed1300a2a12ee";
+    sha256 = "sha256-lPapwSJKG+noINmT1G5jNyUZs5VykMOSKJIbQxBWLEA=";
+  };
+  packageRequires = [ ];
+};
+```
 
 # eat
 
@@ -127,7 +148,6 @@ cabal-mode = pkgs.emacsPackages.trivialBuild {
   packageRequires = [ ];
 };
 ```
-
 
 # lean4-mode
 
@@ -174,4 +194,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [nixpkgs]: https://github.com/NixOS/nixpkgs
 [nu]: https://www.nushell.sh/
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
+[sq]: https://smartquotesforsmartpeople.com/
+[stumpwm]: https://github.com/stumpwm/stumpwm
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[xc]: https://man.archlinux.org/man/XCompose.3.en
