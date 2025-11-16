@@ -81,24 +81,30 @@ dependencies for custom packages. And it works wonderfully.
 
 Armed with a new hammer, I set out to sink some nails.
 
-# lean4-mode
-
-- lean4-mode
-  - started reading func prog in lean recently
-  - there's a lean4-mode
-  - not in melpa
-  - this one required a slight deviation from pattern, had to use melpa build
-    to copy the data folder which is needed
-
-
 # xcompose-mode
 
 - xcompose-mode
 
 # eat
 
-- custom eat
-  - somehow the version of eat packages in nixpkgs unstable is missing the config option to change the shell to `nu`
+Somehow the version of `eat` in nixpkgs unstable was missing the configuration
+option to use a custom shell. Since I want to use [nu] instead of bash, I had to
+package this myself from the latest commit:
+
+```nix
+eat = pkgs.emacsPackages.trivialBuild {
+  pname = "eat";
+  version = "unstable";
+  src = pkgs.fetchgit {
+    url = "https://codeberg.org/akib/emacs-eat.git";
+    rev = "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99";
+    sha256 = "sha256-9xG2rMlaMFY77JzUQ3JFrc7XKILZSL8TbP/BkzvBvMk=";
+  };
+  packageRequires = with pkgs.emacsPackages; [
+    compat
+  ];
+};
+```
 
 # cabal-mode
 
@@ -108,5 +114,39 @@ Armed with a new hammer, I set out to sink some nails.
   - surprisingly, there's no cabal-mode on melpa
   - coincidentally, someone started working on a cabal-mode just 3wk ago!
 
+# lean4-mode
+
+I started reading [_Functional Programming in Lean_][fpil] recently, and while
+there is a [lean4-mode][l4m], it's not packaged anywhere. This only required a
+slight deviation from the pattern: when I opened a `.lean` file I got an error
+about a missing JSON file, consulting the README for `lean4-mode`, it says:
+
+> If you use a source-based package-manager (e.g. `package-vc.el`, Straight or
+> Elpaca), then make sure to list the `"data"` directory in your Lean4-Mode
+> package recipe.
+
+To do this I had to use `melpaBuild` rather than `trivialBuild`:
+
+```nix
+lean4-mode = pkgs.emacsPackages.melpaBuild {
+  pname = "lean4-mode";
+  version = "1.1.2";
+  src = pkgs.fetchFromGitHub {
+    owner = "leanprover-community";
+    repo = "lean4-mode";
+    rev = "1388f9d1429e38a39ab913c6daae55f6ce799479";
+    sha256 = "sha256-6XFcyqSTx1CwNWqQvIc25cuQMwh3YXnbgr5cDiOCxBk=";
+  };
+  packageRequires = with pkgs.emacsPackages; [
+    dash
+    lsp-mode
+    magit-section
+  ];
+  files = ''("*.el" "data")'';
+};
+```
+
 [nix]: https://nixos.org/
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
+[fpil]: https://lean-lang.org/functional_programming_in_lean/
+[l4m]: https://github.com/leanprover-community/lean4-mode
