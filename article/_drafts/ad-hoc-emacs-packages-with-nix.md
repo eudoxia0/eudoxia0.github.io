@@ -152,3 +152,4 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [l4m]: https://github.com/leanprover-community/lean4-mode
 [nix]: https://nixos.org/
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
+[sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
