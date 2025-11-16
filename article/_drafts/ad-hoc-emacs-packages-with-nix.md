@@ -3,6 +3,25 @@ title: Ad-Hoc Emacs Packages with Nix
 summary: Creating ad-hoc Emacs packages in a few lines of code.
 ---
 
+You can use [Nix][nix] as a package manager for Emacs, like so:
+
+```nix
+{
+  home-manager.users.eudoxia = {
+    programs.emacs = {
+      enable = true;
+      extraPackages =
+        epkgs: with epkgs; [
+          magit
+          rust-mode
+          treemacs
+          # and so on
+        ];
+    };
+  };
+}
+```
+
 - use nix as an emacs package manager
   - example from my dotfiles
 - you can also use this to create ad-hoc packages for things not in MELPA or nixpkgs
@@ -34,3 +53,5 @@ summary: Creating ad-hoc Emacs packages in a few lines of code.
     - opening the `.cabal` file i saw there was no syntax highlighting
     - surprisingly, there's no cabal-mode on melpa
     - coincidentally, someone started working on a cabal-mode just 3wk ago!
+
+[nix]: https://nixos.org/
