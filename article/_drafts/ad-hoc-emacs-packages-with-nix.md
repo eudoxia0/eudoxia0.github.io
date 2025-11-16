@@ -92,7 +92,7 @@ new `cabal-mode`:
 
 ```nix
 cabal-mode = pkgs.emacsPackages.trivialBuild {
-  pname = "eat";
+  pname = "cabal-mode";
   version = "unstable";
   src = pkgs.fetchFromGitHub {
     owner = "webdevred";
