@@ -187,6 +187,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [hm]: https://github.com/nix-community/home-manager
 [i7]: https://ganelson.github.io/inform-website/
 [i7m]: https://github.com/alexispurslane/inform7-mode
+[kragen]: https://github.com/kragen/xcompose
 [l4m]: https://github.com/leanprover-community/lean4-mode
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 [melpa]: https://melpa.org/
@@ -198,3 +199,4 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [stumpwm]: https://github.com/stumpwm/stumpwm
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [xc]: https://man.archlinux.org/man/XCompose.3.en
+[xcm]: https://github.com/kragen/xcompose/blob/4d8eab4d05a19537ce79294ae0459fdae78ffb20/xcompose-mode.el
