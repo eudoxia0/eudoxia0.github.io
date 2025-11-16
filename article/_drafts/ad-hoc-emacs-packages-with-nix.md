@@ -85,7 +85,7 @@ Armed with a new hammer, I set out to drive some nails.
 
 # cabal-mode
 
-Recently I created a tiny Haskell project, and when I opened the `.cabal` file,
+Today I created a tiny Haskell project, and when I opened the `.cabal` file,
 noticed it had no syntax highlighting. I was surprised to find there's no
 `cabal-mode` in MELPA. But coincidentally, someone started working on this
 literally [three weeks ago][cm]! So I wrote a small expression to package this
@@ -107,15 +107,15 @@ cabal-mode = pkgs.emacsPackages.trivialBuild {
 
 # xcompose-mode
 
-I recently switched from macOS to Linux, and since I'm stuck on X11 because of
-[stumpwm], I'm using [XCompose][xc] to define keybindings for entering dashes,
-[smart quotes][sq] etc. It bothered me slightly that my `.XCompose` file didn't
-have syntax highlighting. I found [`xcompose-mode.el`][xcm] in [kragen's
-`xcompose` repo][kragen], but it's slightly broken (it's missing a `provide`
-call at the end). I started thinking how hard it would be to write a Nix
-expression to modify the source after fetching, when I found that [Thomas
-Voss][tv] hosts a patched version [here][xcm-fixed]. Which made this very
-simple:
+A few weeks back I switched from macOS to Linux, and since I'm stuck on X11
+because of [stumpwm], I'm using [XCompose][xc] to define keybindings for
+entering dashes, [smart quotes][sq] etc. It bothered me slightly that my
+`.XCompose` file didn't have syntax highlighting. I found
+[`xcompose-mode.el`][xcm] in [kragen's `xcompose` repo][kragen], but it's
+slightly broken (it's missing a `provide` call at the end). I started thinking
+how hard it would be to write a Nix expression to modify the source after
+fetching, when I found that [Thomas Voss][tv] hosts a patched version
+[here][xcm-fixed]. Which made this very simple:
 
 ```nix
 xcompose-mode = pkgs.emacsPackages.trivialBuild {
