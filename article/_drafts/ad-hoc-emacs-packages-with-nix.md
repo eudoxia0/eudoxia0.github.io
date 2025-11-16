@@ -155,5 +155,6 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [melpa]: https://melpa.org/
 [nix]: https://nixos.org/
 [nixpkgs]: https://github.com/NixOS/nixpkgs
+[nu]: https://www.nushell.sh/
 [oj]: https://www.youtube.com/watch?v=viejY6UZ5Bk&t=39s
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
