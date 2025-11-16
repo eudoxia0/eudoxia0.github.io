@@ -150,7 +150,7 @@ eat = pkgs.emacsPackages.trivialBuild {
 # lean4-mode
 
 I started reading [_Functional Programming in Lean_][fpil] recently, and while
-there is a [lean4-mode][l4m], it's not packaged anywhere. This only required a
+there is a [`lean4-mode`][l4m], it's not packaged anywhere. This only required a
 slight deviation from the pattern: when I opened a `.lean` file I got an error
 about a missing JSON file, consulting the README for `lean4-mode`, it says:
 
