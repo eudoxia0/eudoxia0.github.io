@@ -40,11 +40,13 @@ If this is interesting to you, [send me an email][mail].
 - LinkedIn: [`fborretti`][ln]
 - Hacker News: [submissions][hnsub], [comments][hncom].
 - Goodreads: [`zetalyrae`](https://www.goodreads.com/user/show/189275796-fernando-borretti)
+- RSS Feeds: see [here][feeds].
 
 [mail]: mailto:fernando@borretti.me
 [ln]: https://www.linkedin.com/in/fborretti
 [hnsub]: https://news.ycombinator.com/submitted?id=zetalyrae
 [hncom]: https://news.ycombinator.com/threads?id=zetalyrae
+[feeds]: https://github.com/eudoxia0/dotfiles/blob/master/modules/newsboat/urls.txt
 
 # About This Site
 
