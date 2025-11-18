@@ -106,3 +106,7 @@ p. 136
 > distraction from the user’s attention to the task. That dictates high
 > bandwidth graphics (high resolution, depth of gray scale, color, and so on)
 > and artistic, communicative design.
+
+# Kinesthetic Model
+
+p. 137
