@@ -78,3 +78,15 @@ p. 31:
 > **GUIDELINE:** Words like "kill," "abort," and "default" have powerful
 > emotional charges connected with them and have no place in the
 > interface. Instead, use words like "stop," "cancel," and "standard."
+
+# Invisible Interfaces
+
+p. 136
+
+> The original game of Adventure appealed to Intuitives. It was strictly text,
+> and there was very little of that. It was indeed a black cave. Adventure games
+> entered the mainstream when someone added the element of graphics. All of a
+> sudden, people could look around and see where they were! They loved the new
+> games, even though it was slow, cumbersome, far more limited in scope and
+> complexity, and did away with all imagination. (Programmers hated the new
+> games.)
