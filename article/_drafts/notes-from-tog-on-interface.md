@@ -90,3 +90,19 @@ p. 136
 > games, even though it was slow, cumbersome, far more limited in scope and
 > complexity, and did away with all imagination. (Programmers hated the new
 > games.)
+>
+> While most programmers have no need to actually see objects, due to their most
+> wonderful ability to use their “mind’s eye,” most human beings are utterly
+> lost in a system sporting the so-called black cave metaphor, as they crash
+> around desperately seeking a way out.
+>
+> **GUIDELINE:** All Macintosh interface objects can be seen, heard, felt, or
+> otherwise directly sensed by the user. There should be no abstract, invisible
+> objects in the interface, ever.
+>
+> The Sensories want to see where they are, where they've been, and where they
+> can go next. The visual model must convey that information to the user in a
+> manner that is as natural as possible, with the least encroachment on and
+> distraction from the user’s attention to the task. That dictates high
+> bandwidth graphics (high resolution, depth of gray scale, color, and so on)
+> and artistic, communicative design.
