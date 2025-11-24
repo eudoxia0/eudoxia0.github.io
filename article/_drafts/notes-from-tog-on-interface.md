@@ -121,6 +121,10 @@ p. 137
 
 <https://verbnounenter.net/one-or-more>
 
+> Every step up in power seems to bring with it ever more restrictions on how languages could be applied.
+
+> But I would argue that programming environments with heavily restricted structures invariably stifle innovation and creativity.
+
 # Fitt's Law
 
 The bit about menu bars.
