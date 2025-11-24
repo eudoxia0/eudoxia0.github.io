@@ -110,3 +110,17 @@ p. 136
 # Kinesthetic Model
 
 p. 137
+
+# etc.
+
+> **GUIDELINE:** The action that results from manipulating an object is just as
+> much a property of that object as its appearance.
+
+> **GUIDELINE:** Human-computer interactivity should not be tied to the speed of
+> the system clock.
+
+<https://verbnounenter.net/one-or-more>
+
+# Fitt's Law
+
+The bit about menu bars.
