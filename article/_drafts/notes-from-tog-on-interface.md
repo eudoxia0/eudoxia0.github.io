@@ -133,3 +133,5 @@ p. 137
 # Fitt's Law
 
 The bit about menu bars.
+
+# Mercurial Checkboxes
