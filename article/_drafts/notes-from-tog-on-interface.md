@@ -1,3 +1,4 @@
+
 ---
 title: Notes from Tog on Interface
 ---
@@ -124,6 +125,10 @@ p. 137
 > Every step up in power seems to bring with it ever more restrictions on how languages could be applied.
 
 > But I would argue that programming environments with heavily restricted structures invariably stifle innovation and creativity.
+
+> **GUIDELINE:** When the users cannot be completely isolated from a reality of
+> the operating system, we must fully expose the users to that reality, no
+> matter how painful a prospect that may appear.
 
 # Fitt's Law
 
