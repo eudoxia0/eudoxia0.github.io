@@ -120,3 +120,4 @@ custom gestures.
 
 [hn]: https://news.ycombinator.com/
 [gr]: https://www.goodreads.com/
+[mon]: https://en.wikipedia.org/wiki/Monarchia
