@@ -122,3 +122,4 @@ custom gestures.
 [gr]: https://www.goodreads.com/
 [mon]: https://en.wikipedia.org/wiki/Monarchia
 [sr]: /article/effective-spaced-repetition
+[anki]: https://apps.ankiweb.net/
