@@ -125,3 +125,4 @@ custom gestures.
 [anki]: https://apps.ankiweb.net/
 [mochi]: https://mochi.cards/
 [hc]: https://github.com/eudoxia0/hashcards
+[cards]: https://github.com/eudoxia0/flashcards
