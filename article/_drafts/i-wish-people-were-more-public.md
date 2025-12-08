@@ -131,14 +131,14 @@ the intelligence explosion?
 [anki]: https://apps.ankiweb.net/
 [cards]: https://github.com/eudoxia0/flashcards
 [dot]: https://github.com/eudoxia0/dotfiles
+[fed]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [gr]: https://www.goodreads.com/
 [hc]: https://github.com/eudoxia0/hashcards
 [hn]: https://news.ycombinator.com/
 [mochi]: https://mochi.cards/
 [mon]: https://en.wikipedia.org/wiki/Monarchia
+[omega]: https://en.wikipedia.org/wiki/Omega_Point
 [ps]: https://www.biblegateway.com/passage/?search=Psalm%201%3A3&version=GNV
 [rice]: https://en.wiktionary.org/wiki/rice_out#English
 [sr]: /article/effective-spaced-repetition
-[fed]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [tip]: https://en.wikipedia.org/wiki/Frank_J._Tipler
-[omega]: https://en.wikipedia.org/wiki/Omega_Point
