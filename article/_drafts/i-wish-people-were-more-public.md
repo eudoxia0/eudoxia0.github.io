@@ -26,16 +26,16 @@ And, from the other side, I have often written a post where, just
 before publishing, I would think: "who would want to read this? It's
 too personal, obscure, idiosyncratic, probably a few people will
 unsubscribe to the RSS feed for this". And always those are the posts
-where people email me to say that they always thought the same thing
-but could never quite put it into words. I really value those
-emails. "I am understood" is a wonderful feeling.
+where people email me to say they always thought the same thing but
+could never quite put it into words. I really value those emails. "I
+am understood" is a wonderful feeling.
 
-I try to apply a rule that if I do something, and I don't write about
-it---or otherwise generate external-facing evidence that I did it---it
-didn't happen. I have built so many things in the dark, little
-experiments or software projects that never saw the light of day. I
-want to put more things out. If it doesn't merit and entire blog post,
-then at least a tweet.
+I try to apply a rule that if I do something, and don't write about
+it---or otherwise generate external-facing evidence of it---it didn't
+happen. I have built so many things in the dark, little experiments or
+software projects or essays that never saw the light of day. I want to
+put more things out. If it doesn't merit and entire blog post, then at
+least a tweet.
 
 # Your Books
 
