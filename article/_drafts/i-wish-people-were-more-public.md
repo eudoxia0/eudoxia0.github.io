@@ -116,7 +116,8 @@ interesting. And I am endlessly curious about how people do this. I
 like reading people's `init.el`, their custom shell scripts, their
 NixOS config. It's even better if they have some obscure hardware
 e.g. some keyboard layou I've never heard of and a trackball with
-custom gestures.
+custom gestures. I put my [dotfiles][dot] up on GitHub because I
+imagine someone will find them interesting.
 
 [hn]: https://news.ycombinator.com/
 [gr]: https://www.goodreads.com/
@@ -127,3 +128,4 @@ custom gestures.
 [hc]: https://github.com/eudoxia0/hashcards
 [cards]: https://github.com/eudoxia0/flashcards
 [rice]: https://en.wiktionary.org/wiki/rice_out#English
+[dot]: https://github.com/eudoxia0/dotfiles
