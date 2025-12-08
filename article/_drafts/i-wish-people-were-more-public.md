@@ -92,9 +92,6 @@ title: I Wish People Were More Public
     - what shell? why?
     - do you have some esoteric browser extension you like?
     - what scripts have you written?
-    - in my polybar config i have a world clock. it has
-      these cities: SF, NYC, MVD, LON, MNL. why these
-      cities?
   - for normal people:
     - what does your background look like?
     - do you use a screensaver?
