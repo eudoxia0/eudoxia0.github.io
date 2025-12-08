@@ -75,11 +75,11 @@ And Goodreads, for all its annoyances, is a uniquely tender social
 network. Finishing a book, and then seeing a friend mark it as "want
 to read", feels like a moment of closeness.
 
-I have a friend who lived in Sydney, and now lives in America, and we
+I have a friend who lived in Sydney, who has since moved away, and we
 don't keep in touch too often, because the timezones are inconvenient,
 but occasionally she likes my book updates, and I like hers, and I
-will probably never read that avant-garde novel, but I'm glad you are
-reading it. It is like sayin: "You exist. I exist. I remember. I wish
+will probably never read that avant-garde novel, but I'm glad she is
+reading it. It is like saying: "You exist. I exist. I remember. I wish
 you happiness."
 
 # Your Flashcards
@@ -100,7 +100,8 @@ curious what people are learning. Not the broad strokes, since we all
 want to learn thermo and econ and quantum chemistry and the military
 history of the Song dynasty and so on, but the minutiae. Why did you
 make a flashcard out of this Bible passage? Why does it resonate with
-you?
+you? Why do you care about the interpretation of that strange passage
+in _Antigone_? Why did you memorize this poem?
 
 # Your Dotfiles
 
@@ -116,7 +117,7 @@ interesting. People who remake their environment to suit them are
 interesting. And I am endlessly curious about how people do this. I
 like reading people's `init.el`, their custom shell scripts, their
 NixOS config. It's even better if they have some obscure hardware
-e.g. some keyboard layou I've never heard of and a trackball with
+e.g. some keyboard layout I've never heard of and a trackball with
 custom gestures. I put my [dotfiles][dot] up on GitHub because I
 imagine someone will find them interesting.
 
