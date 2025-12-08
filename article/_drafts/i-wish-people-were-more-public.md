@@ -126,3 +126,4 @@ custom gestures.
 [mochi]: https://mochi.cards/
 [hc]: https://github.com/eudoxia0/hashcards
 [cards]: https://github.com/eudoxia0/flashcards
+[rice]: https://en.wiktionary.org/wiki/rice_out#English
