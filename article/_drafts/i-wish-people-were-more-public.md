@@ -64,21 +64,28 @@ opposite. Consider this post addressed to you, the reader.
 
 # Your Flashcards
 
-- lots of people use flashcards
-- their decks are private by default
-- some people will export a deck, and share it eg on ankiweb
-- but this is a frozen snapshot of time
-- one reason i built hashcards is that, by treating the
-  flashcard collection as a tree of Markdown files, it
-  allows people to put it on Git, and, as a next step, put
-  it on GitHub
-- my own flashcards collection is public
-- i wish more people's collections were public
-- i want to learn what people are interested in. not really
-  the broad strokes (we all want to learn thermo and econ
-  and quantum chemistry and so on and on and on) but the
-  minutiae. why did you make a flashcard of this Bible
-  passage? why does it resonate with you?
+- intro:
+  - lots of people use flashcards
+  - their decks are private by default
+  - some people will export a deck, and share it eg on
+    ankiweb
+  - but this is a frozen snapshot of time
+- hashcards:
+  - one reason i built hashcards is that, by treating the
+    flashcard collection as a tree of Markdown files, it
+    allows people to put it on Git, and, as a next step, put
+    it on GitHub
+  - my own flashcards collection is public
+  - i wish more people's collections were public
+    - not to copy what they have
+      - this is useless
+      - you need to write youir own
+    - but because i'm curious what they find interesing
+      - not really the broad strokes (we all want to learn
+        thermo and econ and quantum chemistry and so on and
+        on and on) but the minutiae. why did you make a
+        flashcard of this Bible passage? why does it
+        resonate with you?
 
 # Your Dotfiles
 
