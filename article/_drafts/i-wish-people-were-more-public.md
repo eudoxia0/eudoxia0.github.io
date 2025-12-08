@@ -6,11 +6,11 @@ card_source: |
     “Thicket of papyrus, 1914, marble inlaid with gems, from the British Museum”, DALL-E, July 2022.
 ---
 
-Probably not a popular thing to say today. The zeitgeisty thing to say is that
-we should all log off and live terrible cottagecore solarpunk lives raising
-chickens and being mindful. I wish people were more online and more public. I
-have rarely wished the opposite. Consider this post addressed to you, the
-reader.
+Probably not a popular thing to say today. The zeitgeisty thing to say
+is that we should all log off and live terrible cottagecore solarpunk
+lives raising chickens and being mindful. I wish people were more
+online and more public. I have rarely wished the opposite. Consider
+this post addressed to you, the reader.
 
 # Your Writing
 
