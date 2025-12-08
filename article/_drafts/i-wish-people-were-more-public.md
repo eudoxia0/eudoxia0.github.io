@@ -57,8 +57,8 @@ private is solipsistic. Dante, in [_De Monarchia_][mon], writes:
 > not to contribute something to the public good, is far in arrears of
 > his duty, let him be assured; he is, indeed, not "a tree planted by
 > the rivers of water that bringeth forth his fruit in his season,"
-> [Psalms 1:3] but rather a destructive whirlpool, always engulfing,
-> and never giving back what it has devoured.
+> [[Psalms 1:3][ps]] but rather a destructive whirlpool, always
+> engulfing, and never giving back what it has devoured.
 
 My default mode is solipsism. I read in private, build in private,
 learn in private. And the problem with that is self-doubt and
@@ -129,5 +129,6 @@ imagine someone will find them interesting.
 [hn]: https://news.ycombinator.com/
 [mochi]: https://mochi.cards/
 [mon]: https://en.wikipedia.org/wiki/Monarchia
+[ps]: https://www.biblegateway.com/passage/?search=Psalm%201%3A3&version=GNV
 [rice]: https://en.wiktionary.org/wiki/rice_out#English
 [sr]: /article/effective-spaced-repetition
