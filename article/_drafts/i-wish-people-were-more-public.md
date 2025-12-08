@@ -123,3 +123,4 @@ custom gestures.
 [mon]: https://en.wikipedia.org/wiki/Monarchia
 [sr]: /article/effective-spaced-repetition
 [anki]: https://apps.ankiweb.net/
+[mochi]: https://mochi.cards/
