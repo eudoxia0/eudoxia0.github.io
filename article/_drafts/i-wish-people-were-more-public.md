@@ -35,26 +35,44 @@ then at least a tweet.
 
 # Your Books
 
-- if you have posted a pic of your bookshelf on twitter i have scanned
-  all of it
-- goodreads
-  - this is why i appreciate goodreads
-  - like many people, i have been reading a lot less over the past few
-    years
-  - since i made a goodreads account, i've been reading a lot more
-  - you might say that reading in public is performative
-  - i counter that reading in private is solipsistic
-  - consider dante
-- friends
-  - besides, goodreads, for all its many annoyances, is a uniquely
-    tender social network
-  - finishing a book, and then seeing a friend on my feed mark it as
-    "want to read", feels like a moment of closeness
-  - i have a friend who moved out of Sydney, and we don't talk often,
-    because we have inconvenient timezones, but she likes all my book
-    progress updates and I like all of hers. it's a nice way to stay
-    in touch. I will probably never read that avant-garde novel, but
-    I'm glad you're reading it. You continue to exist. I exist.
+If I follow you on Twitter, and you have posted a picture of your
+bookshelf, I have probably scanned every book in it. This is why I
+appreciate [Goodreads][gr]. Like many people I have been reading a lot
+less over the past ~5y, but since I made a Goodreads account earlier
+this year, I've read tens of books. I think what has helped is that
+now I'm reading in public.
+
+You may say reading in public is performative. I say reading in
+private is solipsistic. Consider Dante, [_De Monarchia_][mon]:
+
+> All men on whom the Higher Nature has stamped the love of truth
+> should especially concern themselves in laboring for posterity, in
+> order that future generations may be enriched by their efforts, as
+> they themselves were made rich by the efforts of generations
+> past. For that man who is imbued with public teachings, but cares
+> not to contribute something to the public good, is far in arrears of
+> his duty, let him be assured; he is, indeed, not "a tree planted by
+> the rivers of water that bringeth forth his fruit in his season,"
+> [Psalms 1:3] but rather a destructive whirlpool, always engulfing,
+> and never giving back what it has devoured.
+
+My default mode is solipsism. I read in private, build in private,
+learn in private. And the problem with that is self-doubt. I'm halfway
+through a textbook and think: why? Why am I learning geology? Why
+_this_ topic, and not another? There is never an _a priori_ reason. I
+take notes, but why tweak the LaTeX if no-one, probably not even
+future me, will read them?
+
+And Goodreads, for all its annoyances, is a uniquely tender social
+network. Finishing a book, and then seeing a friend mark it as "want
+to read" feels like a moment of closeness.
+
+I have a friend that lived in Sydney, and now lives in America, and we
+don't keep in touch too often, because the timezones are inconvenient,
+but occasionally she likes my book updates, and I like hers, and I
+will probably never read that avant-garde novel, but I'm glad you are
+reading it. It is like sayin: "You exist. I exist. I remember. I wish
+you happiness."
 
 # Your Flashcards
 
