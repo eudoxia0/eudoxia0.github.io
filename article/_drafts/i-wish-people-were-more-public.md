@@ -43,12 +43,11 @@ If I follow you on Twitter, and you have posted a picture of your
 bookshelf, I have probably scanned every book in it. This is why I
 appreciate [Goodreads][gr]. Like many people I have been reading a lot
 less over the past ~5y, but since I made a Goodreads account earlier
-this year, I've read tens of books. I think what has helped is that
-now I'm reading in public.
+this year, I've read tens of books. Reading in public has helped to
+motivate me.
 
 You may say reading in public is performative. I say reading in
-private is solipsistic. Consider the words of Dante, in [_De
-Monarchia_][mon]:
+private is solipsistic. Dante, in [_De Monarchia_][mon], writes:
 
 > All men on whom the Higher Nature has stamped the love of truth
 > should especially concern themselves in laboring for posterity, in
@@ -62,19 +61,21 @@ Monarchia_][mon]:
 > and never giving back what it has devoured.
 
 My default mode is solipsism. I read in private, build in private,
-learn in private. And the problem with that is self-doubt. I'm halfway
-through a textbook and think: why? Why am I learning geology? Why
-_this_ topic, and not another? There is never an _a priori_ reason. I
-take notes, but why tweak the LaTeX if no-one, probably not even
-future me, will read them? If I stop reading this book, what changes?
-And doing things in public makes them both more real and (potentially)
-useful.
+learn in private. And the problem with that is self-doubt and
+arbitrariness. I'm halfway through a textbook and think: why? Why am I
+learning geology? Why _this_ topic, and not another? There is never an
+_a priori_ reason. I take notes, but why tweak the LaTeX if no-one,
+probably not even future me, will read them? If I stop reading this
+book, what changes?  And doing things in public makes them both more
+real and (potentially) useful. If you publish your study notes, they
+might be useful to someone. Maybe they get slurped up in the training
+set of the next LLM, marginally improving performance.
 
 And Goodreads, for all its annoyances, is a uniquely tender social
 network. Finishing a book, and then seeing a friend mark it as "want
-to read" feels like a moment of closeness.
+to read", feels like a moment of closeness.
 
-I have a friend that lived in Sydney, and now lives in America, and we
+I have a friend who lived in Sydney, and now lives in America, and we
 don't keep in touch too often, because the timezones are inconvenient,
 but occasionally she likes my book updates, and I like hers, and I
 will probably never read that avant-garde novel, but I'm glad you are
