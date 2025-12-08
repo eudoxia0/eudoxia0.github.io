@@ -92,31 +92,17 @@ opposite. Consider this post addressed to you, the reader.
 
 # Your Dotfiles
 
-- this is rather obscure and probably pertains mostly to
-  software engineers
-- some people put their computer's configuration up online
-- these are called "dotfiles", from the practice that
-  configuration files are often have names starting with a
-  period, because on Unix (and later macOS), files that
-  start with a period are normally hidden from users (in
-  Finder, you can see this with [TODO command sequence])
-- and so dotfiles are a metonym for "a system's
-  configuration"
-- why do I find this interesting?
-- computers mediate every aspect of our lives
-- yet, most people use their computers, basically, the way
-  they came out of the box
-- maybe they change the desktop background, but that's it
-- there's something really interesting about people who take
-  agency in their experience of computing, who step off the
-  straight and narrow path, and make a really personal,
-  idiosyncratic experience of computing.
-- so, I am curious: how do you use your computer?
-- for programmers:
-  - what editor do you use? why?
-  - what shell? why?
-  - do you have some esoteric browser extension you like?
-  - what scripts have you written?
-- for normal people:
-  - what does your background look like?
-  - do you use a screensaver?
+- intro
+  - computers mediate every aspect of our lives
+  - yet, most people use their computers, basically, the way
+    they came out of the box
+  - maybe they change the desktop background, but that's it
+  - there's something really interesting about people who
+    take agency in their experience of computing
+  - who step off the straight and narrow path, and make a
+    really personal, idiosyncratic experience of computing.
+  - so, I am curious: how do you use your computer?
+    - what editor do you use? why?
+    - what shell? why?
+    - do you have some esoteric browser extension you like?
+    - what scripts have you written?
