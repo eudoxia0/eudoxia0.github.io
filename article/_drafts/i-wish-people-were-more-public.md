@@ -117,3 +117,5 @@ like reading people's `init.el`, their custom shell scripts, their
 NixOS config. It's even better if they have some obscure hardware
 e.g. some keyboard layou I've never heard of and a trackball with
 custom gestures.
+
+[hn]: https://news.ycombinator.com/
