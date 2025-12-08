@@ -79,26 +79,23 @@ you happiness."
 
 # Your Flashcards
 
-- intro:
-  - lots of people use flashcards
-  - their decks are private by default
-  - some people will export a deck, and share it eg on ankiweb
-    - e.g. gwern's deck
-  - but this is a frozen snapshot of time
-- hashcards:
-  - one reason i built hashcards is that, by treating the flashcard
-    collection as a tree of Markdown files, it allows people to put it
-    on Git, and, as a next step, put it on GitHub
-  - my own flashcards collection is public
-  - i wish more people's collections were public
-    - not to copy what they have
-      - this is useless
-      - you need to write youir own
-    - but because i'm curious what they find interesing
-      - not really the broad strokes (we all want to learn thermo and
-        econ and quantum chemistry and so on and on and on) but the
-        minutiae. why did you make a flashcard of this Bible passage?
-        why does it resonate with you?
+Lots of people use [spaced repetition][sr], but most everyone's
+flashcard collections are private. They exist inside a database inside
+an app like [Anki][anki] or [Mochi][mochi]. You can export decks, but
+that's not a living artifact but a dead snapshot, frozen in time.
+
+One reason I built [hashcards][hc]: by using a Git repo of Markdown
+files as the flashcard database, you can trivially publish your deck
+to GitHub. [My own flashcard collection][fc] is public. I hope that
+more people use hashcards and put their decks up on GitHub.
+
+The point is not that you can clone their repos (which is close to
+useless: you have to write your own flashcards) but because I'm
+curious what people are learning. Not the broad strokes, since we all
+want to learn thermo and econ and quantum chemistry and the military
+history of the Song dynasty and so on, but the minutiae. Why did you
+make a flashcard out of this Bible passage? Why does it resonate with
+you?
 
 # Your Dotfiles
 
