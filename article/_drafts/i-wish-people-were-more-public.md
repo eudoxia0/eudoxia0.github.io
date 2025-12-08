@@ -28,8 +28,16 @@ opposite. Consider this post addressed to you, the reader.
     into words.
   - I really value those emails. "I am understood" is the
     most wonderful feeling.
-- try to develop a rule where if I do it and don't write
-  about it, it didn't happen
+- write:
+  - i have tried to develop this rule
+  - if i do it, and don't write about it, it didn't happen
+  - i try to apply this bc i write lots of personal software
+    and little experiments and often, if i doint write about
+    it here (or at least tweet about it), it is as if it
+    didn't happen
+  - not everything deserves a blog post, little things can
+    be a tweet
+    - e.g. custom invoice format
 
 # Your Books
 
