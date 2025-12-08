@@ -43,7 +43,8 @@ this year, I've read tens of books. I think what has helped is that
 now I'm reading in public.
 
 You may say reading in public is performative. I say reading in
-private is solipsistic. Consider Dante, [_De Monarchia_][mon]:
+private is solipsistic. Consider the words of Dante, in [_De
+Monarchia_][mon]:
 
 > All men on whom the Higher Nature has stamped the love of truth
 > should especially concern themselves in laboring for posterity, in
