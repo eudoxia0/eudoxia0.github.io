@@ -29,7 +29,9 @@ emails. "I am understood" is a wonderful feeling.
 I try to apply a rule that if I do something, and I don't write about
 it---or otherwise generate external-facing evidence that I did it---it
 didn't happen. I have built so many things in the dark, little
-experiments or software projects that never saw the light of day. I want to put more things out. If it doesn't merit and entire blog post, then at least a tweet.
+experiments or software projects that never saw the light of day. I
+want to put more things out. If it doesn't merit and entire blog post,
+then at least a tweet.
 
 # Your Books
 
