@@ -62,7 +62,9 @@ learn in private. And the problem with that is self-doubt. I'm halfway
 through a textbook and think: why? Why am I learning geology? Why
 _this_ topic, and not another? There is never an _a priori_ reason. I
 take notes, but why tweak the LaTeX if no-one, probably not even
-future me, will read them?
+future me, will read them? If I stop reading this book, what changes?
+And doing things in public makes them both more real and (potentially)
+useful.
 
 And Goodreads, for all its annoyances, is a uniquely tender social
 network. Finishing a book, and then seeing a friend mark it as "want
