@@ -46,3 +46,23 @@ title: I Wish People Were More Public
     and econ and quantum chemistry and so on and on and on)
     but the minutiae. why did you make a flashcard of this
     Bible passage? why does it resonate with you?
+- your bookshelf
+  - if you have posted a pic of your bookshelf on twitter i
+    have scanned all of it
+  - this is why i appreciate goodreads
+  - since i made a goodreads account, i've been reading a
+    lot more
+  - you might say that reading in public is performative
+  - i counter that reading in private is solipsistic
+  - consider dante
+  - besides, goodreads, for all its many annoyances, is a
+    uniquely tender social network
+  - finishing a book, and then seeing a friend on my feed
+    mark it as "want to read", feels like a moment of
+    closeness
+  - i have a friend who moved out of Sydney, and we don't
+    talk often, because we have inconvenient timezones, but
+    she likes all my book progress updates and I like all of
+    hers. it's a nice way to stay in touch. I will probably
+    never read that avant-garde novel, but I'm glad you're
+    reading it. You continue to exist. I exist.
