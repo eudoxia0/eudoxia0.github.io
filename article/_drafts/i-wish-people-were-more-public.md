@@ -124,3 +124,4 @@ custom gestures.
 [sr]: /article/effective-spaced-repetition
 [anki]: https://apps.ankiweb.net/
 [mochi]: https://mochi.cards/
+[hc]: https://github.com/eudoxia0/hashcards
