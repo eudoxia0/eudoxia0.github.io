@@ -69,6 +69,7 @@ opposite. Consider this post addressed to you, the reader.
   - their decks are private by default
   - some people will export a deck, and share it eg on
     ankiweb
+    - e.g. gwern's deck
   - but this is a frozen snapshot of time
 - hashcards:
   - one reason i built hashcards is that, by treating the
