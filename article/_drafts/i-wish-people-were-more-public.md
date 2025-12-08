@@ -86,7 +86,7 @@ that's not a living artifact but a dead snapshot, frozen in time.
 
 One reason I built [hashcards][hc]: by using a Git repo of Markdown
 files as the flashcard database, you can trivially publish your deck
-to GitHub. [My own flashcard collection][fc] is public. I hope that
+to GitHub. [My own flashcard collection][cards] is public. I hope that
 more people use hashcards and put their decks up on GitHub.
 
 The point is not that you can clone their repos (which is close to
@@ -99,17 +99,17 @@ you?
 
 # Your Dotfiles
 
-- intro
-  - computers mediate every aspect of our lives
-  - yet, most people use their computers, basically, the way they came
-    out of the box
-  - maybe they change the desktop background, but that's it
-  - there's something really interesting about people who take agency
-    in their experience of computing
-  - who step off the straight and narrow path, and make a really
-    personal, idiosyncratic experience of computing.
-  - so, I am curious: how do you use your computer?
-    - what editor do you use? why?
-    - what shell? why?
-    - do you have some esoteric browser extension you like?
-    - what scripts have you written?
+Computers mediate every aspect of our lives, yet most people use their
+computers the way they came out of the box. At most they might change
+the desktop background. Some people don't even change the default
+icons on the macOS dock. Even most Linux users just use the stock
+configuration, e.g. GNOME on Fedora or whatever.
+
+I'm interested in people who customize their experience of
+computing. This is often derided as "[ricing][rice]". But agency is
+interesting. People who remake their environment to suit them are
+interesting. And I am endlessly curious about how people do this. I
+like reading people's `init.el`, their custom shell scripts, their
+NixOS config. It's even better if they have some obscure hardware
+e.g. some keyboard layou I've never heard of and a trackball with
+custom gestures.
