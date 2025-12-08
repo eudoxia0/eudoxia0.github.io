@@ -17,6 +17,7 @@ addressed to you, the reader.
   - and i will think: I wish you'd write more!
   - when you read someone that really resonates, it is worthwhile to
     read everything else that person has written
+  - and if you think in similar ways, reach out, and make a new friend
 - from the other side:
   - i have often written a blog post where, just before publishing, I
     think: God, who could possibly want to read _this_? It's so
