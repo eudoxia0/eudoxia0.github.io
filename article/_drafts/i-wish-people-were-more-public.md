@@ -27,24 +27,6 @@ opposite. Consider this post addressed to you, the reader.
 - try to develop a rule where if I do it and don't write
   about it, it didn't happen
 
-# Your Flashcards
-
-- lots of people use flashcards
-- their decks are private by default
-- some people will export a deck, and share it eg on ankiweb
-- but this is a frozen snapshot of time
-- one reason i built hashcards is that, by treating the
-  flashcard collection as a tree of Markdown files, it
-  allows people to put it on Git, and, as a next step, put
-  it on GitHub
-- my own flashcards collection is public
-- i wish more people's collections were public
-- i want to learn what people are interested in. not really
-  the broad strokes (we all want to learn thermo and econ
-  and quantum chemistry and so on and on and on) but the
-  minutiae. why did you make a flashcard of this Bible
-  passage? why does it resonate with you?
-
 # Your Books
 
 - if you have posted a pic of your bookshelf on twitter i
@@ -65,6 +47,24 @@ opposite. Consider this post addressed to you, the reader.
   hers. it's a nice way to stay in touch. I will probably
   never read that avant-garde novel, but I'm glad you're
   reading it. You continue to exist. I exist.
+
+# Your Flashcards
+
+- lots of people use flashcards
+- their decks are private by default
+- some people will export a deck, and share it eg on ankiweb
+- but this is a frozen snapshot of time
+- one reason i built hashcards is that, by treating the
+  flashcard collection as a tree of Markdown files, it
+  allows people to put it on Git, and, as a next step, put
+  it on GitHub
+- my own flashcards collection is public
+- i wish more people's collections were public
+- i want to learn what people are interested in. not really
+  the broad strokes (we all want to learn thermo and econ
+  and quantum chemistry and so on and on and on) but the
+  minutiae. why did you make a flashcard of this Bible
+  passage? why does it resonate with you?
 
 # Your Dotfiles
 
