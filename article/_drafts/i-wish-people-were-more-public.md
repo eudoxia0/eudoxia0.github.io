@@ -119,13 +119,13 @@ e.g. some keyboard layou I've never heard of and a trackball with
 custom gestures. I put my [dotfiles][dot] up on GitHub because I
 imagine someone will find them interesting.
 
-[hn]: https://news.ycombinator.com/
-[gr]: https://www.goodreads.com/
-[mon]: https://en.wikipedia.org/wiki/Monarchia
-[sr]: /article/effective-spaced-repetition
 [anki]: https://apps.ankiweb.net/
-[mochi]: https://mochi.cards/
-[hc]: https://github.com/eudoxia0/hashcards
 [cards]: https://github.com/eudoxia0/flashcards
-[rice]: https://en.wiktionary.org/wiki/rice_out#English
 [dot]: https://github.com/eudoxia0/dotfiles
+[gr]: https://www.goodreads.com/
+[hc]: https://github.com/eudoxia0/hashcards
+[hn]: https://news.ycombinator.com/
+[mochi]: https://mochi.cards/
+[mon]: https://en.wikipedia.org/wiki/Monarchia
+[rice]: https://en.wiktionary.org/wiki/rice_out#English
+[sr]: /article/effective-spaced-repetition
