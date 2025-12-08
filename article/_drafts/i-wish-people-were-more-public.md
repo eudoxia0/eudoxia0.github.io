@@ -17,10 +17,10 @@ this post addressed to you, the reader.
 I will often find a blog post on [Hacker News][hn] that really
 resonates. And when I go to check the rest of the site there's three
 other posts. And I think: I wish you'd write more! When I find someone
-whose writing resonates, I like to read everything they have written,
-or at least a tractable subset of their most interesting posts. If you
-like what you see, you can reach out. This is one of the best things
-about writing online: your future friends will seek you out.
+whose writing I really connect with, I like to read everything they
+have written, or at least a tractable subset of their most interesting
+posts. If I like what I see, I reach out. This is one of the best
+things about writing online: your future friends will seek you out.
 
 And, from the other side, I have often written a post where, just
 before publishing, I would think: "who would want to read this? It's
