@@ -2,15 +2,13 @@
 title: I Wish People Were More Public
 ---
 
-- probably not a popular thing to say
-  - nowadays the popular thing to say is we should all be
-    offline and live shitty cottagecore lives and raise
-    chickens and be mindful
-- i wish people were more public
-- i rarely wish the opposite
-- consider this post addressed to you, the reader
+Probably not a popular thing to say today. The zeitgeisty
+thing to say is that we should all log off and live shitty
+cottagecore lives raising chickens and being mindful. I wish
+people were more public. I have rarely wished the
+opposite. Consider this post addressed to you, the reader.
 
-# your writing
+# Your Writing
 
 - sometimes i read blog post and really resonate with the
   author's thinking
@@ -29,7 +27,7 @@ title: I Wish People Were More Public
 - try to develop a rule where if I do it and don't write
   about it, it didn't happen
 
-# your flashcards
+# Your Flashcards
 
 - lots of people use flashcards
 - their decks are private by default
@@ -47,7 +45,7 @@ title: I Wish People Were More Public
   minutiae. why did you make a flashcard of this Bible
   passage? why does it resonate with you?
 
-# your books
+# Your Books
 
 - if you have posted a pic of your bookshelf on twitter i
   have scanned all of it
@@ -68,7 +66,7 @@ title: I Wish People Were More Public
   never read that avant-garde novel, but I'm glad you're
   reading it. You continue to exist. I exist.
 
-# your dotfiles
+# Your Dotfiles
 
 - this is rather obscure and probably pertains mostly to
   software engineers
