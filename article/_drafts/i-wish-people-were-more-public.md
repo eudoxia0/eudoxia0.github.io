@@ -45,6 +45,8 @@ opposite. Consider this post addressed to you, the reader.
   have scanned all of it
 - goodreads
   - this is why i appreciate goodreads
+  - like many people, i have been reading a lot less over
+    the past few years
   - since i made a goodreads account, i've been reading a lot
     more
   - you might say that reading in public is performative
