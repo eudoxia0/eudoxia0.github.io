@@ -1,5 +1,6 @@
 ---
 title: I Wish People Were More Public
+summary: On sharing more of yourself.
 card: i-wish-people-were-more-public.webp
 card_source: |
     “Thicket of papyrus, 1914, marble inlaid with gems, from the British Museum”, DALL-E, July 2022.
