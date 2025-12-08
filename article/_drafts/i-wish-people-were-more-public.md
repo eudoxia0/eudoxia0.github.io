@@ -4,9 +4,9 @@ title: I Wish People Were More Public
 
 Probably not a popular thing to say today. The zeitgeisty thing to say
 is that we should all log off and live shitty cottagecore lives
-raising chickens and being mindful. I wish people were more public. I
-have rarely wished the opposite. Consider this post addressed to you,
-the reader.
+raising chickens and being mindful. I wish people were more online and
+more public. I have rarely wished the opposite. Consider this post
+addressed to you, the reader.
 
 # Your Writing
 
