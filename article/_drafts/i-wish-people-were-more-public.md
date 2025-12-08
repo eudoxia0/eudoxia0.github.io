@@ -1,5 +1,8 @@
 ---
 title: I Wish People Were More Public
+card: i-wish-people-were-more-public.webp
+card_source: |
+    “Thicket of papyrus, 1914, marble inlaid with gems, from the British Museum”, DALL-E, July 2022.
 ---
 
 Probably not a popular thing to say today. The zeitgeisty thing to say
