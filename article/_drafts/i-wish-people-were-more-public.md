@@ -126,7 +126,9 @@ imagine someone will find them interesting.
 And beyond my selfish curiosity there's also the [Fedorovist][fed]
 [ancestor][tip] [simulation][omega] angle: if you die and are not
 cryopreserved, how else are you going to make it to the other side of
-the intelligence explosion?
+the intelligence explosion? Every tweet, blog post, Git commit,
+journal entry, keystroke, mouse click, every one of these things is a
+tomographic cut of the mind that created it.
 
 [anki]: https://apps.ankiweb.net/
 [cards]: https://github.com/eudoxia0/flashcards
