@@ -121,6 +121,13 @@ e.g. some keyboard layout I've never heard of and a trackball with
 custom gestures. I put my [dotfiles][dot] up on GitHub because I
 imagine someone will find them interesting.
 
+# etc.
+
+And beyond my selfish curiosity there's also the [Fedorovist][fed]
+[ancestor][tip] [simulation][omega] angle: if you die and are not
+cryopreserved, how else are you going to make it to the other side of
+the intelligence explosion?
+
 [anki]: https://apps.ankiweb.net/
 [cards]: https://github.com/eudoxia0/flashcards
 [dot]: https://github.com/eudoxia0/dotfiles
@@ -132,3 +139,6 @@ imagine someone will find them interesting.
 [ps]: https://www.biblegateway.com/passage/?search=Psalm%201%3A3&version=GNV
 [rice]: https://en.wiktionary.org/wiki/rice_out#English
 [sr]: /article/effective-spaced-repetition
+[fed]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
+[tip]: https://en.wikipedia.org/wiki/Frank_J._Tipler
+[omega]: https://en.wikipedia.org/wiki/Omega_Point
