@@ -34,7 +34,7 @@ I try to apply a rule that if I do something, and don't write about
 it---or otherwise generate external-facing evidence of it---it didn't
 happen. I have built so many things in the dark, little experiments or
 software projects or essays that never saw the light of day. I want to
-put more things out. If it doesn't merit and entire blog post, then at
+put more things out. If it doesn't merit an entire blog post, then at
 least a tweet.
 
 # Your Books
