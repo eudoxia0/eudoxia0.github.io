@@ -10,20 +10,24 @@ opposite. Consider this post addressed to you, the reader.
 
 # Your Writing
 
-- sometimes i read blog post and really resonate with the
-  author's thinking
-- then i check the blog and there's three other posts
-- and i will think: I wish you'd write more!
-- when you read someone that really resonates, it is
-  worthwhile to read everything else that person has written
-- from the other side: i have often written a blog post
-  where, just before publishing, I think: God, who could
-  possibly want to read _this_? It's so obscure or personal
-  or idiosyncratic. Those posts are often the ones where
-  people email me to thank for writing them, to share that
-  they always thought the same thing, and they're glad
-  someone put it into words. I really value those emails. "I
-  am understood" is the most wonderful feeling.
+- read
+  - sometimes i read blog post and really resonate with the
+    author's thinking
+  - then i check the blog and there's three other posts
+  - and i will think: I wish you'd write more!
+  - when you read someone that really resonates, it is
+    worthwhile to read everything else that person has written
+- from the other side:
+  - i have often written a blog post where, just before
+    publishing, I think: God, who could possibly want to
+    read _this_? It's so obscure or personal or
+    idiosyncratic.
+  - Those posts are often the ones where people email me to
+    thank for writing them, to share that they always
+    thought the same thing, and they're glad someone put it
+    into words.
+  - I really value those emails. "I am understood" is the
+    most wonderful feeling.
 - try to develop a rule where if I do it and don't write
   about it, it didn't happen
 
