@@ -10,31 +10,26 @@ addressed to you, the reader.
 
 # Your Writing
 
-- read
-  - sometimes i read blog post and really resonate with the author's
-    thinking
-  - then i check the blog and there's three other posts
-  - and i will think: I wish you'd write more!
-  - when you read someone that really resonates, it is worthwhile to
-    read everything else that person has written
-  - and if you think in similar ways, reach out, and make a new friend
-- from the other side:
-  - i have often written a blog post where, just before publishing, I
-    think: God, who could possibly want to read _this_? It's so
-    obscure or personal or idiosyncratic.
-  - Those posts are often the ones where people email me to thank for
-    writing them, to share that they always thought the same thing,
-    and they're glad someone put it into words.
-  - I really value those emails. "I am understood" is the most
-    wonderful feeling.
-- write:
-  - i have tried to develop this rule
-  - if i do it, and don't write about it, it didn't happen
-  - i try to apply this bc i write lots of personal software and
-    little experiments and often, if i doint write about it here (or
-    at least tweet about it), it is as if it didn't happen
-  - not everything deserves a blog post, little things can be a tweet
-    - e.g. custom invoice format
+I will often find a blog post on [Hacker News][hn] that really
+resonates. And when I go to check the rest of the site there's three
+other posts. And I think: I wish you'd write more! When I find someone
+whose writing resonates, I like to read everything they have written,
+or at least a tractable subset of their most interesting posts. If you
+like what you see, you can reach out. This is one of the best things
+about writing online: your future friends will seek you out.
+
+And, from the other side, I have often written a post where, just
+before publishing, I would think: "who would want to read this? It's
+too personal, obscure, idiosyncratic, probably a few people will
+unsubscribe to the RSS feed for this". And always those are the posts
+where people email me to say that they always thought the same thing
+but could never quite put it into words. I really value those
+emails. "I am understood" is a wonderful feeling.
+
+I try to apply a rule that if I do something, and I don't write about
+it---or otherwise generate external-facing evidence that I did it---it
+didn't happen. I have built so many things in the dark, little
+experiments or software projects that never saw the light of day. I want to put more things out. If it doesn't merit and entire blog post, then at least a tweet.
 
 # Your Books
 
