@@ -119,3 +119,4 @@ e.g. some keyboard layou I've never heard of and a trackball with
 custom gestures.
 
 [hn]: https://news.ycombinator.com/
+[gr]: https://www.goodreads.com/
