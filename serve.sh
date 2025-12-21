@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-jekyll serve --livereload --future --drafts
+jekyll serve --future --drafts
