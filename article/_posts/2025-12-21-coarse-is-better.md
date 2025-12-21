@@ -169,7 +169,7 @@ This is one of my favourite DALL-E 2 outputs:
 
 <img src="/assets/content/dall-e-explorations/yellow/dream-4.jpg" width="50%" alt="Sepia photograph: three vague, almost alien-looking figures look at what might be a sculpture or painting." style="margin: 0 auto;" />
 
-It reminds me of [_The King in Yellow_][yellow]. I love these because of how
+They remind me of [_The King in Yellow_][yellow]. I love these because of how
 genuinely creepy and mysterious they are. You could pull a hundred horror
 stories from these.
 
