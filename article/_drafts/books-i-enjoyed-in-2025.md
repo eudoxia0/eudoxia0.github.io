@@ -71,7 +71,6 @@ I have not finished reading this book, but I am in the first few pages of [_A Sh
 [fut]: https://en.wikipedia.org/wiki/The_Futurological_Congress
 [gingold]: https://en.wikipedia.org/wiki/Chaim_Gingold
 [goray]: https://en.wikipedia.org/wiki/Satan_in_Goray
-[henry]: https://en.wikipedia.org/wiki/Henry_VII,_Holy_Roman_Emperor
 [hmv]: https://en.wikipedia.org/wiki/His_Master%27s_Voice_(novel)
 [hodges]: https://en.wikipedia.org/wiki/Wilfrid_Hodges
 [hysterical]: https://en.wikipedia.org/wiki/Hysterical_realism
