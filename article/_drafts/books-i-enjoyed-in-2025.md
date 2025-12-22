@@ -1,6 +1,9 @@
 ---
 title: Books I Enjoyed in 2025
 summary: A short list.
+card: books-i-enjoyed-in-2025.jpg
+card_source: |
+    "_Dolce Far Niente_", John Singer Sargent, c. 1905–1909.
 ---
 
 [_The Apocalypse of Herschel Schoen_][apoc] by [nostalgebraist][nost]. A revelation (ἀποκάλυψις = "unveiling") told through the eyes of a developmentally-disabled teenager. You will never guess where it goes. This came across my desk because I really enjoyed [_The Northern Caves_][north], which is both a great horror story and an evocation of the Internet forum culture of the late 2000's.
