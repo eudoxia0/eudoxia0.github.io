@@ -225,7 +225,21 @@ input tokens. No good! We need a way to save money.
 
 # Memory
 
-Ok, let's try something that's easier on my Claude credits.
+Ok, let's try something that's easier on my Claude credits. We'll show Claude
+the most recent five turns (this is the perceptual working memory), and give it
+a simple semantic memory: a list of strings that it can append entries to, and
+remove entries from using tool use.
+
+This keeps the token usage down:
+
+TODO DIAGRAM
+
+The problem is the narrow time horizon. With the trivial harness, Claude can
+break into the real estate office in ~10 turns, and does so right at the start
+of the game. With this new harness, Claude wanders about the town, taking
+copious notes, before returning to the real estate office, and it spends ~40
+turns fumbling around with the garbage cans before managing to break into the
+real estate office.
 
 # Aside: Small Worlds
 
