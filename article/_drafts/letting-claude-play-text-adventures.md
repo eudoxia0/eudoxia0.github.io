@@ -4,8 +4,8 @@ summary: Experiments in cognitive architecture.
 ---
 
 The other day I went to an [AI hackathon][hack] organized by my friends Lucia
-and Malin. The theme was mech interp, but I hardly know PyTorch so I planned to
-do something at the API layer rather than the model layer.
+and Malin. The theme was [mech interp][mi], but I hardly know PyTorch so I
+planned to do something at the API layer rather than the model layer.
 
 Something I think about a lot is [cognitive architectures][cogarch] (like
 [Soar][soar] and [ACT-R][actr]). This is like a continuation of GOFAI research,
@@ -275,4 +275,5 @@ natural.
 [i7nix]: https://github.com/mbrock/inform7-nix
 [ifdb]: https://ifdb.org/
 [mb]: https://github.com/mbrock
+[mi]: https://en.wikipedia.org/wiki/Mechanistic_interpretability
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
