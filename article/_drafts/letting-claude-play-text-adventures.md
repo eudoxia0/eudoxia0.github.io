@@ -122,18 +122,23 @@ class Interpreter:
     - the game is very open-world, and from the very start you can wander around
       most of the game map before you are forced to engage with the first puzzle
       of the game
-  - needed something smaller
-  - claude can make its own games
-    - there's no inform7 package for nixos
-    - so i had to use inform6
-    - asked claude to write small "Portal test chamber" type games
-      - a small, single room, escape the room type game, which Claude beat in less than 10 turns
-      - then larger, multi-room heist game
-        - this one was more fun
-        - claude beats it in the normal harness but it takes a while
-        - i thought it would be large enough to try a different harness
-        - new harness: show only the last five turns, give claude a working memory
-        - claude gets caught up in all this bullshit
-          - trapped by a red herring: a garden with a well, kept trying to go down the well
+
+
+# Small Worlds
+
+- needed something smaller
+- claude can make its own games
+  - there's no inform7 package for nixos
+  - so i had to use inform6
+  - asked claude to write small "Portal test chamber" type games
+    - a small, single room, escape the room type game, which Claude beat in less than 10 turns
+    - then larger, multi-room heist game
+      - this one was more fun
+      - claude beats it in the normal harness but it takes a while
+      - i thought it would be large enough to try a different harness
+      - new harness: show only the last five turns, give claude a working memory
+      - claude gets caught up in all this bullshit
+        - trapped by a red herring: a garden with a well, kept trying to go down the well
+- tangent: transmission?
 
 [hack]: https://luma.com/ycc02hpc
