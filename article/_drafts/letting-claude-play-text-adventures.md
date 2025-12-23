@@ -32,6 +32,43 @@ goals, puzzles, physical exploration and discovery of the environment. Even the
 data model of text adventures resembles [frame-based][frame] knowledge
 representation systems.
 
+So I started hacking. The [frotz] interpreter runs on the command line and has a
+"dumb" interface called `dfrotz`, which takes the ncurses fluff out, and gives
+you a very stripped command-line experience. It looks like this:
+
+```
+$ dfrotz games/anchor.z8
+...
+ Outside the Real Estate Office                      day one
+
+ANCHORHEAD
+An interactive gothic by Michael S. Gentry
+
+(Type HELP or ABOUT for some useful information.)
+
+Release 5 / Serial number 990206 / Inform v6.15 Library 6/7
+
+Outside the Real Estate Office
+A grim little cul-de-sac, tucked away in a corner of the claustrophobic tangle
+of narrow, twisting avenues that largely constitute the older portion of
+Anchorhead. Like most of the streets in this city, it is ancient, shadowy, and
+leads essentially nowhere. The lane ends here at the real estate agent's office,
+which lies to the east, and winds its way back toward the center of town to the
+west. A narrow, garbage-choked alley opens to the southeast.
+
+>go southeast
+ Alley                                               day one
+
+Alley
+This narrow aperture between two buildings is nearly blocked with piles of
+rotting cardboard boxes and overstuffed garbage cans. Ugly, half-crumbling brick
+walls to either side totter oppressively over you. The alley ends here at a
+tall, wooden fence.
+
+High up on the wall of the northern building there is a narrow, transom-style
+window.
+```
+
 - text adventures
   - found dfrotz interpreter
   - i built a really simple harness
