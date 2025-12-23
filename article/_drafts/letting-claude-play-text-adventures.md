@@ -118,6 +118,10 @@ class Interpreter:
         time.sleep(0.1)
 ```
 
+Now we can play the game from Python: send commands, get game output. Now we
+need the dual of this, a player object that reads game output and answers with
+commands.
+
 # The Trivial Harness
 
 The trivial harness is basically nothing at all: treat the LLM/game interaction
@@ -192,9 +196,22 @@ class SimplePlayer(Player):
         return cmd
 ```
 
+And this works well enough. Haiku 4.5 would mostly wander around the game map,
+but Sonnet 4.5 and Opus 4.5 manage to solve the game's first puzzle---breaking
+into the real estate office, and finding the keys to the mansion---readily
+enough. It takes about ~200 turns for Claude to get to the second in-game day.
 
+The way I thought this would fail is: attention gets smeared across the long
+context, the model gets confused about the geometry of the world, its goal and
+task state, and starts confabulating, going in circles, etc.
+
+As usual, I was outsmarting myself. The reason this fails is you run out of
+credits. By the time you get to day two, each turn costs tens of thousands of
+input tokens. No good! We need a way to save money.
 
 # Memory
+
+TODO
 
 # Small Worlds
 
