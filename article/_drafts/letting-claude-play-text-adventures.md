@@ -69,6 +69,49 @@ High up on the wall of the northern building there is a narrow, transom-style
 window.
 ```
 
+It is easy to write a little Python wrapper to drive the interpreter through
+`stdin` and `stdout`:
+
+```python
+class Interpreter:
+    """Manages the dfrotz Z-machine interpreter process."""
+
+    p: Popen
+
+    def __init__(self):
+        log("Starting dfrotz.")
+        p: Popen = Popen(
+            ["dfrotz", "-m", GAME],
+            stdin=PIPE,
+            stdout=PIPE,
+            stderr=PIPE,
+        )
+        log(f"Started dfrotz with PID={p.pid}.")
+        # Set stdout/stderr to non-blocking mode.
+        for stream in [p.stdout, p.stderr]:
+            assert stream is not None
+            fd = stream.fileno()
+            flags = fcntl.fcntl(fd, fcntl.F_GETFL)
+            fcntl.fcntl(fd, fcntl.F_SETFL, flags | os.O_NONBLOCK)
+        self.p = p
+
+    def read(self) -> str:
+        assert self.p.stdout is not None
+        b: bytes | None = self.p.stdout.read()
+        if b is not None:
+            t: str = b.decode("utf-8")
+            return t
+        else:
+            return ""
+
+    def write(self, t: str) -> None:
+        assert self.p.stdin is not None
+        self.p.stdin.write(t.encode("utf-8"))
+        self.p.stdin.flush()
+        # Give the interpreter time to respond. Not ideal!
+        time.sleep(0.1)
+```
+
 - text adventures
   - found dfrotz interpreter
   - i built a really simple harness
