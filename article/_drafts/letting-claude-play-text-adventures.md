@@ -119,8 +119,21 @@ class Interpreter:
 ```
 
 Now we can play the game from Python: send commands, get game output. Now we
-need the dual of this, a player object that reads game output and answers with
-commands.
+need the dual of this: a player.
+
+```python
+class Player(ABC):
+    """
+    Interface for game-playing agents.
+    """
+
+    @abstractmethod
+    def cycle(self, text: str) -> str:
+        """
+        Send the game's output to the agent, and return the next command to execute.
+        """
+        pass
+```
 
 # The Trivial Harness
 
