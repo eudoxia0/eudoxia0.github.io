@@ -256,7 +256,7 @@ Luhman 16 · Plus ultra
 
 There were immense gashes in the hull through which blood-red light poured and pooled on white ceramic surfaces. The probes moved fore to aft, as they passed over the hull, the fractures lined up, and they could see Gamma's serrated surface through the wreck.
 
-The inspected what was left of the engine. The first tenth of a de Laval nozzle clung on twisted metal rails to the frame of the wreck. _Parandé_ said this was a nuclear salt-water engine, that it had gone critical and exploded. Dim embers of fissile material were scattered all over the hull, they had long decayed to almost nothing. The robots went inside.
+They inspected what was left of the engine. The first tenth of a de Laval nozzle clung on twisted metal rails to the frame of the wreck. _Parandé_ said this was a nuclear salt-water engine, that it had gone critical and exploded. Dim embers of fissile material were scattered all over the hull, they had long decayed to almost nothing. The robots went inside.
 
 All debris had long either escaped into space or become electrostatically bound to the walls, and the interior was perfectly still. They found debris made of diamond and sapphire and ceramic, and even some that were crystals of iron doped with carbon, which Timon said the ancients had called _steel_.
 
