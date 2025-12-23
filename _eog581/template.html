@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="generator" content="pandoc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>$pagetitle$</title>
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header id="title-block-header">
-      <h1 class="title">$title$</h1>
-      $for(author)$
-      <p class="author">$author$</p>
-      $endfor$
-    </header>
-    $body$
-    <nav id="$idprefix$TOC" role="doc-toc">
-      <h1>Table of Contents</h1>
-      $table-of-contents$
-    </nav>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>$pagetitle$</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header id="title-block-header">
+            <h1 class="title">$title$</h1>
+            $for(author)$
+            <p class="author">$author$</p>
+            $endfor$
+        </header>
+        $body$
+    </body>
 </html>

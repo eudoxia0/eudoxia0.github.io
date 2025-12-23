@@ -1,10 +1,8 @@
-@charset "utf-8";
-
-//
 // Reset
-//
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -14,12 +12,28 @@
     font-weight: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+// Page style
+
+@page {
+    padding: 24px;
+    size: A4;
+    background: white;
+}
+
+// Global style
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -39,11 +53,11 @@ a {
 // `f` is the base font size: 16px.
 $f: 18px;
 // `s` is the font scale; 1.250 (major third).
-$s: 1.250;
+$s: 1.25;
 // `b` is the rhythm baseline: 12px.
 $b: 12px;
 
-$link-color: #B1002E;
+$link-color: #b1002e;
 
 //
 // Derived Constants
@@ -83,7 +97,7 @@ body {
 //
 
 body {
-    font-family: 'NimbusRoman', 'Times', 'Times New Roman', serif;
+    font-family: "TeX Gyre Termes", serif;
     font-weight: normal;
     font-size: $f1;
     line-height: $b2;
@@ -155,7 +169,8 @@ nav {
 }
 
 section {
-    blockquote, .center {
+    blockquote,
+    .center {
         margin: $b3 $b5;
     }
 }
@@ -166,7 +181,6 @@ section#colophon {
     }
 }
 
-
 section {
     .chapter-start p {
         text-align: center;
@@ -174,7 +188,14 @@ section {
         max-width: 80%;
     }
 
-    p, blockquote, table, ul, ol, dl, h1, h2 {
+    p,
+    blockquote,
+    table,
+    ul,
+    ol,
+    dl,
+    h1,
+    h2 {
         margin-bottom: $b1;
     }
 
@@ -194,7 +215,8 @@ section {
         font-weight: bold;
     }
 
-    .highlighter-rouge, pre {
+    .highlighter-rouge,
+    pre {
         margin-bottom: $b1;
     }
 
@@ -209,7 +231,7 @@ section {
     }
 
     code {
-        font-family: 'Inconsolata';
+        font-family: "Inconsolata";
         font-size: $f1;
         line-height: $b2;
     }
@@ -222,7 +244,9 @@ section {
         list-style-type: decimal;
     }
 
-    ul, ol, dl {
+    ul,
+    ol,
+    dl {
         margin-left: $b2;
     }
 
@@ -241,7 +265,7 @@ section {
         text-align: center;
 
         &:after {
-            content: '❧';
+            content: "❧";
             color: black;
         }
     }
@@ -255,7 +279,8 @@ section {
         width: 100%;
         border-collapse: collapse;
 
-        td, th {
+        td,
+        th {
             border: 1px solid black;
             padding: 2px 4px;
         }
@@ -270,7 +295,8 @@ section {
         text-decoration: none;
     }
 
-    b, strong {
+    b,
+    strong {
         font-weight: bold;
     }
 }
