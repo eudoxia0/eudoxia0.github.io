@@ -15,6 +15,8 @@
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
               jekyll
+              pandoc
+              sass
             ];
 
             shellHook = ''
