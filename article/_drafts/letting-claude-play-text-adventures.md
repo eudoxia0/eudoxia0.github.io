@@ -9,10 +9,10 @@ know PyTorch so I planned to do something at the API layer rather than the model
 layer.
 
 Something I think about a lot is [cognitive architectures][cogarch] (like
-[Soar][soar] and [ACT-R][actr]). This is like a continuation of GOFAI research,
-inspired by cognitive science. And like GOFAI it's never yielded anything
-useful. But I often think: can we scaffold LLMs with cog arch-inspired harnesses
-to overcome their limitations?
+[Soar][soar] and [ACT-R][actr]). This is like a continuation of [GOFAI][gofai]
+research, inspired by cognitive science. And like GOFAI it's never yielded
+anything useful. But I often think: can we scaffold LLMs with cog arch-inspired
+harnesses to overcome their limitations?
 
 LLM agents like [Claude Code][cc] are basically "accidental" cognitive
 architectures: they are designed and built my practitioners rather than
@@ -294,6 +294,7 @@ natural.
 [cogarch]: https://en.wikipedia.org/wiki/Cognitive_architecture
 [frame]: https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)
 [frotz]: https://davidgriffith.gitlab.io/frotz/
+[gofai]: https://en.wikipedia.org/wiki/GOFAI
 [hack]: https://luma.com/ycc02hpc
 [i6]: https://www.inform-fiction.org/
 [i7]: https://ganelson.github.io/inform-website/
