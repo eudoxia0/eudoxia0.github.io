@@ -241,6 +241,16 @@ copious notes, before returning to the real estate office, and it spends ~40
 turns fumbling around with the garbage cans before managing to break into the
 real estate office.
 
+The next step, after getting the keys to the house, is to meet your husband
+Michael at the University and head home. Claude with the trivial harness takes
+about ~100 turns to find the house, with some tangential wandering about the
+town, and reaches day two around turn 150.
+
+Claude, with the memory harness, took ~250 turns just to get the keys to the
+house. And then it spends hundreds of turns just wandering in circles around the
+town, accumulating redundant memories, and hits the turn limit before even
+finding the house.
+
 # Aside: Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
