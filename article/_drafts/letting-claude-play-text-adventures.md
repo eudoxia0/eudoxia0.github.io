@@ -251,6 +251,12 @@ house. And then it spends hundreds of turns just wandering in circles around the
 town, accumulating redundant memories, and hits the turn limit before even
 finding the house.
 
+# Psychogeography
+
+What if we can automatically map the game world, on behalf of the LLM?
+
+TODO
+
 # Aside: Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
