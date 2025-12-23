@@ -131,6 +131,8 @@ class Interpreter:
       most of the game map before you are forced to engage with the first puzzle
       of the game
 
+# Memory
+
 # Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
