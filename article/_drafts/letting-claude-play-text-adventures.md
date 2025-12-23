@@ -3,9 +3,9 @@ title: Letting Claude Play Text Adventures
 summary: Experiments in cognitive architecture.
 ---
 
-Last week I went to an [AI hackathon][hack] organized by my friends Lucia and
-Malin. The theme was mech interp, but I hardly know PyTorch so I planned to do
-something at the API layer rather than the model layer.
+The other day I went to an [AI hackathon][hack] organized by my friends Lucia
+and Malin. The theme was mech interp, but I hardly know PyTorch so I planned to
+do something at the API layer rather than the model layer.
 
 Something I think about a lot is [cognitive architectures][cogarch] (like
 [Soar][soar] and [ACT-R][actr]). This is like a continuation of GOFAI research,
