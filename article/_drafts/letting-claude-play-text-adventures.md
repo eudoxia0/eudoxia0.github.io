@@ -30,7 +30,13 @@ much tool use. And then I thought: [text adventures][adv]! You have a stylized,
 hierarchically-structured world accessible entirely tthrough text, long-term
 goals, puzzles, physical exploration and discovery of the environment. Even the
 data model of text adventures resembles [frame-based][frame] knowledge
-representation systems.
+representation systems. And there's a [vast collection][ifdb] of games available
+online.
+
+[_Anchorhead_][ah], which I played years ago, is a Lovecraft-inspired text
+adventure by Michael S. Gentry. It takes on the order of hundrds of turns to win
+across multiple in-game days. And the game world is huge and very open. In other
+words: a perfect long-horizon task.
 
 So I started hacking. The [frotz] interpreter runs on the command line and has a
 "dumb" interface called `dfrotz`, which takes the ncurses fluff out, and gives
@@ -112,6 +118,10 @@ class Interpreter:
         time.sleep(0.1)
 ```
 
+
+
+# The Trivial Harness
+
 - text adventures
   - found dfrotz interpreter
   - i built a really simple harness
@@ -122,7 +132,6 @@ class Interpreter:
     - the game is very open-world, and from the very start you can wander around
       most of the game map before you are forced to engage with the first puzzle
       of the game
-
 
 # Small Worlds
 
