@@ -120,16 +120,79 @@ class Interpreter:
 
 # The Trivial Harness
 
-- text adventures
-  - found dfrotz interpreter
-  - i built a really simple harness
-  - haiku wanders around
-  - sonnet finishes the first task, then wanders around
-  - anchorhead is not the ideal choice for a test enviroment
-    - the game is too long
-    - the game is very open-world, and from the very start you can wander around
-      most of the game map before you are forced to engage with the first puzzle
-      of the game
+The trivial harness is basically nothing at all: treat the LLM/game interaction
+like a chat history. The LLM reads the game output from the interpreter, writes
+some reasoning tokens, and writes a command that is sent via `stdin` to the
+interpreter.
+
+```python
+SYSTEM_PROMPT: str = """
+Hello Claude. Your task is to play an adventure game. I've hooked up
+your output to the dfrotz (dumb frotz) interpreter.
+
+The structure of your output is fairly freeform. The first line that
+starts with `>` (and only the first line!) is interpreted as a game
+command, everything else is uninterpreted commentary, e.g. you may
+write:
+
+    We should go north to explore the church.
+
+    >go north
+
+    Maybe we can use the silver key there.
+
+If you write multiple `>` lines in one response, all but the first
+will be ignored.
+
+Have fun! 😊
+"""
+
+
+class SimplePlayer(Player):
+    """
+    The simplest game-playing agent: keep the entire game histoyr in-context.
+    """
+
+    client: Anthropic
+    history: list[tuple[EntryType, str]]
+
+    def __init__(self):
+        self.client = Anthropic()
+        self.history = []
+
+    def cycle(self, text: str) -> str:
+        self.history.append((EntryType.GAME, text))
+        system = trim(SYSTEM_PROMPT)
+        messages: list[MessageParam] = []
+        for entry_type, entry_text in self.history:
+            role: str
+            match entry_type:
+                case EntryType.GAME:
+                    role = "user"
+                case EntryType.COMMAND:
+                    role = "assistant"
+            messages.append(
+                {
+                    "role": role,
+                    "content": entry_text,
+                }
+            )
+        message: Message = self.client.messages.create(
+            max_tokens=512,
+            model=MODEL,
+            system=system,
+            messages=messages,
+        )
+        log(f"Tokens: {message.usage.input_tokens}")
+        response: str = message.content[0].text
+        log_claude(response)
+        lines: list[str] = [line for line in response.split("\n") if line]
+        cmd: str = [line for line in lines if line.startswith(">")][0][1:]
+        self.history.append((EntryType.COMMAND, response))
+        return cmd
+```
+
+
 
 # Memory
 
@@ -164,6 +227,10 @@ winning.
 Tangent: I wonder if models are better at playing games created by other
 instances of the same model, by noticing tiny correlations in the text to infer
 what puzzles and obstacles they would have written.
+
+In the end I abandoned the "small worlds" approach because the games are too
+stylized, linear, and uninteresting. _Anchorhead_ is more unwieldy, but more
+natural.
 
 [actr]: https://en.wikipedia.org/wiki/ACT-R
 [adv]: https://en.wikipedia.org/wiki/Interactive_fiction
