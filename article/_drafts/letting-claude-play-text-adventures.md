@@ -156,7 +156,7 @@ class Interpreter:
 [cc]: https://github.com/anthropics/claude-code
 [cogarch]: https://en.wikipedia.org/wiki/Cognitive_architecture
 [frame]: https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)
-[hack]: https://luma.com/ycc02hpc
-[soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
-[ifdb]: https://ifdb.org/
 [frotz]: https://davidgriffith.gitlab.io/frotz/
+[hack]: https://luma.com/ycc02hpc
+[ifdb]: https://ifdb.org/
+[soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
