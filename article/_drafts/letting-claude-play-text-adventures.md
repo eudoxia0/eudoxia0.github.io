@@ -225,7 +225,7 @@ input tokens. No good! We need a way to save money.
 
 # Memory
 
-TODO
+Ok, let's try something that's easier on my Claude credits.
 
 # Aside: Small Worlds
 
