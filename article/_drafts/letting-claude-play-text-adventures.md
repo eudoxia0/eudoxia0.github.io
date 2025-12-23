@@ -226,7 +226,7 @@ input tokens. No good! We need a way to save money.
 
 TODO
 
-# Small Worlds
+# Aside: Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
 the plot and wander about most of the town. It takes a long time to see if a run
