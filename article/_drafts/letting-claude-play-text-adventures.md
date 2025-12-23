@@ -159,3 +159,4 @@ class Interpreter:
 [hack]: https://luma.com/ycc02hpc
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
 [ifdb]: https://ifdb.org/
+[frotz]: https://davidgriffith.gitlab.io/frotz/
