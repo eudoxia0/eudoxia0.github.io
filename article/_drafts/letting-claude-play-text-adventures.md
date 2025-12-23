@@ -118,8 +118,6 @@ class Interpreter:
         time.sleep(0.1)
 ```
 
-
-
 # The Trivial Harness
 
 - text adventures
@@ -135,20 +133,35 @@ class Interpreter:
 
 # Small Worlds
 
-- needed something smaller
-- claude can make its own games
-  - there's no inform7 package for nixos
-  - so i had to use inform6
-  - asked claude to write small "Portal test chamber" type games
-    - a small, single room, escape the room type game, which Claude beat in less than 10 turns
-    - then larger, multi-room heist game
-      - this one was more fun
-      - claude beats it in the normal harness but it takes a while
-      - i thought it would be large enough to try a different harness
-      - new harness: show only the last five turns, give claude a working memory
-      - claude gets caught up in all this bullshit
-        - trapped by a red herring: a garden with a well, kept trying to go down the well
-- tangent: transmission?
+_Anchorhead_ is a long, broad game, and from the very beginning you can forget
+the plot and wander about most of the town. It takes a long time to see if a run
+with an agent goes anywhere. So I thought: I need something smaller.
+
+Unsurprisingly, Claude can make its own games. The [Inform 7][i7] package for
+NixOS was broken (though [Mikael][mb] has [fixed this][i7nix] recently) so I had
+to use [Inform 6][i6]. I started with a trivial escape-the-room type game, which
+was less than 100 lines of `.inf` code and any Claude could beat it less than 10
+turns. Then I asked for a larger, multi-room heist game.
+
+This one was more fun. It's short enough that Claude can win with just the
+trivial harness. I tried a different harness, where Claude has access to only
+the last five turns of the game's history, and a read-write memory
+scratchpad. And this one was interesting.
+
+First, because Claude only ever adds to its own memory, it never deletes
+memories. I thought it would do more to trim and edit its scratchpad.
+
+Second, because Claude become fixated on this red-herring room: a garden with a
+well. It kept going in circles, trying to tie a rope to the well and climb
+down. Because of the limited game history, it only realized it was stuck when it
+saw that the most recent ~20 entries it wrote to its memories related to various
+attempts to go down the well. Then I watched Claude walk away from the garden
+and solve the final puzzle, and hit the turn limit just two turns short of
+winning.
+
+Tangent: I wonder if models are better at playing games created by other
+instances of the same model, by noticing tiny correlations in the text to infer
+what puzzles and obstacles they would have written.
 
 [actr]: https://en.wikipedia.org/wiki/ACT-R
 [adv]: https://en.wikipedia.org/wiki/Interactive_fiction
@@ -158,5 +171,9 @@ class Interpreter:
 [frame]: https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)
 [frotz]: https://davidgriffith.gitlab.io/frotz/
 [hack]: https://luma.com/ycc02hpc
+[i6]: https://www.inform-fiction.org/
+[i7]: https://ganelson.github.io/inform-website/
+[i7nix]: https://github.com/mbrock/inform7-nix
 [ifdb]: https://ifdb.org/
+[mb]: https://github.com/mbrock
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
