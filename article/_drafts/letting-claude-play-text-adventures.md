@@ -232,7 +232,7 @@ remove entries from using tool use.
 
 This keeps the token usage down:
 
-TODO DIAGRAM
+![A line plot of tokens per request over time. A red line, representing the trivial harness, goes up linearly, reaching over 40,000 tokens per request at around turn 350. A green line, representing the memory-augmented harness, climbs more slowly, reaching only 10,000 tokens at turn 500.](/assets/content/letting-claude-play-text-adventures/plot.png)
 
 The problem is the narrow time horizon. With the trivial harness, Claude can
 break into the real estate office in ~10 turns, and does so right at the start
