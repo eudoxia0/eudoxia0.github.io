@@ -16,7 +16,7 @@ $(EPUB): compiled.md
 	pandoc -s compiled.md -o $(EPUB)
 
 clean:
-	rm compiled.md
-	rm style.css
-	rm epiphany.html
+	rm -f compiled.md
+	rm -f style.css
+	rm -f epiphany.html
 	rm $(EPUB)
