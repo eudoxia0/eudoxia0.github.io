@@ -4,10 +4,10 @@ EPUB := ../assets/content/eog581/The\ Epiphany\ of\ Gliese\ 581.epub
 all: style.css epiphany.html $(EPUB)
 
 style.css: style.scss
-	bundler exec sass style.scss > style.css
+	sass style.scss > style.css
 
 compiled.md: copy.py
-	python3 copy.py
+	python copy.py
 
 epiphany.html: compiled.md template.html style.css
 	pandoc -s --toc --template=template.html --toc-depth=1 --section-divs --reference-location=section compiled.md -o epiphany.html
