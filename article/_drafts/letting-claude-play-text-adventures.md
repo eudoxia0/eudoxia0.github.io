@@ -3,26 +3,35 @@ title: Letting Claude Play Text Adventures
 summary: Experiments in cognitive architecture.
 ---
 
-Last week I went to an [AI hackathon][hack].
+Last week I went to an [AI hackathon][hack] organized by my friends Lucia and
+Malin. The theme was mech interp, but I hardly know PyTorch so I planned to do
+something at the API layer rather than the model layer.
 
-- cog arch
-  - gofai inspired by cog sci
-  - soar, act-r
-  - never really done anything particuarly impressive
-  - llm agents are "accidental cog archs"
-    - have the same kind of modules: task lists, long term memory
-  - can agent performance improve fi you build an agent arch based on a
-    "principled" cog arch?
-  - then i thought: what do i apply this to?
-    - math?
-    - chatbot?
-    - code?
-    - text adventures!
-      - stylized world
-      - long-term goal
-      - puzzles
-      - exploration
-      - the text adventiure world model resembes a gofai world model
+Something I think about a lot is [cognitive architectures][cogarch] (like
+[Soar][soar] and [ACT-R][actr]). This is like a continuation of GOFAI research,
+inspired by cognitive science. And like GOFAI it's never yielded anything
+useful. But I often think: can we scaffold LLMs with cog arch-inspired harnesses
+to overcome their limitations?
+
+LLM agents like [Claude Code][cc] are basically "accidental" cognitive
+architectures: they are designed and built my practitioners rather than
+theorists, but they have commonalities, they all need a way to manage memory,
+tool use, a task agenda etc. Maybe building an agent on a more "principled"
+foundation, one informed by cognitive science, yields a higher-performing
+architecture.
+
+So I sat around a while thinking how to adapt Soar's architecture to an LLM
+agent. And I sketched something out, but then I thought: how can I prove this
+performs better than baseline? I need an eval, a task.
+
+Math problems? Too one-shottable. A chatbot? Too interactive, I want something
+hands-off and long-horizon. A coding agent? That's too freeform and requires too
+much tool use. And then I thought: [text adventures][adv]! You have a stylized,
+hierarchically-structured world accessible entirely tthrough text, long-term
+goals, puzzles, physical exploration and discovery of the environment. Even the
+data model of text adventures resembles [frame-based][frame] knowledge
+representation systems.
+
 - text adventures
   - found dfrotz interpreter
   - i built a really simple harness
