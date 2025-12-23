@@ -383,7 +383,7 @@ Luhman 16 · Plus ultra
 
 There were immense gashes in the hull through which blood-red light poured and pooled on white ceramic surfaces. The probes moved fore to aft, as they passed over the hull, the fractures lined up, and they could see Gamma's serrated surface through the wreck.
 
-The inspected what was left of the engine. The first tenth of a de Laval nozzle clung on twisted metal rails to the frame of the wreck. _Parandé_ said this was a nuclear salt-water engine, that it had gone critical and exploded. Dim embers of fissile material were scattered all over the hull, they had long decayed to almost nothing. The robots went inside.
+They inspected what was left of the engine. The first tenth of a de Laval nozzle clung on twisted metal rails to the frame of the wreck. _Parandé_ said this was a nuclear salt-water engine, that it had gone critical and exploded. Dim embers of fissile material were scattered all over the hull, they had long decayed to almost nothing. The robots went inside.
 
 All debris had long either escaped into space or become electrostatically bound to the walls, and the interior was perfectly still. They found debris made of diamond and sapphire and ceramic, and even some that were crystals of iron doped with carbon, which Timon said the ancients had called _steel_.
 
@@ -488,7 +488,7 @@ Sometimes Timon would stop, and feel the ground with SONAR. But for the passage 
 
 ---
 
-Asman was born in Tigranes---HD 35650 in the catalogues. Early in life, her clan had funded, at great expense, her Grand Tour of the network. Arriving in Ctesiphon there was a great upheaval in the markets---owing to the birth of new god, some tens of years away---and her funds became worthless overnight. And this provided an excellent excuse never to return: had she toured every settled star, she would have seen less variety than in Ctesiphon.
+Asman was born in Tigranes---HD 35650 in the catalogues. Early in life, her clan had funded, at great expense, her Grand Tour of the network. Arriving in Ctesiphon there was a great upheaval in the markets---owing to the birth of a new god, some tens of years away---and her funds became worthless overnight. And this provided an excellent excuse never to return: had she toured every settled star, she would have seen less variety than in Ctesiphon.
 
 And she remembered how a society was turned upside down by the mere report of a theogony. These confident people had mastered themselves and the world around them, and were like titans, who felt neither fear nor hunger, but at the sight of a deity they saw terror and the sublime in one, they resumed an atavistic nature, and prayed cynically to gods they had long discarded.
 
@@ -1484,7 +1484,7 @@ She lay with her feet pointed at a feigned ocean, a rigid mirror that reflected 
 
 And behind her there was a storm of colour, that at first she unconsciously looked away from, not because it was bright but because some force told her that this sight was not meant for human eyes. There were trees --- she knew they were trees intuitively, the way we know things in dreams --- that were smears of liquid metal, flowing slowly upwards, like inverted resin; they were green, gold, and red brushstrokes in the air, and their pulsing roots sank into a soil made of black slate tiles.
 
-Then the sun came up from the sea, an impossibly bright phosphorus lamp. The mirror ocean reflected it perfectly, so that there appeared to be two suns (in _De Natura Deorum_, Cicero quotes Cleanthes, who says they are four reasons to believe in the existence of the gods: the mildness of the climate and the fertility of the earth; the knowledge of the future that is granted to the oracles; the harmony and regularity of the world, of the orbits of the planets and their periodicities; and, lastly: the terror that storms and earthquakes and the sight of monstrous things induce in ours minds, the sight of omens, like the comets, or the appearance of two suns in the sky. This last was observed during the consulship of Tuditanus and Aquillius).
+Then the sun came up from the sea, an impossibly bright phosphorus lamp. The mirror ocean reflected it perfectly, so that there appeared to be two suns (in _De Natura Deorum_, Cicero quotes Cleanthes, who says there are four reasons to believe in the existence of the gods: the mildness of the climate and the fertility of the earth; the knowledge of the future that is granted to the oracles; the harmony and regularity of the world, of the orbits of the planets and their periodicities; and, lastly: the terror that storms and earthquakes and the sight of monstrous things induce in our minds, the sight of omens, like the comets, or the appearance of two suns in the sky. This last was observed during the consulship of Tuditanus and Aquillius).
 
 She covered her eyes with her hands, but they were transparent to the light. She looked down at the ground, but the glass sand reflected the light back into her eyes. So she hid under a metal tree, she hid from the light under an arc of flowing red, until the sun was submerged again after a few minutes' transit.
 

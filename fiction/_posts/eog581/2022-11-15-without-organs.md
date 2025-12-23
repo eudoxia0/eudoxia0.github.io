@@ -49,7 +49,7 @@ Sometimes Timon would stop, and feel the ground with SONAR. But for the passage 
 
 ---
 
-Asman was born in Tigranes---HD 35650 in the catalogues. Early in life, her clan had funded, at great expense, her Grand Tour of the network. Arriving in Ctesiphon there was a great upheaval in the markets---owing to the birth of new god, some tens of years away---and her funds became worthless overnight. And this provided an excellent excuse never to return: had she toured every settled star, she would have seen less variety than in Ctesiphon.
+Asman was born in Tigranes---HD 35650 in the catalogues. Early in life, her clan had funded, at great expense, her Grand Tour of the network. Arriving in Ctesiphon there was a great upheaval in the markets---owing to the birth of a new god, some tens of years away---and her funds became worthless overnight. And this provided an excellent excuse never to return: had she toured every settled star, she would have seen less variety than in Ctesiphon.
 
 And she remembered how a society was turned upside down by the mere report of a theogony. These confident people had mastered themselves and the world around them, and were like titans, who felt neither fear nor hunger, but at the sight of a deity they saw terror and the sublime in one, they resumed an atavistic nature, and prayed cynically to gods they had long discarded.
 
