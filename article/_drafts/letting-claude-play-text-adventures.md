@@ -150,4 +150,11 @@ class Interpreter:
         - trapped by a red herring: a garden with a well, kept trying to go down the well
 - tangent: transmission?
 
+[actr]: https://en.wikipedia.org/wiki/ACT-R
+[adv]: https://en.wikipedia.org/wiki/Interactive_fiction
+[ah]: https://en.wikipedia.org/wiki/Anchorhead
+[cc]: https://github.com/anthropics/claude-code
+[cogarch]: https://en.wikipedia.org/wiki/Cognitive_architecture
+[frame]: https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)
 [hack]: https://luma.com/ycc02hpc
+[soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
