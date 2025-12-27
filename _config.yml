@@ -12,7 +12,7 @@ kramdown:
 highlighter: rouge
 
 sass:
-  style: :compressed
+  style: compressed
 
 defaults:
   - scope:
