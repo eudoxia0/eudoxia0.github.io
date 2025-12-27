@@ -5,88 +5,88 @@ layout: base
 {% assign fleuron = "❖" %}
 
 <div class="layout-common">
-    <nav class="top-nav">
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            {% if page.categories[0] == "article" %}
-            <li>
-                <span class="sep">{{ fleuron }}</span>
-            </li>
-            <li>
-                <a href="/article/">Articles</a>
-            </li>
-            {% elsif page.url contains "eog581/" %}
-            <li>
-                <span class="sep">{{ fleuron }}</span>
-            </li>
-            <li>
-                <a href="/fiction/">Fiction</a>
-            </li>
-            <li>
-                <span class="sep">{{ fleuron }}</span>
-            </li>
-            <li>
-                <a href="/fiction/eog581">The Epiphany of Gliese 581</a>
-            </li>
-            {% elsif page.categories[0] == "fiction" %}
-            <li>
-                <span class="sep">{{ fleuron }}</span>
-            </li>
-            <li>
-                <a href="/fiction/">Fiction</a>
-            </li>
-            {% endif %}
-        </ul>
-    </nav>
-    <main>{{ content }}</main>
-    <nav class="bottom-nav">
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/about">About</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/portfolio">Portfolio</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/article">Articles</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/fiction">Fiction</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/consulting">Consulting</a>
-            </li>
-            <li>
-                <span class="sep">—</span>
-            </li>
-            <li>
-                <a href="/feed.xml">RSS</a>
-            </li>
-        </ul>
-    </nav>
-    <footer>
-        <div class="copy">
-            &copy; 2014 – {{ site.time | date: '%Y' }} Fernando Borretti
-        </div>
-    </footer>
+  <nav class="top-nav">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {% if page.categories[0] == "article" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/article/">Articles</a>
+      </li>
+      {% elsif page.url contains "eog581/" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/">Fiction</a>
+      </li>
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/eog581">The Epiphany of Gliese 581</a>
+      </li>
+      {% elsif page.categories[0] == "fiction" %}
+      <li>
+        <span class="sep">{{ fleuron }}</span>
+      </li>
+      <li>
+        <a href="/fiction/">Fiction</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  <main>{{ content }}</main>
+  <nav class="bottom-nav">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/portfolio">Portfolio</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/article">Articles</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/fiction">Fiction</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/consulting">Consulting</a>
+      </li>
+      <li>
+        <span class="sep">—</span>
+      </li>
+      <li>
+        <a href="/feed.xml">RSS</a>
+      </li>
+    </ul>
+  </nav>
+  <footer>
+    <div class="copy">
+      &copy; 2014 – {{ site.time | date: '%Y' }} Fernando Borretti
+    </div>
+  </footer>
 </div>
