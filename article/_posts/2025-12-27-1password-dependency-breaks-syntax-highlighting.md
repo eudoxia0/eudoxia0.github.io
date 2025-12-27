@@ -1,7 +1,7 @@
 ---
 title: 1Password Dependency Breaks Syntax Highlighting
 summary: Why does a password manager need a syntax highlighter?
-date: "2025-12-27 14:55:00"
+date: "2025-12-27 01:00:00"
 ---
 
 Earlier today I noticed the syntax highlighting on this website was broken. But
