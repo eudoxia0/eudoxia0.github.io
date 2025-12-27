@@ -3,6 +3,11 @@ title: Using the Brother DS-640 Scanner on NixOS
 summary: I suffer so you don't have to.
 ---
 
+The [DS-640][scan] is a compact USB scanner from [Brother][bro]. It was surprisingly hard to get it working on NixOS, so I wrote up my solution so others don't have this problem. The bad news is you need Brother's proprietary drivers to make this work.
+
+[scan]: https://www.brother.com.au/en/scanners/all-scanners/ds-640
+[bro]: https://en.wikipedia.org/wiki/Brother_Industries
+
 You need this configuration:
 
 ```nix
