@@ -1,6 +1,8 @@
 ---
 title: Letting Claude Play Text Adventures
 summary: Experiments in cognitive architecture.
+card: letting-claude-play-text-adventures.webp
+card_source: A scene inspired by _The King in Yellow_, made with DALL-E 3.
 ---
 
 The other day I went to an [AI hackathon][hack] organized by my friends
@@ -251,12 +253,6 @@ house. And then it spends hundreds of turns just wandering in circles around the
 town, accumulating redundant memories, and hits the turn limit before even
 finding the house.
 
-# Psychogeography
-
-What if we can automatically map the game world, on behalf of the LLM?
-
-TODO
-
 # Aside: Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
@@ -293,6 +289,37 @@ In the end I abandoned the "small worlds" approach because the games are too
 stylized, linear, and uninteresting. _Anchorhead_ is more unwieldy, but more
 natural.
 
+# Future Work
+
+I have a bunch of ideas I want to test, to better learn how harness
+implementations affect performance. But I'm short on time, so I'm cutting it
+here and listing these as todos:
+
+- **Domain-Specific Memories:** Claude's notes are all jumbled with information
+  on tasks, locations, etc. It might be better to have separate memories: a todo
+  list, a memory of locations and their connections, etc. This is close to the
+  Soar approach.
+- **Automatic Geography:** related to the above, the harness can inspect the
+  game output and build up a graph of rooms and their connections, and format it
+  in the context. This saves Claude having to note those things manually using a
+  tool.
+- **Manual Geography:** the automatic geography approach has a few
+  drawbacks. Without integration into the Z-machine interpreter, it requires
+  some work to implement (parsing the currente location from the `dfrotz`
+  output, keeping track of the command history to find standard travel commands
+  e.g. `go south`) but isn't 100% deterministic, so that mazes and dynamic rooms
+  (e.g. elevators) will confuse the system. So, instead of doing it manually, we
+  could give Claude a tool like `link(room, direction, other_room)`.
+- **Episodic Memory:** this feels like cheating, but, at the end of a run, you
+  can show Claude the session transcript and ask it to summarize: what it
+  accomplished and how, where it failed and why. Including a short walkthrough
+  for how to get to the "last successful state". This allows future runs to save
+  time in getting up to speed.
+
+# Code
+
+The repository is [here][repo].
+
 [actr]: https://en.wikipedia.org/wiki/ACT-R
 [adv]: https://en.wikipedia.org/wiki/Interactive_fiction
 [ah]: https://en.wikipedia.org/wiki/Anchorhead
@@ -310,4 +337,5 @@ natural.
 [malin]: https://x.com/mahlenr
 [mb]: https://github.com/mbrock
 [mi]: https://en.wikipedia.org/wiki/Mechanistic_interpretability
+[repo]: https://github.com/eudoxia0/claude-plays-anchorhead
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
