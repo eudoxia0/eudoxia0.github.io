@@ -253,12 +253,6 @@ house. And then it spends hundreds of turns just wandering in circles around the
 town, accumulating redundant memories, and hits the turn limit before even
 finding the house.
 
-# Psychogeography
-
-What if we can automatically map the game world, on behalf of the LLM?
-
-TODO
-
 # Aside: Small Worlds
 
 _Anchorhead_ is a long, broad game, and from the very beginning you can forget
@@ -295,6 +289,14 @@ In the end I abandoned the "small worlds" approach because the games are too
 stylized, linear, and uninteresting. _Anchorhead_ is more unwieldy, but more
 natural.
 
+# Future Work
+
+TODO
+
+# Code
+
+The repository is [here][repo].
+
 [actr]: https://en.wikipedia.org/wiki/ACT-R
 [adv]: https://en.wikipedia.org/wiki/Interactive_fiction
 [ah]: https://en.wikipedia.org/wiki/Anchorhead
@@ -312,4 +314,5 @@ natural.
 [malin]: https://x.com/mahlenr
 [mb]: https://github.com/mbrock
 [mi]: https://en.wikipedia.org/wiki/Mechanistic_interpretability
+[repo]: https://github.com/eudoxia0/claude-plays-anchorhead
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
