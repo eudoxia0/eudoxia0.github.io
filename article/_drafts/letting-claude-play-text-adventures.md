@@ -1,6 +1,8 @@
 ---
 title: Letting Claude Play Text Adventures
 summary: Experiments in cognitive architecture.
+card: letting-claude-play-text-adventures.webp
+card_source: A scene inspired by _The King in Yellow_, made with DALL-E 3.
 ---
 
 The other day I went to an [AI hackathon][hack] organized by my friends
