@@ -291,7 +291,30 @@ natural.
 
 # Future Work
 
-TODO
+I have a bunch of ideas I want to test, to better learn how harness
+implementations affect performance. But I'm short on time, so I'm cutting it
+here and listing these as todos:
+
+- **Domain-Specific Memories:** Claude's notes are all jumbled with information
+  on tasks, locations, etc. It might be better to have separate memories: a todo
+  list, a memory of locations and their connections, etc. This is close to the
+  Soar approach.
+- **Automatic Geography:** related to the above, the harness can inspect the
+  game output and build up a graph of rooms and their connections, and format it
+  in the context. This saves Claude having to note those things manually using a
+  tool.
+- **Manual Geography:** the automatic geography approach has a few
+  drawbacks. Without integration into the Z-machine interpreter, it requires
+  some work to implement (parsing the currente location from the `dfrotz`
+  output, keeping track of the command history to find standard travel commands
+  e.g. `go south`) but isn't 100% deterministic, so that mazes and dynamic rooms
+  (e.g. elevators) will confuse the system. So, instead of doing it manually, we
+  could give Claude a tool like `link(room, direction, other_room)`.
+- **Episodic Memory:** this feels like cheating, but, at the end of a run, you
+  can show Claude the session transcript and ask it to summarize: what it
+  accomplished and how, where it failed and why. Including a short walkthrough
+  for how to get to the "last successful state". This allows future runs to save
+  time in getting up to speed.
 
 # Code
 
