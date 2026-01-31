@@ -22,6 +22,7 @@ digraph G {
 
   md -> html
   md -> pdf
-  data -> py -> plot -> md
+  data -> plot -> md
+  py -> plot
   dot -> graph_ -> md
 }
