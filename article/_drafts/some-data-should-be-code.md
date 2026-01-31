@@ -23,3 +23,6 @@ It works for simple projects, when you can mostly hand-write the targets. But th
 ```makefile
 
 ```
+
+[av]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
+[fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
