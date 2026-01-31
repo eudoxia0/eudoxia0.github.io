@@ -78,7 +78,7 @@ for year, month in year_months:
     g.rule(
         targets=[ledger_path],
         deps=[EXPORT],
-        fn=import_from_checkbook(ledger_path, year, month),
+        fn=lambda: import_from_checkbook(ledger_path, year, month),
     )
 ```
 
@@ -125,6 +125,10 @@ commit_workflow = Workflow(
 ```
 
 Actions here would simply be ordinary Python libraries the CI script depends on. Again: conditions, loops, abstraction, type safety, we get all of those for free by virtue of using a language that was designed to be a language, rather than a data exchange language that slowly grows into a poorly-designed DSL.
+
+Why do we repeatedly end up here? Static data has better safety/static analysis properties than code, but I don't think that's foremost in mind when people design these systems. Besides, using code to emit data (as CDK does) gives you those exact same properties. Rather, I think some people think it's cute and clever to build tiny DSLs in a data format. They're proud that they can get away with a "simple, static solution rather than a dynamic one,
+
+If you're building a new CI system/IaC platform/Make replacement: please just let me write code to dynamically create the workflow/infrastructure/build graph.
 
 # Footnotes
 
