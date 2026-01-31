@@ -82,7 +82,9 @@ for year, month in year_months:
     )
 ```
 
-Fortunately this exists: it's called [doit], but it's not widely known. I haven't used it enough to know whether this is accidental or if it's the wrong abstraction.
+Fortunately this exists: it's called [doit], but it's not widely known.
+
+---
 
 A lot of things are like Makefiles: data that should be lifted one level up to become code.
 
