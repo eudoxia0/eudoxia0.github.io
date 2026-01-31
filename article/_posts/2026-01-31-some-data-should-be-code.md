@@ -6,7 +6,7 @@ card_source: |
     “Thicket of papyrus, 1914, wood sculpture inlaid with gems, impressionism, from the British Museum”, DALL-E 2, July 2022.
 ---
 
-I write a lot of Makefiles. I use it not as a command runner but as an ad-hoc build system for small projects, typically for compiling Markdown documents and their dependencies. Like so:
+I write a lot of [Makefiles][mk]. I use it not as a command runner but as an ad-hoc build system for small projects, typically for compiling Markdown documents and their dependencies. Like so:
 
 <img style="margin-left: auto; margin-right: auto; width: 300px;" src="/assets/content/some-data-should-be-code/graph.png" alt="A build graph for a document. A central node `doc.md` represents the Markdown source. Two outgoing arrows point to `doc.html` and `doc.pdf`, representing the output format. A chain through `graph.dot`, `graph.png`, and `doc.md` represets how a Graphviz .dot file can be rendered to PNG. A chain through `data.csv`, `plot.py`, `plot.png`, and `doc.md` represents using a Python script to make a plot from a CSV file."/>
 
@@ -141,5 +141,6 @@ If you're building a new CI system/IaC platform/Make replacement: please just le
 [doit]: https://pydoit.org/
 [fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
 [ga]: https://docs.github.com/en/actions
+[mk]: https://en.wikipedia.org/wiki/Make_(software)
 [pta]: https://plaintextaccounting.org/
 [pu]: https://en.wikipedia.org/wiki/Pulumi
