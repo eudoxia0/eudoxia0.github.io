@@ -136,10 +136,10 @@ If you're building a new CI system/IaC platform/Make replacement: please just le
     Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
 
 [av]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
-[fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
-[doit]: https://pydoit.org/
-[cf]: https://en.wikipedia.org/wiki/AWS_CloudFormation
-[pu]: https://en.wikipedia.org/wiki/Pulumi
-[pta]: https://plaintextaccounting.org/
 [cdk]: https://en.wikipedia.org/wiki/AWS_Cloud_Development_Kit
+[cf]: https://en.wikipedia.org/wiki/AWS_CloudFormation
+[doit]: https://pydoit.org/
+[fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
 [ga]: https://docs.github.com/en/actions
+[pta]: https://plaintextaccounting.org/
+[pu]: https://en.wikipedia.org/wiki/Pulumi
