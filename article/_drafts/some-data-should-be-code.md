@@ -31,7 +31,7 @@ a.png: a.csv plot.py
 b.png: b.csv plot.py
 	python plot.py $< $@
 
-b.png: c.csv plot.py
+c.png: c.csv plot.py
 	python plot.py $< $@
 ```
 
