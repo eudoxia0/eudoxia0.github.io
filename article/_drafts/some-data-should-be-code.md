@@ -1,6 +1,7 @@
 ---
 title: Some Data Should Be Code
 summary: On Make, CloudFormation, and GitHub Actions.
+card: some-data-should-be-code.webp
 ---
 
 I write a lot of Makefiles. I use it not as a command runner but as an ad-hoc build system for small projects, typically for compiling Markdown documents and their dependencies. Like so:
