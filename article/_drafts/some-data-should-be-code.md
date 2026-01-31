@@ -85,13 +85,17 @@ A lot of things are like Makefiles: data that should be lifted one level up to b
 Consider [CloudFormation][cf]. Nobody likes writing those massive YAML files by hand, so AWS introduced [CDK][cdk], which is literally just a library[^fn1] of classes that represent AWS resources. Running a CDK program emits CloudFormation YAML as though it were an assembly language for infrastructure. And so you get type safety, modularity, abstraction, conditionals and loops, all for free.
 
 
+
+
 # Footnotes
 
-Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
+[^fn1]:
+  Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
 
 [av]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 [fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
 [doit]: https://pydoit.org/
 [cf]: https://en.wikipedia.org/wiki/AWS_CloudFormation
-[cdf]: https://en.wikipedia.org/wiki/AWS_Cloud_Development_Kit
 [pu]: https://en.wikipedia.org/wiki/Pulumi
+[pta]: https://plaintextaccounting.org/
+[cdk]: https://en.wikipedia.org/wiki/AWS_Cloud_Development_Kit
