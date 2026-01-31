@@ -64,18 +64,16 @@ g = BuildGraph()
 EXPORT: str = "inputs/checkbook_pro_export.csv"
 
 # The (year, month) pairs I have bank transaction CSVs for.
-year_months: list[tuple[int, int]] = []
-for y in range(2019, 2026):
-    for m in range(1, 13):
-        year_months.append((y, m))
+year_months: list[tuple[int, int]] = [(y, m) for y in range(2019, 2026) for m in range(1, 13)]
 
-        # Import all CSV exports together into one ledger.
-        ledger_path: str = f"ledger/{y}_{m:02d}.toml"
-        g.rule(
-            targets=[ledger_path],
-            deps=[EXPORT],
-            exec=import_from_checkbook(ledger_path, year, month),
-        )
+# Import transactions for each year-month into a separate ledger.
+for year, month in year_months:
+    ledger_path: str = f"ledger/{year}_{month:02d}.toml"
+    g.rule(
+        targets=[ledger_path],
+        deps=[EXPORT],
+        exec=import_from_checkbook(ledger_path, year, month),
+    )
 ```
 
 Fortunately this exists: it's called [doit], but it's not widely known. I haven't used it enough to know whether this is accidental or if it's the wrong abstraction.
@@ -90,7 +88,7 @@ Consider [CloudFormation][cf]. Nobody likes writing those massive YAML files by 
 # Footnotes
 
 [^fn1]:
-  Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
+    Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
 
 [av]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 [fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
