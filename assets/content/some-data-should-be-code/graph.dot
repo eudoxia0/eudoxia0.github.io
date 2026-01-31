@@ -1,0 +1,27 @@
+digraph G {
+  graph [dpi = 300];
+
+  node[
+      shape=box,
+      style=filled,
+      color="#90a1b9",
+      fillcolor="#dff2fe",
+      fontname="U001"
+  ]
+  edge[arrowsize=0.6]
+
+
+  md[label="📝 doc.md"]
+  html[label="🌐 doc.html"]
+  pdf[label="🖨️ doc.pdf"]
+  data[label="🧮 data.csv"]
+  py[label="🐍 plot.py"]
+  plot[label="📈 plot.png"]
+  dot[label="🕸️ graph.dot"]
+  graph_[label="🖼️ graph.png"]
+
+  md -> html
+  md -> pdf
+  data -> py -> plot -> md
+  dot -> graph_ -> md
+}
