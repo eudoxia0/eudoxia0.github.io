@@ -84,8 +84,41 @@ A lot of things are like Makefiles: data that should be lifted one level up to b
 
 Consider [CloudFormation][cf]. Nobody likes writing those massive YAML files by hand, so AWS introduced [CDK][cdk], which is literally just a library[^fn1] of classes that represent AWS resources. Running a CDK program emits CloudFormation YAML as though it were an assembly language for infrastructure. And so you get type safety, modularity, abstraction, conditionals and loops, all for free.
 
+Consider [GitHub Actions][ga]. How much better off would we be if, instead of writing the workflow-job-step tree by hand, we could just have a single Python script, executed on push, whose output is the GitHub Actions YAML-as-assembly? So you might write:
 
+```python
+from ga import *
+from checkout_action import CheckoutAction
+from rust_action import RustSetupAction
 
+# Define the workflow that runs on each commit.
+commit_workflow = Workflow(
+    name="commit",
+    test=lambda ev: isinstance(ev, CommitEvent),
+    jobs=[
+        # The lint job.
+        Job(
+            name="lint",
+            steps=[
+                Step(
+                    name="check out",
+                    run=CheckoutAction(),
+                ),
+                Step(
+                    name="set up Rust and Cargo",
+                    run=RustSetupAction(),
+                ),
+                Step(
+                    name="run cargo fmt",
+                    run=Shell(["cargo", "fmt", "--check"])
+                )
+            ]
+        )
+    ]
+)
+```
+
+Actions here would simply be ordinary Python libraries the CI script depends on. Again: conditions, loops, abstraction, type safety, we get all of those for free by virtue of using a language that was designed to be a language, rather than a data exchange language that slowly grows into a poorly-designed DSL.
 
 # Footnotes
 
@@ -99,3 +132,4 @@ Consider [CloudFormation][cf]. Nobody likes writing those massive YAML files by 
 [pu]: https://en.wikipedia.org/wiki/Pulumi
 [pta]: https://plaintextaccounting.org/
 [cdk]: https://en.wikipedia.org/wiki/AWS_Cloud_Development_Kit
+[ga]: https://docs.github.com/en/actions
