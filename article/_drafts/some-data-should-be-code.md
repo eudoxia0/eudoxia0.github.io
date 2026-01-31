@@ -18,11 +18,80 @@ clean:
 
 (I could never remember the [automatic variable][av] syntax until I made [flashcards][fc] for them.)
 
-It works for simple projects, when you can mostly hand-write the targets. But the abstraction ceiling is very low. If you have a bunch of almost identical targets, e.g.:
+It works for simple projects, when you can mostly hand-write the rules. But the abstraction ceiling is very low. If you have a bunch of almost identical rules, e.g.:
 
 ```makefile
+a.png: a.csv plot.py
+	python plot.py $< $@
 
+b.png: b.csv plot.py
+	python plot.py $< $@
+
+b.png: c.csv plot.py
+	python plot.py $< $@
 ```
+
+You can use pattern-matching to turn a rule into a "rule schema", by analogy to axiom schemata:
+
+```makefile
+%.png: %.csv plot.py
+	python plot.py $< $@
+```
+
+Which works backwards: when something in the build graph depends on a target matching `%.png`, Make synthesizes a rule instance with a dependency on the corresponding `.csv` file.
+
+But pattern matching is still very limited. Lately I've been building my own [plain-text accounting][pta] solution using some Python scripts. One of the tasks is to read a CSV of bank transactions from 2019–2024 and split it into TOML files for each year-month, to make subsequent processing parallelizable. So the rules might be something like:
+
+```makefile:
+ledger/2019-08.toml: inputs/checkbook_pro_export.csv
+	uv run import_from_checkbook.py --year=2019 --month=8
+
+ledger/2019-09.toml: inputs/checkbook_pro_export.csv
+	uv run import_from_checkbook.py --year=2019 --month=9
+
+# ...
+```
+
+I had to write a Python script to generate the complete Makefile. Makefiles look like code, but are data: they are a container format for tiny fragments of shell that are run on-demand by the Make engine. And because Make doesn't scale, for complex tasks you have to bring out a real programming language to generate the Makefile.
+
+I wish I could, instead, write a `make.py` file with something like this:
+
+```python
+from whatever import *
+
+g = BuildGraph()
+
+EXPORT: str = "inputs/checkbook_pro_export.csv"
+
+# The (year, month) pairs I have bank transaction CSVs for.
+year_months: list[tuple[int, int]] = []
+for y in range(2019, 2026):
+    for m in range(1, 13):
+        year_months.append((y, m))
+
+        # Import all CSV exports together into one ledger.
+        ledger_path: str = f"ledger/{y}_{m:02d}.toml"
+        g.rule(
+            targets=[ledger_path],
+            deps=[EXPORT],
+            exec=import_from_checkbook(ledger_path, year, month),
+        )
+```
+
+Fortunately this exists: it's called [doit], but it's not widely known. I haven't used it enough to know whether this is accidental or if it's the wrong abstraction.
+
+A lot of things are like Makefiles: data that should be lifted one level up to become code.
+
+Consider [CloudFormation][cf]. Nobody likes writing those massive YAML files by hand, so AWS introduced [CDK][cdk], which is literally just a library[^fn1] of classes that represent AWS resources. Running a CDK program emits CloudFormation YAML as though it were an assembly language for infrastructure. And so you get type safety, modularity, abstraction, conditionals and loops, all for free.
+
+
+# Footnotes
+
+Or rather, a polyglot collection of libraries, one per language, like [Pulumi][pu].
 
 [av]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 [fc]: https://github.com/eudoxia0/flashcards/blob/aefae3ed874627201dbcedec045095779691d323/Cards/make.md
+[doit]: https://pydoit.org/
+[cf]: https://en.wikipedia.org/wiki/AWS_CloudFormation
+[cdf]: https://en.wikipedia.org/wiki/AWS_Cloud_Development_Kit
+[pu]: https://en.wikipedia.org/wiki/Pulumi
