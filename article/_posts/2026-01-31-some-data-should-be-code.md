@@ -35,7 +35,7 @@ c.png: c.csv plot.py
 	python plot.py $< $@
 ```
 
-You can use pattern-matching to turn a rule into a "rule schema", by analogy to axiom schemata:
+You can use pattern-matching to them into a "rule schema", by analogy to axiom schemata:
 
 ```makefile
 %.png: %.csv plot.py
