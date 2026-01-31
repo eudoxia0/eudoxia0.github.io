@@ -2,6 +2,8 @@
 title: Some Data Should Be Code
 summary: On Make, CloudFormation, and GitHub Actions.
 card: some-data-should-be-code.webp
+card_source: |
+    “Thicket of papyrus, 1914, wood sculpture inlaid with gems, impressionism, from the British Museum”, DALL-E 2, July 2022.
 ---
 
 I write a lot of Makefiles. I use it not as a command runner but as an ad-hoc build system for small projects, typically for compiling Markdown documents and their dependencies. Like so:
