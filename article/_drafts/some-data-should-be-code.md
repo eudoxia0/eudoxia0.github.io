@@ -64,7 +64,9 @@ g = BuildGraph()
 EXPORT: str = "inputs/checkbook_pro_export.csv"
 
 # The (year, month) pairs I have bank transaction CSVs for.
-year_months: list[tuple[int, int]] = [(y, m) for y in range(2019, 2026) for m in range(1, 13)]
+year_months: list[tuple[int, int]] = [
+    (y, m) for y in range(2019, 2026) for m in range(1, 13)
+]
 
 # Import transactions for each year-month into a separate ledger.
 for year, month in year_months:
@@ -72,7 +74,7 @@ for year, month in year_months:
     g.rule(
         targets=[ledger_path],
         deps=[EXPORT],
-        exec=import_from_checkbook(ledger_path, year, month),
+        fn=import_from_checkbook(ledger_path, year, month),
     )
 ```
 
