@@ -2,62 +2,50 @@
 title: Fiction
 layout: common
 novella:
-  - title: The Epiphany of Gliese 581
-    date: 2022-11-15
-    summary: A linguist, a chemist, and a comparative psychologist explore the ruins of a dead superintelligence.
-    slug: eog581
+    - title: The Epiphany of Gliese 581
+      date: 2022-11-15
+      summary: A linguist, a chemist, and a comparative psychologist explore the ruins of a dead superintelligence.
+      slug: eog581
 stories:
-  - title: The Iron Lung of Su-Hui
-    date: 2021-08-13
-    summary: A man discovers a language that changes the world.
-    slug: iron-lung
-  - title: Maker of Rivers
-    date: 2021-08-08
-    summary: A group of explorers petition a deity.
-    slug: maker-of-rivers
+    - title: Julia
+      date: 2026-02-01
+      summary: An aphasic space station monitors an anomalous object, while keeping the last two humans alive.
+      slug: julia
+    - title: The Iron Lung of Su-Hui
+      date: 2021-08-13
+      summary: A man discovers a language that changes the world.
+      slug: iron-lung
+    - title: Maker of Rivers
+      date: 2021-08-08
+      summary: A group of explorers petition a deity.
+      slug: maker-of-rivers
 ---
 
 <div class="post-list">
-  <h2>Novella</h2>
-  <ul class="posts">
-    {% for page in page.novella %}
-      <li>
-        <a href="/fiction/{{ page.slug }}">
-          {{ page.title }}
-        </a>
-        <div class="info">
-          <span class="date">
-            {{ page.date | date: "%-d %B, %Y" }}
-          </span>
-          &nbsp;
-          &middot;
-          &nbsp;
-          <span class="summary">
-            {{ page.summary }}
-          </span>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-  <h2>Short Stories</h2>
-  <ul class="posts">
-    {% for page in page.stories %}
-      <li>
-        <a href="/fiction/{{ page.slug }}">
-          {{ page.title }}
-        </a>
-        <div class="info">
-          <span class="date">
-            {{ page.date | date: "%-d %B, %Y" }}
-          </span>
-          &nbsp;
-          &middot;
-          &nbsp;
-          <span class="summary">
-            {{ page.summary }}
-          </span>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+    <h2>Novella</h2>
+    <ul class="posts">
+        {% for page in page.novella %}
+        <li>
+            <a href="/fiction/{{ page.slug }}"> {{ page.title }} </a>
+            <div class="info">
+                <span class="date"> {{ page.date | date: "%-d %B, %Y" }} </span>
+                &nbsp; &middot; &nbsp;
+                <span class="summary"> {{ page.summary }} </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Short Stories</h2>
+    <ul class="posts">
+        {% for page in page.stories %}
+        <li>
+            <a href="/fiction/{{ page.slug }}"> {{ page.title }} </a>
+            <div class="info">
+                <span class="date"> {{ page.date | date: "%-d %B, %Y" }} </span>
+                &nbsp; &middot; &nbsp;
+                <span class="summary"> {{ page.summary }} </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
