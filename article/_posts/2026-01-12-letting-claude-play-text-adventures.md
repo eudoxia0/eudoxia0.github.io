@@ -30,7 +30,7 @@ performs better than baseline? I need an eval, a task.
 Math problems? Too one-shottable. A chatbot? Too interactive, I want something
 hands-off and long-horizon. A coding agent? That's too freeform and requires too
 much tool use. And then I thought: [text adventures][adv]! You have a stylized,
-hierarchically-structured world accessible entirely tthrough text, long-term
+hierarchically-structured world accessible entirely through text, long-term
 goals, puzzles, physical exploration and discovery of the environment. Even the
 data model of text adventures resembles [frame-based][frame] knowledge
 representation systems. And there's a [vast collection][ifdb] of games available
