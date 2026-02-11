@@ -305,7 +305,7 @@ here and listing these as todos:
   tool.
 - **Manual Geography:** the automatic geography approach has a few
   drawbacks. Without integration into the Z-machine interpreter, it requires
-  some work to implement (parsing the currente location from the `dfrotz`
+  some work to implement (parsing the current location from the `dfrotz`
   output, keeping track of the command history to find standard travel commands
   e.g. `go south`) but isn't 100% deterministic, so that mazes and dynamic rooms
   (e.g. elevators) will confuse the system. So, instead of doing it manually, we
