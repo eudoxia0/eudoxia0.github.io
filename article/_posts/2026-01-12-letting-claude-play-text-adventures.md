@@ -37,7 +37,7 @@ representation systems. And there's a [vast collection][ifdb] of games available
 online.
 
 [_Anchorhead_][ah], which I played years ago, is a Lovecraft-inspired text
-adventure by Michael S. Gentry. It takes on the order of hundrds of turns to win
+adventure by Michael S. Gentry. It takes on the order of hundreds of turns to win
 across multiple in-game days. And the game world is huge and very open. In other
 words: a perfect long-horizon task.
 
