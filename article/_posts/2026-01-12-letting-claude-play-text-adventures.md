@@ -170,7 +170,7 @@ Have fun! 😊
 
 class SimplePlayer(Player):
     """
-    The simplest game-playing agent: keep the entire game histoyr in-context.
+    The simplest game-playing agent: keep the entire game history in-context.
     """
 
     client: Anthropic
