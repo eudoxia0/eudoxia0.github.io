@@ -31,11 +31,16 @@ browser extension would be.
 I like 1Password and I was sad when Apple [Sherlocked][sherlock] them with the
 [Passwords][pw] app, but this is a bad sign about their security practices.
 
-[rouge]: https://github.com/rouge-ruby/rouge
-[xpi]: https://addons.mozilla.org/firefox/downloads/file/4607619/1password_x_password_manager-8.11.23.2.xpi
-[prism]: https://prismjs.com/
-[modal]: https://developer.1password.com/docs/ssh/git-commit-signing/
-[tweet]: https://x.com/RickStrahl/status/2003992055236686022
+---
+
+Update (2026-04-24): a [postmortem][pm] is now available.
+
 [forum]: https://www.1password.community/discussions/1password/bug-beta-and-nightly-extension-degrade-pages-original-functionallity/165329
+[modal]: https://developer.1password.com/docs/ssh/git-commit-signing/
+[pm]: https://1password.statuspage.io/incidents/vkm6tvh2b568
+[prism]: https://prismjs.com/
 [pw]: https://en.wikipedia.org/wiki/Passwords_(Apple)
+[rouge]: https://github.com/rouge-ruby/rouge
 [sherlock]: https://en.wikipedia.org/wiki/Sherlock_(software)#Sherlocked_as_a_term
+[tweet]: https://x.com/RickStrahl/status/2003992055236686022
+[xpi]: https://addons.mozilla.org/firefox/downloads/file/4607619/1password_x_password_manager-8.11.23.2.xpi
