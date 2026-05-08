@@ -75,6 +75,12 @@ and once to the [United States][us] in 2018. In the second case the patient
 "while ill, [traveled] on two commercial domestic flights". And neither export
 led to a general outbreak.
 
+Thirdly, in a small outbreak like the Chubut one, the $R_0$ can vary wildly from
+social factors unconnected to the virus, e.g. if the birthday party had not
+happened. You need a large $n$ to get the $R_0$ as a property of the virus
+itself. It's possible the Chubut outbreak just had anomalously high
+transmission.
+
 What does this add up to? I don't know. On the balance of evidence, I think this
 outbreak is more likely than not to fizzle out. In the interest of
 accountability, and putting my beliefs on record (which is the only objective
