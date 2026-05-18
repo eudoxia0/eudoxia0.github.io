@@ -4,7 +4,7 @@ layout: common
 permalink: /consulting/
 ---
 
-<article>
+<article class="consulting-page">
 
 I'm available for consulting work.
 
@@ -45,5 +45,32 @@ I'm available for consulting work.
 # Contact
 
 Say hello: [fernando@borretti.me](mailto:fernando@borretti.me)
+
+# Testimonials
+
+## Iceberg Quantum
+
+[Iceberg Quantum][ice] is a startup building fault-tolerant architectures for
+quantum computing.
+
+> We're a research-heavy early start up, and brought Fernando in to help us with
+> the broad aim of professionalising our approach to software as we scale up.
+>
+> Fernando was fantastic at listening to our often ambiguous technical needs and
+> working with us to find the best solution. Specifically, he helped build our
+> cloud infrastructure, CI/CD pipelines, as well as tools to accelerate our
+> research and improve reproducibility. He also helped us develop our coding
+> practices, and left our software base in a much better place than when he
+> started.
+>
+> Fernando worked extremely well with the team. He took it upon himself to talk
+> to people, learn the domain and find the pain points we had so he could
+> suggest ways that we could do things better. He was great to have around and
+> made the team better through the way he worked with others.
+>
+> <p class="cite">--- [Sam Smith][sam], CTO & co-founder, [Iceberg Quantum][ice]</p>
+
+[ice]: https://www.iceberg-quantum.com/
+[sam]: https://www.linkedin.com/in/samuel-smith-592760161/
 
 </article>
