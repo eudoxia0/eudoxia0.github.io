@@ -851,7 +851,7 @@ nav.chapter-nav {
 }
 
 .katex {
-    font-size: 1.1em !important;
+    font-size: 1.1em !important; // TODO: make this not important by controlling loading order
 }
 
 // Uncomment the following to draw a grid on the page:
