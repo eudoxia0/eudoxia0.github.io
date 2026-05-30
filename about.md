@@ -68,8 +68,8 @@ This is a repository for my [projects][port], [blog][blog], and
 Podcasts I have been on:
 
 1. [The Stewart Mackenzie Indaba #31](https://www.youtube.com/watch?v=qMjxZHZkPIM)
-2. [Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
-3. [Func Prog Podcast #6](https://www.youtube.com/watch?v=QcBaJBAQfQo)
+1. [Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
+1. [Func Prog Podcast #6](https://www.youtube.com/watch?v=QcBaJBAQfQo)
 
 # Colophon
 
