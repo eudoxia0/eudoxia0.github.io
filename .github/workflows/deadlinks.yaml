@@ -29,8 +29,8 @@ jobs:
             --exclude="antipope\.org"
             --exclude="langsec\.org"
             --exclude="dreamwidth\.org"
-            --threads=1
-            --max-concurrency=1
+            --threads=2
+            --max-concurrency=2
             --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
             './_site/**/*.html'
           fail: true
