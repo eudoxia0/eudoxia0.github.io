@@ -70,6 +70,7 @@ Podcasts I have been on:
 1. [The Stewart Mackenzie Indaba #31](https://www.youtube.com/watch?v=qMjxZHZkPIM)
 1. [Glasp Talk #12](https://www.youtube.com/watch?v=L6VPuYVzLjA)
 1. [Func Prog Podcast #6](https://www.youtube.com/watch?v=QcBaJBAQfQo)
+1. [_Timeline_ with Josh](https://x.com/stableshaman/status/2052256584978534449)
 
 # Colophon
 
