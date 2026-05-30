@@ -40,6 +40,7 @@ If this is interesting to you, [send me an email][mail].
 - LinkedIn: [`fborretti`][ln]
 - Hacker News: [submissions][hnsub], [comments][hncom].
 - Goodreads: [`zetalyrae`](https://www.goodreads.com/user/show/189275796-fernando-borretti)
+- Backloggd: [`zetalyrae`](https://backloggd.com/u/zetalyrae)
 - RSS Feeds: see [here][feeds].
 
 [mail]: mailto:fernando@borretti.me
