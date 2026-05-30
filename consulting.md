@@ -4,7 +4,7 @@ layout: common
 permalink: /consulting/
 ---
 
-<article class="consulting-page">
+<article>
 
 I'm available for consulting work.
 
