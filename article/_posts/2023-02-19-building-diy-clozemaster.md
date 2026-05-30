@@ -37,7 +37,7 @@ sentences and their translations.
 
 [frlist]: https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/French
 [frsen]: https://frequencylists.blogspot.com/2016/08/5000-french-sentences-sorted-from.html
-[os]: https://www.opensubtitles.org/en/en%20
+[os]: https://en.wikipedia.org/wiki/OpenSubtitles
 [mochi]: https://mochi.cards/
 [tatoeba]: https://tatoeba.org/en/
 
