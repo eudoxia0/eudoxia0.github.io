@@ -73,4 +73,26 @@ quantum computing.
 [ice]: https://www.iceberg-quantum.com/
 [sam]: https://www.linkedin.com/in/samuel-smith-592760161/
 
+## Harmony Intelligence
+
+> At Harmony Intelligence, we've built an AI AppSec Agent that does deep,
+> whitebox pentests of web apps & APIs. Our mission is to build a world that's
+> robust to cyber threats in the age of AI.
+>
+> Fernando worked to measure our agent's performance by creating benchmarks
+> based on real-world vulnerability research. He also reviewed the agent's
+> output on real security audits to weed out false positives which helped guide
+> improvements to the agent architecture. So far, we have delivered zero false
+> positives to our customers, and have uncovered major vulnerabilities in every
+> codebase we have audited.
+>
+> We were consistently impressed by Fernando’s technical breadth, ability to
+> ramp quickly across diverse languages and stacks, and effectiveness in
+> adapting to changing priorities.
+>
+> <p class="cite">--- [Elysha Png][elysha], Chief of Staff, [Harmony Intelligence][harmony]</p>
+
+[elysha]: https://www.linkedin.com/in/elyshapng/
+[harmony]: https://www.harmonyintelligence.com/
+
 </article>
