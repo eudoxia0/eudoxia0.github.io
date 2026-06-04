@@ -59,15 +59,7 @@ you. Here's how:
   immunizes you against the lack of motivation. It's like going to the gym even
   if you don't feel like it.
 
-And if you don't know what to read, have some of my favourites:
-[_The Diamond Age_][tda]---
-[_From Third World to First_][ftwtf]---
-[_House of Suns_][hos]---
-[_The Invention of Morel_][iom]---
-[_On the Marble Cliffs_][otmc]---
-[_The Rediscovery of Man_][rom]---
-[_Satan in Goray_][sig]---
-[_The World of Yesterday_][woy].
+And if you don't know what to read, have some of my favourites: [_The Diamond Age_][tda]---[_From Third World to First_][ftwtf]---[_House of Suns_][hos]---[_The Invention of Morel_][iom]---[_On the Marble Cliffs_][otmc]---[_The Rediscovery of Man_][rom]---[_Satan in Goray_][sig]---[_The World of Yesterday_][woy].
 
 [consulting]: /consulting/
 [ftwtf]: https://www.goodreads.com/book/show/144409.From_Third_World_to_First
