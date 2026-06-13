@@ -1,5 +1,7 @@
 name: dead links
-on: push
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   link-checker:
