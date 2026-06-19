@@ -34,6 +34,7 @@ jobs:
             --threads=2
             --host-concurrency=1
             --max-concurrency=32
+            --max-retries=6
             --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
             './_site/**/*.html'
           fail: true
