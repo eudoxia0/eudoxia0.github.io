@@ -1,6 +1,6 @@
 ---
 title: Second-Class References
-summary: On Graydon's Rust, Val, and mutable value semantics.
+summary: On Graydon's Rust, Hylo, and mutable value semantics.
 card: second-class-references.jpg
 card_source: |
     [_American Landscape_][link], Charles Sheeler, 1930.
@@ -122,10 +122,10 @@ g(&x);
 h(&mut x);
 ```
 
-Has this been implemented anywhere? Yes, the [Val][val] programming language
+Has this been implemented anywhere? Yes, the [Hylo][hylo] programming language
 does this under the name ["mutable value semantics"][mvs].
 
-[val]: https://www.val-lang.dev/
+[hylo]: https://hylo-lang.org/
 [mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
 # Benefits {#pros}
@@ -215,10 +215,10 @@ second-class references, there are places where we need first-class references.
 
 The main pain point is iterators. In Rust, iterators are (far and above) the
 main place where you find yourself storing a reference in a struct. It's not
-clear to me how you would do iterators with second-class references. The Val
+clear to me how you would do iterators with second-class references. The Hylo
 language has a [discussion page][iter] about this.
 
-[iter]: https://github.com/val-lang/val-lang.github.io/discussions/44
+[iter]: https://github.com/orgs/hylo-lang/discussions/742
 
 Graydon Hoare's solution is to outright change how iteration happens:
 
@@ -343,11 +343,11 @@ and reference expressions. So if you can write `f(&x)`, you can also write
 `f(t(&x))`, or `f(t(u(v(&x))))`, where `t`, `u`, and `v,` are reference
 transforms.
 
-Val has something like this, as far as I've been able to understand, in the form
+Hylo has something like this, as far as I've been able to understand, in the form
 of [subscripts][sub], but subscripts are actually coroutines. To be honest I
-don't understand Val well enough to explain it in detail.
+don't understand Hylo well enough to explain it in detail.
 
-[sub]: https://tour.val-lang.dev/subscripts
+[sub]: https://hylo-lang.org/docs/user/language-tour/subscripts/
 
 # Conclusion {#conclusion}
 
@@ -369,7 +369,7 @@ in a complex way. In other words, first-class references give you a midpoint
 between raw pointers and second-class references, where you can do things
 second-class references cannot, without losing safety.
 
-If you compare Val and Rust, the simplicity gains are tremendous, because Rust's
+If you compare Hylo and Rust, the simplicity gains are tremendous, because Rust's
 borrow checker is very complex, especially with newer language features like
 async that complicate lifetime analysis.
 
@@ -384,19 +384,23 @@ type system and borrow-checker rules still fit [on a page][ref].
 [lincheck]: https://github.com/austral/austral/blob/8568383ed373d0df85cdf69e752130fb259f5949/lib/LinearityCheck.ml
 [ref]: https://austral-lang.org/spec/spec.html#linearity
 
-Another thing I didn't touch on is closures. Val [has closures][closure], and
+Another thing I didn't touch on is closures. Hylo [has closures][closure], and
 they can capture immutable as well as mutable references, but it's not clear to
-me what restrictions Val imposes here to preserve safety. Also, Val has a
+me what restrictions Hylo imposes here to preserve safety. Also, Hylo has a
 concept of [remote parts][remote], which I think is a way to store references in
 data structures without involving lifetimes. I don't want this post to sound
-like a critique of Val, which as a language as very different priorities from
+like a critique of Hylo, which as a language as very different priorities from
 Austral. Mostly, I'm judging second-class references to see if they're a good
 fit for Austral.
 
-[closure]: https://tour.val-lang.dev/functions-and-methods#closures
-[remote]: https://github.com/val-lang/val/blob/8d4dadc3ecb3d8f098a4e4f12139eb8bcd3950e4/Docs/RemoteParts.md?plain=1#L1
+[closure]: https://hylo-lang.org/docs/user/language-tour/functions-and-methods/#closures
+[remote]: https://github.com/hylo-lang/hylo/blob/8d4dadc3ecb3d8f098a4e4f12139eb8bcd3950e4/Docs/RemoteParts.md?plain=1#L1
 
 Second-class references are appealing, but before giving up on first-class
 references in Austral, I'd like to have a better grasp of how patterns like
 iterators and core language features like closures can be carried over without
 loss of generality.
+
+---
+
+Update on 2026-06-20: when I wrote this, Hylo was called Val. I've updated the name and the links.
