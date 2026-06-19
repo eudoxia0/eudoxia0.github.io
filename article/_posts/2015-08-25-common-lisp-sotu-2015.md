@@ -675,10 +675,10 @@ GitHub. I wrote some code to query my [Newsbeuter][news] database:
 
 Thanks to [Javier Olaechea][puercopop] for his comments on Unicode support,
 [Eitaro Fukamachi][fukamachi] and [François-René Rideau][fare], and
-[Gabriel Gonzalez][gabriel] for the original State of the Haskell Ecosystem
+[Gabriella Gonzalez][gabriella] for the original State of the Haskell Ecosystem
 article.
 
-[sotu]: https://github.com/Gabriel439/post-rfc/blob/master/sotu.md
+[sotu]: https://github.com/Gabriella439/post-rfc/blob/main/sotu.md
 [sotu-hn]: https://news.ycombinator.com/item?id=10071535
 [fare]: https://fare.livejournal.com/169346.html
 
@@ -795,7 +795,7 @@ article.
 [puercopop]: https://github.com/PuercoPop
 [fukamachi]: https://8arrow.org/
 [fare]: http://fare.tunes.org/
-[gabriel]: https://haskellforall.com/
+[gabriella]: https://haskellforall.com/
 
 <style>
 .recommendations {
