@@ -339,7 +339,7 @@ useful.
 [mf]: https://x.com/MochiCardsApp/status/1924692507570667630
 [mine]: https://github.com/eudoxia0/flashcards
 [mt]: https://mochi.cards/docs/#templates
-[mult]: https://mochi.cards/docs/faq/#which-spaced-repetition-algorithm-does-mochi-use
+[mult]: https://web.archive.org/web/20250914174025/https://mochi.cards/docs/faq/#which-spaced-repetition-algorithm-does-mochi-use
 [nt]: https://docs.ankiweb.net/getting-started.html#note-types
 [sr]: /article/effective-spaced-repetition
 [tex]: https://docs.ankiweb.net/math.html
