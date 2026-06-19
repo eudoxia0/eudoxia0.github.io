@@ -80,4 +80,4 @@ This is great example of how LLMs reduce the activation energy for tiny projects
 [repo]: https://github.com/eudoxia0/macos-tinted-folders
 [tail]: https://tailwindcss.com/
 [tw]: https://x.com/AetherAurelia/status/1875020494770241797
-[twcolour]: https://tailwindcss.com/docs/customizing-colors
+[twcolour]: https://tailwindcss.com/docs/colors
