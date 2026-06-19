@@ -790,7 +790,7 @@ article.
 [clisp]: https://en.wikipedia.org/wiki/CLISP
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: https://ccl.clozure.com/
-[ecl]: https://common-lisp.net/project/ecl/
+[ecl]: https://ecl.common-lisp.dev/
 [abcl]: https://common-lisp.net/project/ecl/
 [puercopop]: https://github.com/PuercoPop
 [fukamachi]: https://8arrow.org/
