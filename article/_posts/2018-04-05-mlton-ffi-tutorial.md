@@ -103,5 +103,5 @@ automatically get MLton to give you an SML string result. To get a string from a
 pointer you essentially have to call `strlen` on the pointer and build up the
 string by hand. That will probably be the topic of a future blog post.
 
-[blas]: https://github.com/xianyi/OpenBLAS
+[blas]: https://github.com/OpenMathLib/OpenBLAS
 [doc]: http://mlton.org/ForeignFunctionInterfaceTypes
