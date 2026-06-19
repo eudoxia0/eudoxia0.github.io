@@ -781,7 +781,7 @@ article.
 
 [slime]: https://common-lisp.net/project/slime/
 [sly]: https://github.com/capitaomorte/sly
-[atom]: https://atom.io/
+[atom]: https://web.archive.org/web/20150213164605/https://atom.io/
 
 [github-repos]: https://planet.lisp.org/github.atom
 [news]: https://github.com/akrennmair/newsbeuter
