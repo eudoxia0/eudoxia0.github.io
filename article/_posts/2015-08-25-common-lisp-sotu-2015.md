@@ -779,7 +779,7 @@ article.
 [sdl]: https://github.com/lispgames/cl-sdl2
 [pg]: https://github.com/fogleman/pg
 
-[slime]: https://common-lisp.net/project/slime/
+[slime]: https://slime.common-lisp.dev/
 [sly]: https://github.com/capitaomorte/sly
 [atom]: https://web.archive.org/web/20150213164605/https://atom.io/
 
