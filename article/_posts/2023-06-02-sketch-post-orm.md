@@ -708,7 +708,7 @@ to use.
 [SQLx][sqlx] an asynchronous database access library for Rust. It supports typechecking queries. The [FAQ][faq] explains how they implemented this:
 
 [sqlx]: https://github.com/transact-rs/sqlx
-[faq]: https://github.com/launchbadge/sqlx/blob/253d8c9f696a3a2c7aa837b04cc93605a1376694/FAQ.md
+[faq]: https://github.com/transact-rs/sqlx/blob/253d8c9f696a3a2c7aa837b04cc93605a1376694/FAQ.md
 
 > The macros work by talking to the database at compile time. When a(n) SQL client asks to create a prepared statement
 > from a query string, the response from the server typically includes information about the following:
