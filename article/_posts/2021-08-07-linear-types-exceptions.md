@@ -731,7 +731,7 @@ Not much, surprisingly:
 [overflow]: https://en.wikipedia.org/wiki/Integer_overflow
 [abort]: https://www.gnu.org/software/libc/manual/html_node/Aborting-a-Program.html
 [pthread_cancel]: https://man7.org/linux/man-pages/man3/pthread_cancel.3.html
-[dfree]: https://www.owasp.org/index.php/Doubly_freeing_memory
+[dfree]: https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory
 [union]: https://en.wikipedia.org/wiki/Tagged_union
 [rust]: https://rust-lang.org/
 [rustpanic]: https://doc.rust-lang.org/std/macro.panic.html
