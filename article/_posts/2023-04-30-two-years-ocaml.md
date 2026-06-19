@@ -475,7 +475,7 @@ Which in `do` notation could be written more succinctly.
 The [module system][modsys] is the central feature that sets OCaml and Standard
 ML apart. This is how OCaml does ad-hoc polymorphism with early binding.
 
-[modsys]: https://v2.ocaml.org/manual/moduleexamples.html
+[modsys]: https://ocaml.org/manual/5.4/moduleexamples.html
 
 The module system consists of:
 
