@@ -267,7 +267,7 @@ Coveralls:
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
 [ccl]: https://ccl.clozure.com/
 [scriba]: https://github.com/CommonDoc/scriba
-[cim]: https://github.com/KeenS/CIM
+[cim]: https://github.com/sionescu/CIM
 [crane]: https://github.com/eudoxia0/crane
 [coveralls]: https://coveralls.io/
 [cl-travis]: https://github.com/luismbo/cl-travis
