@@ -776,7 +776,7 @@ need to know how to do this at the `dune` level.
 I managed to cobble together something using `prof` and successfully profiled
 the Austral compiler, but then I forgot what I did to get that to work.
 
-[profiling]: https://v2.ocaml.org/manual/profil.html
+[profiling]: https://ocaml.org/manual/5.4/profil.html
 
 ## Testing {#testing}
 
