@@ -73,7 +73,7 @@ This is great example of how LLMs reduce the activation energy for tiny projects
 [Figma]: https://www.figma.com/
 [claude]: https://claude.ai/
 [icns]: https://en.wikipedia.org/wiki/Apple_Icon_Image_format
-[im]: https://www.imagemagick.org
+[im]: https://imagemagick.org/
 [iu]: https://www.unix.com/man-page/osx/1/iconutil/
 [make]: https://www.gnu.org/s/make/manual/make.html
 [para]: https://fortelabs.com/blog/para/
