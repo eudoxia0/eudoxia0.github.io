@@ -234,5 +234,5 @@ _Edit 2024-12-28_: correction, Mochi doesn't use SM-2. I was reading their old [
 [sm2]: https://super-memory.com/english/ol/sm2.htm
 [sm]: https://en.wikipedia.org/wiki/SuperMemo
 [sr]: /article/effective-spaced-repetition
-[faqold]: https://web.archive.org/web/20240000000000*/https://mochi.cards/faq.html
-[faq]: https://mochi.cards/docs/faq/
+[faqold]: https://web.archive.org/web/20220211171847/https://mochi.cards/faq.html
+[faq]: https://web.archive.org/web/20241230004149/https://mochi.cards/docs/faq/
