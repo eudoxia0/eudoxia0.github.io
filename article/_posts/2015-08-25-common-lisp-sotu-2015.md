@@ -763,7 +763,7 @@ article.
 [cl-yaml]: https://github.com/eudoxia0/cl-yaml
 [cl-csv]: https://quickdocs.org/cl-csv
 
-[ql]: https://www.quicklisp.org
+[ql]: https://www.quicklisp.org/beta/
 [qlot]: https://github.com/fukamachi/qlot
 
 [dbi]: https://github.com/fukamachi/cl-dbi
