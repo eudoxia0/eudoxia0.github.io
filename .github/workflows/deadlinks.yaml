@@ -31,7 +31,7 @@ jobs:
             --exclude="www\.gnu\.org"
             --fallback-extensions=html
             --host-concurrency=1
-            --max-concurrency=32
+            --max-concurrency=128
             --max-retries=6
             --no-progress
             --retry-wait-time=6
