@@ -558,7 +558,7 @@ illegal states unrepresentable.
 
 [sum]: https://en.wikipedia.org/wiki/Tagged_union
 [blindness]: https://shreevatsa.wordpress.com/2015/01/31/boolean-blindness/
-[cl-integer]: https://clhs.lisp.se/Body/t_intege.htm
+[cl-integer]: https://www.lispworks.com/documentation/HyperSpec/Body/t_intege.htm
 [no-oop]: https://www.paulgraham.com/noop.html
 [declaim]: https://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm
 [sbcl]: https://en.wikipedia.org/wiki/Steel_Bank_Common_Lisp
