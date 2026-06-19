@@ -727,7 +727,7 @@ format][dimacs] provides a standard file format for SAT solver input.
 [handbook]: https://www.iospress.com/catalog/books/handbook-of-satisfiability-2
 [minisat]: https://github.com/niklasso/minisat
 [clasp]: https://potassco.org/clasp/
-[dimacs]: https://logic.pdmi.ras.ru/~basolver/dimacs.html
+[dimacs]: http://web.archive.org/web/20250628010518/https://logic.pdmi.ras.ru/~basolver/dimacs.html
 
 The tradeoff here is that using an external solver means you get optimizations
 like the [DPLL algorithm][dpll] and [CDCL][cdcl] for free, at the cost of losing
