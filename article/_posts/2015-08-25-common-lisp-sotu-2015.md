@@ -795,7 +795,7 @@ article.
 [puercopop]: https://github.com/PuercoPop
 [fukamachi]: https://8arrow.org/
 [fare]: http://fare.tunes.org/
-[gabriel]: https://www.haskellforall.com/
+[gabriel]: https://haskellforall.com/
 
 <style>
 .recommendations {
