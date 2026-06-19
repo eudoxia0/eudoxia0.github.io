@@ -399,7 +399,7 @@ Ten years ago or so [NoSQL][nosql] took off. The movement promised two things:
 
 2. Schemaless databases for performance.
 
-[dynamicdb]: https://www.mongodb.com/blog/post/databases-should-be-dynamically-typed
+[dynamicdb]: https://web.archive.org/web/20230929093843/https://www.mongodb.com/blog/post/databases-should-be-dynamically-typed
 
 Lots of people whose data would fit in SQLite and whose workloads could run off
 an Apple Watch switched to MongoDB and similar.
