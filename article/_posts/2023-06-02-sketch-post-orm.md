@@ -412,7 +412,7 @@ the codebase. Types are good. Dynamic typing is bad. Slow is fast. You are not
 Google. Most everyone isn't [the LHC][lhc] and doesn't need a non-relational
 key-value or blob store for their core database.
 
-[lhc]: https://www.mongodb.com/blog/post/holy-large-hadron-collider-batman
+[lhc]: https://web.archive.org/web/20230610204020/https://www.mongodb.com/blog/post/holy-large-hadron-collider-batman
 
 ACID guarantees are _extremely_ valuable. Explicit schemas are great. I don't
 want less schemas, I want more. I want stricter schemas than Postgres
