@@ -23,21 +23,21 @@ jobs:
         uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411 # v2.8.0
         with:
           args: >
-            --verbose
-            --no-progress
-            --timeout=30
-            --exclude="www\.gnu\.org"
-            --exclude="fredkozlowski\.com"
+            --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
             --exclude="antipope\.org"
-            --exclude="langsec\.org"
             --exclude="dreamwidth\.org"
-            --threads=2
+            --exclude="fredkozlowski\.com"
+            --exclude="langsec\.org"
+            --exclude="www\.gnu\.org"
             --host-concurrency=1
             --max-concurrency=32
             --max-retries=6
+            --no-progress
             --retry-wait-time=6
-            --suggest
-            --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
             --root-dir=_site
+            --suggest
+            --threads=2
+            --timeout=30
+            --verbose
             './_site/**/*.html'
           fail: true
