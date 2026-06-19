@@ -279,6 +279,6 @@ CL-USER> (uiop:delete-directory-tree +directory+ :validate t)
 [liblmdb]: https://github.com/antimer/liblmdb
 [cffi]: https://cffi.common-lisp.dev/
 [cllmdb]: https://github.com/antimer/lmdb
-[moneta]: https://github.com/minad/moneta
+[moneta]: https://github.com/moneta-rb/moneta
 [utf8]: https://quickdocs.org/trivial-utf-8
 [bit]: https://quickdocs.org/bit-smasher
