@@ -761,11 +761,8 @@ Is this realizable? Yes, since, as stated above, most Rust code is already
 written this way. The fact that lifetime elision works at all is due to the fact
 that most references appear as arguments to functions.
 
-Second-class references are implemented in the [Val programming language][val],
+Second-class references are implemented in the [Hylo programming language][hylo],
 under the name of [Mutable Value Semantics][mvs].
-
-[val]: https://www.val-lang.dev/
-[mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
 What are the drawbacks? Well, the rules themselves:
 
@@ -804,7 +801,7 @@ maybe we can soften some of the restrictions of second-class references. The
 goal is to keep the simplicity while increasing safety and expressivity.
 
 Note that most of the below are just my own made-up musings. As far as I know
-Val is the only languages with second-class references and it solves these
+Hylo is the only languages with second-class references and it solves these
 problems differently.
 
 ### Returning References
@@ -1409,22 +1406,22 @@ The problem is you have the same problems in a language like C++:
 [rust-future-lb]: https://lobste.rs/s/47amaq/rust_i_wanted_had_no_future
 [rust-future-reddit]: https://www.reddit.com/r/rust/comments/1415is1/the_rust_i_wanted_had_no_futur/e
 
-## Val {#val}
+## Hylo {#val}
 
-[Val][val] is a new high-level systems programming language based on [mutable
+[Hylo][hylo] is a new high-level systems programming language based on [mutable
 value semantics][mvs]. It is essentially a mixture of the Swift and Rust
-ownership models. Val has a model that aims to let you write code without
+ownership models. Hylo has a model that aims to let you write code without
 thinking about references at all: rather, you just think in terms of values with
 single ownership (i.e. all values are trees rooted at program variables) and the
 language semantics allow the compiler to insert references in many places as an
 optimization to reduce copying.
 
 Unlike Rust, which aims to let you port many design patterns from C++ while
-preserving safety, Val aims to introduce a new way to think about systems
+preserving safety, Hylo aims to introduce a new way to think about systems
 programming that requires some adaptation and explicitly rejects certain
 patterns as being antipatterns in the context of value semantics.
 
-[val]: https://www.val-lang.dev/
+[hylo]: https://hylo-lang.org/
 [mvs]: https://www.jot.fm/issues/issue_2022_02/article2.pdf
 
 ### Simplified Semantics
@@ -1511,10 +1508,9 @@ closure can't escape the lifetime of the things it holds.
 
 ### Links
 
-- [Home page](https://www.val-lang.dev/)
-- [Language tour](https://tour.val-lang.dev/)
-- [Discussions](https://github.com/orgs/val-lang/discussions)
-  - [How do remote parts and closure captures work?](https://github.com/orgs/val-lang/discussions/754), where yours truly tries to suss out the semantics.
+- [Home page](https://hylo-lang.org/)
+- [Discussions](https://github.com/orgs/hylo-lang/discussions)
+  - [How do remote parts and closure captures work?](https://github.com/orgs/hylo-lang/discussions/754), where yours truly tries to suss out the semantics.
 - Papers:
   - [Implementation Strategies for Mutable Value Semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)
   - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678.pdf)
