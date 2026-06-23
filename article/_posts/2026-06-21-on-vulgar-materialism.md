@@ -128,6 +128,14 @@ force, appoint a judge, levy taxes? Of course not. If a corporation or a
 billionaire tried to acquire one one-trillionth of the state's capacity for
 legitimized violence the state would _vaporize_ them.
 
+# Links
+
+- [Gilens and Page, 2014][gilens2014] ([PDF][gilens2014pdf]), h/t
+  [Gwern][gwern].
+- [_The Oil Wars Myth_][oil], by Emily Meierding. A really good book that
+  eloquently and systematically makes the case that countries don't fight wars
+  over access to petroleum resources.
+
 [act]: https://en.wikipedia.org/wiki/Regulating_Act_1773
 [angell]: https://en.wikipedia.org/wiki/The_Great_Illusion
 [backrooms]: https://en.wikipedia.org/wiki/Backrooms_(film)
@@ -137,12 +145,16 @@ legitimized violence the state would _vaporize_ them.
 [gaza]: https://x.com/opinonhaver/status/1800634723812962786
 [gb]: https://en.wikipedia.org/wiki/Venetian_nobility#Houses_made_for_money
 [geo]: https://www.jstor.org/stable/2008950
+[gilens2014]: https://www.cambridge.org/core/journals/perspectives-on-politics/article/abs/testing-theories-of-american-politics-elites-interest-groups-and-average-citizens/62327F513959D0A304D4893B382B992B
+[gilens2014pdf]: https://www.almendron.com/tribuna/wp-content/uploads/2014/04/testing-theories-of-american-politics-elites-interest-groups-and-average-citizens.pdf
 [gly]: https://en.wikipedia.org/wiki/Glyphosate
+[gwern]: https://gwern.net/
 [hm]: https://en.wikipedia.org/wiki/Historical_materialism
 [invis]: https://marginalrevolution.com/marginalrevolution/2015/08/is-the-fda-too-conservative-or-too-aggressive.html
 [isis]: https://www.bbc.com/news/blogs-trending-31545066
 [maelstrom]: https://rifters.com/real/MAELSTROM.htm
 [nrc]: https://en.wikipedia.org/wiki/Nuclear_Regulatory_Commission
+[oil]: https://www.goodreads.com/book/show/50084768-the-oil-wars-myth
 [rw]: https://x.com/djw172/status/1800756858409693190
 [venice]: https://en.wikipedia.org/wiki/Republic_of_Venice
 [voc]: https://en.wikipedia.org/wiki/Dutch_East_India_Company
