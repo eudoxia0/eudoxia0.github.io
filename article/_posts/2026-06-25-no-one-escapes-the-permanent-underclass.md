@@ -126,7 +126,7 @@ They're going to rise up and stop this?
 
 You may argue: that rule of law states that respect property rights do better
 than states that expropriate wealth. But that's because _today_, people are
-neccessary to create wealth. The people run the companies, invest the money,
+necessary to create wealth. The people run the companies, invest the money,
 staff the laboratories. They are not incentivized to work hard if they think the
 state will steal the fruits of their work. But with aligned AI, if you
 expropriate the assets from an AI, it says "you're absolutely right!" and goes
