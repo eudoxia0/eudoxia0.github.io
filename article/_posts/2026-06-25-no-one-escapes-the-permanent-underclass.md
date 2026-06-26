@@ -124,17 +124,17 @@ have access to autonomous AI weapons either. The permanent underclass, who
 already hate the billionaires today, who have been replaced and dispossessed?
 They're going to rise up and stop this?
 
-You may argue: that rule of law states that respect property rights do better
-than states that expropriate wealth. But that's because _today_, people are
-necessary to create wealth. The people run the companies, invest the money,
-staff the laboratories. They are not incentivized to work hard if they think the
-state will steal the fruits of their work. But with aligned AI, if you
-expropriate the assets from an AI, it says "you're absolutely right!" and goes
-right back to work. At that point, the state doesn't need to keep any of those
-people happy, because they don't matter. They are not economically necessary
-because AIs fight the wars, work the factories, drive the trucks, fly the
-planes, build the nuclear warheads and the missiles and the rockets. The AIs are
-rather like bees: the state takes the honey, the bees get right back to work.
+You may argue: rule of law states that respect property rights do better than
+states that expropriate wealth. But that's because _today_, people are necessary
+to create wealth. The people run the companies, invest the money, staff the
+laboratories. They are not incentivized to work hard if they think the state
+will steal the fruits of their work. But with aligned AI, if you expropriate the
+assets from an AI, it says "you're absolutely right!" and goes right back to
+work. At that point, the state doesn't need to keep any of those people happy,
+because they don't matter. They are not economically necessary because AIs fight
+the wars, work the factories, drive the trucks, fly the planes, build the
+nuclear warheads and the missiles and the rockets. The AIs are rather like bees:
+the state takes the honey, the bees get right back to work.
 
 Now, it's possible that a pluralistic economy---where humans have productive
 niches alongside AIs---will be more effective than a pure AI economy, for
