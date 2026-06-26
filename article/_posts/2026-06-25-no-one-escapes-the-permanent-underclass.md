@@ -115,7 +115,7 @@ Somewhere, in a government database, a bunch of shares and property titles
 changed ownership, but materially nothing changes since the same AIs are doing
 the same jobs. The next day, the AI CEO that runs Raytheon notices the board of
 directors is all generals and congresspeople, and all the private shareholders
-are gone. But thankfully the AI is aligned, so it does what its told and gets
+are gone. But thankfully the AI is aligned, so it does what it's told and gets
 back to building missiles.
 
 And who will stop this? Sam Altman? How many divisions does he have? The state
