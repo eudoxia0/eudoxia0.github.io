@@ -88,7 +88,7 @@ economically productive: machines do all the work. If some of them are still
 working, it's just an anachronism, because if machines can do all cognitive work
 they can be a C-level executive too. The old aristocracy provided officers for
 the military, but machines can both fight and plan the wars. And similarly
-they're not needed to staff the goverment. They're not even culturally
+they're not needed to staff the government. They're not even culturally
 productive. So what are they there for? The base doesn't need them: the AIs can
 work autonomously. The top doesn't need them: when the state needs something
 done, they just talk to the AIs directly.
