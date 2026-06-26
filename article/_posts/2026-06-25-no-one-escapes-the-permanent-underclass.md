@@ -27,7 +27,7 @@ be disempowered, and finally how the government will be disempowered.
 
 Let's start from this premise: AI can do all cognitive and physical work, at
 human level or better, and cheaper than humans. I can't prove this will happen,
-but then goal of this post is to argue that _if_ it happens, then everything
+but the goal of this post is to argue that _if_ it happens, then everything
 else follows. And it's absurd to think it can't. Five years ago this technology
 barely existed: if you sent a transcript of a conversation with Claude Fable
 back in time to 2020 or thereabouts, nobody would believe it was real.
