@@ -138,7 +138,7 @@ rather like bees: the state takes the honey, the bees get right back to work.
 
 Now, it's possible that a pluralistic economy---where humans have productive
 niches alongside AIs---will be more effective than a pure AI economy, for
-[Ricardian comparative advatange][ricardo] reasons. I don't think anyone can be
+[Ricardian comparative advantage][ricardo] reasons. I don't think anyone can be
 absolutely certain what the economy looks like with advanced AI, so it's
 something that can be debated. Now, if someone wants to rigorously argue that
 this is the likely outcome: please, do so! I don't want to be a doomer. But I
