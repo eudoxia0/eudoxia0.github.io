@@ -127,7 +127,7 @@ def plot_words_per_month(posts: list[Post]) -> None:
     sorted_months = sorted(words_per_month.keys())
 
     # Create a bar chart using matplotlib
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(24, 12))
     plt.bar(sorted_months, [words_per_month[month] for month in sorted_months])
     plt.xticks(fontsize=8, rotation=90, ha="right")
     plt.xlabel("Month")
@@ -169,7 +169,7 @@ def plot_cumulative_words_per_month(posts: list[Post]) -> None:
     sorted_months = sorted(cumulative_words_per_month.keys())
 
     # Create a bar chart using matplotlib
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(24, 12))
     plt.bar(
         sorted_months, [cumulative_words_per_month[month] for month in sorted_months]
     )
