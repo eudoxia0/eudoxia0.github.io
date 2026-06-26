@@ -94,7 +94,7 @@ work autonomously. The top doesn't need them: when the state needs something
 done, they just talk to the AIs directly.
 
 So the permanent overclass is materially unnecessary at best, and at worst, they
-are an obstacle to the state getting what it wants. Now, you might object, that
+are an obstacle to the state getting what it wants. Now, you might object that
 the rich won't let themselves be expropriated because they already control the
 state. And this is the crux of our disagreement: [the rich just don't have that
 much political power][materialism]. And I probably won't convince you in one
