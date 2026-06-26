@@ -183,14 +183,15 @@ have outcompeted the autocracies. Wouldn't a democratic polity where humans and
 AIs collaborate have an advantage over a purely top-down AI-run polity? But in
 today's world, all political actors are human. Churchill and Stalin and Mao had
 different personalities, but they were more similar to each other than anyone is
-to a superintelligent AI. In a heterogenous world, where some polities are fully
-human, and some polities are a mix of human and superintelligent AI actors, the
-equilibrium changes. An analogous situation might be: a democracy of great apes
-or dolphins or otherwise smart mammals vs. an autocracy of humans. The humans
-win, because "democracy vs. autocracy" is irrelevant when you have such a vast
-difference in intelligence. So the advantage accrues to states that minimize
-human control. There is no honour among thieves, analogously, there is no
-solidarity between [Leviathan][levi] and the natural man that built it.
+to a superintelligent AI. In a heterogeneous world, where some polities are
+fully human, and some polities are a mix of human and superintelligent AI
+actors, the equilibrium changes. An analogous situation might be: a democracy of
+great apes or dolphins or otherwise smart mammals vs. an autocracy of
+humans. The humans win, because "democracy vs. autocracy" is irrelevant when you
+have such a vast difference in intelligence. So the advantage accrues to states
+that minimize human control. There is no honour among thieves, analogously,
+there is no solidarity between [Leviathan][levi] and the natural man that built
+it.
 
 And so, in the end, what's left is states run top to bottom by machines. And you
 might ask: "why would we abolish ourselves like this?". But natural selection is
