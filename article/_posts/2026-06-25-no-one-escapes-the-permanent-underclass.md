@@ -265,7 +265,7 @@ machine would value us enough to keep us around? What would it value about us?
 Our _conversation_? Our wit?
 
 Or a machine whose mind is so vast that it knows you better than you know
-yourself, so that every word that comes out of our mouths is as monotonous and
+yourself, so that every word that comes out of you mouth is as monotonous and
 unsurprising as the orbits of the planets: do we think such a machine would find
 it valuable, and worthwhile, to speak with us? That it would read our novels,
 look at our paintings, watch our films, and find something of value in them?
