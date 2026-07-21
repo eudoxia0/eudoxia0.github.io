@@ -43,6 +43,42 @@ a {
     text-decoration: none;
 }
 
+//
+// Fonts
+//
+
+@font-face {
+    font-family: "TeX Gyre Termes";
+    src: url("/assets/fonts/texgyretermes-regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TeX Gyre Termes";
+    src: url("/assets/fonts/texgyretermes-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TeX Gyre Termes";
+    src: url("/assets/fonts/texgyretermes-bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TeX Gyre Termes";
+    src: url("/assets/fonts/texgyretermes-bolditalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+//
+// Variables
+//
+
 :root {
     --link-color: #b1002e;
     --size-1: 12px;
@@ -71,7 +107,7 @@ html {
 //
 
 body {
-    font-family: "Times", "Times New Roman", serif;
+    font-family: "Times", "Times New Roman", "TeX Gyre Termes", serif;
     font-weight: normal;
     font-size: var(--font-base);
     line-height: var(--size-2);
