@@ -26,6 +26,7 @@ card_source: |
 - _Annihilation_ by Jeff VanderMeer.
 - _Rendezvous with Rama_ by Arthur C. Clarke.
 - _Starfish_ by Peter Watts.
+- _The Freeze-Frame Revolution_ by Peter Watts.
 
 # Non-Fiction
 
