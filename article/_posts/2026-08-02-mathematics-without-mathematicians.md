@@ -104,6 +104,17 @@ you'll find that very, very few people can sustain any activity long-term on the
 basis of intrinsic motivation alone. We are social animals: we care about being
 useful, about status, about outcomes in the world.
 
+# Conclusion
+
+I think I should end on a cheerful note. So let me try. Personally, I don't
+believe technology is inevitable. "Inevitable" is a word reserved for the orbits
+of the planets. Nothing that is the product of human action is inevitable. We
+can choose to obsolete ourselves, and we can choose not to. We can realize that
+AGI is a devil's bargain: we _may_ accelerate technical progress, we _may_
+unlock all kinds of wonderful tech tree nodes like life extension earlier than
+we would otherwise; but the result, in the long run, is that humans become, at
+best, like pets under the care of vastly more powerful entities.
+
 # A Note On Prediction
 
 The future is not certain, but I've phrased everything above as definitive for
@@ -117,17 +128,6 @@ and coding, we will see less progress in domains that are intuitive or
 unformalizable". Maybe true. But billions of dollars and thousands of very smart
 people---and, increasingly, very smart models---are being thrown at this
 problem. How long does this cope last?
-
-# Conclusion
-
-I think I should end on a cheerful note. So let me try. Personally, I don't
-believe technology is inevitable. "Inevitable" is a word reserved for the orbits
-of the planets. Nothing that is the product of human action is inevitable. We
-can choose to obsolete ourselves, and we can choose not to. We can realize that
-AGI is a devil's bargain: we _may_ accelerate technical progress, we _may_
-unlock all kinds of wonderful tech tree nodes like life extension earlier than
-we would otherwise; but the result, in the long run, is that humans become, at
-best, like pets under the care of vastly more powerful entities.
 
 [ann]: https://openai.com/index/ten-advances-in-mathematics/
 [gh]: https://github.com/eudoxia0/
