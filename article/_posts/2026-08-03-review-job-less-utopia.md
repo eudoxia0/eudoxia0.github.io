@@ -1,6 +1,7 @@
 ---
 title: 'Review: Job-Less Utopia'
-summary: Review of Marcus Hutter's <i>Job-Less Utopia</i>.
+summary: Review of Marcus Hutter's Job-Less Utopia.
+summary_html: Review of Marcus Hutter's <i>Job-Less Utopia</i>.
 card: review-job-less-utopia.webp
 card_source: |
     _Spring_, Lawrence Alma-Tadema, 1894.

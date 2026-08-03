@@ -22,7 +22,11 @@ layout: common
           </span>
           &middot;
           <span class="summary">
-            {{ page.summary | raw }}
+            {% if page.summary_html %}
+              {{ page.summary_html | raw }}
+            {% else %}
+               {{ page.summary }}
+            {% endif %}
           </span>
         </div>
       </li>
