@@ -4,7 +4,18 @@ layout: common
 
 <div class="layout-article">
   <header>
-    <h1>{{ page.title }}</h1>
+    <div class="page-title">
+      <h1>{{ page.title }}</h1>
+      <div class="pub-date">{{ page.date | date: "%-d %B, %Y" }}</div>
+    </div>
+    {% if page.card %}
+      <figure>
+        <img src="/assets/card/{{ page.card }}" alt="Post image." />
+        <figcaption>
+          {{ page.card_source | markdownify }}
+        </figcaption>
+      </figure>
+    {% endif %}
   </header>
   <article>{{ content }}</article>
   <div class="post-metadata">

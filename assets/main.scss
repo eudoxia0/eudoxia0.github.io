@@ -376,13 +376,7 @@ nav.media-nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        // We can't know the height of this element ahead of time (because in
-        // small screens, the title might spill over multiple lines). Therefore
-        // we can't use `box-sizing: border-box;`. Therefore, if we add a
-        // border, all subsequent elements will be vertically misaligned by
-        // 1px. So we simulate a border using an inset box shadow.
-        box-shadow: 0 -1px 0 #000 inset;
+        border-bottom: 1px solid black;
 
         h1 {
             font-size: var(--font-4);
@@ -392,6 +386,53 @@ nav.media-nav {
         }
     }
 }
+
+.layout-article {
+    header {
+        width: 100%;
+        justify-content: space-between;
+        gap: 24px;
+
+        @media (max-width: 899px) {
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+            padding: 48px;
+        }
+
+        .page-title {
+            flex: 1;
+
+            h1 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+
+            .pub-date {
+                text-align: center;
+            }
+        }
+
+        figure {
+            max-width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 512px;
+            }
+
+            figcaption {
+                width: 100%;
+                max-width: 512px;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
 
 article {
     width: 100%;
