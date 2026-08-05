@@ -210,7 +210,7 @@ system's. For typing Persian there's [two choices][per.el]:
    mapping of a QWERTY keyboard to Persian.
 
 [isiri]: https://en.wikipedia.org/wiki/ISIRI_9147
-[banan]: http://mohsen.1.banan.byname.net/
+[banan]: https://web.archive.org/web/20230610204027/http://mohsen.1.banan.byname.net/
 
 You enable the latter with:
 
