@@ -1513,7 +1513,7 @@ closure can't escape the lifetime of the things it holds.
   - [How do remote parts and closure captures work?](https://github.com/orgs/hylo-lang/discussions/754), where yours truly tries to suss out the semantics.
 - Papers:
   - [Implementation Strategies for Mutable Value Semantics](https://www.jot.fm/issues/issue_2022_02/article2.pdf)
-  - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678.pdf)
+  - [Native Implementation of Mutable Value Semantics](https://arxiv.org/pdf/2106.12678)
   - [The Val Object Model](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2676r0.pdf)
 - [Value Oriented Programming Needs Implicits?](https://matklad.github.io/2023/05/02/implicits-for-mvs.html#Value-Oriented-Programming-Needs-Implicits)
   - [Comments on lobste.rs](https://lobste.rs/s/uptebu/value_oriented_programming_needs)
