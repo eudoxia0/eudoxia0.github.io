@@ -269,6 +269,6 @@ In high-dimensional vector spaces, numerical optimization is omnipotent.
 [^tokamak]:
     Tokamaks don't work so in a few years this will be either ironic or fitting.
 
-[rodney]: https://www.edge.org/response-detail/25336
+[rodney]: https://web.archive.org/web/20220310053610/https://www.edge.org/response-detail/25336
 [simon]: https://conversableeconomist.blogspot.com/2020/04/1957-when-machines-that-think-learn-and.html
 [feynman]: https://fs.blog/richard-feynman-knowing-something/
