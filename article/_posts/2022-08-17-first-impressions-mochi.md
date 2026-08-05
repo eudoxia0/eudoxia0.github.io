@@ -210,7 +210,7 @@ a try.
 
 [mochi]: https://mochi.cards/
 [sr]: https://en.wikipedia.org/wiki/Spaced_repetition
-[gwern]: https://www.gwern.net/
+[gwern]: https://gwern.net/
 [scripts]: https://www.gwern.net/Spaced-repetition#see-also
 [mnemo]: https://mnemosyne-proj.org/
 [mnemo.hs]: https://www.gwern.net/haskell/mnemo.hs
