@@ -273,6 +273,6 @@ Coveralls:
 [cl-travis]: https://github.com/luismbo/cl-travis
 [quicklisp]: https://www.quicklisp.org/beta/
 [cl-coveralls]: https://github.com/fukamachi/cl-coveralls
-[fiveam]: https://common-lisp.net/project/fiveam/
+[fiveam]: https://fiveam.common-lisp.dev/
 [prove]: https://github.com/fukamachi/prove
 [asdf]: https://asdf.common-lisp.dev/
