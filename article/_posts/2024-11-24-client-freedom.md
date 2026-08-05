@@ -83,4 +83,4 @@ users, lacking choice, simply leave.
     My current approach, when I want to tweet something but not get distracted,
     is to add the tweet to my todo list.
 
-[tw]: https://developer.x.com/en/developer-terms/agreement-and-policy
+[tw]: https://web.archive.org/web/20240913000034/https://developer.x.com/en/developer-terms/agreement-and-policy
