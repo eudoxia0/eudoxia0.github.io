@@ -148,7 +148,7 @@ To enter the boot menu: as above but with `F12`.
 
 [ap]: https://www.absolute.com/platform/persistence
 [bctl]: https://github.com/Hummer12007/brightnessctl
-[ds]: https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
+[ds]: https://web.archive.org/web/20240107054620/https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
 [elecom]: https://elecomusa.com/products/deft-trackball-wireless-copy
 [laptop-ar]: https://web.archive.org/web/20230923090211/https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
 [laptop]: https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
