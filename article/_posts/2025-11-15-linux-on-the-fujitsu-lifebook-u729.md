@@ -151,7 +151,7 @@ To enter the boot menu: as above but with `F12`.
 [ds]: https://web.archive.org/web/20240107054620/https://www.fujitsu.com/hk/Images/ds-LIFEBOOK%20U729%20%28APAC%29.pdf
 [elecom]: https://elecomusa.com/products/deft-trackball-wireless-copy
 [laptop-ar]: https://web.archive.org/web/20230923090211/https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
-[laptop]: https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
+[laptop]: https://web.archive.org/web/20251119235618/https://www.fujitsu.com/my/products/computing/pc/ap/notebooks/lifebook-u729/
 [mech]: https://www.amazon.com.au/dp/B07B8J6C3C
 [nixos]: https://en.wikipedia.org/wiki/NixOS
 [pw]: https://en.wikipedia.org/wiki/PipeWire
