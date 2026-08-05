@@ -93,6 +93,6 @@ quantum computing.
 > <p class="cite">--- [Elysha Png][elysha], Chief of Staff, [Harmony Intelligence][harmony]</p>
 
 [elysha]: https://www.linkedin.com/in/elyshapng/
-[harmony]: https://www.harmonyintelligence.com/
+[harmony]: https://harmonyintelligence.com/
 
 </article>
