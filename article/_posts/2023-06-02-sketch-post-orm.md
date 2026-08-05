@@ -226,7 +226,7 @@ it's tedious. And it's the kind of tedium that LLMs can handle
 wonderfully. Migrations can also be a problem if you don't have something like
 [Liquibase][lq].
 
-[lq]: https://www.liquibase.org/
+[lq]: https://www.liquibase.com/community
 
 The marginal cost is low. Each new query is an infinitesimal fraction of the
 total database access code. Every query is a function, so it can be tested
