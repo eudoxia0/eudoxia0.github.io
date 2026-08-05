@@ -223,10 +223,12 @@ nav.media-nav {
     $final: $initial * 2;
 
     > ul {
+        margin-left: 0;
         margin-right: 0;
 
         > li {
             margin-bottom: var(--size-2);
+            list-style-type: none;
 
             > a {
                 display: flex;
@@ -235,6 +237,7 @@ nav.media-nav {
                 align-items: center;
                 text-align: left;
                 hyphens: none;
+                color: black;
 
                 > .frame {
                     position: relative;
@@ -287,20 +290,6 @@ nav.media-nav {
                         height: $final;
                     }
                 }
-            }
-        }
-    }
-
-    // Because this component might be embedded inside an article, we have to
-    // reset some things.
-    ul {
-        margin-left: 0;
-
-        li {
-            list-style-type: none;
-
-            a {
-                color: black;
             }
         }
     }
