@@ -331,7 +331,7 @@ useful.
 [Mochi]: https://mochi.cards/
 [SM-2]: /article/implementing-sm2-in-rust
 [SQLite]: https://sqlite.org/
-[andy]: https://notes.andymatuschak.org/My_implementation_of_a_personal_mnemonic_medium
+[andy]: https://notes.andymatuschak.org/z6sX7ZcYdPiya3SzQ5segaq
 [cl]: https://docs.ankiweb.net/editing.html#cloze-deletion
 [fsrsblog]: /article/implementing-fsrs-in-100-lines
 [hashcards]: https://github.com/eudoxia0/hashcards
