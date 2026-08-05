@@ -219,8 +219,8 @@ body {
 //
 
 nav.media-nav {
-    $initial: 96px;
-    $final: $initial * 2;
+    --medialist-initial: 96px;
+    --medialist-final: 192px;
 
     ul {
         margin-left: 0;
@@ -247,8 +247,8 @@ nav.media-nav {
                     justify-content: center;
                     align-items: center;
 
-                    max-width: $initial;
-                    max-height: $initial;
+                    max-width: var(--medialist-initial);
+                    max-height: var(--medialist-initial);
 
                     .shadow {
                         position: relative;
@@ -260,12 +260,12 @@ nav.media-nav {
                         align-items: center;
                         flex-shrink: 0;
 
-                        width: $initial;
-                        height: $initial;
+                        width: var(--medialist-initial);
+                        height: var(--medialist-initial);
 
                         img {
-                            max-width: $final;
-                            max-height: $final;
+                            max-width: var(--medialist-final);
+                            max-height: var(--medialist-final);
                         }
                     }
                 }
@@ -277,10 +277,10 @@ nav.media-nav {
                             width 0.3s ease-out,
                             height 0.3s ease-out;
 
-                        max-width: $final;
-                        max-height: $final;
-                        width: $final;
-                        height: $final;
+                        max-width: var(--medialist-final);
+                        max-height: var(--medialist-final);
+                        width: var(--medialist-final);
+                        height: var(--medialist-final);
                     }
                 }
 
