@@ -211,7 +211,7 @@ a try.
 [mochi]: https://mochi.cards/
 [sr]: https://en.wikipedia.org/wiki/Spaced_repetition
 [gwern]: https://gwern.net/
-[scripts]: https://www.gwern.net/Spaced-repetition#see-also
+[scripts]: https://gwern.net/spaced-repetition#see-also
 [mnemo]: https://mnemosyne-proj.org/
 [mnemo.hs]: https://www.gwern.net/haskell/mnemo.hs
 [anki]: https://apps.ankiweb.net/
