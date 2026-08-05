@@ -376,13 +376,7 @@ nav.media-nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        // We can't know the height of this element ahead of time (because in
-        // small screens, the title might spill over multiple lines). Therefore
-        // we can't use `box-sizing: border-box;`. Therefore, if we add a
-        // border, all subsequent elements will be vertically misaligned by
-        // 1px. So we simulate a border using an inset box shadow.
-        box-shadow: 0 -1px 0 #000 inset;
+        border-bottom: 1px solid black;
 
         h1 {
             font-size: var(--font-4);
@@ -431,6 +425,8 @@ nav.media-nav {
             }
 
             figcaption {
+                width: 100%;
+                max-width: 512px;
                 margin-top: 12px;
             }
         }
