@@ -1404,7 +1404,7 @@ The problem is you have the same problems in a language like C++:
 [rust-future]: https://graydon2.dreamwidth.org/307291.html
 [rust-future-hn]: https://news.ycombinator.com/item?id=36193326
 [rust-future-lb]: https://lobste.rs/s/47amaq/rust_i_wanted_had_no_future
-[rust-future-reddit]: https://www.reddit.com/r/rust/comments/1415is1/the_rust_i_wanted_had_no_futur/e
+[rust-future-reddit]: https://www.reddit.com/r/rust/comments/1415is1/the_rust_i_wanted_had_no_future/
 
 ## Hylo {#val}
 
