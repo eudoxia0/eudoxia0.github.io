@@ -566,7 +566,7 @@ illegal states unrepresentable.
 [a-blindness]: https://github.com/quchen/articles/blob/master/algebraic-blindness.md
 [haskell-do]: https://en.wikibooks.org/wiki/Haskell/do_notation
 [sml-monad]: https://existentialtype.wordpress.com/2011/05/01/of-course-ml-has-monads/
-[react]: https://reactjs.org/
+[react]: https://react.dev/
 [tobjects]: https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html
 [eqdw]: http://eqdw.net/
 [vtable]: https://en.wikipedia.org/wiki/Virtual_method_table
