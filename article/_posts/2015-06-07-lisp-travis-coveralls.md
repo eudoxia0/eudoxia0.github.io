@@ -275,4 +275,4 @@ Coveralls:
 [cl-coveralls]: https://github.com/fukamachi/cl-coveralls
 [fiveam]: https://common-lisp.net/project/fiveam/
 [prove]: https://github.com/fukamachi/prove
-[asdf]: https://common-lisp.net/project/asdf/
+[asdf]: https://asdf.common-lisp.dev/
