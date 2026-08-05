@@ -196,7 +196,7 @@ We need to make AI art weird again.
 [merv]: https://en.wikipedia.org/wiki/Merv
 [mid]: https://en.wikipedia.org/wiki/Midjourney
 [mongol]: https://en.wikipedia.org/wiki/Mongol_Empire
-[nbp]: https://blog.google/technology/ai/nano-banana-pro/
+[nbp]: https://blog.google/innovation-and-ai/products/nano-banana-pro/
 [persian]: https://en.wikipedia.org/wiki/Persian_miniature
 [ross]: https://en.wikipedia.org/wiki/Dante_Gabriel_Rossetti
 [wh]: https://en.wikipedia.org/wiki/John_William_Waterhouse
