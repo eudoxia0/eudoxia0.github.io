@@ -453,7 +453,7 @@ article {
         font-weight: bold;
     }
 
-    sup[role="doc-noteref"] {
+    sup[id^="fnref:"] {
         font-size: var(--font-base);
         vertical-align: 0;
 
