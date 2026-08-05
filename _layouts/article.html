@@ -19,35 +19,37 @@ layout: common
   </header>
   <article>{{ content }}</article>
   <div class="post-metadata">
-    <table>
-      <tr>
-        <td class="key">Published</td>
-        <td class="value">{{ page.date | date: "%-d %B, %Y" }}</td>
-      </tr>
-      <tr>
-        <td class="key">Previous</td>
-        <td class="value">
-          {% if page.previous.url %}
+    <div class="post-metadata-content">
+      <table>
+        <tr>
+          <td class="key">Published</td>
+          <td class="value">{{ page.date | date: "%-d %B, %Y" }}</td>
+        </tr>
+        <tr>
+          <td class="key">Previous</td>
+          <td class="value">
+            {% if page.previous.url %}
             <a href="{{ page.previous.url }}">
               {{ page.previous.title }}
             </a>
-          {% else %}
+            {% else %}
             <i>None</i>
-          {% endif %}
-        </td>
-      </tr>
-      <tr>
-        <td class="key">Next</td>
-        <td class="value">
-          {% if page.next.url %}
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="key">Next</td>
+          <td class="value">
+            {% if page.next.url %}
             <a href="{{ page.next.url }}">
               {{ page.next.title }}
             </a>
-          {% else %}
+            {% else %}
             <i>None</i>
-          {% endif %}
-        </td>
-      </tr>
-    </table>
+            {% endif %}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

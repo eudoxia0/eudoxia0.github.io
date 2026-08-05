@@ -166,36 +166,44 @@ body {
     }
 
     > footer {
-        padding: 24px;
         border-top: 1px solid black;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        padding: 24px 12px;
 
-        .bottom-nav {
-            ul {
-                li {
-                    list-style-type: "❖";
-                    padding-left: 8px;
-                    margin-left: 12px;
-                    font-size: 16px;
+        .footer-content {
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
 
-                    &::marker {
-                        font-size: 14px;
-                    }
+            .bottom-nav {
+                ul {
+                    li {
+                        list-style-type: "❖";
+                        padding-left: 8px;
+                        margin-left: 12px;
+                        font-size: 16px;
 
-                    a {
-                        color: var(--link-color);
-                        text-decoration: none;
+                        &::marker {
+                            font-size: 14px;
+                        }
+
+                        a {
+                            color: var(--link-color);
+                            text-decoration: none;
+                        }
                     }
                 }
             }
-        }
 
-        .contact {
-            a {
-                color: var(--link-color);
+            .contact {
+                a {
+                    color: var(--link-color);
+                }
             }
+
         }
     }
 }
@@ -598,19 +606,29 @@ article {
     flex-direction: row;
     justify-content: center;
 
-    table {
-        td {
-            padding: 3px 12px;
-        }
+    .post-metadata-content {
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
 
-        .key {
-            text-align: right;
-            font-weight: bold;
-        }
+        table {
+            td {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
 
-        .value {
-            a {
-                color: var(--link-color);
+            .key {
+                font-weight: bold;
+                padding-left: 0;
+            }
+
+            .value {
+                padding-left: 24px;
+
+                a {
+                    color: var(--link-color);
+                }
             }
         }
     }
