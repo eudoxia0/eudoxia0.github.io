@@ -213,6 +213,6 @@ a try.
 [gwern]: https://gwern.net/
 [scripts]: https://gwern.net/spaced-repetition#see-also
 [mnemo]: https://mnemosyne-proj.org/
-[mnemo.hs]: https://www.gwern.net/haskell/mnemo.hs
+[mnemo.hs]: https://gwern.net/haskell/mnemo.hs
 [anki]: https://apps.ankiweb.net/
 [ankinotes]: https://docs.ankiweb.net/getting-started.html#notes--fields
