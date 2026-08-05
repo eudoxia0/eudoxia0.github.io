@@ -569,7 +569,7 @@ Modular implicits for OCaml were first proposed in 2015. There's an [open pull
 request][pr] from 2019 implementing a prototype. I don't think this is going to
 be merged any time soon.
 
-[modimplicit]: https://arxiv.org/pdf/1512.01895.pdf
+[modimplicit]: https://arxiv.org/pdf/1512.01895
 [pr]: https://github.com/ocaml/ocaml/pull/9187
 
 ## Multiple Implementations Are Unnecessary {#multiple-impls}
