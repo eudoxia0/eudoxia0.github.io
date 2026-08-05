@@ -1,9 +1,6 @@
 ---
 title: Books I Enjoyed in 2026
 summary: TODO.
-card: books-i-enjoyed-in-2026.webp
-card_source: |
-  TODO
 ---
 
 # Fiction
