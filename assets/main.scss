@@ -222,15 +222,15 @@ nav.media-nav {
     $initial: 96px;
     $final: $initial * 2;
 
-    > ul {
+    ul {
         margin-left: 0;
         margin-right: 0;
 
-        > li {
+        li {
             margin-bottom: var(--size-2);
             list-style-type: none;
 
-            > a {
+            a {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -239,7 +239,7 @@ nav.media-nav {
                 hyphens: none;
                 color: black;
 
-                > .frame {
+                .frame {
                     position: relative;
 
                     display: flex;
@@ -250,7 +250,7 @@ nav.media-nav {
                     max-width: $initial;
                     max-height: $initial;
 
-                    > .shadow {
+                    .shadow {
                         position: relative;
                         overflow: hidden;
 
@@ -263,22 +263,15 @@ nav.media-nav {
                         width: $initial;
                         height: $initial;
 
-                        > img {
+                        img {
                             max-width: $final;
                             max-height: $final;
                         }
                     }
                 }
 
-                > span {
-                    display: block;
-                    font-size: var(--font-3);
-                    line-height: var(--size-4);
-                    margin-left: var(--size-2);
-                }
-
                 &:hover {
-                    > .frame > .shadow {
+                    .frame .shadow {
                         z-index: 1;
                         transition:
                             width 0.3s ease-out,
@@ -289,6 +282,13 @@ nav.media-nav {
                         width: $final;
                         height: $final;
                     }
+                }
+
+                span {
+                    display: block;
+                    font-size: var(--font-3);
+                    line-height: var(--size-4);
+                    margin-left: var(--size-2);
                 }
             }
         }
