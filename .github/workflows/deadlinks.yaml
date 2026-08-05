@@ -24,6 +24,7 @@ jobs:
         with:
           args: >
             --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
+            --cookie-jar cookies.json
             --exclude="antipope\.org"
             --exclude="dreamwidth\.org"
             --exclude="fredkozlowski\.com"
