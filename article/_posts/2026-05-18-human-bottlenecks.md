@@ -174,7 +174,7 @@ reward circuitry stand to gain more from AI.
 [net]: https://en.wikipedia.org/wiki/Norepinephrine_transporter
 [obs]: https://obsidian.md/
 [sb]: https://fortelabs.com/blog/basboverview/
-[scus]: https://notes.andymatuschak.org/People_who_write_extensively_about_note-writing_rarely_have_a_serious_context_of_use
+[scus]: https://notes.andymatuschak.org/z51q8prEJzs5Jqa5WPThYoV
 [self]: /article/the-applicability-of-spaced-repetition
 [solow]: https://en.wikipedia.org/wiki/Productivity_paradox
 [taur]: https://en.wikipedia.org/wiki/Advanced_chess
