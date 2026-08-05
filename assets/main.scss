@@ -433,11 +433,10 @@ nav.media-nav {
     }
 }
 
-
 article {
     width: 100%;
     flex: 1;
-    padding: var(--size-2);
+    padding: var(--size-2) 0;
 
     h1 {
         font-size: var(--font-3);
