@@ -393,6 +393,51 @@ nav.media-nav {
     }
 }
 
+.layout-article {
+    header {
+        width: 100%;
+        justify-content: space-between;
+        gap: 24px;
+
+        @media (max-width: 899px) {
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+            padding: 48px;
+        }
+
+        .page-title {
+            flex: 1;
+
+            h1 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+
+            .pub-date {
+                text-align: center;
+            }
+        }
+
+        figure {
+            max-width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 512px;
+            }
+
+            figcaption {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+
 article {
     width: 100%;
     flex: 1;
