@@ -138,19 +138,7 @@ body {
         box-shadow: 0 -1px 0 #000 inset;
     }
 
-    > nav.bottom-nav {
-        border-top: 1px solid #000;
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-
-        ul {
-            margin: 0 auto;
-        }
-    }
-
-    > nav.top-nav,
-    > nav.bottom-nav {
+    > nav.top-nav {
         padding: var(--size-1);
 
         ul {
@@ -178,11 +166,36 @@ body {
     }
 
     > footer {
-        padding: var(--size-1);
+        padding: 24px;
         border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
 
-        a {
-            color: var(--link-color);
+        .bottom-nav {
+            ul {
+                li {
+                    list-style-type: "❖";
+                    padding-left: 8px;
+                    margin-left: 12px;
+                    font-size: 16px;
+
+                    &::marker {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        color: var(--link-color);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            a {
+                color: var(--link-color);
+            }
         }
     }
 }

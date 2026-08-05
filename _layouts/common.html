@@ -41,52 +41,26 @@ layout: base
     </ul>
   </nav>
   <main>{{ content }}</main>
-  <nav class="bottom-nav">
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/portfolio">Portfolio</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/article">Blog</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/fiction">Fiction</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/consulting">Consulting</a>
-      </li>
-      <li>
-        <span class="sep">—</span>
-      </li>
-      <li>
-        <a href="/feed.xml">RSS</a>
-      </li>
-    </ul>
-  </nav>
   <footer>
+    <nav class="bottom-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/article">Blog</a></li>
+        <li><a href="/fiction">Fiction</a></li>
+        <li><a href="/consulting">Consulting</a></li>
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <div class="contact">
+      <p>
+        Feel free to <a href="mailto:fernando@borretti.me">email me</a>! I would
+        love to hear from you.
+      </p>
+    </div>
     <div class="copy">
-      &copy; 2014 – {{ site.time | date: '%Y' }} Fernando Borretti
+      &copy; 2014&ndash;{{ site.time | date: '%Y' }} Fernando Borretti
     </div>
   </footer>
 </div>
