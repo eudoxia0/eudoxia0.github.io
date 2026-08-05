@@ -707,4 +707,4 @@ The following guides were crucial in writing this article:
 [zfsprops]: https://docs.oracle.com/cd/E19253-01/819-5461/gazss/index.html
 
 [xcape]: https://web.archive.org/web/20260310021606/https://github.com/alols/xcape
-[xcape-issue]: https://github.com/alols/xcape/issues/52
+[xcape-issue]: https://web.archive.org/web/20250906051736/https://github.com/alols/xcape/issues/52
