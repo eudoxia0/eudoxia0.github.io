@@ -428,6 +428,10 @@ nav.media-nav {
                 max-width: 512px;
                 margin-top: 12px;
                 font-size: 14px;
+
+                a {
+                    color: var(--link-color);
+                }
             }
         }
     }
