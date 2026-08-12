@@ -28,7 +28,7 @@ Stalingrad.
 [_Frankenstein_][frank] by [Mary Shelley][ms].
 
 [_Pnin_][pnin] by [Vladimir Nabokov][nab]. The first half is hilarious, but at
-the half-way mark it turns into a slog.
+the half-way mark it turns into pointless meandering.
 
 [_Between Two Fires_][b2f] by [Christopher Buehlman][cb]. Demonic horror in the
 Black Death. A bit movie-brained but enjoyable.
@@ -63,7 +63,7 @@ second half it's tiresome and repetitive.
 
 [_Syntactic Structures_][ss] by [Noam Chomsky][nc].
 
-[_The Writing Life_][twl] by [Annie Dillard][annie].
+[_The Writing Life_][twl] by [Annie Dillard][annie]. Very compellingly written and open-hearted.
 
 [_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Short case studies
 in graphic design for visualizing complex information. Lots of railway
