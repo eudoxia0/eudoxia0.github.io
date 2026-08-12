@@ -29,7 +29,7 @@ summary: TODO.
 - [_The End of Time_][time] by [Julian Barbour][jb].
 - [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
 - [_Syntactic Structures_][ss] by [Noam Chomsky][nc].
-- _The Writing Life_ by Annie Dillard.
+- [_The Writing Life_][twl] by [Annie Dillard][annie].
 - _Envisioning Information_ by Edward R. Tufte.
   - lots of railway timetables
 - _What Was Man Created For? The Philosophy of the Common Task_ by Nikolai Fyodorovich Fyodorov.
@@ -50,6 +50,7 @@ summary: TODO.
 
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
 [ann]: https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)
+[annie]: https://en.wikipedia.org/wiki/Annie_Dillard
 [aur]: https://en.wikipedia.org/wiki/Aurora_(novel)
 [b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
 [bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
@@ -84,6 +85,7 @@ summary: TODO.
 [tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
 [tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
 [time]: https://en.wikipedia.org/wiki/The_End_of_Time_(book)
+[twl]: https://www.goodreads.com/en/book/show/12530.The_Writing_Life
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
