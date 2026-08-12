@@ -1,6 +1,9 @@
 ---
-title: Books I Enjoyed in 2026
-summary: TODO.
+title: Books I Enjoyed In 2026H1
+summary: A list.
+card: books-i-enjoyed-in-2026-h1.webp
+card_source: |
+    TODO
 ---
 
 # Fiction
@@ -35,7 +38,7 @@ Black Death. A bit movie-brained but enjoyable.
 
 [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
 
-[_Unsong_][unsong] by [Scott Alexander][sa].
+[_Unsong_][unsong] by [Scott Alexander][sa]. Very funny.
 
 [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
 
