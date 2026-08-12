@@ -6,7 +6,7 @@ summary: TODO.
 # Fiction
 
 - [_Invisible Cities_][inv] by [Italo Calvino][ic].
-- _By Night in Chile_ by Roberto Bolaño.
+- [_By Night in Chile_][bnic] by [Roberto Bolaño][rb].
 - _Valuable Humans in Transit and Other Stories_ by qntm.
 - _Life and Fate_ by Vasily Grossman.
 - _Aurora_ by Kim Stanley Robinson.
@@ -51,3 +51,5 @@ summary: TODO.
 
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
+[bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
+[rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
