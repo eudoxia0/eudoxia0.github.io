@@ -61,7 +61,9 @@ Stalingrad.
 
 [_The Writing Life_][twl] by [Annie Dillard][annie].
 
-[_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Lots of railway timetables.
+[_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Short case studies
+in graphic design for visualizing complex information. Lots of railway
+timetables.
 
 [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
 
