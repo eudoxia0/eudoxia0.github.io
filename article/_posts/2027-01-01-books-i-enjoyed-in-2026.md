@@ -41,7 +41,7 @@ summary: TODO.
 
 # Textbooks
 
-- _Handbook of Practical Logic and Automated Reasoning_ by John E. Harrison.
+- [_Handbook of Practical Logic and Automated Reasoning_][hplar] by John Harrison.
 - [_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
 - _The Machinery of Life_ by David S. Goodsell.
 - _Understanding Data: A 21st Century Approach to Statistics and Data Science_.
@@ -68,6 +68,7 @@ summary: TODO.
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
+[hplar]: https://www.cambridge.org/core/books/handbook-of-practical-logic-and-automated-reasoning/EB6396296813CB562987E8C37AC4520D
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
 [ike]: https://en.wikipedia.org/wiki/Isaac_Chuang
 [ims]: https://www.goodreads.com/book/show/1459436
