@@ -15,7 +15,7 @@ summary: TODO.
 - [_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
 - [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
 - [_Unsong_][unsong] by [Scott Alexander][sa].
-- _Darkome_ by [Hannu Rajaniemi][hannu].
+- [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
 - _Collected Fiction_ by [Hannu Rajaniemi][hannu].
 - _Beyond the Rift_ by Peter Watts.
 - _The Plains_ by Gerald Murnane.
@@ -69,3 +69,4 @@ summary: TODO.
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
+[dark]: https://www.goodreads.com/book/show/90122137-darkome
