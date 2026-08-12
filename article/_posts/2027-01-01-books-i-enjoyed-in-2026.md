@@ -8,7 +8,7 @@ summary: TODO.
 [_Invisible Cities_][inv] by [Italo Calvino][ic]. Beautiful prose and
 imagination.
 
-[_By Night in Chile_][bnic] by [Roberto Bolaño][rb]. Also beautiful prose.
+[_By Night in Chile_][bnic] by [Roberto Bolaño][rb]. Beautiful prose and rhythm.
 
 [_Valuable Humans in Transit and Other Stories_][vhit] by [qntm]. I had already
 read most of these but they are very, very good, and it was a pleasure to read
@@ -27,9 +27,11 @@ Stalingrad.
 
 [_Frankenstein_][frank] by [Mary Shelley][ms].
 
-[_Pnin_][pnin] by [Vladimir Nabokov][nab].
+[_Pnin_][pnin] by [Vladimir Nabokov][nab]. The first half is hilarious, but at
+the half-way mark it turns into a slog.
 
-[_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
+[_Between Two Fires_][b2f] by [Christopher Buehlman][cb]. Demonic horror in the
+Black Death. A bit movie-brained but enjoyable.
 
 [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
 
@@ -41,7 +43,9 @@ Stalingrad.
 
 [_Beyond the Rift_][btr] by [Peter Watts][pw].
 
-[_The Plains_][plains] by [Gerald Murnane][gm].
+[_The Plains_][plains] by [Gerald Murnane][gm]. The first half is beautifully
+written, magical-realist, full of interesting imagery. But by the second half
+it's tiresome and repetitive.
 
 [_Annihilation_][ann] by [Jeff VanderMeer][jvm].
 
