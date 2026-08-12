@@ -16,7 +16,7 @@ summary: TODO.
 - [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
 - [_Unsong_][unsong] by [Scott Alexander][sa].
 - [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
-- _Collected Fiction_ by [Hannu Rajaniemi][hannu].
+- [_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
 - _Beyond the Rift_ by Peter Watts.
 - _The Plains_ by Gerald Murnane.
 - _Annihilation_ by Jeff VanderMeer.
@@ -52,6 +52,8 @@ summary: TODO.
 [b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
 [bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
 [cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
+[col]: https://www.goodreads.com/book/show/22928964-collected-fiction
+[dark]: https://www.goodreads.com/book/show/90122137-darkome
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
@@ -69,4 +71,3 @@ summary: TODO.
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
-[dark]: https://www.goodreads.com/book/show/90122137-darkome
