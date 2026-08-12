@@ -26,7 +26,7 @@ summary: TODO.
 
 # Non-Fiction
 
-- _The End of Time_ by Julian Barbour.
+- _The End of Time_ by [Julian Barbour][jb].
 - _In the Beginning...Was the Command Line_ by Neal Stephenson.
 - _Syntactic Structures_ by Noam Chomsky.
 - _The Writing Life_ by Annie Dillard.
@@ -63,6 +63,7 @@ summary: TODO.
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
+[jb]: https://en.wikipedia.org/wiki/Julian_Barbour
 [jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
