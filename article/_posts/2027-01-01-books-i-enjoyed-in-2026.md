@@ -17,7 +17,7 @@ summary: TODO.
 - [_Unsong_][unsong] by [Scott Alexander][sa].
 - [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
 - [_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
-- _Beyond the Rift_ by [Peter Watts][pw].
+- [_Beyond the Rift_][btr] by [Peter Watts][pw].
 - _The Plains_ by Gerald Murnane.
 - _Annihilation_ by Jeff VanderMeer.
 - _Rendezvous with Rama_ by Arthur C. Clarke.
@@ -72,3 +72,4 @@ summary: TODO.
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
+[btr]: https://www.goodreads.com/en/book/show/17802447-beyond-the-rift
