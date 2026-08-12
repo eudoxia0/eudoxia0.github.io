@@ -87,7 +87,9 @@ timetables.
 
 [_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
 
-[_The Machinery of Life_][life] by David Goodsell.
+[_The Machinery of Life_][life] by David Goodsell. Beautiful illustrations that
+convey the scale and complexity of biology at the nanoscale. Great for
+developing intuition for biology.
 
 [_Understanding Data: A 21st Century Approach to Statistics and Data Science_][data] by  Alan Garfinkel and Yina Guo.
 
