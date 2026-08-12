@@ -74,8 +74,6 @@ timetables.
 
 [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
 
-[_In Miserable Slavery_][ims] by [Douglas Hall][dh].
-
 [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
 
 [_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw].
