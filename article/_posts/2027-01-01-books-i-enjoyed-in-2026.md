@@ -7,8 +7,8 @@ summary: TODO.
 
 - [_Invisible Cities_][inv] by [Italo Calvino][ic].
 - [_By Night in Chile_][bnic] by [Roberto Bolaño][rb].
-- _Valuable Humans in Transit and Other Stories_ by qntm.
-- _Life and Fate_ by Vasily Grossman.
+- [_Valuable Humans in Transit and Other Stories_][vhit] by [qntm].
+- [_Life and Fate_][lf] by [Vasily Grossman][vg].
 - _Aurora_ by Kim Stanley Robinson.
 - _Frankenstein_ by Mary Shelley.
 - _The Temple of the Golden Pavilion_ by Yukio Mishima.
@@ -53,3 +53,7 @@ summary: TODO.
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
 [bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
+[vhit]: https://qntm.org/vhitaos
+[qntm]: https://en.wikipedia.org/wiki/Qntm
+[lf]: https://en.wikipedia.org/wiki/Life_and_Fate
+[vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
