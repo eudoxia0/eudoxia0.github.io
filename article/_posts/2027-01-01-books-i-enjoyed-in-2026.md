@@ -27,7 +27,7 @@ summary: TODO.
 # Non-Fiction
 
 - [_The End of Time_][time] by [Julian Barbour][jb].
-- _In the Beginning...Was the Command Line_ by Neal Stephenson.
+- [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
 - _Syntactic Structures_ by Noam Chomsky.
 - _The Writing Life_ by Annie Dillard.
 - _Envisioning Information_ by Edward R. Tufte.
@@ -55,6 +55,7 @@ summary: TODO.
 [bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
 [btr]: https://www.goodreads.com/en/book/show/17802447-beyond-the-rift
 [cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
+[cli]: https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
@@ -69,6 +70,7 @@ summary: TODO.
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
+[ns]: https://en.wikipedia.org/wiki/Neal_Stephenson
 [plains]: https://en.wikipedia.org/wiki/The_Plains_(novel)
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
 [pw]: https://en.wikipedia.org/wiki/Peter_Watts_(author)
