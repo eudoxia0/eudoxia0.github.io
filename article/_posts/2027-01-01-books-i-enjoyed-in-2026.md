@@ -42,7 +42,7 @@ summary: TODO.
 # Textbooks
 
 - _Handbook of Practical Logic and Automated Reasoning_ by John E. Harrison.
-- _Quantum Computation and Quantum Information_ by Michael Nielsen and Isaac Chuang.
+- [_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
 - _The Machinery of Life_ by David S. Goodsell.
 - _Understanding Data: A 21st Century Approach to Statistics and Data Science_.
 - _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_.
@@ -69,6 +69,7 @@ summary: TODO.
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
+[ike]: https://en.wikipedia.org/wiki/Isaac_Chuang
 [ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
@@ -80,6 +81,7 @@ summary: TODO.
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [man]: https://www.goodreads.com/en/book/show/1197668.What_Was_Man_Created_For_The_Philosophy_of_the_Common_Task
 [mars]: https://en.wikipedia.org/wiki/A_City_on_Mars
+[mike]: https://michaelnielsen.org/
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [nc]: https://en.wikipedia.org/wiki/Noam_Chomsky
@@ -87,6 +89,7 @@ summary: TODO.
 [plains]: https://en.wikipedia.org/wiki/The_Plains_(novel)
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
 [pw]: https://en.wikipedia.org/wiki/Peter_Watts_(author)
+[qcqi]: https://en.wikipedia.org/wiki/Quantum_Computation_and_Quantum_Information
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
 [rf]: https://en.wikipedia.org/wiki/Robert_Freitas
