@@ -11,7 +11,8 @@ card_source: |
 [_Invisible Cities_][inv] by [Italo Calvino][ic]. Beautiful prose and
 imagination.
 
-[_By Night in Chile_][bnic] by [Roberto Bolaño][rb]. Beautiful prose and rhythm.
+[_By Night in Chile_][bnic] by [Roberto Bolaño][rb]. Beautiful and surreal
+prose, but completely unpretentious.
 
 [_Valuable Humans in Transit and Other Stories_][vhit] by [qntm]. I had already
 read most of these but they are very, very good, and it was a pleasure to read
@@ -26,9 +27,14 @@ sections. But it's great. It's kind of like [_Legend of the Galactic
 Heroes_][logh] but it's the Second World War and in particular the battle of
 Stalingrad.
 
-[_Aurora_][aur] by [Kim Stanley Robinson][ksr].
+[_Aurora_][aur] by [Kim Stanley Robinson][ksr]. The trials and tribulations of a
+generation ship on a 160 year long journey to Tau Ceti. Pair with [_A City on
+Mars_][mars]. The characters despair over their ship: a reactor fails
+unpredictably, the ecosystem degrades more and more each year, humans are born
+stunted for unknown reasons. Finally they arrive at Tau Ceti, and find a
+habitable planet, but it's saturated with deadly prions.
 
-[_Frankenstein_][frank] by [Mary Shelley][ms].
+[_Frankenstein_][frank] by [Mary Shelley][ms]. I liked the prose style.
 
 [_Pnin_][pnin] by [Vladimir Nabokov][nab]. The first half is hilarious, but at
 the half-way mark it turns into pointless meandering.
@@ -36,25 +42,58 @@ the half-way mark it turns into pointless meandering.
 [_Between Two Fires_][b2f] by [Christopher Buehlman][cb]. Demonic horror in the
 Black Death. A bit movie-brained but enjoyable.
 
-[_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
+[_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu
+Rajaniemi][hannu]. The last two Jean le Flambeur novels. Beautiful prose style
+and great imaginal depth. The Sobornost, a slave economy of uploaded human
+minds, is one of the most interesting science-fictional societies. Like
+_Neuromancer_, you have to read them very detainedly, because the prose is very
+sparse---no infodumps whatever---so you have to put together the world from
+brief, tangential clues.
 
 [_Unsong_][unsong] by [Scott Alexander][sa]. Very funny.
 
-[_Darkome_][dark] by [Hannu Rajaniemi][hannu].
+[_Darkome_][dark] by [Hannu Rajaniemi][hannu]. _Neuromancer_ but it's
+DIYbio. It's rare to read a novel that is intelligent and compelling _and_ set
+[twenty minutes into the future][20min] in a way that feels plausible rather
+than instantly dated. It felt incredibly realistic throughout.
 
-[_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
+[_Collected Fiction_][col] by [Hannu Rajaniemi][hannu]. A wonderful collection
+of short stories. I will probably read it again soon.
 
-[_Beyond the Rift_][btr] by [Peter Watts][pw].
+[_Beyond the Rift_][btr] by [Peter Watts][pw]. A collection of short stories
+from the great Peter Watts. Dark and full of beautiful imagery. Never dull.
 
 [_The Plains_][plains] by [Gerald Murnane][gm]. The first half is beautifully
 written, magical-realist, full of surreal and interesting imagery. But by the
 second half it's tiresome and repetitive.
 
-[_Rendezvous with Rama_][rwr] by [Arthur C. Clarke][acc].
+[_Rendezvous with Rama_][rwr] by [Arthur C. Clarke][acc]. Clarke is
+interesting. The prose is bad, the attempts at humour are bad, the lack of
+cultural imagination---it's the distant future but everyone lives this tiresome
+mid-century life of cocktails and sexism---it's all so bad. And yet. And yet,
+something kept me going. It's like he dumped all his character points into
+"technical imagination" are left everything else at zero, so it feels awful, but
+I kept reading to the end.
 
-[_Starfish_][star] by [Peter Watts][pw].
+[_Starfish_][star] by [Peter Watts][pw]. This was great. It was on my list since
+2013 but I finally got around to it. Three kilometers under the Pacific, on the
+[Juan de Fuca ridge][jdfc], a geothermal plant---"floats tethered above the
+seabed, a gunmetal-gray planet ringed by a belt of equatorial
+floodlights"---staffed by humans surgically-modified to live and work at that
+depth. Everyone is psychologically fucked because it's a Peter Watts novel. The
+prose and the images are great. Let me quote you this little bit:
 
-[_The Freeze-Frame Revolution_][ffr] by [Peter Watts][pw].
+> Everywhere else, living constellations punctuate the dark. Here, a string of
+> pearls blink sexual advertisements at two-second intervals. Here, a sudden
+> flash leaves diversionary afterimages swarming across Clarke's field of view;
+> something flees under cover of her momentary blindness. There, a counterfeit
+> worm twists lazily in the current, invisibly tied to the roof of some
+> predatory mouth.
+
+[_The Freeze-Frame Revolution_][ffr] by [Peter Watts][pw]. One of the stories in
+Watts' Sunflower cycle, about the crew of a ship on an eternal voyage, building
+jump-gates between the stars, which is a fun inversion of the tired old sci-fi
+trope of "ancient aliens built all these stargates and conveniently left".
 
 # Non-Fiction
 
@@ -140,6 +179,7 @@ methods.
 by Nestler et al. The basics of pharmacology and signal processing in the brain,
 plus the neuroanatomy and physiology of things like sleep, attention, etc.
 
+[20min]: https://tvtropes.org/pmwiki/pmwiki.php/Main/TwentyMinutesIntoTheFuture
 [aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
 [annie]: https://en.wikipedia.org/wiki/Annie_Dillard
@@ -168,6 +208,7 @@ plus the neuroanatomy and physiology of things like sleep, attention, etc.
 [ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
+[jdfc]: https://en.wikipedia.org/wiki/Juan_de_Fuca_Ridge
 [jsh]: https://en.wikipedia.org/wiki/J._Storrs_Hall
 [jw]: https://en.wikipedia.org/wiki/Joseph_Weizenbaum
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
