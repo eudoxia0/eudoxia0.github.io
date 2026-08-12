@@ -58,9 +58,16 @@ second half it's tiresome and repetitive.
 
 # Non-Fiction
 
-[_The End of Time_][time] by [Julian Barbour][jb].
+[_The End of Time_][time] by [Julian Barbour][jb]. I'm usually very negative
+about pop-science. There is no [royal road][rr], and all the pop-science I've
+read has been worthless compared to going through the first three chapters of a
+textbook on the relevant topic. And, while interesting, this book is no
+different, because ultimately, how can I judge whether it's a sensible or
+ridiculous idea? I would need years and years of training in mathematics and
+physics and mathematical physics to even be able to think rigorously about this.
 
-[_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
+[_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns]. Funny
+and synoptic.
 
 [_Syntactic Structures_][ss] by [Noam Chomsky][nc]. You can tell from the
 quality of the prose why Chomsky was so successful.
