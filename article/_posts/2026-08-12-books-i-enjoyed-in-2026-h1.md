@@ -197,7 +197,6 @@ plus the neuroanatomy and physiology of things like sleep, attention, etc.
 [cphr]: https://en.wikipedia.org/wiki/Computer_Power_and_Human_Reason
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
 [data]: https://link.springer.com/book/10.1007/978-3-032-18600-3
-[dh]: https://www.goodreads.com/author/show/79515.Douglas_Hall
 [ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
 [fedorov]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
@@ -209,7 +208,6 @@ plus the neuroanatomy and physiology of things like sleep, attention, etc.
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
 [ice]: https://www.iceberg-quantum.com/
 [ike]: https://en.wikipedia.org/wiki/Isaac_Chuang
-[ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
 [jdfc]: https://en.wikipedia.org/wiki/Juan_de_Fuca_Ridge
