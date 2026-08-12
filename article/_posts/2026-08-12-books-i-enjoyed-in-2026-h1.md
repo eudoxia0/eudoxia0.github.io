@@ -21,8 +21,8 @@ prose, but completely unpretentious.
 read most of these but they are very, very good, and it was a pleasure to read
 them again.
 
-[_Life and Fate_][lf] by [Vasily Grossman][vg]. Usually when I hear "it's a 900
-page Russian epic about three generations of a family living through a
+⭐️ [_Life and Fate_][lf] by [Vasily Grossman][vg]. Usually when I hear "it's a
+900 page Russian epic about three generations of a family living through a
 tumultuous time" I roll my eyes and assume it's some 19th century slog that
 people only read to say they have read it. _Life and Fate_ is not a slog. It is
 900 pages, and the _dramatis personae_ is so long it's divided into multiple
@@ -30,7 +30,7 @@ sections. But it's great. It's kind of like [_Legend of the Galactic
 Heroes_][logh] but it's the Second World War and in particular the battle of
 Stalingrad.
 
-[_Aurora_][aur] by [Kim Stanley Robinson][ksr]. The trials and tribulations of a
+⭐️ [_Aurora_][aur] by [Kim Stanley Robinson][ksr]. The trials and tribulations of a
 generation ship on a 160 year long journey to Tau Ceti. Pair with [_A City on
 Mars_][mars]. The characters despair over their ship: a reactor fails
 unpredictably, the ecosystem degrades more and more each year, humans are born
@@ -55,7 +55,7 @@ brief, tangential clues.
 
 [_Unsong_][unsong] by [Scott Alexander][sa]. Very funny.
 
-[_Darkome_][dark] by [Hannu Rajaniemi][hannu]. _Neuromancer_ but it's
+⭐️ [_Darkome_][dark] by [Hannu Rajaniemi][hannu]. _Neuromancer_ but it's
 DIYbio. It's rare to read a novel that is intelligent and compelling _and_ set
 [twenty minutes into the future][20min] in a way that feels plausible rather
 than instantly dated. It felt incredibly realistic throughout.
@@ -78,7 +78,7 @@ something kept me going. It's like he dumped all his character points into
 "technical imagination" are left everything else at zero, so it feels awful, but
 I kept reading to the end.
 
-[_Starfish_][star] by [Peter Watts][pw]. This was great. It was on my list since
+⭐️ [_Starfish_][star] by [Peter Watts][pw]. This was great. It was on my list since
 2013 but I finally got around to it. Three kilometers under the Pacific, on the
 [Juan de Fuca ridge][jdfc], a geothermal plant---"floats tethered above the
 seabed, a gunmetal-gray planet ringed by a belt of equatorial
@@ -108,8 +108,8 @@ different, because ultimately, how can I judge whether it's a sensible or
 ridiculous idea? I would need years and years of training in mathematics and
 physics and mathematical physics to even be able to think rigorously about this.
 
-[_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns]. Funny
-and synoptic.
+⭐️ [_In the Beginning...Was the Command Line_][cli] by [Neal
+Stephenson][ns]. Funny and synoptic.
 
 [_Syntactic Structures_][ss] by [Noam Chomsky][nc]. You can tell from the
 quality of the prose why Chomsky was so successful.
@@ -131,7 +131,7 @@ resurrection of the dead, the settlement of space.
 instruction manual and bill of materials on how to build a self-replicating
 factory on the Moon.
 
-[_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw]. On the
+⭐️ [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw]. On the
 difficulty of settling space. Very entertainingly written. About half the book
 is about technical aspects: the health effects of microgravity, the fact that
 there's no carbon and little water on the moon, etc. A lot of this is stuff that
