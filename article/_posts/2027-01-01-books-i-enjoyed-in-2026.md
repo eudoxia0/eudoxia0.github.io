@@ -26,7 +26,7 @@ summary: TODO.
 
 # Non-Fiction
 
-- _The End of Time_ by [Julian Barbour][jb].
+- [_The End of Time_][time] by [Julian Barbour][jb].
 - _In the Beginning...Was the Command Line_ by Neal Stephenson.
 - _Syntactic Structures_ by Noam Chomsky.
 - _The Writing Life_ by Annie Dillard.
@@ -79,6 +79,7 @@ summary: TODO.
 [star]: https://www.goodreads.com/en/book/show/66479.Starfish
 [tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
 [tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
+[time]: https://en.wikipedia.org/wiki/The_End_of_Time_(book)
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
