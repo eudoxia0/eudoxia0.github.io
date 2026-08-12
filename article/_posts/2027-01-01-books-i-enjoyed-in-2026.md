@@ -62,26 +62,45 @@ second half it's tiresome and repetitive.
 
 [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
 
-[_Syntactic Structures_][ss] by [Noam Chomsky][nc].
+[_Syntactic Structures_][ss] by [Noam Chomsky][nc]. You can tell from the
+quality of the prose why Chomsky was so successful.
 
-[_The Writing Life_][twl] by [Annie Dillard][annie]. Very compellingly written and open-hearted.
+[_The Writing Life_][twl] by [Annie Dillard][annie]. Very compellingly written
+and open-hearted.
 
 [_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Short case studies
 in graphic design for visualizing complex information. Lots of railway
 timetables.
 
-[_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fedorov][fedorov].
+[_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai
+Fedorov][fedorov]. Fedorov is interesting to me because he was arguably the
+first transhumanist. The book talks about controlling the climate to end famine,
+using wind energy to free coal miners from their labour, the physical
+resurrection of the dead, the settlement of space.
 
-[_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
+[_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf]. An
+instruction manual and bill of materials on how to build a self-replicating
+factory on the Moon.
 
-[_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
+[_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw]. On the
+difficulty of settling space. Very entertainingly written. About half the book
+is about technical aspects: the health effects of microgravity, the fact that
+there's no carbon and little water on the moon, etc. A lot of this is stuff that
+as a space nerd you think about from time to time ("why does nobody mention that
+we have no idea if embryos can develop in less than 1g?") but it's nice to see
+all of it articulated, end-to-end. I tend to agree that, without a lot of
+transhumantech, space settlement is an absurd idea.
 
 [_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw]. Weizenbaum
 was a critic of AI when AI was just Eliza and SHRDLU. I wonder what he would
 make of LLMs. It's an interesting critique of, in a sense, the
 self-domestication of humanity.
 
-[_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh].
+[_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh]. An encyclopedia
+and history of the ideas that led to the Great Stagnation. I expected also that
+the flying car think would just be a hook, but actually a lot of the book is
+about the physics and engineering and human factors and societal factors of
+flying cars. Which was interesting. I kind of want to own a gyroplane now.
 
 # Textbooks
 
