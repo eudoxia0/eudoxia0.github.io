@@ -33,8 +33,8 @@ summary: TODO.
 - [_Envisioning Information_][ei] by [Edward R. Tufte][tufte].
   - lots of railway timetables
 - [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
-- _Advanced Automation for Space Missions_ by Robert Freitas.
-- _In Miserable Slavery_ by Douglas Hall.
+- [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
+- [_In Miserable Slavery_][ims] by [Douglas Hall][dh].
 - _Ecology of the Planted Aquarium_ by Diana Walstad.
 - _A City on Mars_ by Zach and Kelly Weinersmith.
 - _Computer Power and Human Reason: From Judgment to Calculation_.
@@ -48,6 +48,7 @@ summary: TODO.
 - _Understanding Data: A 21st Century Approach to Statistics and Data Science_.
 - _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_.
 
+[aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
 [ann]: https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)
 [annie]: https://en.wikipedia.org/wiki/Annie_Dillard
@@ -59,6 +60,7 @@ summary: TODO.
 [cli]: https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
+[dh]: https://www.goodreads.com/author/show/79515.Douglas_Hall
 [ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
 [fedorov]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
@@ -66,6 +68,7 @@ summary: TODO.
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
+[ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
 [jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
@@ -81,6 +84,7 @@ summary: TODO.
 [pw]: https://en.wikipedia.org/wiki/Peter_Watts_(author)
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
+[rf]: https://en.wikipedia.org/wiki/Robert_Freitas
 [rwr]: https://en.wikipedia.org/wiki/Rendezvous_with_Rama
 [sa]: https://www.astralcodexten.com/
 [ss]: https://en.wikipedia.org/wiki/Syntactic_Structures
