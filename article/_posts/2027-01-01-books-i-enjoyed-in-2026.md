@@ -84,17 +84,34 @@ timetables.
 
 # Textbooks
 
-[_Handbook of Practical Logic and Automated Reasoning_][hplar] by John Harrison.
+[_Handbook of Practical Logic and Automated Reasoning_][hplar] by John
+Harrison. If you're a programmer and want to learn logic, this is a great
+choice. It's a learn-by-coding approach, which logic is especially suited for,
+so you can play with the concepts "in your hands", so to speak.
 
-[_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
+[_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike]
+and [Isaac Chuang][ike]. I read some of it earlier this year while consulting
+for [Iceberg][ice]. It's very good. It has enough material that I rarely needed
+to consult other textbooks or reference information, and it's a good, gentle
+introduction to the subject with an appropriate level of rigor.
 
 [_The Machinery of Life_][life] by David Goodsell. Beautiful illustrations that
 convey the scale and complexity of biology at the nanoscale. Great for
 developing intuition for biology.
 
-[_Understanding Data: A 21st Century Approach to Statistics and Data Science_][data] by  Alan Garfinkel and Yina Guo.
+[_Understanding Data: A 21st Century Approach to Statistics and Data
+Science_][data] by Alan Garfinkel and Yina Guo. A modern introduction to
+statistics. The basic idea is a lot of contemporary statistics (and science, as
+a result) is bad because it relies on simple formulas which require maintaining
+easily-broken invariants. This was useful in the 1930's when all you had was a
+slide-rule, and so you needed to use deductive cleverness to simplify your
+calculations as much as possible. Other methods are more robust, but more
+computationally invensive. Since today we have computers, we should use those
+methods.
 
-[_Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_][neuro] by Nestler et al.
+[_Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_][neuro]
+by Nestler et al. The basics of pharmacology and signal processing in the brain,
+plus the neuroanatomy and physiology of things like sleep, attention, etc.
 
 [aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
@@ -119,6 +136,7 @@ developing intuition for biology.
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hplar]: https://www.cambridge.org/core/books/handbook-of-practical-logic-and-automated-reasoning/EB6396296813CB562987E8C37AC4520D
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
+[ice]: https://www.iceberg-quantum.com/
 [ike]: https://en.wikipedia.org/wiki/Isaac_Chuang
 [ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
