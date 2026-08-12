@@ -13,7 +13,7 @@ summary: TODO.
 - [_Frankenstein_][frank] by [Mary Shelley][ms].
 - [_Pnin_][pnin] by [Vladimir Nabokov][nab].
 - [_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
-- _The Fractal Prince_ and _The Causal Angel_ by Hannu Rajaniemi.
+- [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
 - _Unsong_ by Scott Alexander.
 - _Darkome_ by Hannu Rajaniemi.
 - _Collected Fiction_ by Hannu Rajaniemi.
@@ -64,3 +64,6 @@ summary: TODO.
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
 [cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
+[tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
+[tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
+[hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
