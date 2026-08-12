@@ -50,8 +50,6 @@ Black Death. A bit movie-brained but enjoyable.
 written, magical-realist, full of surreal and interesting imagery. But by the
 second half it's tiresome and repetitive.
 
-[_Annihilation_][ann] by [Jeff VanderMeer][jvm].
-
 [_Rendezvous with Rama_][rwr] by [Arthur C. Clarke][acc].
 
 [_Starfish_][star] by [Peter Watts][pw].
@@ -100,7 +98,6 @@ developing intuition for biology.
 
 [aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
-[ann]: https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)
 [annie]: https://en.wikipedia.org/wiki/Annie_Dillard
 [aur]: https://en.wikipedia.org/wiki/Aurora_(novel)
 [b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
@@ -127,7 +124,6 @@ developing intuition for biology.
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
 [jsh]: https://en.wikipedia.org/wiki/J._Storrs_Hall
-[jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
 [jw]: https://en.wikipedia.org/wiki/Joseph_Weizenbaum
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [kw]: https://en.wikipedia.org/wiki/Kelly_Weinersmith
