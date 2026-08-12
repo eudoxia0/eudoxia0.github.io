@@ -53,18 +53,27 @@ Stalingrad.
 
 # Non-Fiction
 
-- [_The End of Time_][time] by [Julian Barbour][jb].
-- [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
-- [_Syntactic Structures_][ss] by [Noam Chomsky][nc].
-- [_The Writing Life_][twl] by [Annie Dillard][annie].
-- [_Envisioning Information_][ei] by [Edward R. Tufte][tufte].
-  - lots of railway timetables
-- [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
-- [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
-- [_In Miserable Slavery_][ims] by [Douglas Hall][dh].
-- [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
-- [_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw].
-- [_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh].
+[_The End of Time_][time] by [Julian Barbour][jb].
+
+[_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
+
+[_Syntactic Structures_][ss] by [Noam Chomsky][nc].
+
+[_The Writing Life_][twl] by [Annie Dillard][annie].
+
+[_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Lots of railway timetables
+
+[_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
+
+[_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
+
+[_In Miserable Slavery_][ims] by [Douglas Hall][dh].
+
+[_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
+
+[_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw].
+
+[_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh].
 
 # Textbooks
 
