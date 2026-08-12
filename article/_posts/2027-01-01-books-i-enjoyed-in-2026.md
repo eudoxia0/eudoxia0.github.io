@@ -14,9 +14,9 @@ summary: TODO.
 - [_Pnin_][pnin] by [Vladimir Nabokov][nab].
 - [_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
 - [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
-- _Unsong_ by Scott Alexander.
-- _Darkome_ by Hannu Rajaniemi.
-- _Collected Fiction_ by Hannu Rajaniemi.
+- [_Unsong_][unsong] by [Scott Alexander][sa].
+- _Darkome_ by [Hannu Rajaniemi][hannu].
+- _Collected Fiction_ by [Hannu Rajaniemi][hannu].
 - _Beyond the Rift_ by Peter Watts.
 - _The Plains_ by Gerald Murnane.
 - _Annihilation_ by Jeff VanderMeer.
@@ -49,21 +49,23 @@ summary: TODO.
 - _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_
 
 [aur]: https://en.wikipedia.org/wiki/Aurora_(novel)
+[b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
 [bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
+[cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
+[hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [ic]: https://en.wikipedia.org/wiki/Italo_Calvino
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
+[nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
+[pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
+[sa]: https://www.astralcodexten.com/
+[tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
+[tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
+[unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
-[pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
-[nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
-[b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
-[cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
-[tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
-[tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
-[hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
