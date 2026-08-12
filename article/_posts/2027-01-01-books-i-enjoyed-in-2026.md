@@ -9,8 +9,8 @@ summary: TODO.
 - [_By Night in Chile_][bnic] by [Roberto Bolaño][rb].
 - [_Valuable Humans in Transit and Other Stories_][vhit] by [qntm].
 - [_Life and Fate_][lf] by [Vasily Grossman][vg].
-- _Aurora_ by Kim Stanley Robinson.
-- _Frankenstein_ by Mary Shelley.
+- [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
+- [_Frankenstein_][frank] by [Mary Shelley][ms].
 - _The Temple of the Golden Pavilion_ by Yukio Mishima.
 - _Pnin_ by Vladimir Nabokov.
 - _Between Two Fires_ by Christopher Buehlman.
@@ -57,3 +57,7 @@ summary: TODO.
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
+[aur]: https://en.wikipedia.org/wiki/Aurora_(novel)
+[ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
+[frank]: https://en.wikipedia.org/wiki/Frankenstein
+[ms]: https://en.wikipedia.org/wiki/Mary_Shelley
