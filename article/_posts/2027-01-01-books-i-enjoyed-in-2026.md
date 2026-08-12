@@ -76,7 +76,10 @@ timetables.
 
 [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
 
-[_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw].
+[_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw]. Weizenbaum
+was a critic of AI when AI was just Eliza and SHRDLU. I wonder what he would
+make of LLMs. It's an interesting critique of, in a sense, the
+self-domestication of humanity.
 
 [_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh].
 
