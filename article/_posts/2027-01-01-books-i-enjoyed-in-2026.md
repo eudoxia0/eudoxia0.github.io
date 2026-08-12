@@ -5,7 +5,7 @@ summary: TODO.
 
 # Fiction
 
-- _Invisible Cities_ by Italo Calvino.
+- [_Invisible Cities_][inv] by [Italo Calvino][ic].
 - _By Night in Chile_ by Roberto Bolaño.
 - _Valuable Humans in Transit and Other Stories_ by qntm.
 - _Life and Fate_ by Vasily Grossman.
@@ -48,3 +48,6 @@ summary: TODO.
 - _The Machinery of Life_ by David S. Goodsell
 - _Understanding Data: A 21st Century Approach to Statistics and Data Science_
 - _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_
+
+[inv]: https://en.wikipedia.org/wiki/Invisible_Cities
+[ic]: https://en.wikipedia.org/wiki/Italo_Calvino
