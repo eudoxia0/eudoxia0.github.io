@@ -69,7 +69,7 @@ it's tiresome and repetitive.
 in graphic design for visualizing complex information. Lots of railway
 timetables.
 
-[_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
+[_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fedorov][fedorov].
 
 [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
 
