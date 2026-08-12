@@ -30,7 +30,7 @@ summary: TODO.
 - [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
 - [_Syntactic Structures_][ss] by [Noam Chomsky][nc].
 - [_The Writing Life_][twl] by [Annie Dillard][annie].
-- _Envisioning Information_ by Edward R. Tufte.
+- [_Envisioning Information_][ei] by [Edward R. Tufte][tufte].
   - lots of railway timetables
 - _What Was Man Created For? The Philosophy of the Common Task_ by Nikolai Fyodorovich Fyodorov.
 - _Advanced Automation for Space Missions_ by Robert Freitas.
@@ -59,6 +59,7 @@ summary: TODO.
 [cli]: https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
+[ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
@@ -85,6 +86,7 @@ summary: TODO.
 [tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
 [tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
 [time]: https://en.wikipedia.org/wiki/The_End_of_Time_(book)
+[tufte]: https://en.wikipedia.org/wiki/Edward_Tufte
 [twl]: https://www.goodreads.com/en/book/show/12530.The_Writing_Life
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
