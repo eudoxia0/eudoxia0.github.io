@@ -36,8 +36,8 @@ summary: TODO.
 - [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
 - [_In Miserable Slavery_][ims] by [Douglas Hall][dh].
 - [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
-- _Computer Power and Human Reason: From Judgment to Calculation_.
-- _Where Is My Flying Car?: A Memoir of Future Past_.
+- [_Computer Power and Human Reason_][cphr] by [Joseph Weizenbaum][jw].
+- [_Where Is My Flying Car?_][flycar] by [J. Storrs Hall][jsh].
 
 # Textbooks
 
@@ -58,11 +58,13 @@ summary: TODO.
 [cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
 [cli]: https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
+[cphr]: https://en.wikipedia.org/wiki/Computer_Power_and_Human_Reason
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
 [dh]: https://www.goodreads.com/author/show/79515.Douglas_Hall
 [ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
 [fedorov]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
+[flycar]: https://www.goodreads.com/book/show/59335616-where-is-my-flying-car
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
@@ -70,7 +72,9 @@ summary: TODO.
 [ims]: https://www.goodreads.com/book/show/1459436
 [inv]: https://en.wikipedia.org/wiki/Invisible_Cities
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
+[jsh]: https://en.wikipedia.org/wiki/J._Storrs_Hall
 [jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
+[jw]: https://en.wikipedia.org/wiki/Joseph_Weizenbaum
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [kw]: https://en.wikipedia.org/wiki/Kelly_Weinersmith
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
