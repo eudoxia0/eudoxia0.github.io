@@ -44,8 +44,8 @@ Black Death. A bit movie-brained but enjoyable.
 [_Beyond the Rift_][btr] by [Peter Watts][pw].
 
 [_The Plains_][plains] by [Gerald Murnane][gm]. The first half is beautifully
-written, magical-realist, full of interesting imagery. But by the second half
-it's tiresome and repetitive.
+written, magical-realist, full of surreal and interesting imagery. But by the
+second half it's tiresome and repetitive.
 
 [_Annihilation_][ann] by [Jeff VanderMeer][jvm].
 
