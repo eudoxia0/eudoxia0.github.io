@@ -11,7 +11,7 @@ summary: TODO.
 - [_Life and Fate_][lf] by [Vasily Grossman][vg].
 - [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
 - [_Frankenstein_][frank] by [Mary Shelley][ms].
-- _Pnin_ by Vladimir Nabokov.
+- [_Pnin_][pnin] by [Vladimir Nabokov][nab].
 - _Between Two Fires_ by Christopher Buehlman.
 - _The Fractal Prince_ and _The Causal Angel_ by Hannu Rajaniemi.
 - _Unsong_ by Scott Alexander.
@@ -60,3 +60,5 @@ summary: TODO.
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
+[pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
+[nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
