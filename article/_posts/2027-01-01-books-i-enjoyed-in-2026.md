@@ -61,7 +61,7 @@ Stalingrad.
 
 [_The Writing Life_][twl] by [Annie Dillard][annie].
 
-[_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Lots of railway timetables
+[_Envisioning Information_][ei] by [Edward R. Tufte][tufte]. Lots of railway timetables.
 
 [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
 
@@ -77,11 +77,15 @@ Stalingrad.
 
 # Textbooks
 
-- [_Handbook of Practical Logic and Automated Reasoning_][hplar] by John Harrison.
-- [_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
-- [_The Machinery of Life_][life] by David Goodsell.
-- [_Understanding Data: A 21st Century Approach to Statistics and Data Science_][data] by  Alan Garfinkel and Yina Guo.
-- [_Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_][neuro] by Nestler et al.
+[_Handbook of Practical Logic and Automated Reasoning_][hplar] by John Harrison.
+
+[_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
+
+[_The Machinery of Life_][life] by David Goodsell.
+
+[_Understanding Data: A 21st Century Approach to Statistics and Data Science_][data] by  Alan Garfinkel and Yina Guo.
+
+[_Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_][neuro] by Nestler et al.
 
 [aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
