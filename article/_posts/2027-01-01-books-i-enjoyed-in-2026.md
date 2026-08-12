@@ -49,15 +49,15 @@ summary: TODO.
 - _Understanding Data: A 21st Century Approach to Statistics and Data Science_
 - _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_
 
-[inv]: https://en.wikipedia.org/wiki/Invisible_Cities
-[ic]: https://en.wikipedia.org/wiki/Italo_Calvino
-[bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
-[rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
-[vhit]: https://qntm.org/vhitaos
-[qntm]: https://en.wikipedia.org/wiki/Qntm
-[lf]: https://en.wikipedia.org/wiki/Life_and_Fate
-[vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [aur]: https://en.wikipedia.org/wiki/Aurora_(novel)
-[ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
+[bnic]: https://en.wikipedia.org/wiki/By_Night_in_Chile
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
+[ic]: https://en.wikipedia.org/wiki/Italo_Calvino
+[inv]: https://en.wikipedia.org/wiki/Invisible_Cities
+[ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
+[lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
+[qntm]: https://en.wikipedia.org/wiki/Qntm
+[rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
+[vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
+[vhit]: https://qntm.org/vhitaos
