@@ -35,7 +35,7 @@ summary: TODO.
 - [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
 - [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
 - [_In Miserable Slavery_][ims] by [Douglas Hall][dh].
-- _A City on Mars_ by Zach and Kelly Weinersmith.
+- [_A City on Mars_][mars] by [Zach][zach] and [Kelly Weinersmith][kw].
 - _Computer Power and Human Reason: From Judgment to Calculation_.
 - _Where Is My Flying Car?: A Memoir of Future Past_.
 
@@ -72,8 +72,10 @@ summary: TODO.
 [jb]: https://en.wikipedia.org/wiki/Julian_Barbour
 [jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
+[kw]: https://en.wikipedia.org/wiki/Kelly_Weinersmith
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [man]: https://www.goodreads.com/en/book/show/1197668.What_Was_Man_Created_For_The_Philosophy_of_the_Common_Task
+[mars]: https://en.wikipedia.org/wiki/A_City_on_Mars
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [nc]: https://en.wikipedia.org/wiki/Noam_Chomsky
@@ -96,3 +98,4 @@ summary: TODO.
 [unsong]: https://www.goodreads.com/en/book/show/28589297-unsong
 [vg]: https://en.wikipedia.org/wiki/Vasily_Grossman
 [vhit]: https://qntm.org/vhitaos
+[zach]: https://en.wikipedia.org/wiki/Zach_Weinersmith
