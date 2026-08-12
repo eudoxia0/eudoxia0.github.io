@@ -3,7 +3,10 @@ title: Books I Enjoyed In 2026H1
 summary: A list.
 card: books-i-enjoyed-in-2026-h1.webp
 card_source: |
-    TODO
+    From [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
+
+    [aasm]: https://ntrs.nasa.gov/citations/19830007077
+    [rf]: https://en.wikipedia.org/wiki/Robert_Freitas
 ---
 
 # Fiction
