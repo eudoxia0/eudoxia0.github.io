@@ -35,7 +35,6 @@ summary: TODO.
 - [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
 - [_Advanced Automation for Space Missions_][aasm] by [Robert Freitas][rf].
 - [_In Miserable Slavery_][ims] by [Douglas Hall][dh].
-- _Ecology of the Planted Aquarium_ by Diana Walstad.
 - _A City on Mars_ by Zach and Kelly Weinersmith.
 - _Computer Power and Human Reason: From Judgment to Calculation_.
 - _Where Is My Flying Car?: A Memoir of Future Past_.
