@@ -11,7 +11,6 @@ summary: TODO.
 - [_Life and Fate_][lf] by [Vasily Grossman][vg].
 - [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
 - [_Frankenstein_][frank] by [Mary Shelley][ms].
-- _The Temple of the Golden Pavilion_ by Yukio Mishima.
 - _Pnin_ by Vladimir Nabokov.
 - _Between Two Fires_ by Christopher Buehlman.
 - _The Fractal Prince_ and _The Causal Angel_ by Hannu Rajaniemi.
