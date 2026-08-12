@@ -101,12 +101,13 @@ trope of "ancient aliens built all these stargates and conveniently left".
 # Non-Fiction
 
 [_The End of Time_][time] by [Julian Barbour][jb]. I'm usually very negative
-about pop-science. There is no [royal road][rr], and all the pop-science I've
-read has been worthless compared to going through the first three chapters of a
-textbook on the relevant topic. And, while interesting, this book is no
-different, because ultimately, how can I judge whether it's a sensible or
-ridiculous idea? I would need years and years of training in mathematics and
-physics and mathematical physics to even be able to think rigorously about this.
+about pop-science. There is no [royal road][rr] to mathematics, and all the
+pop-science I've read has been worthless compared to going through the first
+three chapters of a textbook on the relevant topic. And, while interesting, this
+book is no different, because ultimately, how can I judge whether it's a
+sensible or ridiculous idea? I would need years and years of training in
+mathematics and physics and mathematical physics to even be able to think
+rigorously about this.
 
 ⭐️ [_In the Beginning...Was the Command Line_][cli] by [Neal
 Stephenson][ns]. Funny and synoptic.
@@ -234,6 +235,7 @@ plus the neuroanatomy and physiology of things like sleep, attention, etc.
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
 [rf]: https://en.wikipedia.org/wiki/Robert_Freitas
+[rr]: https://en.wikipedia.org/wiki/Royal_Road
 [rwr]: https://en.wikipedia.org/wiki/Rendezvous_with_Rama
 [sa]: https://www.astralcodexten.com/
 [ss]: https://en.wikipedia.org/wiki/Syntactic_Structures
