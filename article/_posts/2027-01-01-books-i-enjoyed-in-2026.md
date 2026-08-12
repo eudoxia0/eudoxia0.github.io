@@ -28,7 +28,7 @@ summary: TODO.
 
 - [_The End of Time_][time] by [Julian Barbour][jb].
 - [_In the Beginning...Was the Command Line_][cli] by [Neal Stephenson][ns].
-- _Syntactic Structures_ by Noam Chomsky.
+- [_Syntactic Structures_][ss] by [Noam Chomsky][nc].
 - _The Writing Life_ by Annie Dillard.
 - _Envisioning Information_ by Edward R. Tufte.
   - lots of railway timetables
@@ -70,6 +70,7 @@ summary: TODO.
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
+[nc]: https://en.wikipedia.org/wiki/Noam_Chomsky
 [ns]: https://en.wikipedia.org/wiki/Neal_Stephenson
 [plains]: https://en.wikipedia.org/wiki/The_Plains_(novel)
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
@@ -78,6 +79,7 @@ summary: TODO.
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
 [rwr]: https://en.wikipedia.org/wiki/Rendezvous_with_Rama
 [sa]: https://www.astralcodexten.com/
+[ss]: https://en.wikipedia.org/wiki/Syntactic_Structures
 [star]: https://www.goodreads.com/en/book/show/66479.Starfish
 [tca]: https://en.wikipedia.org/wiki/The_Causal_Angel
 [tfp]: https://en.wikipedia.org/wiki/The_Fractal_Prince
