@@ -23,20 +23,33 @@ sections. But it's great. It's kind of like [_Legend of the Galactic
 Heroes_][logh] but it's the Second World War and in particular the battle of
 Stalingrad.
 
-- [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
-- [_Frankenstein_][frank] by [Mary Shelley][ms].
-- [_Pnin_][pnin] by [Vladimir Nabokov][nab].
-- [_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
-- [_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
-- [_Unsong_][unsong] by [Scott Alexander][sa].
-- [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
-- [_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
-- [_Beyond the Rift_][btr] by [Peter Watts][pw].
-- [_The Plains_][plains] by [Gerald Murnane][gm].
-- [_Annihilation_][ann] by [Jeff VanderMeer][jvm].
-- [_Rendezvous with Rama_][rwr] by [Arthur C. Clarke][acc].
-- [_Starfish_][star] by [Peter Watts][pw].
-- [_The Freeze-Frame Revolution_][ffr] by [Peter Watts][pw].
+[_Aurora_][aur] by [Kim Stanley Robinson][ksr].
+
+[_Frankenstein_][frank] by [Mary Shelley][ms].
+
+[_Pnin_][pnin] by [Vladimir Nabokov][nab].
+
+[_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
+
+[_The Fractal Prince_][tfp] and [_The Causal Angel_][tca] by [Hannu Rajaniemi][hannu].
+
+[_Unsong_][unsong] by [Scott Alexander][sa].
+
+[_Darkome_][dark] by [Hannu Rajaniemi][hannu].
+
+[_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
+
+[_Beyond the Rift_][btr] by [Peter Watts][pw].
+
+[_The Plains_][plains] by [Gerald Murnane][gm].
+
+[_Annihilation_][ann] by [Jeff VanderMeer][jvm].
+
+[_Rendezvous with Rama_][rwr] by [Arthur C. Clarke][acc].
+
+[_Starfish_][star] by [Peter Watts][pw].
+
+[_The Freeze-Frame Revolution_][ffr] by [Peter Watts][pw].
 
 # Non-Fiction
 
