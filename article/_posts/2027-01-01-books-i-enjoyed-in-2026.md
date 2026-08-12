@@ -17,12 +17,12 @@ summary: TODO.
 - [_Unsong_][unsong] by [Scott Alexander][sa].
 - [_Darkome_][dark] by [Hannu Rajaniemi][hannu].
 - [_Collected Fiction_][col] by [Hannu Rajaniemi][hannu].
-- _Beyond the Rift_ by Peter Watts.
+- _Beyond the Rift_ by [Peter Watts][pw].
 - _The Plains_ by Gerald Murnane.
 - _Annihilation_ by Jeff VanderMeer.
 - _Rendezvous with Rama_ by Arthur C. Clarke.
-- _Starfish_ by Peter Watts.
-- _The Freeze-Frame Revolution_ by Peter Watts.
+- _Starfish_ by [Peter Watts][pw].
+- _The Freeze-Frame Revolution_ by [Peter Watts][pw].
 
 # Non-Fiction
 
@@ -63,6 +63,7 @@ summary: TODO.
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
+[pw]: https://en.wikipedia.org/wiki/Peter_Watts_(author)
 [qntm]: https://en.wikipedia.org/wiki/Qntm
 [rb]: https://en.wikipedia.org/wiki/Roberto_Bola%C3%B1o
 [sa]: https://www.astralcodexten.com/
