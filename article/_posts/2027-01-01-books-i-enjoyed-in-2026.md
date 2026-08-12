@@ -26,27 +26,27 @@ summary: TODO.
 
 # Non-Fiction
 
-- _The End of Time_ by Julian Barbour
-- _In the Beginning...Was the Command Line_ by Neal Stephenson
-- _Syntactic Structures_ by Noam Chomsky
-- _The Writing Life_ by Annie Dillard
-- _Envisioning Information_ by Edward R. Tufte
+- _The End of Time_ by Julian Barbour.
+- _In the Beginning...Was the Command Line_ by Neal Stephenson.
+- _Syntactic Structures_ by Noam Chomsky.
+- _The Writing Life_ by Annie Dillard.
+- _Envisioning Information_ by Edward R. Tufte.
   - lots of railway timetables
-- _What Was Man Created For? The Philosophy of the Common Task_ by Nikolai Fyodorovich Fyodorov
-- _Advanced Automation for Space Missions_ by Robert Freitas
+- _What Was Man Created For? The Philosophy of the Common Task_ by Nikolai Fyodorovich Fyodorov.
+- _Advanced Automation for Space Missions_ by Robert Freitas.
 - _In Miserable Slavery_ by Douglas Hall.
-- _Ecology of the Planted Aquarium_ by Diana Walstad
-- _A City on Mars_ by Zach and Kelly Weinersmith
-- _Computer Power and Human Reason: From Judgment to Calculation_
-- _Where Is My Flying Car?: A Memoir of Future Past_
+- _Ecology of the Planted Aquarium_ by Diana Walstad.
+- _A City on Mars_ by Zach and Kelly Weinersmith.
+- _Computer Power and Human Reason: From Judgment to Calculation_.
+- _Where Is My Flying Car?: A Memoir of Future Past_.
 
 # Textbooks
 
-- _Handbook of Practical Logic and Automated Reasoning_ by John E. Harrison
-- _Quantum Computation and Quantum Information_ by Michael Nielsen and Isaac Chuang
-- _The Machinery of Life_ by David S. Goodsell
-- _Understanding Data: A 21st Century Approach to Statistics and Data Science_
-- _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_
+- _Handbook of Practical Logic and Automated Reasoning_ by John E. Harrison.
+- _Quantum Computation and Quantum Information_ by Michael Nielsen and Isaac Chuang.
+- _The Machinery of Life_ by David S. Goodsell.
+- _Understanding Data: A 21st Century Approach to Statistics and Data Science_.
+- _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_.
 
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
 [ann]: https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)
