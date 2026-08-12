@@ -12,7 +12,7 @@ summary: TODO.
 - [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
 - [_Frankenstein_][frank] by [Mary Shelley][ms].
 - [_Pnin_][pnin] by [Vladimir Nabokov][nab].
-- _Between Two Fires_ by Christopher Buehlman.
+- [_Between Two Fires_][b2f] by [Christopher Buehlman][cb].
 - _The Fractal Prince_ and _The Causal Angel_ by Hannu Rajaniemi.
 - _Unsong_ by Scott Alexander.
 - _Darkome_ by Hannu Rajaniemi.
@@ -62,3 +62,5 @@ summary: TODO.
 [vhit]: https://qntm.org/vhitaos
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
+[b2f]: https://en.wikipedia.org/wiki/Between_Two_Fires_(novel)
+[cb]: https://en.wikipedia.org/wiki/Christopher_Buehlman
