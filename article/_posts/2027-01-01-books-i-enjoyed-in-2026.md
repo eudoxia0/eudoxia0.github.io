@@ -43,9 +43,9 @@ summary: TODO.
 
 - [_Handbook of Practical Logic and Automated Reasoning_][hplar] by John Harrison.
 - [_Quantum Computation and Quantum Information_][qcqi] by [Michael Nielsen][mike] and [Isaac Chuang][ike].
-- _The Machinery of Life_ by David S. Goodsell.
-- _Understanding Data: A 21st Century Approach to Statistics and Data Science_.
-- _Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_.
+- [_The Machinery of Life_][life] by David Goodsell.
+- [_Understanding Data: A 21st Century Approach to Statistics and Data Science_][data] by  Alan Garfinkel and Yina Guo.
+- [_Molecular Neuropharmacology: A Foundation for Clinical Neuroscience_][neuro] by Nestler et al.
 
 [aasm]: https://ntrs.nasa.gov/citations/19830007077
 [acc]: https://en.wikipedia.org/wiki/Arthur_C._Clarke
@@ -60,6 +60,7 @@ summary: TODO.
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
 [cphr]: https://en.wikipedia.org/wiki/Computer_Power_and_Human_Reason
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
+[data]: https://link.springer.com/book/10.1007/978-3-032-18600-3
 [dh]: https://www.goodreads.com/author/show/79515.Douglas_Hall
 [ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
 [fedorov]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
@@ -80,12 +81,14 @@ summary: TODO.
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [kw]: https://en.wikipedia.org/wiki/Kelly_Weinersmith
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
+[life]: https://www.goodreads.com/en/book/show/6601267-the-machinery-of-life
 [man]: https://www.goodreads.com/en/book/show/1197668.What_Was_Man_Created_For_The_Philosophy_of_the_Common_Task
 [mars]: https://en.wikipedia.org/wiki/A_City_on_Mars
 [mike]: https://michaelnielsen.org/
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [nc]: https://en.wikipedia.org/wiki/Noam_Chomsky
+[neuro]: https://neurology.mhmedical.com/book.aspx?bookid=2963
 [ns]: https://en.wikipedia.org/wiki/Neal_Stephenson
 [plains]: https://en.wikipedia.org/wiki/The_Plains_(novel)
 [pnin]: https://en.wikipedia.org/wiki/Pnin_(novel)
