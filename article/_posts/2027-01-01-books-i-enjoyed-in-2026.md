@@ -32,7 +32,7 @@ summary: TODO.
 - [_The Writing Life_][twl] by [Annie Dillard][annie].
 - [_Envisioning Information_][ei] by [Edward R. Tufte][tufte].
   - lots of railway timetables
-- _What Was Man Created For? The Philosophy of the Common Task_ by Nikolai Fyodorovich Fyodorov.
+- [_What Was Man Created For? The Philosophy of the Common Task_][man] by [Nikolai Fyodorovich Fyodorov][fedorov].
 - _Advanced Automation for Space Missions_ by Robert Freitas.
 - _In Miserable Slavery_ by Douglas Hall.
 - _Ecology of the Planted Aquarium_ by Diana Walstad.
@@ -60,6 +60,7 @@ summary: TODO.
 [col]: https://www.goodreads.com/book/show/22928964-collected-fiction
 [dark]: https://www.goodreads.com/book/show/90122137-darkome
 [ei]: https://www.goodreads.com/en/book/show/17745.Envisioning_Information
+[fedorov]: https://en.wikipedia.org/wiki/Nikolai_Fyodorov_(philosopher)
 [ffr]: https://www.goodreads.com/en/book/show/36510759-the-freeze-frame-revolution
 [frank]: https://en.wikipedia.org/wiki/Frankenstein
 [gm]: https://en.wikipedia.org/wiki/Gerald_Murnane
@@ -70,6 +71,7 @@ summary: TODO.
 [jvm]: https://en.wikipedia.org/wiki/Jeff_VanderMeer
 [ksr]: https://en.wikipedia.org/wiki/Kim_Stanley_Robinson
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
+[man]: https://www.goodreads.com/en/book/show/1197668.What_Was_Man_Created_For_The_Philosophy_of_the_Common_Task
 [ms]: https://en.wikipedia.org/wiki/Mary_Shelley
 [nab]: https://en.wikipedia.org/wiki/Vladimir_Nabokov
 [nc]: https://en.wikipedia.org/wiki/Noam_Chomsky
