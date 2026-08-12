@@ -5,10 +5,24 @@ summary: TODO.
 
 # Fiction
 
-- [_Invisible Cities_][inv] by [Italo Calvino][ic].
-- [_By Night in Chile_][bnic] by [Roberto Bolaño][rb].
-- [_Valuable Humans in Transit and Other Stories_][vhit] by [qntm].
-- [_Life and Fate_][lf] by [Vasily Grossman][vg].
+[_Invisible Cities_][inv] by [Italo Calvino][ic]. Beautiful prose and
+imagination.
+
+[_By Night in Chile_][bnic] by [Roberto Bolaño][rb]. Also beautiful prose.
+
+[_Valuable Humans in Transit and Other Stories_][vhit] by [qntm]. I had already
+read most of these but they are very, very good, and it was a pleasure to read
+them again.
+
+[_Life and Fate_][lf] by [Vasily Grossman][vg]. Usually when I hear "it's a 900
+page Russian epic about three generations of a family living through a
+tumultuous time" I roll my eyes and assume it's some 19th century slog that
+people only read to say they have read it. _Life and Fate_ is not a slog. It is
+900 pages, and the _dramatis personae_ is so long it's divided into multiple
+sections. But it's great. It's kind of like [_Legend of the Galactic
+Heroes_][logh] but it's the Second World War and in particular the battle of
+Stalingrad.
+
 - [_Aurora_][aur] by [Kim Stanley Robinson][ksr].
 - [_Frankenstein_][frank] by [Mary Shelley][ms].
 - [_Pnin_][pnin] by [Vladimir Nabokov][nab].
@@ -82,6 +96,7 @@ summary: TODO.
 [kw]: https://en.wikipedia.org/wiki/Kelly_Weinersmith
 [lf]: https://en.wikipedia.org/wiki/Life_and_Fate
 [life]: https://www.goodreads.com/en/book/show/6601267-the-machinery-of-life
+[logh]: https://en.wikipedia.org/wiki/Legend_of_the_Galactic_Heroes
 [man]: https://www.goodreads.com/en/book/show/1197668.What_Was_Man_Created_For_The_Philosophy_of_the_Common_Task
 [mars]: https://en.wikipedia.org/wiki/A_City_on_Mars
 [mike]: https://michaelnielsen.org/
