@@ -15,7 +15,7 @@ dignifies the spirit, etc.. We will be artists, scholars, captains of the
 starship _Enterprise_, etc. There's a few problems with this idea:
 
 1. "Drudgery" and "meaningful work" are in the same complexity class, so the
-   technology that automates all of he former also automates the latter.
+   technology to automates the former also automates the latter.
 2. Our revealed preference seems to be that we prefer solipsistic convenience
    over human relationships.
 
