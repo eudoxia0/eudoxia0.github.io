@@ -44,7 +44,7 @@ and [failed][soar] and [failed][actr]) to automate them with software. The
 industrial revolution, and later the computer revolution, automated most tasks
 under this limit:
 
-![TODO](/assets/content/the-trajectory-of-automation/graph1.png)
+![A line plot. The X axis is time, ranging from the year 1800 to the year 2100. A vertical dotted line marks the year 2026. The Y axis is qualitative, showing a list of tasks, sorted from top to bottom by increasing complexity. A horizontal dotted line marks the 'Limit of Formalizability'. The region above this line is labeled 'Human-Complete Region'. The region below this line is labeled 'Formalizable Region'. A sigmoid curve, representing technological progress, is drawn starting from just above the origin in the year 1800, to just below the limit of formalizability in 2026.](/assets/content/the-trajectory-of-automation/graph1.png)
 
 The human-complete tasks are those you need a human to perform. Some are
 meaningful, like writing essays, some are drudgery, but human-level drudgery,
@@ -57,7 +57,7 @@ outperform humans at most economically valuable work", as per the [OpenAI
 charter][chart]---creates an obvious discontinuity: suddenly we shoot up to 100%
 automation, both of the meaningful work and the drudgery:
 
-![TODO](/assets/content/the-trajectory-of-automation/graph2.png)
+![A line plot identical to the above, with one addition: the sigmoid curve representing technical progress shoots up almost vertically a few years after 2026, reaching the top of the Y axis.](/assets/content/the-trajectory-of-automation/graph2.png)
 
 And at this point AGI the economic incentives [work against
 humanity][uc]. The only niche to escape to is the relational economy, where
