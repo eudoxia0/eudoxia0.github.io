@@ -32,24 +32,25 @@ higher-paying, less monotonous, healthier, more intellectually and socially
 stimulating.
 
 You can think of it as a graph where the $x$ axis is time and the $y$ axis is
-task complexity. Somewhere along the $y$ axis there's a line: tasks below the
-line are those which we can design machines or programs to perform, tasks above
-the line are too complex, we have tried and [failed][gofai] (and [failed][cyc]
+task complexity. Somewhere along the $y$ axis there's a limit: tasks below the
+limit are those which we can design machines or programs to perform, tasks above
+the limit are too complex, we have tried and [failed][gofai] (and [failed][cyc]
 and [failed][soar] and [failed][actr]) to automate them with software. The
 industrial revolution, and later the computer revolution, automated most tasks
-under this line:
+under this limit:
 
 ![TODO](/assets/content/the-trajectory-of-automation/graph1.png)
 
-Tasks above the line are what you need a human to perform. Some are meaningful,
-like writing essays, some are drudgery, but human-level drudgery, like life
-admin.
+The human-complete tasks are those you need a human to perform. Some are
+meaningful, like writing essays, some are drudgery, but human-level drudgery,
+like life admin.
 
-But the line we draw between "good" and "bad" work is not the line nature draws
-between easy and hard to automate. The invention of AGI---"highly autonomous
-systems that outperform humans at most economically valuable work", as per the
-[OpenAI charter][chart]---creates an obvious discontinuity: suddenly we shoot up
-to 100% automation, both of the meaningful work and the drudgery:
+But note that nowhere in the $y$ axis is there a "Limit of Drudgery": the line
+we draw between "good" and "bad" work is not the line nature draws between easy
+and hard to automate. The invention of AGI---"highly autonomous systems that
+outperform humans at most economically valuable work", as per the [OpenAI
+charter][chart]---creates an obvious discontinuity: suddenly we shoot up to 100%
+automation, both of the meaningful work and the drudgery:
 
 ![TODO](/assets/content/the-trajectory-of-automation/graph2.png)
 
@@ -101,7 +102,7 @@ lot more solipsistic that we want to believe.
 # Acknowledgement
 
 Emmy Noether once said that "everything is already in Dedekind". As for me,
-everything is already in [J. D. Pressman][jdp].
+everything was already said by [J. D. Pressman][jdp].
 
 # Footnotes
 
