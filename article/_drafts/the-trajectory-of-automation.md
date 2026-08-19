@@ -6,7 +6,7 @@ math: yes
 
 > Live? Our servants can do that for us.
 >
-> <p class="cite"> — [_Axël_][axel], [Auguste Villiers de l'Isle-Adam][adam] </p>
+> — [_Axël_][axel], [Auguste Villiers de l'Isle-Adam][adam]
 
 The implicit promise of modernity is: we have to work really hard for a few
 centuries, but eventually we'll get to the _Star Trek_ future where we've
@@ -99,7 +99,7 @@ This is an empirical question, and we can't answer it, because AI is not there,
 yet. But we might discover that our preferences are a lot less humanist and a
 lot more solipsistic that we want to believe.
 
-# Acknowledgement
+# Acknowledgements
 
 Emmy Noether once said that "everything is already in Dedekind". As for me,
 everything was already said by [J. D. Pressman][jdp].
