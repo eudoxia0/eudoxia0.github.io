@@ -2,6 +2,11 @@
 title: The Trajectory of Automation
 summary: Why the post-scarcity utopia is unlikely.
 math: yes
+card: the-trajectory-of-automation.webp
+card_source: |
+    Fragment C of the [Antikythera mechanism][an], showing two circular scales.
+
+    [an]: https://en.wikipedia.org/wiki/Antikythera_mechanism
 ---
 
 > Live? Our servants can do that for us.
