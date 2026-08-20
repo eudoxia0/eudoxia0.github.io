@@ -39,7 +39,7 @@ If this is interesting to you, [send me an email][mail].
 - GitHub: [`eudoxia0`][gh]
 - LinkedIn: [`fborretti`][ln]
 - Hacker News: [submissions][hnsub], [comments][hncom].
-- Goodreads: [`zetalyrae`](https://www.goodreads.com/user/show/189275796-fernando-borretti)
+- Goodreads: [`zetalyrae`](https://www.goodreads.com/author/show/48582684.Fernando_Borretti)
 - Backloggd: [`zetalyrae`](https://backloggd.com/u/zetalyrae)
 
 [mail]: mailto:fernando@borretti.me
