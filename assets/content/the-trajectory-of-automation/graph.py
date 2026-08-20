@@ -41,8 +41,8 @@ plt.rcParams["font.serif"] = ["TeX Gyre Termes"]
 
 # Example tasks.
 Y_LABELS = [
-    "Weaving",
     "Plowing",
+    "Weaving",
     "Arithmetic",
     "Data entry",
     "Travel booking",
