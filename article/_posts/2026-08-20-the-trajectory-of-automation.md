@@ -9,7 +9,7 @@ card_source: |
     [an]: https://en.wikipedia.org/wiki/Antikythera_mechanism
 ---
 
-> Live? Our servants can do that for us.
+> Live? Our servants will do that for us.
 >
 > — [_Axël_][axel], [Auguste Villiers de l'Isle-Adam][adam]
 
