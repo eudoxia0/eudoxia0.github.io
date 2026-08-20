@@ -77,15 +77,15 @@ and more expensive, because there's no human.
 
 The flip side of this is: whatever work you do, most people would rather an
 alternative that gave them the same outcome or better[^fn1], without having to
-deal with a human person. That is: if you ask everyone on Earth what jobs they'd
+deal with a human person. That is, if you ask everyone on Earth what jobs they'd
 like to see automated, and take the union of that, it's everything. There's
 nothing left.
 
-We see this with ordinary consumer products and services, where the advertising
-seems premised on you being some kind of stylite who lives in a pod, probably in
-a building called something like "The Soho", food arrives through a hole in the
-wall, and you have this sovereign, solipsistic existence that leaves no physical
-trace in the world.
+We see this with ordinary consumer products and services, where often the
+advertising seems premised on you being some kind of stylite who lives in a
+little human terrarium, probably in a building called something like "The Soho",
+food arrives through a hole in the wall, and you have this sovereign,
+solipsistic existence that leaves no physical trace in the world.
 
 We see this, increasingly, with knowledge work. Personally, I think software
 engineering is a very meaningful and intellectually-rewarding activity. But
