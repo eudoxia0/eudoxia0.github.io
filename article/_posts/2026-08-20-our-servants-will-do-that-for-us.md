@@ -142,7 +142,8 @@ everything I write about AI was already said by [J. D. Pressman][jdp].
     complexity into the notion of "same outcome or better". So let's try it
     again, [_more geometrico_][spinoza] and with unnecessary LaTeX. You want to
     buy a good. You look around, assemble a set of options, sort them by utility
-    and pick the winner. And you can think of the utility as like a polynomial:
+    and pick the winner. And you can think of the utility as like a weighted
+    sum:
 
     $$
     \mathfrak{u}(x) = \sum\limits_{a \in A} \alpha_a x_a
