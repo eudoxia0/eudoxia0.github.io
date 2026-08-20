@@ -1,7 +1,7 @@
 import argparse
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 
 # Arguments.
@@ -53,7 +53,6 @@ Y_LABELS = [
 ]
 
 
-
 # Draw the curve of progress.
 MIDPOINT = 1890
 STEEPNESS = 0.035
@@ -65,7 +64,9 @@ fig, ax = plt.subplots(figsize=(8, 5))
 
 # Soft green gradient fill for the Human-Complete Region, darker at the top
 # and lighter toward the Limit of Formalizability.
-green_gradient = LinearSegmentedColormap.from_list("human_complete", ["#a3d1a3", "#eef7ee"])
+green_gradient = LinearSegmentedColormap.from_list(
+    "human_complete", ["#a3d1a3", "#eef7ee"]
+)
 gradient = np.linspace(0, 1, 256).reshape(-1, 1)
 ax.imshow(
     gradient,
@@ -89,7 +90,15 @@ if is_takeoff:
 
 # Draw the "Limit of Formalizability".
 ax.axhline(LIMIT, linestyle=":", color="black", linewidth=1)
-ax.text(X_MIN + 5, LIMIT + 0.015, "Limit of Formalizability", ha="left", va="bottom", fontsize=11, style="italic")
+ax.text(
+    X_MIN + 5,
+    LIMIT + 0.015,
+    "Limit of Formalizability",
+    ha="left",
+    va="bottom",
+    fontsize=11,
+    style="italic",
+)
 
 # Vertical line at the present day.
 ax.axvline(PRESENT, linestyle="--", color="gray", linewidth=0.5)
@@ -114,8 +123,28 @@ ax.grid(axis="y", linewidth=0.3, alpha=0.4)
 
 # Region labels.
 label_x: int = 1950
-ax.text(label_x, 0.78, "Human-Complete Region", ha="center", va="center", fontsize=13, style="italic", color="black", alpha=0.6)
-ax.text(label_x, 0.27, "Formalizable Region", ha="center", va="center", fontsize=13, style="italic", color="black", alpha=0.6)
+ax.text(
+    label_x,
+    0.78,
+    "Human-Complete Region",
+    ha="center",
+    va="center",
+    fontsize=13,
+    style="italic",
+    color="black",
+    alpha=0.6,
+)
+ax.text(
+    label_x,
+    0.27,
+    "Formalizable Region",
+    ha="center",
+    va="center",
+    fontsize=13,
+    style="italic",
+    color="black",
+    alpha=0.6,
+)
 
 # Render.
 out_name = "graph1.png" if is_sigmoid else "graph2.png"
