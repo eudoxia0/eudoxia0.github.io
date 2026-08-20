@@ -1,17 +1,13 @@
 ---
-title: The Trajectory of Automation
+title: Our Servants Will Do That For Us
 summary: Why the post-scarcity utopia is unlikely.
 math: yes
-card: the-trajectory-of-automation.webp
+card: our-servants-will-do-that-for-us.webp
 card_source: |
     Fragment C of the [Antikythera mechanism][an], showing two circular scales.
 
     [an]: https://en.wikipedia.org/wiki/Antikythera_mechanism
 ---
-
-> Live? Our servants will do that for us.
->
-> — [_Axël_][axel], [Auguste Villiers de l'Isle-Adam][adam]
 
 The implicit promise of modernity is: we have to work really hard for a few
 centuries, but eventually we'll get to the _Star Trek_ future where we've
@@ -44,7 +40,7 @@ and [failed][soar] and [failed][actr]) to automate them with software. The
 industrial revolution, and later the computer revolution, automated most tasks
 under this limit:
 
-![A line plot. The X axis is time, ranging from the year 1800 to the year 2100. A vertical dotted line marks the year 2026. The Y axis is qualitative, showing a list of tasks, sorted from top to bottom by increasing complexity. A horizontal dotted line marks the 'Limit of Formalizability'. The region above this line is labeled 'Human-Complete Region'. The region below this line is labeled 'Formalizable Region'. A sigmoid curve, representing technological progress, is drawn starting from just above the origin in the year 1800, to just below the limit of formalizability in 2026.](/assets/content/the-trajectory-of-automation/graph1.png)
+![A line plot. The X axis is time, ranging from the year 1800 to the year 2100. A vertical dotted line marks the year 2026. The Y axis is qualitative, showing a list of tasks, sorted from top to bottom by increasing complexity. A horizontal dotted line marks the 'Limit of Formalizability'. The region above this line is labeled 'Human-Complete Region'. The region below this line is labeled 'Formalizable Region'. A sigmoid curve, representing technological progress, is drawn starting from just above the origin in the year 1800, to just below the limit of formalizability in 2026.](/assets/content/our-servants-will-do-that-for-us/graph1.png)
 
 The human-complete tasks are those you need a human to perform. Some are
 meaningful, like writing essays, some are drudgery, but human-level drudgery,
@@ -57,7 +53,7 @@ outperform humans at most economically valuable work", as per the [OpenAI
 charter][chart]---creates an obvious discontinuity: suddenly we shoot up to 100%
 automation, both of the meaningful work and the drudgery:
 
-![A line plot identical to the above, with one addition: the sigmoid curve representing technical progress shoots up almost vertically a few years after 2026, reaching the top of the Y axis.](/assets/content/the-trajectory-of-automation/graph2.png)
+![A line plot identical to the above, with one addition: the sigmoid curve representing technical progress shoots up almost vertically a few years after 2026, reaching the top of the Y axis.](/assets/content/our-servants-will-do-that-for-us/graph2.png)
 
 And at this point AGI the economic incentives [work against
 humanity][uc]. The only niche to escape to is the relational economy, where
@@ -89,11 +85,11 @@ solipsistic existence that leaves no physical trace in the world.
 
 We see this, increasingly, with knowledge work. Personally, I think software
 engineering is a very meaningful and intellectually-rewarding activity. But
-users just want working software. They're not paying me to sit around like a
-Greek philosopher pondering the next rewrite of the authentication module. They
-don't care about my opinions on the Standard ML module system. They just want
-the software. Why deal with some opinionated maniac when, for $20 a month, you
-get access to this little machine ghost that writes reams and reams of mostly
+users just want working software. They're not paying me to sit around polishing
+the database API into a jewel of flawless, geometric logic. They don't care
+about my opinions on the Standard ML module system. They just want the
+software. Why deal with some opinionated maniac when, for $20 a month, you get
+access to this little machine ghost that writes reams and reams of mostly
 working code, tirelessly, instantly?
 
 The revealed preference of many software firms is: let AI write the code, and
@@ -112,7 +108,8 @@ months later. The difference is that most mathematicians [hate the
 de-intellectualization of their field][tasmin], while software engineering is
 full of narrow-minded, hustle culture-brained, incurious, anti-intellectual
 hucksters who are overjoyed that they no longer have to read or write another
-line of code, or think using formal systems at all.
+line of code, or think using formal systems at all. Why reason at all? [Our
+servants will do that for us][axel].
 
 What about art? Art is the _ne plus ultra_ of meaning, so artists should be
 safe. But every work of art is two things: there's a concrete thing, a text or a
@@ -173,7 +170,6 @@ everything I write about AI was already said by [J. D. Pressman][jdp].
     can just be a pleasing image, a pleasing text, and so on.
 
 [actr]: https://en.wikipedia.org/wiki/ACT-R
-[adam]: https://en.wikipedia.org/wiki/Auguste_Villiers_de_l'Isle-Adam
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [baumol]: https://en.wikipedia.org/wiki/Baumol_effect
 [chart]: https://openai.com/charter/
