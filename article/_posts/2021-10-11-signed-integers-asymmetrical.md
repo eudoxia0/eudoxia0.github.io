@@ -141,7 +141,7 @@ The takeaway: when working with fixed-width integers, test on extremal
 values. And don't trust `-ftrapv`.
 
 [adacore]: https://www.adacore.com/
-[blog]: https://www.electronicdesign.com/technologies/dev-tools/article/21801107/adacore-whats-the-difference-between-ada-and-spark
+[blog]: https://www.electronicdesign.com/technologies/embedded/software/article/21801107/adacore-whats-the-difference-between-ada-and-spark
 [spark]: https://en.wikipedia.org/wiki/SPARK_(programming_language)
 [abs]: https://github.com/AdaCore/Compile_And_Prove_Demo/blob/master/proved/absolute_value.adb
 [austral]: https://github.com/austral/austral
