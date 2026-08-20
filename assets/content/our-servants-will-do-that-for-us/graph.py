@@ -148,4 +148,4 @@ ax.text(
 
 # Render.
 out_name = "graph1.png" if is_sigmoid else "graph2.png"
-fig.savefig(out_name, dpi=350, bbox_inches="tight")
+fig.savefig(out_name, dpi=450, bbox_inches="tight")
