@@ -108,8 +108,11 @@ disappear.
 
 Mathematicians [are going through this process][dark] now, too, and it's an
 [exact parallel][tweet] of what happened to software engineering, only twelve
-months later. And if mathematics, the crown jewel, goes, then everything else
-goes.
+months later. The difference is that most mathematicians [hate the
+de-intellectualization of their field][tasmin], while software engineering is
+full of narrow-minded, hustle culture-brained, incurious, anti-intellectual
+hucksters who are overjoyed that they no longer have to read or write another
+line of code, or think using formal systems at all.
 
 What about art? Art is the _ne plus ultra_ of meaning, so artists should be
 safe. But every work of art is two things: there's a concrete thing, a text or a
@@ -133,7 +136,7 @@ lot more solipsistic that we want to believe.
 # Acknowledgements
 
 Emmy Noether once said that "everything is already in Dedekind". As for me,
-everything was already said by [J. D. Pressman][jdp].
+everything I write about AI was already said by [J. D. Pressman][jdp].
 
 # Footnotes
 
@@ -180,5 +183,6 @@ everything was already said by [J. D. Pressman][jdp].
 [jdp]: https://jdpressman.com/
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
 [spinoza]: https://en.wikipedia.org/wiki/Spinoza%27s_Ethics
+[tasmin]: https://tasmin.substack.com/p/mathematicians-need-to-act
 [tweet]: https://x.com/qualiascript/status/2090168914445508873
 [uc]: /article/no-one-escapes-the-permanent-underclass
