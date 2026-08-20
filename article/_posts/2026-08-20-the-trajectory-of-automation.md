@@ -96,10 +96,6 @@ the software. Why deal with some opinionated maniac when, for $20 a month, you
 get access to this little machine ghost that writes reams and reams of mostly
 working code, tirelessly, instantly?
 
-Mathematicians are going through it now, too, and it's an [exact
-parallel][tweet] of what happened to software engineering, only twelve months
-later.
-
 The revealed preference of many software firms is: let AI write the code, and
 software engineers move one level up, to wrangle the AIs and complement the
 things they can't do. But this change in job description is not because firms
@@ -108,7 +104,12 @@ no online learning, no mutable long-term memory, and while they can write code
 that works, they're not good at organizing and structuring that code. If, in the
 future, these limitations are overcome (and trillions of dollars are being spent
 on overcoming them), then software engineering as a profession will
-disappear. And then, why not all knowledge work?
+disappear.
+
+Mathematicians [are going through this process][dark] now, too, and it's an
+[exact parallel][tweet] of what happened to software engineering, only twelve
+months later. And if mathematics, the crown jewel, goes, then everything else
+goes.
 
 What about art? Art is the _ne plus ultra_ of meaning, so artists should be
 safe. But every work of art is two things: there's a concrete thing, a text or a
@@ -174,6 +175,7 @@ everything was already said by [J. D. Pressman][jdp].
 [baumol]: https://en.wikipedia.org/wiki/Baumol_effect
 [chart]: https://openai.com/charter/
 [cyc]: https://yuxi.ml/cyc
+[dark]: https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics
 [gofai]: https://en.wikipedia.org/wiki/GOFAI
 [jdp]: https://jdpressman.com/
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
