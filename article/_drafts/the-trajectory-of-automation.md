@@ -92,28 +92,28 @@ engineering is a very meaningful and intellectually-rewarding activity. But
 users just want working software. They're not paying me to sit around like a
 Greek philosopher pondering the next rewrite of the authentication module. They
 don't care about my opinions on the Standard ML module system. They just want
-the software. Why deal with some maniac when, for $20 a month, you get access to
-this little machine ghost that writes reams and reams of mostly working code,
-tirelessly, instantly?
+the software. Why deal with some opinionated maniac when, for $20 a month, you
+get access to this little machine ghost that writes reams and reams of mostly
+working code, tirelessly, instantly?
 
 The revealed preference of many software firms is: let AI write the code, and
 software engineers move one level up, to wrangle the AIs and complement the
 things they can't do. But this change in job description is not because firms
-love employing humans, it's because today's AI models have have serious
-limitations: no online learning, no mutable long-term memory, and while they can
-write code that works, they're not good at organizing and structuring that
-code. If, in the future, these limitations are overcome (and trillions of
-dollars are being spent on overcoming them), then software engineering as a
-profession will disappear. And then, why not all knowledge work?
+love employing humans, it's because today's AI models have serious limitations:
+no online learning, no mutable long-term memory, and while they can write code
+that works, they're not good at organizing and structuring that code. If, in the
+future, these limitations are overcome (and trillions of dollars are being spent
+on overcoming them), then software engineering as a profession will
+disappear. And then, why not all knowledge work?
 
 What about art? Art is the _ne plus ultra_ of meaning, so artists should be
 safe. But every work of art is two things: there's a concrete thing, a text or a
 painting or a song; and there's a constellation of human aspects: who made it,
 and why, what madness they were trying to exorcise in making it, what minor
 deity breathed the work into them, the discourse around the work, later art
-inspired by it, etc. And these things are separable: you can enjoy a work of art
-for its aesthetic value, as a sequence of sensory experiences, and ignore every
-other dimension.
+inspired by it, and so on. And these things are separable: you can enjoy a work
+of art for its aesthetic value, as a sequence of sensory impressions, and ignore
+every other dimension.
 
 Now say that a machine could generate texts or images of equivalent aesthetic
 value[^fn2] to your own, instantly and at ~zero cost. How much of your audience
