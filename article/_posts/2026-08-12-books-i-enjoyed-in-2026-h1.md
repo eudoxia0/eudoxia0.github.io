@@ -137,7 +137,7 @@ difficulty of settling space. Very entertainingly written. About half the book
 is about technical aspects: the health effects of microgravity, the fact that
 there's no carbon and little water on the moon, etc. A lot of this is stuff that
 as a space nerd you think about from time to time ("why does nobody mention that
-we have no idea if embryos can develop in less than 1g?") but it's nice to see
+we have no idea if embryos can develop in less than 1G?") but it's nice to see
 all of it articulated, end-to-end. I tend to agree that, without a lot of
 transhumantech, space settlement is an absurd idea.
 
