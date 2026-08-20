@@ -96,6 +96,10 @@ the software. Why deal with some opinionated maniac when, for $20 a month, you
 get access to this little machine ghost that writes reams and reams of mostly
 working code, tirelessly, instantly?
 
+Mathematicians are going through it now, too, and it's an [exact
+parallel][tweet] of what happened to software engineering, only twelve months
+later.
+
 The revealed preference of many software firms is: let AI write the code, and
 software engineers move one level up, to wrangle the AIs and complement the
 things they can't do. But this change in job description is not because firms
@@ -174,4 +178,5 @@ everything was already said by [J. D. Pressman][jdp].
 [jdp]: https://jdpressman.com/
 [soar]: https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)
 [spinoza]: https://en.wikipedia.org/wiki/Spinoza%27s_Ethics
+[tweet]: https://x.com/qualiascript/status/2090168914445508873
 [uc]: /article/no-one-escapes-the-permanent-underclass
