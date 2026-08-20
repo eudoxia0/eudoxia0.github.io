@@ -1655,7 +1655,7 @@ Links:
 
 # See Also {#see}
 
-- [Ownership Types for Safe Programming: Preventing Data Races and Deadlocks](https://web.eecs.umich.edu/~bchandra/publications/oopsla02.pdf)
+- [Ownership Types for Safe Programming: Preventing Data Races and Deadlocks](https://dl.acm.org/doi/10.1145/583854.582440)
 - [Linear types can change the world!](https://web.archive.org/web/20260106062919/https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.5439&rep=rep1&type=pdf)
 - [Henry Baker's Archive of Research Papers](https://www.plover.com/~mjd/misc/hbaker-archive/home.html)
   - [Linear Logic and Permutation Stacks--The Forth Shall Be First](https://www.plover.com/~mjd/misc/hbaker-archive/ForthStack.html)
