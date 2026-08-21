@@ -3,7 +3,9 @@ title: No-One Escapes the Permanent Underclass
 summary: Capital won't save you from disempowerment.
 card: no-one-escapes-the-permanent-underclass.webp
 card_source: |
-    _Pandora_, Odilon Redon, 1914.
+    Detail from _Pandora_, [Odilon Redon][or], 1914.
+
+    [or]: https://en.wikipedia.org/wiki/Odilon_Redon
 ---
 
 Shall I end this life a pauper? If AI can do all work at human level or better,
