@@ -3,7 +3,9 @@ title: Human Routers of Machine Words
 summary: On people who use AI to think.
 card: human-routers-of-machine-words.webp
 card_source: |
-    _Battle of Lights, Coney Island, Mardi Gras_, Joseph Stella, 1914.
+    _Battle of Lights, Coney Island, Mardi Gras_, [Joseph Stella][js], 1914.
+
+    [js]: https://en.wikipedia.org/wiki/Joseph_Stella
 ---
 
 When I open a link, say on Hacker News, and I see a blog post or a GitHub README
