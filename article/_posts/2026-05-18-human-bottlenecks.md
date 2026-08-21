@@ -3,7 +3,7 @@ title: Human Bottlenecks
 summary: Why AI won't augment human capabilities much.
 card: human-bottlenecks.webp
 card_source: |
-    Detail from _Nocturne, The Solent_, by James McNeill Whistler
+    Detail from _Nocturne, The Solent_, by James McNeill Whistler.
 ---
 
 AI models are very capable and get more capable each year. So naturally people
