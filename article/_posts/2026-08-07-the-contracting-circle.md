@@ -3,7 +3,7 @@ title: The Contracting Circle
 summary: Why don't we believe LLMs are people?
 card: the-contracting-circle.webp
 card_source: |
-    _Summer Night_, [Winslow Homer][wh], 1890.
+    Detail from _Summer Night_, [Winslow Homer][wh], 1890.
 
     [wh]: https://en.wikipedia.org/wiki/Winslow_Homer
 ---

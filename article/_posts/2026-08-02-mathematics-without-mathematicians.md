@@ -3,7 +3,7 @@ title: Mathematics Without Mathematicians
 summary: We must know. We shall not know.
 card: mathematics-without-mathematicians.webp
 card_source: |
-    [_The Astronomer_][a], [Johannes Vermeer][b], 1668–1669.
+    Detail from [_The Astronomer_][a], [Johannes Vermeer][b], 1668–1669.
 
     [a]: https://en.wikipedia.org/wiki/The_Astronomer
     [b]: https://en.wikipedia.org/wiki/Johannes_Vermeer
