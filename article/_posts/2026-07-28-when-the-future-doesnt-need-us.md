@@ -3,7 +3,10 @@ title: When The Future Doesn’t Need Us
 summary: What does the world look like when AI outcompetes humans?
 card: when-the-future-doesnt-need-us.webp
 card_source: |
-    _Abstract Speed + Sound_, Giacomo Balla, 1914.
+    [_Abstract Speed + Sound_][a], [Giacomo Balla][b], 1914.
+
+    [a]: https://en.wikipedia.org/wiki/Abstract_Speed_+_Sound
+    [b]: https://en.wikipedia.org/wiki/Giacomo_Balla
 math: yes
 ---
 
