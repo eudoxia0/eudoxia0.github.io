@@ -3,7 +3,7 @@ title: Mathematics Without Mathematicians
 summary: We must know. We shall not know.
 card: mathematics-without-mathematicians.webp
 card_source: |
-    _The Geographer_, Johannes Vermeer, 1668–1669.
+    _The Astronomer_, Johannes Vermeer, 1668–1669.
 ---
 
 Yesterday, OpenAI [announced][ann] the solution to ten open problems in
