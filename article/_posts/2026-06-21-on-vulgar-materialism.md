@@ -3,7 +3,9 @@ title: On Vulgar Materialism
 summary: Or, sufficiently advanced cynicism is indistinguishable from naïveté.
 card: on-vulgar-materialism.webp
 card_source: |
-    _Piazza San Marco with the Basilica_, Canaletto, 1730.
+    _Piazza San Marco with the Basilica_, [Canaletto][c], 1730.
+
+    [c]: https://en.wikipedia.org/wiki/Canaletto
 ---
 
 > _The most stubborn facts are those of the spirit, not those of the physical
