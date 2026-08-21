@@ -4,7 +4,9 @@ summary: Review of Marcus Hutter's Job-Less Utopia.
 summary_html: Review of Marcus Hutter's <i>Job-Less Utopia</i>.
 card: review-job-less-utopia.webp
 card_source: |
-    _Spring_, Lawrence Alma-Tadema, 1894.
+    Detail from _Spring_, [Lawrence Alma-Tadema][lat], 1894.
+
+    [lat]: https://en.wikipedia.org/wiki/Lawrence_Alma-Tadema
 ---
 
 [Marcus Hutter][hut]---oldheads will remember him from [AIXI][aixi]---recently
