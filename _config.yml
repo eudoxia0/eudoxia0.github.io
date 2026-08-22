@@ -2,6 +2,7 @@ title: Fernando Borretti
 description: Personal website
 baseurl: ""
 url: "https://borretti.me"
+timezone: "Australia/Sydney"
 
 markdown: kramdown
 
