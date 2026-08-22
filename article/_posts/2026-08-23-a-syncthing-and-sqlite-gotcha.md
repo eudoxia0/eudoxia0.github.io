@@ -44,7 +44,7 @@ path and gives you a pointer to the file, which you mutate directly". Whereas
 mapping from pathnames to files but doesn't touch files at all.
 
 [epoch]: https://github.com/eudoxia0/epoch
-[laptop]: https://borretti.me/article/linux-on-the-fujitsu-lifebook-u729
+[laptop]: /article/linux-on-the-fujitsu-lifebook-u729
 [rn]: https://pubs.opengroup.org/onlinepubs/9799919799/functions/rename.html
 [rusqlite]: https://github.com/rusqlite/rusqlite
 [sqlite]: https://sqlite.org/
