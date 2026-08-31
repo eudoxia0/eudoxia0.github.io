@@ -1,6 +1,6 @@
 ---
 title: On Inevitability
-summary: How can something so centralized be inevitable?
+summary: Why superintelligent AI is not inevitable.
 card: on-inevitability.webp
 card_source: |
     Detail from [_Man, Controller of the Universe_][a], by [Diego Rivera][b].
