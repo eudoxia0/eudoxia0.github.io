@@ -192,7 +192,7 @@ economic growth, since humans are no longer economic actors? And then, the state
 will think: "why keep the underclass around at all? We can put their UBI to
 better use. What are they going to do, go on strike? They are already
 economically useless. Rise up?  When every citizen has a superintelligent AI
-watching their every step, reading every text message, scrutizing every
+watching their every step, reading every text message, scrutinizing every
 microexpression on their face?  Impossible".
 
 How do AI safety people who think ASI is inevitable respond to such a scenario?
