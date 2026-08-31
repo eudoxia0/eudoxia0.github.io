@@ -9,9 +9,9 @@ card_source: |
     [b]: https://en.wikipedia.org/wiki/Diego_Rivera
 ---
 
-There's a widespread belief that superintelligent AI (ASI) is inevitable. In
-this post, I argue that this is false, and believing it is upstream of a lot of
-bad discourse.
+There's a widespread belief that artificial superintelligence (ASI) is
+inevitable. In this post, I argue that this is false, and believing it is
+upstream of a lot of bad discourse.
 
 # Why do people believe it?
 
