@@ -203,7 +203,6 @@ body {
                     color: var(--link-color);
                 }
             }
-
         }
     }
 }
@@ -498,6 +497,7 @@ article {
     p,
     li {
         text-align: justify;
+        hyphens: auto;
     }
 
     img {
