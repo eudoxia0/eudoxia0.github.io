@@ -65,10 +65,10 @@ genius who finds the right algorithm can build and run an ASI on a single-core
 laptop. There are _de facto_ two frontier AI companies, both in the same city,
 and they have to spend astronomical quantities of money, hundreds of billions of
 dollars, to push the frontier of AI slightly forward. And the set of people who
-can push the frontier is so small that they constanty jump ship from one company
-to the other: from DeepMind to OpenAI to Anthropic, and back again. The timeline
-of methods is the same: in 2020-2023, everyone was scaling pretraining; in
-2022-2023, everyone was doing instruction finetuning and RLHF; then in
+can push the frontier is so small that they constantly jump ship from one
+company to the other: from DeepMind to OpenAI to Anthropic, and back again. The
+timeline of methods is the same: in 2020-2023, everyone was scaling pretraining;
+in 2022-2023, everyone was doing instruction finetuning and RLHF; then in
 2023-2024, synthetic data started working and later reasoning models; since then
 the focus has been on RL. The same companies, people, ideas, methods, and
 paradigm. And these companies have [little political power][power] with which to
