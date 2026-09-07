@@ -299,7 +299,7 @@ projects:
     description: |
       Common Lisp parser and simplifier for [Trello][trello] JSON exports.
 
-      [trello]: [trello]: https://trello.com/
+      [trello]: https://trello.com/
 
   - name: arachne
     url: https://github.com/eudoxia0/arachne
