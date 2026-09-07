@@ -545,3 +545,9 @@ projects:
 
       [sm2]: https://super-memory.com/english/ol/sm2.htm
       [sm]: https://en.wikipedia.org/wiki/SuperMemo
+
+  - name: cartesian
+    url: https://github.com/eudoxia0/cartesian
+    active: false
+    description: |
+      A personal exocortex.
