@@ -122,8 +122,8 @@ started using Pangram to filter out a deluge of AI-written submissions, and I
 read a tweet from a college professor---a college professor, writing under their
 own name!---defending the use of AI to write papers.
 
-I don't using AI to write is analogous to calculators, or search engines, or
-other such things. There are only finitely any things you can automate. And once
+I don't think using AI to write is analogous to calculators, or search engines, or
+other such things. There are only finitely many things you can automate. And once
 you've automated writing, there's no higher-order activity to move to. People
 think "the ideas are mine, the writing is the AI", i.e., they feed the AI a list
 of rambling bullet points that the AI massages into a blog post, or a paper, or
