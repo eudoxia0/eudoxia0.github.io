@@ -35,7 +35,7 @@ I like 1Password and I was sad when Apple [Sherlocked][sherlock] them with the
 
 Update (2026-04-24): a [postmortem][pm] is now available.
 
-[forum]: https://www.1password.community/discussions/developers/re-1password-chrome-extension-is-incorrectly-manipulating--blocks/165329
+[forum]: https://www.1password.community/developers-69/1password-chrome-extension-is-incorrectly-manipulating-code-blocks-23713?postid=130794#post130794
 [modal]: https://www.1password.dev/ssh/git-commit-signing
 [pm]: https://1password.statuspage.io/incidents/vkm6tvh2b568
 [prism]: https://prismjs.com/
