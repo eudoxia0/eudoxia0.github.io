@@ -566,3 +566,11 @@ projects:
       Extensions to the C programming language built with [cmacro][a].
 
       [a]: https://github.com/eudoxia0/cmacro
+
+  - name: electron-tools
+    url: https://github.com/ceramic/electron-tools
+    active: false
+    description: |
+      A Common Lisp library for working with [Electron][a].
+
+      [a]: https://www.electronjs.org/
