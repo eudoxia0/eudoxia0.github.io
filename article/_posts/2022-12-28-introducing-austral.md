@@ -1020,7 +1020,7 @@ There's a small [Discord][discord] for the language, but the best way to
 communicate is probably through public [GitHub issues][issues]. Or you can ping
 me on [Twitter][tw], which is the fastest way to reach me.
 
-[discord]: https://discord.gg/8cEuAcD8pM
+[discord]: https://discord.com/invite/8cEuAcD8pM
 [issues]: https://github.com/austral/austral/issues
 [tw]: https://twitter.com/zetalyrae
 
