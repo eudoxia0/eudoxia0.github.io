@@ -551,3 +551,10 @@ projects:
     active: false
     description: |
       A personal exocortex.
+
+  - name: airloom
+    url: https://github.com/eudoxia0/airloom
+    active: false
+    description: |
+      A reverse literate programming tool: it takes code and documentation and
+      weaves them together. Language-agnostic and markup-agnostic.
