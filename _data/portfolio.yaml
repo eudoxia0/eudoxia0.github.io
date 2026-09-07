@@ -580,3 +580,17 @@ projects:
     active: false
     description: |
       A Common Lisp library for working with executables.
+
+  - name: markedit
+    url: https://github.com/ceramic/markedit
+    active: false
+    description: |
+      A Markdown editor built with [Ceramic][a].
+
+      [a]: https://ceramic.github.io/
+
+  - name: wax
+    url: https://github.com/eudoxia0/wax
+    active: false
+    description: |
+      An experiment in building a TeX-like markup language.
