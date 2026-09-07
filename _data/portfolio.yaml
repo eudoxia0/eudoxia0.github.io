@@ -574,3 +574,9 @@ projects:
       A Common Lisp library for working with [Electron][a].
 
       [a]: https://www.electronjs.org/
+
+  - name: trivial-exe
+    url: https://github.com/ceramic/trivial-exe
+    active: false
+    description: |
+      A Common Lisp library for working with executables.
