@@ -530,7 +530,7 @@ projects:
       Experiments in building macOS apps using Swift and SwiftUI, without Xcode.
 
   - name: fsrs
-    url: https://github.com/eudoxia0/texgen
+    url: https://github.com/eudoxia0/fsrs
     active: false
     description: |
       An implementation of the [FSRS][a] algorithm in 100 lines of Rust.
