@@ -558,3 +558,11 @@ projects:
     description: |
       A reverse literate programming tool: it takes code and documentation and
       weaves them together. Language-agnostic and markup-agnostic.
+
+  - name: magma
+    url: https://github.com/eudoxia0/magma
+    active: false
+    description: |
+      Extensions to the C programming language built with [cmacro][a].
+
+      [a]: https://github.com/eudoxia0/cmacro
