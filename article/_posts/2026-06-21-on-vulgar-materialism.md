@@ -147,7 +147,7 @@ legitimized violence the state would _vaporize_ them.
 [gaza]: https://x.com/opinonhaver/status/1800634723812962786
 [gb]: https://en.wikipedia.org/wiki/Venetian_nobility#Houses_made_for_money
 [geo]: https://www.jstor.org/stable/2008950
-[gilens2014]: https://www.cambridge.org/core/journals/perspectives-on-politics/article/abs/testing-theories-of-american-politics-elites-interest-groups-and-average-citizens/62327F513959D0A304D4893B382B992B
+[gilens2014]: https://www.cambridge.org/core/journals/perspectives-on-politics/article/testing-theories-of-american-politics-elites-interest-groups-and-average-citizens/62327F513959D0A304D4893B382B992B
 [gilens2014pdf]: https://www.almendron.com/tribuna/wp-content/uploads/2014/04/testing-theories-of-american-politics-elites-interest-groups-and-average-citizens.pdf
 [gly]: https://en.wikipedia.org/wiki/Glyphosate
 [gwern]: https://gwern.net/
