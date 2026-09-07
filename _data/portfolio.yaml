@@ -194,7 +194,7 @@ projects:
     url: https://github.com/eudoxia0/concordia
     active: false
     description: |
-      A document preparation system.
+      A document preparation system built in Standard ML.
 
   - name: tfc
     url: https://github.com/eudoxia0/tfc
