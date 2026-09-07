@@ -200,7 +200,7 @@ lean4-mode = pkgs.emacsPackages.melpaBuild {
 [sq]: https://smartquotesforsmartpeople.com/
 [stumpwm]: https://github.com/stumpwm/stumpwm
 [sub]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-[tv]: https://thomasvoss.com/
+[tv]: https://web.archive.org/web/20260315141911/https://thomasvoss.com/
 [xc]: https://man.archlinux.org/man/XCompose.3.en
 [xcm-fixed]: https://web.archive.org/web/20260206072821/https://git.thomasvoss.com/xcompose-mode
 [xcm]: https://github.com/kragen/xcompose/blob/4d8eab4d05a19537ce79294ae0459fdae78ffb20/xcompose-mode.el
