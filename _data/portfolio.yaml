@@ -12,6 +12,17 @@ projects:
     description: |
       A self-hosted personal journal app.
 
+  - name: Common Lisp website
+    url: https://lisp-lang.org/
+    active: true
+    description: |
+      I built a website to promote Common Lisp, including a gallery of Lisp
+      [success stories][a], a [wiki][b], and a [tutorial][c].
+
+      [a]: https://lisp-lang.org/success/
+      [b]: https://lisp-lang.org/wiki/
+      [c]: https://lisp-lang.org/learn/
+
   - name: cl-base58
     url: https://github.com/eudoxia0/cl-base58
     active: false
