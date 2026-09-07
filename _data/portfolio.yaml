@@ -134,7 +134,7 @@ projects:
     url: https://github.com/eudoxia0/swank-protocol
     active: false
     description: |
-      Low-level client for [SLIME][slime]'s swank protocol.
+      Low-level client for the [SLIME][slime] wire protocol.
 
       [slime]: https://slime.common-lisp.dev/
 
