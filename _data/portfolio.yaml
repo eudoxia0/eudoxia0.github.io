@@ -536,3 +536,12 @@ projects:
       An implementation of the [FSRS][a] algorithm in 100 lines of Rust.
 
       [a]: https://github.com/open-spaced-repetition/fsrs4anki
+
+  - name: sm2
+    url: https://github.com/eudoxia0/sm2
+    active: false
+    description: |
+      An implementation of the [SM-2][sm2] algorithm from [SuperMemo][sm]. For my own elucidation.
+
+      [sm2]: https://super-memory.com/english/ol/sm2.htm
+      [sm]: https://en.wikipedia.org/wiki/SuperMemo
