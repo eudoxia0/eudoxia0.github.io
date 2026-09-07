@@ -1,4 +1,17 @@
 projects:
+  - name: hashcards
+    url: https://github.com/eudoxia0/hashcards
+    active: true
+    best: true
+    description: |
+      A plain text-based spaced repetition system.
+
+  - name: epoch
+    url: https://github.com/eudoxia0/epoch
+    active: true
+    description: |
+      A self-hosted personal journal app.
+
   - name: cl-base58
     url: https://github.com/eudoxia0/cl-base58
     active: false
@@ -504,16 +517,3 @@ projects:
     active: false
     description: |
       Experiments in building macOS apps using Swift and SwiftUI, without Xcode.
-
-  - name: hashcards
-    url: https://github.com/eudoxia0/hashcards
-    active: true
-    best: true
-    description: |
-      A plain text-based spaced repetition system.
-
-  - name: epoch
-    url: https://github.com/eudoxia0/epoch
-    active: true
-    description: |
-      A self-hosted personal journal app.
