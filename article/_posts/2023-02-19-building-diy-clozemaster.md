@@ -488,5 +488,5 @@ proper nouns, reading this I realized I was doubly-counting differently-cased
 words and went back and added those `.lower()` calls in `parse_sentences`.
 
 [kev]: https://sookocheff.com/
-[post]: https://sookocheff.com/post/language/bulk-generating-cloze-deletions-for-learning-a-language-with-anki
+[post]: https://sookocheff.com/post/language/bulk-generating-cloze-deletions-for-learning-a-language-with-anki/
 [polly]: https://aws.amazon.com/polly/
