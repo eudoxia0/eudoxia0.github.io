@@ -1,0 +1,519 @@
+projects:
+  - name: cl-base58
+    url: https://github.com/eudoxia0/cl-base58
+    active: false
+    description: |
+      An implementation of Bitcoin’s [`base58`][b58] encoding and decoding.
+
+      [b58]: https://bitcoinwiki.org/wiki/Base58
+
+  - name: cl-virtualbox
+    url: https://github.com/eudoxia0/cl-virtualbox
+    active: false
+    description: |
+      A tiny library to control [VirtualBox][a] via the [`vboxmanage`][b] command.
+
+      [a]: https://en.wikipedia.org/wiki/VirtualBox
+      [b]: https://www.virtualbox.org/manual/ch08.html
+
+  - name: eco
+    url: https://github.com/eudoxia0/eco
+    active: false
+    description: |
+      A fast and designer-friendly template engine, inspired by the syntax of [eRuby][eruby].
+
+      [eruby]: https://en.wikipedia.org/wiki/ERuby
+
+  - name: trivial-download
+    url: https://github.com/eudoxia0/trivial-download
+    active: false
+    description: |
+      A tiny library to simplify downloading files over HTTP.
+
+  - name: trivial-extract
+    url: https://github.com/eudoxia0/trivial-extract
+    active: false
+    description: |
+      Utility for extracting `.tar`, .`tar.gz` and `.zip` files.
+
+  - name: trivial-ssh
+    url: https://github.com/eudoxia0/trivial-ssh
+    active: false
+    description: |
+      A wrapper around [`cl-libssh2`][cl-libssh2], which itself is a binding to the [`libssh2`][libssh2] library.
+
+      [cl-libssh2]: https://github.com/alxchk/cl-libssh2
+      [libssh2]: https://libssh2.org/
+
+  - name: cl-pass
+    url: https://github.com/eudoxia0/cl-pass
+    active: false
+    description: |
+      Password hashing and verification with reasonable, secure defaults.
+
+  - name: hermetic
+    url: https://github.com/eudoxia0/hermetic
+    active: false
+    description: |
+      An authentication library for [Clack][clack] web applications.
+
+      [clack]: https://github.com/fukamachi/clack
+
+  - name: clack-errors
+    url: https://github.com/eudoxia0/clack-errors
+    active: false
+    description: |
+      A clone of [better_errors][be] for [Clack][clack].
+
+      [be]: https://github.com/BetterErrors/better_errors
+      [clack]: https://github.com/fukamachi/clack
+
+  - name: asdf-linguist
+    url: https://github.com/eudoxia0/asdf-linguist
+    active: false
+    description: |
+      A collection of extensions to [ASDF][asdf], the de-facto build system for Common Lisp.
+
+      [asdf]: https://asdf.common-lisp.dev/
+
+  - name: find-port
+    url: https://github.com/eudoxia0/find-port
+    active: false
+    description: |
+      A Common Lisp library to programmatically find open ports.
+
+  - name: cl-yaml
+    url: https://github.com/eudoxia0/cl-yaml
+    active: false
+    description: |
+      Common Lisp [yaml][yaml] parser built on top of [cl-libyaml][cl-libyaml].
+
+      [yaml]: https://yaml.org/
+      [cl-libyaml]: https://github.com/eudoxia0/cl-libyaml
+
+  - name: cl-libyaml
+    url: https://github.com/eudoxia0/cl-libyaml
+    active: false
+    description: |
+      Low-level [libyaml][libyaml] bindings for Common Lisp.
+
+      [libyaml]: https://pyyaml.org/wiki/LibYAML
+
+  - name: docparser
+    url: https://github.com/eudoxia0/docparser
+    active: false
+    description: |
+      Library to extract documentation from Common Lisp systems by injecting
+      into the macroexpansion process.
+
+  - name: swank-protocol
+    url: https://github.com/eudoxia0/swank-protocol
+    active: false
+    description: |
+      Low-level client for [SLIME][slime]'s swank protocol.
+
+      [slime]: https://slime.common-lisp.dev/
+
+  - name: NeuriteTracer
+    url: https://github.com/eudoxia0/NeuriteTracer
+    active: false
+    description: |
+      An old experiment in computer vision: using [OpenCV][opencv] to trace the
+      contours of neurites in electron micrographs of human brain tissue.
+
+      [opencv]: https://opencv.org/
+
+  - name: MNT
+    url: https://github.com/eudoxia0/MNT
+    active: false
+    description: |
+      Simple molecular devices built with [NanoEngineer][ne].
+
+      [ne]: https://github.com/kanzure/nanoengineer
+
+  - name: astro-eog581
+    url: https://github.com/eudoxia0/astro-eog581
+    active: false
+    description: |
+      Astronomical calculations for [_The Epiphany of Gliese 581_][eog581].
+
+      [eog581]: https://borretti.me/fiction/eog581
+
+  - name: mlunit
+    url: https://github.com/eudoxia0/mlunit
+    active: false
+    description: |
+      Unit testing framework for Standard ML.
+
+  - name: parsimony
+    url: https://github.com/eudoxia0/parsimony
+    active: false
+    description: |
+      [Parser combinators][parcom] for Standard ML.
+
+      [parcom]: https://en.wikipedia.org/wiki/Parser_combinator
+
+  - name: interim
+    url: https://github.com/eudoxia0/interim
+    active: false
+    best: true
+    description: |
+      Low-level Lisp with compile-time memory management.
+
+  - name: l0
+    url: https://github.com/eudoxia0/l0
+    active: false
+    description: |
+      Lisp with linear types.
+
+  - name: concordia
+    url: https://github.com/eudoxia0/concordia
+    active: false
+    description: |
+      A document preparation system.
+
+  - name: tfc
+    url: https://github.com/eudoxia0/tfc
+    active: false
+    description: |
+      A tiny compiler for a monomorphic typed [Forth][forth].
+
+      [forth]: https://en.wikipedia.org/wiki/Forth_(programming_language)
+
+  - name: sml-sqlite3
+    url: https://github.com/eudoxia0/sml-sqlite3
+    active: false
+    description: |
+      [SQLite][sqlite] bindings for [MLton][mlton].
+
+      [sqlite]: https://www.sqlite.org/index.html
+      [mlton]: https://en.wikipedia.org/wiki/MLton
+
+  - name: lucerne
+    url: https://github.com/eudoxia0/lucerne
+    active: false
+    description: |
+      Common Lisp web framework built on top of [Clack][clack].
+
+      [clack]: https://github.com/fukamachi/clack
+
+  - name: terminal-keypress
+    url: https://github.com/eudoxia0/terminal-keypress
+    active: false
+    description: |
+      Library to read terminal keypress events.
+
+  - name: terminal-size
+    url: https://github.com/eudoxia0/terminal-size
+    active: false
+    description: |
+      Library to query the size of a terminal window.
+
+  - name: git-file-history
+    url: https://github.com/eudoxia0/git-file-history
+    active: false
+    description: |
+      Library to retrieve a file's commit history in Git.
+
+  - name: parse-front-matter
+    url: https://github.com/eudoxia0/parse-front-matter
+    active: false
+    description: |
+      Jekyll-style [front matter][fmat] parser for Common Lisp.
+
+      [fmat]: https://jekyllrb.com/docs/front-matter/
+
+  - name: clos-fixtures
+    url: https://github.com/eudoxia0/clos-fixtures
+    active: false
+    description: |
+      Test fixtures for CLOS classes.
+
+  - name: trivial-open-browser
+    url: https://github.com/eudoxia0/trivial-open-browser
+    active: false
+    description: |
+      Portable library to open the system's web browser to a URL.
+
+  - name: which
+    url: https://github.com/eudoxia0/which
+    active: false
+    description: |
+      The `which` command in Common Lisp.
+
+  - name: path-parse
+    url: https://github.com/eudoxia0/path-parse
+    active: false
+    description: |
+      Parser of the `PATH` environment variable.
+
+  - name: lass-flexbox
+    url: https://github.com/eudoxia0/lass-flexbox
+    active: false
+    description: |
+      Flexbox macros for [Lass][lass].
+
+      [lass]: https://shinmera.github.io/LASS/
+
+  - name: lime
+    url: https://github.com/eudoxia0/lime
+    active: false
+    description: |
+      High-level client for [SLIME][slime]'s swank protocol.
+
+      [slime]: https://slime.common-lisp.dev/
+
+  - name: avatar-api
+    url: https://github.com/eudoxia0/avatar-api
+    active: false
+    description: |
+      Retrieve avatar metadata from social media services.
+
+  - name: trello-json
+    url: https://github.com/eudoxia0/trello-json
+    active: false
+    description: |
+      Common Lisp parser and simplifier for [Trello][trello] JSON exports.
+
+      [trello]: [trello]: https://trello.com/
+
+  - name: arachne
+    url: https://github.com/eudoxia0/arachne
+    active: false
+    description: |
+      A web crawling framework in Common Lisp, inspired by [Scrapy][scrapy].
+
+      [scrapy]: https://www.scrapy.org/
+
+  - name: wax
+    url: https://github.com/eudoxia0/wax
+    active: false
+    description: |
+      TeX-like markup language experiment.
+
+  - name: postmaster
+    url: https://github.com/eudoxia0/postmaster
+    active: false
+    description: |
+      High-level library for sending and retrieving emails in Common Lisp.
+
+  - name: postmaster-mock
+    url: https://github.com/eudoxia0/postmaster-mock
+    active: false
+    description: |
+      Test classes for Postmaster.
+
+  - name: texgen
+    url: https://github.com/eudoxia0/texgen
+    active: false
+    description: |
+      Common Lisp DSL for generating TeX.
+
+  - name: lcm
+    url: https://github.com/eudoxia0/lcm
+    active: false
+    description: |
+      System configuration management in Common Lisp.
+
+  - name: ansi-spec
+    url: https://github.com/LispLang/ansi-spec
+    active: false
+    description: |
+      A project to parse the TeX sources of the draft ANSI Common Lisp
+      specification.
+
+  - name: antimer
+    url: https://github.com/antimer/antimer
+    active: false
+    description: |
+      A wiki in Common Lisp.
+
+  - name: liblmdb
+    url: https://github.com/antimer/liblmdb
+    active: false
+    description: |
+      Low-level bindings for [LMDB][lmdb].
+
+      [lmdb]: https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database
+
+  - name: lmdb
+    url: https://github.com/antimer/lmdb
+    active: false
+    description: |
+      High-levels LMDB bindings for Common Lisp.
+
+  - name: remote-dom
+    url: https://github.com/ParenBook/remote-dom
+    active: false
+    description: |
+      A library to remotely-control the browser DOM from Common Lisp.
+
+  - name: ceramic
+    url: https://github.com/ceramic/ceramic
+    active: false
+    description: |
+      [Electron][electron] for Common Lisp.
+
+      [electron]: https://www.electronjs.org/
+
+  - name: trivial-ws
+    url: https://github.com/ceramic/trivial-ws
+    active: false
+    description: |
+      Simple WebSockets for Common Lisp.
+
+  - name: trivial-compress
+    url: https://github.com/ceramic/trivial-compress
+    active: false
+    description: |
+      Utility library to compress a directory.
+
+  - name: trivial-build
+    url: https://github.com/ceramic/trivial-build
+    active: false
+    description: |
+      A tiny library to compile a Common Lisp system into an executable.
+
+  - name: remote-js
+    url: https://github.com/ceramic/remote-js
+    active: false
+    description: |
+      Run JavaScript in the browser from Common Lisp.
+
+  - name: common-doc
+    url: https://github.com/CommonDoc/common-doc
+    active: false
+    description: |
+      A framework for representing and manipulating documents.
+
+  - name: scriba
+    url: https://github.com/CommonDoc/scriba
+    active: false
+    description: |
+      A markup language with Scribe syntax for CommonDoc.
+
+  - name: codex
+    url: https://github.com/CommonDoc/codex
+    active: false
+    description: |
+      A documentation system for Common Lisp built on top of CommonDoc.
+
+  - name: common-html
+    url: https://github.com/CommonDoc/common-html
+    active: false
+    description: |
+      An HTML target for CommonDoc.
+
+  - name: common-doc-plump
+    url: https://github.com/CommonDoc/common-doc-plump
+    active: false
+    description: |
+      Translates a Plump DOM into a CommonDoc document and back
+
+  - name: vertex
+    url: https://github.com/CommonDoc/vertex
+    active: false
+    description: |
+      A markup language with TeX syntax for CommonDoc.
+
+  - name: pandocl
+    url: https://github.com/CommonDoc/pandocl
+    active: false
+    description: |
+      A document converter built on CommonDoc, similar to Pandoc.
+
+  - name: thorn
+    url: https://github.com/CommonDoc/thorn
+    active: false
+    description: |
+      CommonDoc extension for inserting special characters.
+
+  - name: parenml
+    url: https://github.com/CommonDoc/parenml
+    active: false
+    description: |
+      An S-expression markup language for CommonDoc.
+
+  - name: crane
+    url: https://github.com/eudoxia0/crane
+    active: false
+    best: true
+    description: |
+      An ORM for Common Lisp.
+
+  - name: cmacro
+    url: https://github.com/eudoxia0/cmacro
+    active: false
+    best: true
+    description: |
+      A macro system for C.
+
+  - name: rock
+    url: https://github.com/eudoxia0/rock
+    active: false
+    description: |
+      An asset bundler for Common Lisp.
+
+  - name: corona
+    url: https://github.com/eudoxia0/corona
+    active: false
+    description: |
+      A DSL for defining virtual machines in Common Lisp. Essentially a lightweight clone of [Vagrant][v].
+
+      [v]: https://en.wikipedia.org/wiki/Vagrant_(software)
+
+  - name: Austral
+    url: https://austral-lang.org/
+    active: false
+    best: true
+    description: |
+      Austral is a systems programming language with linear types and capability-based security.
+
+  - name: mkinvoice
+    url: https://github.com/eudoxia0/mkinvoice
+    active: false
+    description: |
+      A small CLI app to generate beautiful PDF invoices from TOML data.
+
+  - name: zetanom
+    url: https://github.com/eudoxia0/zetanom
+    active: false
+    description: |
+      A small, self-hosted diet-tracking app.
+
+  - name: claude-plays-anchorhead
+    url: https://github.com/eudoxia0/claude-plays-anchorhead
+    active: false
+    description: |
+      An experiment in letting an LLM play an interactive fiction game.
+
+  - name: koboexport
+    url: https://github.com/eudoxia0/koboexport
+    active: false
+    description: |
+      A tiny Rust app to export clippings from the Kobo's SQLite database.
+
+  - name: appkit-without-xcode
+    url: https://github.com/eudoxia0/appkit-without-xcode
+    active: false
+    description: |
+      Experiments in building macOS apps using Objective-C and AppKit, without Xcode.
+
+  - name: swiftui-without-xcode
+    url: https://github.com/eudoxia0/swiftui-without-xcode
+    active: false
+    description: |
+      Experiments in building macOS apps using Swift and SwiftUI, without Xcode.
+
+  - name: hashcards
+    url: https://github.com/eudoxia0/hashcards
+    active: true
+    best: true
+    description: |
+      A plain text-based spaced repetition system.
+
+  - name: epoch
+    url: https://github.com/eudoxia0/epoch
+    active: true
+    description: |
+      A self-hosted personal journal app.

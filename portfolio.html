@@ -1,0 +1,49 @@
+---
+title: Portfolio
+layout: common
+permalink: /portfolio/
+---
+
+{% assign projects_sorted = site.data.portfolio.projects | sort_natural: 'name' %}
+
+<article>
+    <h1>Best Projects</h1>
+    <dl>
+        {% for project in projects_sorted %}
+            {% if project.best %}
+                <dt>
+                    <a href="{{ project.url }}">{{ project.name }}</a>
+                </dt>
+                <dd>
+                    {{ project.description | markdownify }}
+                </dd>
+            {% endif %}
+        {% endfor %}
+    </dl>
+    <h1>Active Projects</h1>
+    <dl>
+        {% for project in projects_sorted %}
+            {% if project.active == true %}
+                <dt>
+                    <a href="{{ project.url }}">{{ project.name }}</a>
+                </dt>
+                <dd>
+                    {{ project.description | markdownify }}
+                </dd>
+            {% endif %}
+        {% endfor %}
+    </dl>
+    <h1>Past Projects</h1>
+    <dl>
+        {% for project in projects_sorted %}
+            {% if project.active == false %}
+                <dt>
+                    <a href="{{ project.url }}">{{ project.name }}</a>
+                </dt>
+                <dd>
+                    {{ project.description | markdownify }}
+                </dd>
+            {% endif %}
+        {% endfor %}
+    </dl>
+</article>
