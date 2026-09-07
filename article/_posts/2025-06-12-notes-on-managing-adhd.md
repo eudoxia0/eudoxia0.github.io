@@ -490,5 +490,5 @@ Thanks to Cameron Pinnegar for reviewing.
 [htdt]: https://davidcain.gumroad.com/l/howtodothings
 [parker]: https://parconley.com/focusmate/
 [plt]: https://redex.racket-lang.org/
-[project]: https://www.todoist.com/help/articles/introduction-to-projects-TLTjNftLM
+[project]: https://www.todoist.com/help/todoist/features/introduction-to-projects-TLTjNftLM
 [spoon]: https://en.wikipedia.org/wiki/Spoon_theory
