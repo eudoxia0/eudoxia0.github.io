@@ -174,7 +174,7 @@ This isn't really an area where my beliefs changed. Rather, it's one of the
 reasons that I was originally optimistic about AI.
 
 I was born in 1994, so I lived most of my life in the [great
-stagnation][flycar]. As I teenager, I read [_Engines of Creation_][eoc], [_The
+stagnation][flycar]. As a teenager, I read [_Engines of Creation_][eoc], [_The
 Diamond Age_][tda], [_Orion's Arm_][oa]; I dreamt about all amazing technologies
 we would someday have, the possibilities they would open up to us. Yet, it all
 felt infinitely distant. There's the near future, which is thinner screens and
