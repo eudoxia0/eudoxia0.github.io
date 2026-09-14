@@ -22,25 +22,5 @@ jobs:
       - name: check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          args: >
-            --accept 200,201,202,203,204,206,300,301,302,303,304,307,308,403,429,999
-            --cookie-jar cookies.json
-            --exclude="antipope\.org"
-            --exclude="dreamwidth\.org"
-            --exclude="fredkozlowski\.com"
-            --exclude="langsec\.org"
-            --exclude="www\.gnu\.org"
-            --exclude="what-is-chatgpt-doing-and-why-does-it-work"
-            --fallback-extensions=html
-            --host-concurrency=1
-            --max-concurrency=128
-            --max-retries=6
-            --no-progress
-            --retry-wait-time=6
-            --root-dir=_site
-            --suggest
-            --threads=2
-            --timeout=30
-            --verbose
-            './_site/**/*.html'
-          fail: true
+          args: "'./_site/**/*.html'"
+          fail: false

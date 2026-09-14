@@ -1,0 +1,69 @@
+# HTTP status codes to accept as working.
+accept = [
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "206",
+    "300",
+    "301",
+    "302",
+    "303",
+    "304",
+    "307",
+    "308",
+    "403",
+    "429",
+    "999",
+]
+
+# Path to the file where we store cookies.
+cookie_jar = "cookies.json"
+
+# Exclude URLs matching the following regexes.
+exclude = [
+    # These websites go down frequently.
+    'antipope\.org',
+    'dreamwidth\.org',
+    'fredkozlowski\.com',
+    'langsec\.org',
+    'www\.gnu\.org',
+
+    # This is a post from Stephen Wolfram's blog, and for some reason the site
+    # triggers SSL certificate errors.
+    'what-is-chatgpt-doing-and-why-does-it-work',
+]
+
+# If we can't find a file, try again with these extensions.
+fallback_extensions = ["html"]
+
+# Maximum simultaneous requests to the same host.
+host_concurrency = 1
+
+# Maximum number of concurrent link checks.
+max_concurrency = 128
+
+# Max retries before a link is considered dead.
+max_retries = 6
+
+# Hide progress bar.
+no_progress = true
+
+# Time in seconds between retries of failed requests.
+retry_wait_time = 6
+
+# I'm not sure what this does actually.
+root_dir = "_site"
+
+# Suggest replacements for broken links.
+suggest = true
+
+# Number of threads.
+threads = 2
+
+# Request timeout in seconds.
+timeout = 30
+
+# Log level.
+verbose = "info"
