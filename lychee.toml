@@ -45,13 +45,13 @@ host_concurrency = 1
 max_concurrency = 128
 
 # Max retries before a link is considered dead.
-max_retries = 6
+max_retries = 10
 
 # Hide progress bar.
 no_progress = true
 
 # Time in seconds between retries of failed requests.
-retry_wait_time = 6
+retry_wait_time = 10
 
 # I'm not sure what this does actually.
 root_dir = "_site"
