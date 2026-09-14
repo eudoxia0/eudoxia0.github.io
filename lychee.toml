@@ -1,21 +1,21 @@
 # HTTP status codes to accept as working.
 accept = [
-  "200",
-  "201",
-  "202",
-  "203",
-  "204",
-  "206",
-  "300",
-  "301",
-  "302",
-  "303",
-  "304",
-  "307",
-  "308",
-  "403",
-  "429",
-  "999",
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "206",
+    "300",
+    "301",
+    "302",
+    "303",
+    "304",
+    "307",
+    "308",
+    "403",
+    "429",
+    "999",
 ]
 
 # Path to the file where we store cookies.
@@ -23,12 +23,12 @@ cookie_jar = "cookies.json"
 
 # Exclude URLs matching the following regexes.
 exclude = [
-  'antipope\.org',
-  'dreamwidth\.org',
-  'fredkozlowski\.com',
-  'langsec\.org',
-  'www\.gnu\.org',
-  'what-is-chatgpt-doing-and-why-does-it-work',
+    'antipope\.org',
+    'dreamwidth\.org',
+    'fredkozlowski\.com',
+    'langsec\.org',
+    'www\.gnu\.org',
+    'what-is-chatgpt-doing-and-why-does-it-work',
 ]
 
 # If we can't find a file, try again with these extensions.
