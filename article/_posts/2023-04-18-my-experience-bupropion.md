@@ -408,7 +408,7 @@ Some side effects I experienced:
   later, which means I'd go to sleep later, wake up later, take the next first
   dose later, and so it's a vicious cycle of sleep schedule drift.
 
-[des]: https://medlineplus.gov/druginfo/meds/a602002.html
+[des]: https://www.medlineplus.gov/druginfo/meds/a602002.html
 [ano]: https://en.wikipedia.org/wiki/Anorectic
 
 There are known side effects which I did not experience but merit a mention:
@@ -441,7 +441,7 @@ There are known side effects which I did not experience but merit a mention:
 - Zimmerman et. al. 2005, [_Why isn't bupropion the most frequently prescribed antidepressant?_][zimmerman2005].
 - Stahl et. al. 2004, [_A Review of the Neuropharmacology of Bupropion, a Dual Norepinephrine and Dopamine Reuptake Inhibitor_][stahl2004].
 
-[medline]: https://medlineplus.gov/druginfo/meds/a695033.html
+[medline]: https://www.medlineplus.gov/druginfo/meds/a695033.html
 [wiblin]: https://www.robwiblin.com/
 [wiblinbup]: https://docs.google.com/document/d/1niiV8I4cgk_xZ1Blou15ImPmqXU4eb_li9eRVp5NgYo/edit
 [lorien]: https://lorienpsych.com/2020/10/25/wellbutrin/
