@@ -23,11 +23,15 @@ cookie_jar = "cookies.json"
 
 # Exclude URLs matching the following regexes.
 exclude = [
+    # These websites go down frequently.
     'antipope\.org',
     'dreamwidth\.org',
     'fredkozlowski\.com',
     'langsec\.org',
     'www\.gnu\.org',
+
+    # This is a post from Stephen Wolfram's blog, and for some reason the site
+    # triggers SSL certificate errors.
     'what-is-chatgpt-doing-and-why-does-it-work',
 ]
 
