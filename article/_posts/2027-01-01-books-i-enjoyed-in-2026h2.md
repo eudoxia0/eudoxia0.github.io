@@ -9,6 +9,8 @@ summary: A list.
 
 [_Summerland_][summer] by [Hannu Rajaniemi][hannu]. Re-read.
 
+[_Incandescence_][inc] by [Greg Egan][egan].
+
 # Non-Fiction
 
 [_Mind Children_][mind] by [Hans Moravec][hans].
@@ -19,8 +21,10 @@ summary: A list.
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
 
+[egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
+[inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
 [mopi]: https://www.localroger.com/prime-intellect/mopiidx.html
 [quine]: https://en.wikipedia.org/wiki/Willard_Van_Orman_Quine
