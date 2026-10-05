@@ -19,7 +19,7 @@ summary: A list.
 
 [_After Virtue_][av] by [Alasdair MacIntyre][mac]. Contemporary political debate is interminable because there is no rational way to put one set of values over another. Yet, despite this irreconcilable pluralism, we continue to use moralistic language, e.g. appealing to impersonal principles like "justice" that we can't justify. Why? MacIntyre surveys the history of moral philosophy and argues contemporary moral language is a mutilated survival from Aristotelian moral philosophy. That survey is interesting. The rest of the book argues for a revival of Aristotelianism.
 
-G. H. Hardy once said that there is no place in the world for ugly mathematics. Analogously, I think there is no place in the world for joyless moral philosophy. If your philosophy 
+G. H. Hardy once said that there is no place in the world for ugly mathematics. Analogously, I think there is no place in the world for joyless moral philosophy. MacIntyre's account of Aristotelianism is bloviating, dry, stuffy, monotonous. And why would anyone sign up for that? I suppose this makes me an emotivist.
 
 # Textbooks
 
