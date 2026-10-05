@@ -17,14 +17,18 @@ summary: A list.
 
 [_Pursuit of Truth_][truth] by [W. V. O. Quine][quine].
 
+[_After Virtue_][av] by [Alasdair MacIntyre][mac]
+
 # Textbooks
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
 
+[av]: https://en.wikipedia.org/wiki/After_Virtue
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
+[mac]: https://en.wikipedia.org/wiki/Alasdair_MacIntyre
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
 [mopi]: https://www.localroger.com/prime-intellect/mopiidx.html
 [quine]: https://en.wikipedia.org/wiki/Willard_Van_Orman_Quine
