@@ -17,7 +17,7 @@ summary: A list.
 
 [_Pursuit of Truth_][truth] by [W. V. O. Quine][quine].
 
-[_After Virtue_][av] by [Alasdair MacIntyre][mac]
+[_After Virtue_][av] by [Alasdair MacIntyre][mac].
 
 # Textbooks
 
