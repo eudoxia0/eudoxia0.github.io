@@ -39,3 +39,11 @@ After AI, the rewards for that output went to zero:
 And this is why I was wrong. “The entire field will be radically transformed, but the things I care about will remain the same, because I want them to” overrated the extent to which intellectual activity is private and individual, and underrates the extent to which it relies on the society of other humans.
 
 Furthermore, AI has made the discourse shallower and anti-intellectual.
+
+# The Future
+
+Does it matter if we stop writing blog posts about obscure JavaScript features and designing new programming languages? Maybe this was all drudgery, and now we can move on to higher things, like math—oh wait.
+
+So, math is done. So what's left? Art and sports.
+
+The only feature of the present that might survive is competition where AIs intrinsically can't participate or advantage one side over the other. So basically sports. Maybe jousting will make a comeback. So the future is sports, illiteracy, and TikTok.
