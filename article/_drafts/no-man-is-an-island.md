@@ -47,3 +47,11 @@ Does it matter if we stop writing blog posts about obscure JavaScript features a
 So, math is done. So what's left? Art and sports.
 
 The only feature of the present that might survive is competition where AIs intrinsically can't participate or advantage one side over the other. So basically sports. Maybe jousting will make a comeback. So the future is sports, illiteracy, and TikTok.
+
+# Why We Underrate Community
+
+In contemporary society, extrinsic motivation is seen as vulgar and low status, while intrinsic motivation is high status. A “developed” person is supposed to have a private, inexhaustible reserve of motivation which is causally disconnected from external reward. And if you believe this, AI is not a threat to intellectual activity, in fact, the collapse of intellectual communities is _good_, because it sifts the intrinsically-motivated ubermenschen from the clout-chasing masses. 
+
+So you might say, “I like math”. And in the view of contemporary Western society, that's only really true if, after a plague kills everyone on Earth but you, you're still reading math textbooks and doing math problems in the post-apocalypse. _Then_ you can say “I like math”. Otherwise, you were never _really_ into it, you were just chasing clout and citations, which is icky and low status.
+
+The problem with this view is not that it's evil or immoral, rather, it's just wrong. It is not a human view of human nature. We are social animals: we care what others think of us, we want to be useful to society, we want to have our contributions and good deeds and virtues be recognized by others. The ancient Greeks and Romans recognized this and did not believe in private virtue: honour is owed to people who exercise virtue. The Romans didn't donate to charity anonymously, they wanted their charity to be publicly recognized.
