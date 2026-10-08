@@ -54,24 +54,24 @@ more talented that they really are.
 Second, contributing to the commons of software engineering is now largely
 worthless. Before AI, you could publish open-source code, write blog posts to
 share ideas or inspire other people, write expository texts like tutorials,
-forum posts, textbooks etc. to teach people.
+forum posts, textbooks etc. to teach people. After AI, what's the point?
 
-After AI, what's the point? You write a blog post: who's going to read it? The
-next training run will ingest it, marginally improving the AIs capability. Maybe
-the post was a workaround to some obscure technical problem, so the next time
-someone encounters that problem, they will ask Claude, who will solve it without
-crediting you. Maybe you had some insight about how to structure large
-codebases: who cares? The humans aren't making those decisions anymore.
+- You write a blog post: who's going to read it? The next training run will
+  ingest it, marginally improving the AIs capability. Maybe the post was a
+  workaround to some obscure technical problem, so the next time someone
+  encounters that problem, they will ask Claude, who will solve it without
+  crediting you. Maybe you had some insight about how to structure large
+  codebases: who cares? The humans aren't making those decisions anymore.
 
-You design a revolutionary new programming language: who cares? Maybe Claude
-cares, for what that's worth. But humans don't write or even read the code
-anymore. The programming language is an implementation detail the humans no
-longer care about.
+- You design a revolutionary new programming language: who cares? Maybe Claude
+  cares, for what that's worth. But humans don't write or even read the code
+  anymore. The programming language is an implementation detail the humans no
+  longer care about.
 
-You write a library, and publish it on GitHub: who cares? The AIs might discover
-it, and use it, but they won't tell their operator: "by the way, I found this
-great project from so-and-so, they are a really good coder, go and increase
-their social credit score".
+-  You write a library, and publish it on GitHub: who cares? The AIs might
+   discover it, and use it, but they won't tell their operator: "by the way, I
+   found this great project from so-and-so, they are a really good coder, go and
+   increase their social credit score".
 
 It's not just "you can't get GitHub stars or traffic to your blog no more",
 rather: there is no sense of a common human project you can contribute
