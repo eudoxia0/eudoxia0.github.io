@@ -47,8 +47,8 @@ intellectual activity because, again, intrinsic motivation is fleeting.
 Consider software. Some years ago, when it became clear that AI would solve
 software engineering, my thinking was:
 
-- In my professional life, I’m happy to move one level up to become a manager of
-  AI agents. I’m literate, I’m a good technical writer, I can describe what I
+- In my professional life, I'm happy to move one level up to become a manager of
+  AI agents. I'm literate, I'm a good technical writer, I can describe what I
   want and the agents can write the code.
 - In my own time, I can keep doing the things I care about, because I enjoy them
   intrinsically: reading technical blog posts and papers, learning new
@@ -58,7 +58,7 @@ software engineering, my thinking was:
 The second point has not quite worked out. It's worth understanding why. In the
 case of software, the outputs of intellectual activity are:
 
-- **Open-source code:** there's an ocean of prior art to build upon: I didn’t
+- **Open-source code:** there's an ocean of prior art to build upon: I didn't
   design C, write the Linux kernel, write all of Firefox, LLVM, Git, etc. This
   provides a foundation to build higher and higher without having to reinvent
   the universe ab initio.
@@ -70,23 +70,23 @@ case of software, the outputs of intellectual activity are:
 
 After AI, the rewards for that output went to zero:
 
-- You write a blog post: who’s going to read it? The next training run will
+- You write a blog post: who's going to read it? The next training run will
   ingest it, marginally improving the AIs capability. Maybe the post was a
   workaround to some obscure technical problem, so the next time someone
   encounters that problem, they will ask Claude, who will solve it without
   crediting you. Maybe you had some insight about how to structure large
-  codebases: who cares? The humans aren’t making those decisions anymore.
+  codebases: who cares? The humans aren't making those decisions anymore.
 - You design a revolutionary new programming language: who cares? Maybe Claude
-  cares, for what that’s worth. But humans don’t write or even read the code
+  cares, for what that's worth. But humans don't write or even read the code
   anymore. The programming language is an implementation detail the humans no
   longer care about.
 - You write a library, and publish it on GitHub: who cares? The AIs might
-  discover it, and use it, but they won’t tell their operator: “by the way, I
+  discover it, and use it, but they won't tell their operator: "by the way, I
   found this great project from so-and-so, they are a really good coder, go and
-  increase their social credit score”.
+  increase their social credit score".
 
-And this is why I was wrong. “The entire field will be radically transformed,
-but the things I care about will remain the same, because I want them to”
+And this is why I was wrong. "The entire field will be radically transformed,
+but the things I care about will remain the same, because I want them to"
 overrated the extent to which intellectual activity is private and individual,
 and underrates the extent to which it relies on the society of other humans.
 
@@ -100,22 +100,25 @@ can move on to higher things, like math—oh wait.
 
 So, math is done. So what's left? Art and sports.
 
-The only feature of the present that might survive is competition where AIs intrinsically can't participate or advantage one side over the other. So basically sports. Maybe jousting will make a comeback. So the future is sports, illiteracy, and TikTok.
+The only feature of the present that might survive is competition where AIs
+intrinsically can't participate or advantage one side over the other. So
+basically sports. Maybe jousting will make a comeback. So the future is sports,
+illiteracy, and TikTok.
 
 # Why We Underrate Community
 
 In contemporary society, extrinsic motivation is seen as vulgar and low status,
-while intrinsic motivation is high status. A “developed” person is supposed to
+while intrinsic motivation is high status. A "developed" person is supposed to
 have a private, inexhaustible reserve of motivation which is causally
 disconnected from external reward. And if you believe this, AI is not a threat
 to intellectual activity, in fact, the collapse of intellectual communities is
 _good_, because it sifts the intrinsically-motivated ubermenschen from the
 clout-chasing masses.
 
-So you might say, “I like math”. And in the view of contemporary Western
+So you might say, "I like math". And in the view of contemporary Western
 society, that's only really true if, after a plague kills everyone on Earth but
 you, you're still reading math textbooks and doing math problems in the
-post-apocalypse. _Then_ you can say “I like math”. Otherwise, you were never
+post-apocalypse. _Then_ you can say "I like math". Otherwise, you were never
 _really_ into it, you were just chasing clout and citations, which is icky and
 low status.
 
@@ -136,14 +139,14 @@ thought to be higher than material reward).
 
 Contemporary Western society is secular, but we inherit these moral intuitions,
 and we go through the motions of Christian virtue while denying the cosmology
-and cosmogony that makes them rational. “Intrinsic motivation” is a secular
+and cosmogony that makes them rational. "Intrinsic motivation" is a secular
 descendant of _sola fide_: it is not my works but my secret inner virtue that
 justifies my life.
 
-Society says: don't identify with your work, don’t tie your self-worth to your
-contribution to society, don’t do things for external rewards. Why? Secular
-society can't justify any of this, because the real answer is “you should pursue
-virtue privately, so that God will reward you in the next life”. But we don't
+Society says: don't identify with your work, don't tie your self-worth to your
+contribution to society, don't do things for external rewards. Why? Secular
+society can't justify any of this, because the real answer is "you should pursue
+virtue privately, so that God will reward you in the next life". But we don't
 believe in God anymore. The premises are gone, but the conclusions derived from
 those premises stay in the cache.
 
