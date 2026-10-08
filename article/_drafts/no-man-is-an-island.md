@@ -2,6 +2,11 @@
 title: How AI Undermines Intellectual Activity
 summary: AI makes intellectual contribution superfluous.
 card: no-man-is-an-island.webp
+card_source: |
+    Detail from [_Automat_][a], [Edward Hopper][b], 1927.
+
+    [a]: https://en.wikipedia.org/wiki/Automat_(Hopper)
+    [b]: https://en.wikipedia.org/wiki/Edward_Hopper
 ---
 
 In this post, I argue that individual intellectual activity can only be
