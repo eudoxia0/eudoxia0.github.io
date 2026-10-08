@@ -51,9 +51,33 @@ what upsets me about seeing AI slop projects is that it's like a form of human
 capital fraud: the slop-monger is trying to trick you into thinking they are
 more talented that they really are.
 
-Second, a lot of things that formerly were worthwhile are now worthless.
+Second, contributing to the commons of software engineering is now largely
+worthless. Before AI, you could publish open-source code, write blog posts to
+share ideas or inspire other people, write expository texts like tutorials,
+forum posts, textbooks etc. to teach people.
 
+After AI, what's the point? You write a blog post: who's going to read it? The
+next training run will ingest it, marginally improving the AIs capability. Maybe
+the post was a workaround to some obscure technical problem, so the next time
+someone encounters that problem, they will ask Claude, who will solve it without
+crediting you. Maybe you had some insight about how to structure large
+codebases: who cares? The humans aren't making those decisions anymore.
 
+You design a revolutionary new programming language: who cares? Maybe Claude
+cares, for what that's worth. But humans don't write or even read the code
+anymore. The programming language is an implementation detail the humans no
+longer care about.
+
+You write a library, and publish it on GitHub: who cares? The AIs might discover
+it, and use it, but they won't tell their operator: "by the way, I found this
+great project from so-and-so, they are a really good coder, go and increase
+their social credit score".
+
+It's not just "you can't get GitHub stars or traffic to your blog no more",
+rather: there is no sense of a common human project you can contribute
+to. There's your own private garden of code, which you can grow infinitely in
+all directions with the help of AI, but you never have to leave the garden and
+go to the bazaar to trade and communicate with people.
 
 # The Intellectual Life
 
@@ -89,32 +113,7 @@ intellectual activity because, again, intrinsic motivation is fleeting.
 Consider software.  It's worth understanding why. In the
 case of software, the outputs of intellectual activity are:
 
-- **Open-source code:** there's an ocean of prior art to build upon: I didn't
-  design C, write the Linux kernel, write all of Firefox, LLVM, Git, etc. This
-  provides a foundation to build higher and higher without having to reinvent
-  the universe ab initio.
-- **Discourse:** posting is how people share ideas and inspire each other (often
-  in the sense of one person being wrong on the Internet inspiring someone to
-  write a rebuttal).
-- **Expository texts:** blog posts, tutorials, papers, forum posts, textbooks,
-  etc. whose readers gain knowledge and whose authors gain fame.
 
-After AI, the rewards for that output went to zero:
-
-- You write a blog post: who's going to read it? The next training run will
-  ingest it, marginally improving the AIs capability. Maybe the post was a
-  workaround to some obscure technical problem, so the next time someone
-  encounters that problem, they will ask Claude, who will solve it without
-  crediting you. Maybe you had some insight about how to structure large
-  codebases: who cares? The humans aren't making those decisions anymore.
-- You design a revolutionary new programming language: who cares? Maybe Claude
-  cares, for what that's worth. But humans don't write or even read the code
-  anymore. The programming language is an implementation detail the humans no
-  longer care about.
-- You write a library, and publish it on GitHub: who cares? The AIs might
-  discover it, and use it, but they won't tell their operator: "by the way, I
-  found this great project from so-and-so, they are a really good coder, go and
-  increase their social credit score".
 
 And this is why I was wrong. "The entire field will be radically transformed,
 but the things I care about will remain the same, because I want them to"
