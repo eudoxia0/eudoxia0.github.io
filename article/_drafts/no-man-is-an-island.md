@@ -114,17 +114,10 @@ intellectual activity because, again, intrinsic motivation is fleeting.
 
 # How AI Undermines Intellectual Activity
 
-Consider software.  It's worth understanding why. In the
-case of software, the outputs of intellectual activity are:
-
-
-
 And this is why I was wrong. "The entire field will be radically transformed,
 but the things I care about will remain the same, because I want them to"
 overrated the extent to which intellectual activity is private and individual,
 and underrates the extent to which it relies on the society of other humans.
-
-Furthermore, AI has made the discourse shallower and anti-intellectual.
 
 # The Future
 
