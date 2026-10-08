@@ -143,7 +143,13 @@ point of writing a paper, or a textbook? It's superfluous.
 
 If intellectual activity is not rewarded---if there's no point to designing a
 new programming language or publishing a paper, or if there's simply _no_
-community to contribute to---then there's no point. It won't happen.
+community to contribute to---then there's no point to it, and the scale of that
+activity will be vastly reduced.
+
+Now apply this to every other domain of intellectual activity, and you see what
+the future looks like. There may be individual building software, but no shared
+culture of software engineering; there may be individual students and
+practitioners of mathematics, but no living community of mathematicians.
 
 # Why We Underrate Community
 
