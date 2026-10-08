@@ -89,20 +89,20 @@ intellectual practices in general.
 
 We tend to think of intellectual activity as private and solitary: the
 philosopher sitting in his armchair, deriving the world _ab initio_. But
-intellectual activity has two key inputs that can't be acquired in isolation: a
-**shared body of work** to build upon, and **motivation**. Prior art is
-obviously communal, unless you want to recapitulate the entire tech
-tree. Motivation I think we can break down into three components:
+intellectual activity has two inputs that can't be acquired in isolation: a
+**shared body of work** to build upon, and **motivation**. The shared body of
+work is communal, unless you want to recapitulate the entire tech
+tree. Motivation we can break down into two components:
 
 - **Intrinsic motivation:** we learn for the sake of learning, we create art
-  from a compulsion we can't understand.
+  from a compulsion we can't understand, etc.
 
-- **Extrinsic motivation:** we want our work to be useful to others, we want
-  others to benefit from out work, we want to contribute to a shared human
-  project. David Chapman [defines][noble] "nobility" as manifesting glory for
-  the service of others, and using our abilities in service of others. Fame and
-  the esteem and good will of your peers are the proxies by which we measure our
-  contribution.
+- **Extrinsic motivation:** David Chapman [defines][noble] "nobility" as
+  manifesting glory for the service of others, and using our abilities in
+  service of others. We want our work to be useful to others, we want others to
+  benefit from out work, we want to contribute to a shared human project.  Fame
+  and the esteem and good will of your peers are the proxies by which we measure
+  our contribution.
 
 We tend to think of intrinsic motivation as the purest kind: endogeneous,
 self-created, unmotivated by material or social gain. But it's an emotion, and,
