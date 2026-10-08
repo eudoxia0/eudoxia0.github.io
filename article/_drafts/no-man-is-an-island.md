@@ -70,17 +70,16 @@ forum posts, textbooks etc. to teach people. After AI, what's the point?
   discover it, and use it, but the operator won't know you exist or did
   anything.
 
-It's not just "you can't get GitHub stars or traffic to your blog no more",
-rather: there is no sense of a common human project you can contribute
-to. There's your own private garden of code, which you can grow infinitely in
-all directions with the help of AI, but you never have to leave the garden and
-go to the bazaar to trade and communicate with people. Under this conditions,
-it's hard to care to do anything.
+It's not just "you can't get GitHub stars or traffic to your blog", rather,
+there is no sense of a common human project you can contribute to. There's your
+own private garden of code, which you can grow infinitely in all directions with
+the help of AI, but you never have to leave the garden and go to the bazaar to
+trade with people. Under these conditions, it's hard to care or do anything.
 
 But does it actually matter? Does it matter if we stop writing blog posts about
 obscure JavaScript features, and designing new programming languages? Maybe
-writing code was always just drudgery, and now we can move on to higher things,
-like mathematics---[oh, wait][math].
+writing code was always drudgery, and now we can move on to higher things, like
+math---[oh, wait][math].
 
 # The Intellectual Life
 
@@ -89,7 +88,7 @@ happening to mathematics, I think we can derive some general insights about
 intellectual practices in general.
 
 We tend to think of intellectual activity as private and solitary: the
-philosopher sitting in the armchair, driving the world _ab initio_. But
+philosopher sitting in his armchair, deriving the world _ab initio_. But
 intellectual activity has two key inputs that can't be acquired in isolation: a
 **shared body of work** to build upon, and **motivation**. Prior art is
 obviously communal, unless you want to recapitulate the entire tech
