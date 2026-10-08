@@ -8,6 +8,53 @@ dissolves these communities, which in turn makes private intellectual activity
 rarer. Therefore, the post-AI future is one of greatly diminished intellectual
 activity.
 
+---
+
+Some years ago, when it became clear that AI would solve software engineering,
+my thinking was:
+
+- In my professional life, I'm happy to move one level up to become a manager of
+  AI agents. I'm literate, I'm a good technical writer, I can describe what I
+  want and the agents can write the code.
+- In my own time, I can keep doing the things I care about, because I enjoy them
+  intrinsically: reading technical blog posts and papers, learning new
+  programming languages, designing new programming languages, writing technical
+  blog posts, writing code for my tiny open source projects.
+
+The second point has not quite worked out. What actually happened? First, as I
+[wrote earlier][doom].
+
+> Claude Code was released a little over a year ago. In that short time,
+> software engineering has been completely transformed. Materially, it might be
+> positive: higher productivity, though at the cost of a messier
+> codebase. Socially, it has been a disaster.
+>
+> The discourse around software engineering has gotten dumber. It's like
+> everyone in the industry lost 30 IQ points. People used to talk about
+> compilers, type systems, logic. Now they talk about "prompts", "harnesses",
+> "loops". The discourse is narrower, shallower, and more repetitive. There's
+> only so many times I can hear about "agentic harnesses" before I lose my mind.
+>
+> Then there's the loss of human capital formation: there is nothing to
+> learn. Prompting is not a skill, at least, it's a much shallower skill than
+> software engineering. The instrumental dimension of the work has improved in
+> that people can get more output per unit of effort, but the dimension of work
+> that's about building up human capital has collapsed. And maybe this is
+> rational. Why learn to code at all? The computers can do that for us. And so
+> the rigorous, systematic thinking you need to practice in order to be a good
+> programmer: all gone. The machines can be rational for us. We can just vibe.
+
+People constantly show off these amazing things "they" built with Claude, and
+the grander they are, the less I care: they didn't do shit. The AI did
+everything. That's the discourse now: Claude did this, Claude did that. I think
+what upsets me about seeing AI slop projects is that it's like a form of human
+capital fraud: the slop-monger is trying to trick you into thinking they are
+more talented that they really are.
+
+Second, a lot of things that formerly were worthwhile are now worthless.
+
+
+
 # The Intellectual Life
 
 We tend to think of intellectual activity as private and solitary: the
@@ -39,18 +86,7 @@ intellectual activity because, again, intrinsic motivation is fleeting.
 
 # How AI Undermines Intellectual Activity
 
-Consider software. Some years ago, when it became clear that AI would solve
-software engineering, my thinking was:
-
-- In my professional life, I'm happy to move one level up to become a manager of
-  AI agents. I'm literate, I'm a good technical writer, I can describe what I
-  want and the agents can write the code.
-- In my own time, I can keep doing the things I care about, because I enjoy them
-  intrinsically: reading technical blog posts and papers, learning new
-  programming languages, designing new programming languages, writing technical
-  blog posts, writing code for my tiny open source projects.
-
-The second point has not quite worked out. It's worth understanding why. In the
+Consider software.  It's worth understanding why. In the
 case of software, the outputs of intellectual activity are:
 
 - **Open-source code:** there's an ocean of prior art to build upon: I didn't
@@ -154,3 +190,5 @@ natural, more human view of things:
   family, polis, peers, allies, co-conspirators, society, the world, etc.
 - Individual intellectual activity requires a community of humans to recognize
   the value of that activity.
+
+[doom]: /article/the-education-of-a-doomer
