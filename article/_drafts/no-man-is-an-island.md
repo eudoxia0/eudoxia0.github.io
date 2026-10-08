@@ -23,3 +23,9 @@ Consider software. Some years ago, when it became clear that AI would solve soft
 
 - In my professional life, I’m happy to move one level up to become a manager of AI agents. I’m literate, I’m a good technical writer, I can describe what I want and the agents can write the code.
 - In my own time, I can keep doing the things I care about, because I enjoy them intrinsically: reading technical blog posts and papers, learning new programming languages, designing new programming languages, writing technical blog posts, writing code for my tiny open source projects.
+
+The second point has not quite worked out. It's worth understanding why. In the case of software, the outputs of intellectual activity are:
+
+- **Open-source code:** there's an ocean of prior art to build upon: I didn’t design C, write the Linux kernel, write all of Firefox, LLVM, Git, etc. This provides a foundation to build higher and higher without having to reinvent the universe ab initio.
+- **Discourse:** posting is how people share ideas and inspire each other (often in the sense of one person being wrong on the Internet inspiring someone to write a rebuttal).
+- **Expository texts:** blog posts, tutorials, papers, forum posts, textbooks, etc. whose readers gain knowledge and whose authors gain fame.
