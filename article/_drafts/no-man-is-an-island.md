@@ -68,16 +68,17 @@ forum posts, textbooks etc. to teach people. After AI, what's the point?
   anymore. The programming language is an implementation detail the humans no
   longer care about.
 
--  You write a library, and publish it on GitHub: who cares? The AIs might
-   discover it, and use it, but they won't tell their operator: "by the way, I
-   found this great project from so-and-so, they are a really good coder, go and
-   increase their social credit score".
+- You write a library, and publish it on GitHub: who cares? The AIs might
+  discover it, and use it, but they won't tell their operator: "by the way, I
+  found this great project from so-and-so, they are a really good coder, go and
+  increase their social credit score".
 
 It's not just "you can't get GitHub stars or traffic to your blog no more",
 rather: there is no sense of a common human project you can contribute
 to. There's your own private garden of code, which you can grow infinitely in
 all directions with the help of AI, but you never have to leave the garden and
-go to the bazaar to trade and communicate with people.
+go to the bazaar to trade and communicate with people. Under this conditions,
+it's hard to care to do anything.
 
 But does it actually matter? Does it matter if we stop writing blog posts about
 obscure JavaScript features, and designing new programming languages? Maybe
@@ -130,19 +131,19 @@ intellectual activity because, again, intrinsic motivation is fleeting.
 
 # How AI Undermines Intellectual Activity
 
-And this is why I was wrong. "The entire field will be radically transformed,
-but the things I care about will remain the same, because I want them to"
-overrated the extent to which intellectual activity is private and individual,
-and underrates the extent to which it relies on the society of other humans.
+After AI, intellectual contributions become unnecessary or redundant. In the
+case of software: the AIs write all the code, so what's the point of writing
+either code or prose? The audience for those things is now severely
+diminished. Humans don't write code anymore, so they won't read blog posts about
+how to write code, or tutorials, or try new libraries or programming
+languages. In the case of mathematics: the AIs can prove theorems, write papers,
+explain papers, tutor students, and in the near future, they might write entire
+textbooks that are higher-quality than what a human can write. So what's the
+point of writing a paper, or a textbook? It's superfluous.
 
-# The Future
-
-So, math is done. So what's left? Art and sports.
-
-The only feature of the present that might survive is competition where AIs
-intrinsically can't participate or advantage one side over the other. So
-basically sports. Maybe jousting will make a comeback. So the future is sports,
-illiteracy, and TikTok.
+If intellectual activity is not rewarded---if there's no point to designing a
+new programming language or publishing a paper, or if there's simply _no_
+community to contribute to---then there's no point. It won't happen.
 
 # Why We Underrate Community
 
