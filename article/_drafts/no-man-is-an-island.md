@@ -29,3 +29,13 @@ The second point has not quite worked out. It's worth understanding why. In the 
 - **Open-source code:** there's an ocean of prior art to build upon: I didn’t design C, write the Linux kernel, write all of Firefox, LLVM, Git, etc. This provides a foundation to build higher and higher without having to reinvent the universe ab initio.
 - **Discourse:** posting is how people share ideas and inspire each other (often in the sense of one person being wrong on the Internet inspiring someone to write a rebuttal).
 - **Expository texts:** blog posts, tutorials, papers, forum posts, textbooks, etc. whose readers gain knowledge and whose authors gain fame.
+
+After AI, the rewards for that output went to zero:
+
+- You write a blog post: who’s going to read it? The next training run will ingest it, marginally improving the AIs capability. Maybe the post was a workaround to some obscure technical problem, so the next time someone encounters that problem, they will ask Claude, who will solve it without crediting you. Maybe you had some insight about how to structure large codebases: who cares? The humans aren’t making those decisions anymore.
+- You design a revolutionary new programming language: who cares? Maybe Claude cares, for what that’s worth. But humans don’t write or even read the code anymore. The programming language is an implementation detail the humans no longer care about.
+- You write a library, and publish it on GitHub: who cares? The AIs might discover it, and use it, but they won’t tell their operator: “by the way, I found this great project from so-and-so, they are a really good coder, go and increase their social credit score”.
+
+And this is why I was wrong. “The entire field will be radically transformed, but the things I care about will remain the same, because I want them to” overrated the extent to which intellectual activity is private and individual, and underrates the extent to which it relies on the society of other humans.
+
+Furthermore, AI has made the discourse shallower and anti-intellectual.
