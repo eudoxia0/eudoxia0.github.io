@@ -1,6 +1,7 @@
 ---
 title: How AI Undermines Intellectual Activity
 summary: AI makes intellectual contribution superfluous.
+card: no-man-is-an-island.webp
 ---
 
 In this post, I argue that individual intellectual activity can only be
