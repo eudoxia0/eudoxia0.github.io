@@ -8,7 +8,7 @@ dissolves these communities, which in turn makes private intellectual activity
 rarer. Therefore, the post-AI future is one of greatly diminished intellectual
 activity.
 
----
+# The Case of Software
 
 Some years ago, when it became clear that AI would solve software engineering,
 my thinking was:
