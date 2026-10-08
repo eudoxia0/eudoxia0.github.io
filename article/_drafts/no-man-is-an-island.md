@@ -1,5 +1,5 @@
 ---
-title: No Man Is an Island
+title: How AI Undermines Intellectual Community
 ---
 
 In this post, I argue that individual intellectual activity can only be
@@ -16,7 +16,8 @@ my thinking was:
 1. In my professional life, I'm happy to move one level up to become a manager of
   AI agents. I'm literate, I'm a good technical writer, I can describe what I
   want and the agents can write the code.
-1. In my own time, I can keep doing the things I care about, because I enjoy them
+1. In my own time, the things I care about---the "intellectual" side of software
+  engineering---I can keep doing these things because I enjoy them
   intrinsically: reading technical blog posts and papers, learning new
   programming languages, designing new programming languages, writing technical
   blog posts, writing code for my tiny open source projects.
@@ -111,21 +112,21 @@ otherwise, we'd all be stuck in life-long unproductive obsessions. So, we need
 something to fill the gaps between moments of divine inspiration. Extrinsic
 motivation serves this function.
 
-Therefore, private intellectual activity that is sustained, complex, and
-long-term requires an external intellectual community to provide material and
-motivation, like fuel and oxidizer. That private activity, in turn, sustains the
-community: by publishing papers, textbooks, code, etc., you add to the body of
-prior art for others to build upon; by citing someone's paper or contributing to
-their repairing, you give them the recognition and honor that confirms they are
-doing useful work, which in turn motivates them to keep contributing.
+Private intellectual activity that is sustained, complex, and long-term requires
+an external intellectual community to provide material and motivation, like fuel
+and oxidizer. That private activity, in turn, sustains the community: by
+publishing papers, textbooks, code, etc., you add to the shared body of work for
+others to build on top of; by citing someone's paper or contributing to their
+repository, you give them the recognition and honor that confirms they are doing
+useful work, which in turn motivates them to keep contributing.
 
-Without community, you don't get isolated intellectuals each working on their
-own things: you get nothing. The inputs to intellectual activity dry up: no-one
-is adding to the shared body of work, and there are no peers to benefit from
-your own intellectual activity. Without this extrinsic motivation, you get less
+Without community, you don't get isolated individuals each working on their own
+things: you get nothing. The inputs to intellectual activity dry up: no-one is
+adding to the shared body of work, and there are no peers to benefit from your
+own intellectual activity. Without this extrinsic motivation, you get less
 intellectual activity because, again, intrinsic motivation is fleeting.
 
-# How AI Undermines Intellectual Activity
+# After AI
 
 After AI, intellectual contributions become unnecessary or redundant. In the
 case of software: the AIs write all the code, so what's the point of writing
@@ -134,18 +135,18 @@ diminished. Humans don't write code anymore, so they won't read blog posts about
 how to write code, or tutorials, or try new libraries or programming
 languages. In the case of mathematics: the AIs can prove theorems, write papers,
 explain papers, tutor students, and in the near future, they might write entire
-textbooks that are higher-quality than what a human can write. So what's the
-point of writing a paper, or a textbook? It's superfluous.
+textbooks better than humans. So what's the point of writing a paper, or a
+textbook? It's superfluous.
 
-If intellectual activity is not rewarded---if there's no point to designing a
-new programming language or publishing a paper, or if there's simply _no_
-community to contribute to---then there's no point to it, and the scale of that
-activity will be vastly reduced.
+If intellectual activity is unnecessary---if there's no _consequence_ to
+designing a new programming language or publishing a paper, or if there's simply
+no community to contribute to---then it won't happen. There's no point.
 
 Now apply this to every other domain of intellectual activity, and you see what
-the future looks like. There may be individual building software, but no shared
-culture of software engineering; there may be individual students and
-practitioners of mathematics, but no living community of mathematicians.
+the future looks like. There may be individuals building new libraries and
+programming languages, but no shared culture of software engineering; there may
+be individual students and practitioners of mathematics, but no living community
+of mathematicians.
 
 # Why We Underrate Community
 
