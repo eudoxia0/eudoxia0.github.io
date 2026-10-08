@@ -94,7 +94,8 @@ We tend to think of intellectual activity as private and solitary: the
 philosopher sitting in the armchair, driving the world _ab initio_. But
 intellectual activity has two key inputs that can't be acquired in isolation: a
 **shared body of work** to build upon, and **motivation**. Prior art is
-obviously communal, unless you want to recapitulate the entire tech tree. Motivation I think we can break down into three components:
+obviously communal, unless you want to recapitulate the entire tech
+tree. Motivation I think we can break down into three components:
 
 - **Intrinsic motivation:** we learn for the sake of learning, we create art
   from a compulsion we can't understand. We tend to think of this as the
@@ -102,6 +103,7 @@ obviously communal, unless you want to recapitulate the entire tech tree. Motiva
   gain. It's an emotion. And, like all emotions, intrinsic motivation is
   transient and short-lived (and this is rational: otherwise, we'd all be stuck
   in life-long unproductive obsessions).
+
 - **Contribution:** we want our work to be useful to others. We want others to
   benefit from out work, we want to contribute to a shared human project. David
   Chapman [defines][noble] "nobility" as manifesting glory for the service of
