@@ -55,3 +55,15 @@ In contemporary society, extrinsic motivation is seen as vulgar and low status, 
 So you might say, “I like math”. And in the view of contemporary Western society, that's only really true if, after a plague kills everyone on Earth but you, you're still reading math textbooks and doing math problems in the post-apocalypse. _Then_ you can say “I like math”. Otherwise, you were never _really_ into it, you were just chasing clout and citations, which is icky and low status.
 
 The problem with this view is not that it's evil or immoral, rather, it's just wrong. It is not a human view of human nature. We are social animals: we care what others think of us, we want to be useful to society, we want to have our contributions and good deeds and virtues be recognized by others. The ancient Greeks and Romans recognized this and did not believe in private virtue: honour is owed to people who exercise virtue. The Romans didn't donate to charity anonymously, they wanted their charity to be publicly recognized.
+
+Christianity, particularly Protestant Christianity, invented the idea of private virtue: God commands humility and it does not matter that your family and your neighbors don't know how virtuous you are, because God knows it, and will reward you in the world to come (there's some hypocrisy here, in that we're still seeking external reward, only an unverifiable posthumous reward, which is thought to be higher than material reward).
+
+Contemporary Western society is secular, but we inherit these moral intuitions, and we go through the motions of Christian virtue while denying the cosmology and cosmogony that makes them rational. “Intrinsic motivation” is a secular descendant of _sola fide_: it is not my works but my secret inner virtue that justifies my life.
+
+Society says: don't identify with your work, don’t tie your self-worth to your contribution to society, don’t do things for external rewards. Why? Secular society can't justify any of this, because the real answer is “you should pursue virtue privately, so that God will reward you in the next life”. But we don't believe in God anymore. The premises are gone, but the conclusions derived from those premises stay in the cache.
+
+Now, if we purge the cache of these stale moral leftovers, we can restore a more natural, more human view of things:
+
+- Humans are social animals who can only flourish in the society of other humans. 
+- It is natural and healthy to want to contribute materially to your friends, family, polis, peers, allies, co-conspirators, society, the world, etc.
+- Individual intellectual activity requires a community of humans to recognize the value of that activity.
