@@ -98,30 +98,29 @@ obviously communal, unless you want to recapitulate the entire tech
 tree. Motivation I think we can break down into three components:
 
 - **Intrinsic motivation:** we learn for the sake of learning, we create art
-  from a compulsion we can't understand. We tend to think of this as the
-  "purest" form of motivation: self-created, unmotivated by material or social
-  gain. It's an emotion. And, like all emotions, intrinsic motivation is
-  transient and short-lived (and this is rational: otherwise, we'd all be stuck
-  in life-long unproductive obsessions).
+  from a compulsion we can't understand.
 
-- **Contribution:** we want our work to be useful to others. We want others to
-  benefit from out work, we want to contribute to a shared human project. David
-  Chapman [defines][noble] "nobility" as manifesting glory for the service of
-  others, and using our abilities in service of others.
+- **Extrinsic motivation:** we want our work to be useful to others. We want
+  others to benefit from out work, we want to contribute to a shared human
+  project. David Chapman [defines][noble] "nobility" as manifesting glory for
+  the service of others, and using our abilities in service of others. Fame and
+  the esteem and good will of your peers are the proxies by which we measure our
+  contribution.
 
+We tend to think of intrinsic motivation as the purest kind: endogeneous,
+self-created, unmotivated by material or social gain. But it's an emotion, and,
+like all emotions, intrinsic motivation is transient and short-lived (and this
+is rational: otherwise, we'd all be stuck in life-long unproductive
+obsessions). So, we need something to fill the gaps between moments of divine
+inspiration.
 
-We
-need something to fill the gaps between moments of divine inspiration. This is
-**extrinsic motivation**: you perform intellectual activity and share it,
-thereby gaining fame, and the esteem and good will of your peers, who are fellow
-soldiers in the war of art and science.
-
-Therefore, private intellectual activity that is sustained, complex, and
-long-term requires an external intellectual community to provide material and
-motivation, like fuel and oxidizer. That private activity, in turn, sustains the
-community: by publishing papers, textbooks, code, etc., you add to the body of
-prior art for others to build upon; by citing someone's paper or contributing to
-their repairing, you motivate them to keep working.
+Extrinsic motivation fills the gaps. Therefore, private intellectual activity
+that is sustained, complex, and long-term requires an external intellectual
+community to provide material and motivation, like fuel and oxidizer. That
+private activity, in turn, sustains the community: by publishing papers,
+textbooks, code, etc., you add to the body of prior art for others to build
+upon; by citing someone's paper or contributing to their repairing, you motivate
+them to keep working.
 
 When the community dissolves, you don't get isolated intellectuals each working
 on their own things: you get nothing. The inputs to intellectual activity dry
