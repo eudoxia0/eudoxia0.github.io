@@ -79,12 +79,10 @@ to. There's your own private garden of code, which you can grow infinitely in
 all directions with the help of AI, but you never have to leave the garden and
 go to the bazaar to trade and communicate with people.
 
-But does it actually matter? Does it matter if
-we stop writing blog posts about obscure JavaScript features, and designing new
-programming languages? Maybe writing code was always just drudgery, and now we can move on to
-higher things, like mathematics---[oh, wait][math].
-
-
+But does it actually matter? Does it matter if we stop writing blog posts about
+obscure JavaScript features, and designing new programming languages? Maybe
+writing code was always just drudgery, and now we can move on to higher things,
+like mathematics---[oh, wait][math].
 
 # The Intellectual Life
 
