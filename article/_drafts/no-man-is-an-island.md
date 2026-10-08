@@ -81,6 +81,10 @@ go to the bazaar to trade and communicate with people.
 
 # The Intellectual Life
 
+From observing what happened to software engineering, and what's currently
+happening to mathematics, I think we can derive some general insights about
+intellectual practices in general.
+
 We tend to think of intellectual activity as private and solitary: the
 philosopher sitting in the armchair, driving the world _ab initio_. But
 intellectual activity has two key inputs that can't be acquired in isolation: a
