@@ -122,10 +122,10 @@ prior art for others to build upon; by citing someone's paper or contributing to
 their repairing, you give them the recognition and honor that confirms they are
 doing useful work, which in turn motivates them to keep contributing.
 
-If the community dissolves, you don't get isolated intellectuals each working on
-their own things: you get nothing. The inputs to intellectual activity dry up:
-no-one is adding to the shared body of work, and there are no peers to reward
-your own intellectual activity. Without extrinsic reward, you get less
+Without community, you don't get isolated intellectuals each working on their
+own things: you get nothing. The inputs to intellectual activity dry up: no-one
+is adding to the shared body of work, and there are no peers to benefit from
+your own intellectual activity. Without this extrinsic motivation, you get less
 intellectual activity because, again, intrinsic motivation is fleeting.
 
 # How AI Undermines Intellectual Activity
