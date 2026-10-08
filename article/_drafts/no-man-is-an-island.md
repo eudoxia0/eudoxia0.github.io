@@ -79,6 +79,13 @@ to. There's your own private garden of code, which you can grow infinitely in
 all directions with the help of AI, but you never have to leave the garden and
 go to the bazaar to trade and communicate with people.
 
+But does it actually matter? Does it matter if
+we stop writing blog posts about obscure JavaScript features, and designing new
+programming languages? Maybe writing code was always just drudgery, and now we can move on to
+higher things, like mathematics---[oh, wait][math].
+
+
+
 # The Intellectual Life
 
 From observing what happened to software engineering, and what's currently
@@ -120,10 +127,6 @@ overrated the extent to which intellectual activity is private and individual,
 and underrates the extent to which it relies on the society of other humans.
 
 # The Future
-
-Does it matter if we stop writing blog posts about obscure JavaScript features
-and designing new programming languages? Maybe this was all drudgery, and now we
-can move on to higher things, like math---oh wait.
 
 So, math is done. So what's left? Art and sports.
 
@@ -188,3 +191,4 @@ natural, more human view of things:
   the value of that activity.
 
 [doom]: /article/the-education-of-a-doomer
+[math]: https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/
