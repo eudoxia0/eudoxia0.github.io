@@ -1,5 +1,5 @@
 ---
-title: How AI Undermines Intellectual Community
+title: How AI Undermines Intellectual Activity
 ---
 
 In this post, I argue that individual intellectual activity can only be
