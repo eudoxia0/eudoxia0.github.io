@@ -96,7 +96,7 @@ Furthermore, AI has made the discourse shallower and anti-intellectual.
 
 Does it matter if we stop writing blog posts about obscure JavaScript features
 and designing new programming languages? Maybe this was all drudgery, and now we
-can move on to higher things, like math—oh wait.
+can move on to higher things, like math---oh wait.
 
 So, math is done. So what's left? Art and sports.
 
