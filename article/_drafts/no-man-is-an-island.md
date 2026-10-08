@@ -100,7 +100,7 @@ tree. Motivation I think we can break down into three components:
 - **Intrinsic motivation:** we learn for the sake of learning, we create art
   from a compulsion we can't understand.
 
-- **Extrinsic motivation:** we want our work to be useful to others. We want
+- **Extrinsic motivation:** we want our work to be useful to others, we want
   others to benefit from out work, we want to contribute to a shared human
   project. David Chapman [defines][noble] "nobility" as manifesting glory for
   the service of others, and using our abilities in service of others. Fame and
@@ -109,23 +109,23 @@ tree. Motivation I think we can break down into three components:
 
 We tend to think of intrinsic motivation as the purest kind: endogeneous,
 self-created, unmotivated by material or social gain. But it's an emotion, and,
-like all emotions, intrinsic motivation is transient and short-lived (and this
-is rational: otherwise, we'd all be stuck in life-long unproductive
-obsessions). So, we need something to fill the gaps between moments of divine
-inspiration.
+like all emotions, it's transient and short-lived. And this is rational:
+otherwise, we'd all be stuck in life-long unproductive obsessions. So, we need
+something to fill the gaps between moments of divine inspiration. Extrinsic
+motivation serves this function.
 
-Extrinsic motivation fills the gaps. Therefore, private intellectual activity
-that is sustained, complex, and long-term requires an external intellectual
-community to provide material and motivation, like fuel and oxidizer. That
-private activity, in turn, sustains the community: by publishing papers,
-textbooks, code, etc., you add to the body of prior art for others to build
-upon; by citing someone's paper or contributing to their repairing, you motivate
-them to keep working.
+Therefore, private intellectual activity that is sustained, complex, and
+long-term requires an external intellectual community to provide material and
+motivation, like fuel and oxidizer. That private activity, in turn, sustains the
+community: by publishing papers, textbooks, code, etc., you add to the body of
+prior art for others to build upon; by citing someone's paper or contributing to
+their repairing, you give them the recognition and honor that confirms they are
+doing useful work, which in turn motivates them to keep contributing.
 
-When the community dissolves, you don't get isolated intellectuals each working
-on their own things: you get nothing. The inputs to intellectual activity dry
-up: no-one is adding to the shared body of work, and there are no peers to
-reward your own intellectual activity. Without extrinsic reward, you get less
+If the community dissolves, you don't get isolated intellectuals each working on
+their own things: you get nothing. The inputs to intellectual activity dry up:
+no-one is adding to the shared body of work, and there are no peers to reward
+your own intellectual activity. Without extrinsic reward, you get less
 intellectual activity because, again, intrinsic motivation is fleeting.
 
 # How AI Undermines Intellectual Activity
