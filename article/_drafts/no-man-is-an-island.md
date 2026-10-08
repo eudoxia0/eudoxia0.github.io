@@ -22,7 +22,7 @@ my thinking was:
   blog posts, writing code for my tiny open source projects.
 
 The second point has not quite worked out. What actually happened? First, as I
-[wrote earlier][doom].
+[wrote earlier][doom]:
 
 > Claude Code was released a little over a year ago. In that short time,
 > software engineering has been completely transformed. Materially, it might be
@@ -45,8 +45,8 @@ The second point has not quite worked out. What actually happened? First, as I
 > programmer: all gone. The machines can be rational for us. We can just vibe.
 
 People constantly show off these amazing things "they" built with Claude, and
-the grander they are, the less I care: they didn't do shit. The AI did
-everything. That's the discourse now: Claude did this, Claude did that. I think
+the grander they are, the less I care: they didn't do shit. Claude did
+everything. That's the discourse now: Claude did this, Claude said that. I think
 what upsets me about seeing AI slop projects is that it's like a form of human
 capital fraud: the slop-monger is trying to trick you into thinking they are
 more talented that they really are.
@@ -57,21 +57,18 @@ share ideas or inspire other people, write expository texts like tutorials,
 forum posts, textbooks etc. to teach people. After AI, what's the point?
 
 - You write a blog post: who's going to read it? The next training run will
-  ingest it, marginally improving the AIs capability. Maybe the post was a
+  ingest it, marginally improving AI capabilities. Maybe the post was a
   workaround to some obscure technical problem, so the next time someone
   encounters that problem, they will ask Claude, who will solve it without
   crediting you. Maybe you had some insight about how to structure large
   codebases: who cares? The humans aren't making those decisions anymore.
-
 - You design a revolutionary new programming language: who cares? Maybe Claude
   cares, for what that's worth. But humans don't write or even read the code
   anymore. The programming language is an implementation detail the humans no
-  longer care about.
-
+  longer have to care about.
 - You write a library, and publish it on GitHub: who cares? The AIs might
-  discover it, and use it, but they won't tell their operator: "by the way, I
-  found this great project from so-and-so, they are a really good coder, go and
-  increase their social credit score".
+  discover it, and use it, but the operator won't know you exist or did
+  anything.
 
 It's not just "you can't get GitHub stars or traffic to your blog no more",
 rather: there is no sense of a common human project you can contribute
