@@ -206,6 +206,13 @@ natural, more human view of things:
 - Individual intellectual activity requires a community of humans to recognize
   the value of that activity.
 
+
+# Acknowledgements
+
+Thanks to [Luke Drago][luke] and [Andy Matuschak][andy] for feedback and conversations.
+
+[luke]: https://lukedrago.com/
+[andy]: https://andymatuschak.org/
 [doom]: /article/the-education-of-a-doomer
 [math]: https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/
 [noble]: https://meaningness.substack.com/p/nobility-table-of-contents
