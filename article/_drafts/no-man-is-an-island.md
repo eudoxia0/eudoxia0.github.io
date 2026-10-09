@@ -95,7 +95,6 @@ tree. Motivation we can break down into two components:
 
 - **Intrinsic motivation:** we learn for the sake of learning, we create art
   from a compulsion we can't understand, etc.
-
 - **Extrinsic motivation:** David Chapman [defines][noble] "nobility" as
   manifesting glory for the service of others, and using our abilities in
   service of others. We want our work to be useful to others, we want others to
