@@ -118,7 +118,7 @@ repository, you give them the recognition and honor that confirms they are doing
 useful work, which in turn motivates them to keep contributing.
 
 Without community, you don't get isolated individuals each working on their own
-things: you get nothing. The inputs to intellectual activity dry up: no-one is
+things: you get nothing. The inputs to intellectual activity dry up: no one is
 adding to the shared body of work, and there are no peers to benefit from your
 own intellectual activity. Without this extrinsic motivation, you get less
 intellectual activity because, again, intrinsic motivation is fleeting.
