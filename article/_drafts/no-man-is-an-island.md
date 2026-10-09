@@ -21,11 +21,11 @@ my thinking was:
 1. In my professional life, I'm happy to move one level up to become a manager
    of AI agents. I'm literate, I'm a good technical writer, I can describe what
    I want and let AI agents write the code.
-1. In my own time, the things I care about---the "intellectual" side of software
-   engineering---I can keep doing these things because I enjoy them
-   intrinsically: reading technical blog posts and papers, learning new
-   programming languages, designing new programming languages, writing technical
-   blog posts, writing code for my tiny open source projects.
+1. In my own time, I can keep doing the things I care about because I enjoy them
+   intrinsically. This is the "intellectual" side of software engineering:
+   reading technical blog posts and papers, learning new programming languages,
+   designing new programming languages, writing technical essays, writing code
+   for my tiny open source projects.
 
 The second point has not quite worked out. What actually happened? First, as I
 [wrote earlier][doom]:
