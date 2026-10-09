@@ -20,7 +20,7 @@ my thinking was:
 
 1. In my professional life, I'm happy to move one level up to become a manager
    of AI agents. I'm literate, I'm a good technical writer, I can describe what
-   I want and the agents can write the code.
+   I want and let AI agents write the code.
 1. In my own time, the things I care about---the "intellectual" side of software
    engineering---I can keep doing these things because I enjoy them
    intrinsically: reading technical blog posts and papers, learning new
