@@ -10,8 +10,8 @@ card_source: |
 ---
 
 In this post, I argue that individual intellectual activity can only be
-sustained by a community of other humans. AI dissolves these communities, which
-in turn makes private intellectual activity rarer.
+sustained in an intellectual community of other humans. AI dissolves these
+communities, which in turn makes private intellectual activity rarer.
 
 # The Case of Software
 
