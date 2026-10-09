@@ -110,7 +110,7 @@ tree. Motivation we can break down into two components:
   and the esteem and good will of your peers are the proxies by which we measure
   our contribution.
 
-We tend to think of intrinsic motivation as the purest kind: endogeneous,
+We tend to think of intrinsic motivation as the purest kind: endogenous,
 self-created, unmotivated by material or social gain. But it's an emotion, and,
 like all emotions, it's transient and short-lived. And this is rational:
 otherwise, we'd all be stuck in life-long unproductive obsessions. So, we need
