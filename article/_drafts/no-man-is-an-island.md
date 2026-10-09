@@ -55,7 +55,7 @@ the grander they are, the less I care: they didn't do shit. Claude did
 everything. That's the discourse now: Claude did this, Claude said that. I think
 what upsets me about seeing AI slop projects is that it's like a form of human
 capital fraud: the slop-monger is trying to trick you into thinking they are
-more talented that they really are.
+more talented than they really are.
 
 Second, contributing to the commons of software engineering is now largely
 worthless. Before AI, you could publish open-source code, write blog posts to
