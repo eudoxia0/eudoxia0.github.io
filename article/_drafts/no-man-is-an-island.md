@@ -27,8 +27,8 @@ my thinking was:
    designing new programming languages, writing technical essays, writing code
    for my tiny open source projects.
 
-The second point has not quite worked out. What actually happened? First, as I
-[wrote earlier][doom]:
+The second point has not quite worked out. What actually happened? First, the
+discourse of software engineering became worse. As I [wrote earlier][doom]:
 
 > Claude Code was released a little over a year ago. In that short time,
 > software engineering has been completely transformed. Materially, it might be
@@ -50,15 +50,8 @@ The second point has not quite worked out. What actually happened? First, as I
 > the rigorous, systematic thinking you need to practice in order to be a good
 > programmer: all gone. The machines can be rational for us. We can just vibe.
 
-People constantly show off these amazing things "they" built with Claude, and
-the grander they are, the less I care: they didn't do shit. Claude did
-everything. That's the discourse now: Claude did this, Claude said that. I think
-what upsets me about seeing AI slop projects is that it's like a form of human
-capital fraud: the slop-monger is trying to trick you into thinking they are
-more talented than they really are.
-
-Second, contributing to the commons of software engineering is now largely
-worthless. Before AI, you could publish open-source code, write blog posts to
+Second, contributing to the commons of software engineering is increasingly
+pointless. Before AI, you could publish open-source code, write blog posts to
 share ideas or inspire other people, write expository texts like tutorials,
 forum posts, textbooks etc. to teach people. After AI, what's the point?
 
