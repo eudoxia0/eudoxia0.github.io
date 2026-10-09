@@ -106,7 +106,7 @@ tree. Motivation we can break down into two components:
 - **Extrinsic motivation:** David Chapman [defines][noble] "nobility" as
   manifesting glory for the service of others, and using our abilities in
   service of others. We want our work to be useful to others, we want others to
-  benefit from out work, we want to contribute to a shared human project.  Fame
+  benefit from our work, we want to contribute to a shared human project.  Fame
   and the esteem and good will of your peers are the proxies by which we measure
   our contribution.
 
