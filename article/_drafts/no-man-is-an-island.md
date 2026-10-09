@@ -145,6 +145,24 @@ programming languages, but no shared culture of software engineering; there may
 be individual students and practitioners of mathematics, but no living community
 of mathematicians.
 
+# Why We Underrate Intellectual Community
+
+I've spoken to people who think AI will have a positive effect on the life of
+the mind, and their thinking is that right now too many people are doing
+intellectual activity for instrumental reasons: citations, clout, etc. In this
+view, the collapse of intellectual communities is _good_, because it sifts the
+intrinsically-motivated übermenschen from the clout-chasing masses.
+
+I think this view fits with contemporary society: we view intrinsic and
+extrinsic motivation as high and low status, respectively.  A "developed" person
+is supposed to have a private, inexhaustible reserve of motivation which is
+causally disconnected from external reward.
+
+But this is not a realistic view of human beings. Humans are social animals who
+can only flourish in the society of other humans. We care, and we should care,
+about contributing to the world. And if technology makes our contributions
+superfluous, then what is left?
+
 # Acknowledgements
 
 Thanks to [Luke Drago][luke] and [Andy Matuschak][andy] for feedback and conversations.
