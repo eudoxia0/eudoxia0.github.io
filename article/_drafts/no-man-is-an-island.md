@@ -160,7 +160,7 @@ while intrinsic motivation is high status. A "developed" person is supposed to
 have a private, inexhaustible reserve of motivation which is causally
 disconnected from external reward. And if you believe this, AI is not a threat
 to intellectual activity, in fact, the collapse of intellectual communities is
-_good_, because it sifts the intrinsically-motivated ubermenschen from the
+_good_, because it sifts the intrinsically-motivated übermenschen from the
 clout-chasing masses.
 
 So you might say, "I like math". And in the view of contemporary Western
