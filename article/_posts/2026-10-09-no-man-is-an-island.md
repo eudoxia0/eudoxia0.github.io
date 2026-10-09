@@ -69,7 +69,7 @@ forum posts, textbooks etc. to teach people. After AI, what's the point?
   discover it, and use it, but the operator won't know you exist or did
   anything.
 
-It's not just "you can't get GitHub stars or traffic to your blog", rather,
+It's not just "you can't get GitHub stars or traffic to your blog"; rather,
 there is no sense of a common human project you can contribute to. There's your
 own private garden of code, which you can grow infinitely in all directions with
 the help of AI, but you never have to leave the garden and go to the bazaar to
