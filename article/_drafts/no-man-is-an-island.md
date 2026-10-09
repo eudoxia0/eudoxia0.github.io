@@ -157,8 +157,8 @@ of mathematicians.
 
 Thanks to [Luke Drago][luke] and [Andy Matuschak][andy] for feedback and conversations.
 
-[luke]: https://lukedrago.com/
 [andy]: https://andymatuschak.org/
 [doom]: /article/the-education-of-a-doomer
+[luke]: https://lukedrago.com/
 [math]: https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/
 [noble]: https://meaningness.substack.com/p/nobility-table-of-contents
