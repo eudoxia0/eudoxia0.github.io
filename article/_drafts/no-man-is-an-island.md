@@ -159,7 +159,7 @@ In contemporary society, extrinsic motivation is seen as vulgar and low status,
 while intrinsic motivation is high status. A "developed" person is supposed to
 have a private, inexhaustible reserve of motivation which is causally
 disconnected from external reward. And if you believe this, AI is not a threat
-to intellectual activity, in fact, the collapse of intellectual communities is
+to intellectual activity; rather, the collapse of intellectual communities is
 _good_, because it sifts the intrinsically-motivated übermenschen from the
 clout-chasing masses.
 
