@@ -1,5 +1,5 @@
 ---
-title: How AI Undermines Intellectual Activity
+title: No Man Is an Island
 summary: AI makes intellectual contribution superfluous.
 card: no-man-is-an-island.webp
 card_source: |
