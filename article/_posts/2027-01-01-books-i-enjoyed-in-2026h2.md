@@ -25,6 +25,8 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
 
+[_A Logical Approach to Discrete Math_][ladm] by David Gries and Fred B. Schneider.
+
 [av]: https://en.wikipedia.org/wiki/After_Virtue
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
@@ -39,3 +41,4 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [summer]: https://en.wikipedia.org/wiki/Summerland_(Rajaniemi_novel)
 [tb]: http://www.nottub.com
 [truth]: https://www.goodreads.com/en/book/show/469713.Pursuit_of_Truth
+[ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
