@@ -21,6 +21,8 @@ summary: A list.
 
 G. H. Hardy once said that there is no place in the world for ugly mathematics. Analogously, I think there is no place in the world for joyless moral philosophy. MacIntyre's account of Aristotelianism is bloviating, dry, stuffy, monotonous. And why would anyone sign up for that? I suppose this makes me an emotivist.
 
+[_The Web of Belief_][web] by [W. V. O. Quine][quine] and J. S. Ullian.
+
 # Textbooks
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
@@ -42,3 +44,4 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [tb]: http://www.nottub.com
 [truth]: https://www.goodreads.com/en/book/show/469713.Pursuit_of_Truth
 [ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
+[web]: https://www.goodreads.com/book/show/931301.The_Web_of_Belief
