@@ -35,7 +35,9 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
+[house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
+[ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
 [mac]: https://en.wikipedia.org/wiki/Alasdair_MacIntyre
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
 [mopi]: https://www.localroger.com/prime-intellect/mopiidx.html
@@ -45,6 +47,4 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [summer]: https://en.wikipedia.org/wiki/Summerland_(Rajaniemi_novel)
 [tb]: http://www.nottub.com
 [truth]: https://www.goodreads.com/en/book/show/469713.Pursuit_of_Truth
-[ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
 [web]: https://www.goodreads.com/book/show/931301.The_Web_of_Belief
-[house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
