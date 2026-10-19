@@ -3,6 +3,8 @@ title: Books I Enjoyed In 2026H2
 summary: A list.
 ---
 
+For the first half of the year: [_Books I Enjoyed In 2026H1_][h1].
+
 # Fiction
 
 [_The Metamorphosis of Prime Intellect_][mopi] by [Roger Williams][roger]. Re-read. One of the definitive depictions of the Singularity.
@@ -45,6 +47,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [faustus]: https://en.wikipedia.org/wiki/Doctor_Faustus_(play)
 [gl]: https://en.wikipedia.org/wiki/Garrison_Lovely
+[h1]: /article/books-i-enjoyed-in-2026-h1
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [hfw]: https://www.goodreads.com/book/show/1355465.How_Fiction_Works
