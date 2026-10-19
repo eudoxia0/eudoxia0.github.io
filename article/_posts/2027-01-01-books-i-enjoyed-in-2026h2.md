@@ -29,6 +29,8 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [_How Fiction Works_][hfw] by [James Wood][jw].
 
+[_Obsolete: The AI Industry's Trillion Dollar Race to Replace Us―and How to Stop It_][obs] by [Garrison Lovely][gl].
+
 # Textbooks
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
@@ -38,6 +40,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [ap]: https://www.goodreads.com/book/show/506148.Aladdin_s_Problem
 [av]: https://en.wikipedia.org/wiki/After_Virtue
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
+[gl]: https://en.wikipedia.org/wiki/Garrison_Lovely
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [hfw]: https://www.goodreads.com/book/show/1355465.How_Fiction_Works
@@ -49,6 +52,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [mac]: https://en.wikipedia.org/wiki/Alasdair_MacIntyre
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
 [mopi]: https://www.localroger.com/prime-intellect/mopiidx.html
+[obs]: https://www.goodreads.com/book/show/216881355-obsolete
 [quine]: https://en.wikipedia.org/wiki/Willard_Van_Orman_Quine
 [roger]: https://www.localroger.com/
 [set]: https://st.openlogicproject.org/
