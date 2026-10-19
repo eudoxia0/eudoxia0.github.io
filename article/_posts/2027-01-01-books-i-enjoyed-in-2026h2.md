@@ -27,6 +27,8 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [_The Web of Belief_][web] by [W. V. O. Quine][quine] and J. S. Ullian.
 
+[_How Fiction Works_][hfw] by James Wood.
+
 # Textbooks
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
@@ -38,6 +40,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
+[hfw]: https://www.goodreads.com/book/show/1355465.How_Fiction_Works
 [house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
 [junger]: https://en.wikipedia.org/wiki/Ernst_J%C3%BCnger
