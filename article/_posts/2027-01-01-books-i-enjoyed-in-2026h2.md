@@ -15,6 +15,8 @@ summary: A list.
 
 [_Aladdin's Problem_][ap] by [Ernst Jünger][junger].
 
+[_The Tragical History of the Life and Death of Doctor Faustus_][faustus] by [Christopher Marlowe][cm].
+
 # Non-Fiction
 
 [_Mind Children_][mind] by [Hans Moravec][hans].
@@ -39,7 +41,9 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [ap]: https://www.goodreads.com/book/show/506148.Aladdin_s_Problem
 [av]: https://en.wikipedia.org/wiki/After_Virtue
+[cm]: https://en.wikipedia.org/wiki/Christopher_Marlowe
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
+[faustus]: https://en.wikipedia.org/wiki/Doctor_Faustus_(play)
 [gl]: https://en.wikipedia.org/wiki/Garrison_Lovely
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
