@@ -11,6 +11,8 @@ summary: A list.
 
 [_Incandescence_][inc] by [Greg Egan][egan].
 
+[_A House and Its Head_][house] by [Ivy Compton-Burnett][ivy].
+
 # Non-Fiction
 
 [_Mind Children_][mind] by [Hans Moravec][hans].
@@ -45,3 +47,4 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [truth]: https://www.goodreads.com/en/book/show/469713.Pursuit_of_Truth
 [ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
 [web]: https://www.goodreads.com/book/show/931301.The_Web_of_Belief
+[house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
