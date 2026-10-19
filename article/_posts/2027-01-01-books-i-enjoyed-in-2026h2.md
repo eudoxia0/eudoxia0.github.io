@@ -11,11 +11,11 @@ summary: A list.
 
 [_Incandescence_][inc] by [Greg Egan][egan].
 
+[_The Tragical History of the Life and Death of Doctor Faustus_][faustus] by [Christopher Marlowe][cm].
+
 [_A House and Its Head_][house] by [Ivy Compton-Burnett][ivy].
 
 [_Aladdin's Problem_][ap] by [Ernst Jünger][junger].
-
-[_The Tragical History of the Life and Death of Doctor Faustus_][faustus] by [Christopher Marlowe][cm].
 
 # Non-Fiction
 
@@ -27,11 +27,11 @@ summary: A list.
 
 G. H. Hardy once said that there is no place in the world for ugly mathematics. Analogously, I think there is no place in the world for joyless moral philosophy. MacIntyre's account of Aristotelianism is bloviating, dry, stuffy, monotonous. And why would anyone sign up for that? I suppose this makes me an emotivist.
 
-[_The Web of Belief_][web] by [W. V. O. Quine][quine] and J. S. Ullian.
+[_Obsolete: The AI Industry's Trillion Dollar Race to Replace Us―and How to Stop It_][obs] by [Garrison Lovely][gl].
 
 [_How Fiction Works_][hfw] by [James Wood][jw].
 
-[_Obsolete: The AI Industry's Trillion Dollar Race to Replace Us―and How to Stop It_][obs] by [Garrison Lovely][gl].
+[_The Web of Belief_][web] by [W. V. O. Quine][quine] and J. S. Ullian.
 
 # Textbooks
 
