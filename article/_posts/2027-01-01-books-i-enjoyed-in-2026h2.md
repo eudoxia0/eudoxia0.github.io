@@ -13,6 +13,8 @@ summary: A list.
 
 [_A House and Its Head_][house] by [Ivy Compton-Burnett][ivy].
 
+[_Aladdin's Problem_][ap] by [Ernst Jünger][junger].
+
 # Non-Fiction
 
 [_Mind Children_][mind] by [Hans Moravec][hans].
@@ -31,12 +33,14 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [_A Logical Approach to Discrete Math_][ladm] by David Gries and Fred B. Schneider.
 
+[ap]: https://www.goodreads.com/book/show/506148.Aladdin_s_Problem
 [av]: https://en.wikipedia.org/wiki/After_Virtue
 [egan]: https://en.wikipedia.org/wiki/Greg_Egan
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
+[junger]: https://en.wikipedia.org/wiki/Ernst_J%C3%BCnger
 [ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
 [mac]: https://en.wikipedia.org/wiki/Alasdair_MacIntyre
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
