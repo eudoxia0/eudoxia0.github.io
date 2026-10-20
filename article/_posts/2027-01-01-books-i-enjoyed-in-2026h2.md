@@ -15,8 +15,6 @@ For the first half of the year: [_Books I Enjoyed In 2026H1_][h1].
 
 [_The Tragical History of the Life and Death of Doctor Faustus_][faustus] by [Christopher Marlowe][cm].
 
-[_A House and Its Head_][house] by [Ivy Compton-Burnett][ivy].
-
 [_Aladdin's Problem_][ap] by [Ernst Jünger][junger].
 
 # Non-Fiction
@@ -51,9 +49,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [hfw]: https://www.goodreads.com/book/show/1355465.How_Fiction_Works
-[house]: https://www.goodreads.com/book/show/188442.A_House_and_Its_Head
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
-[ivy]: https://en.wikipedia.org/wiki/Ivy_Compton-Burnett
 [junger]: https://en.wikipedia.org/wiki/Ernst_J%C3%BCnger
 [jw]: https://en.wikipedia.org/wiki/James_Wood_(critic)
 [ladm]: https://www.goodreads.com/en/book/show/28780.A_Logical_Approach_to_Discrete_Math
