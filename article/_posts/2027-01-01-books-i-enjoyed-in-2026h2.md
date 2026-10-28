@@ -33,6 +33,8 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 
 [_The Web of Belief_][web] by [W. V. O. Quine][quine] and J. S. Ullian.
 
+[_Philosophy of Logic_][pol] by [W. V. O. Quine][quine].
+
 # Textbooks
 
 [_Set Theory: An Open Introduction_][set] by [Tim Button][tb].
@@ -57,6 +59,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [mind]: https://www.goodreads.com/book/show/648195.Mind_Children
 [mopi]: https://www.localroger.com/prime-intellect/mopiidx.html
 [obs]: https://www.goodreads.com/book/show/216881355-obsolete
+[pol]: https://www.goodreads.com/en/book/show/174475.Philosophy_of_Logic
 [quine]: https://en.wikipedia.org/wiki/Willard_Van_Orman_Quine
 [roger]: https://www.localroger.com/
 [set]: https://st.openlogicproject.org/
