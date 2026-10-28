@@ -1,5 +1,6 @@
 ---
 title: We Won’t “Just Hang Out”
+summary: On human connection after the Singularity.
 ---
 
 What will we do after the Singularity? The standard answer is: "we'll just hang
