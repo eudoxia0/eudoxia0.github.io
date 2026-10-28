@@ -3,7 +3,8 @@ title: We Won’t “Just Hang Out”
 ---
 
 What will we do after the Singularity? The standard answer is: "we'll just hang
-out". The infinite vacation. I think this won't work. "Hanging out" implies:
+out". The infinite vacation, as in the [_Culture_][cult] novels. I think this
+won't work. "Hanging out" implies:
 
 1. Other people exist.
 1. They want to hang out with you.
