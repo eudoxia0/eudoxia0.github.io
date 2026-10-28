@@ -1,6 +1,12 @@
 ---
 title: We Won’t “Just Hang Out”
 summary: On human connection after the Singularity.
+card: we-wont-just-hang-out.webp
+card_source: |
+    Detail from [_Wall Street_][a], [Paul Strand][b], 1915.
+
+    [a]: https://en.wikipedia.org/wiki/Wall_Street_(photograph)
+    [b]: https://en.wikipedia.org/wiki/Paul_Strand
 ---
 
 What will we do after the Singularity? The standard answer is: "we'll just hang
