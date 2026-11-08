@@ -42,7 +42,7 @@ fallback_extensions = ["html"]
 host_concurrency = 1
 
 # Maximum number of concurrent link checks.
-max_concurrency = 128
+max_concurrency = 4
 
 # Max retries before a link is considered dead.
 max_retries = 10
