@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-jekyll serve --future --drafts
+bundle exec jekyll serve --future --drafts
