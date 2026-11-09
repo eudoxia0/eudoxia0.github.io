@@ -8,9 +8,13 @@ title: Possible Futures
 {% include possible-futures/toc.svg %}
 {:/}
 
-# Question
+# Questions
 
 - **Do we reach ASI?** TODO
+- **Do we solve alignment?** TODO
+- **What kind of alignment?** TODO
+- **Takeoff severity?** TODO
+- **How many ASIs?** TODO
 
 # Misuse Doom {#misuse-doom}
 
