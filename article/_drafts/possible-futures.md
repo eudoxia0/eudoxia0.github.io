@@ -97,7 +97,7 @@ TODO
 >
 > --- Ernst Jünger
 
-In this world, the intent alignment problem is solved, and we build
+In this world, the [intent alignment][ia] problem is solved, and we build
 superintelligent AI that reliably obeys the intent of its operator. Furthermore,
 aligned ASI is widely distributed rather than centralized: everyone has their
 own personal ASI.
@@ -125,8 +125,9 @@ own personal ASI.
 
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
+[ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
 [jyn]: https://jyn.dev/
+[pivot]: https://intelligence.org/2022/06/10/agi-ruin/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
-[pivot]: https://intelligence.org/2022/06/10/agi-ruin/
