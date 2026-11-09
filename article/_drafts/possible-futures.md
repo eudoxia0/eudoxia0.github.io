@@ -98,6 +98,8 @@ This is the mundane future.
 >
 > --- Cicero, [_De Natura Deorum_][cicero]
 
+We build ASI, and it has its own goals and values. Luckily, it's neither actively hostile to humans, nor so indifferent that it destroys us without even noticing[^atoms]. It mostly leaves us alone, and goes off to another star to do its own thing. The result might be something like the galactic ecology in [Orion's Arm][oa], where humans and superintelligent AIs and everything inbetween have a kind of stable co-existence by virtue of occupying different volumes of space.
+
 # The World State {#world}
 
 > Now, human reason apprehends most clearly through philosophy that the entire
@@ -152,6 +154,11 @@ own personal ASI.
 
 - [A rising tide raises all rents][rents] by [jyn].
 
+# Footnotes
+
+[^atoms]:
+    As in the famous quote: "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else". [Source][atoms].
+
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
@@ -164,3 +171,5 @@ own personal ASI.
 [nm]: https://en.wikipedia.org/wiki/Neuromancer
 [dm]: https://en.wikipedia.org/wiki/Monarchia
 [recipe]: https://michaelnotebook.com/xrisk/
+[oa]: https://orionsarm.com/
+[atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
