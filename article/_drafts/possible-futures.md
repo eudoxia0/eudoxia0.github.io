@@ -46,6 +46,8 @@ TODO
 
 # Enduring Complementarity {#enduring-complementarity}
 
+This is the mundane future.
+
 - The "G" in AGI is not a thing.
 
 - Every mind is its own _sui generis_ thing.
