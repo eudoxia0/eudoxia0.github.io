@@ -78,8 +78,9 @@ TODO
 # Classic Doom {#classic-doom}
 
 > "What kinda message the voice have?" Case asked.
-> 
-> "We were told to help you," the other said, "that you might serve as a tool of Final Days."
+>
+> "We were told to help you," the other said, "that you might serve as a tool of
+> Final Days."
 >
 > --- William Gibson, [_Neuromancer_][nm]
 
@@ -87,13 +88,21 @@ TODO
 
 # Orion's Arm {#orions-arm}
 
-> Another of the sayings of Chrysippus is: We should infer in the case of a beautiful dwelling-place that it was built for its owners and not for mice; we ought, therefore, in the same way to regard the universe as the dwelling-place of the gods.
+> Another of the sayings of Chrysippus is: We should infer in the case of a
+> beautiful dwelling-place that it was built for its owners and not for mice; we
+> ought, therefore, in the same way to regard the universe as the dwelling-place
+> of the gods.
 >
 > --- Cicero, [_De Natura Deorum_][cicero]
 
 # The World State {#world}
 
-> Now, human reason apprehends most clearly through philosophy that the entire heaven in all its parts, its movements, and its motors, is controlled by a single motion, the primum mobile, and by a single mover, God; then, if our syllogism is correct, the human race is best ordered when in all its movements and motors it is controlled by one Prince as by one mover, by one law as by one motion.
+> Now, human reason apprehends most clearly through philosophy that the entire
+> heaven in all its parts, its movements, and its motors, is controlled by a
+> single motion, the primum mobile, and by a single mover, God; then, if our
+> syllogism is correct, the human race is best ordered when in all its movements
+> and motors it is controlled by one Prince as by one mover, by one law as by
+> one motion.
 >
 > --- Dante, [_De Monarchia_][dm]
 
