@@ -18,9 +18,11 @@ title: Possible Futures
 
 - AIs remain a complement to, rather than a substitute for, human labour.
 
-- There is job displacement but no mass unemployment, people move up to managerial/relational roles.
+- There is job displacement but no mass unemployment, people move up to
+  managerial/relational roles.
 
-- Many jobs are just about handling the logistics of the surplus from the AI economy.
+- Many jobs are just about handling the logistics of the surplus from the AI
+  economy.
 
 - Ten years from now: fewer programmers, more designers.
 
@@ -29,18 +31,30 @@ title: Possible Futures
 # Permanent Underclass
 
 - Like the above, but "on steroids".
+
 - Jobs are lost, but new jobs are not created.
+
 - People find jobs that are more precarious.
-- Labor's share of the production function goes to zero, except in very regulated industries.
+
+- Labor's share of the production function goes to zero, except in very
+  regulated industries.
+
 - Huge inequality within countries.
+
 - Even greater inequality between the US and other countries.
+
 - Rent seeking to the maxx.
-- People get UBI but are still poor because no matter what the UBI is, rent-seeking follows.
+
+- People get UBI but are still poor because no matter what the UBI is,
+  rent-seeking follows.
 
 # Priced Out
 
-- Contrary to predictions of AGI-driven abundance, humans are priced out of everything.
+- Contrary to predictions of AGI-driven abundance, humans are priced out of
+  everything.
+
 - First RAM, then storage, then compute.
+
 - Then electricity, water, carbon, etc.
 
 # LVT World
@@ -54,8 +68,11 @@ title: Possible Futures
 # Bottom-Up Doom
 
 - Doom from an AI implementing the operator's plans.
+
   - Could be an AI that is aligned to follow the intent of its operator.
+
   - Or an AI that has had safeguards ablated away.
+
   - Or an AI that has safeguards but is tricked by clever task decomposition.
 
 # Butlerian Jihad
@@ -75,11 +92,18 @@ TODO
 
 # The Titan War
 
-> As Nietzsche said, "God is dead". The gods die but the Titans gain power. Technology is just the clothes, the armour, of the Titans.
+> As Nietzsche said, "God is dead". The gods die but the Titans gain
+> power. Technology is just the clothes, the armour, of the Titans.
 >
 > --- Ernst Jünger
 
-- Distributed superintelligence: every person has a superintelligent AI that is reliably aligned to their intent.
+In this world, the intent alignment problem is solved, and we build
+superintelligent AI that reliably obeys the intent of its operator. Furthermore,
+aligned ASI is widely distributed rather than centralized: everyone has their
+own personal ASI.
+
+- Distributed superintelligence: every person has a superintelligent AI that is
+  reliably aligned to their intent.
 
 - Human frailty means we die.
 
