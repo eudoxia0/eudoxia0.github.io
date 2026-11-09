@@ -77,6 +77,12 @@ TODO
 
 # Classic Doom {#classic-doom}
 
+> "What kinda message the voice have?" Case asked.
+> 
+> "We were told to help you," the other said, "that you might serve as a tool of Final Days."
+>
+> --- William Gibson, [_Neuromancer_][nm]
+
 - Doom from misaligned AI following its own alien values.
 
 # Orion's Arm {#orions-arm}
@@ -158,3 +164,4 @@ TODO
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
+[nm]: https://en.wikipedia.org/wiki/Neuromancer
