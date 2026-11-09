@@ -6,45 +6,45 @@ digraph futures {
 
     // Questions.
     node[shape=box, style=filled, fillcolor="#5ee9b5"];
-
-    asi      [label="Do we reach ASI?"];
-    align    [label="Do we solve alignment?"];
-    whatkind [label="What kind of alignment?"];
-    noalign  [label="Takeoff severity?"];
-    howmany  [label="One ASI, or many?"];
+    asi[label="Do we reach ASI?"];
+    align[label="Do we solve alignment?"];
+    whatkind[label="What kind of alignment?"];
+    noalign[label="Takeoff severity?"];
+    howmany[label="One ASI, or many?"];
 
     // States of the world.
     node [shape=box, style=filled, fillcolor="#8ec5ff"];
-
-    ec     [label="Enduring Complementarity", URL="#enduring-complementarity"];
-    misuse [label="Misuse Doom", URL="#misuse-doom"];
-    doom   [label="Classic Doom", URL="#classic-doom"];
-    orion  [label="Orion's Arm", URL="#orions-arm"];
-    sing   [label="The Singleton", URL="#singleton"];
-    titan  [label="The Titan War", URL="#titan"];
-    pu     [label="Permanent Underclass", URL="#pu"];
+    ec[label="Enduring Complementarity", URL="#enduring-complementarity"];
+    misuse[label="Misuse Doom", URL="#misuse-doom"];
+    doom[label="Classic Doom", URL="#classic-doom"];
+    orion[label="Orion's Arm", URL="#orions-arm"];
+    sing[label="The Singleton", URL="#singleton"];
+    titan[label="The Titan War", URL="#titan"];
+    pu[label="Permanent Underclass", URL="#pu"];
+    butler[label="Butlerian Jihad", URL="#butler"];
 
     // Edges.
     pre -> misuse;
     pre -> asi;
+    pre -> butler;
 
     // Do we reach ASI?
-    asi -> ec    [label="No"];
+    asi -> ec [label="No"];
     asi -> align [label="Yes"];
 
     // Do we solve alignment?
-    align -> noalign  [label="No"];
+    align -> noalign [label="No"];
     align -> whatkind [label="Yes"];
 
     // Is the AI hostile, or indifferent?
-    noalign -> doom  [label="Fatal"];
+    noalign -> doom [label="Fatal"];
     noalign -> orion [label="Survivable"];
 
     // What kind of alignment?
     whatkind -> howmany [label="Intent"];
-    whatkind -> sing    [label="Value"];
+    whatkind -> sing [label="Value"];
 
     // One ASI, or many?
-    howmany -> pu    [label="One"];
+    howmany -> pu [label="One"];
     howmany -> titan [label="Many"];
 }

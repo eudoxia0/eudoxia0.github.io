@@ -3,12 +3,33 @@ title: Possible Futures
 ---
 
 # Contents
-{: .no_toc }
 
-1. toc
-{:toc}
+{::nomarkdown}
+{% include possible-futures/toc.svg %}
+{:/}
 
-# Enduring Complementarity
+# Misuse Doom {#misuse-doom}
+
+- Doom from an AI implementing the operator's plans.
+
+  - Could be an AI that is aligned to follow the intent of its operator.
+
+  - Or an AI that has had safeguards ablated away.
+
+  - Or an AI that has safeguards but is tricked by clever task decomposition.
+
+# Butlerian Jihad {#butler}
+
+> JIHAD, BUTLERIAN: (_see also_ Great Revolt)---the crusade against computers,
+> thinking machines, and conscious robots begun in 201 B.G. and concluded in 108
+> B.G. Its chief commandment remains in the O.C. Bible as "Thou shalt not make a
+> machine in the likeness of a human mind."
+>
+> --- Frank Herbert, [_Dune_][dune]
+
+TODO
+
+# Enduring Complementarity {#enduring-complementarity}
 
 - The "G" in AGI is not a thing.
 
@@ -28,7 +49,27 @@ title: Possible Futures
 
 - Labor loses ground to capital, but most people are fine.
 
-# Permanent Underclass
+# Classic Doom {#classic-doom}
+
+- Doom from misaligned AI following its own alien values.
+
+# Orion's Arm {#orions-arm}
+
+TODO
+
+# The Singleton {#singleton}
+
+> I am the Eschaton. I am not your god.\
+> I am descended from you, and I exist in your future.\
+> Thou shalt not violate causality within my historic light cone. Or else.
+>
+> --- Charles Stross, [_Singularity Sky_][ssky]
+
+- Built a value-aligned ASI.
+- It performs a [pivotal act][pivot], becoming the [sysop of the universe][sysop].
+- Values locked in forever.
+
+# Permanent Underclass {#pu}
 
 - Like the above, but "on steroids".
 
@@ -61,36 +102,11 @@ title: Possible Futures
 
 - ???
 
-# Classic Doom
-
-- Doom from misaligned AI following its own alien values.
-
-# Bottom-Up Doom
-
-- Doom from an AI implementing the operator's plans.
-
-  - Could be an AI that is aligned to follow the intent of its operator.
-
-  - Or an AI that has had safeguards ablated away.
-
-  - Or an AI that has safeguards but is tricked by clever task decomposition.
-
-# Butlerian Jihad
-
-> JIHAD, BUTLERIAN: (_see also_ Great Revolt)---the crusade against computers,
-> thinking machines, and conscious robots begun in 201 B.G. and concluded in 108
-> B.G. Its chief commandment remains in the O.C. Bible as "Thou shalt not make a
-> machine in the likeness of a human mind."
->
-> --- Frank Herbert, [_Dune_][dune]
-
-TODO
-
 # Manna
 
 TODO
 
-# The Titan War
+# The Titan War {#titan}
 
 > As Nietzsche said, "God is dead". The gods die but the Titans gain
 > power. Technology is just the clothes, the armour, of the Titans.
@@ -106,18 +122,6 @@ own personal ASI.
   reliably aligned to their intent.
 
 - Human frailty means we die.
-
-# The Singleton
-
-> I am the Eschaton. I am not your god.\
-> I am descended from you, and I exist in your future.\
-> Thou shalt not violate causality within my historic light cone. Or else.
->
-> --- Charles Stross, [_Singularity Sky_][ssky]
-
-- Built a value-aligned ASI.
-- It performs a [pivotal act][pivot], becoming the [sysop of the universe][sysop].
-- Values locked in forever.
 
 # See Also
 
