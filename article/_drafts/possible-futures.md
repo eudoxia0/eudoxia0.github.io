@@ -92,7 +92,7 @@ TODO
 > --- Charles Stross, [_Singularity Sky_][ssky]
 
 - Built a value-aligned ASI.
-- It performs a pivotal act, becoming the [sysop of the universe][sysop].
+- It performs a [pivotal act][pivot], becoming the [sysop of the universe][sysop].
 - Values locked in forever.
 
 # See Also
@@ -105,3 +105,4 @@ TODO
 [rents]: https://jyn.dev/rising-tide-raises-rents/
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
+[pivot]: https://intelligence.org/2022/06/10/agi-ruin/
