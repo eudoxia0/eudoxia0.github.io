@@ -89,23 +89,6 @@ TODO
 - People get UBI but are still poor because no matter what the UBI is,
   rent-seeking follows.
 
-# Priced Out
-
-- Contrary to predictions of AGI-driven abundance, humans are priced out of
-  everything.
-
-- First RAM, then storage, then compute.
-
-- Then electricity, water, carbon, etc.
-
-# LVT World
-
-- ???
-
-# Manna
-
-TODO
-
 # The Titan War {#titan}
 
 > As Nietzsche said, "God is dead". The gods die but the Titans gain
@@ -126,6 +109,25 @@ own personal ASI.
 # See Also
 
 - [A rising tide raises all rents][rents] by [jyn].
+
+# etc.
+
+## Priced Out
+
+- Contrary to predictions of AGI-driven abundance, humans are priced out of
+  everything.
+
+- First RAM, then storage, then compute.
+
+- Then electricity, water, carbon, etc.
+
+## LVT World
+
+- ???
+
+## Manna
+
+TODO
 
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
