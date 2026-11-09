@@ -8,6 +8,10 @@ title: Possible Futures
 {% include possible-futures/toc.svg %}
 {:/}
 
+# Question
+
+- **Do we reach ASI?** TODO
+
 # Misuse Doom {#misuse-doom}
 
 - Doom from an AI implementing the operator's plans.
@@ -49,16 +53,6 @@ TODO
 
 - Labor loses ground to capital, but most people are fine.
 
-# Classic Doom {#classic-doom}
-
-- Doom from misaligned AI following its own alien values.
-
-# Orion's Arm {#orions-arm}
-
-> Another of the sayings of Chrysippus is: We should infer in the case of a beautiful dwelling-place that it was built for its owners and not for mice; we ought, therefore, in the same way to regard the universe as the dwelling-place of the gods.
->
-> --- Cicero, [_De Natura Deorum_][cicero]
-
 # The Singleton {#singleton}
 
 > I am the Eschaton. I am not your god.\
@@ -71,7 +65,38 @@ TODO
 - It performs a [pivotal act][pivot], becoming the [sysop of the universe][sysop].
 - Values locked in forever.
 
-# Permanent Underclass {#pu}
+# Classic Doom {#classic-doom}
+
+- Doom from misaligned AI following its own alien values.
+
+# Orion's Arm {#orions-arm}
+
+> Another of the sayings of Chrysippus is: We should infer in the case of a beautiful dwelling-place that it was built for its owners and not for mice; we ought, therefore, in the same way to regard the universe as the dwelling-place of the gods.
+>
+> --- Cicero, [_De Natura Deorum_][cicero]
+
+# The World State {#world}
+
+TODO
+
+# MAD World {#mad}
+
+> As Nietzsche said, "God is dead". The gods die but the Titans gain
+> power. Technology is just the clothes, the armour, of the Titans.
+>
+> --- Ernst Jünger
+
+In this world, the [intent alignment][ia] problem is solved, and we build
+superintelligent AI that reliably obeys the intent of its operator. Furthermore,
+aligned ASI is widely distributed rather than centralized: everyone has their
+own personal ASI.
+
+- Distributed superintelligence: every person has a superintelligent AI that is
+  reliably aligned to their intent.
+
+- Human frailty means we die.
+
+# Power Concentration {#power}
 
 - Like the above, but "on steroids".
 
@@ -90,23 +115,6 @@ TODO
 
 - People get UBI but are still poor because no matter what the UBI is,
   rent-seeking follows.
-
-# The Titan War {#titan}
-
-> As Nietzsche said, "God is dead". The gods die but the Titans gain
-> power. Technology is just the clothes, the armour, of the Titans.
->
-> --- Ernst Jünger
-
-In this world, the [intent alignment][ia] problem is solved, and we build
-superintelligent AI that reliably obeys the intent of its operator. Furthermore,
-aligned ASI is widely distributed rather than centralized: everyone has their
-own personal ASI.
-
-- Distributed superintelligence: every person has a superintelligent AI that is
-  reliably aligned to their intent.
-
-- Human frailty means we die.
 
 # See Also
 

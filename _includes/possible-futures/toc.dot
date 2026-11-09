@@ -10,7 +10,7 @@ digraph futures {
     align[label="Do we solve alignment?"];
     whatkind[label="What kind of alignment?"];
     noalign[label="Takeoff severity?"];
-    howmany[label="One ASI, or many?"];
+    howmany[label="How many ASIs?"];
 
     // States of the world.
     node [shape=box, style=filled, fillcolor="#8ec5ff"];
@@ -19,9 +19,10 @@ digraph futures {
     doom[label="Classic Doom", URL="#classic-doom"];
     orion[label="Orion's Arm", URL="#orions-arm"];
     sing[label="The Singleton", URL="#singleton"];
-    titan[label="The Titan War", URL="#titan"];
-    pu[label="Permanent Underclass", URL="#pu"];
+    world[label="The World State", URL="#world"];
     butler[label="Butlerian Jihad", URL="#butler"];
+    mad[label="MAD World", URL="#mad"];
+    power[label="Power Concentration", URL="#power"];
 
     // Edges.
     pre -> misuse;
@@ -44,7 +45,8 @@ digraph futures {
     whatkind -> howmany [label="Intent"];
     whatkind -> sing [label="Value"];
 
-    // One ASI, or many?
-    howmany -> pu [label="One"];
-    howmany -> titan [label="Many"];
+    // How many ASIs?
+    howmany -> mad [label="Many"];
+    howmany -> power [label="Few"];
+    howmany -> world [label="One"];
 }
