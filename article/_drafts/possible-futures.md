@@ -93,6 +93,10 @@ TODO
 
 # The World State {#world}
 
+> Now, human reason apprehends most clearly through philosophy that the entire heaven in all its parts, its movements, and its motors, is controlled by a single motion, the primum mobile, and by a single mover, God; then, if our syllogism is correct, the human race is best ordered when in all its movements and motors it is controlled by one Prince as by one mover, by one law as by one motion.
+>
+> --- Dante, [_De Monarchia_][dm]
+
 TODO
 
 # MAD World {#mad}
@@ -165,3 +169,4 @@ TODO
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
 [nm]: https://en.wikipedia.org/wiki/Neuromancer
+[dm]: https://en.wikipedia.org/wiki/Monarchia
