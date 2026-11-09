@@ -60,6 +60,13 @@ title: Possible Futures
 
 # Butlerian Jihad
 
+> JIHAD, BUTLERIAN: (_see also_ Great Revolt)---the crusade against computers,
+> thinking machines, and conscious robots begun in 201 B.G. and concluded in 108
+> B.G. Its chief commandment remains in the O.C. Bible as "Thou shalt not make a
+> machine in the likeness of a human mind."
+>
+> --- Frank Herbert, [_Dune_][dune]
+
 TODO
 
 # Manna
@@ -92,7 +99,8 @@ TODO
 
 - [A rising tide raises all rents][rents] by [jyn].
 
-[ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
-[rents]: https://jyn.dev/rising-tide-raises-rents/
-[jyn]: https://jyn.dev/
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
+[dune]: https://en.wikipedia.org/wiki/Dune_(novel)
+[jyn]: https://jyn.dev/
+[rents]: https://jyn.dev/rising-tide-raises-rents/
+[ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
