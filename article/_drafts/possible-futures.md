@@ -8,6 +8,12 @@ title: Possible Futures
 {% include possible-futures/toc.svg %}
 {:/}
 
+<style>
+svg {
+width: 100%
+}
+</style>
+
 # Questions
 
 - **Do we reach ASI?** TODO
