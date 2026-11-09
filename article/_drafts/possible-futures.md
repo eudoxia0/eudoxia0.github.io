@@ -151,14 +151,6 @@ own personal ASI.
 
 - Then electricity, water, carbon, etc.
 
-## LVT World
-
-- ???
-
-## Manna
-
-TODO
-
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
