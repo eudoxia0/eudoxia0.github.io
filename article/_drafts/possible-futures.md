@@ -24,13 +24,14 @@ width: 100%
 
 # Misuse Doom {#misuse-doom}
 
-- Doom from an AI implementing the operator's plans.
+In this world, an AI ends the world by following the orders of its operator. The AI might be strongly intent-aligned, so that it does whatever the operator asks; or it might be an open-source model with refusals ablated away; or it might be a commercial AI where safeguards are circumvented by clever task decomposition. 
 
-  - Could be an AI that is aligned to follow the intent of its operator.
+This could probably happen today: a pandemic could cause human extinction, and AI is capable enough to assist in biology research. The obvious example of biorisk is a terrorist group using AI to make a bioweapon. But you could get to this outcome without anyone even trying to make a bioweapon. A government-funded, completely official and legitimate laboratory doing gain-of-function research on some pathogen could accidentally start a pandemic. In this scenario, the AI's role in the causal chain would be:
 
-  - Or an AI that has had safeguards ablated away.
+1. Compressing timelines by speeding up literature review, hypothesis selection, experiment design, data analysis, equipment scheduling.
+2. Increase the doom surface area by doing many experiments in parallel.
 
-  - Or an AI that has safeguards but is tricked by clever task decomposition.
+So it's not the classic Terminator scenario, but rather a case of AI making it easier to find "[recipes for ruin][recipe]".
 
 # Butlerian Jihad {#butler}
 
@@ -160,3 +161,4 @@ own personal ASI.
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
 [nm]: https://en.wikipedia.org/wiki/Neuromancer
 [dm]: https://en.wikipedia.org/wiki/Monarchia
+[recipe]: https://michaelnotebook.com/xrisk/
