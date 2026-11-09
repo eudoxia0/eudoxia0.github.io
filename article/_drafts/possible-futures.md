@@ -55,7 +55,9 @@ TODO
 
 # Orion's Arm {#orions-arm}
 
-TODO
+> Another of the sayings of Chrysippus is: We should infer in the case of a beautiful dwelling-place that it was built for its owners and not for mice; we ought, therefore, in the same way to regard the universe as the dwelling-place of the gods.
+>
+> --- Cicero, [_De Natura Deorum_][cicero]
 
 # The Singleton {#singleton}
 
@@ -137,3 +139,4 @@ TODO
 [rents]: https://jyn.dev/rising-tide-raises-rents/
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
+[cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
