@@ -157,7 +157,7 @@ own personal ASI.
 # Footnotes
 
 [^atoms]:
-    As in the famous quote: "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else". [Source][atoms].
+    As in the famous [quote][atoms]: "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else".
 
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
