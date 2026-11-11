@@ -62,29 +62,24 @@ easier to find "[recipes for ruin][recipe]".
 >
 > --- Frank Herbert, [_Dune_][dune]
 
-TODO
+At the extreme end this is the actual Butlerian Jihad from _Dune_ (named,
+tangentially, after [Samuel Butler][butler], who in _1863_ wrote [the first AI
+doomer article][darwin]).
+
+Otherwise, this is something like an international agreement to stop the
+development of superintelligent AI ([ControlAI][ctrl] is advocating for this and
+you should support them). Maybe this fails, and we go back to the start, or
+succeeds and we can get on [the other road][road].
 
 # Enduring Complementarity {#enduring-complementarity}
 
-This is the mundane future.
-
-- The "G" in AGI is not a thing.
-
-- Every mind is its own _sui generis_ thing.
-
-- Jaggedness remains.
-
-- AIs remain a complement to, rather than a substitute for, human labour.
-
-- There is job displacement but no mass unemployment, people move up to
-  managerial/relational roles.
-
-- Many jobs are just about handling the logistics of the surplus from the AI
-  economy.
-
-- Ten years from now: fewer programmers, more designers.
-
-- Labor loses ground to capital, but most people are fine.
+This is the mundane future. It turns out that the "G" in AGI was never
+real. Every mind is its own _sui generis_ thing, jaggedness remains. AIs remain
+a complement to, rather than a substitute for, human labour. There is job
+displacement but no mass unemployment, people move up to more
+managerial/relational roles. There are fewer ICs and everyone is some kind of
+manager. Labour becomes a smaller factor of production and consequently loses
+some bargaining power against capital, but most people are fine.
 
 # The Singleton {#singleton}
 
@@ -189,7 +184,10 @@ dignity in it.
 
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
+[butler]: https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
+[ctrl]: https://controlai.org/
+[darwin]: https://web.archive.org/web/20060524131242/http://www.nzetc.org/tm/scholarly/tei-ButFir-t1-g1-t1-g1-t4-body.html
 [dm]: https://en.wikipedia.org/wiki/Monarchia
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
 [gyges]: https://en.wikipedia.org/wiki/Ring_of_Gyges
@@ -199,6 +197,7 @@ dignity in it.
 [pivot]: https://intelligence.org/2022/06/10/agi-ruin/
 [recipe]: https://michaelnotebook.com/xrisk/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
+[road]: /article/the-other-road
 [sing]: https://en.wikipedia.org/wiki/Singleton_(global_governance)
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
