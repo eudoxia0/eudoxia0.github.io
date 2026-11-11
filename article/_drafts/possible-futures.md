@@ -94,9 +94,10 @@ This is the mundane future.
 >
 > --- Charles Stross, [_Singularity Sky_][ssky]
 
-- Built a value-aligned ASI.
-- It performs a [pivotal act][pivot], becoming the [sysop of the universe][sysop].
-- Values locked in forever.
+In this world, we build ASI, and it's successfully aligned to some impersonal
+system of values. Then this first AI performs a [pivotal act][pivot], becoming
+the [sysop of the universe][sysop]. Whatever value system the AI was built with
+endures until heat death.
 
 # Classic Doom {#classic-doom}
 
