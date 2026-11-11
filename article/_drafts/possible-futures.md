@@ -2,6 +2,12 @@
 title: Possible Futures
 summary: A map of possible futures.
 math: yes
+card: possible-futures.webp
+card_source: |
+    Detail from [_The Burning of the Houses of Lords and Commons_][a], [J. M. W. Turner][b], 1834.
+
+    [a]: https://en.wikipedia.org/wiki/The_Burning_of_the_Houses_of_Lords_and_Commons
+    [b]: https://en.wikipedia.org/wiki/J._M._W._Turner
 ---
 
 # Contents
