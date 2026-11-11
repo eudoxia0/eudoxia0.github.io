@@ -95,7 +95,10 @@ is no more social mobility, your lot in life is determined by how much capital
 you had when the music stopped. Growing your human capital is no longer
 incentivized, since it doesn't change your life outcomes.
 
-Socially
+See also:
+
+- [_A rising tide raises all rents_][rents] by [jyn].
+- [_No-One Escapes the Permanent Underclass_][uc].
 
 # The Singleton {#singleton}
 
@@ -176,27 +179,12 @@ dignity in it.
 
 # Power Concentration {#power}
 
-- Like the above, but "on steroids".
-
-- Jobs are lost, but new jobs are not created.
-
-- People find jobs that are more precarious.
-
-- Labor's share of the production function goes to zero, except in very
-  regulated industries.
-
-- Huge inequality within countries.
-
-- Even greater inequality between the US and other countries.
-
-- Rent seeking to the maxx.
-
-- People get UBI but are still poor because no matter what the UBI is,
-  rent-seeking follows.
-
-# See Also
-
-- [A rising tide raises all rents][rents] by [jyn].
+A smaller version of [MAD World](#mad), where intent-aligned ASI is less
+distributed. A small number of actors have ASI, and everyone else just watches
+what happens. Maybe OpenAI and Anthropic will divide the lightcone among
+themselves, like in the [Treaty of Tordesillas][tord]: every star and galaxy
+between 0h and 12h of [right ascension][ra] goes to Anthropic, dually for
+OpenAI.
 
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
@@ -211,9 +199,12 @@ dignity in it.
 [jyn]: https://jyn.dev/
 [oa]: https://orionsarm.com/
 [pivot]: https://intelligence.org/2022/06/10/agi-ruin/
+[ra]: https://en.wikipedia.org/wiki/Right_ascension
 [recipe]: https://michaelnotebook.com/xrisk/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
 [road]: /article/the-other-road
 [sing]: https://en.wikipedia.org/wiki/Singleton_(global_governance)
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
+[tord]: https://en.wikipedia.org/wiki/Treaty_of_Tordesillas
+[uc]: /article/no-one-escapes-the-permanent-underclass
