@@ -30,6 +30,8 @@ width: 100%
   we get an out-of-control paperclip maximizer, or a more benign AI that is
   unaligned but which cares enough to stay out of our way?
 - **How many ASIs?** A [singleton][sing], a pantheon, or an ecology?
+- **Full automation?** In the no-ASI case, do we still automate almost all jobs
+  with non-superintelligent AI?
 
 # Misuse Doom {#misuse-doom}
 
@@ -80,6 +82,20 @@ displacement but no mass unemployment, people move up to more
 managerial/relational roles. There are fewer ICs and everyone is some kind of
 manager. Labour becomes a smaller factor of production and consequently loses
 some bargaining power against capital, but most people are fine.
+
+# Permanent Underclass {#underclass}
+
+In this future, we don't reach ASI, but non-superintelligent AI is enough to
+automate almost all jobs. The labour term in the production function goes to
+zero. All income is either capital ownership or welfare.
+
+Economically: there may be material abundance, but absent some kind of Georgist
+economic reform, most of the gains are captured by rent-seeking. Socially: there
+is no more social mobility, your lot in life is determined by how much capital
+you had when the music stopped. Growing your human capital is no longer
+incentivized, since it doesn't change your life outcomes.
+
+Socially
 
 # The Singleton {#singleton}
 

@@ -11,6 +11,7 @@ digraph futures {
     whatkind[label="What kind of alignment?"];
     noalign[label="Takeoff severity?"];
     howmany[label="How many ASIs?"];
+    auto[label="Full automation?"];
 
     // States of the world.
     node [shape=box, style=filled, fillcolor="#8ec5ff"];
@@ -23,6 +24,7 @@ digraph futures {
     butler[label="Butlerian Jihad", URL="#butler"];
     mad[label="MAD World", URL="#mad"];
     power[label="Power Concentration", URL="#power"];
+    underclass[label="Permanent Underclass", URL="#underclass"];
 
     // Edges.
     pre -> misuse;
@@ -30,7 +32,7 @@ digraph futures {
     pre -> butler;
 
     // Do we reach ASI?
-    asi -> ec [label="No"];
+    asi -> auto [label="No"];
     asi -> align [label="Yes"];
 
     // Do we solve alignment?
@@ -49,4 +51,8 @@ digraph futures {
     howmany -> mad [label="Many"];
     howmany -> power [label="Few"];
     howmany -> world [label="One"];
+
+    // Full automation?
+    auto -> ec [label="No"];
+    auto -> underclass [label="Yes"];
 }
