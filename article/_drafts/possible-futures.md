@@ -16,11 +16,19 @@ width: 100%
 
 # Questions
 
-- **Do we reach ASI?** TODO
-- **Do we solve alignment?** TODO
-- **What kind of alignment?** TODO
-- **Takeoff severity?** TODO
-- **How many ASIs?** TODO
+- **Do we reach ASI?** Do we reach the point where AI is massively better than
+  humans at almost all cognitive tasks, or does the intelligence explosion
+  fizzle out, and produce minds that have very jagged capabilities, and are
+  worse than humans at some things?
+- **Do we solve alignment?** Can we instill our own values into the AI, or does
+  it have its own evolved, ahuman value system?
+- **What kind of alignment?** Intent alignment means an AI that reliably follows
+  the intent of its operator (that is: only takes actions the operator would
+  approve of), value alignment means aligning to an impersonal system of values.
+- **Takeoff severity?** If the AI is unaligned, how fatal is that for humans? Do
+  we get an out-of-control paperclip maximizer, or a more benign AI that is
+  unaligned but which cares enough to stay out of our way?
+- **How many ASIs?** A [singleton][sing] or an ecology?
 
 # Misuse Doom {#misuse-doom}
 
@@ -165,16 +173,17 @@ own personal ASI.
 
 - [A rising tide raises all rents][rents] by [jyn].
 
+[atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
+[cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
+[dm]: https://en.wikipedia.org/wiki/Monarchia
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
 [jyn]: https://jyn.dev/
+[oa]: https://orionsarm.com/
 [pivot]: https://intelligence.org/2022/06/10/agi-ruin/
+[recipe]: https://michaelnotebook.com/xrisk/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
+[sing]: https://en.wikipedia.org/wiki/Singleton_(global_governance)
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
-[cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
-[dm]: https://en.wikipedia.org/wiki/Monarchia
-[recipe]: https://michaelnotebook.com/xrisk/
-[oa]: https://orionsarm.com/
-[atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
