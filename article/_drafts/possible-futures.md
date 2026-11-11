@@ -87,7 +87,7 @@ This is the mundane future.
 >
 > --- William Gibson, [_Neuromancer_][nm]
 
-- Doom from misaligned AI following its own alien values.
+You know, the [paperclip maximizer][clip]. This has been done to death so I won't bore you.
 
 # Orion's Arm {#orions-arm}
 
@@ -173,3 +173,4 @@ own personal ASI.
 [recipe]: https://michaelnotebook.com/xrisk/
 [oa]: https://orionsarm.com/
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
+[clip]: https://www.lesswrong.com/w/paperclip-maximizer-1
