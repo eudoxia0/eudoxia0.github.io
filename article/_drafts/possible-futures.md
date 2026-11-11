@@ -91,14 +91,9 @@ This is the mundane future.
 
 # Classic Doom {#classic-doom}
 
-> "What kinda message the voice have?" Case asked.
->
-> "We were told to help you," the other said, "that you might serve as a tool of
-> Final Days."
->
-> --- William Gibson, [_Neuromancer_][nm]
-
-You know, the [paperclip maximizer][clip]. This has been done to death so I won't bore you.
+You know, the paperclip maximizer. "[The AI does not hate you, nor does it love
+you, but you are made out of atoms which it can use for something
+else][atoms]". This has been done to death so I won't bore you.
 
 # Orion's Arm {#orions-arm}
 
@@ -111,11 +106,10 @@ You know, the [paperclip maximizer][clip]. This has been done to death so I won'
 
 We build ASI, and it has its own goals and values. Luckily, it's neither
 actively hostile to humans, nor so indifferent that it destroys us without even
-noticing[^atoms]. It mostly leaves us alone, and goes off to another star to do
-its own thing. The result might be something like the galactic ecology in
-[Orion's Arm][oa], where humans and superintelligent AIs and everything
-inbetween have a kind of stable co-existence by virtue of occupying different
-volumes of space.
+noticing. It mostly leaves us alone, and goes off to another star to do its own
+thing. The result might be something like the galactic ecology in [Orion's
+Arm][oa], where humans and superintelligent AIs and everything inbetween have a
+kind of stable co-existence by virtue of occupying different volumes of space.
 
 # The World State {#world}
 
@@ -171,12 +165,6 @@ own personal ASI.
 
 - [A rising tide raises all rents][rents] by [jyn].
 
-# Footnotes
-
-[^atoms]:
-    As in the famous [quote][atoms]: "The AI does not hate you, nor does it love
-    you, but you are made out of atoms which it can use for something else".
-
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
@@ -186,9 +174,7 @@ own personal ASI.
 [ssky]: https://en.wikipedia.org/wiki/Singularity_Sky
 [sysop]: https://web.archive.org/web/20001017124429/http://www.singinst.org/intro.html
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
-[nm]: https://en.wikipedia.org/wiki/Neuromancer
 [dm]: https://en.wikipedia.org/wiki/Monarchia
 [recipe]: https://michaelnotebook.com/xrisk/
 [oa]: https://orionsarm.com/
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
-[clip]: https://www.lesswrong.com/w/paperclip-maximizer-1
