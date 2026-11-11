@@ -1,5 +1,6 @@
 ---
 title: Possible Futures
+math: yes
 ---
 
 # Contents
@@ -126,7 +127,9 @@ kind of stable co-existence by virtue of occupying different volumes of space.
 >
 > --- Dante, [_De Monarchia_][dm]
 
-TODO
+In this world, a reliably intent-aligned ASI takes over the world. What happens
+then depends on the character of its operator, who now wields the [ring of
+Gyges][gyges].
 
 # MAD World {#mad}
 
@@ -135,15 +138,29 @@ TODO
 >
 > --- Ernst Jünger
 
-In this world, the [intent alignment][ia] problem is solved, and we build
-superintelligent AI that reliably obeys the intent of its operator. Furthermore,
-aligned ASI is widely distributed rather than centralized: everyone has their
-own personal ASI.
+In this world, the [intent alignment][ia] problem is solved, and we can build an
+ASI that reliably obeys the intent of its operator. Furthermore,
+superintelligence is widely distributed rather than centralized: everyone has
+their own personal intent-aligned ASI. In this world, everyone is 10,000x more
+capable and maybe you can build WMDs with a prompt. What keeps the peace
+is mutually-assured destruction. It's not clear how survivable this is.
 
-- Distributed superintelligence: every person has a superintelligent AI that is
-  reliably aligned to their intent.
+The obvious failure mode is that one bad actor causes human extinction. Maybe
+their ASI can't overpower all the other ASIs put together, _but_ it can do
+enough damage to destroy human life before the other ASIs can act (a general
+observation: the technology to make the Earth uninhabitable to humans is much
+lower on the tech tree than the technology to build a distributed,
+extinction-proof interstellar civilization).
 
-- Human frailty means we die.
+The generalized ($n>1$ rather than $n=1$) version of this is that all conflicts
+are multiplied: two humans having a feud is the equivalent of nuclear war, two
+countries going to war is ????.
+
+On the more positive note: if there's no way to stop AI, then "everyone should
+have it" is obviously preferable than "only the Elect should have it", which is
+intolerable. If the goal is to keep the peace, the threat of mutually-assured
+destruction is better than totalitarianism, in the sense that there's more
+dignity in it.
 
 # Power Concentration {#power}
 
@@ -174,6 +191,7 @@ own personal ASI.
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
 [dm]: https://en.wikipedia.org/wiki/Monarchia
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
+[gyges]: https://en.wikipedia.org/wiki/Ring_of_Gyges
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
 [jyn]: https://jyn.dev/
 [oa]: https://orionsarm.com/
