@@ -121,12 +121,8 @@ kind of stable co-existence by virtue of occupying different volumes of space.
 
 # The World State {#world}
 
-> Now, human reason apprehends most clearly through philosophy that the entire
-> heaven in all its parts, its movements, and its motors, is controlled by a
-> single motion, the primum mobile, and by a single mover, God; then, if our
-> syllogism is correct, the human race is best ordered when in all its movements
-> and motors it is controlled by one Prince as by one mover, by one law as by
-> one motion.
+> ... [The] human race is best ordered when in all its movements and motors it
+> is controlled by one Prince as by one mover, by one law as by one motion.
 >
 > --- Dante, [_De Monarchia_][dm]
 
