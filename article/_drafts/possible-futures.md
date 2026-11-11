@@ -28,7 +28,7 @@ width: 100%
 - **Takeoff severity?** If the AI is unaligned, how fatal is that for humans? Do
   we get an out-of-control paperclip maximizer, or a more benign AI that is
   unaligned but which cares enough to stay out of our way?
-- **How many ASIs?** A [singleton][sing] or an ecology?
+- **How many ASIs?** A [singleton][sing], a pantheon, or an ecology?
 
 # Misuse Doom {#misuse-doom}
 
