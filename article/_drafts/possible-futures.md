@@ -24,14 +24,25 @@ width: 100%
 
 # Misuse Doom {#misuse-doom}
 
-In this world, an AI ends the world by following the orders of its operator. The AI might be strongly intent-aligned, so that it does whatever the operator asks; or it might be an open-source model with refusals ablated away; or it might be a commercial AI where safeguards are circumvented by clever task decomposition. 
+In this world, an AI ends the world by following the orders of its operator. The
+AI might be strongly intent-aligned, so that it does whatever the operator asks;
+or it might be an open-source model with refusals ablated away; or it might be a
+commercial AI where safeguards are circumvented by clever task decomposition.
 
-This could probably happen today: a pandemic could cause human extinction, and AI is capable enough to assist in biology research. The obvious example of biorisk is a terrorist group using AI to make a bioweapon. But you could get to this outcome without anyone even trying to make a bioweapon. A government-funded, completely official and legitimate laboratory doing gain-of-function research on some pathogen could accidentally start a pandemic. In this scenario, the AI's role in the causal chain would be:
+This could probably happen today: a pandemic could cause human extinction, and
+AI is capable enough to assist in biology research. The obvious example of
+biorisk is a terrorist group using AI to make a bioweapon. But you could get to
+this outcome without anyone even trying to make a bioweapon. A
+government-funded, completely official and legitimate laboratory doing
+gain-of-function research on some pathogen could accidentally start a
+pandemic. In this scenario, the AI's role in the causal chain would be:
 
-- Compressing timelines by speeding up literature review, hypothesis selection, experiment design, data analysis, equipment scheduling.
+- Compressing timelines by speeding up literature review, hypothesis selection,
+  experiment design, data analysis, equipment scheduling.
 - Increase the doom surface area by doing many experiments in parallel.
 
-So it's not the classic Terminator scenario, but rather a case of AI making it easier to find "[recipes for ruin][recipe]".
+So it's not the classic Terminator scenario, but rather a case of AI making it
+easier to find "[recipes for ruin][recipe]".
 
 # Butlerian Jihad {#butler}
 
@@ -98,7 +109,13 @@ You know, the [paperclip maximizer][clip]. This has been done to death so I won'
 >
 > --- Cicero, [_De Natura Deorum_][cicero]
 
-We build ASI, and it has its own goals and values. Luckily, it's neither actively hostile to humans, nor so indifferent that it destroys us without even noticing[^atoms]. It mostly leaves us alone, and goes off to another star to do its own thing. The result might be something like the galactic ecology in [Orion's Arm][oa], where humans and superintelligent AIs and everything inbetween have a kind of stable co-existence by virtue of occupying different volumes of space.
+We build ASI, and it has its own goals and values. Luckily, it's neither
+actively hostile to humans, nor so indifferent that it destroys us without even
+noticing[^atoms]. It mostly leaves us alone, and goes off to another star to do
+its own thing. The result might be something like the galactic ecology in
+[Orion's Arm][oa], where humans and superintelligent AIs and everything
+inbetween have a kind of stable co-existence by virtue of occupying different
+volumes of space.
 
 # The World State {#world}
 
@@ -157,7 +174,8 @@ own personal ASI.
 # Footnotes
 
 [^atoms]:
-    As in the famous [quote][atoms]: "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else".
+    As in the famous [quote][atoms]: "The AI does not hate you, nor does it love
+    you, but you are made out of atoms which it can use for something else".
 
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
