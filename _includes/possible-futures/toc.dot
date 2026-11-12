@@ -1,0 +1,58 @@
+digraph futures {
+    rankdir=TB;
+
+    // Start.
+    pre[label="The Present", shape=box];
+
+    // Questions.
+    node[shape=box, style=filled, fillcolor="#5ee9b5"];
+    asi[label="Do we reach ASI?"];
+    align[label="Do we solve alignment?"];
+    whatkind[label="What kind of alignment?"];
+    noalign[label="Takeoff severity?"];
+    howmany[label="How many ASIs?"];
+    auto[label="Full automation?"];
+
+    // States of the world.
+    node [shape=box, style=filled, fillcolor="#8ec5ff"];
+    ec[label="Enduring Complementarity", URL="#enduring-complementarity"];
+    misuse[label="Misuse Doom", URL="#misuse-doom"];
+    doom[label="Classic Doom", URL="#classic-doom"];
+    orion[label="Orion's Arm", URL="#orions-arm"];
+    sing[label="The Singleton", URL="#singleton"];
+    world[label="The World State", URL="#world"];
+    butler[label="Butlerian Jihad", URL="#butler"];
+    mad[label="MAD World", URL="#mad"];
+    power[label="Power Concentration", URL="#power"];
+    underclass[label="Permanent Underclass", URL="#underclass"];
+
+    // Edges.
+    pre -> misuse;
+    pre -> asi;
+    pre -> butler;
+
+    // Do we reach ASI?
+    asi -> auto [label="No"];
+    asi -> align [label="Yes"];
+
+    // Do we solve alignment?
+    align -> noalign [label="No"];
+    align -> whatkind [label="Yes"];
+
+    // Is the AI hostile, or indifferent?
+    noalign -> doom [label="Fatal"];
+    noalign -> orion [label="Survivable"];
+
+    // What kind of alignment?
+    whatkind -> howmany [label="Intent"];
+    whatkind -> sing [label="Value"];
+
+    // How many ASIs?
+    howmany -> mad [label="Many"];
+    howmany -> power [label="Few"];
+    howmany -> world [label="One"];
+
+    // Full automation?
+    auto -> ec [label="No"];
+    auto -> underclass [label="Yes"];
+}
