@@ -1,6 +1,6 @@
 ---
 title: Possible Futures
-summary: A map of the future.
+summary: A map of possible futures.
 math: yes
 card: possible-futures.webp
 card_source: |
