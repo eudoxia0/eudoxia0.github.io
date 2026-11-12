@@ -57,7 +57,7 @@ pandemic. In this scenario, the AI's role in the causal chain would be:
 
 - Compressing timelines by speeding up literature review, hypothesis selection,
   experiment design, data analysis, equipment scheduling.
-- Increase the doom surface area by doing many experiments in parallel.
+- Increasing the doom surface area by doing many experiments in parallel.
 
 So it's not the classic Terminator scenario, but rather a case of AI making it
 easier to find "[recipes for ruin][recipe]".
@@ -165,7 +165,7 @@ ASI that reliably obeys the intent of its operator. Furthermore,
 superintelligence is widely distributed rather than centralized: everyone has
 their own personal intent-aligned ASI. In this world, everyone is 10,000x more
 capable and maybe you can build WMDs with a prompt. What keeps the peace
-is mutually-assured destruction. It's not clear how survivable this is.
+is mutually assured destruction. It's not clear how survivable this is.
 
 The obvious failure mode is that one bad actor causes human extinction. Maybe
 their ASI can't overpower all the other ASIs put together, _but_ it can do
@@ -188,7 +188,7 @@ dignity in it.
 
 A smaller version of [MAD World](#mad), where intent-aligned ASI is less
 distributed. A small number of actors have ASI, and everyone else just watches
-what happens. Maybe the AI companies will divide the lightcone among themselves,
+what happens. Maybe the AI companies will divide the light cone among themselves,
 like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 12h of [right ascension][ra] goes to Anthropic, analogously for OpenAI.
 
