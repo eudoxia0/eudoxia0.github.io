@@ -121,9 +121,9 @@ See also:
 In this world, we build ASI, and it's successfully aligned to some impersonal
 system of values. First order of business is to prevent someone else from
 building an ASI that might challenge the first one, so the AI performs a
-"pivotal act", which is a LessWrong euphemism for "put everyone under constant
-surveillance, destroy all GPUs". The result is a [singleton][sing]: a single
-mind that is individually sovereign over everyone else.
+"[pivotal act][pivot]", which is a LessWrong euphemism for "put everyone under
+constant surveillance, destroy all GPUs". The result is a [singleton][sing]: a
+single mind that is individually sovereign over everyone else.
 
 What happens then? It depends on the content of the AI's value system, and the
 stability of that value system over time. The singleton might be a "[night
@@ -230,6 +230,7 @@ like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 [jyn]: https://jyn.dev/
 [night]: https://www.forethought.org/research/nightwatchmen
 [oa]: https://orionsarm.com/
+[pivot]: https://www.lesswrong.com/w/pivotal-act
 [ra]: https://en.wikipedia.org/wiki/Right_ascension
 [recipe]: https://michaelnotebook.com/xrisk/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
