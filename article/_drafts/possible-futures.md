@@ -96,11 +96,12 @@ In this future, we don't reach ASI, but non-superintelligent AI is enough to
 automate almost all jobs. The labour term in the production function goes to
 zero. All income is either capital ownership or welfare.
 
-Economically: there may be material abundance, but absent some kind of Georgist
-economic reform, most of the gains are captured by rent-seeking. Socially: there
-is no more social mobility, your lot in life is determined by how much capital
-you had when the music stopped. Growing your human capital is no longer
-incentivized, since it doesn't change your life outcomes.
+Economically: there may be material abundance, but absent some kind of [Georgist
+economic reform][george], most of the gains are captured by
+rent-seeking. Socially: there is no more social mobility, your lot in life is
+determined by how much capital you had when the music stopped. Growing your
+human capital is no longer incentivized, since it doesn't change your life
+outcomes.
 
 See also:
 
@@ -212,7 +213,6 @@ like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
 [bb]: https://benthams.substack.com/p/insects-matter-more-than-people
-[berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
 [bug]: https://en.wikipedia.org/wiki/Cochineal
 [butler]: https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
@@ -220,6 +220,7 @@ like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 [darwin]: https://web.archive.org/web/20060524131242/http://www.nzetc.org/tm/scholarly/tei-ButFir-t1-g1-t1-g1-t4-body.html
 [dm]: https://en.wikipedia.org/wiki/Monarchia
 [dune]: https://en.wikipedia.org/wiki/Dune_(novel)
+[george]: https://en.wikipedia.org/wiki/Georgism
 [gyges]: https://en.wikipedia.org/wiki/Ring_of_Gyges
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
 [jyn]: https://jyn.dev/
