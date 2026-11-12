@@ -190,7 +190,7 @@ A smaller version of [MAD World](#mad), where intent-aligned ASI is less
 distributed. A small number of actors have ASI, and everyone else just watches
 what happens. Maybe the AI companies will divide the lightcone among themselves,
 like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
-12h of [right ascension][ra] goes to Anthropic, dually for OpenAI.
+12h of [right ascension][ra] goes to Anthropic, analogously for OpenAI.
 
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
