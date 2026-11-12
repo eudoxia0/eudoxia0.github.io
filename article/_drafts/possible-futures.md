@@ -139,7 +139,7 @@ We build ASI, and it has its own goals and values. Luckily, it's neither
 actively hostile to humans, nor so indifferent that it destroys us without even
 noticing. It mostly leaves us alone, and goes off to another star to do its own
 thing. The result might be something like the galactic ecology in [Orion's
-Arm][oa], where humans and superintelligent AIs and everything inbetween have a
+Arm][oa], where humans and superintelligent AIs and everything in between have a
 kind of stable co-existence by virtue of occupying different volumes of space.
 
 # The World State {#world}
