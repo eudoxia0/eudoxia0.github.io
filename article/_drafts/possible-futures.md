@@ -77,7 +77,7 @@ doomer article][darwin]).
 
 Otherwise, this is something like an international agreement to stop the
 development of superintelligent AI ([ControlAI][ctrl] is advocating for this and
-you should support them). Maybe this fails, and we go back to the start, or
+you should support them). Maybe this fails, and we go back to the start, or it
 succeeds and we can get on [the other road][road].
 
 # Enduring Complementarity {#enduring-complementarity}
