@@ -83,7 +83,7 @@ succeeds and we can get on [the other road][road].
 # Enduring Complementarity {#enduring-complementarity}
 
 This is the mundane future. It turns out that the "G" in AGI was never
-real. Every mind is its own _sui generis_ thing, jaggedness remains. AIs remain
+real. Every mind is its own _sui generis_ thing. Jaggedness remains. AIs remain
 a complement to, rather than a substitute for, human labour. There is job
 displacement but no mass unemployment, people move up to more
 managerial/relational roles. There are fewer ICs and everyone is some kind of
