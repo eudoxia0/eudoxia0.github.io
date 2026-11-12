@@ -116,9 +116,21 @@ See also:
 > --- Charles Stross, [_Singularity Sky_][ssky]
 
 In this world, we build ASI, and it's successfully aligned to some impersonal
-system of values. Then this first AI performs a [pivotal act][pivot], becoming
-the [sysop of the universe][sysop]. Whatever value system the AI was built with
-endures until heat death.
+system of values. First order of business is to prevent someone else from
+building an ASI that might challenge the first one, so the AI performs a
+"pivotal act", which is a LessWrong euphemism for "put everyone under constant
+surveillance, destroy all GPUs". The result is a [singleton][sing]: a single
+mind that is individually sovereign over everyone else.
+
+What happens then? It depends on the content of the AI's value system, and the
+stability of that value system over time. The singleton might be a "[night
+watchman][night]", whose only goal is to prevent the creation of paperclip
+maximizers (i.e. prevent [Classic Doom](#doom)), or it might be deeply
+interventionist. The singleton's values might be incompatible with human life:
+maybe its creators made it utilitarian and species-egalitarian, and it notices
+that an 80kg human generates less utility than 80kg of [_Dactylopius
+coccus_][bug], so we get pulped and the universe becomes a terrarium for insects
+instantiating the [rebugnant conclusion][bb].
 
 # Classic Doom {#classic-doom}
 
@@ -193,7 +205,9 @@ like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 12h of [right ascension][ra] goes to Anthropic, analogously for OpenAI.
 
 [atoms]: https://intelligence.org/files/AIPosNegFactor.pdf
+[bb]: https://benthams.substack.com/p/insects-matter-more-than-people
 [berg]: https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm
+[bug]: https://en.wikipedia.org/wiki/Cochineal
 [butler]: https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)
 [cicero]: https://en.wikipedia.org/wiki/De_Natura_Deorum
 [ctrl]: https://controlai.org/
@@ -203,8 +217,8 @@ like in the [Treaty of Tordesillas][tord]: every star and galaxy between 0h and
 [gyges]: https://en.wikipedia.org/wiki/Ring_of_Gyges
 [ia]: https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6
 [jyn]: https://jyn.dev/
+[night]: https://www.forethought.org/research/nightwatchmen
 [oa]: https://orionsarm.com/
-[pivot]: https://intelligence.org/2022/06/10/agi-ruin/
 [ra]: https://en.wikipedia.org/wiki/Right_ascension
 [recipe]: https://michaelnotebook.com/xrisk/
 [rents]: https://jyn.dev/rising-tide-raises-rents/
