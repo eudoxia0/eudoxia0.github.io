@@ -132,6 +132,13 @@ that an 80kg human generates less utility than 80kg of [_Dactylopius
 coccus_][bug], so we get pulped and the universe becomes a terrarium for insects
 instantiating the [rebugnant conclusion][bb].
 
+The future is a very long time: the stelliferous era will last at least 100
+trillion years. Maybe the singleton is aligned at first, but over millions or
+billions of years of growth and self-modification, the alignment drifts (the
+predictable LessWrong objection here would be: "_obviously_ an ASI would be
+smart enough to prevent this", but this is just confidently attributing
+properties to an entity of which we know nothing).
+
 # Classic Doom {#classic-doom}
 
 You know, the paperclip maximizer. "[The AI does not hate you, nor does it love
