@@ -179,7 +179,7 @@ are multiplied: two humans having a feud is the equivalent of nuclear war, two
 countries going to war is ????.
 
 On the more positive note: if there's no way to stop AI, then "everyone should
-have it" is obviously preferable than "only the Elect should have it", which is
+have it" is obviously preferable to "only the Elect should have it", which is
 intolerable. If the goal is to keep the peace, the threat of mutually-assured
 destruction is better than totalitarianism, in the sense that there's more
 dignity in it.
