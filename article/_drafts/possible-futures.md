@@ -12,6 +12,8 @@ card_source: |
 
 # Contents
 
+Click on the blue boxes to go to the corresponding section:
+
 {::nomarkdown}
 {% include possible-futures/toc.svg %}
 {:/}
@@ -194,8 +196,8 @@ lower on the tech tree than the technology to build a distributed,
 extinction-proof interstellar civilization).
 
 The generalized ($n>1$ rather than $n=1$) version of this is that all conflicts
-are multiplied: two humans having a feud is the equivalent of nuclear war, two
-countries going to war is ????.
+are scaled up: two humans having a feud is the equivalent of nuclear war, two
+countries going to war is something much greater.
 
 On the more positive note: if there's no way to stop AI, then "everyone should
 have it" is obviously preferable to "only the Elect should have it", which is
