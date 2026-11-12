@@ -172,7 +172,9 @@ kind of stable co-existence by virtue of occupying different volumes of space.
 
 In this world, a reliably intent-aligned ASI takes over the world. What happens
 then depends on the character of its operator, who now wields the [ring of
-Gyges][gyges].
+Gyges][gyges]. The difference between this and [The Singleton](#singleton) is
+that in this future, the singleton is the human operator mediated by an ASI,
+rather than an ASI deriving actions from an impersonal system of values.
 
 # MAD World {#mad}
 
