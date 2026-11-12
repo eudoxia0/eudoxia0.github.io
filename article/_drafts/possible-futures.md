@@ -136,7 +136,8 @@ The future is a very long time: the stelliferous era will last at least 100
 trillion years. Maybe the singleton is aligned at first, but over millions or
 billions of years of growth and self-modification, the alignment drifts (the
 predictable LessWrong objection here would be: "_obviously_ an ASI would be
-smart enough to prevent this", because ASI or magic).
+smart enough to prevent this", but this is just attributing properties to an
+entity of which we know nothing).
 
 # Classic Doom {#classic-doom}
 
