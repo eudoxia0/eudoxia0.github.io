@@ -209,57 +209,57 @@ organ ensconced in their guardian angel ASI.
 - The second argument is that value alignment won't scale to
   superintelligence. And here, I can't even say if this is likely or
   unlikely, because by definition ASI is a kind of conceptual black
-  box. The definition of ASI is: a system that is vastly superhuman at
-  most or all human cognitive tasks. This is what the AI companies are
-  trying to build. But from this definition, we can deduce very little
-  about what an ASI would behave like.
+  box.
 
-  - In some areas, we have theories that describe the scope of what
-    you can do, regardless of intelligence.
+## ASI as a Black Box
 
-    - We know a superintelligent AI wouldn't be able to travel faster
-      than light, or travel back in time, because we have
-      empirically-tested scientific theories that say that's
-      impossible.
-
-    - In most areas of life, we don't have such theories, and so we
-      don't have solid reasons to say what is possible or impossible.
-
-  - Some cognitive tasks have something like a coordinate system:
-    chess has Elo ratings, for instance. Magnus Carlsen and Stockfish
-    have an Elo of around 2900 and 3600, respectively. Where would we
-    expect a superintelligence to land? Even this is hard to
-    answer. Certainly higher than Magnus Carlsen. But higher than
-    Stockfish? I don't know. Does the AI read the rules and instantly
-    devise an algorithm that performs much better than Stockfish, and
-    runs that in its head, the way humans do mental arithmetic? I
-    don't know. That seems hard, but I've been surprised by existing
-    AIs.
-
-  - A superintelligence would be very good at physics. What does that
-    mean? "Better than Einstein" doesn't really make sense as an
-    answer: relativity could only be discovered once. Maybe we can
-    devise RelativityBench, where AIs trained only with data before
-    1905 are measured in their ability to discover special
-    relativity. "Maybe it will find an exploit for the VM that runs
-    the universe and hack physics" but that's a property of the
-    universe, how would we know if that's possible or not, without a
-    complete theory of physics?
-
-  - Human geniuses provide a lower bound on what a superintelligence
-    would be able to do in certain areas, like chess or physics or
-    mathematics. But what's the upper bound?
-
-  - Some humans are very charismatic. But what is the range of
-    charisma? Is superpersuasion possible? I don't know. How likely is
-    it that superpersuasion is possible? I don't even know where I'd
-    begin to try and put numbers on that.
-
-  - We can't predict the specific cognitive abilities an ASI would
-    have.
-
-  - We also can't predict the higher-order consequences those
-    cognitive abilities would have.
+- The definition of ASI is: a system that is much better than humans at almost
+  all cognitive tasks.
+- This is a perfectly fine definition.
+- But from this definition, we can deduce very little about what an ASI would
+  behave like.
+- In some areas, we have theories that describe the scope of what you can do,
+  regardless of intelligence.
+  - We know a superintelligent AI wouldn't be able to travel faster than light,
+    or travel back in time, because we have empirically-tested scientific
+    theories that say that's impossible.
+- In most areas of life, we don't have such theories, and so we don't have solid
+  reasons to say what is possible or impossible.
+  - Some cognitive tasks have something like a coordinate system: chess has Elo
+    ratings, for instance. Magnus Carlsen and Stockfish have an Elo of around
+    2900 and 3600, respectively.
+      - Where would we expect a superintelligence to land?
+        - Even this is hard to answer.
+        - Certainly higher than Magnus Carlsen. But higher than Stockfish? I
+          don't know.
+        - Maybe the AI will read the rules and instantly devise an algorithm
+          that performs much better than Stockfish, and runs that in its. I
+          don't know. That seems hard, but I've been surprised by existing AIs.
+        - A related problem is that people often make incompatible assumptions
+          about the resources available to a superintelligence. Sometimes ASI
+          means "a Dyson sphere's worth of compute" and sometimes it means
+          "something Anthropic or OpenAI might build next year". Sometimes
+          people seem to move from one end of the spectrum to the other in the
+          same argument.
+  - By definition, a superintelligence would be very good at physics. What does
+    that mean?  "Better than Einstein" doesn't really tell us
+    anything. Sometimes people speculate that superintelligence might be able to
+    perform literal magic: "what if the AI finds an exploit in the VM that runs
+    the universe and uses it to hack physics?". But the possibility or
+    impossibility of this is a property of the universe first and foremost. The
+    set of things a superintelligence can do is a subset of the set of things it
+    is possible to do: without a complete theory of physics, we can't be certain
+    about the shape of the envelope.
+  - Human geniuses provide a lower bound on what a superintelligence would be
+    able to do in certain areas, like chess or physics or mathematics. But
+    what's the upper bound?
+  - Some humans are very charismatic. But what is the range of charisma? Is
+    superpersuasion possible? I don't know. How likely is it that
+    superpersuasion is possible? I don't even know where I'd begin to try and
+    put numbers on that.
+  - We can't predict the specific cognitive abilities an ASI would have.
+  - We also can't predict the higher-order consequences those cognitive
+    abilities would have.
 
 # See Also
 
