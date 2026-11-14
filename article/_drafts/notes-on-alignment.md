@@ -83,39 +83,33 @@ wish that extrapolated, interpreted as we wish that interpreted"[^cev].
 The "convergence" in "converges rather than diverges" is by analogy to an
 infinite series: it means "where the CEV extrapolation terminates with a single
 result, instead of going off to infinity or in an infinite loop". "Where our
-wishes cohere rather than interfere" essentially means the set intersection (see
-p. 212 of [_Superintelligence_][si]).
+wishes cohere rather than interfere" essentially means the set
+intersection[^si].
 
-- Problems:
+There's the obvious problems: what if the CEV of humanity is the empty set? What
+is the correct initial extrapolation base?  "All humans" means "all humans alive
+today", which points to the problem of value lockin. What about the dead, future
+people, animals, etc? But this is all well-trod.
 
-  - The "coherent" EV might be the empty set.
-
-  - What if the CEV of humanity turns out to be something morally
-    repugnant to present-day humanity?
-
-There's the problem of determining the initial extrapolation base. "All humans"
-means "all humans alive today", which points to the problem of value
-lockin. What about the dead, future people, animals, etc? But this is all
-well-trod.
-
-Then there's this problem of: should the future have moral authority over the
-present? Imagine a time machine lands in the present. The time travelers are
-humans with an IQ of 300 who have spent the past 100,000 years thinking and
-discoursing on ethics. They've concluded that negative utilitarianism is true,
-and the most ethical course of action is to destroy all life in the
-universe. What then?
+A more interesting problem is: what if the CEV of humanity turns out to be
+something morally repugnant to present-day humanity? Should the future have
+moral authority over the present?  Imagine a time machine lands in the
+present. The time travelers are humans with an IQ of 300 who have spent the past
+100,000 years thinking and discoursing on ethics. They've concluded that
+negative utilitarianism is true, and the most ethical course of action is to
+destroy all life in the universe. What then?
 
 We would be justified in telling them to fuck off. Because your CEV
 extrapolation, the version of you that is smarter, wiser, more like the person
 you wish you were, and has thought about ethics 10,000 times longer than you
 etc. is not you. It's a different person.
 
-Finally, there's this pervasive assumption that there is a clear separation
-between what's inside humanity's CEV (what we want the AI to do for us) and
-what's outside (where we want the AI to leave us alone). But this is false. If
-the CEV of humanity is just "prevent anyone from building an out-of-control
-paperclip maximizer", that requires the AI to set up permanent, omniscient
-surveillance of the entire universe.
+There's also this pervasive assumption that there is a clear separation between
+what's inside humanity's CEV (what we want the AI to do for us) and what's
+outside (where we want the AI to leave us alone). But this is false. If the CEV
+of humanity is just "prevent anyone from building an out-of-control paperclip
+maximizer", that requires the AI to set up permanent, omniscient surveillance of
+the entire universe.
 
 You have freedom and agency in every other area of life, but have to accept
 living under a permanent panopticon. And you can't leave, because if you leave
@@ -307,6 +301,8 @@ maximizer. Personally, I don't want to build god, even if god is a minimalist
     Yudkowsky, Eliezer. [_Coherent Extrapolated Volition_][cev]. Machine
     Intelligence Research Institute, 2004, p. 6.
 
+[^si]:
+    See p. 212 of [_Superintelligence_][si].
 
 [bluedot]: https://blog.bluedot.org/p/what-is-ai-alignment
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
