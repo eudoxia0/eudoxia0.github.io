@@ -83,9 +83,10 @@ Volition (CEV).
   - What if the CEV of humanity turns out to be something morally
     repugnant to present-day humanity?
 
-  - What  is the "reference class" of humanity?
-
-  - What about animals?
+There's the problem of determining the initial extrapolation base. "All humans"
+means "all humans alive today", which points to the problem of value
+lockin. What about the dead, future people, animals, etc? But this is all
+well-trod.
 
 Then there's this problem of: should the future have moral authority over the
 present? Imagine a time machine lands in the present. The time travelers are
@@ -94,9 +95,10 @@ discoursing on ethics. They've concluded that negative utilitarianism is true,
 and the most ethical course of action is to destroy all life in the
 universe. What then?
 
-We would be justified in telling them to fuck off. Because the version of you
-that is smarter, wiser, more like the person you wish you were, and has thought
-about ethics 10,000 times longer than you is not you. It's a different person.
+We would be justified in telling them to fuck off. Because your CEV
+extrapolation, the version of you that is smarter, wiser, more like the person
+you wish you were, and has thought about ethics 10,000 times longer than you
+etc. is not you. It's a different person.
 
 Finally, there's this pervasive assumption that there is a clear separation
 between what's inside humanity's CEV (what we want the AI to do for us) and
