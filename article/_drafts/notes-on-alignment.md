@@ -49,14 +49,21 @@ insane.
 
 # Indirect Normativity
 
-- Bostrom's term?
-- Instead of aligning the AI to some value system, align the AI to a _process_
-  for discovering that value system.
-- The CEV of humanity is not something we are expected to
-  discover. Rather, it's a goal, an initial condition, to a
-  superintelligent AI: "discover the CEV of humanity and implement
-  that". By construction, any question about what CEV utopia
-  actually looks like is out of scope.
+I think this is Nick Bostrom's term. Once we have solved value alignment,
+_which_ value system do we load into the AI? Indirect normativity says: load the
+goal of discovering the right value system, as judged by some criterion. The
+motivation is the idea that the superintelligent (being superintelligent) will
+know better than us what we want, or should want, or want to want, etc.
+
+The obvious problem is that the outcome of this process is set being a
+veil. It's not for us to discover, we just get to set the initial condition. By
+construction, any question about what the post-AI utopia looks like is out of
+scope.
+
+There's a bit of an infinite regression here, too. We don't know which value
+system to put into the AI, so we let the AI find it (because superintelligence
+is magic) according to some criterion. But what if the criterion is wrong? Then
+we let the AI find the criterion, according to some meta-criterion, and so on.
 
 ## CEV
 
@@ -94,7 +101,6 @@ insane.
     have agency and freedom inside that sphere seems false.
 
 # Intent Alignment
-
 
 - Align AI to the intent of the operator.
 
