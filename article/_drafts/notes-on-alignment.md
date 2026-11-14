@@ -73,8 +73,16 @@ we let the AI find the criterion, according to some meta-criterion, and so on.
 
 ## CEV
 
-The most discussed example of indirect normativity is Coherent Extrapolated
-Volition (CEV).
+The most discussed example of indirect normativity is coherent extrapolated
+volition (CEV). You build a superintelligent AI, and ask it to figure out what
+we would want "if we knew more, thought faster, were more the people we wished
+we were, had grown up farther together; where the extrapolation converges rather
+than diverges, where our wishes cohere rather than interfere; extrapolated as we
+wish that extrapolated, interpreted as we wish that interpreted"[^cev].
+
+The "convergence" in "converges rather than diverges" is by analogy to an
+infinite series: it means "where the CEV extrapolation terminates with a single
+result, instead of going off to infinity or in an infinite loop".
 
 - Problems:
 
@@ -291,5 +299,13 @@ maximizer. Personally, I don't want to build god, even if god is a minimalist
 - [What is AI alignment?][bluedot]
 - [AI Alignment Is Impossible][impossible]
 
+# References
+
+[^cev]:
+    Yudkowsky, Eliezer. [_Coherent Extrapolated Volition_][cev]. Machine
+    Intelligence Research Institute, 2004, p. 6.
+
+
 [bluedot]: https://blog.bluedot.org/p/what-is-ai-alignment
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
+[cev]: https://intelligence.org/files/CEV.pdf
