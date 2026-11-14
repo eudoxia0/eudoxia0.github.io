@@ -119,39 +119,40 @@ maximizer. Personally, I don't want to build god, even if god is a minimalist
 
 # Intent Alignment
 
-- Align AI to the intent of the operator.
+Intent alignment means the AI obeys the intent of its operator. This seems like
+the most plausible approach to solving alignment, in that it doesn't involve too
+many interminable philosophical quagmires. It's just:
 
-- This is the one that seems the most plausible to implement, since it
-  doesn't require solving too many philosophical quagmires.
+1. **Learn a model of the operator's intent.** This is precise what deep
+   learning is good at. You need to keep the operator in the loop providing
+   feedback, so that the model doesn't drift.
+2. **Ensure the AI reliably abides by that model.** This part is hard.
 
-- There are two problems:
+Of course the obvious problem is: what if the operator is evil? If AI is
+centralized, this looks like the company that builds an intent-aligned
+superintelligence taking over the world. If AI is decentralized, this looks like
+a world where most everyone can make WMDs at home (c.f., Michael Nielsen's
+concept of "[recipes for ruin][ruin]").
 
-  - Learn a model of the operator's intent.
+How might we survive the decentralized case? The standard answer is
+"governance", which is very vague. A more flippant answer is: "the only thing
+that stops a bad guy with a superintelligent AI is a good guy with a
+superintelligent AI". And while I am sympathetic---I am philosophically very pro
+gun---I don't think this works.
 
-  - Ensure the AI abides by that model.
+Let me make an analogy. If one state tried to take over the world militarily,
+they would be outnumbered and outgunned by the rest of the world combined. But
+such a conflict could cause tremendous damage to the natural world, even without
+getting into WMDs. A single shell can blow up an ant colony, a military campaign
+using chemical or nuclear defoliation could destroy multiple species.
 
-- The second problem might be hard, but it seems in principle
-  doable. The first problem seems easy: modeling is precisely what
-  deep learning is good at. And, if the operator says in the loop,
-  giving positive/negative feedback to the AI, the model evolves along
-  with the operator.
-
-- Of course the obvious problem is: what if the operator is evil?
+Now imagine we're the ants, and the humans are the ASIs.
 
   - How much do you keep humans in control?
 
   - Use intent alignment to answer CEV?
 
   - Implement something mutually agreeable to the humans.
-
-- In society we manage because most people are more or less evenly
-  matched: some are stronger, some are smarter, some are richer, but
-  nobody is so superhuman in enough traits that they can
-  single-handedly best all of society. In a world of superhuman AI,
-  that safety in numbers is broken.
-
-- Failure mode: solve intent alignment, build an intent-aligned ASI,
-  take over the world, disempower everyone else.
 
 - Solve intent alignment, give everyone an intent-aligned ASI: has the
   problem of "distributed disempowerment".
@@ -308,3 +309,4 @@ maximizer. Personally, I don't want to build god, even if god is a minimalist
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
 [cev]: https://intelligence.org/files/CEV.pdf
 [si]: https://intelligence.org/files/CEV.pdf
+[ruin]: https://michaelnotebook.com/xrisk/
