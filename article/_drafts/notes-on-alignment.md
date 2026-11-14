@@ -251,27 +251,34 @@ organ ensconced in their guardian angel ASI.
   - We have some mathematical theories of optimal rationality. But these are an
     unattainable normative standard, they may not be useful for studying what a
     real existing superintelligence would do in reality.
-      - A lot of writing about AI safety is shot through with these GOFAI
+    - If you assume that ASI will be a perfectly rational, utility-maximizing
+      Bayesian agent, then these formalisms might be useful for understanding
+      ASI.
+      - A lot of the theorizing about ASI is shot through with these old GOFAI
         assumptions: that the AI will be symbolic, programmable, perfectly
         rational, utility-maximizing, with an explicitly-represented utility
-        function.
-        - Most of the old LessWrong/MIRI/SIAI stuff is like this. Even after
-          deep learning and neural networks, a lot of AI safety writing _still_
-          carries these implicit assumptions.
-        - I think a lot of people have this implicit assumption that at some
-          stage of RSI the AI will solve GOFAI and rebuild itself as a symbolic
-          agent and keep itereating from there.
-        - If you believe that, then it makes sense to think that studying these
-          formal mathematical theories will give us insights as to what ASI will
-          be like in practice.
-        - But what if "scruffy ASI" is possible? In that case we know nothing.
+        function. Most of the old LessWrong/MIRI/SIAI stuff is like this. The
+        _Superintelligence_ book is like this:
+      - Even after deep learning and neural networks, a lot of AI safety writing
+        _still_ carries these implicit assumptions.
+      - I think a lot of people have this implicit assumption that at some
+        stage of RSI the AI will solve GOFAI and rebuild itself as a symbolic
+        agent and keep itereating from there.
+      - If you believe that, then it makes sense to think that studying these
+        formal mathematical theories will give us insights as to what ASI will
+        be like in practice.
+      - But what if "scruffy ASI" is possible? In that case we know nothing.
   - Human geniuses provide a lower bound on what a superintelligence would be
     able to do in certain areas, like chess or physics or mathematics. But
     what's the upper bound?
   - Some humans are very charismatic. But what is the range of charisma? Is
-    superpersuasion possible? I don't know. How likely is it that
+    superpersuasion possible? I don't know. How _likely_ is it that
     superpersuasion is possible? I don't even know where I'd begin to try and
     put numbers on that.
+      - The term is [extremely loosely-defined][sp]. loose. What percentage of
+        people does it have to work on to count as "superpersuasion"? Does
+        "superpersuasion" mean the AI can persuade you to perform _any_ action?
+        If not, what does it mean?
   - We can't predict the specific cognitive abilities an ASI would have.
   - We also can't predict the higher-order consequences those cognitive
     abilities would have.
@@ -291,8 +298,9 @@ organ ensconced in their guardian angel ASI.
     See p. 212 of [_Superintelligence_][si].
 
 [bluedot]: https://blog.bluedot.org/p/what-is-ai-alignment
-[impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
 [cev]: https://intelligence.org/files/CEV.pdf
-[si]: https://intelligence.org/files/CEV.pdf
-[ruin]: https://michaelnotebook.com/xrisk/
+[impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
 [magic]: http://sl4.org/archive/0009/0092.html
+[ruin]: https://michaelnotebook.com/xrisk/
+[si]: https://intelligence.org/files/CEV.pdf
+[sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
