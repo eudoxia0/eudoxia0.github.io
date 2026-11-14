@@ -52,6 +52,11 @@ This post is my effort to understand AI alignment better.
 - Bostrom's term?
 - Instead of aligning the AI to some value system, align the AI to a _process_
   for discovering that value system.
+- The CEV of humanity is not something we are expected to
+  discover. Rather, it's a goal, an initial condition, to a
+  superintelligent AI: "discover the CEV of humanity and implement
+  that". By construction, any question about what CEV utopia
+  actually looks like is out of scope.
 
 ## CEV
 
@@ -79,12 +84,6 @@ This post is my effort to understand AI alignment better.
       of you that is smarter, wiser, more like the person you wish you
       were, and has thought about ethics 10,000 times longer than you
       is not you. It's a different person.
-
-  - The CEV of humanity is not something we are expected to
-    discover. Rather, it's a goal, an initial condition, to a
-    superintelligent AI: "discover the CEV of humanity and implement
-    that". By construction, any question about what CEV utopia
-    actually looks like is out of scope.
 
   - This idea of a clean separation between what we want the AI to do
     (where our preferences converge) and what it won't do (where our
