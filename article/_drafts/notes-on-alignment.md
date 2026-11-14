@@ -2,6 +2,11 @@
 title: Notes on Alignment
 summary: What do we mean by AI alignment?
 card: notes-on-alignment.webp
+card_source: |
+    Detail from [_Sisyphus_][a], [Franz von Stuck][b], 1920.
+
+    [a]: https://commons.wikimedia.org/wiki/File:Sisyphus_by_von_Stuck.jpg
+    [b]: https://en.wikipedia.org/wiki/Franz_von_Stuck
 ---
 
 This post is my effort to understand AI alignment better.
