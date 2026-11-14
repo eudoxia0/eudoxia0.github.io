@@ -144,52 +144,22 @@ Let me make an analogy. If one state tried to take over the world militarily,
 they would be outnumbered and outgunned by the rest of the world combined. But
 such a conflict could cause tremendous damage to the natural world, even without
 getting into WMDs. A single shell can blow up an ant colony, a military campaign
-using chemical or nuclear defoliation could destroy multiple species.
+using chemical or nuclear defoliation could destroy entire ecosystems and animal
+species.
 
-Now imagine we're the ants, and the humans are the ASIs.
+Now imagine we're the ants, and the humans are the ASIs. A "bad guy with an ASI"
+might not be able to overpower all the other ASIs, but in the attempt they might
+succeed at causing human extinction. The society of ASIs might be able to
+prevent a single ASI taking over, but they might not be able to keep us from
+being trampled underfoot.
 
-  - How much do you keep humans in control?
-
-  - Use intent alignment to answer CEV?
-
-  - Implement something mutually agreeable to the humans.
-
-- Solve intent alignment, give everyone an intent-aligned ASI: has the
-  problem of "distributed disempowerment".
-
-  - c.f. "recipes for ruin" from Michael Nielsen.
-
-  - The problem here is that we, humans, are more fragile than
-    machines. We would also be much slower and dumber.
-
-  - The society of aligned ASIs might be able to prevent a single ASI
-    aligned to an evil operator from destroying them.
-
-  - But they might not be able to prevent us from being trampled
-    underfoot.
-
-  - In a war between humans, the ants get crushed.
-
-  - Furthermore, if a single person builds a misaligned ASI (not a
-    superintelligence intent-aligned to an evil operator, but a
-    superintelligent that is not aligned to anything human at all)
-    then it might be over.
-
-  - In a war between two ASIs, one of which is intent-aligned to a
-    human, and the other is completely autonomous, the human is a
-    fatal bottleneck. They won't be able to have any meaningful input.
-
-- We might be able to muddle through a good future.
-
-  - But it seems there's a significant risk of ending up in a future
-    where humans are kind of like a vestigial organ ensconced in their
-    guardian angel ASI.
-
-- Things we want to avoid:
-  - Runaway AI takeover.
-  - Huge uplift for cyber, bio etc.
-
-- How to keep humans in control?
+There's also the problem that keeping the human in the loop is a latency
+bottleneck. In a conflict between an intent-aligned ASI and a completely
+autonomous ASI, the former is at a disadvantage if it has to wait for its
+operator to provide feedback for the intent model. At the limit, the operator
+can't give its ASI any meaningful input, since the pace of the world outside is
+far faster than what the human can keep up with. The human, then, is a vestigial
+organ ensconced in their guardian angel ASI.
 
 # Value Alignment
 
