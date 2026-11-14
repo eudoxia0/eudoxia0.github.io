@@ -13,39 +13,39 @@ This post is my effort to understand AI alignment better.
 
 # The Rhetorical Definition
 
-- If you talk to people from the LessWrong cultural sphere, and probe
-  their views and the arguments, a lot of them seem to view alignment
-  as: "the property that, if a superintelligent AI has it, leads to
-  utopia". That is, a completely opaque premise defined entirely by
-  its outcomes.
+A lot of people I talk to seem to view alignment as: "the property that, if a
+superintelligent AI has it, leads to utopia". It's a completely opaque premise
+that cleanly partitions the future into good and bad, and is defined entirely by
+its outcomes.
 
-- Rhetorically, this is very useful, since any criticism of the
-  post-AI utopia can be refuted:
+Rhetorically, this is very useful, since any criticism of the post-AI utopia can
+be refuted:
 
-  - "(bad thing) would be a failure of alignment. Since the AI is
-    aligned, it won't happen. "
+- "[Bad thing] would be a failure of alignment. Since the AI is aligned, it
+  won't happen."
 
-  - "Since the AI is superintelligent, it will foresee all the
-    unforeseen negative consequences of the AI utopia, and build a
-    utopia that avoids all of them."
+- "The AI is superintelligent, so it will find a solution to [bad thing]". This
+  is particularly bad because it's a thought terminating cliche: if you think
+  ASI will solve everything, you don't have to ask yourself "is this problem
+  even _solvable_ in principle?".
 
-- Thus making discourse impossible.
+- "Since the AI is superintelligent, it will foresee all the unforeseen negative
+  consequences of the AI utopia, and build a utopia that avoids all of them."
 
-- The problem with this definition is that it's not constructive. It
-  doesn't help you align an AI or know if an AI is aligned. It's
-  entirely retrospective: you can only call the AI aligned once it's
-  done rearranging the universe.
+Thus making discourse impossible.
 
-- It's like you buy a self-help book titled "How To Be Successful",
-  and it just says: "a successful person is one who makes decisions
-  that lead to good outcomes". And the rest of the book is blank. This
-  is not useful\!
+The problem with this view is that it's not constructive. It doesn't help you
+align an AI or know if an AI is aligned. It's entirely retrospective: you can
+only call the AI aligned once it's done rearranging the universe. It's like
+buying a self-help book titled "How To Be Successful", and it just says: "a
+successful person is one who makes decisions that lead to good outcomes". And
+the rest of the book is blank. This is not useful!
 
-- The problem with this definition is that it acts short-circuits
-  thought:
-
-  - "What if the benevolent AI utopia is bad?" "Well the AI is
-    superintelligent so it will figure it out".
+But, more generally, the problem is you are assuming this property exists, that
+"alignment" is a property that a "superintelligent AI" can have. From this
+imagined property you derive positive and negative utilitarian infinities (the
+utopia, the paperclip maximizer wasting the cosmic endowment) that drive you
+insane.
 
 # Indirect Normativity
 
