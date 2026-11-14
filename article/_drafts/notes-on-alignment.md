@@ -67,6 +67,9 @@ we let the AI find the criterion, according to some meta-criterion, and so on.
 
 ## CEV
 
+The most discussed example of indirect normativity is Coherent Extrapolated
+Volition (CEV).
+
 - The best-known example of indirect normativity.
 
 - Problems:
