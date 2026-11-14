@@ -242,14 +242,29 @@ organ ensconced in their guardian angel ASI.
           people seem to move from one end of the spectrum to the other in the
           same argument.
   - By definition, a superintelligence would be very good at physics. What does
-    that mean?  "Better than Einstein" doesn't really tell us
-    anything. Sometimes people speculate that superintelligence might be able to
-    perform literal magic: "what if the AI finds an exploit in the VM that runs
-    the universe and uses it to hack physics?". But the possibility or
-    impossibility of this is a property of the universe first and foremost. The
-    set of things a superintelligence can do is a subset of the set of things it
-    is possible to do: without a complete theory of physics, we can't be certain
-    about the shape of the envelope.
+    that mean? "Better than Einstein" doesn't really tell us anything.
+    - Would ASI be able to perform [magic plain and simple][magic]? The
+      possibility or impossibility of some action is a property of the
+      universe. The set of things a superintelligence can do is a subset of the
+      set of things it is possible to do: without a complete theory of physics,
+      we can't be certain about the shape of the envelope.
+  - We have some mathematical theories of optimal rationality. But these are an
+    unattainable normative standard, they may not be useful for studying what a
+    real existing superintelligence would do in reality.
+      - A lot of writing about AI safety is shot through with these GOFAI
+        assumptions: that the AI will be symbolic, programmable, perfectly
+        rational, utility-maximizing, with an explicitly-represented utility
+        function.
+        - Most of the old LessWrong/MIRI/SIAI stuff is like this. Even after
+          deep learning and neural networks, a lot of AI safety writing _still_
+          carries these implicit assumptions.
+        - I think a lot of people have this implicit assumption that at some
+          stage of RSI the AI will solve GOFAI and rebuild itself as a symbolic
+          agent and keep itereating from there.
+        - If you believe that, then it makes sense to think that studying these
+          formal mathematical theories will give us insights as to what ASI will
+          be like in practice.
+        - But what if "scruffy ASI" is possible? In that case we know nothing.
   - Human geniuses provide a lower bound on what a superintelligence would be
     able to do in certain areas, like chess or physics or mathematics. But
     what's the upper bound?
@@ -280,3 +295,4 @@ organ ensconced in their guardian angel ASI.
 [cev]: https://intelligence.org/files/CEV.pdf
 [si]: https://intelligence.org/files/CEV.pdf
 [ruin]: https://michaelnotebook.com/xrisk/
+[magic]: http://sl4.org/archive/0009/0092.html
