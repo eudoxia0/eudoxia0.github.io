@@ -1,5 +1,6 @@
 ---
 title: Notes on Alignment
+summary: What do we mean by AI alignment?
 ---
 
 This post is my effort to understand AI alignment better.
