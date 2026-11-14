@@ -83,7 +83,8 @@ wish that extrapolated, interpreted as we wish that interpreted"[^cev].
 The "convergence" in "converges rather than diverges" is by analogy to an
 infinite series: it means "where the CEV extrapolation terminates with a single
 result, instead of going off to infinity or in an infinite loop". "Where our
-wishes cohere rather than interfere" essentially means the set intersection.
+wishes cohere rather than interfere" essentially means the set intersection (see
+p. 212 of [_Superintelligence_][si]).
 
 - Problems:
 
@@ -310,3 +311,4 @@ maximizer. Personally, I don't want to build god, even if god is a minimalist
 [bluedot]: https://blog.bluedot.org/p/what-is-ai-alignment
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
 [cev]: https://intelligence.org/files/CEV.pdf
+[si]: https://intelligence.org/files/CEV.pdf
