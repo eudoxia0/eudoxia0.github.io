@@ -272,13 +272,11 @@ organ ensconced in their guardian angel ASI.
     able to do in certain areas, like chess or physics or mathematics. But
     what's the upper bound?
   - Some humans are very charismatic. But what is the range of charisma? Is
-    superpersuasion possible? I don't know. How _likely_ is it that
-    superpersuasion is possible? I don't even know where I'd begin to try and
+    superpersuasion possible? I don't know. The term is [very
+    loosely-defined][sp], but people just throw the word around like it means
+    something. How _likely_ is it that (some suitable definition of)
+    superpersuasion is possible? I don't even know where you'd begin to try and
     put numbers on that.
-      - The term is [extremely loosely-defined][sp]. loose. What percentage of
-        people does it have to work on to count as "superpersuasion"? Does
-        "superpersuasion" mean the AI can persuade you to perform _any_ action?
-        If not, what does it mean?
   - We can't predict the specific cognitive abilities an ASI would have.
   - We also can't predict the higher-order consequences those cognitive
     abilities would have.
