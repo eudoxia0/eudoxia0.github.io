@@ -82,7 +82,8 @@ wish that extrapolated, interpreted as we wish that interpreted"[^cev].
 
 The "convergence" in "converges rather than diverges" is by analogy to an
 infinite series: it means "where the CEV extrapolation terminates with a single
-result, instead of going off to infinity or in an infinite loop".
+result, instead of going off to infinity or in an infinite loop". "Where our
+wishes cohere rather than interfere" essentially means the set intersection.
 
 - Problems:
 
