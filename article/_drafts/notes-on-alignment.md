@@ -53,8 +53,7 @@ This post is my effort to understand AI alignment better.
 - Instead of aligning the AI to some value system, align the AI to a _process_
   for discovering that value system.
 
-# CEV
-
+## CEV
 
 - Problems:
 
