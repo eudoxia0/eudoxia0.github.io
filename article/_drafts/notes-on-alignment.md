@@ -47,6 +47,12 @@ This post is my effort to understand AI alignment better.
   - "What if the benevolent AI utopia is bad?" "Well the AI is
     superintelligent so it will figure it out".
 
+# Indirect Normativity
+
+- Bostrom's term?
+- Instead of aligning the AI to some value system, align the AI to a _process_
+  for discovering that value system.
+
 # CEV
 
 
