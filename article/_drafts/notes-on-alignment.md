@@ -55,6 +55,8 @@ This post is my effort to understand AI alignment better.
 
 ## CEV
 
+- The best-known example of indirect normativity.
+
 - Problems:
 
   - The "coherent" EV might be the empty set.
