@@ -95,13 +95,18 @@ Volition (CEV).
       were, and has thought about ethics 10,000 times longer than you
       is not you. It's a different person.
 
-  - This idea of a clean separation between what we want the AI to do
-    (where our preferences converge) and what it won't do (where our
-    preferences diverge) is false. The CEV of humanity might include
-    "not getting arbitrarily murdered", but to actually enforce that,
-    you need intrusive surveillance of all habitable space. This idea
-    that you can build a god to rule the universe but we will still
-    have agency and freedom inside that sphere seems false.
+There's this pervasive assumption that there is a clear separation between
+what's inside humanity's CEV (what we want the AI to do for us) and what's
+outside (where we want the AI to leave us alone). But this is false. If the CEV
+of humanity is just "prevent anyone from building an out-of-control paperclip
+maximizer", that requires the AI to set up permanent, omniscient surveillance of
+the entire universe.
+
+You have freedom and agency in every other area of life, but have to accept
+living under a permanent panopticon. And you can't leave, because if you leave
+the scope of the panopticon, you might build an out-of-control paperclip
+maximizer. Personally, I don't want to build god, even if god is a minimalist
+"night watchman" god.
 
 # Intent Alignment
 
