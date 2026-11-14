@@ -1,6 +1,7 @@
 ---
 title: Notes on Alignment
 summary: What do we mean by AI alignment?
+card: notes-on-alignment.webp
 ---
 
 This post is my effort to understand AI alignment better.
