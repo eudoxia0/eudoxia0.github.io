@@ -274,7 +274,7 @@ organ ensconced in their guardian angel ASI.
   - Some humans are very charismatic. But what is the range of charisma? Is
     superpersuasion possible? I don't know. The term is [very
     loosely-defined][sp], but people just throw the word around like it means
-    something. How _likely_ is it that (some suitable definition of)
+    something. Given some reasonably clear definition: how _likely_ is it that
     superpersuasion is possible? I don't even know where you'd begin to try and
     put numbers on that.
   - We can't predict the specific cognitive abilities an ASI would have.
