@@ -228,7 +228,5 @@ organ ensconced in their guardian angel ASI.
 [bluedot]: https://blog.bluedot.org/p/what-is-ai-alignment
 [cev]: https://intelligence.org/files/CEV.pdf
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
-[magic]: http://sl4.org/archive/0009/0092.html
 [ruin]: https://michaelnotebook.com/xrisk/
 [si]: https://intelligence.org/files/CEV.pdf
-[sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
