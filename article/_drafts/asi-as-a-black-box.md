@@ -1,5 +1,6 @@
 ---
 title: ASI as a Black Box
+summary: We know nothing about what ‘superintelligence’ would actually entail.
 ---
 
 An artificial superintelligence (ASI) is an AI that's much better than the top
