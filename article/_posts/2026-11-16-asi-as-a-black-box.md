@@ -23,7 +23,7 @@ and so we don't have solid reasons to say what is or is not possible.
 
 Consider persuasion. Some humans are very charismatic. But what is the range of
 charisma? Is superpersuasion possible? I don't know. The term is [very
-loosely-defined][sp], but people just throw the word around like it means
+loosely defined][sp], but people just throw the word around like it means
 something. Without a deductive theory of human belief-change and communication,
 the possibility of "superpersuasion" is an empirical question.
 
