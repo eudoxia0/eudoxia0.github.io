@@ -34,28 +34,18 @@ can do" is a subset of "things it is possible to do", to know the former
 do that we need a complete, deductive theory of whatever area of knowledge _X_
 belongs to.
 
-Part of the problem is that people often make incompatible assumptions about the
-resources available to a superintelligence. Sometimes ASI means "a Dyson
-sphere's worth of compute" and sometimes it means "something Anthropic or OpenAI
-might build next year". Sometimes people seem to move from one end of the
-spectrum to the other in the same argument. And if we're assuming astronomical
-quantities of compute, a lot of questions (e.g. how good would ASI be at chess?)
-become meaningless because the role of "intelligence" gets diluted by running
-classical algorithms on huge piles of compute.
-
 But don't we have all these mathematical theories of rationality and optimal
 decision-making? Are those useful for predicting how a superintelligence would
 behave?
 
 The early speculation about ASI is shot through with these old [GOFAI][gofai]
-assumptions: that the AI will be symbolic, programmable, perfectly rational,
+assumptions: that AI will be symbolic, programmable, perfectly rational,
 utility-maximizing, with an explicitly-designed value function. You see this
-constantly in old LessWrong posts, [MIRI][miri]/SIAI papers, Bostrom's
+constantly in old LessWrong posts, old [MIRI][miri]/SIAI papers, Bostrom's
 [_Superintelligence_][si] book. Even after deep learning and language models, a
-lot of AI safety writing _still_ carries these implicit assumptions. I think
-some people assume that at some point AIs will solve GOFAI and we transition to
-symbolic AI; or that there's a kind of convergence where, as you scale up
-capabilities, AIs start to converge into perfect Bayesian rational agents.
+lot of AI safety writing _still_ carries these implicit assumptions. You can
+even see this in [AI 2040][vgel], where at one point the AIs solve GOFAI and
+remake themselves as symbolic agents.
 
 Maybe a superintelligence would be a perfect rational agent. In that case, all
 those papers about decision theory and all that ink spilled on [Newcomb's
@@ -71,3 +61,4 @@ abilities.
 [np]: https://en.wikipedia.org/wiki/Newcomb%27s_problem
 [si]: https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies
 [sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
+[vgel]: https://x.com/voooooogel/status/2075474010620801143
