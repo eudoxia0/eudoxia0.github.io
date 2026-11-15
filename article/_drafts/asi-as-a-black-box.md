@@ -28,9 +28,8 @@ elasticity of scientific discovery.
 
 More generally, for a question of the form "would an ASI be able to do _X_?",
 our inability to answer the question usually stems, not from our lack of
-knowledge about ASI, but from our lack of knowledge about _X_. The possibility
-or impossibility of an action is a property of the universe. "Things an ASI can
-do" is a subset of "things it is possible to do", to know the former
+knowledge about ASI, but from our lack of knowledge about _X_. "Things an ASI
+can do" is a subset of "things it is possible to do", to know the former
 (deductively rather than empirically) we first need to know the latter, and to
 do that we need a complete, deductive theory of whatever area of knowledge _X_
 belongs to.
