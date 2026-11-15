@@ -17,6 +17,8 @@ For the first half of the year: [_Books I Enjoyed In 2026H1_][h1].
 
 [_Aladdin's Problem_][ap] by [Ernst Jünger][junger].
 
+[_Hardwired_][hw] by [Walter Jon Williams][wjw].
+ 
 # Non-Fiction
 
 [_Mind Children_][mind] by [Hans Moravec][hans].
@@ -51,6 +53,7 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [hannu]: https://en.wikipedia.org/wiki/Hannu_Rajaniemi
 [hans]: https://en.wikipedia.org/wiki/Hans_Moravec
 [hfw]: https://www.goodreads.com/book/show/1355465.How_Fiction_Works
+[hw]: https://en.wikipedia.org/wiki/Hardwired_(novel)
 [inc]: https://en.wikipedia.org/wiki/Incandescence_(novel)
 [junger]: https://en.wikipedia.org/wiki/Ernst_J%C3%BCnger
 [jw]: https://en.wikipedia.org/wiki/James_Wood_(critic)
@@ -67,3 +70,4 @@ G. H. Hardy once said that there is no place in the world for ugly mathematics. 
 [tb]: http://www.nottub.com
 [truth]: https://www.goodreads.com/en/book/show/469713.Pursuit_of_Truth
 [web]: https://www.goodreads.com/book/show/931301.The_Web_of_Belief
+[wjw]: https://en.wikipedia.org/wiki/Walter_Jon_Williams
