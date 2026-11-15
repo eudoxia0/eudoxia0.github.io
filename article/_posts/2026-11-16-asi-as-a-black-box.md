@@ -58,4 +58,4 @@ abilities.
 
 [np]: https://en.wikipedia.org/wiki/Newcomb%27s_problem
 [sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
-[coherence]: www.lesswrong.com/posts/RQpNHSiWaXTvDxt6R/coherent-decisions-imply-consistent-utilities
+[coherence]: https://www.lesswrong.com/posts/RQpNHSiWaXTvDxt6R/coherent-decisions-imply-consistent-utilities
