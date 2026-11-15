@@ -2,6 +2,11 @@
 title: ASI as a Black Box
 summary: We know nothing about what ‘superintelligence’ would actually entail.
 card: asi-as-a-black-box.webp
+card_source: |
+    Detail from [_Elasticity_][a], [Umberto Boccioni][b], 1912.
+
+    [a]: https://en.wikipedia.org/wiki/File:Umberto_Boccioni,_1912,_Elasticity_(Elasticit%C3%A0),_oil_on_canvas,_100_x_100_cm,_Museo_del_Novecento.jpg
+    [b]: https://en.wikipedia.org/wiki/Umberto_Boccioni
 ---
 
 An artificial superintelligence (ASI) is an AI that's much better than the top
