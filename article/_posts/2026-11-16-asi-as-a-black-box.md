@@ -12,7 +12,7 @@ card_source: |
 An artificial superintelligence (ASI) is an AI that's much better than the top
 humans at almost all cognitive tasks. This is a perfectly fine definition. But,
 from this definition and from our web of knowledge, we can deduce very little
-about what a ASI would actually look like.
+about what an ASI would actually look like.
 
 Human geniuses provide a lower bound, but not an upper bound. In some areas, we
 have deductive theories that describe the space of what is possible for all
@@ -31,7 +31,10 @@ Consider scientific discovery. Maybe ASI would vastly accelerate science, or
 not. You can think of scientific discovery as a function of intelligence, the
 existing state of knowledge, and access to empirical observation. But we don't
 know the coefficients of those terms, the---so to speak---intelligence
-elasticity of scientific discovery.
+elasticity of scientific discovery. I would _guess_ that progress would
+accelerate, since greater intelligence means better hypothesis generation,
+hypothesis selection, experiment design, and more efficient scheduling of lab
+equipment.
 
 More generally, for a question of the form "would an ASI be able to do _X_?",
 our inability to answer the question usually stems, not from our lack of
@@ -43,29 +46,16 @@ belongs to.
 
 But don't we have all these mathematical theories of rationality and optimal
 decision-making? Are those useful for predicting how a superintelligence would
-behave?
-
-The early speculation about ASI is shot through with these old [GOFAI][gofai]
-assumptions: that AI will be symbolic, programmable, perfectly rational,
-utility-maximizing, with an explicitly-designed value function. You see this
-constantly in old LessWrong posts, old [MIRI][miri]/SIAI papers, Bostrom's
-[_Superintelligence_][si] book. Even after deep learning and language models, a
-lot of AI safety writing _still_ carries these implicit assumptions. You can
-even see this in [AI 2040][vgel], where at one point the AIs solve GOFAI and
-remake themselves as symbolic agents.
-
-Maybe a superintelligence would be a perfect rational agent. In that case, all
-those papers about decision theory and all that ink spilled on [Newcomb's
-problem][np] will finally pay off. If, on the other hand, these theories are
-just an unreachable, abstract mathematical standard, then we know nothing.
+behave? The [standard doctrine][coherence] says superintelligence should
+converge on perfect Bayesian rationality. If that's true, then all those papers
+about decision theory and all that ink spilled on [Newcomb's problem][np] will
+finally pay off. If, on the other hand, these theories are just an unreachable,
+abstract normative standard, then we know nothing.
 
 In short: we can't predict the specific cognitive abilities an ASI would have,
 and we also can't predict the higher-order consequences of those cognitive
 abilities.
 
-[gofai]: https://en.wikipedia.org/wiki/GOFAI
-[miri]: https://intelligence.org/
 [np]: https://en.wikipedia.org/wiki/Newcomb%27s_problem
-[si]: https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies
 [sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
-[vgel]: https://x.com/voooooogel/status/2075474010620801143
+[coherence]: www.lesswrong.com/posts/RQpNHSiWaXTvDxt6R/coherent-decisions-imply-consistent-utilities
