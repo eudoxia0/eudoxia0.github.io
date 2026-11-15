@@ -1,0 +1,74 @@
+---
+title: ASI as a Black Box
+---
+
+An artificial superintelligence (ASI) is an AI that's much better than the top
+humans at almost all cognitive tasks. This is a perfectly fine definition. But,
+from this definition and from our web of knowledge, we can deduce very little
+about what a ASI would actually look like.
+
+Human geniuses provide a lower bound, but not an upper bound. In some areas, we
+have deductive theories that describe the space of what is possible for all
+agents. We know, for example, that a superintelligent AI won't be able to travel
+faster than light, or travel back in time, because we have well-trod theories
+that prohibit these things. In most areas of life, we don't have such theories,
+and so we don't have solid reasons to say what is or is not possible.
+
+Consider persuasion. Some humans are very charismatic. But what is the range of
+charisma? Is superpersuasion possible? I don't know. The term is [very
+loosely-defined][sp], but people just throw the word around like it means
+something. Without a deductive theory of human belief-change and communication,
+the possibiltiy of "superpersuasion" is an empirical question.
+
+Consider scientific discovery. Maybe ASI would vastly accelerate science, or
+not. You can think of scientific discovery as a function of intelligence, the
+existing state of knowledge, and access to empirical observation. But we don't
+know the coefficients of those terms, the---so to speak---intelligence
+elasticity of scientific discovery.
+
+More generally, for a question of the form "would an ASI be able to do _X_?",
+our inability to answer the question usually stems, not from our lack of
+knowledge about ASI, but from our lack of knowledge about _X_. The possibility
+or impossibility of an action is a property of the universe. "Things an ASI can
+do" is a subset of "things it is possible to do", to know the former
+(deductively rather than empirically) we first need to know the latter, and to
+do that we need a complete, deductive theory of whatever area of knowledge _X_
+belongs to.
+
+Part of the problem is that people often make incompatible assumptions about the
+resources available to a superintelligence. Sometimes ASI means "a Dyson
+sphere's worth of compute" and sometimes it means "something Anthropic or OpenAI
+might build next year". Sometimes people seem to move from one end of the
+spectrum to the other in the same argument. And if we're assuming astronomical
+quantities of compute, a lot of questions (e.g. how good would ASI be at chess?)
+become meaningless because the role of "intelligence" gets diluted by running
+classical algorithms on huge piles of compute.
+
+But don't we have all these mathematical theories of rationality and optimal
+decision-making? Are those useful for predicting how a superintelligence would
+behave?
+
+The early speculation about ASI is shot through with these old [GOFAI][gofai]
+assumptions: that the AI will be symbolic, programmable, perfectly rational,
+utility-maximizing, with an explicitly-designed value function. You see this
+constantly in old LessWrong posts, [MIRI][miri]/SIAI papers, Bostrom's
+[_Superintelligence_][si] book. Even after deep learning and language models, a
+lot of AI safety writing _still_ carries these implicit assumptions. I think
+some people assume that at some point AIs will solve GOFAI and we transition to
+symbolic AI; or that there's a kind of convergence where, as you scale up
+capabilities, AIs start to converge into perfect Bayesian rational agents.
+
+Maybe a superintelligence would be a perfect rational agent. In that case, all
+those papers about decision theory and all that ink spilled on [Newcomb's
+problem][np] will finally pay off. If, on the other hand, these theories are
+just an unreachable, abstract mathematical standard, then we know nothing.
+
+In short: we can't predict the specific cognitive abilities an ASI would have,
+and we also can't predict the higher-order consequences of those cognitive
+abilities.
+
+[gofai]: https://en.wikipedia.org/wiki/GOFAI
+[miri]: https://intelligence.org/
+[np]: https://en.wikipedia.org/wiki/Newcomb%27s_problem
+[si]: https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies
+[sp]: https://www.lesswrong.com/posts/cGFBqg9SKsqbuzNHF/levels-of-superpersuasion
