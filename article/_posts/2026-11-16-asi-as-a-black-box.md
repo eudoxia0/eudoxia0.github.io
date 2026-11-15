@@ -25,7 +25,7 @@ Consider persuasion. Some humans are very charismatic. But what is the range of
 charisma? Is superpersuasion possible? I don't know. The term is [very
 loosely-defined][sp], but people just throw the word around like it means
 something. Without a deductive theory of human belief-change and communication,
-the possibiltiy of "superpersuasion" is an empirical question.
+the possibility of "superpersuasion" is an empirical question.
 
 Consider scientific discovery. Maybe ASI would vastly accelerate science, or
 not. You can think of scientific discovery as a function of intelligence, the
