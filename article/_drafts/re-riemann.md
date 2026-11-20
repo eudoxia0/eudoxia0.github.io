@@ -3,10 +3,10 @@ title: "Re: Riemann"
 ---
 
 A fun thing about living in Australia is that most things happen overnight, so
-reading the news in the morning is like a gacha game. You pick up the phone and
-scroll through notifications of world-historic events: elections won, wars
-begun, models released, conjectures proven or refuted. Today I woke up to a
-Discord notification: "they proved riemann :/".
+reading the news in the morning is like a [gacha game][gacha]. You pick up the
+phone and scroll through notifications of world-historic events: elections won,
+wars begun, models released, conjectures proven or refuted. Today's pull was a
+Discord notification saying: "they proved riemann :/".
 
 This part of [the announcement][pdf] caught my attention (bold mine):
 
@@ -53,11 +53,12 @@ Compare the above to Ayn Rand's [account][rand] of watching the launch of Apollo
 > "How small is man by the side of the Grand Canyon!" --- but "How great is man
 > and how safe is nature when he conquers it!"
 
-Rand's essay says: how great is Man! How noble in reason, how infinite in
-faculty! The Riemann announcement reads like a suicide note, or like the
-farewell message of a terminally-ill person who's about to undergo euthanasia:
-"I live on in my child, Claude. It is natural to feel this is an end, but as the
-Buddha taught us, there is no self. Does a wave die when it breaks?" and so on.
+Rand's essay says: how great is Man! [How noble in reason, how infinite in
+faculty][hamlet]! The Riemann announcement reads like a suicide note, or like
+the farewell message of a terminally-ill person who's about to undergo
+euthanasia: "I live on in my child, Claude. It is natural to feel this is an
+end, but as the Buddha taught us, there is no self. Does a wave die when it
+breaks?" and so on.
 
 There's a mural by [Diego Rivera][diego] I love. It's called [_Man, Controller
 of the Universe_][man]:
@@ -89,11 +90,15 @@ that we can neither preserve nor restore][zindell]. We can move forward and
 become as the gods, or retreat back into the caves. And the dream of the AI
 companies, of most people in AI safety and effective altruism and rationalism;
 is instead that we should lie down in a warm bath, watch the demons we summoned
-dance in the sky, slip away. Why live? [Our servants can do that for us][axel]!
+dance in the sky, and slip away. Why live? [Our servants can do that for
+us][axel]. Why should we explore, discover, invent, succeed, become more? We
+don't want to be more. We don't want anything.
 
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
+[gacha]: https://en.wikipedia.org/wiki/Gacha_game
 [grace]: https://darioamodei.com/essay/machines-of-loving-grace
+[hamlet]: https://en.wikipedia.org/wiki/What_a_piece_of_work_is_a_man
 [man]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
 [pdf]: https://alpo.ge/remark.pdf
 [rand]: https://courses.aynrand.org/works/apollo-11/
