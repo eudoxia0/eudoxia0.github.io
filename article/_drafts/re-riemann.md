@@ -83,7 +83,7 @@ And when I read Alpöge's announcement, when I read [_Machines of Loving
 Grace_][grace]: humanity is not at the center. Claude is at the center. We are
 hidden in the margins, passive recipients of manna from Claude. How great is
 Claude! How noble in reason, how infinite in benevolence! The dancing star, the
-living word!
+living [word][logos]!
 
 It's a betrayal and a surrender. [Man is a bridge][zara], [a rusty old bridge
 that we can neither preserve nor restore][zindell]. We can move forward and
@@ -96,13 +96,14 @@ more? We don't want to be more. We don't want anything.
 
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
+[ea]: https://en.wikipedia.org/wiki/Effective_altruism
 [gacha]: https://en.wikipedia.org/wiki/Gacha_game
 [grace]: https://darioamodei.com/essay/machines-of-loving-grace
 [hamlet]: https://en.wikipedia.org/wiki/What_a_piece_of_work_is_a_man
+[logos]: https://en.wiktionary.org/wiki/%CE%BB%CF%8C%CE%B3%CE%BF%CF%82#Ancient_Greek
+[lw]: https://www.lesswrong.com/
 [man]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
 [pdf]: https://alpo.ge/remark.pdf
 [rand]: https://courses.aynrand.org/works/apollo-11/
 [zara]: https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra
 [zindell]: https://www.infinityplus.co.uk/stories/shanidar.htm
-[ea]: https://en.wikipedia.org/wiki/Effective_altruism
-[lw]: https://www.lesswrong.com/
