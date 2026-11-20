@@ -6,9 +6,7 @@ A fun thing about living in Australia is that most things happen overnight, so
 reading the news in the morning is like a gacha game. You pick up the phone and
 scroll through notifications of world-historic events: elections won, wars
 begun, models released, conjectures proven or refuted. Today I woke up to a
-Discord notification:
-
-> they proved riemann :/
+Discord notification saying "they proved riemann :/".
 
 This part of [the announcement][pdf] caught my attention (bold mine):
 
@@ -67,11 +65,9 @@ of the Universe_][man]:
 ![](/assets/content/re-riemann/man-controller-of-the-universe.webp)
 
 It's a collage of images science, technology, history, microbes and galaxies,
-the universe at the nanoscale and the universe at the exascale.
-
-And at the center there is a man, his hands grasping the controls. He wears a
-complicated expression: the weight of responsibility for the future, the weight
-of autonomy.
+the universe at the nanoscale and the universe at the exascale. And at the
+center there is a man, his hands grasping the controls. He wears a complicated
+expression: the weight of responsibility for the future, the weight of autonomy.
 
 And I see this mural, and think: how great is Man! Our life is like a breath of
 air, we were beset by illness and hunger and cold, millions and hundreds of
@@ -83,8 +79,8 @@ and Hilbert: the invisible world that abideth forever. We are dust and ashes,
 and yet our minds bestride the universe. How great is Man!
 
 And when I read Alpöge's announcement, when I read [_Machines of Loving
-Grace_][grace]: humanity is not at the center. Claude is at the center. Humanity
-is the margins, passive recipients of manna from Claude. How great is Claude!
+Grace_][grace]: humanity is not at the center. Claude is at the center. We are
+in the margins, passive recipients of manna from Claude. How great is Claude!
 How noble in reason, how infinite in benevolence!
 
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
