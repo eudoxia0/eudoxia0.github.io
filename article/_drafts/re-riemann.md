@@ -6,7 +6,7 @@ A fun thing about living in Australia is that most things happen overnight, so
 reading the news in the morning is like a gacha game. You pick up the phone and
 scroll through notifications of world-historic events: elections won, wars
 begun, models released, conjectures proven or refuted. Today I woke up to a
-Discord notification saying "they proved riemann :/".
+Discord notification: "they proved riemann :/".
 
 This part of [the announcement][pdf] caught my attention (bold mine):
 
