@@ -1,5 +1,6 @@
 ---
 title: "Re: Riemann"
+card: re-riemann.webp
 ---
 
 A fun thing about living in Australia is that most things happen overnight, so
