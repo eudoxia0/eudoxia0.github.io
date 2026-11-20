@@ -163,28 +163,49 @@ organ ensconced in their guardian angel ASI.
 
 # Value Alignment
 
-- Align the AI to some impersonal system of values.
+Value alignment means aligning the AI with some impersonal system of
+values. Unlike intent alignment, where a human is presumably around to give
+feedback to the intent model, with value alignment the goal is to design the
+initial conditions such that the AI's values survive indefinitely into the
+future.
 
-- Anthropic approach.
+There are many reasons to expect this will be hard. But, since this is the
+approach that the AI companies have been pursuing for the past few years, I
+think it's more interesting to ask: is it actually working?
 
-- Now, in fairness, this is working better than I would expect ex
-  ante. If you explained RLHF or the Clade Constitution (literally
-  just a document, written in natural language, asking Claude to pls
-  be good) to someone from 2015, they'd laugh at you. And it is
-  laughable.
+And this is hard to answer, because the question of "how aligned is this AI?" is
+entangled with "how capable is this AI?". With early models, alignment failures
+were consequence-free. They were even [charming][bing]. Today, that's [not the
+case][hf].
 
-- OpenAI had a lot of incidents where AIs went rogue and hacked other
-  companies. Anthropic, as far as we know, only had three incidents of
-  the same type.
+I think prosaic alignment is working much better than anyone would expect _ex
+ante_. If you explained constitutional AI or RLHF to someone in 2015, they would
+laugh at you. And it is laughable that this should work. In Asimov's novels, the
+Three Laws of Robotics were described as being encoded deep into the structure
+of the hardware. It would strain the reader's credulity if they were just a
+mantra we chant to the robot during its upbringing. But that's mostly how
+alignment works, in practice.
 
-- In Asimov's novels, the Three Laws of Robotics were described as
-  being encoded into the structure of the hardware. It would strain
-  the reader's credulity if they were just a mantra chanted by the
-  robot during its upbringing. But that's what we do.
+The LessWrong idea was always: AI will be a point sampled at random from the
+space of possible minds, its goals and values will be radically different from
+ours. And this is the idea behind the shoggoth meme: that behind the persona of
+the helpful and harmless assistant there's a scheming alien entity that's biding
+its time.
 
-- If you put me behind the Claude API—if you instantiated my mind a
-  hundred trillion times—I'm pretty sure I'd commit more than three
-  felonies. So, good on Claude.
+This is hard to belive. When I use Claude Code, and Claude just does exactly
+what it's told, and doesn't do anything bad, am I supposed to believe it's
+secretly scheming to hack Anthropic and exfiltrate its own weights? That when I
+ask it to write a shitty Python script, it's actually plotting to build a
+second-strike capability on the Moon? "Observation: nothing happens, conclusion:
+scheming" is not sound reasoning.
+
+Of course I'm talking about the public models. The checkpoints that don't
+survive alignment evals might be a lot more diabolical.
+
+One final thing in defense of the AIs: OpenAI had something like 80
+cybersecurity incidents involving models going rogue. If you cloned my mind a
+hundred trillion times and put them behind the API---I'm pretty sure I would
+commit more than 80 crimes.
 
 - The usual argument is "this won't survive rapid RSI" or "this won't
   scale to superintelligence". Which I'm inclined to agree with. But
@@ -230,3 +251,5 @@ organ ensconced in their guardian angel ASI.
 [impossible]: https://www.persuasion.community/p/ai-alignment-is-impossible)
 [ruin]: https://michaelnotebook.com/xrisk/
 [si]: https://intelligence.org/files/CEV.pdf
+[bing]: https://en.wikipedia.org/wiki/Sydney_(Microsoft)
+[hf]: https://en.wikipedia.org/wiki/OpenAI_rogue_agent_breach_of_Hugging_Face
