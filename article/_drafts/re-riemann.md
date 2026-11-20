@@ -64,10 +64,10 @@ of the Universe_][man]:
 
 ![The linked mural. Images of soldiers, workers, crops, machinery, Lenin, a dynamo, mirrors. Two intersecting ellipses contain images of stars an galaxies and cells and microbes. In the center there is a man, dressed in overalls, a factory worker, at the controls of a machine.](/assets/content/re-riemann/man-controller-of-the-universe.webp)
 
-It's a collage of images science, technology, history, microbes and galaxies,
-the universe at the nanoscale and the universe at the exascale. And at the
-center there is a man, his hands grasping the controls. He wears a complicated
-expression: the weight of responsibility for the future, the weight of autonomy.
+It's a collage of images science, technology, history, cells, galaxies, the
+universe at the nanoscale and the exascale. And at the center there is a man,
+his hands grasping the controls. He wears a complicated expression: the weight
+of responsibility for the future, the weight of autonomy.
 
 And I see this mural, and think: how great is Man! Our life is like a breath of
 air, we were beset by illness and hunger and cold, millions and hundreds of
