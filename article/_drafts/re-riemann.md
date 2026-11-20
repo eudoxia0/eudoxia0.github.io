@@ -79,7 +79,7 @@ the furthest stars, and the lives of a cell, and the worlds of Cantor and
 Hilbert: the invisible world that waited forever. We are dust and ashes, and yet
 our minds bestride the universe. How great is Man!
 
-And when I read Alpöge's announcement, when I read [_Machines of Loving
+And when I read the Riemann announcement, when I read [_Machines of Loving
 Grace_][grace]: humanity is not at the center. Claude is at the center. We are
 hidden in the margins, passive recipients of manna from Claude. How great is
 Claude! How noble in reason, how infinite in benevolence! The dancing star, the
@@ -92,7 +92,8 @@ companies, of most people in AI safety and [effective altruism][ea] and
 [rationalism][lw]; is instead that we should lie down in a warm bath, watch the
 demons we summoned dance in the sky, and slip away. Why live? [Our servants can
 do that for us][axel]. Why should we explore, discover, invent, succeed, become
-more? We don't want to be more. We don't want anything.
+more, struggle, win, become divine? We don't want to be more. We don't want
+anything.
 
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
