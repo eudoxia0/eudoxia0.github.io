@@ -54,7 +54,7 @@ Compare the above to Ayn Rand's [account][rand] of watching the launch of Apollo
 > and how safe is nature when he conquers it!"
 
 Rand's essay says: how great is Man! How noble in reason, how infinite in
-faculty! The Riemann announcement reads like an obituary. It reads like the
+faculty! The Riemann announcement reads like a suicide note, or like the
 farewell message of a terminally-ill person who's about to undergo euthanasia:
 "I live on in my child, Claude. It is natural to feel this is an end, but as the
 Buddha taught us, there is no self. Does a wave die when it breaks?" and so on.
@@ -71,17 +71,20 @@ of responsibility for the future, the weight of autonomy.
 
 And I see this mural, and think: how great is Man! Our life is like a breath of
 air, we were beset by illness and hunger and cold, millions and hundreds of
-millions died in plagues. And yet, we---sick, hungry, short-lived---learned the
+millions died in plagues. And yet we---sick, hungry, short-lived---learned the
 system of the world, crawled out of the caves, brought nature to heel, walked on
-the Moon. Truly, the last shall be first. And eyes that are clouded with age
-have seen the furthest stars, and the lives of a cell, and the worlds of Cantor
-and Hilbert: the invisible world that abideth forever. We are dust and ashes,
-and yet our minds bestride the universe. How great is Man!
+the Moon. The last shall be first! And eyes that are clouded with age have seen
+the furthest stars, and the lives of a cell, and the worlds of Cantor and
+Hilbert: the invisible world that waited forever. We are dust and ashes, and yet
+our minds bestride the universe. How great is Man!
 
 And when I read Alpöge's announcement, when I read [_Machines of Loving
 Grace_][grace]: humanity is not at the center. Claude is at the center. We are
-in the margins, passive recipients of manna from Claude. How great is Claude!
-How noble in reason, how infinite in benevolence!
+hidden in the margins, passive recipients of manna from Claude. How great is
+Claude! How noble in reason, how infinite in benevolence! The dancing star, the
+living word!
+
+It
 
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
 [pdf]: https://alpo.ge/remark.pdf
