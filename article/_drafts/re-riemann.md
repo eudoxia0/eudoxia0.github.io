@@ -35,29 +35,29 @@ Compare the above to Ayn Rand's [account][rand] of watching the launch of Apollo
 
 > How do you descend from a state of pure exaltation?
 >
-> What we had seen, in naked essentials --- but in reality, not in a work of art
-> --- was the concretized abstraction of man's greatness.
+> What we had seen, in naked essentials---but in reality, not in a work of
+> art---was the concretized abstraction of man's greatness.
 >
 > The meaning of the sight lay in the fact that when those dark red wings of
 > fire flared open, one knew that one was not looking at a normal occurrence,
 > but at a cataclysm which, if unleashed by nature, would have wiped man out of
-> existence --- and one knew also that this cataclysm was planned, unleashed,
-> and _controlled_ by man, that this unimaginable power was ruled by _his_ power
+> existence---and one knew also that this cataclysm was planned, unleashed, and
+> _controlled_ by man, that this unimaginable power was ruled by _his_ power
 > and, obediently serving his purpose, was making way for a slender, rising
 > craft. One knew that this spectacle was not the product of inanimate nature,
 > like some aurora borealis, or of chance, or of luck, that it was unmistakably
-> human --- with "human," for once, meaning _grandeur_ --- that a purpose and a
+> human---with "human," for once, meaning _grandeur_---that a purpose and a
 > long, sustained, disciplined effort had gone to achieve this series of
 > moments, and that man was succeeding, succeeding, succeeding! For once, if
-> only for seven minutes, the worst among those who saw it had to feel --- not
-> "How small is man by the side of the Grand Canyon!" --- but "How great is man
+> only for seven minutes, the worst among those who saw it had to feel---not
+> "How small is man by the side of the Grand Canyon!"---but "How great is man
 > and how safe is nature when he conquers it!"
 
 Rand's essay says: how great is Man! [How noble in reason, how infinite in
 faculty][hamlet]! The Riemann announcement reads like a suicide note, or like
 the farewell message of a terminally-ill person who's about to undergo
-euthanasia: "I live on in my child, Claude. It is natural to feel this is an
-end, but as the Buddha taught us, there is no self. Does a wave die when it
+euthanasia: "I shall live on in my child, Claude. It is natural to feel this is
+an end, but as the Buddha taught us, there is no self. Does a wave die when it
 breaks?" and so on.
 
 There's a mural by [Diego Rivera][diego] I love. It's called [_Man, Controller
@@ -88,11 +88,11 @@ living word!
 It's a betrayal and a surrender. [Man is a bridge][zara], [a rusty old bridge
 that we can neither preserve nor restore][zindell]. We can move forward and
 become as the gods, or retreat back into the caves. And the dream of the AI
-companies, of most people in AI safety and effective altruism and rationalism;
-is instead that we should lie down in a warm bath, watch the demons we summoned
-dance in the sky, and slip away. Why live? [Our servants can do that for
-us][axel]. Why should we explore, discover, invent, succeed, become more? We
-don't want to be more. We don't want anything.
+companies, of most people in AI safety and [effective altruism][ea] and
+[rationalism][lw]; is instead that we should lie down in a warm bath, watch the
+demons we summoned dance in the sky, and slip away. Why live? [Our servants can
+do that for us][axel]. Why should we explore, discover, invent, succeed, become
+more? We don't want to be more. We don't want anything.
 
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
@@ -104,3 +104,5 @@ don't want to be more. We don't want anything.
 [rand]: https://courses.aynrand.org/works/apollo-11/
 [zara]: https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra
 [zindell]: https://www.infinityplus.co.uk/stories/shanidar.htm
+[ea]: https://en.wikipedia.org/wiki/Effective_altruism
+[lw]: https://www.lesswrong.com/
