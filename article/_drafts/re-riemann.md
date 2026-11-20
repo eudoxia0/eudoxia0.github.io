@@ -1,6 +1,11 @@
 ---
 title: "Re: Riemann"
 card: re-riemann.webp
+card_source: |
+    Detail from [_Man, Controller of the Universe_][a], by [Diego Rivera][b].
+
+    [a]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
+    [b]: https://en.wikipedia.org/wiki/Diego_Rivera
 ---
 
 A fun thing about living in Australia is that most things happen overnight, so
