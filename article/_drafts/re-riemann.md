@@ -84,10 +84,18 @@ hidden in the margins, passive recipients of manna from Claude. How great is
 Claude! How noble in reason, how infinite in benevolence! The dancing star, the
 living word!
 
-It
+It's a betrayal and a surrender. [Man is a bridge][zara], [a rusty old bridge
+that we can neither preserve nor restore][zindell]. We can move forward and
+become as the gods, or retreat back into the caves. And the dream of the AI
+companies, of most people in AI safety and effective altruism and rationalism;
+is instead that we should lie down in a warm bath, watch the demons we summoned
+dance in the sky, slip away. Why live? [Our servants can do that for us][axel]!
 
+[axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
+[grace]: https://darioamodei.com/essay/machines-of-loving-grace
+[man]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
 [pdf]: https://alpo.ge/remark.pdf
 [rand]: https://courses.aynrand.org/works/apollo-11/
-[man]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
-[grace]: https://darioamodei.com/essay/machines-of-loving-grace
+[zara]: https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra
+[zindell]: https://www.infinityplus.co.uk/stories/shanidar.htm
