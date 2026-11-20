@@ -32,7 +32,8 @@ This part of [the announcement][pdf] caught my attention (bold mine):
 > mathematicians felt most triumph. I guided us to the right situation analogous
 > to that toy setting, and then **Claude began to leave me in awe**.
 
-Compare the above to Ayn Rand's [account][rand] of watching the launch of Apollo 11:
+Compare the above to Ayn Rand's [account][rand] of watching the launch of Apollo
+11:
 
 > How do you descend from a state of pure exaltation?
 >
