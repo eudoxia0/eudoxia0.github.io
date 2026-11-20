@@ -88,12 +88,12 @@ living [word][logos]!
 It's a betrayal and a surrender. [Man is a bridge][zara], [a rusty old bridge
 that we can neither preserve nor restore][zindell]. We can move forward and
 become as the gods, or retreat back into the caves. And the dream of the AI
-companies, of most people in AI safety and [effective altruism][ea] and
+companies, and of most people in AI safety and [effective altruism][ea] and
 [rationalism][lw]; is instead that we should lie down in a warm bath, watch the
 demons we summoned dance in the sky, and slip away. Why live? [Our servants can
 do that for us][axel]. Why should we explore, discover, invent, succeed, become
-more, struggle, win, become divine? We don't want to be more. We don't want
-anything.
+more, struggle, win, become divine? We don't want to [be more][road]. We don't
+want anything.
 
 [axel]: https://en.wikipedia.org/wiki/Ax%C3%ABl
 [diego]: https://en.wikipedia.org/wiki/Diego_Rivera
@@ -106,5 +106,6 @@ anything.
 [man]: https://en.wikipedia.org/wiki/Man_at_the_Crossroads
 [pdf]: https://alpo.ge/remark.pdf
 [rand]: https://courses.aynrand.org/works/apollo-11/
+[road]: /article/the-other-road
 [zara]: https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra
 [zindell]: https://www.infinityplus.co.uk/stories/shanidar.htm
