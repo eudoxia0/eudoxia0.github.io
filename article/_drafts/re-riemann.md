@@ -1,5 +1,6 @@
 ---
 title: "Re: Riemann"
+summary: Man is a bridge.
 card: re-riemann.webp
 card_source: |
     Detail from [_Man, Controller of the Universe_][a], by [Diego Rivera][b].
