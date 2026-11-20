@@ -62,7 +62,7 @@ Buddha taught us, there is no self. Does a wave die when it breaks?" and so on.
 There's a mural by [Diego Rivera][diego] I love. It's called [_Man, Controller
 of the Universe_][man]:
 
-![](/assets/content/re-riemann/man-controller-of-the-universe.webp)
+![The linked mural. Images of soldiers, workers, crops, machinery, Lenin, a dynamo, mirrors. Two intersecting ellipses contain images of stars an galaxies and cells and microbes. In the center there is a man, dressed in overalls, a factory worker, at the controls of a machine.](/assets/content/re-riemann/man-controller-of-the-universe.webp)
 
 It's a collage of images science, technology, history, microbes and galaxies,
 the universe at the nanoscale and the universe at the exascale. And at the
